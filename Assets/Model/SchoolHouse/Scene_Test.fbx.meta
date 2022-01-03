@@ -1,0 +1,647 @@
+fileFormatVersion: 2
+guid: 779311d29d22a0943b2a2b2b02324960
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Ambient_Light
+    100002: American_Elm
+    100004: Bounce_Light
+    100006: Branch
+    100008: Branch 1
+    100010: Branch 2
+    100012: Branch 3
+    100014: Branch 4
+    100016: Branch 5
+    100018: Building
+    100020: Building 1
+    100022: Clothing_Poles
+    100024: Deco
+    100026: Door
+    100028: Door 1
+    100030: Door 2
+    100032: Door 3
+    100034: Doorknob
+    100036: Elec_Outlets
+    100038: Exterior
+    100040: Fixed_Lights
+    100042: Flourecent_Tubes
+    100044: Framework
+    100046: Ground
+    100048: Ground_Plane
+    100050: House
+    100052: Imported_Bathroom_Props
+    100054: Ivy
+    100056: Ivy_House
+    100058: Ivy_Shed
+    100060: Ivy_Tufts
+    100062: Japanese_Maple
+    100064: Kerosene_Drum
+    100066: Kitchen_Light
+    100068: Lamp
+    100070: Lamp_Glass
+    100072: Leaves_1
+    100074: Leaves_1 1
+    100076: Leaves_1 2
+    100078: Leaves_1 3
+    100080: Leaves_1 4
+    100082: Leaves_1 5
+    100084: Leaves_2
+    100086: Leaves_2 1
+    100088: Leaves_2 2
+    100090: Leaves_2 3
+    100092: Leaves_2 4
+    100094: Leaves_2 5
+    100096: Light_Diffuser
+    100098: LIght_Glow
+    100100: Light_Glow
+    100102: Light_Glow1
+    100104: Light_Interior
+    100106: Light_Rig
+    100108: Light_Switches
+    100110: Lines
+    100112: Lock
+    100114: LR_Bulb_A
+    100116: LR_Bulb_B
+    100118: LR_Fixture
+    100120: LR_Lightbulbs
+    100122: Main
+    100124: Maple_Bush_1
+    100126: Maple_Bush_2
+    100128: Maple_Bush_3
+    100130: Misc_Outdoor_Props
+    100132: Moon_Light
+    100134: Outhouse
+    100136: pasted__Bathroom_Curtain
+    100138: pasted__Bathroom_Sink
+    100140: pasted__Body
+    100142: pasted__Body 1
+    100144: pasted__Body 2
+    100146: pasted__Body 3
+    100148: pasted__Cold_Shutoff
+    100150: pasted__Cold_Tap
+    100152: pasted__Cold_Tap 1
+    100154: pasted__Curtain_Rod
+    100156: pasted__Door
+    100158: pasted__Faucet
+    100160: pasted__Faucet_Pipe
+    100162: pasted__Flush_Chain
+    100164: pasted__Flush_Handle
+    100166: pasted__Glow
+    100168: pasted__Glow 1
+    100170: pasted__Hot_Shutoff
+    100172: pasted__Hot_Tap
+    100174: pasted__Hot_Tap 1
+    100176: pasted__L_Curtain
+    100178: pasted__L_Drawer
+    100180: pasted__Lid
+    100182: pasted__Main_Pipe
+    100184: pasted__Medicine_Cabinet
+    100186: pasted__R_Curtain
+    100188: pasted__R_Drawer
+    100190: pasted__Seat
+    100192: pasted__Sink_Door
+    100194: pasted__Tank
+    100196: pasted__Toilet1
+    100198: pasted__Tub
+    100200: Plaque
+    100202: Pole
+    100204: Pole_Wiring
+    100206: polySurface391
+    100208: polySurface480
+    100210: Red_Oak
+    100212: Rim_Light
+    100214: Road6
+    100216: Rope_Swing
+    100218: //RootNode
+    100220: SH2_James1
+    100222: Short_Fence
+    100224: Sidewalk
+    100226: Street_Light
+    100228: Tool_Shed
+    100230: Transformer
+    100232: Tree
+    100234: Tree 1
+    100236: Tree 2
+    100238: Tree 3
+    100240: Tree 4
+    100242: Tree 5
+    100244: Up_Vec_Object
+    100246: Utility_Pole
+    100248: Uvy_Outhouse
+    100250: Window
+    100252: Woodpile
+    400000: Ambient_Light
+    400002: American_Elm
+    400004: Bounce_Light
+    400006: Branch
+    400008: Branch 1
+    400010: Branch 2
+    400012: Branch 3
+    400014: Branch 4
+    400016: Branch 5
+    400018: Building
+    400020: Building 1
+    400022: Clothing_Poles
+    400024: Deco
+    400026: Door
+    400028: Door 1
+    400030: Door 2
+    400032: Door 3
+    400034: Doorknob
+    400036: Elec_Outlets
+    400038: Exterior
+    400040: Fixed_Lights
+    400042: Flourecent_Tubes
+    400044: Framework
+    400046: Ground
+    400048: Ground_Plane
+    400050: House
+    400052: Imported_Bathroom_Props
+    400054: Ivy
+    400056: Ivy_House
+    400058: Ivy_Shed
+    400060: Ivy_Tufts
+    400062: Japanese_Maple
+    400064: Kerosene_Drum
+    400066: Kitchen_Light
+    400068: Lamp
+    400070: Lamp_Glass
+    400072: Leaves_1
+    400074: Leaves_1 1
+    400076: Leaves_1 2
+    400078: Leaves_1 3
+    400080: Leaves_1 4
+    400082: Leaves_1 5
+    400084: Leaves_2
+    400086: Leaves_2 1
+    400088: Leaves_2 2
+    400090: Leaves_2 3
+    400092: Leaves_2 4
+    400094: Leaves_2 5
+    400096: Light_Diffuser
+    400098: LIght_Glow
+    400100: Light_Glow
+    400102: Light_Glow1
+    400104: Light_Interior
+    400106: Light_Rig
+    400108: Light_Switches
+    400110: Lines
+    400112: Lock
+    400114: LR_Bulb_A
+    400116: LR_Bulb_B
+    400118: LR_Fixture
+    400120: LR_Lightbulbs
+    400122: Main
+    400124: Maple_Bush_1
+    400126: Maple_Bush_2
+    400128: Maple_Bush_3
+    400130: Misc_Outdoor_Props
+    400132: Moon_Light
+    400134: Outhouse
+    400136: pasted__Bathroom_Curtain
+    400138: pasted__Bathroom_Sink
+    400140: pasted__Body
+    400142: pasted__Body 1
+    400144: pasted__Body 2
+    400146: pasted__Body 3
+    400148: pasted__Cold_Shutoff
+    400150: pasted__Cold_Tap
+    400152: pasted__Cold_Tap 1
+    400154: pasted__Curtain_Rod
+    400156: pasted__Door
+    400158: pasted__Faucet
+    400160: pasted__Faucet_Pipe
+    400162: pasted__Flush_Chain
+    400164: pasted__Flush_Handle
+    400166: pasted__Glow
+    400168: pasted__Glow 1
+    400170: pasted__Hot_Shutoff
+    400172: pasted__Hot_Tap
+    400174: pasted__Hot_Tap 1
+    400176: pasted__L_Curtain
+    400178: pasted__L_Drawer
+    400180: pasted__Lid
+    400182: pasted__Main_Pipe
+    400184: pasted__Medicine_Cabinet
+    400186: pasted__R_Curtain
+    400188: pasted__R_Drawer
+    400190: pasted__Seat
+    400192: pasted__Sink_Door
+    400194: pasted__Tank
+    400196: pasted__Toilet1
+    400198: pasted__Tub
+    400200: Plaque
+    400202: Pole
+    400204: Pole_Wiring
+    400206: polySurface391
+    400208: polySurface480
+    400210: Red_Oak
+    400212: Rim_Light
+    400214: Road6
+    400216: Rope_Swing
+    400218: //RootNode
+    400220: SH2_James1
+    400222: Short_Fence
+    400224: Sidewalk
+    400226: Street_Light
+    400228: Tool_Shed
+    400230: Transformer
+    400232: Tree
+    400234: Tree 1
+    400236: Tree 2
+    400238: Tree 3
+    400240: Tree 4
+    400242: Tree 5
+    400244: Up_Vec_Object
+    400246: Utility_Pole
+    400248: Uvy_Outhouse
+    400250: Window
+    400252: Woodpile
+    2100000: James_Pants
+    2100002: James_Head
+    2100004: James_Jacket
+    2100006: James_Hair
+    2100008: lambert1
+    2100010: Kitchen_Props_No_LIght
+    2100012: Shed_Map
+    2100014: Deco_Map
+    2100016: Haus_Map
+    2100018: Int_Map
+    2100020: Int_Map_No_Light
+    2100022: Outhouse_Map
+    2100024: Lawn
+    2100026: Misc_Ext
+    2100028: Misc_Ext_No_Light
+    2100030: National_St_Props_ilrOccSampler1
+    2100032: Foliage1
+    2100034: Road
+    2100036: Bathroom_Props
+    2100038: Bathroom_Props_Incandecent
+    2100040: Red_Oak_Bark
+    2100042: Red_Oak_Foliage
+    2100044: American_Elm1
+    2100046: American_Elm_Foliage
+    2100048: Maple_Bark
+    2100050: Maple_Foliage
+    2100052: Maple_Bush_Bark
+    2100054: Maple_Bush_Foliage
+    2300000: Branch
+    2300002: Branch 1
+    2300004: Branch 2
+    2300006: Branch 3
+    2300008: Branch 4
+    2300010: Branch 5
+    2300012: Building
+    2300014: Building 1
+    2300016: Clothing_Poles
+    2300018: Deco
+    2300020: Door 1
+    2300022: Door 2
+    2300024: Door 3
+    2300026: Doorknob
+    2300028: Elec_Outlets
+    2300030: Exterior
+    2300032: Flourecent_Tubes
+    2300034: Framework
+    2300036: Ground_Plane
+    2300038: Ivy_House
+    2300040: Ivy_Shed
+    2300042: Kerosene_Drum
+    2300044: Lamp
+    2300046: Lamp_Glass
+    2300048: Leaves_1
+    2300050: Leaves_1 1
+    2300052: Leaves_1 2
+    2300054: Leaves_1 3
+    2300056: Leaves_1 4
+    2300058: Leaves_1 5
+    2300060: Leaves_2
+    2300062: Leaves_2 1
+    2300064: Leaves_2 2
+    2300066: Leaves_2 3
+    2300068: Leaves_2 4
+    2300070: Leaves_2 5
+    2300072: Light_Diffuser
+    2300074: LIght_Glow
+    2300076: Light_Interior
+    2300078: Light_Switches
+    2300080: Lines
+    2300082: Lock
+    2300084: LR_Fixture
+    2300086: LR_Lightbulbs
+    2300088: pasted__Body
+    2300090: pasted__Body 1
+    2300092: pasted__Body 2
+    2300094: pasted__Body 3
+    2300096: pasted__Cold_Shutoff
+    2300098: pasted__Cold_Tap
+    2300100: pasted__Cold_Tap 1
+    2300102: pasted__Curtain_Rod
+    2300104: pasted__Door
+    2300106: pasted__Faucet
+    2300108: pasted__Faucet_Pipe
+    2300110: pasted__Flush_Chain
+    2300112: pasted__Flush_Handle
+    2300114: pasted__Glow
+    2300116: pasted__Glow 1
+    2300118: pasted__Hot_Shutoff
+    2300120: pasted__Hot_Tap
+    2300122: pasted__Hot_Tap 1
+    2300124: pasted__L_Curtain
+    2300126: pasted__L_Drawer
+    2300128: pasted__Lid
+    2300130: pasted__Main_Pipe
+    2300132: pasted__R_Curtain
+    2300134: pasted__R_Drawer
+    2300136: pasted__Seat
+    2300138: pasted__Sink_Door
+    2300140: pasted__Tank
+    2300142: Plaque
+    2300144: Pole
+    2300146: Pole_Wiring
+    2300148: polySurface391
+    2300150: polySurface480
+    2300152: Rope_Swing
+    2300154: SH2_James1
+    2300156: Short_Fence
+    2300158: Sidewalk
+    2300160: Transformer
+    2300162: Tree
+    2300164: Tree 1
+    2300166: Tree 2
+    2300168: Tree 3
+    2300170: Tree 4
+    2300172: Tree 5
+    2300174: Uvy_Outhouse
+    2300176: Window
+    2300178: Woodpile
+    3300000: Branch
+    3300002: Branch 1
+    3300004: Branch 2
+    3300006: Branch 3
+    3300008: Branch 4
+    3300010: Branch 5
+    3300012: Building
+    3300014: Building 1
+    3300016: Clothing_Poles
+    3300018: Deco
+    3300020: Door 1
+    3300022: Door 2
+    3300024: Door 3
+    3300026: Doorknob
+    3300028: Elec_Outlets
+    3300030: Exterior
+    3300032: Flourecent_Tubes
+    3300034: Framework
+    3300036: Ground_Plane
+    3300038: Ivy_House
+    3300040: Ivy_Shed
+    3300042: Kerosene_Drum
+    3300044: Lamp
+    3300046: Lamp_Glass
+    3300048: Leaves_1
+    3300050: Leaves_1 1
+    3300052: Leaves_1 2
+    3300054: Leaves_1 3
+    3300056: Leaves_1 4
+    3300058: Leaves_1 5
+    3300060: Leaves_2
+    3300062: Leaves_2 1
+    3300064: Leaves_2 2
+    3300066: Leaves_2 3
+    3300068: Leaves_2 4
+    3300070: Leaves_2 5
+    3300072: Light_Diffuser
+    3300074: LIght_Glow
+    3300076: Light_Interior
+    3300078: Light_Switches
+    3300080: Lines
+    3300082: Lock
+    3300084: LR_Fixture
+    3300086: LR_Lightbulbs
+    3300088: pasted__Body
+    3300090: pasted__Body 1
+    3300092: pasted__Body 2
+    3300094: pasted__Body 3
+    3300096: pasted__Cold_Shutoff
+    3300098: pasted__Cold_Tap
+    3300100: pasted__Cold_Tap 1
+    3300102: pasted__Curtain_Rod
+    3300104: pasted__Door
+    3300106: pasted__Faucet
+    3300108: pasted__Faucet_Pipe
+    3300110: pasted__Flush_Chain
+    3300112: pasted__Flush_Handle
+    3300114: pasted__Glow
+    3300116: pasted__Glow 1
+    3300118: pasted__Hot_Shutoff
+    3300120: pasted__Hot_Tap
+    3300122: pasted__Hot_Tap 1
+    3300124: pasted__L_Curtain
+    3300126: pasted__L_Drawer
+    3300128: pasted__Lid
+    3300130: pasted__Main_Pipe
+    3300132: pasted__R_Curtain
+    3300134: pasted__R_Drawer
+    3300136: pasted__Seat
+    3300138: pasted__Sink_Door
+    3300140: pasted__Tank
+    3300142: Plaque
+    3300144: Pole
+    3300146: Pole_Wiring
+    3300148: polySurface391
+    3300150: polySurface480
+    3300152: Rope_Swing
+    3300154: SH2_James1
+    3300156: Short_Fence
+    3300158: Sidewalk
+    3300160: Transformer
+    3300162: Tree
+    3300164: Tree 1
+    3300166: Tree 2
+    3300168: Tree 3
+    3300170: Tree 4
+    3300172: Tree 5
+    3300174: Uvy_Outhouse
+    3300176: Window
+    3300178: Woodpile
+    4300000: SH2_James1
+    4300002: pasted__Glow
+    4300004: pasted__Glow
+    4300006: Door
+    4300008: Window
+    4300010: Building
+    4300012: Door
+    4300014: Doorknob
+    4300016: Plaque
+    4300018: Deco
+    4300020: Light_Switches
+    4300022: Flourecent_Tubes
+    4300024: Light_Interior
+    4300026: Light_Diffuser
+    4300028: LIght_Glow
+    4300030: LR_Lightbulbs
+    4300032: LR_Fixture
+    4300034: Elec_Outlets
+    4300036: Exterior
+    4300038: Building
+    4300040: Door
+    4300042: Lock
+    4300044: Ground_Plane
+    4300046: Sidewalk
+    4300048: Clothing_Poles
+    4300050: Lines
+    4300052: Short_Fence
+    4300054: Woodpile
+    4300056: Kerosene_Drum
+    4300058: Framework
+    4300060: Transformer
+    4300062: Pole
+    4300064: Lamp
+    4300066: Lamp_Glass
+    4300068: Pole_Wiring
+    4300070: Rope_Swing
+    4300072: Ivy_House
+    4300074: polySurface480
+    4300076: Ivy_Shed
+    4300078: Uvy_Outhouse
+    4300080: polySurface391
+    4300082: pasted__Curtain_Rod
+    4300084: pasted__R_Curtain
+    4300086: pasted__L_Curtain
+    4300088: pasted__R_Drawer
+    4300090: pasted__L_Drawer
+    4300092: pasted__Cold_Shutoff
+    4300094: pasted__Hot_Shutoff
+    4300096: pasted__Hot_Tap
+    4300098: pasted__Cold_Tap
+    4300100: pasted__Faucet
+    4300102: pasted__Sink_Door
+    4300104: pasted__Body
+    4300106: pasted__Body
+    4300108: pasted__Door
+    4300110: pasted__Seat
+    4300112: pasted__Body
+    4300114: pasted__Lid
+    4300116: pasted__Flush_Chain
+    4300118: pasted__Flush_Handle
+    4300120: pasted__Main_Pipe
+    4300122: pasted__Faucet_Pipe
+    4300124: pasted__Tank
+    4300126: pasted__Hot_Tap
+    4300128: pasted__Cold_Tap
+    4300130: pasted__Body
+    4300132: Tree
+    4300134: Branch
+    4300136: Leaves_1
+    4300138: Leaves_2
+    4300140: Tree
+    4300142: Branch
+    4300144: Leaves_1
+    4300146: Leaves_2
+    4300148: Tree
+    4300150: Branch
+    4300152: Leaves_1
+    4300154: Leaves_2
+    4300156: Tree
+    4300158: Branch
+    4300160: Leaves_1
+    4300162: Leaves_2
+    4300164: Tree
+    4300166: Branch
+    4300168: Leaves_1
+    4300170: Leaves_2
+    4300172: Tree
+    4300174: Branch
+    4300176: Leaves_1
+    4300178: Leaves_2
+    10800000: Ambient_Light
+    10800002: Bounce_Light
+    10800004: Kitchen_Light
+    10800006: LR_Bulb_A
+    10800008: LR_Bulb_B
+    10800010: Moon_Light
+    10800012: Rim_Light
+    10800014: Street_Light
+  externalObjects: {}
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 2
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 2
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

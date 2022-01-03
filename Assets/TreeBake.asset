@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: TreeBake
+  m_EditorClassIdentifier: 
+  version: 3252
+  resultType: 0
+  materialsAndUVRects:
+  - material: {fileID: 2100000, guid: bbf83ac6dfa47b045995c98079300a7f, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.0009765625
+      y: 0.0009765625
+      width: 0.28320312
+      height: 0.9980469
+    srcObjName: Tree 1
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -1.9903547
+      y: -0.7394147
+      width: 5.9247365
+      height: 8.316824
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 74ac878c3bd9d7f469a2fd72543030f4, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.2861328
+      y: 0.0009765625
+      width: 0.2841797
+      height: 0.9980469
+    srcObjName: Tree 5
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -1.983421
+      y: -0.7714235
+      width: 5.949334
+      height: 8.229826
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 791bb932162c8f6488d3f217b1774cf6, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5722656
+      y: 0.0009765625
+      width: 0.34375
+      height: 0.9980469
+    srcObjName: Tree
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -2.2448497
+      y: -0.83092
+      width: 7.1763325
+      height: 10.557342
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: d1bee0bf8b7bacd44b8dba14b98a7bf9, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.91796875
+      y: 0.0009765625
+      width: 0.08105469
+      height: 0.43359375
+    srcObjName: Tree 3
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -1.1329027
+      y: 0.10864952
+      width: 1.7023593
+      height: 1.7345631
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  resultMaterials:
+  - combinedMaterial: {fileID: 2100000, guid: d3561de7099a4694ebdaea4117d8ac72, type: 2}
+    considerMeshUVs: 1
+    sourceMaterials:
+    - {fileID: 2100000, guid: bbf83ac6dfa47b045995c98079300a7f, type: 2}
+    - {fileID: 2100000, guid: 74ac878c3bd9d7f469a2fd72543030f4, type: 2}
+    - {fileID: 2100000, guid: 791bb932162c8f6488d3f217b1774cf6, type: 2}
+    - {fileID: 2100000, guid: d1bee0bf8b7bacd44b8dba14b98a7bf9, type: 2}
+  resultMaterialsTexArray: []
+  doMultiMaterial: 0

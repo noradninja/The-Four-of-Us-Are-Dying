@@ -1,0 +1,209 @@
+fileFormatVersion: 2
+guid: a1ff47b7d98beec4f9ad70fd3631e627
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Exterior
+    100004: LIght_Rig
+    100006: Light_Rig:Ambient_Light
+    100008: Light_Rig:Bounce_Light
+    100010: Light_Rig:Fill_Light
+    100012: Light_Rig:Moon_Light
+    100014: persp2
+    100016: Plaque_w_Alpha
+    100018: Rim_Light
+    100020: Trims_Exterior
+    100022: Trims_w_Alpha
+    100024: Door_Glass
+    100026: Glass
+    100028: Plaque
+    100030: polySurface10
+    100032: polySurface12
+    100034: polySurface18
+    100036: polySurface22
+    100038: polySurface28
+    100040: polySurface30
+    100042: polySurface32
+    100044: polySurface6
+    100046: Porch
+    100048: Porch_Roof
+    100050: Trims_EXT
+    100052: Trims_EXT_Transparent
+    100054: Window_Glass
+    400000: //RootNode
+    400002: Exterior
+    400004: LIght_Rig
+    400006: Light_Rig:Ambient_Light
+    400008: Light_Rig:Bounce_Light
+    400010: Light_Rig:Fill_Light
+    400012: Light_Rig:Moon_Light
+    400014: persp2
+    400016: Plaque_w_Alpha
+    400018: Rim_Light
+    400020: Trims_Exterior
+    400022: Trims_w_Alpha
+    400024: Door_Glass
+    400026: Glass
+    400028: Plaque
+    400030: polySurface10
+    400032: polySurface12
+    400034: polySurface18
+    400036: polySurface22
+    400038: polySurface28
+    400040: polySurface30
+    400042: polySurface32
+    400044: polySurface6
+    400046: Porch
+    400048: Porch_Roof
+    400050: Trims_EXT
+    400052: Trims_EXT_Transparent
+    400054: Window_Glass
+    2000000: persp2
+    2100000: House_Trims
+    2100002: House_Exterior1
+    2300000: Exterior
+    2300002: Plaque_w_Alpha
+    2300004: Trims_Exterior
+    2300006: Trims_w_Alpha
+    2300008: Door_Glass
+    2300010: Plaque
+    2300012: polySurface10
+    2300014: polySurface12
+    2300016: polySurface18
+    2300018: polySurface22
+    2300020: polySurface28
+    2300022: polySurface30
+    2300024: polySurface32
+    2300026: polySurface6
+    2300028: Porch
+    2300030: Porch_Roof
+    2300032: Trims_EXT
+    2300034: Trims_EXT_Transparent
+    2300036: Glass
+    3300000: Exterior
+    3300002: Plaque_w_Alpha
+    3300004: Trims_Exterior
+    3300006: Trims_w_Alpha
+    3300008: Door_Glass
+    3300010: Plaque
+    3300012: polySurface10
+    3300014: polySurface12
+    3300016: polySurface18
+    3300018: polySurface22
+    3300020: polySurface28
+    3300022: polySurface30
+    3300024: polySurface32
+    3300026: polySurface6
+    3300028: Porch
+    3300030: Porch_Roof
+    3300032: Trims_EXT
+    3300034: Trims_EXT_Transparent
+    3300036: Glass
+    4300000: Trims_Exterior
+    4300002: Exterior
+    4300004: Plaque_w_Alpha
+    4300006: Trims_w_Alpha
+    4300008: Plaque
+    4300010: Porch_Roof
+    4300012: Porch
+    4300014: Trims_EXT_Transparent
+    4300016: Trims_EXT
+    4300018: Door_Glass
+    4300020: polySurface6
+    4300022: polySurface10
+    4300024: polySurface12
+    4300026: polySurface18
+    4300028: polySurface22
+    4300030: polySurface28
+    4300032: polySurface30
+    4300034: polySurface32
+    4300036: Glass
+    9500000: //RootNode
+    10800000: Light_Rig:Ambient_Light
+    10800002: Light_Rig:Bounce_Light
+    10800004: Light_Rig:Fill_Light
+    10800006: Light_Rig:Moon_Light
+    10800008: Rim_Light
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

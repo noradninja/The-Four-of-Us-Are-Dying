@@ -1,0 +1,504 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <RootNamespace></RootNamespace>
+    <ProjectGuid>{958866C5-20AA-016E-EFFB-531FDD145FA4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AssemblyName>Unity.VisualEffectGraph.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <BaseDirectory>.</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_2_19;UNITY_2018_2;UNITY_2018;ENABLE_AUDIO;ENABLE_CLOTH;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_PSVITA;UNITY_PSP2;UNITY_PSP2_API;UNITY_GFX_USE_PLATFORM_VSYNC;ENABLE_AUDIO_MANAGER_BASED_SCHEDULING;ENABLE_MICROPHONE;ENABLE_EVENT_QUEUE;ENABLE_NETWORK;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_LOG_MIXED_STACKTRACE;ENABLE_UNITYWEBREQUEST;ENABLE_IL2CPP;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;UNITY_POST_PROCESSING_STACK_V2;ENABLE_MONO</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Temp\bin\Release\</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoConfig>true</NoConfig>
+    <NoStdLib>true</NoStdLib>
+    <AddAdditionalExplicitAssemblyReferences>false</AddAdditionalExplicitAssemblyReferences>
+    <ImplicitlyExpandNETStandardFacades>false</ImplicitlyExpandNETStandardFacades>
+    <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity2018\Editor\Data\Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity2018\Editor\Data\Managed/UnityEditor.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\CustomSpawners\IncrementStripIndexOnStart.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\CustomSpawners\LoopAndDelay.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\CustomSpawners\SetSpawnTime.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\CustomSpawners\SpawnOverDistance.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\PackageInfo.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\EventBinding\Implementation\VFXMouseEventBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\EventBinding\Implementation\VFXRigidBodyCollisionEventBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\EventBinding\Implementation\VFXTriggerEventBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\EventBinding\Implementation\VFXVisibilityEventBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\EventBinding\VFXEventBinderBase.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\OutputEventHandlers\VFXOutputEventAbstractHandler.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\Playables\VisualEffectActivation\VisualEffectActivationBehaviour.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\Playables\VisualEffectActivation\VisualEffectActivationClip.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\Playables\VisualEffectActivation\VisualEffectActivationMixerBehaviour.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\Playables\VisualEffectActivation\VisualEffectActivationTrack.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\ExposedProperty.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXAudioSpectrumBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXEnabledBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXHierarchyAttributeMapBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXInputAxisBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXInputButtonBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXInputKeyBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXInputMouseBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXInputTouchBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXLightBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXMultiplePositionBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXPlaneBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXPositionBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXPreviousPositionBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXRaycastBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXSphereBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXTerrainBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXTransformBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXUIDropdownBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXUISliderBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXUIToggleBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\Implementation\VFXVelocityBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\VFXBinderAttribute.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\VFXBinderBase.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\VFXPropertyBinder.cs" />
+     <Compile Include="Assets\Addons\VEG BIRP\Runtime\Utilities\PropertyBinding\VFXPropertyBindingAttribute.cs" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\UpdateStrips.compute" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleMeshes\PassShadowCaster.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\VFXCommon.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleDecals\PassForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXFlow.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLinesSW\PassDepthOrMV.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\PassForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\PassDepthOrMV.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticlePoints.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXEdgeDragInfo.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLines\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleSpheres\PassDepth.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXCopyBuffer.compute" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassSelection.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXFlowEdge.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\shader\TimeBar.shader" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\VFXCommon.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticleLinesHW.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXSystemBorder.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticleDecal.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePoints\PassShadowCaster.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXNodeUI.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXOutputUpdate.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\VFXPasses.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticleMeshes.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXCommon.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXBlackboardSection.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXComponentBoard-event.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\PropertyRMLight.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\PassBasicForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXParameter.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXReorderableListDark.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\Sort.compute" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLinesSW\PassDepth.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleSpheres\PassShadowCaster.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXInit.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXUpdate.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXEdgeDragInfo.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXNode.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXParticleCommon.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXDataAnchor.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLinesSW\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\shader\SystemInfo.shader" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticleBasicCube.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLinesSW\PassForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePoints\PassSelection.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassShadowCaster.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLinesSW\PassSelection.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLines\PassDepth.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXView-light.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticleLinesSW.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLines\PassDepthOrMV.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticleLinesHW.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePoints\PassForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassVS.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXNode.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticleDecal.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticleBasicCube.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXControlsLight.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXTypeColor.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticleCube.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXView.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXBlock.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXBlackboard.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\shader\GradientBorder.shader" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXContext.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassDepthOrMV.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticleCube.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\DefaultStaticMeshOutput.shader" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticleLinesSW.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleMeshes\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleMeshes\PassVelocity.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticlePlanarPrimitive.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleMeshes\PassSelection.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassVelocity.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXReorderableList.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleMeshes\PassDepthOrMV.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleSpheres\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePoints\PassDepthOrMV.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXSystemBorder.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\VFXDefines.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleMeshes\PassForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXFillIndirectArgs.compute" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\Selectable.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXParticleStripCommon.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\PropertyRM.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLines\PassSelection.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXOperator.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\PassDepth.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXCameraSort.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\shader\Element3DGridShader.shader" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\shader\GradientDashedBorder.shader" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXComponentBoard.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleDecals\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXComponentBoard.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXControlsDark.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXReorderableListLight.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassDepth.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\VFXPasses.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePoints\PassDepth.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXLabeledField.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\PassVelocity.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXCommonOutput.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXParticleHeader.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXControls.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLinesSW\PassShadowCaster.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\Templates\VFXParticlePlanarPrimitive.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLines\PassForward.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\Common\VFXCommonCompute.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticlePoints.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleLines\PassShadowCaster.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\VFXNoise.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleDecals\PassSelection.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePlanarPrimitives\PassGS.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Universal\Templates\VFXParticleMeshes.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleMeshes\PassDepth.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\PassShadowCaster.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticlePoints\Pass.template" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\ParticleHexahedron\PassSelection.template" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\VFXView-dark.uss" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXParameter.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uxml\VFXContext.uxml" />
+     <None Include="Assets\Addons\VEG BIRP\Shaders\RenderPipeline\Legacy\VFXDefines.hlsl" />
+     <None Include="Assets\Addons\VEG BIRP\Editor Default Resources\uss\PropertyRMDark.uss" />
+ <Reference Include="UnityEngine.AIModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ARModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ARModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AccessibilityModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AccessibilityModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AnimationModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AnimationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AssetBundleModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.AudioModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.BaselibModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.BaselibModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ClothModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ClothModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CloudWebServicesModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.CloudWebServicesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.CoreModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.CoreModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.DirectorModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.DirectorModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FacebookModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.FacebookModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.FileSystemHttpModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.FileSystemHttpModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GameCenterModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.GameCenterModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GridModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.GridModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HotReloadModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.HotReloadModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.IMGUIModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.IMGUIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ImageConversionModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ImageConversionModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.InputModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.InputModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.JSONSerializeModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.JSONSerializeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.LocalizationModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.LocalizationModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PSVitaModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.PSVitaModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticleSystemModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ParticleSystemModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ParticlesLegacyModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PerformanceReportingModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.PerformanceReportingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.PhysicsModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.PhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Physics2DModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.Physics2DModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ProfilerModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ProfilerModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.ScreenCaptureModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.ScreenCaptureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SharedInternalsModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SharedInternalsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteMaskModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SpriteMaskModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpriteShapeModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SpriteShapeModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StreamingModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.StreamingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StyleSheetsModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.StyleSheetsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SubstanceModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.SubstanceModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TLSModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TLSModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TerrainModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TerrainPhysicsModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TextRenderingModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TextRenderingModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TilemapModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TilemapModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.TimelineModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.TimelineModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UIModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UIElementsModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UIElementsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UNETModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UNETModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UmbraModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UmbraModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityAnalyticsModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityConnectModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityConnectModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VRModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.VRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VehiclesModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.VehiclesModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.VideoModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.VideoModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.WindModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.WindModule.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.XRModule">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.XRModule.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.Locator">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/Managed/Unity.Locator.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.UI">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Timeline">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.TreeEditor">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Networking">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Networking">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.HoloLens">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.HoloLens">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.VR">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.PSP2.Extensions">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/UnityEditor.PSP2.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.WindowsStandalone.Extensions">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="ICSharpCode.NRefactory">
+ <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.core@3.0.0-preview/CoreRP/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StandardEvents">
+ <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="mscorlib">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
+ </Reference>
+ <Reference Include="System">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Core">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Core.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Serialization">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Runtime.Serialization.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Xml.Linq">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/System.Xml.Linq.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityScript.Lang">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/UnityScript.Lang.dll</HintPath>
+ </Reference>
+ <Reference Include="Boo.Lang">
+ <HintPath>C:/Program Files/Unity2018/Editor/Data/MonoBleedingEdge/lib/mono/unity/Boo.Lang.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
