@@ -67,7 +67,7 @@ Material:
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0.05
     - _OutlineUVSpeedY: 0.05
-    - _OutlineWidth: 0.15
+    - _OutlineWidth: 0.35
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
     - _ScaleRatioA: 0.90909094
@@ -98,7 +98,7 @@ Material:
     - _FaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlowColor: {r: 0, g: 1, b: 0, a: 0.5}
     - _MaskCoord: {r: 0, g: 0, b: 100000, a: 100000}
-    - _OutlineColor: {r: 0.64705884, g: 0.023529414, b: 0.015686275, a: 1}
+    - _OutlineColor: {r: 0.49056602, g: 0.031231688, b: 0.025453899, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

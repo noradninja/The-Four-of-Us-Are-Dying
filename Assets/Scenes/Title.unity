@@ -561,7 +561,7 @@ MonoBehaviour:
   fadeDelay2: 2
   fadeImage3: {fileID: 417573616}
   fadeAmount3: 0
-  fadeDelay3: 2
+  fadeDelay3: 3
   fillImage: {fileID: 616737824}
   fillAmount: 1
   fillDelay: 4
