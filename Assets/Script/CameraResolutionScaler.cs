@@ -30,6 +30,7 @@ public class CameraResolutionScaler : MonoBehaviour
 						temporaryTexture.wrapMode = TextureWrapMode.Clamp;
 						temporaryTexture.anisoLevel = 0;
 						temporaryTexture.filterMode = filterMode;
+
 						return temporaryTexture;
 					}
 	private Rect originalRect;
@@ -56,10 +57,10 @@ public class CameraResolutionScaler : MonoBehaviour
 		// 	}
 		// 	else renderDivisor = 1.0F;
 		// }
-		// if (Input.GetKeyDown(joystick1 + CIRCLE)){
-		// 	if (statsActive) statsActive = false;
-		// 	else statsActive = true;
-		// }
+		if (Input.GetKeyDown(joystick1 + CIRCLE)){
+			if (statsActive) statsActive = false;
+			else statsActive = true;
+		}
 
 	}
 	void OnDestroy ()
@@ -82,46 +83,46 @@ public class CameraResolutionScaler : MonoBehaviour
 		Graphics.Blit(src, renderTex);
 		Graphics.Blit(renderTex, dest);
 		RenderTexture.ReleaseTemporary(renderTex);
-		//renderTex.DiscardContents();
+		renderTex.DiscardContents();
 
-		// if(!Application.isEditor && statsActive) {
+		if(!Application.isEditor && statsActive) {
 		
-		// 	float VRAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryCDRAM();
-		// 	decimal VRAMFree = Math.Round((decimal)(VRAMValue/1000000), 2);
-		// 	decimal calcVRAM = (((128-VRAMFree)/128)*100);
-		// 	decimal percentVRAM = Math.Round((decimal)calcVRAM ,2);
+			float VRAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryCDRAM();
+			decimal VRAMFree = Math.Round((decimal)(VRAMValue/1000000), 2);
+			decimal calcVRAM = (((128-VRAMFree)/128)*100);
+			decimal percentVRAM = Math.Round((decimal)calcVRAM ,2);
 			
-		// 	float RAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryLPDDR();
-		// 	decimal RAMFree = Math.Round((decimal)(RAMValue/1000000), 2);
-		// 	decimal calcRAM = (((512-RAMFree)/512)*100);
-		// 	decimal percentRAM = Math.Round((decimal)calcRAM ,2);
+			float RAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryLPDDR();
+			decimal RAMFree = Math.Round((decimal)(RAMValue/1000000), 2);
+			decimal calcRAM = (((512-RAMFree)/512)*100);
+			decimal percentRAM = Math.Round((decimal)calcRAM ,2);
 
-		// 	vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
-		// 	ramText.text = ("  RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
-		// 	if (percentVRAM >= 75){
-		// 		vramText.color = Color.red;
-		// 	}
-		// 	else if(percentVRAM < 75 && percentVRAM > 50){
-		// 		vramText.color = Color.yellow;
-		// 	}
-		// 	else vramText.color = Color.gray;
+			vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
+			ramText.text = ("  RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
+			if (percentVRAM >= 75){
+				vramText.color = Color.red;
+			}
+			else if(percentVRAM < 75 && percentVRAM > 50){
+				vramText.color = Color.yellow;
+			}
+			else vramText.color = Color.gray;
 
-		// 	if (percentRAM >= 75){
-		// 		ramText.color = Color.red;
-		// 	}
-		// 	else if(percentRAM < 75 && percentRAM > 50){
-		// 		ramText.color = Color.yellow;
-		// 	}
-		// 	else ramText.color = Color.gray;
-		// }
-		// if(Application.isEditor && statsActive) {
-		// 	vramText.text = ("VRAM: Unavailable");
-		// 	ramText.text = (" RAM: Unavailable");
-		// }
-		// if (!statsActive){
-		// 	// vramText.text = ("");
-		// 	// ramText.text = ("");
-		// }
+			if (percentRAM >= 75){
+				ramText.color = Color.red;
+			}
+			else if(percentRAM < 75 && percentRAM > 50){
+				ramText.color = Color.yellow;
+			}
+			else ramText.color = Color.gray;
+		}
+		if(Application.isEditor && statsActive) {
+			vramText.text = ("VRAM: Unavailable");
+			ramText.text = (" RAM: Unavailable");
+		}
+		if (!statsActive){
+			vramText.text = ("");
+			ramText.text = ("");
+		}
 		
 	}
 }

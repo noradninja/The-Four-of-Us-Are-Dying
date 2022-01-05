@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
     public float flashlightCharge = 1.0f;
     public bool flashlightDisabled;
     public GameObject SSAOScript;
+    public GameObject BokehScript;
     public GameObject enabledText;
     public float lerpRate = 1.0f;
  
@@ -141,17 +142,19 @@ public class PlayerController : MonoBehaviour
 //enable/disable SSAO and UI text
             if (SSAOScript.GetComponent<FastSSAO>().enabled){
                 SSAOScript.GetComponent<FastSSAO>().enabled = false;
+                BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
                 enabledText.SetActive(false);
             }
             else {
                 SSAOScript.GetComponent<FastSSAO>().enabled = true;
+                BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
                 enabledText.SetActive(true);
             }
 //enable/disable bloom
-            if (SSAOScript.GetComponent<FastMobileBloom>().enabled){
-                SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
-            }
-            else SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
+            // if (SSAOScript.GetComponent<FastMobileBloom>().enabled){
+            //     SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
+            // }
+            // else SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
         }
 //turn the flashlight on and off if we have it
         if (Input.GetKeyDown(VITA + TRIANGLE) && hasFlashlight && flashlightCharge > 0.05f && !Input.GetKey(VITA + LTRIG))
@@ -356,7 +359,7 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
         Vector3 move = transform.forward * -verticalMove + transform.right * 0;
         characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
         if (animator.GetBool("isRunning") == false ) {
-            animator.SetBool("isWalking", verticalMove != 0);
+            animator.SetBool("isWalking", verticalMove != 0 || horizontalRotation !=0);
             animator.SetBool("isIdle", false);
                 
         } 

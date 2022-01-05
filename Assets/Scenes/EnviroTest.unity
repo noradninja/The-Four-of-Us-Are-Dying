@@ -1404,7 +1404,7 @@ MonoBehaviour:
   filterMode: 1
   vramText: {fileID: 1481050169}
   ramText: {fileID: 1881198858}
-  statsActive: 0
+  statsActive: 1
 --- !u!114 &121908228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1553,9 +1553,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threshold: 0.3
-  intensity: 3
-  blurSize: 0.25
-  blurIterations: 2
+  intensity: 1.25
+  blurSize: 5.5
+  blurIterations: 1
   fastBloomMaterial: {fileID: 2100000, guid: 221340b8b5ad10940ba1646f87e3770c, type: 2}
 --- !u!114 &121908235
 MonoBehaviour:
@@ -1570,9 +1570,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pointOfFocus: {fileID: 787849895}
   _focusDistance: 10
-  _fNumber: 9.43
+  _fNumber: 9.5
   _useCameraFov: 0
-  _focalLength: 0.111
+  _focalLength: 0.11
   _kernelSize: 0
   _visualize: 0
   _shader: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}
@@ -24571,7 +24571,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393.3, y: -264.2}
+  m_AnchoredPosition: {x: -393.3, y: -264.8}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &787333240
@@ -24606,7 +24606,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: SSAO/Bloom Enabled
+  m_Text: SSAO/Bloom/Bokeh Enabled
 --- !u!222 &787333241
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24659,6 +24659,7 @@ MonoBehaviour:
   flashlightCharge: 1
   flashlightDisabled: 0
   SSAOScript: {fileID: 121908223}
+  BokehScript: {fileID: 121908223}
   enabledText: {fileID: 787333238}
   lerpRate: 0.65
   skinnedRenderer: {fileID: 1039149773}
@@ -31946,7 +31947,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393.3, y: -238.6}
+  m_AnchoredPosition: {x: -393.3, y: -235.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1481050169
@@ -31981,7 +31982,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: 'VRAM: Unavailable'
 --- !u!222 &1481050170
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -36322,7 +36323,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393.3, y: -253.50002}
+  m_AnchoredPosition: {x: -393.3, y: -250.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881198858
@@ -36357,7 +36358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 
+  m_Text: ' RAM: Unavailable'
 --- !u!222 &1881198859
 CanvasRenderer:
   m_ObjectHideFlags: 0
