@@ -7,8 +7,8 @@
 	<param key="APP_VER">01.00</param>
 	<param key="CONTENT_ID">IV0000-WSCG00004_00-0123456789ABCDEF</param>
 	<param key="TITLE_ID">WSCG00004</param>
-	<param key="TITLE">School_Test</param>
-	<param key="STITLE">School Test</param>
+	<param key="TITLE">The Four of Us Are Dying</param>
+	<param key="STITLE">The Four of Us Are Dying</param>
 	<param key="SAVEDATA_MAX_SIZE">10240</param>
 	<param key="PARENTAL_LEVEL">1</param>
 	<param key="ATTRIBUTE">268435456</param>

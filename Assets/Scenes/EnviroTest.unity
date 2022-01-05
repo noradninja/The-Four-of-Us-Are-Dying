@@ -1400,7 +1400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fae5e112b4074dbbb579d2561fa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderDivisor: 1.75
+  renderDivisor: 2
   filterMode: 1
   vramText: {fileID: 1481050169}
   ramText: {fileID: 1881198858}
@@ -1563,16 +1563,16 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c8d76155f53cfc45b4f02922de468b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _pointOfFocus: {fileID: 787849895}
   _focusDistance: 10
-  _fNumber: 2
+  _fNumber: 9.43
   _useCameraFov: 0
-  _focalLength: 0.055
+  _focalLength: 0.111
   _kernelSize: 0
   _visualize: 0
   _shader: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}
@@ -2193,15 +2193,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.15
+      value: -1.19
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0306
+      value: 0.112
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.6
+      value: -0.855
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalRotation.x
@@ -27300,6 +27300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   delay: 0
+  startColor: {x: 0, y: 0, z: 0, w: 0}
+  endColor: {x: 0, y: 0, z: 0, w: 0}
   fadeImage: {fileID: 1170615219}
 --- !u!1 &1179876907
 GameObject:
@@ -32544,13 +32546,13 @@ Transform:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1550034749}
-  m_LocalRotation: {x: 0.6864898, y: 0.0806224, z: 0.6641777, w: -0.2847802}
+  m_LocalRotation: {x: 0.63713294, y: -0.45226818, z: 0.6064876, w: 0.14726809}
   m_LocalPosition: {x: 0.00011991663, y: 0.010536343, z: 0}
   m_LocalScale: {x: 1.0000005, y: 1.000001, z: 1.0000005}
   m_Children: []
   m_Father: {fileID: 1483163057}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -29.874, y: 87.061005, z: -162.02501}
+  m_LocalEulerAnglesHint: {x: 47.413002, y: 109.059006, z: -144.009}
 --- !u!114 &1550034751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32572,7 +32574,7 @@ MonoBehaviour:
   targetLight: {fileID: 1550034752}
   parentGameObject: {fileID: 1550034749}
   position: {x: 0.78969467, y: 0.39437878, z: 1.0468895}
-  forward: {x: 0.72899544, y: 0.009571761, z: 0.68445164}
+  forward: {x: 0.75780123, y: -0.36187214, z: -0.54294163}
   saveNearbyProbes: 0
   saveRadius: 0
   range: 0
@@ -33555,15 +33557,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400002, guid: 67ea3e22f7af9764794d56b8997d5980, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.193971
+      value: 0.4403
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 67ea3e22f7af9764794d56b8997d5980, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0072
+      value: 0.082
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 67ea3e22f7af9764794d56b8997d5980, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.3670642
+      value: -10.2548
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 67ea3e22f7af9764794d56b8997d5980, type: 3}
       propertyPath: m_LocalRotation.x
@@ -33671,7 +33673,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.07
+  m_Radius: 0.05
   m_Center: {x: 0.0002754405, y: -0.0000060219313, z: 0.00007705391}
 --- !u!114 &1701024992
 MonoBehaviour:
@@ -33705,6 +33707,21 @@ MonoBehaviour:
   OSDText: {fileID: 1095426730}
   batteryText: {fileID: 1940048072}
   healedTexture: {fileID: 0}
+--- !u!54 &1701024994
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1701024989}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1701453409
 GameObject:
   m_ObjectHideFlags: 0
@@ -37952,7 +37969,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.07
+  m_Radius: 0.05
   m_Center: {x: 0.0002754405, y: -0.0000060219313, z: 0.00007705391}
 --- !u!65 &2017770383
 BoxCollider:
@@ -37998,6 +38015,21 @@ MonoBehaviour:
   OSDText: {fileID: 1095426730}
   batteryText: {fileID: 1940048072}
   healedTexture: {fileID: 2800000, guid: 7744df182688bb145bf30a5e3cafb12e, type: 3}
+--- !u!54 &2017770388
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2017770381}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2023000943
 GameObject:
   m_ObjectHideFlags: 0

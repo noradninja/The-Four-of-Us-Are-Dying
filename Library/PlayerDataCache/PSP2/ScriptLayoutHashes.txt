@@ -37,6 +37,7 @@ f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventH
 fe969f8a26e7399d643f33cc7420cf84 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerPersistentCanvas
 eb565135f5b2f106ea4734c3cad2730e Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerVBox
 cf57e420ef61d7e9b68c07735a3ca8c3 Assembly-CSharp.dll:.EnableDepthTexture
+6d284479dbd8ba011afe0f59f08c1073 Assembly-CSharp.dll:.LoadScreen
 4fc8a889be082bf81fc5b0e0a52896da Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.GlobalFog
 13a61e08d7fa9e0713243fcea331216b Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ContrastStretch
 589620e946e5dcf965d2a2d7457bebb9 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.VignetteAndChromaticAberration
@@ -114,7 +115,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-cf164654f6cd70c9f8f7bc79d4bebb70 Assembly-CSharp.dll:.Fadeout
+2dc9c55d1a87a91e1a2cd983f8d17585 Assembly-CSharp.dll:.Fadeout
 cf99db52079f7d454b61c657b8715ec0 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
 3ceba402aa70cad40a744ce48142f5b7 Assembly-CSharp.dll:Kino.Fog
 24a57e6b1bd1739bc8d9cf1cbf67a532 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
@@ -190,7 +191,7 @@ d64d78958d1e0e2e6e1ed0f4b0e59cf0 Assembly-CSharp.dll:.SetShadowResolution
 9355035614669e3ee9dd87c43e1c0f15 Assembly-CSharp.dll:.DisplayFPS
 54d94767bf2745fc07cb4bd4f1b3ea16 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerGroup
 f16835701e71dd5d6fb1fed4b7aff1d8 Unity.TextMeshPro.dll:TMPro.TMP_Asset
-4f3302bc061372d52ca0c4bb03a44e55 Assembly-CSharp.dll:.Title_Animator
+346061295c629b0b24b085e085d460a6 Assembly-CSharp.dll:.Title_Animator
 f5c6c8dc1d2620313012c1f25775215c Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.SunShafts
 486cd95c82d8305219c352c06b776e1f Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.DebugUpdater
 7201025b2a31b1169086ef1473ebba87 Assembly-CSharp.dll:MagicLightProbes.MLPCombinedVolume
@@ -220,6 +221,7 @@ ff1acefa67426ecdd1a9abb35bf98c15 MeshBakerCore.dll:DigitalOpus.MB.Core.MB3_Comme
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.PostEffectsHelper
 f9cfd8d5300b5bcccc91b7b91391d934 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ScreenSpaceAmbientOcclusion
 d3985f23b121be7ae04a7237d84c9372 Assembly-CSharp.dll:TMPro.Examples.TMP_ExampleScript_01
+ad62c68f1a749bb37c9e30bf6793ef68 Assembly-CSharp.dll:.FadeIn
 d967a6a5279ccdebc96d50e3f8bce008 Assembly-CSharp.dll:.FastSSAO
 75c38048ffc1eb49756d026ea3f2e773 Assembly-CSharp.dll:.CameraFacingBillboard
 b9f60bdbd20a0144a065259aa7c4a810 MeshBakerCore.dll:.MB3_BoneWeightCopier
@@ -356,5 +358,3 @@ c2be76183103889aa49c71a9d2cf30f7 MeshBakerCore.dll:DigitalOpus.MB.Core.MB_BlendS
 486cd95c82d8305219c352c06b776e1f MeshBakerCore.dll:DigitalOpus.MB.Core.MB_DefaultMeshAssignCustomizer
 e958cc1ee46a616a6e0cde964bfe9918 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 aae9893fc05b6c8cba8317ed327be0c4 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
-ad62c68f1a749bb37c9e30bf6793ef68 Assembly-CSharp.dll:.FadeIn
-6d284479dbd8ba011afe0f59f08c1073 Assembly-CSharp.dll:.LoadScreen

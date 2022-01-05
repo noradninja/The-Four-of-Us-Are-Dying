@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Title_Animator : MonoBehaviour {
 
+public bool isEnabled = false;
 public RawImage fadeImage;
 public float fadeAmount;
 public float fadeDelay;
@@ -22,7 +23,10 @@ public float fillDelay;
 	// Use this for initialization
 	void Start () {
 		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
-		StartCoroutine(delay(1, 0, 0.125f));
+		StartCoroutine(delay(1, 0, 3.0f));
+		if(!Application.isEditor){
+			QualitySettings.vSyncCount = 2;
+		}
 	}
 	
 	// Update is called once per frame
@@ -31,12 +35,18 @@ public float fillDelay;
 	}
 	IEnumerator delay(float startValue, float endValue, float duration){
 		float time = 0.0f;
-		StartCoroutine(fade2(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay2));
+		
 		while (time < duration){
 			time += Time.deltaTime;
         	yield return null;
 		}
 		time = duration;
+		StartCoroutine(fade2(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay2));
+		while (time < duration + 0.75f){
+			time += Time.deltaTime;
+        	yield return null;
+		}
+		time = duration+ 0.75f;
 		StartCoroutine(wipe(1, 0, fillDelay));
 	}
 		IEnumerator wipe(float startValue, float endValue, float duration){

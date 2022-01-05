@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 65476714}
   - component: {fileID: 65476713}
   - component: {fileID: 65476716}
-  - component: {fileID: 65476717}
   - component: {fileID: 65476715}
   m_Layer: 0
   m_Name: Fadeout_Mask
@@ -210,20 +209,6 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
---- !u!114 &65476717
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 65476711}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e62e572c74dc444ba22aa1e422567a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 2
-  delay: 0
-  fadeImage: {fileID: 65476713}
 --- !u!1 &97408426
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,6 +291,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 2
   delay: 0
+  startColor: {x: 0, y: 0, z: 0, w: 1}
+  endColor: {x: 0, y: 0, z: 0, w: 0}
   fadeImage: {fileID: 97408427}
 --- !u!1 &420257347
 GameObject:

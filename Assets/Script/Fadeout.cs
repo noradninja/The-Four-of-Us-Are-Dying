@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Fadeout : MonoBehaviour {
 	public float duration = 2.0f;
 	public float delay = 0.0f;
+	public Vector4 startColor;
+	public Vector4 endColor;
 	public RawImage fadeImage;
 	private bool ignore = true;
 
@@ -17,7 +19,7 @@ public class Fadeout : MonoBehaviour {
 			new WaitForSeconds(delay);
 		}
 		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
-		StartCoroutine(fade(new Color(0,0,0,1),new Color (0,0,0,0), duration));	
+		StartCoroutine(fade(startColor, endColor, duration));	
 	}
 	
 	// Update is called once per frame
