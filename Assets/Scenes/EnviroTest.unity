@@ -1317,10 +1317,11 @@ GameObject:
   - component: {fileID: 121908224}
   - component: {fileID: 121908230}
   - component: {fileID: 121908231}
-  - component: {fileID: 121908227}
   - component: {fileID: 121908232}
   - component: {fileID: 121908229}
+  - component: {fileID: 121908235}
   - component: {fileID: 121908228}
+  - component: {fileID: 121908227}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1551,11 +1552,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4cb4d9bd051a71f48a18edd27bce7c19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  threshold: 0.25
-  intensity: 2.62
-  blurSize: 0.75
+  threshold: 0.3
+  intensity: 3
+  blurSize: 0.25
   blurIterations: 2
   fastBloomMaterial: {fileID: 2100000, guid: 221340b8b5ad10940ba1646f87e3770c, type: 2}
+--- !u!114 &121908235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121908223}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8d76155f53cfc45b4f02922de468b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pointOfFocus: {fileID: 787849895}
+  _focusDistance: 10
+  _fNumber: 2
+  _useCameraFov: 0
+  _focalLength: 0.055
+  _kernelSize: 0
+  _visualize: 0
+  _shader: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}
 --- !u!1 &138643966
 GameObject:
   m_ObjectHideFlags: 0
@@ -27279,6 +27299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 2
+  delay: 0
   fadeImage: {fileID: 1170615219}
 --- !u!1 &1179876907
 GameObject:
@@ -33667,6 +33688,7 @@ MonoBehaviour:
   thisItem: 1
   itemValue: 1
   player: {fileID: 787849890}
+  animator: {fileID: 787849892}
   playerObject: {fileID: 0}
   playerBody: {fileID: 0}
   thisCollider: {fileID: 1701024990}
@@ -37959,6 +37981,7 @@ MonoBehaviour:
   thisItem: 3
   itemValue: 1
   player: {fileID: 787849890}
+  animator: {fileID: 787849892}
   playerObject: {fileID: 787849888}
   playerBody: {fileID: 2100000, guid: bd7f93d0dd7df9d4a93a16722be58a64, type: 2}
   thisCollider: {fileID: 2017770383}
@@ -38449,6 +38472,7 @@ MonoBehaviour:
   thisItem: 0
   itemValue: 1
   player: {fileID: 787849890}
+  animator: {fileID: 787849892}
   playerObject: {fileID: 0}
   playerBody: {fileID: 0}
   thisCollider: {fileID: 2042831802}

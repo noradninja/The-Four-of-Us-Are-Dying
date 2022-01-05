@@ -33,6 +33,6 @@ public class FadeIn : MonoBehaviour {
         	yield return null;
 		}
 		fadeImage.color = endValue;
-		SceneManager.LoadSceneAsync("EnviroTest", LoadSceneMode.Single);
+		SceneManager.LoadSceneAsync("LoadScreen", LoadSceneMode.Single);
 	}
 }

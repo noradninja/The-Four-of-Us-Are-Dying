@@ -3,6 +3,7 @@ PlayerPath?
 C:/PSVITA/Builds/School
 SceneListBegin?
 Assets/Scenes/Title.unity
+Assets/Scenes/LoadScreen.unity
 Assets/Scenes/EnviroTest.unity
 SceneListEnd?
 410153df6407a5a123cf4dcd4ccb7de8 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessLayer
@@ -113,7 +114,7 @@ a44114bd4fa541174f78b4bb92bacb48 UnityEngine.UI.dll:UnityEngine.EventSystems.Sta
 e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 2d58ca16854b99daea8c45e9c0f367b7 UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 16da51d1b62ef6d4ee1849350434023b UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-a603b9a74d795eb917f28090c7841194 Assembly-CSharp.dll:.Fadeout
+cf164654f6cd70c9f8f7bc79d4bebb70 Assembly-CSharp.dll:.Fadeout
 cf99db52079f7d454b61c657b8715ec0 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.ScreenSpaceReflections
 3ceba402aa70cad40a744ce48142f5b7 Assembly-CSharp.dll:Kino.Fog
 24a57e6b1bd1739bc8d9cf1cbf67a532 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndScratches
@@ -122,7 +123,7 @@ f66836aa42547d4c9473b4929566024e Assembly-CSharp.dll:.MB_SwapShirts
 c6c66a1b7f6118ba8d68bb55e7bd0df6 Assembly-CSharp.dll:.MB_SwitchBakedObjectsTexture
 3572e4392388bb343d5531ebc21e80ce Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Antialiasing
 22047f3c3fbb715550f61eddb26e9cd3 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Vignette
-e6e5d6c3d8d01a03f0bd442cfae5554c Assembly-CSharp.dll:.Item_Enumerator
+e8a8788e761b56b86301b848a410b580 Assembly-CSharp.dll:.Item_Enumerator
 a5f60c329c2f1d46dd86820ede1249c6 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BloomAndFlares
 486cd95c82d8305219c352c06b776e1f UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 9e61f3535f3c55760a1cedfbd114f4af UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -175,6 +176,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 a3c4f6168fdec1e9debee096e97ab787 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEventCheck
+11ae61048787b1ba9f63c0feefcb8f5d Assembly-CSharp.dll:Kino.Bokeh
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 1655e5cbdafc3f52a798a8128c8c7c12 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 34d219cdf8a72aef75c203b036a85318 Assembly-CSharp.dll:TMPro.Examples.Benchmark01
@@ -274,7 +276,7 @@ ed66f271def58ab7e2c2f6552bc1c36a Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 70f7dc248db3379548a88e8d4fa049f8 UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioRoom
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSoundfieldExtension
 28a95668dd28649297d595834fe8417e UnityEngine.GoogleAudioSpatializer.dll:UnityEngine.Experimental.Audio.Google.GvrAudioSourceExtension
-ad62c68f1a749bb37c9e30bf6793ef68 Assembly-CSharp.dll:.FadeIn
+0fc3ffc7755270c8cad34996be191395 Assembly-CSharp.dll:.FadeInWithCross
 5a06c18b6aa904558ea6e46718fcc738 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.NoiseAndGrain
 7f6fc417a53e608e411cb1091d92debe Unity.RenderPipelines.Lightweight.Runtime.dll:.LightweightPipelineEditorResources
 4ff0bb9a305567221c5f93759417ee3d Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
@@ -354,3 +356,5 @@ c2be76183103889aa49c71a9d2cf30f7 MeshBakerCore.dll:DigitalOpus.MB.Core.MB_BlendS
 486cd95c82d8305219c352c06b776e1f MeshBakerCore.dll:DigitalOpus.MB.Core.MB_DefaultMeshAssignCustomizer
 e958cc1ee46a616a6e0cde964bfe9918 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 aae9893fc05b6c8cba8317ed327be0c4 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
+ad62c68f1a749bb37c9e30bf6793ef68 Assembly-CSharp.dll:.FadeIn
+6d284479dbd8ba011afe0f59f08c1073 Assembly-CSharp.dll:.LoadScreen

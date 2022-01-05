@@ -83,6 +83,7 @@ public class PlayerController : MonoBehaviour
     
       private void Awake()
     {
+        animator.SetBool("isGrab", false);
         cameraRig = Camera.transform.parent.transform; //get the transform of the righ the camera is a child to
         walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
@@ -94,11 +95,20 @@ public class PlayerController : MonoBehaviour
 
     }
     void Update()
-    {
+    {   
+        
         Flashlight();
         Move();
         Rotate();
         Keys();
+    
+        if (verticalMove != 0 || horizontalRotation !=0){
+        walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            if (walkStart == 0f){   
+                StartCoroutine(walkLerp(0, 1,  lerpRate));
+            }    
+        
+        }
         
     }
     private void Flashlight()
@@ -212,6 +222,7 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
                 StopAllCoroutines();
                 StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
                 flashlightDisabled = true;
+                StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
 //if battery is not dead, and we hit the L trigger
         if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled)
@@ -220,6 +231,7 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
             Color currentColor = lightBeam.material.color;
             StopAllCoroutines();
             StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, duration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
+            StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
 //change FOV while we hold the L trigger
         if (Input.GetKey(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled)
@@ -236,6 +248,7 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
             float currentSize = lightShaft.transform.localScale.x;
             Color currentColor = lightBeam.material.color;
             StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, currentAngle, 40, currentSize, 0.08f));
+            StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
     
         
@@ -307,9 +320,13 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
         lightRig.transform.localRotation = Quaternion.Euler(currentLightRotation);
      
         if (animator.GetBool("isRunning") == false && animator.GetBool("isWalking") == false) {
-            if (horizontalRotation != 0 || verticalMove != 0){
-                animator.SetBool("isWalking", true);
-            };
+            if (horizontalRotation == 0 ||verticalMove == 0){
+                animator.SetBool("isIdle", true);
+            }
+            // if (horizontalRotation != 0 || verticalMove != 0){
+            //     animator.SetBool("isWalking", true);
+            //     animator.SetBool("isIdle", false);
+            // };
         } 
     }
 
@@ -338,21 +355,26 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
         Vector3 gravityMove = new Vector3(0, verticalSpeed, 0);  
         Vector3 move = transform.forward * -verticalMove + transform.right * 0;
         characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
-        if (animator.GetBool("isRunning") == false) {
+        if (animator.GetBool("isRunning") == false ) {
             animator.SetBool("isWalking", verticalMove != 0);
+            animator.SetBool("isIdle", false);
                 
         } 
+        if (!animator.GetBool("isWalking") && !animator.GetBool("isRunning")){
+            animator.SetBool("isIdle", verticalMove == 0);
+        }
          
     }
 
     private void Run()
     {
-        animator.SetBool("isWalking", false);
+        
         Debug.Log("You're holding down run!");
         speed = 5f;
         camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
-        if (animator.GetBool("isRunning") == false && animator.GetBool("isWalking") == false && horizontalRotation != 0 || verticalMove != 0) {
-            animator.SetBool("isRunning", true);           
+        if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false && horizontalRotation != 0 || verticalMove != 0) {
+            animator.SetBool("isRunning", true);
+            animator.SetBool("isWalking", false);           
         }
     }
 
@@ -360,6 +382,8 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
     {
         Debug.Log("You're holding down the focus button!");
         camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32; //zoom in
+        // animator.SetBool("isRunning", false);
+        // animator.SetBool("isWalking", true); 
 
     }
 
@@ -394,7 +418,6 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
         }
         skinnedRenderer.material.SetFloat("_CrossFade", 1);
         StartCoroutine(walkLerpReverse(1, 0, lerpRate));
-        isLerping = false;
     }
 
     IEnumerator walkLerpReverse(float startValue, float endValue, float duration){
@@ -478,6 +501,12 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
            
             time += Time.deltaTime;
             yield return null;
+        }
+        if (verticalMove != 0 || horizontalRotation !=0){
+            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            if (walkStart == 0f){   
+                StartCoroutine(walkLerp(0, 1,  lerpRate));
+            }    
         }
     }
 }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Fadeout : MonoBehaviour {
 	public float duration = 2.0f;
+	public float delay = 0.0f;
 	public RawImage fadeImage;
 	private bool ignore = true;
 
@@ -12,6 +13,9 @@ public class Fadeout : MonoBehaviour {
 	// Use this for initialization
 	
 	void Start () {
+		if(delay > 0f){
+			new WaitForSeconds(delay);
+		}
 		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
 		StartCoroutine(fade(new Color(0,0,0,1),new Color (0,0,0,0), duration));	
 	}

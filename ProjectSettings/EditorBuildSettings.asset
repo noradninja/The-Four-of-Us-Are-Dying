@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: deecc1e6fd7c18845840b20c963a6ec2
   - enabled: 1
+    path: Assets/Scenes/LoadScreen.unity
+    guid: 53567b17da4b87e469ca9fc19db152ef
+  - enabled: 1
     path: Assets/Scenes/EnviroTest.unity
     guid: b10435b05133b0d4f9396fc0b953dcba
   m_configObjects: {}

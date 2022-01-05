@@ -24,6 +24,7 @@ public class Item_Enumerator : MonoBehaviour {
 	public int itemValue;
 	//public pickupText itemText;
 	public Collider player;
+	public Animator animator;
 	public GameObject playerObject;
 	public Material playerBody;
 	public Collider thisCollider;
@@ -64,35 +65,35 @@ public class Item_Enumerator : MonoBehaviour {
 
     // Update is called once per frame
     void Update (){
-			if (Input.GetKeyDown(joystick1 + CROSS) && dialogBG.color == dialogOn && isActiveObject){
-				
-				switch (thisItem){
+		if (Input.GetKeyDown(joystick1 + CROSS) && dialogBG.color == dialogOn && isActiveObject){
+		
+			switch (thisItem){
 
-					case pickupItem.flashlight :
-						PlayerController.hasFlashlight = true;
-						PlayerController.flashlightOff = false;
-					break;
+				case pickupItem.flashlight :
+					PlayerController.hasFlashlight = true;
+					PlayerController.flashlightOff = false;
+				break;
 
-					case pickupItem.battery :
-						print("That's a battery");
-						player.GetComponentInParent<PlayerController>().batteryCount += 1;
-						batteryText.text = ("" + player.GetComponentInParent<PlayerController>().batteryCount);
-					break;
+				case pickupItem.battery :
+					print("That's a battery");
+					player.GetComponentInParent<PlayerController>().batteryCount += 1;
+					batteryText.text = ("" + player.GetComponentInParent<PlayerController>().batteryCount);
+				break;
 
-					case pickupItem.key :
-						print("That's a key");
-						//do key shit here, increase inventory of generic keys
-					break;
+				case pickupItem.key :
+					print("That's a key");
+					//do key shit here, increase inventory of generic keys
+				break;
 
-					case pickupItem.health :
-						print("That's a medkit");
-						playerObject.BroadcastMessage("healMe"); //todo- crossfade this so it looks nice (gonna need to modify the fsk!*g shader, damnit), actually implement HP
-					break;
-				}
-				targetObject.SetActive(false);
-				ClearOSD();
+				case pickupItem.health :
+					print("That's a medkit");
+					playerObject.BroadcastMessage("healMe"); //todo- crossfade this so it looks nice (gonna need to modify the fsk!*g shader, damnit), actually implement HP
+				break;
 			}
-		else return;
+			targetObject.SetActive(false);
+			ClearOSD();
+		}
+		
 	}
 
 	void OnGUI (){
