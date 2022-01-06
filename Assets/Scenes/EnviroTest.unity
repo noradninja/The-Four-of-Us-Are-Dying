@@ -1572,7 +1572,7 @@ MonoBehaviour:
   _focusDistance: 10
   _fNumber: 9.5
   _useCameraFov: 0
-  _focalLength: 0.11
+  _focalLength: 0.115
   _kernelSize: 0
   _visualize: 0
   _shader: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}
@@ -1709,7 +1709,7 @@ Transform:
   m_Children:
   - {fileID: 1852689592}
   m_Father: {fileID: 1483163057}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &141954558
 MonoBehaviour:
@@ -27792,7 +27792,7 @@ Transform:
   m_Children:
   - {fileID: 1039149774}
   m_Father: {fileID: 1483163057}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1217547050
 MonoBehaviour:
@@ -32020,7 +32020,6 @@ Transform:
   - {fileID: 489463877}
   - {fileID: 1484583151}
   - {fileID: 1179876908}
-  - {fileID: 1550034750}
   - {fileID: 1217547049}
   - {fileID: 141954557}
   m_Father: {fileID: 1261315814}
@@ -32538,7 +32537,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1550034750
 Transform:
@@ -32547,13 +32546,13 @@ Transform:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1550034749}
-  m_LocalRotation: {x: 0.63713294, y: -0.45226818, z: 0.6064876, w: 0.14726809}
-  m_LocalPosition: {x: 0.00011991663, y: 0.010536343, z: 0}
-  m_LocalScale: {x: 1.0000005, y: 1.000001, z: 1.0000005}
+  m_LocalRotation: {x: 0.5791262, y: -0.33179656, z: 0.6076026, w: -0.43051502}
+  m_LocalPosition: {x: 11.802209, y: 0.95440423, z: 10.461279}
+  m_LocalScale: {x: 45.454544, y: 45.454544, z: 45.454533}
   m_Children: []
-  m_Father: {fileID: 1483163057}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 47.413002, y: 109.059006, z: -144.009}
+  m_Father: {fileID: 787849895}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: -5.477, y: 83.711006, z: -114.268005}
 --- !u!114 &1550034751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32574,7 +32573,7 @@ MonoBehaviour:
   shadowmaskMode: 0
   targetLight: {fileID: 1550034752}
   parentGameObject: {fileID: 1550034749}
-  position: {x: 0.78969467, y: 0.39437878, z: 1.0468895}
+  position: {x: 0.78969324, y: 0.39437872, z: 1.0468905}
   forward: {x: 0.75780123, y: -0.36187214, z: -0.54294163}
   saveNearbyProbes: 0
   saveRadius: 0
@@ -32615,8 +32614,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.5
+  m_Color: {r: 0.59385014, g: 0.6427999, b: 0.8018868, a: 1}
+  m_Intensity: 0.325
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -36323,7 +36322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -393.3, y: -250.4}
+  m_AnchoredPosition: {x: -395.6, y: -250.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881198858

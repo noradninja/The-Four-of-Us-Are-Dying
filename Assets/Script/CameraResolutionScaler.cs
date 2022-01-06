@@ -119,10 +119,10 @@ public class CameraResolutionScaler : MonoBehaviour
 			vramText.text = ("VRAM: Unavailable");
 			ramText.text = (" RAM: Unavailable");
 		}
-		if (!statsActive){
-			vramText.text = ("");
-			ramText.text = ("");
-		}
+		// if (!statsActive){
+		// 	vramText.text = ("");
+		// 	ramText.text = ("");
+		//}
 		
 	}
 }

@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: WSCG
-  productName: School_Test
+  productName: The Four of Us Are Dying
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -256,7 +256,14 @@ PlayerSettings:
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
   resolutionDialogBanner: {fileID: 0}
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: PSP2
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: 0da90c5112f4eff47a57d49a30965b2b, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons: []
   m_BuildTargetBatching:
   - m_BuildTarget: Standalone
@@ -516,7 +523,7 @@ PlayerSettings:
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
   monoEnv: 
-  psp2Splashimage: {fileID: 0}
+  psp2Splashimage: {fileID: 2800000, guid: 5dbc8b45c5584b149bddbed51d5c5175, type: 3}
   psp2NPTrophyPackPath: 
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12
@@ -527,7 +534,7 @@ PlayerSettings:
   psp2NPCommsSig: 
   psp2ParamSfxPath: 
   psp2ManualPath: 
-  psp2LiveAreaGatePath: 
+  psp2LiveAreaGatePath: Assets/Texture/Sony UI/Gate.png
   psp2LiveAreaBackroundPath: 
   psp2LiveAreaPath: 
   psp2LiveAreaTrialPath: 
@@ -548,7 +555,7 @@ PlayerSettings:
   psp2PackagedResourcesPath: 
   psp2SaveDataQuota: 10240
   psp2ParentalLevel: 1
-  psp2ShortTitle: School Test
+  psp2ShortTitle: The Four of Us Are Dying
   psp2ContentID: IV0000-WSCG00004_00-0123456789ABCDEF
   psp2Category: 0
   psp2MasterVersion: 01.00

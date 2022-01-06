@@ -192,7 +192,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 //if we add battery while 'firing' flashlight
-if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Input.GetKey(VITA + LTRIG))
+if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
         {   
             StopAllCoroutines();
             StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, duration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
@@ -228,7 +228,7 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
 //if battery is not dead, and we hit the L trigger
-        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled)
+        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled && !flashlightOff)
         {   
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
@@ -237,7 +237,7 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
             StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
 //change FOV while we hold the L trigger
-        if (Input.GetKey(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled)
+        if (Input.GetKey(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled && !flashlightOff)
         {
             Focus();
             if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
@@ -375,9 +375,19 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
         Debug.Log("You're holding down run!");
         speed = 5f;
         camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
-        if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false && horizontalRotation != 0 || verticalMove != 0) {
+        if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
             animator.SetBool("isRunning", true);
             animator.SetBool("isWalking", false);           
+        }
+        else  if (verticalMove == 0 && horizontalRotation == 0){
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isIdle", true);
+        }
+        else if (verticalMove == 0 && horizontalRotation != 0){
+            animator.SetBool("isRunning", false);
+            animator.SetBool("isWalking", true);
+            animator.SetBool("isIdle", false);
         }
     }
 

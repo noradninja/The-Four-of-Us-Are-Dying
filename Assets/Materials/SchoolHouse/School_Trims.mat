@@ -181,7 +181,7 @@ Material:
     - _AlphaMapType: 999
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 1
+    - _BumpScale: 2
     - _ColorAmplify: 1
     - _ControlScriptFlag: 0
     - _CrossFade: 0
