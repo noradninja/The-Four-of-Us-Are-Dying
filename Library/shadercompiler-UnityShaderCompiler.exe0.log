@@ -2,3 +2,37 @@ Base path: C:/Program Files/Unity2018/Editor/Data
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _NORMALMAP _VERTEXCOLOR_OFF _ALPHATEST_ON
+Platform defines: UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1822 outsize=2670 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _NORMALMAP _VERTEXCOLOR_OFF _ALPHATEST_ON pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _NORMALMAP _VERTEXCOLOR_OFF _ALPHATEST_ON
+Platform defines: UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1822 outsize=2574 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _NORMALMAP _VERTEXCOLOR_OFF _ALPHATEST_ON pd=UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler

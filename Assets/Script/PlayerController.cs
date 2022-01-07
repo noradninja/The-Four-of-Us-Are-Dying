@@ -80,6 +80,8 @@ public class PlayerController : MonoBehaviour
     public SkinnedMeshRenderer skinnedRenderer;
     private float walkStart;
    public bool isLerping;
+   private bool isPaused;
+   public RawImage pausePanel;
 
     
       private void Awake()
@@ -137,6 +139,14 @@ public class PlayerController : MonoBehaviour
     }
     private void Keys()
     {
+        if (Input.GetKeyDown(VITA + START)){
+            if(!isPaused){
+                StartCoroutine(fade(0, 1, 0.5f));
+            }
+            else {
+                StartCoroutine(fade(1, 0, 0.5f));
+            }
+        }
         if (Input.GetKeyDown(VITA + CIRCLE))
         {   
 //enable/disable SSAO and UI text
@@ -525,4 +535,19 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
             }    
         }
     }
+    IEnumerator fade(float startValue, float endValue, float duration){
+		float time = 0.0f;
+		while (time < duration){
+			pausePanel.color = Color.Lerp (new Color(1,1,1,startValue), new Color(1,1,1,endValue), time/duration);
+			time += Time.deltaTime;
+        	yield return null;
+		}
+		pausePanel.color = new Color (1,1,1,endValue);
+        if (isPaused){
+            isPaused = false;
+        }
+        else if (!isPaused){
+            isPaused = true;
+        }
+	}
 }
