@@ -110,16 +110,6 @@
      <Compile Include="Assets\Addons\Sleek_Renderer\TestKit\Stuff\DisplayFPS.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\TestKit\Stuff\EmptyGraphic.cs" />
      <Compile Include="Assets\Kino\Bokeh\Bokeh.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\BatchPrepareObjectsForDynamicBatching\MB_BatchPrepareObjectsForDynamicBatchingDescription.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneDynamicAddDelete\MB_DynamicAddDeleteExample.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
-     <Compile Include="Assets\MeshBaker\Examples\SwitchBakedObjectsTexture\MB_SwitchBakedObjectsTexture.cs" />
      <Compile Include="Assets\Script\AutoRotate.cs" />
      <Compile Include="Assets\Script\Cam.cs" />
      <Compile Include="Assets\Script\CameraFacingBillboard.cs" />
@@ -184,9 +174,9 @@
      <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail_Soft.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-     <None Include="Assets\MeshBaker\Resources\Shaders\UnlitWithAlpha.shader" />
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCore_VC.cginc" />
      <None Include="Assets\Kino\Bokeh\Shader\Debug.cginc" />
+     <None Include="Assets\___www.unityassetcollection.com___.txt" />
      <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
      <None Include="Assets\Addons\FastSSAO\FastSSAO.shader" />
@@ -208,10 +198,8 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\Shader\Vertex\VertexLightmapCommon.cginc" />
      <None Include="Assets\Addons\Bloom\Shaders\BloomDisplay.shader" />
-     <None Include="Assets\MeshBaker\Examples\Shaders\UnlitTextureArrays.shader" />
      <None Include="Assets\Addons\KinoFog\Kino\Fog\Shader\Fog.shader" />
      <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
-     <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
      <None Include="Assets\Shader\DepthCG.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForward.cginc" />
      <None Include="Assets\Addons\Shaders\zako.shader" />
@@ -226,7 +214,6 @@
      <None Include="Assets\Addons\Shaders\beam2.shader" />
      <None Include="Assets\Addons\Lightbeam\Documentation\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
-     <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
      <None Include="Assets\Shader\GeneratedFromSurface-Mirza Beig-GPU Fog (Built-In).shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Kino\Bokeh\Shader\Composition.cginc" />
@@ -247,10 +234,8 @@
      <None Include="Assets\Trees_WorldSpace\Shaders\TreeLeafSwitcherAS.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-     <None Include="Assets\MeshBaker\Release Notes.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicMeta.cginc" />
      <None Include="Assets\Shader\Standard Mobile\Standard_VC_No_Fog.shader" />
-     <None Include="Assets\MeshBaker\MeshBakerWorkingFolder\DONT_DELETE.txt" />
      <None Include="Assets\Addons\Shaders\sight.shader" />
      <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail.shader" />
      <None Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Resources\Shaders\HorizontalBlur.shader" />
@@ -278,15 +263,12 @@
      <None Include="Assets\VitaFTPI\SaveConfig.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Shader\Light &amp; Shadow\ShadowCaster.shader" />
-     <None Include="Assets\MeshBaker\README.txt" />
      <None Include="Assets\Addons\Shaders\explosion.shader" />
      <None Include="Assets\Addons\Shaders\tubeLum.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-     <None Include="Assets\SimplestMeshBaker\Readme.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCore.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Shader\Standard Mobile Lerp\Standard_VC_Lerp.shader" />
-     <None Include="Assets\MeshBaker\Resources\Shaders\AlbedoShader.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Addons\Shaders\NewUnlitShader.shader" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForwardSimple.cginc" />
@@ -874,10 +856,6 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{39613E69-7C7B-B0BC-3FDB-A22A1CC11892}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{594FC5AC-9432-DA23-C5F2-DC35AD140410}</Project>      <Name>MeshBakerCore</Name>    </ProjectReference>
-    <ProjectReference Include="MeshBakerEditor.csproj">
-      <Project>{559955CD-5873-186C-536A-EAC1F8DC6B10}</Project>      <Name>MeshBakerEditor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

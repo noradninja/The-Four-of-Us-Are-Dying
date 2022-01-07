@@ -79,8 +79,6 @@
      <Compile Include="Assets\Kino\Bokeh\Editor\BokehEditor.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI_Lerp.cs" />
-     <Compile Include="Assets\SimplestMeshBaker\Editor\BonesBaker.cs" />
-     <Compile Include="Assets\SimplestMeshBaker\Editor\MeshBaker.cs" />
      <Compile Include="Assets\VitaFTPI\Editor\UploadBuild.cs" />
      <Compile Include="Assets\VitaFTPI\Editor\UploadData.cs" />
      <Compile Include="Assets\VitaFTPI\Editor\VitaFTPOptions.cs" />
@@ -740,10 +738,6 @@
       <Project>{1C2F7B94-25BA-F3C2-3972-7E0650B3186B}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
       <Project>{81170BA8-038E-2294-8E5B-CB617B35A69A}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{594FC5AC-9432-DA23-C5F2-DC35AD140410}</Project>      <Name>MeshBakerCore</Name>    </ProjectReference>
-    <ProjectReference Include="MeshBakerEditor.csproj">
-      <Project>{559955CD-5873-186C-536A-EAC1F8DC6B10}</Project>      <Name>MeshBakerEditor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

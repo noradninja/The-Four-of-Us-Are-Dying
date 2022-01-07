@@ -738,12 +738,6 @@
  <HintPath>C:/Program Files/Unity2018/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
  </Reference>
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{594FC5AC-9432-DA23-C5F2-DC35AD140410}</Project>      <Name>MeshBakerCore</Name>    </ProjectReference>
-    <ProjectReference Include="MeshBakerEditor.csproj">
-      <Project>{559955CD-5873-186C-536A-EAC1F8DC6B10}</Project>      <Name>MeshBakerEditor</Name>    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

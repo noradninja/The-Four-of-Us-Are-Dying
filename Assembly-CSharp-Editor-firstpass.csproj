@@ -719,10 +719,6 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{39613E69-7C7B-B0BC-3FDB-A22A1CC11892}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
-    <ProjectReference Include="MeshBakerCore.csproj">
-      <Project>{594FC5AC-9432-DA23-C5F2-DC35AD140410}</Project>      <Name>MeshBakerCore</Name>    </ProjectReference>
-    <ProjectReference Include="MeshBakerEditor.csproj">
-      <Project>{559955CD-5873-186C-536A-EAC1F8DC6B10}</Project>      <Name>MeshBakerEditor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshBakerCore", "MeshBakerCore.csproj", "{594FC5AC-9432-DA23-C5F2-DC35AD140410}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1C2F7B94-25BA-F3C2-3972-7E0650B3186B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{39613E69-7C7B-B0BC-3FDB-A22A1CC11892}"
@@ -11,18 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firs
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{3F292D94-B271-EBB3-9279-857D2313D31B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeshBakerEditor", "MeshBakerEditor.csproj", "{559955CD-5873-186C-536A-EAC1F8DC6B10}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{594FC5AC-9432-DA23-C5F2-DC35AD140410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{594FC5AC-9432-DA23-C5F2-DC35AD140410}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{594FC5AC-9432-DA23-C5F2-DC35AD140410}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{594FC5AC-9432-DA23-C5F2-DC35AD140410}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1C2F7B94-25BA-F3C2-3972-7E0650B3186B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{1C2F7B94-25BA-F3C2-3972-7E0650B3186B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C2F7B94-25BA-F3C2-3972-7E0650B3186B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,10 +31,6 @@ Global
 		{3F292D94-B271-EBB3-9279-857D2313D31B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F292D94-B271-EBB3-9279-857D2313D31B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F292D94-B271-EBB3-9279-857D2313D31B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{559955CD-5873-186C-536A-EAC1F8DC6B10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{559955CD-5873-186C-536A-EAC1F8DC6B10}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{559955CD-5873-186C-536A-EAC1F8DC6B10}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{559955CD-5873-186C-536A-EAC1F8DC6B10}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

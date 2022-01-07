@@ -143,12 +143,15 @@ public class PlayerController : MonoBehaviour
             if (SSAOScript.GetComponent<FastSSAO>().enabled){
                 SSAOScript.GetComponent<FastSSAO>().enabled = false;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
-                enabledText.SetActive(false);
+                enabledText.GetComponent<Text>().color = Color.red;
+                enabledText.GetComponent<Text>().text = ("Disabled");
+
             }
             else {
                 SSAOScript.GetComponent<FastSSAO>().enabled = true;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-                enabledText.SetActive(true);
+                enabledText.GetComponent<Text>().color = Color.yellow;
+                enabledText.GetComponent<Text>().text = ("Enabled");
             }
 //enable/disable bloom
             if (SSAOScript.GetComponent<FastMobileBloom>().enabled){
