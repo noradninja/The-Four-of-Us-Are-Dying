@@ -160,7 +160,7 @@ public class PlayerController : MonoBehaviour
             else {
                 SSAOScript.GetComponent<FastSSAO>().enabled = true;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-                enabledText.GetComponent<Text>().color = Color.yellow;
+                enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");
             }
 //enable/disable bloom

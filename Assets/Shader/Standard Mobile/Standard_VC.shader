@@ -14,7 +14,8 @@ Shader "Vita/Standard Mobile"
         [Enum(Metallic Alpha,0,Albedo Alpha,1)] _SmoothnessTextureChannel ("Smoothness texture channel", Float) = 0
 
         [Gamma] _Metallic("Metallic", Range(0.0, 1.0)) = 0.0
-        _MetallicGlossMap("Metallic", 2D) = "white" {}
+        _MetallicGlossMap("Metal/Occlusion/Alpha/Rough (RGBA)", 2D) = "white" {}
+        _OcclusionStrength("Occlusion Strength", Range(0.0, 1.0)) = 0.0
 
         [ToggleOff] _SpecularHighlights("Specular Highlights", Float) = 1.0
         [ToggleOff] _GlossyReflections("Glossy Reflections", Float) = 1.0
@@ -25,8 +26,8 @@ Shader "Vita/Standard Mobile"
         _Parallax ("Height Scale", Range (0.005, 0.08)) = 0.02
         _ParallaxMap ("Height Map", 2D) = "black" {}
 
-        _OcclusionStrength("Strength", Range(0.0, 1.0)) = 1.0
-        _OcclusionMap("Occlusion", 2D) = "white" {}
+        _OcclusionStrength("Occlusion Strength", Range(0.0, 1.0)) = 1.0
+        //_OcclusionMap("Occlusion", 2D) = "white" {}
 
         _EmissionColor("Color", Color) = (0,0,0)
         _EmissionMap("Emission", 2D) = "white" {}
@@ -355,5 +356,5 @@ Shader "Vita/Standard Mobile"
 
 
     //FallBack "VertexLit"
-   // CustomEditor "Standard_VCShaderGUI"
+   CustomEditor "Standard_VCShaderGUI"
 }

@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Murphy_Body
   m_Shader: {fileID: 4800000, guid: 8a0a4e7f5be03ac46bc1d4a23d357436, type: 3}
-  m_ShaderKeywords: _NORMALMAP _VERTEXCOLOR
+  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -47,7 +47,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: b0b2d3b7e54547948b54eb9f05603301, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -76,7 +76,7 @@ Material:
     - _Glossiness: 0.125
     - _GlossyReflections: 1
     - _IntensityVC: 1
-    - _Metallic: 0
+    - _Metallic: 1
     - _Mode: 0
     - _OcclusionStrength: 0
     - _PainValue: 0.3

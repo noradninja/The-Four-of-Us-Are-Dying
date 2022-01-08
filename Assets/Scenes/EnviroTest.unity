@@ -1246,7 +1246,7 @@ GameObject:
   - component: {fileID: 119697780}
   - component: {fileID: 119697782}
   - component: {fileID: 119697781}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Flashlight_Charge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1364,7 +1364,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 32535
+    m_Bits: 4294967295
   m_RenderingPath: 1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1445,7 +1445,7 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a1ec93f61bcd1284a8d0ac2e50474eea, type: 3}
@@ -1901,7 +1901,7 @@ GameObject:
   - component: {fileID: 166171228}
   - component: {fileID: 166171227}
   - component: {fileID: 166171231}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Overlay Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18691,7 +18691,7 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 553536171}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -18701,7 +18701,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 960, y: 544}
+  m_SizeDelta: {x: 1024, y: 1024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &553536174
 MonoBehaviour:
@@ -18898,7 +18898,7 @@ GameObject:
   - component: {fileID: 594692549}
   - component: {fileID: 594692551}
   - component: {fileID: 594692550}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: PP Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18935,7 +18935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11764707, g: 0.8000001, b: 0.023529414, a: 1}
+  m_Color: {r: 0.6397059, g: 0.6397059, b: 0.6397059, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -24694,7 +24694,7 @@ GameObject:
   - component: {fileID: 787333239}
   - component: {fileID: 787333241}
   - component: {fileID: 787333240}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Enable_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26719,7 +26719,7 @@ GameObject:
   - component: {fileID: 1095426729}
   - component: {fileID: 1095426731}
   - component: {fileID: 1095426730}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Pickup Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30175,7 +30175,7 @@ GameObject:
   - component: {fileID: 1318483822}
   - component: {fileID: 1318483821}
   - component: {fileID: 1318483820}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: FadeIn_Mask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30737,7 +30737,7 @@ GameObject:
   - component: {fileID: 1413420061}
   - component: {fileID: 1413420063}
   - component: {fileID: 1413420062}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Flashlight_Charge Frame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32071,7 +32071,7 @@ GameObject:
   - component: {fileID: 1481050168}
   - component: {fileID: 1481050170}
   - component: {fileID: 1481050169}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: VRAM Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32108,7 +32108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11764707, g: 0.8000001, b: 0.023529414, a: 1}
+  m_Color: {r: 0.6397059, g: 0.6397059, b: 0.6397059, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -32761,7 +32761,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.59385014, g: 0.6427999, b: 0.8018868, a: 1}
-  m_Intensity: 0.325
+  m_Intensity: 0.75
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -35298,7 +35298,7 @@ GameObject:
   - component: {fileID: 1745381943}
   - component: {fileID: 1745381945}
   - component: {fileID: 1745381944}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Pickup Dialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35368,7 +35368,7 @@ GameObject:
   - component: {fileID: 1754829750}
   - component: {fileID: 1754829748}
   - component: {fileID: 1754829749}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Hilight Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36446,7 +36446,7 @@ GameObject:
   - component: {fileID: 1881198857}
   - component: {fileID: 1881198859}
   - component: {fileID: 1881198858}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: RAM Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36483,7 +36483,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.11764707, g: 0.8000001, b: 0.023529414, a: 1}
+  m_Color: {r: 0.6397059, g: 0.6397059, b: 0.6397059, a: 1}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -36984,7 +36984,7 @@ GameObject:
   - component: {fileID: 1940048071}
   - component: {fileID: 1940048073}
   - component: {fileID: 1940048072}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Battery Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

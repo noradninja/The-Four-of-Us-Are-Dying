@@ -128,7 +128,7 @@ half Alpha(float2 uv)
 #if defined(_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A)
     return _Color.a;
 #else
-    return tex2D(_MainTex, uv).a * _Color.a;
+    return tex2D(_MetallicGlossMap, uv).b * _Color.a;
 #endif
 }
 
@@ -137,9 +137,9 @@ half Occlusion(float2 uv)
 #if (SHADER_TARGET < 30)
     // SM20: instruction count limitation
     // SM20: simpler occlusion
-    return tex2D(_OcclusionMap, uv).g;
+    return tex2D( _MetallicGlossMap, uv).g;
 #else
-    half occ = tex2D(_OcclusionMap, uv).g;
+    half occ = tex2D( _MetallicGlossMap, uv).g;
     return LerpOneTo (occ, _OcclusionStrength);
 #endif
 }

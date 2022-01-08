@@ -44244,7 +44244,7 @@ IL_00e2:
 		Behaviour_set_enabled_m20417929(L_26, (bool)1, /*hidden argument*/NULL);
 		GameObject_t1113636619 * L_27 = __this->get_enabledText_37();
 		Text_t1901882714 * L_28 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_27, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
-		Color_t2555686324  L_29 = Color_get_yellow_m1287957903(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Color_t2555686324  L_29 = Color_get_green_m490390750(NULL /*static, unused*/, /*hidden argument*/NULL);
 		VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_28, L_29);
 		GameObject_t1113636619 * L_30 = __this->get_enabledText_37();
 		Text_t1901882714 * L_31 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_30, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);

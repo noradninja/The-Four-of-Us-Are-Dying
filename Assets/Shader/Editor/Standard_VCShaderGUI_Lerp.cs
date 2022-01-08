@@ -36,7 +36,7 @@ namespace UnityEditor
             public static GUIContent dammageX = new GUIContent("Amount", "Damage Value");
             public static GUIContent alphaCutoffText = new GUIContent("Alpha Cutoff", "Threshold for alpha cutoff");
             public static GUIContent specularMapText = new GUIContent("Specular", "Specular (RGB) and Smoothness (A)");
-            public static GUIContent metallicMapText = new GUIContent("Metallic", "Metallic (R) and Smoothness (A)");
+            public static GUIContent metallicMapText = new GUIContent("M/O/A/R(RGBA)", "Metal/Occlusion/Alpha/Rough (RGBA)");
             public static GUIContent smoothnessText = new GUIContent("Smoothness", "Smoothness value");
             public static GUIContent smoothnessScaleText = new GUIContent("Smoothness", "Smoothness scale factor");
             public static GUIContent smoothnessMapChannelText = new GUIContent("Source", "Smoothness texture and channel");
@@ -46,7 +46,7 @@ namespace UnityEditor
             public static GUIContent normalMapBText = new GUIContent("Normal Map B", "Normal Map B");
             public static GUIContent bumpX = new GUIContent("Crossfade", "Crossfade normal maps");
             public static GUIContent heightMapText = new GUIContent("Height Map", "Height Map (G)");
-            public static GUIContent occlusionText = new GUIContent("Occlusion", "Occlusion (G)");
+           // public static GUIContent occlusionText = new GUIContent("Occlusion", "Occlusion (G)");
             public static GUIContent emissionText = new GUIContent("Color", "Emission (RGB)");
             public static GUIContent detailMaskText = new GUIContent("Detail Mask", "Mask for Secondary Maps (A)");
             public static GUIContent detailAlbedoText = new GUIContent("Detail Albedo x2", "Albedo (RGB) multiplied by 2");
@@ -82,7 +82,7 @@ namespace UnityEditor
         MaterialProperty bumpMapB = null;
         MaterialProperty bumpXFade = null;
         MaterialProperty occlusionStrength = null;
-        MaterialProperty occlusionMap = null;
+        // MaterialProperty occlusionMap = null;
         MaterialProperty heigtMapScale = null;
         MaterialProperty heightMap = null;
         MaterialProperty emissionColorForRendering = null;
@@ -130,7 +130,7 @@ namespace UnityEditor
             heigtMapScale = FindProperty("_Parallax", props);
             heightMap = FindProperty("_ParallaxMap", props);
             occlusionStrength = FindProperty("_OcclusionStrength", props);
-            occlusionMap = FindProperty("_OcclusionMap", props);
+            //occlusionMap = FindProperty("_OcclusionMap", props);
             emissionColorForRendering = FindProperty("_EmissionColor", props);
             emissionMap = FindProperty("_EmissionMap", props);
             detailMask = FindProperty("_DetailMask", props);
@@ -175,7 +175,7 @@ namespace UnityEditor
                 DoSpecularMetallicArea();
                 DoNormalArea();
                 m_MaterialEditor.TexturePropertySingleLine(Styles.heightMapText, heightMap, heightMap.textureValue != null ? heigtMapScale : null);
-                m_MaterialEditor.TexturePropertySingleLine(Styles.occlusionText, occlusionMap, occlusionMap.textureValue != null ? occlusionStrength : null);
+               // m_MaterialEditor.TexturePropertySingleLine(Styles.occlusionText, occlusionMap, occlusionMap.textureValue != null ? occlusionStrength : null);
                 m_MaterialEditor.TexturePropertySingleLine(Styles.detailMaskText, detailMask);
                 DoEmissionArea(material);
                 EditorGUI.BeginChangeCheck();
