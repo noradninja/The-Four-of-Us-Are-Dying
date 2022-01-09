@@ -110,6 +110,9 @@
      <Compile Include="Assets\Addons\Sleek_Renderer\TestKit\Stuff\DisplayFPS.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\TestKit\Stuff\EmptyGraphic.cs" />
      <Compile Include="Assets\Kino\Bokeh\Bokeh.cs" />
+     <Compile Include="Assets\Prefab Brush\Scripts\PB_Enums.cs" />
+     <Compile Include="Assets\Prefab Brush\Scripts\PB_PrefabData.cs" />
+     <Compile Include="Assets\Prefab Brush\Scripts\PB_SaveObject.cs" />
      <Compile Include="Assets\Script\AutoRotate.cs" />
      <Compile Include="Assets\Script\Cam.cs" />
      <Compile Include="Assets\Script\CameraFacingBillboard.cs" />
@@ -179,9 +182,9 @@
      <None Include="Assets\___www.unityassetcollection.com___.txt" />
      <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
+     <None Include="Assets\_www.unityassetcollection.com.txt" />
      <None Include="Assets\Addons\FastSSAO\FastSSAO.shader" />
      <None Include="Assets\Trees_WorldSpace\Shaders\BarkShaderAS.shader" />
-     <None Include="Assets\_www.unityassetcollection.com.txt" />
      <None Include="Assets\Addons\Bloom\Shaders\Bloom.shader" />
      <None Include="Assets\Addons\FastMobileBloom\FastMobileBloom.shader" />
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardInput_VC.cginc" />

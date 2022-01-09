@@ -200,7 +200,7 @@ Material:
     - _DistortVertSpeed: 0
     - _DistortVertStrength: 0
     - _DistortVertWave: 0
-    - _Distortion: 1
+    - _Distortion: 0
     - _DstBlend: 0
     - _DstBlendAddPass: 1
     - _EmissionAffectObject: 1

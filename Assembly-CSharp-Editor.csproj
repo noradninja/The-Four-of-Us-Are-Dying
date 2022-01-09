@@ -77,6 +77,7 @@
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Editor\SleekRenderCostCalculator.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Editor\SleekRenderSettingsInspector.cs" />
      <Compile Include="Assets\Kino\Bokeh\Editor\BokehEditor.cs" />
+     <Compile Include="Assets\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI_Lerp.cs" />
      <Compile Include="Assets\VitaFTPI\Editor\UploadBuild.cs" />

@@ -12,7 +12,67 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
+  - first: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL FOG_LINEAR LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL
+        passType: 5
+      - keywords: DIRECTIONAL FOG_LINEAR
+        passType: 5
+      - keywords: SHADOWS_DEPTH
+        passType: 8
   - first: {fileID: 103, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 106, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: _SUNDISK_SIMPLE
+        passType: 0
+  - first: {fileID: 200, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR SOFTPARTICLES_ON
+        passType: 0
+  - first: {fileID: 201, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR SOFTPARTICLES_ON
+        passType: 0
+  - first: {fileID: 202, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+  - first: {fileID: 203, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+  - first: {fileID: 205, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+  - first: {fileID: 207, guid: 0000000000000000f000000000000000, type: 0}
     second:
       variants:
       - keywords: 
@@ -37,6 +97,59 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
+  - first: {fileID: 10703, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL FOG_LINEAR LIGHTPROBE_SH
+        passType: 4
+      - keywords: SHADOWS_DEPTH
+        passType: 8
+  - first: {fileID: 10708, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 1
+      - keywords: FOG_LINEAR
+        passType: 1
+  - first: {fileID: 10720, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+  - first: {fileID: 10723, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+  - first: {fileID: 10750, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+  - first: {fileID: 10751, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+  - first: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
   - first: {fileID: 10753, guid: 0000000000000000f000000000000000, type: 0}
     second:
       variants:
@@ -50,6 +163,17 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
     second:
       variants:
+      - keywords: DIRECTIONAL _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SCREEN _NORMALMAP
+          _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON _NORMALMAP _VERTEXCOLOR_OFF
         passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _NORMALMAP
@@ -58,11 +182,36 @@ ShaderVariantCollection:
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SCREEN
           _NORMALMAP _VERTEXCOLOR_OFF
         passType: 4
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
+          _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
           _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR_OFF
         passType: 4
+      - keywords: DIRECTIONAL _ALPHATEST_ON _METALLICGLOSSMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON _ALPHATEST_ON _METALLICGLOSSMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _ALPHATEST_ON _METALLICGLOSSMAP
+          _VERTEXCOLOR_OFF
+        passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _ALPHATEST_ON
           _METALLICGLOSSMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+          _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _ALPHATEST_ON _METALLICGLOSSMAP
+          _NORMALMAP _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SCREEN _ALPHATEST_ON
+          _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR_OFF
         passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON _ALPHATEST_ON _METALLICGLOSSMAP
           _NORMALMAP _VERTEXCOLOR_OFF
@@ -73,10 +222,22 @@ ShaderVariantCollection:
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING SHADOWS_SCREEN
           _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR_OFF
         passType: 4
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR
+        passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR
         passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
           _METALLICGLOSSMAP _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL _EMISSION _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _NORMALMAP
+          _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
+          _EMISSION _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
         passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP
           _NORMALMAP _VERTEXCOLOR
@@ -84,26 +245,60 @@ ShaderVariantCollection:
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
           _EMISSION _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
         passType: 4
+      - keywords: DIRECTIONAL _GLOSSYREFLECTIONS_OFF _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON _GLOSSYREFLECTIONS_OFF _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _GLOSSYREFLECTIONS_OFF
+          _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON _GLOSSYREFLECTIONS_OFF _VERTEXCOLOR
+        passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _GLOSSYREFLECTIONS_OFF
+          _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP _VERTEXCOLOR
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP
           _VERTEXCOLOR
         passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTPROBE_SH _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP
           _VERTEXCOLOR
         passType: 4
+      - keywords: SPOT _NORMALMAP
+        passType: 5
+      - keywords: DIRECTIONAL _NORMALMAP
+        passType: 5
+      - keywords: SHADOWS_DEPTH SPOT _NORMALMAP
+        passType: 5
       - keywords: FOG_LINEAR SPOT _NORMALMAP
         passType: 5
       - keywords: FOG_LINEAR SHADOWS_DEPTH SPOT _NORMALMAP
         passType: 5
+      - keywords: SPOT _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
       - keywords: DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _NORMALMAP
+        passType: 5
+      - keywords: FOG_LINEAR SHADOWS_DEPTH SPOT _METALLICGLOSSMAP _NORMALMAP
         passType: 5
       - keywords: FOG_LINEAR LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SPOT _METALLICGLOSSMAP
           _NORMALMAP
+        passType: 5
+      - keywords: FOG_LINEAR SPOT _ALPHATEST_ON _METALLICGLOSSMAP
+        passType: 5
+      - keywords: FOG_LINEAR SHADOWS_DEPTH SPOT _ALPHATEST_ON _METALLICGLOSSMAP
+        passType: 5
+      - keywords: SPOT _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
         passType: 5
       - keywords: FOG_LINEAR SPOT _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
         passType: 5
       - keywords: FOG_LINEAR SHADOWS_DEPTH SPOT _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
         passType: 5
       - keywords: FOG_LINEAR SPOT _VERTEXCOLOR
+        passType: 5
+      - keywords: SPOT _METALLICGLOSSMAP _VERTEXCOLOR
         passType: 5
       - keywords: FOG_LINEAR SPOT _METALLICGLOSSMAP _VERTEXCOLOR
         passType: 5
@@ -131,10 +326,16 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: d0e5f2801770e4042bc52484670ce879, type: 3}
     second:
       variants:
+      - keywords: DIRECTIONAL
+        passType: 4
       - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
         passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
         passType: 4
+      - keywords: SPOT
+        passType: 5
       - keywords: DIRECTIONAL
         passType: 5
       - keywords: DIRECTIONAL FOG_LINEAR
@@ -153,6 +354,8 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: a0a5cb9d8925b7a4ca83c7a9fa9a5b85, type: 3}
     second:
       variants:
+      - keywords: 
+        passType: 0
       - keywords: SOFTPARTICLES_ON
         passType: 0
       - keywords: SHADOWS_DEPTH
@@ -160,6 +363,14 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
     second:
       variants:
+      - keywords: 
+        passType: 1
+      - keywords: FOG_LINEAR
+        passType: 1
+      - keywords: 
+        passType: 2
+      - keywords: SPOT
+        passType: 2
       - keywords: FOG_LINEAR
         passType: 2
       - keywords: FOG_LINEAR SPOT
@@ -173,6 +384,11 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
+  - first: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
   - first: {fileID: 4800000, guid: afaf8c3efa8828742b0a141cef124c83, type: 3}
     second:
       variants:
@@ -181,10 +397,24 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: f95f3a2bf98e81e4b8646e797b911f71, type: 3}
     second:
       variants:
+      - keywords: DIRECTIONAL
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
+        passType: 4
+      - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON
+        passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING
         passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
         passType: 4
+      - keywords: SPOT
+        passType: 5
       - keywords: FOG_LINEAR LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SPOT
         passType: 5
       - keywords: SHADOWS_DEPTH
@@ -196,6 +426,18 @@ ShaderVariantCollection:
       variants:
       - keywords: 
         passType: 0
+  - first: {fileID: 4800000, guid: ca96bfe3611524ee3be8cd2efb98348f, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: ead6c8b9840e6544ead04a36002fb1cb, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
   - first: {fileID: 4800000, guid: 27bf34f3c6d5dfb4eb225fe68c51be1b, type: 3}
     second:
       variants:
@@ -204,9 +446,17 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 189d778a2d8f05d4681878f40329821a, type: 3}
     second:
       variants:
+      - keywords: DIRECTIONAL _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
+          _VERTEXCOLOR_OFF
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_ON _EMISSION _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
+          _VERTEXCOLOR_OFF
+        passType: 4
       - keywords: DIRECTIONAL LIGHTMAP_ON LIGHTMAP_SHADOW_MIXING _EMISSION _GLOSSYREFLECTIONS_OFF
           _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR_OFF
         passType: 4
+      - keywords: SPOT _SPECULARHIGHLIGHTS_OFF
+        passType: 5
       - keywords: SHADOWS_DEPTH SPOT _SPECULARHIGHLIGHTS_OFF
         passType: 5
       - keywords: SHADOWS_DEPTH
@@ -216,30 +466,27 @@ ShaderVariantCollection:
   - first: {fileID: 4800000, guid: 8a0a4e7f5be03ac46bc1d4a23d357436, type: 3}
     second:
       variants:
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
+      - keywords: DIRECTIONAL LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
+          _METALLICGLOSSMAP _NORMALMAP
+        passType: 4
       - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
-          _NORMALMAP _VERTEXCOLOR
+          _METALLICGLOSSMAP _NORMALMAP
         passType: 4
-      - keywords: DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
-        passType: 4
-      - keywords: DIRECTIONAL FOG_LINEAR LIGHTPROBE_SH _METALLICGLOSSMAP _NORMALMAP
-          _VERTEXCOLOR
-        passType: 4
-      - keywords: DIRECTIONAL FOG_LINEAR LIGHTMAP_SHADOW_MIXING LIGHTPROBE_SH SHADOWS_SCREEN
-          _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
-        passType: 4
-      - keywords: DIRECTIONAL FOG_LINEAR _NORMALMAP _VERTEXCOLOR
+      - keywords: SPOT _METALLICGLOSSMAP _NORMALMAP
         passType: 5
-      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+      - keywords: DIRECTIONAL _METALLICGLOSSMAP _NORMALMAP
         passType: 5
-      - keywords: DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+      - keywords: DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _NORMALMAP
         passType: 5
-      - keywords: FOG_LINEAR SHADOWS_DEPTH SPOT _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+      - keywords: FOG_LINEAR SHADOWS_DEPTH SPOT _METALLICGLOSSMAP _NORMALMAP
         passType: 5
       - keywords: FOG_LINEAR LIGHTMAP_SHADOW_MIXING SHADOWS_DEPTH SPOT _METALLICGLOSSMAP
-          _NORMALMAP _VERTEXCOLOR
+          _NORMALMAP
         passType: 5
-      - keywords: SHADOWS_DEPTH
-        passType: 8
       - keywords: SHADOWS_DEPTH _METALLICGLOSSMAP
         passType: 8
   - first: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}

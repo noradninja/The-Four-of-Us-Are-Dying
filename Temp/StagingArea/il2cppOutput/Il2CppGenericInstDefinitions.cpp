@@ -717,6 +717,7 @@ extern const Il2CppType VolumeParameters_t2439672518_0_0_0;
 extern const Il2CppType MagicLightProbes_t2568509549_0_0_0;
 extern const Il2CppType LayerMask_t3493934918_0_0_0;
 extern const Il2CppType MLPTracePoint_t2352024495_0_0_0;
+extern const Il2CppType PB_PrefabData_t217394751_0_0_0;
 extern const Il2CppType VertexAnim_t2231884842_0_0_0;
 extern const Il2CppType Vector3U5BU5D_t1718750761_0_0_0;
 extern const Il2CppType IList_1_t1242665951_0_0_0;
@@ -2838,6 +2839,8 @@ static const RuntimeType* GenInst_LayerMask_t3493934918_0_0_0_Types[] = { (&Laye
 extern const Il2CppGenericInst GenInst_LayerMask_t3493934918_0_0_0 = { 1, GenInst_LayerMask_t3493934918_0_0_0_Types };
 static const RuntimeType* GenInst_MLPTracePoint_t2352024495_0_0_0_Types[] = { (&MLPTracePoint_t2352024495_0_0_0) };
 extern const Il2CppGenericInst GenInst_MLPTracePoint_t2352024495_0_0_0 = { 1, GenInst_MLPTracePoint_t2352024495_0_0_0_Types };
+static const RuntimeType* GenInst_PB_PrefabData_t217394751_0_0_0_Types[] = { (&PB_PrefabData_t217394751_0_0_0) };
+extern const Il2CppGenericInst GenInst_PB_PrefabData_t217394751_0_0_0 = { 1, GenInst_PB_PrefabData_t217394751_0_0_0_Types };
 static const RuntimeType* GenInst_Char_t3634460470_0_0_0_Int32_t2950945753_0_0_0_Types[] = { (&Char_t3634460470_0_0_0), (&Int32_t2950945753_0_0_0) };
 extern const Il2CppGenericInst GenInst_Char_t3634460470_0_0_0_Int32_t2950945753_0_0_0 = { 2, GenInst_Char_t3634460470_0_0_0_Int32_t2950945753_0_0_0_Types };
 static const RuntimeType* GenInst_String_t_0_0_0_String_t_0_0_0_Int32_t2950945753_0_0_0_Types[] = { (&String_t_0_0_0), (&String_t_0_0_0), (&Int32_t2950945753_0_0_0) };
@@ -3834,7 +3837,7 @@ static const RuntimeType* GenInst_VolumeParameter_1_t4078826557_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t4078826557_0_0_0 = { 1, GenInst_VolumeParameter_1_t4078826557_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t2051106872_0_0_0_Types[] = { (&VolumeParameter_1_t2051106872_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t2051106872_0_0_0 = { 1, GenInst_VolumeParameter_1_t2051106872_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1331] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1332] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_String_t_0_0_0,
@@ -4669,6 +4672,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1331] =
 	&GenInst_MagicLightProbes_t2568509549_0_0_0,
 	&GenInst_LayerMask_t3493934918_0_0_0,
 	&GenInst_MLPTracePoint_t2352024495_0_0_0,
+	&GenInst_PB_PrefabData_t217394751_0_0_0,
 	&GenInst_Char_t3634460470_0_0_0_Int32_t2950945753_0_0_0,
 	&GenInst_String_t_0_0_0_String_t_0_0_0_Int32_t2950945753_0_0_0,
 	&GenInst_VertexAnim_t2231884842_0_0_0,

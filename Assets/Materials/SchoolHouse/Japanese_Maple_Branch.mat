@@ -9,7 +9,7 @@ Material:
   m_Name: Japanese_Maple_Branch
   m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
   m_ShaderKeywords: GEOM_TYPE_LEAF SHADOWED_RIM _ALPHAPREMULTIPLY_ON _ALPHATEST_ON
-    _GLOSSYREFLECTIONS_OFF _NORMALMAP _WINDQUALITY_NONE
+    _GLOSSYREFLECTIONS_OFF _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -567,9 +567,9 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.2
-    - _leaves_wiggle_disp: 0.1
-    - _leaves_wiggle_speed: 0.5
+    - _influence: 0.095
+    - _leaves_wiggle_disp: 0.3
+    - _leaves_wiggle_speed: 0.0125
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0

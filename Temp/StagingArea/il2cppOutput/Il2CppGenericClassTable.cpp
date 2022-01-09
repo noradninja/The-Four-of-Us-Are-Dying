@@ -7178,6 +7178,21 @@ extern Il2CppGenericClass Comparer_1_t2897021656_GenericClass;
 extern Il2CppGenericClass GenericComparer_1_t3393866614_GenericClass;
 extern Il2CppGenericClass ObjectComparer_1_t396113088_GenericClass;
 extern Il2CppGenericClass Comparison_1_t1172197953_GenericClass;
+extern Il2CppGenericClass List_1_t1689469493_GenericClass;
+extern Il2CppGenericClass IEnumerator_1_t649965219_GenericClass;
+extern Il2CppGenericClass EmptyInternalEnumerator_1_t1859364562_GenericClass;
+extern Il2CppGenericClass InternalEnumerator_1_t1124458868_GenericClass;
+extern Il2CppGenericClass IList_1_t2032714534_GenericClass;
+extern Il2CppGenericClass ICollection_1_t3045546985_GenericClass;
+extern Il2CppGenericClass IEnumerable_1_t3492214936_GenericClass;
+extern Il2CppGenericClass IReadOnlyList_1_t781817657_GenericClass;
+extern Il2CppGenericClass IReadOnlyCollection_1_t220510688_GenericClass;
+extern Il2CppGenericClass ReadOnlyCollection_1_t1429971038_GenericClass;
+extern Il2CppGenericClass Predicate_1_t1042688875_GenericClass;
+extern Il2CppGenericClass Action_1_t389862346_GenericClass;
+extern Il2CppGenericClass Enumerator_t3578713370_GenericClass;
+extern Il2CppGenericClass IComparer_1_t1471660230_GenericClass;
+extern Il2CppGenericClass Comparison_1_t4287293226_GenericClass;
 extern Il2CppGenericClass UnityAction_2_t3839143818_GenericClass;
 extern Il2CppGenericClass UnityEvent_2_t1169440328_GenericClass;
 extern Il2CppGenericClass InvokableCall_2_t917579589_GenericClass;
@@ -7840,7 +7855,7 @@ extern Il2CppGenericClass IEquatable_1_t2942252599_GenericClass;
 
 
 
-extern Il2CppGenericClass* const s_Il2CppGenericTypes[7814] = 
+extern Il2CppGenericClass* const s_Il2CppGenericTypes[7829] = 
 {
 	&IEnumerator_1_t3512676632_GenericClass,
 	&EmptyInternalEnumerator_1_t427108679_GenericClass,
@@ -14999,6 +15014,21 @@ extern Il2CppGenericClass* const s_Il2CppGenericTypes[7814] =
 	&GenericComparer_1_t3393866614_GenericClass,
 	&ObjectComparer_1_t396113088_GenericClass,
 	&Comparison_1_t1172197953_GenericClass,
+	&List_1_t1689469493_GenericClass,
+	&IEnumerator_1_t649965219_GenericClass,
+	&EmptyInternalEnumerator_1_t1859364562_GenericClass,
+	&InternalEnumerator_1_t1124458868_GenericClass,
+	&IList_1_t2032714534_GenericClass,
+	&ICollection_1_t3045546985_GenericClass,
+	&IEnumerable_1_t3492214936_GenericClass,
+	&IReadOnlyList_1_t781817657_GenericClass,
+	&IReadOnlyCollection_1_t220510688_GenericClass,
+	&ReadOnlyCollection_1_t1429971038_GenericClass,
+	&Predicate_1_t1042688875_GenericClass,
+	&Action_1_t389862346_GenericClass,
+	&Enumerator_t3578713370_GenericClass,
+	&IComparer_1_t1471660230_GenericClass,
+	&Comparison_1_t4287293226_GenericClass,
 	&UnityAction_2_t3839143818_GenericClass,
 	&UnityEvent_2_t1169440328_GenericClass,
 	&InvokableCall_2_t917579589_GenericClass,

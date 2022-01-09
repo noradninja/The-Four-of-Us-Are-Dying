@@ -50367,6 +50367,13 @@ void* RuntimeInvoker_RuntimeObject_Color_t2555686324_Color_t2555686324_Single_t1
 	return ret;
 }
 
+void* RuntimeInvoker_RuntimeObject_RuntimeObject_Single_t1397266774_Single_t1397266774_Single_t1397266774 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef RuntimeObject * (*Func)(void* obj, RuntimeObject * p1, float p2, float p3, float p4, const RuntimeMethod* method);
+	RuntimeObject * ret = ((Func)methodPointer)(obj, (RuntimeObject *)args[0], *((float*)args[1]), *((float*)args[2]), *((float*)args[3]), methodMetadata);
+	return ret;
+}
+
 void* RuntimeInvoker_Void_t1185182177_Single_t1397266774_RuntimeObject_RuntimeObject (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
 {
 	typedef void (*Func)(void* obj, float p1, RuntimeObject * p2, RuntimeObject * p3, const RuntimeMethod* method);
@@ -57304,7 +57311,7 @@ void* RuntimeInvoker_RuntimeObject_FloatTween_t1274330004 (Il2CppMethodPointer m
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[3000] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[3001] = 
 {
 	RuntimeInvoker_RuntimeObject_RuntimeObject,
 	RuntimeInvoker_RuntimeObject_RuntimeObject_RuntimeObject,
@@ -59315,6 +59322,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[3000] =
 	RuntimeInvoker_RuntimeObject_Color_t2555686324_Color_t2555686324_Single_t1397266774,
 	RuntimeInvoker_RuntimeObject_Single_t1397266774_Single_t1397266774,
 	RuntimeInvoker_RuntimeObject_Color_t2555686324_Color_t2555686324_Single_t1397266774_Single_t1397266774_Single_t1397266774_Single_t1397266774_Single_t1397266774_Single_t1397266774_Single_t1397266774,
+	RuntimeInvoker_RuntimeObject_RuntimeObject_Single_t1397266774_Single_t1397266774_Single_t1397266774,
 	RuntimeInvoker_Void_t1185182177_Single_t1397266774_RuntimeObject_RuntimeObject,
 	RuntimeInvoker_Void_t1185182177_Color_t2555686324_RuntimeObject_RuntimeObject,
 	RuntimeInvoker_Void_t1185182177_Single_t1397266774_Single_t1397266774_RuntimeObject_RuntimeObject,
