@@ -81,7 +81,10 @@ public class PlayerController : MonoBehaviour
     private float walkStart;
    public bool isLerping;
    private bool isPaused;
+     private bool isMap;
    public RawImage pausePanel;
+   public RawImage mapPanel;
+   public Camera mapCam;
 
     
       private void Awake()
@@ -141,13 +144,13 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(VITA + START)){
             if(!isPaused){
-                StartCoroutine(fade(0, 1, 0.5f));
+                StartCoroutine(fade(pausePanel, 0, 1, 0.5f));
             }
             else {
-                StartCoroutine(fade(1, 0, 0.5f));
+                StartCoroutine(fade(pausePanel, 1, 0, 0.5f));
             }
         }
-        if (Input.GetKeyDown(VITA + CIRCLE))
+        if (Input.GetKeyDown(VITA + SELECT))
         {   
 //enable/disable SSAO and UI text
             if (SSAOScript.GetComponent<FastSSAO>().enabled){
@@ -205,7 +208,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 //if we add battery while 'firing' flashlight
-if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
+        if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
         {   
             StopAllCoroutines();
             StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, duration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
@@ -228,6 +231,14 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
                     StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
                     flashlightDisabled = false;
                 }
+            }
+        }
+        if (Input.GetKeyDown(VITA + CIRCLE)){
+            if(!isMap){
+                StartCoroutine(fade(mapPanel, 0, 1, 0.5f));
+            }
+            else {
+                StartCoroutine(fade(mapPanel, 1, 0, 0.5f));
             }
         }
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
@@ -535,19 +546,25 @@ if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Inpu
             }    
         }
     }
-    IEnumerator fade(float startValue, float endValue, float duration){
+    IEnumerator fade(RawImage fadeObject, float startValue, float endValue, float duration){
 		float time = 0.0f;
 		while (time < duration){
-			pausePanel.color = Color.Lerp (new Color(1,1,1,startValue), new Color(1,1,1,endValue), time/duration);
+			fadeObject.color = Color.Lerp (new Color(1,1,1,startValue), new Color(1,1,1,endValue), time/duration);
 			time += Time.deltaTime;
         	yield return null;
 		}
-		pausePanel.color = new Color (1,1,1,endValue);
+		fadeObject.color = new Color (1,1,1,endValue);
         if (isPaused){
             isPaused = false;
         }
         else if (!isPaused){
             isPaused = true;
+        }
+         if (isMap){
+            isMap = false;
+        }
+        else if (!isMap){
+            isMap = true;
         }
 	}
 }
