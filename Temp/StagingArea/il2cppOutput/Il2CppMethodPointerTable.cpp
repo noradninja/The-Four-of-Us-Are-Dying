@@ -84,8 +84,8 @@ extern "C" void RuntimeMarshal_MarshalString_m34138672 ();
 extern "C" void ASN1_Add_m2431139999 ();
 extern "C" void ASN1_Add_m3468571571 ();
 extern "C" void ASN1_Element_m2680269109 ();
-extern "C" void ASN1_get_Item_m3901126023 ();
 extern "C" void ASN1_get_Item_m2255075813 ();
+extern "C" void ASN1_get_Item_m3901126023 ();
 extern "C" void ASN1Convert_FromInt32_m2935389061 ();
 extern "C" void ASN1Convert_FromInt32_m1154451899 ();
 extern "C" void ASN1Convert_FromOid_m3740816339 ();
@@ -306,6 +306,8 @@ extern "C" void U3CwalkLerpU3Ec__Iterator1_MoveNext_m2653397196 ();
 extern "C" void U3CwalkLerpReverseU3Ec__Iterator2_MoveNext_m4221836766 ();
 extern "C" void RenderTextureUtils_IsHalfFormat_m1002983077 ();
 extern "C" void RenderTextureUtils_SupportsRenderToFloatTexture_m2515266977 ();
+extern "C" void SSMS_get_antiFlicker_m559763422 ();
+extern "C" void SSMS_get_highQuality_m2082248287 ();
 extern "C" void AppDomain_InternalIsFinalizingForUnload_m13569052 ();
 extern "C" void AppDomain_IsFinalizingForUnload_m1856443276 ();
 extern "C" void ArgIterator_Equals_m4289772452_AdjustorThunk ();
@@ -2099,21 +2101,21 @@ extern "C" void DepthOfField_CheckResources_m2653141750 ();
 extern "C" void DepthOfFieldDeprecated_CheckResources_m648304224 ();
 extern "C" void EdgeDetection_CheckResources_m3462534718 ();
 extern "C" void Fisheye_CheckResources_m3914293166 ();
-extern "C" void GlobalFog_CheckResources_m555966212 ();
 extern "C" void GlobalFog_CheckResources_m3103035368 ();
+extern "C" void GlobalFog_CheckResources_m555966212 ();
 extern "C" void NoiseAndGrain_CheckResources_m375728997 ();
-extern "C" void PostEffectsBase_CheckResources_m1900499029 ();
 extern "C" void PostEffectsBase_CheckResources_m1990149593 ();
-extern "C" void PostEffectsBase_CheckShader_m3506891390 ();
+extern "C" void PostEffectsBase_CheckResources_m1900499029 ();
 extern "C" void PostEffectsBase_CheckShader_m2453094113 ();
+extern "C" void PostEffectsBase_CheckShader_m3506891390 ();
 extern "C" void PostEffectsBase_CheckSupport_m2318330785 ();
 extern "C" void PostEffectsBase_CheckSupport_m809123933 ();
 extern "C" void PostEffectsBase_CheckSupport_m3942922708 ();
 extern "C" void PostEffectsBase_CheckSupport_m2449300828 ();
 extern "C" void PostEffectsBase_CheckSupport_m2503364352 ();
 extern "C" void PostEffectsBase_CheckSupport_m533724629 ();
-extern "C" void PostEffectsBase_Dx11Support_m1740562235 ();
 extern "C" void PostEffectsBase_Dx11Support_m3041131589 ();
+extern "C" void PostEffectsBase_Dx11Support_m1740562235 ();
 extern "C" void Quads_HasMeshes_m2577740265 ();
 extern "C" void ScreenOverlay_CheckResources_m1323683532 ();
 extern "C" void ScreenSpaceAmbientObscurance_CheckResources_m3289180091 ();
@@ -2131,8 +2133,8 @@ extern "C" void SimpleCollator_Category_m119590608 ();
 extern "C" void SimpleCollator_Level1_m634954506 ();
 extern "C" void SimpleCollator_Level2_m2830638875 ();
 extern "C" void SimpleCollator_ToDashTypeValue_m6184468 ();
-extern "C" void ASN1_get_Tag_m1032367219 ();
 extern "C" void ASN1_get_Tag_m2789147236 ();
+extern "C" void ASN1_get_Tag_m1032367219 ();
 extern "C" void Boolean_System_IConvertible_ToByte_m3917074947_AdjustorThunk ();
 extern "C" void Byte_Parse_m3891448280 ();
 extern "C" void Byte_Parse_m3200377149 ();
@@ -2182,16 +2184,16 @@ extern "C" void UnmanagedMemoryStream_get_PositionPointer_m2743240969 ();
 extern "C" void NumberBuffer_PackForNative_m3839420667_AdjustorThunk ();
 extern "C" void BigInteger_GetBytes_m997192583 ();
 extern "C" void RuntimeMarshal_DecodeBlobArray_m2832342368 ();
-extern "C" void ASN1_GetBytes_m3305539297 ();
 extern "C" void ASN1_GetBytes_m1968380955 ();
-extern "C" void ASN1_get_Value_m63296490 ();
+extern "C" void ASN1_GetBytes_m3305539297 ();
 extern "C" void ASN1_get_Value_m1857007406 ();
+extern "C" void ASN1_get_Value_m63296490 ();
 extern "C" void BitConverterLE_GetBytes_m3350143782 ();
 extern "C" void BitConverterLE_GetBytes_m3268825786 ();
 extern "C" void BitConverterLE_GetBytes_m4130646282 ();
 extern "C" void BitConverterLE_GetBytes_m2590852453 ();
-extern "C" void BitConverterLE_GetUIntBytes_m949779219 ();
 extern "C" void BitConverterLE_GetUIntBytes_m795219058 ();
+extern "C" void BitConverterLE_GetUIntBytes_m949779219 ();
 extern "C" void BitConverterLE_GetULongBytes_m1393773100 ();
 extern "C" void ARC4Managed_TransformFinalBlock_m4072170043 ();
 extern "C" void ARC4Managed_get_Key_m1506513417 ();
@@ -3191,11 +3193,11 @@ extern "C" void RuntimeMarshal_AsciHexDigitValue_m1276070328 ();
 extern "C" void RuntimeMarshal_DecodeBlobSize_m319888377 ();
 extern "C" void RuntimePropertyHandle_GetHashCode_m3028078117_AdjustorThunk ();
 extern "C" void SafeGPtrArrayHandle_get_Length_m2484684278_AdjustorThunk ();
-extern "C" void ASN1_get_Count_m1789520042 ();
 extern "C" void ASN1_get_Count_m3580979881 ();
+extern "C" void ASN1_get_Count_m1789520042 ();
 extern "C" void ASN1_get_Length_m1923878580 ();
-extern "C" void ASN1Convert_ToInt32_m1017403318 ();
 extern "C" void ASN1Convert_ToInt32_m254930636 ();
+extern "C" void ASN1Convert_ToInt32_m1017403318 ();
 extern "C" void ARC4Managed_InternalTransformBlock_m1085676343 ();
 extern "C" void DSAManaged_get_KeySize_m2738463749 ();
 extern "C" void EncryptedPrivateKeyInfo_get_IterationCount_m2389157423 ();
@@ -5702,6 +5704,14 @@ extern "C" void Lightbeam_get_Length_m752495132 ();
 extern "C" void Lightbeam_get_RadiusBottom_m3801463180 ();
 extern "C" void Lightbeam_get_RadiusTop_m255390738 ();
 extern "C" void BitConverterLE_ToSingle_m1153793442 ();
+extern "C" void SSMS_GammaToLinear_m987030606 ();
+extern "C" void SSMS_LinearToGamma_m2391068426 ();
+extern "C" void SSMS_get_blurWeight_m3860706280 ();
+extern "C" void SSMS_get_intensity_m99914080 ();
+extern "C" void SSMS_get_radius_m1985922824 ();
+extern "C" void SSMS_get_softKnee_m1698650136 ();
+extern "C" void SSMS_get_thresholdGamma_m2286162015 ();
+extern "C" void SSMS_get_thresholdLinear_m2896233974 ();
 extern "C" void SleekRenderPostProcess_GetCurrentAspect_m2733943739 ();
 extern "C" void Boolean_System_IConvertible_ToSingle_m1524606222_AdjustorThunk ();
 extern "C" void Byte_System_IConvertible_ToSingle_m324484566_AdjustorThunk ();
@@ -7755,6 +7765,9 @@ extern "C" void FXAA3_11_ConsoleEffect__ctor_m825181646 ();
 extern "C" void FXAA3_11_ConsoleEffect_CreateMaterialIfNeeded_m1550564465 ();
 extern "C" void FXAA3_11_ConsoleEffect_OnRenderImage_m3544821324 ();
 extern "C" void FXAA3_11_ConsoleEffect_Start_m1388153086 ();
+extern "C" void FXAA__cctor_m1741484243 ();
+extern "C" void FXAA__ctor_m2750438762 ();
+extern "C" void FXAA_OnRenderImage_m1700901963 ();
 extern "C" void U3CfadeU3Ec__Iterator0__ctor_m2179392129 ();
 extern "C" void U3CfadeU3Ec__Iterator0_Dispose_m1651032482 ();
 extern "C" void U3CfadeU3Ec__Iterator0_Reset_m3409782313 ();
@@ -8027,18 +8040,18 @@ extern "C" void SafeGPtrArrayHandle_Dispose_m2812856379_AdjustorThunk ();
 extern "C" void SafeStringMarshal__ctor_m376944834_AdjustorThunk ();
 extern "C" void SafeStringMarshal_Dispose_m3168640865_AdjustorThunk ();
 extern "C" void SafeStringMarshal_GFree_m3460491837 ();
-extern "C" void ASN1__ctor_m3727822613 ();
 extern "C" void ASN1__ctor_m1239252869 ();
-extern "C" void ASN1__ctor_m3193227595 ();
+extern "C" void ASN1__ctor_m3727822613 ();
 extern "C" void ASN1__ctor_m682794872 ();
-extern "C" void ASN1__ctor_m1638893325 ();
+extern "C" void ASN1__ctor_m3193227595 ();
 extern "C" void ASN1__ctor_m1601690794 ();
+extern "C" void ASN1__ctor_m1638893325 ();
 extern "C" void ASN1_Decode_m1695284166 ();
 extern "C" void ASN1_Decode_m1245286596 ();
 extern "C" void ASN1_DecodeTLV_m1200977460 ();
 extern "C" void ASN1_DecodeTLV_m3927350254 ();
-extern "C" void ASN1_set_Value_m647861841 ();
 extern "C" void ASN1_set_Value_m2803403806 ();
+extern "C" void ASN1_set_Value_m647861841 ();
 extern "C" void BitConverterLE_UIntFromBytes_m3974925535 ();
 extern "C" void BitConverterLE_ULongFromBytes_m1677445591 ();
 extern "C" void ARC4Managed__ctor_m2439761726 ();
@@ -8314,6 +8327,24 @@ extern "C" void BloomQuad_OnDestroy_m708040454 ();
 extern "C" void BloomQuad_Update_m2602786398 ();
 extern "C" void Ext__cctor_m2965935587 ();
 extern "C" void RenderTextureUtils__ctor_m667009162 ();
+extern "C" void SSMS__ctor_m1930889033 ();
+extern "C" void SSMS_OnDisable_m3309698303 ();
+extern "C" void SSMS_OnEnable_m1503561975 ();
+extern "C" void SSMS_OnRenderImage_m1410394116 ();
+extern "C" void SSMS_set_antiFlicker_m2467616787 ();
+extern "C" void SSMS_set_blurTint_m3974464943 ();
+extern "C" void SSMS_set_blurWeight_m1695379104 ();
+extern "C" void SSMS_set_fadeRamp_m2993770199 ();
+extern "C" void SSMS_set_highQuality_m2309769345 ();
+extern "C" void SSMS_set_intensity_m4067483906 ();
+extern "C" void SSMS_set_radius_m2725265747 ();
+extern "C" void SSMS_set_softKnee_m3273574871 ();
+extern "C" void SSMS_set_thresholdGamma_m2198045645 ();
+extern "C" void SSMS_set_thresholdLinear_m752691154 ();
+extern "C" void SSMSGlobalFog__ctor_m388597487 ();
+extern "C" void SSMSGlobalFog_OnDisable_m922292610 ();
+extern "C" void SSMSGlobalFog_OnEnable_m1537641643 ();
+extern "C" void SSMSGlobalFog_OnRenderImage_m1365522550 ();
 extern "C" void SceneRenderPipeline__ctor_m3403658266 ();
 extern "C" void SceneRenderPipeline_OnEnable_m2045493293 ();
 extern "C" void SceneRenderPipeline_OnValidate_m4047451716 ();
@@ -14186,6 +14217,12 @@ extern "C" void RectTransformUtility_PixelAdjustRect_Injected_m2739556103 ();
 extern "C" void ReflectionProbe_CallReflectionProbeEvent_m1520775591 ();
 extern "C" void ReflectionProbe_CallSetDefaultReflection_m2835659734 ();
 extern "C" void RenderSettings_get_fogColor_Injected_m508162699 ();
+extern "C" void RenderSettings_set_fogColor_m1943396926 ();
+extern "C" void RenderSettings_set_fogColor_Injected_m966802080 ();
+extern "C" void RenderSettings_set_fogDensity_m593006159 ();
+extern "C" void RenderSettings_set_fogEndDistance_m2317515257 ();
+extern "C" void RenderSettings_set_fogMode_m2821553345 ();
+extern "C" void RenderSettings_set_fogStartDistance_m3924853072 ();
 extern "C" void RenderTexture__ctor_m3368882316 ();
 extern "C" void RenderTexture__ctor_m769234016 ();
 extern "C" void RenderTexture__ctor_m1155694963 ();
@@ -14362,6 +14399,8 @@ extern "C" void FormerlySerializedAsAttribute__ctor_m520861771 ();
 extern "C" void SerializeField__ctor_m808862924 ();
 extern "C" void SetupCoroutine_InvokeMoveNext_m3199342729 ();
 extern "C" void Shader__ctor_m837260462 ();
+extern "C" void Shader_SetGlobalTexture_m3892103344 ();
+extern "C" void Shader_SetGlobalTextureImpl_m1248900127 ();
 extern "C" void SliderState__ctor_m3367986001 ();
 extern "C" void SpaceAttribute__ctor_m3235906033 ();
 extern "C" void SpaceAttribute__ctor_m2972541600 ();
@@ -15380,11 +15419,11 @@ extern "C" void EdgeDetection_SetCameraFlag_m3582410528 ();
 extern "C" void EdgeDetection_Start_m2808765100 ();
 extern "C" void Fisheye__ctor_m4146723838 ();
 extern "C" void Fisheye_OnRenderImage_m235855080 ();
-extern "C" void GlobalFog__ctor_m3956504235 ();
 extern "C" void GlobalFog__ctor_m1046257831 ();
+extern "C" void GlobalFog__ctor_m3956504235 ();
 extern "C" void GlobalFog_CustomGraphicsBlit_m3343642230 ();
-extern "C" void GlobalFog_OnRenderImage_m3651418340 ();
 extern "C" void GlobalFog_OnRenderImage_m1372265461 ();
+extern "C" void GlobalFog_OnRenderImage_m3651418340 ();
 extern "C" void Grayscale__ctor_m194472377 ();
 extern "C" void Grayscale_OnRenderImage_m804642450 ();
 extern "C" void ImageEffectBase__ctor_m3682424896 ();
@@ -15407,20 +15446,20 @@ extern "C" void NoiseAndScratches_OnDisable_m2604484257 ();
 extern "C" void NoiseAndScratches_OnRenderImage_m4219551142 ();
 extern "C" void NoiseAndScratches_SanitizeParameters_m1262699030 ();
 extern "C" void NoiseAndScratches_Start_m3041500591 ();
-extern "C" void PostEffectsBase__ctor_m3249494038 ();
 extern "C" void PostEffectsBase__ctor_m3237562702 ();
-extern "C" void PostEffectsBase_DrawBorder_m579349500 ();
+extern "C" void PostEffectsBase__ctor_m3249494038 ();
 extern "C" void PostEffectsBase_DrawBorder_m3420332712 ();
-extern "C" void PostEffectsBase_NotSupported_m139199785 ();
+extern "C" void PostEffectsBase_DrawBorder_m579349500 ();
 extern "C" void PostEffectsBase_NotSupported_m256234407 ();
+extern "C" void PostEffectsBase_NotSupported_m139199785 ();
 extern "C" void PostEffectsBase_OnDestroy_m1683196003 ();
 extern "C" void PostEffectsBase_OnEnable_m2114875658 ();
 extern "C" void PostEffectsBase_OnEnable_m1990449152 ();
 extern "C" void PostEffectsBase_RemoveCreatedMaterials_m3398098368 ();
 extern "C" void PostEffectsBase_ReportAutoDisable_m412809422 ();
 extern "C" void PostEffectsBase_ReportAutoDisable_m1041276315 ();
-extern "C" void PostEffectsBase_Start_m1238239914 ();
 extern "C" void PostEffectsBase_Start_m1325885336 ();
+extern "C" void PostEffectsBase_Start_m1238239914 ();
 extern "C" void PostEffectsHelper__ctor_m655433481 ();
 extern "C" void PostEffectsHelper_DrawBorder_m2101521792 ();
 extern "C" void PostEffectsHelper_DrawLowLevelPlaneAlignedWithCamera_m4135922617 ();
@@ -15611,6 +15650,7 @@ extern "C" void RaycastHit_get_collider_m1464180279_AdjustorThunk ();
 extern "C" void RaycastHit2D_get_collider_m1549426026_AdjustorThunk ();
 extern "C" void CharacterController_Move_m1547317252 ();
 extern "C" void CharacterController_Move_Injected_m2968855874 ();
+extern "C" void SSMS_get_blurTint_m2291273546 ();
 extern "C" void ColorTween_get_startColor_m3859712736_AdjustorThunk ();
 extern "C" void ColorTween_get_targetColor_m4052057762_AdjustorThunk ();
 extern "C" void TMP_InputField_get_caretColor_m722778394 ();
@@ -15983,8 +16023,8 @@ extern "C" void ContrastStretch_get_materialLum_m1926118876 ();
 extern "C" void ContrastStretch_get_materialReduce_m523115858 ();
 extern "C" void ImageEffectBase_get_material_m3574076220 ();
 extern "C" void NoiseAndScratches_get_material_m744105905 ();
-extern "C" void PostEffectsBase_CheckShaderAndCreateMaterial_m3315883224 ();
 extern "C" void PostEffectsBase_CheckShaderAndCreateMaterial_m242186546 ();
+extern "C" void PostEffectsBase_CheckShaderAndCreateMaterial_m3315883224 ();
 extern "C" void PostEffectsBase_CreateMaterial_m98207487 ();
 extern "C" void PostEffectsBase_CreateMaterial_m4290998842 ();
 extern "C" void ScreenSpaceAmbientOcclusion_CreateMaterial_m2238170128 ();
@@ -16278,6 +16318,7 @@ extern "C" void Image_get_mainTexture_m44717343 ();
 extern "C" void RawImage_get_mainTexture_m2396337033 ();
 extern "C" void RawImage_get_texture_m2319641407 ();
 extern "C" void Text_get_mainTexture_m3501892889 ();
+extern "C" void SSMS_get_fadeRamp_m3925677967 ();
 extern "C" void Sprite_get_associatedAlphaSplitTexture_m1197622862 ();
 extern "C" void Sprite_get_texture_m3976398399 ();
 extern "C" void Texture2D_get_whiteTexture_m2176011403 ();
@@ -16618,7 +16659,7 @@ extern "C" void XRSettings_get_gameViewRenderMode_m1349500750 ();
 extern "C" void MeasureFunction_EndInvoke_m3256525429 ();
 extern "C" void MeasureFunction_Invoke_m1464925114 ();
 extern "C" void YogaNode_MeasureInternal_m1491511231 ();
-extern const Il2CppMethodPointer g_MethodPointers[16599] = 
+extern const Il2CppMethodPointer g_MethodPointers[16640] = 
 {
 	U3CPrivateImplementationDetailsU3E_ComputeStringHash_m4063532059,
 	Locale_GetText_m3374010885,
@@ -27397,12 +27438,18 @@ extern const Il2CppMethodPointer g_MethodPointers[16599] =
 	ReflectionProbe_CallReflectionProbeEvent_m1520775591,
 	ReflectionProbe_CallSetDefaultReflection_m2835659734,
 	RenderSettings_get_fogStartDistance_m3205984467,
+	RenderSettings_set_fogStartDistance_m3924853072,
 	RenderSettings_get_fogEndDistance_m3431247078,
+	RenderSettings_set_fogEndDistance_m2317515257,
 	RenderSettings_get_fogMode_m3629449155,
+	RenderSettings_set_fogMode_m2821553345,
 	RenderSettings_get_fogColor_m1270918470,
+	RenderSettings_set_fogColor_m1943396926,
 	RenderSettings_get_fogDensity_m616878862,
+	RenderSettings_set_fogDensity_m593006159,
 	RenderSettings_get_skybox_m1418963821,
 	RenderSettings_get_fogColor_Injected_m508162699,
+	RenderSettings_set_fogColor_Injected_m966802080,
 	RenderTexture__ctor_m3368882316,
 	RenderTexture__ctor_m339910950,
 	RenderTexture__ctor_m2281969544,
@@ -27650,6 +27697,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16599] =
 	Shader_Find_m2092206247,
 	Shader_get_isSupported_m755080316,
 	Shader_PropertyToID_m1030499873,
+	Shader_SetGlobalTextureImpl_m1248900127,
+	Shader_SetGlobalTexture_m3892103344,
 	SortingLayer_GetLayerValueFromID_m1947934714,
 	SpaceAttribute__ctor_m3235906033,
 	SpaceAttribute__ctor_m2972541600,
@@ -32385,6 +32434,9 @@ extern const Il2CppMethodPointer g_MethodPointers[16599] =
 	U3CStartU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m1242096622,
 	U3CStartU3Ec__Iterator0_Dispose_m425985176,
 	U3CStartU3Ec__Iterator0_Reset_m2630377178,
+	FXAA__ctor_m2750438762,
+	FXAA_OnRenderImage_m1700901963,
+	FXAA__cctor_m1741484243,
 	FXAA3_11_ConsoleEffect__ctor_m825181646,
 	FXAA3_11_ConsoleEffect_CreateMaterialIfNeeded_m1550564465,
 	FXAA3_11_ConsoleEffect_Start_m1388153086,
@@ -32675,6 +32727,36 @@ extern const Il2CppMethodPointer g_MethodPointers[16599] =
 	RenderTextureUtils_ToFloatFormat_m1448114628,
 	RenderTextureUtils_GetScreenResolution_m1499054126,
 	RenderTextureUtils_GetTextureScreenScale_m332725056,
+	SSMS__ctor_m1930889033,
+	SSMS_get_thresholdGamma_m2286162015,
+	SSMS_set_thresholdGamma_m2198045645,
+	SSMS_get_thresholdLinear_m2896233974,
+	SSMS_set_thresholdLinear_m752691154,
+	SSMS_get_softKnee_m1698650136,
+	SSMS_set_softKnee_m3273574871,
+	SSMS_get_radius_m1985922824,
+	SSMS_set_radius_m2725265747,
+	SSMS_get_blurWeight_m3860706280,
+	SSMS_set_blurWeight_m1695379104,
+	SSMS_get_intensity_m99914080,
+	SSMS_set_intensity_m4067483906,
+	SSMS_get_highQuality_m2082248287,
+	SSMS_set_highQuality_m2309769345,
+	SSMS_get_antiFlicker_m559763422,
+	SSMS_set_antiFlicker_m2467616787,
+	SSMS_get_fadeRamp_m3925677967,
+	SSMS_set_fadeRamp_m2993770199,
+	SSMS_get_blurTint_m2291273546,
+	SSMS_set_blurTint_m3974464943,
+	SSMS_LinearToGamma_m2391068426,
+	SSMS_GammaToLinear_m987030606,
+	SSMS_OnEnable_m1503561975,
+	SSMS_OnDisable_m3309698303,
+	SSMS_OnRenderImage_m1410394116,
+	SSMSGlobalFog__ctor_m388597487,
+	SSMSGlobalFog_OnEnable_m1537641643,
+	SSMSGlobalFog_OnDisable_m922292610,
+	SSMSGlobalFog_OnRenderImage_m1365522550,
 	ScreenSpaceColoredFog__ctor_m1487115527,
 	ScreenSpaceColoredFog_OnRenderImage_m1034061526,
 	SetShadowResolution__ctor_m1538775878,

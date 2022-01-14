@@ -143,7 +143,7 @@ namespace Kino
             var coeff = f * f / (_fNumber * (s1 - f) * kFilmHeight * 2);
             _material.SetFloat("_LensCoeff", coeff);
 
-            var maxCoC = CalculateMaxCoCRadius(source.height);
+            var maxCoC = CalculateMaxCoCRadius(source.height/4);
             _material.SetFloat("_MaxCoC", maxCoC);
             _material.SetFloat("_RcpMaxCoC", 1 / maxCoC);
 

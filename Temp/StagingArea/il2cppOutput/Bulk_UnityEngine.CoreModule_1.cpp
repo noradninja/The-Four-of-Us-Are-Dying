@@ -10444,6 +10444,8 @@ inline void Action_1_Invoke_m1813602315 (Action_1_t2144852004 * __this, Cubemap_
 }
 // System.Void UnityEngine.RenderSettings::get_fogColor_Injected(UnityEngine.Color&)
 extern "C" IL2CPP_METHOD_ATTR void RenderSettings_get_fogColor_Injected_m508162699 (RuntimeObject * __this /* static, unused */, Color_t2555686324 * ___ret0, const RuntimeMethod* method);
+// System.Void UnityEngine.RenderSettings::set_fogColor_Injected(UnityEngine.Color&)
+extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogColor_Injected_m966802080 (RuntimeObject * __this /* static, unused */, Color_t2555686324 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Texture::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Texture__ctor_m3554519797 (Texture_t3661962703 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.RenderTexture::ValidateRenderTextureDesc(UnityEngine.RenderTextureDescriptor)
@@ -10798,6 +10800,8 @@ extern "C" IL2CPP_METHOD_ATTR void GameObject_SendMessage_m3720186693 (GameObjec
 extern "C" IL2CPP_METHOD_ATTR void* IntPtr_op_Explicit_m2520637223 (RuntimeObject * __this /* static, unused */, intptr_t p0, const RuntimeMethod* method);
 // System.Type System.Object::GetType()
 extern "C" IL2CPP_METHOD_ATTR Type_t * Object_GetType_m88164663 (RuntimeObject * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Shader::SetGlobalTextureImpl(System.Int32,UnityEngine.Texture)
+extern "C" IL2CPP_METHOD_ATTR void Shader_SetGlobalTextureImpl_m1248900127 (RuntimeObject * __this /* static, unused */, int32_t ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method);
 // System.Void UnityEngine.Sprite::GetTextureRect_Injected(UnityEngine.Rect&)
 extern "C" IL2CPP_METHOD_ATTR void Sprite_GetTextureRect_Injected_m333481368 (Sprite_t280657092 * __this, Rect_t2360479859 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.Sprite::GetInnerUVs_Injected(UnityEngine.Vector4&)
@@ -14156,6 +14160,15 @@ extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogStartDistance_m3205984
 	float retVal = _il2cpp_icall_func();
 	return retVal;
 }
+// System.Void UnityEngine.RenderSettings::set_fogStartDistance(System.Single)
+extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogStartDistance_m3924853072 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method)
+{
+	typedef void (*RenderSettings_set_fogStartDistance_m3924853072_ftn) (float);
+	static RenderSettings_set_fogStartDistance_m3924853072_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (RenderSettings_set_fogStartDistance_m3924853072_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogStartDistance(System.Single)");
+	_il2cpp_icall_func(___value0);
+}
 // System.Single UnityEngine.RenderSettings::get_fogEndDistance()
 extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogEndDistance_m3431247078 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -14166,6 +14179,15 @@ extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogEndDistance_m343124707
 	float retVal = _il2cpp_icall_func();
 	return retVal;
 }
+// System.Void UnityEngine.RenderSettings::set_fogEndDistance(System.Single)
+extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogEndDistance_m2317515257 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method)
+{
+	typedef void (*RenderSettings_set_fogEndDistance_m2317515257_ftn) (float);
+	static RenderSettings_set_fogEndDistance_m2317515257_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (RenderSettings_set_fogEndDistance_m2317515257_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogEndDistance(System.Single)");
+	_il2cpp_icall_func(___value0);
+}
 // UnityEngine.FogMode UnityEngine.RenderSettings::get_fogMode()
 extern "C" IL2CPP_METHOD_ATTR int32_t RenderSettings_get_fogMode_m3629449155 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -14175,6 +14197,15 @@ extern "C" IL2CPP_METHOD_ATTR int32_t RenderSettings_get_fogMode_m3629449155 (Ru
 	_il2cpp_icall_func = (RenderSettings_get_fogMode_m3629449155_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::get_fogMode()");
 	int32_t retVal = _il2cpp_icall_func();
 	return retVal;
+}
+// System.Void UnityEngine.RenderSettings::set_fogMode(UnityEngine.FogMode)
+extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogMode_m2821553345 (RuntimeObject * __this /* static, unused */, int32_t ___value0, const RuntimeMethod* method)
+{
+	typedef void (*RenderSettings_set_fogMode_m2821553345_ftn) (int32_t);
+	static RenderSettings_set_fogMode_m2821553345_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (RenderSettings_set_fogMode_m2821553345_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogMode(UnityEngine.FogMode)");
+	_il2cpp_icall_func(___value0);
 }
 // UnityEngine.Color UnityEngine.RenderSettings::get_fogColor()
 extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  RenderSettings_get_fogColor_m1270918470 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
@@ -14187,6 +14218,14 @@ extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  RenderSettings_get_fogColor_m12
 		return L_0;
 	}
 }
+// System.Void UnityEngine.RenderSettings::set_fogColor(UnityEngine.Color)
+extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogColor_m1943396926 (RuntimeObject * __this /* static, unused */, Color_t2555686324  ___value0, const RuntimeMethod* method)
+{
+	{
+		RenderSettings_set_fogColor_Injected_m966802080(NULL /*static, unused*/, (Color_t2555686324 *)(&___value0), /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Single UnityEngine.RenderSettings::get_fogDensity()
 extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogDensity_m616878862 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -14196,6 +14235,15 @@ extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogDensity_m616878862 (Ru
 	_il2cpp_icall_func = (RenderSettings_get_fogDensity_m616878862_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::get_fogDensity()");
 	float retVal = _il2cpp_icall_func();
 	return retVal;
+}
+// System.Void UnityEngine.RenderSettings::set_fogDensity(System.Single)
+extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogDensity_m593006159 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method)
+{
+	typedef void (*RenderSettings_set_fogDensity_m593006159_ftn) (float);
+	static RenderSettings_set_fogDensity_m593006159_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (RenderSettings_set_fogDensity_m593006159_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogDensity(System.Single)");
+	_il2cpp_icall_func(___value0);
 }
 // UnityEngine.Material UnityEngine.RenderSettings::get_skybox()
 extern "C" IL2CPP_METHOD_ATTR Material_t340375123 * RenderSettings_get_skybox_m1418963821 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
@@ -14215,6 +14263,15 @@ extern "C" IL2CPP_METHOD_ATTR void RenderSettings_get_fogColor_Injected_m5081626
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (RenderSettings_get_fogColor_Injected_m508162699_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::get_fogColor_Injected(UnityEngine.Color&)");
 	_il2cpp_icall_func(___ret0);
+}
+// System.Void UnityEngine.RenderSettings::set_fogColor_Injected(UnityEngine.Color&)
+extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogColor_Injected_m966802080 (RuntimeObject * __this /* static, unused */, Color_t2555686324 * ___value0, const RuntimeMethod* method)
+{
+	typedef void (*RenderSettings_set_fogColor_Injected_m966802080_ftn) (Color_t2555686324 *);
+	static RenderSettings_set_fogColor_Injected_m966802080_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (RenderSettings_set_fogColor_Injected_m966802080_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogColor_Injected(UnityEngine.Color&)");
+	_il2cpp_icall_func(___value0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -19516,6 +19573,26 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Shader_PropertyToID_m1030499873 (RuntimeOb
 	_il2cpp_icall_func = (Shader_PropertyToID_m1030499873_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Shader::PropertyToID(System.String)");
 	int32_t retVal = _il2cpp_icall_func(___name0);
 	return retVal;
+}
+// System.Void UnityEngine.Shader::SetGlobalTextureImpl(System.Int32,UnityEngine.Texture)
+extern "C" IL2CPP_METHOD_ATTR void Shader_SetGlobalTextureImpl_m1248900127 (RuntimeObject * __this /* static, unused */, int32_t ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method)
+{
+	typedef void (*Shader_SetGlobalTextureImpl_m1248900127_ftn) (int32_t, Texture_t3661962703 *);
+	static Shader_SetGlobalTextureImpl_m1248900127_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Shader_SetGlobalTextureImpl_m1248900127_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Shader::SetGlobalTextureImpl(System.Int32,UnityEngine.Texture)");
+	_il2cpp_icall_func(___name0, ___value1);
+}
+// System.Void UnityEngine.Shader::SetGlobalTexture(System.String,UnityEngine.Texture)
+extern "C" IL2CPP_METHOD_ATTR void Shader_SetGlobalTexture_m3892103344 (RuntimeObject * __this /* static, unused */, String_t* ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method)
+{
+	{
+		String_t* L_0 = ___name0;
+		int32_t L_1 = Shader_PropertyToID_m1030499873(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		Texture_t3661962703 * L_2 = ___value1;
+		Shader_SetGlobalTextureImpl_m1248900127(NULL /*static, unused*/, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

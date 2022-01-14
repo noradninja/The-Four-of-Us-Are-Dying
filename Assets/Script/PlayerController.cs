@@ -167,10 +167,10 @@ public class PlayerController : MonoBehaviour
                 enabledText.GetComponent<Text>().text = ("Enabled");
             }
 //enable/disable bloom
-            if (SSAOScript.GetComponent<FastMobileBloom>().enabled){
-                SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
-            }
-            else SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
+            // if (SSAOScript.GetComponent<FastMobileBloom>().enabled){
+            //     SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
+            // }
+            // else SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
         }
 //turn the flashlight on and off if we have it
         if (Input.GetKeyDown(VITA + TRIANGLE) && hasFlashlight && flashlightCharge > 0.05f && !Input.GetKey(VITA + LTRIG))

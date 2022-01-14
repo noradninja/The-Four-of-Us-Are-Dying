@@ -109,6 +109,9 @@
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Scripts\SleekRenderSettings.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\TestKit\Stuff\DisplayFPS.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\TestKit\Stuff\EmptyGraphic.cs" />
+     <Compile Include="Assets\Addons\SSMS\SSMS.cs" />
+     <Compile Include="Assets\Addons\SSMS\SSMSGlobalFog.cs" />
+     <Compile Include="Assets\FXAA\FXAA.cs" />
      <Compile Include="Assets\Kino\Bokeh\Bokeh.cs" />
      <Compile Include="Assets\Prefab Brush\Scripts\PB_Enums.cs" />
      <Compile Include="Assets\Prefab Brush\Scripts\PB_PrefabData.cs" />
@@ -166,6 +169,7 @@
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCoreForwardSimple_VC.cginc" />
      <None Include="Assets\Kino\Bokeh\Shader\DiskKernel.cginc" />
      <None Include="Assets\Addons\FastMobileBloom\readme.txt" />
+     <None Include="Assets\Addons\SSMS\Resources\Shaders\SSMSGlobalFog.shader" />
      <None Include="Assets\Shader\Vertex\Vertex Color.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardMeta_VC.cginc" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForwardSimple_VC.cginc" />
@@ -175,6 +179,7 @@
      <None Include="Assets\Shader\Vertex\VertexLightmap.shader" />
      <None Include="Assets\Shader\DepthOfField.shader" />
      <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail_Soft.shader" />
+     <None Include="Assets\FXAA\FXAA.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCore_VC.cginc" />
@@ -203,6 +208,7 @@
      <None Include="Assets\Addons\Bloom\Shaders\BloomDisplay.shader" />
      <None Include="Assets\Addons\KinoFog\Kino\Fog\Shader\Fog.shader" />
      <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+     <None Include="Assets\Addons\FXAA3_11_Console\_Sources\Shaders\FXAA3_11_Console.shader" />
      <None Include="Assets\Shader\DepthCG.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForward.cginc" />
      <None Include="Assets\Addons\Shaders\zako.shader" />
@@ -254,6 +260,7 @@
      <None Include="Assets\Kino\Bokeh\Shader\Prefilter.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\Shader\Tests\Test.shader" />
+     <None Include="Assets\Addons\SSMS\Resources\Shaders\SSMS.shader" />
      <None Include="Assets\Addons\Shaders\beam_old.shader" />
      <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\CalculateDistanceFromGeometry.compute" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCommon.cginc" />
@@ -275,6 +282,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\Addons\Shaders\NewUnlitShader.shader" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForwardSimple.cginc" />
+     <None Include="Assets\Addons\SSMS\Resources\Shaders\SSMS.cginc" />
      <None Include="Assets\Addons\Shaders\blit.shader" />
  <Reference Include="Unity.RenderPipelines.Core.Editor">
  <HintPath>C:/PSVITA/2018/TFOUAD/Library/ScriptAssemblies/Unity.RenderPipelines.Core.Editor.dll</HintPath>

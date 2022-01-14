@@ -54,7 +54,7 @@ Shader "Vita/Standard Mobile"
         #define UNITY_SETUP_BRDF_INPUT MetallicSetup
         #define UNITY_NO_FULL_STANDARD_SHADER
         //#define DYNAMICLIGHTMAP_ON
-        #define SHADOWS_NATIVE
+        // #define SHADOWS_NATIVE
         //#define SHADOWS_SCREEN
     ENDCG
 

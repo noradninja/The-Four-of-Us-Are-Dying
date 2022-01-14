@@ -811,7 +811,6 @@ extern const Il2CppType SphereCollider_t2077223608_0_0_0;
 extern const Il2CppType MeshRenderer_t587009260_0_0_0;
 extern const Il2CppType FastSSAO_t1400243781_0_0_0;
 extern const Il2CppType Bokeh_t660694511_0_0_0;
-extern const Il2CppType FastMobileBloom_t2792678096_0_0_0;
 extern const Il2CppType SleekRenderSettings_t4177321799_0_0_0;
 extern const Il2CppType TextMesh_t1536577757_0_0_0;
 extern const Il2CppType TextMeshProFloatingText_t845872552_0_0_0;
@@ -3047,8 +3046,6 @@ static const RuntimeType* GenInst_FastSSAO_t1400243781_0_0_0_Types[] = { (&FastS
 extern const Il2CppGenericInst GenInst_FastSSAO_t1400243781_0_0_0 = { 1, GenInst_FastSSAO_t1400243781_0_0_0_Types };
 static const RuntimeType* GenInst_Bokeh_t660694511_0_0_0_Types[] = { (&Bokeh_t660694511_0_0_0) };
 extern const Il2CppGenericInst GenInst_Bokeh_t660694511_0_0_0 = { 1, GenInst_Bokeh_t660694511_0_0_0_Types };
-static const RuntimeType* GenInst_FastMobileBloom_t2792678096_0_0_0_Types[] = { (&FastMobileBloom_t2792678096_0_0_0) };
-extern const Il2CppGenericInst GenInst_FastMobileBloom_t2792678096_0_0_0 = { 1, GenInst_FastMobileBloom_t2792678096_0_0_0_Types };
 static const RuntimeType* GenInst_SleekRenderSettings_t4177321799_0_0_0_Types[] = { (&SleekRenderSettings_t4177321799_0_0_0) };
 extern const Il2CppGenericInst GenInst_SleekRenderSettings_t4177321799_0_0_0 = { 1, GenInst_SleekRenderSettings_t4177321799_0_0_0_Types };
 static const RuntimeType* GenInst_TextMesh_t1536577757_0_0_0_Types[] = { (&TextMesh_t1536577757_0_0_0) };
@@ -3837,7 +3834,7 @@ static const RuntimeType* GenInst_VolumeParameter_1_t4078826557_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t4078826557_0_0_0 = { 1, GenInst_VolumeParameter_1_t4078826557_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t2051106872_0_0_0_Types[] = { (&VolumeParameter_1_t2051106872_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t2051106872_0_0_0 = { 1, GenInst_VolumeParameter_1_t2051106872_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1332] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1331] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_String_t_0_0_0,
@@ -4776,7 +4773,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1332] =
 	&GenInst_MeshRenderer_t587009260_0_0_0,
 	&GenInst_FastSSAO_t1400243781_0_0_0,
 	&GenInst_Bokeh_t660694511_0_0_0,
-	&GenInst_FastMobileBloom_t2792678096_0_0_0,
 	&GenInst_SleekRenderSettings_t4177321799_0_0_0,
 	&GenInst_TextMesh_t1536577757_0_0_0,
 	&GenInst_TextMeshProFloatingText_t845872552_0_0_0,
