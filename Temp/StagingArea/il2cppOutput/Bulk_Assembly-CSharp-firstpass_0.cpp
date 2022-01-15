@@ -376,7 +376,7 @@ extern String_t* _stringLiteral956492596;
 extern String_t* _stringLiteral994190217;
 extern const RuntimeMethod* Component_GetComponent_TisCamera_t4157153871_m1557787507_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisCamera_t4157153871_m1507399110_RuntimeMethod_var;
-extern const RuntimeMethod* List_1_Add_m75552325_RuntimeMethod_var;
+extern const RuntimeMethod* List_1_Add_m4123511260_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_RemoveAt_m3593269440_RuntimeMethod_var;
 extern const RuntimeMethod* List_1__ctor_m3940452431_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m2919584026_RuntimeMethod_var;
@@ -527,8 +527,8 @@ struct Vector2U5BU5D_t1457185986;
 struct Vector3U5BU5D_t1718750761;
 
 
-#ifndef U3CMODULEU3E_T692745560_H
-#define U3CMODULEU3E_T692745560_H
+#ifndef U3CMODULEU3E_T692745566_H
+#define U3CMODULEU3E_T692745566_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -536,7 +536,7 @@ struct Vector3U5BU5D_t1718750761;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745560 
+struct  U3CModuleU3E_t692745566 
 {
 public:
 
@@ -546,7 +546,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745560_H
+#endif // U3CMODULEU3E_T692745566_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__
@@ -9716,7 +9716,7 @@ extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m3937257545 (RuntimeObject
 // System.String System.String::Concat(System.String[])
 extern "C" IL2CPP_METHOD_ATTR String_t* String_Concat_m1809518182 (RuntimeObject * __this /* static, unused */, StringU5BU5D_t1281789340* p0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.Material>::Add(!0)
-inline void List_1_Add_m75552325 (List_1_t1812449865 * __this, Material_t340375123 * p0, const RuntimeMethod* method)
+inline void List_1_Add_m4123511260 (List_1_t1812449865 * __this, Material_t340375123 * p0, const RuntimeMethod* method)
 {
 	((  void (*) (List_1_t1812449865 *, Material_t340375123 *, const RuntimeMethod*))List_1_Add_m3338814081_gshared)(__this, p0, method);
 }
@@ -22009,7 +22009,7 @@ IL_009f:
 		___m2Create1 = L_26;
 		List_1_t1812449865 * L_27 = __this->get_createdMaterials_7();
 		Material_t340375123 * L_28 = ___m2Create1;
-		List_1_Add_m75552325(L_27, L_28, /*hidden argument*/List_1_Add_m75552325_RuntimeMethod_var);
+		List_1_Add_m4123511260(L_27, L_28, /*hidden argument*/List_1_Add_m4123511260_RuntimeMethod_var);
 		Material_t340375123 * L_29 = ___m2Create1;
 		Object_set_hideFlags_m1648752846(L_29, ((int32_t)52), /*hidden argument*/NULL);
 		Material_t340375123 * L_30 = ___m2Create1;
@@ -22097,7 +22097,7 @@ IL_0058:
 		___m2Create1 = L_16;
 		List_1_t1812449865 * L_17 = __this->get_createdMaterials_7();
 		Material_t340375123 * L_18 = ___m2Create1;
-		List_1_Add_m75552325(L_17, L_18, /*hidden argument*/List_1_Add_m75552325_RuntimeMethod_var);
+		List_1_Add_m4123511260(L_17, L_18, /*hidden argument*/List_1_Add_m4123511260_RuntimeMethod_var);
 		Material_t340375123 * L_19 = ___m2Create1;
 		Object_set_hideFlags_m1648752846(L_19, ((int32_t)52), /*hidden argument*/NULL);
 		Material_t340375123 * L_20 = ___m2Create1;

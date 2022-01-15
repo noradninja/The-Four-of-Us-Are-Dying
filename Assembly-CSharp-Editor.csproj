@@ -77,6 +77,12 @@
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Editor\SleekRenderCostCalculator.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Editor\SleekRenderSettingsInspector.cs" />
      <Compile Include="Assets\Kino\Bokeh\Editor\BokehEditor.cs" />
+     <Compile Include="Assets\PolyFew\BatchFewShader\Editor\BatchFewShaderGUI.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Editor\DecoratorEditor.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Editor\InspectorAttacher.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Editor\InspectorDrawer.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Editor\PolyfewMenu.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Editor\PopupToggleTemplate.cs" />
      <Compile Include="Assets\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI_Lerp.cs" />
@@ -739,6 +745,10 @@
       <Project>{1C2F7B94-25BA-F3C2-3972-7E0650B3186B}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
       <Project>{81170BA8-038E-2294-8E5B-CB617B35A69A}</Project>      <Name>Assembly-CSharp-Editor-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{754CEA7D-2B57-7CD0-ED4F-941C19D8696D}</Project>      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{56678550-BBB0-B1B2-D8F4-346E0BE8C919}</Project>      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

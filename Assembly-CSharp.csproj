@@ -113,6 +113,48 @@
      <Compile Include="Assets\Addons\SSMS\SSMSGlobalFog.cs" />
      <Compile Include="Assets\FXAA\FXAA.cs" />
      <Compile Include="Assets\Kino\Bokeh\Bokeh.cs" />
+     <Compile Include="Assets\PolyFew\demo\Scripts\FlyCamera.cs" />
+     <Compile Include="Assets\PolyFew\demo\Scripts\PolygonReduction.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\AttributesImage.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\CombiningInformation.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\DataContainer.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\EditorCoroutineExtensions.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\EditorCoroutines.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\Extensions.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\HandleControlsUtility.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\JsonUtilityArrays.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\MaterialCombiner.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\ObjectMaterialLinks.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\PolyFewHost.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\PolyFewResetter.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\PrivateValueAccessor.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\RefreshEnforcer.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\SerializableDictionary.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\NonEditor-Scripts\UtilityServices.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Runtime\MeshCombiner.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Runtime\PolyfewRuntime.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Runtime\SystemServices.cs" />
+     <Compile Include="Assets\PolyFew\Scripts\Runtime\UtilityServicesRuntime.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\DataSet.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\MaterialData.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\ModelUtil.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\ObjectBuilder.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\Triangulator.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\EditorUtil.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\ImportOptions.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Loaders\Loader.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Loaders\LoaderObj.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\Loaders\TextureLoader.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\LoadingProgress.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\MathData\Triangle.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\MathData\Vertex.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\MathUtility.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\Triangulation.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\ModelImportInfo.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\MultiObjectImporter.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\ObjectImporter.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\ObjectImporterUI.cs" />
+     <Compile Include="Assets\PolyFew\ThirdParty\AsImpL\Scripts\PathSettings.cs" />
      <Compile Include="Assets\Prefab Brush\Scripts\PB_Enums.cs" />
      <Compile Include="Assets\Prefab Brush\Scripts\PB_PrefabData.cs" />
      <Compile Include="Assets\Prefab Brush\Scripts\PB_SaveObject.cs" />
@@ -183,11 +225,14 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCore_VC.cginc" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardUtils.cginc" />
      <None Include="Assets\Kino\Bokeh\Shader\Debug.cginc" />
      <None Include="Assets\___www.unityassetcollection.com___.txt" />
      <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
      <None Include="Assets\_www.unityassetcollection.com.txt" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
+     <None Include="Assets\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
      <None Include="Assets\Addons\FastSSAO\FastSSAO.shader" />
      <None Include="Assets\Trees_WorldSpace\Shaders\BarkShaderAS.shader" />
      <None Include="Assets\Addons\Bloom\Shaders\Bloom.shader" />
@@ -207,9 +252,13 @@
      <None Include="Assets\Shader\Vertex\VertexLightmapCommon.cginc" />
      <None Include="Assets\Addons\Bloom\Shaders\BloomDisplay.shader" />
      <None Include="Assets\Addons\KinoFog\Kino\Fog\Shader\Fog.shader" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardConfig.cginc" />
      <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\Addons\FXAA3_11_Console\_Sources\Shaders\FXAA3_11_Console.shader" />
      <None Include="Assets\Shader\DepthCG.cginc" />
+     <None Include="Assets\PolyFew\BatchFewShader\BatchFewStandard.shader" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardShadow.cginc" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardInput.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForward.cginc" />
      <None Include="Assets\Addons\Shaders\zako.shader" />
      <None Include="Assets\Addons\Shaders\debris.shader" />
@@ -218,6 +267,7 @@
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCoreForward_VC.cginc" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardInput_VC.cginc" />
      <None Include="Assets\Addons\Shaders\tube.shader" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardCore.cginc" />
      <None Include="Assets\Addons\Shaders\font.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForward_VC.cginc" />
      <None Include="Assets\Addons\Shaders\beam2.shader" />
@@ -242,6 +292,7 @@
      <None Include="Assets\Addons\Shaders\beam.shader" />
      <None Include="Assets\Trees_WorldSpace\Shaders\TreeLeafSwitcherAS.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardMeta.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicMeta.cginc" />
      <None Include="Assets\Shader\Standard Mobile\Standard_VC_No_Fog.shader" />
@@ -250,6 +301,7 @@
      <None Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Resources\Shaders\HorizontalBlur.shader" />
      <None Include="Assets\Shader\SSS\SSS_Fast_Clip VertexLit.shader" />
      <None Include="Assets\VitaFTPI\LastBuildDir.txt" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForwardSimple.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Shader\Light &amp; Shadow\Lightbeam Inside.shader" />
@@ -276,6 +328,7 @@
      <None Include="Assets\Addons\Shaders\explosion.shader" />
      <None Include="Assets\Addons\Shaders\tubeLum.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForward.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCore.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Shader\Standard Mobile Lerp\Standard_VC_Lerp.shader" />
@@ -867,6 +920,10 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{39613E69-7C7B-B0BC-3FDB-A22A1CC11892}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{754CEA7D-2B57-7CD0-ED4F-941C19D8696D}</Project>      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{56678550-BBB0-B1B2-D8F4-346E0BE8C919}</Project>      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

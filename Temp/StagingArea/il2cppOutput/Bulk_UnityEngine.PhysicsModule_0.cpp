@@ -36,6 +36,10 @@ struct Collider_t1773347010;
 struct Component_t1923634451;
 // UnityEngine.ContactPoint[]
 struct ContactPointU5BU5D_t872956888;
+// UnityEngine.Mesh
+struct Mesh_t3648964284;
+// UnityEngine.MeshCollider
+struct MeshCollider_t903564387;
 // UnityEngine.Object
 struct Object_t631007953;
 // UnityEngine.RaycastHit[]
@@ -52,6 +56,7 @@ extern RuntimeClass* Object_t631007953_il2cpp_TypeInfo_var;
 extern RuntimeClass* RaycastHitU5BU5D_t1690781147_il2cpp_TypeInfo_var;
 extern RuntimeClass* Vector3_t3722313464_il2cpp_TypeInfo_var;
 extern const uint32_t Physics_Internal_RaycastTest_m1784372019_MetadataUsageId;
+extern const uint32_t Physics_Linecast_m1431720142_MetadataUsageId;
 extern const uint32_t Physics_RaycastAll_m3084184534_MetadataUsageId;
 extern const uint32_t Physics_Raycast_m3101461809_MetadataUsageId;
 extern const uint32_t RaycastHit_get_collider_m1464180279_MetadataUsageId;
@@ -63,8 +68,8 @@ struct ContactPointU5BU5D_t872956888;
 struct RaycastHitU5BU5D_t1690781147;
 
 
-#ifndef U3CMODULEU3E_T692745543_H
-#define U3CMODULEU3E_T692745543_H
+#ifndef U3CMODULEU3E_T692745546_H
+#define U3CMODULEU3E_T692745546_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -72,7 +77,7 @@ struct RaycastHitU5BU5D_t1690781147;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745543 
+struct  U3CModuleU3E_t692745546 
 {
 public:
 
@@ -82,7 +87,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745543_H
+#endif // U3CMODULEU3E_T692745546_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__
@@ -1012,6 +1017,35 @@ struct ControllerColliderHit_t240592346_marshaled_com
 	int32_t ___m_Push_6;
 };
 #endif // CONTROLLERCOLLIDERHIT_T240592346_H
+#ifndef MESHCOLLIDERCOOKINGOPTIONS_T1566738986_H
+#define MESHCOLLIDERCOOKINGOPTIONS_T1566738986_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.MeshColliderCookingOptions
+struct  MeshColliderCookingOptions_t1566738986 
+{
+public:
+	// System.Int32 UnityEngine.MeshColliderCookingOptions::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(MeshColliderCookingOptions_t1566738986, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MESHCOLLIDERCOOKINGOPTIONS_T1566738986_H
 #ifndef OBJECT_T631007953_H
 #define OBJECT_T631007953_H
 #ifdef __clang__
@@ -1234,6 +1268,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // COMPONENT_T1923634451_H
+#ifndef MESH_T3648964284_H
+#define MESH_T3648964284_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Mesh
+struct  Mesh_t3648964284  : public Object_t631007953
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MESH_T3648964284_H
 #ifndef COLLIDER_T1773347010_H
 #define COLLIDER_T1773347010_H
 #ifdef __clang__
@@ -1477,6 +1531,10 @@ extern "C" IL2CPP_METHOD_ATTR int32_t CharacterController_Move_Injected_m2968855
 extern "C" IL2CPP_METHOD_ATTR void Collider_ClosestPoint_Injected_m2343114216 (Collider_t1773347010 * __this, Vector3_t3722313464 * ___position0, Vector3_t3722313464 * ___ret1, const RuntimeMethod* method);
 // System.Void UnityEngine.Collider::get_bounds_Injected(UnityEngine.Bounds&)
 extern "C" IL2CPP_METHOD_ATTR void Collider_get_bounds_Injected_m2832026935 (Collider_t1773347010 * __this, Bounds_t2266837910 * ___ret0, const RuntimeMethod* method);
+// UnityEngine.MeshColliderCookingOptions UnityEngine.MeshCollider::get_cookingOptions()
+extern "C" IL2CPP_METHOD_ATTR int32_t MeshCollider_get_cookingOptions_m2188498099 (MeshCollider_t903564387 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.MeshCollider::set_cookingOptions(UnityEngine.MeshColliderCookingOptions)
+extern "C" IL2CPP_METHOD_ATTR void MeshCollider_set_cookingOptions_m2964344721 (MeshCollider_t903564387 * __this, int32_t ___value0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Physics::Query_RaycastTest_Injected(UnityEngine.Ray&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C" IL2CPP_METHOD_ATTR bool Physics_Query_RaycastTest_Injected_m2116672205 (RuntimeObject * __this /* static, unused */, Ray_t3785851493 * ___ray0, float ___maxDistance1, int32_t ___layerMask2, int32_t ___queryTriggerInteraction3, const RuntimeMethod* method);
 // System.Single UnityEngine.Vector3::get_magnitude()
@@ -1501,6 +1559,10 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Ray_get_origin_m2819290985 (R
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Ray_get_direction_m761601601 (Ray_t3785851493 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Physics::Raycast(UnityEngine.Vector3,UnityEngine.Vector3,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C" IL2CPP_METHOD_ATTR bool Physics_Raycast_m3482819239 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___origin0, Vector3_t3722313464  ___direction1, float ___maxDistance2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method);
+// UnityEngine.Vector3 UnityEngine.Vector3::op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)
+extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_op_Subtraction_m3073674971 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, Vector3_t3722313464  p1, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Physics::Linecast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Int32,UnityEngine.QueryTriggerInteraction)
+extern "C" IL2CPP_METHOD_ATTR bool Physics_Linecast_m1431720142 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___start0, Vector3_t3722313464  ___end1, RaycastHit_t1056001966 * ___hitInfo2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method);
 // UnityEngine.RaycastHit[] UnityEngine.Physics::Internal_RaycastAll_Injected(UnityEngine.Ray&,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
 extern "C" IL2CPP_METHOD_ATTR RaycastHitU5BU5D_t1690781147* Physics_Internal_RaycastAll_Injected_m2931638140 (RuntimeObject * __this /* static, unused */, Ray_t3785851493 * ___ray0, float ___maxDistance1, int32_t ___mask2, int32_t ___queryTriggerInteraction3, const RuntimeMethod* method);
 // UnityEngine.RaycastHit[] UnityEngine.Physics::Internal_RaycastAll(UnityEngine.Ray,System.Single,System.Int32,UnityEngine.QueryTriggerInteraction)
@@ -1648,6 +1710,15 @@ extern "C" IL2CPP_METHOD_ATTR Rigidbody_t3916780224 * Collider_get_attachedRigid
 	Rigidbody_t3916780224 * retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
+// System.Void UnityEngine.Collider::set_isTrigger(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Collider_set_isTrigger_m1770557358 (Collider_t1773347010 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*Collider_set_isTrigger_m1770557358_ftn) (Collider_t1773347010 *, bool);
+	static Collider_set_isTrigger_m1770557358_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Collider_set_isTrigger_m1770557358_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Collider::set_isTrigger(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // UnityEngine.Vector3 UnityEngine.Collider::ClosestPoint(UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Collider_ClosestPoint_m960211240 (Collider_t1773347010 * __this, Vector3_t3722313464  ___position0, const RuntimeMethod* method)
 {
@@ -1779,6 +1850,85 @@ extern "C" void ControllerColliderHit_t240592346_marshal_com_back(const Controll
 // Conversion method for clean up from marshalling of: UnityEngine.ControllerColliderHit
 extern "C" void ControllerColliderHit_t240592346_marshal_com_cleanup(ControllerColliderHit_t240592346_marshaled_com& marshaled)
 {
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.MeshCollider::set_sharedMesh(UnityEngine.Mesh)
+extern "C" IL2CPP_METHOD_ATTR void MeshCollider_set_sharedMesh_m1986498669 (MeshCollider_t903564387 * __this, Mesh_t3648964284 * ___value0, const RuntimeMethod* method)
+{
+	typedef void (*MeshCollider_set_sharedMesh_m1986498669_ftn) (MeshCollider_t903564387 *, Mesh_t3648964284 *);
+	static MeshCollider_set_sharedMesh_m1986498669_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshCollider_set_sharedMesh_m1986498669_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::set_sharedMesh(UnityEngine.Mesh)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.MeshCollider::set_convex(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void MeshCollider_set_convex_m840510835 (MeshCollider_t903564387 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*MeshCollider_set_convex_m840510835_ftn) (MeshCollider_t903564387 *, bool);
+	static MeshCollider_set_convex_m840510835_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshCollider_set_convex_m840510835_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::set_convex(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.MeshCollider::set_inflateMesh(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void MeshCollider_set_inflateMesh_m1778269099 (MeshCollider_t903564387 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = MeshCollider_get_cookingOptions_m2188498099(__this, /*hidden argument*/NULL);
+		V_0 = ((int32_t)((int32_t)L_0&(int32_t)((int32_t)-2)));
+		bool L_1 = ___value0;
+		if (!L_1)
+		{
+			goto IL_0015;
+		}
+	}
+	{
+		int32_t L_2 = V_0;
+		V_0 = ((int32_t)((int32_t)L_2|(int32_t)1));
+	}
+
+IL_0015:
+	{
+		int32_t L_3 = V_0;
+		MeshCollider_set_cookingOptions_m2964344721(__this, L_3, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.MeshColliderCookingOptions UnityEngine.MeshCollider::get_cookingOptions()
+extern "C" IL2CPP_METHOD_ATTR int32_t MeshCollider_get_cookingOptions_m2188498099 (MeshCollider_t903564387 * __this, const RuntimeMethod* method)
+{
+	typedef int32_t (*MeshCollider_get_cookingOptions_m2188498099_ftn) (MeshCollider_t903564387 *);
+	static MeshCollider_get_cookingOptions_m2188498099_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshCollider_get_cookingOptions_m2188498099_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::get_cookingOptions()");
+	int32_t retVal = _il2cpp_icall_func(__this);
+	return retVal;
+}
+// System.Void UnityEngine.MeshCollider::set_cookingOptions(UnityEngine.MeshColliderCookingOptions)
+extern "C" IL2CPP_METHOD_ATTR void MeshCollider_set_cookingOptions_m2964344721 (MeshCollider_t903564387 * __this, int32_t ___value0, const RuntimeMethod* method)
+{
+	typedef void (*MeshCollider_set_cookingOptions_m2964344721_ftn) (MeshCollider_t903564387 *, int32_t);
+	static MeshCollider_set_cookingOptions_m2964344721_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshCollider_set_cookingOptions_m2964344721_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::set_cookingOptions(UnityEngine.MeshColliderCookingOptions)");
+	_il2cpp_icall_func(__this, ___value0);
+}
+// System.Void UnityEngine.MeshCollider::set_skinWidth(System.Single)
+extern "C" IL2CPP_METHOD_ATTR void MeshCollider_set_skinWidth_m1782069040 (MeshCollider_t903564387 * __this, float ___value0, const RuntimeMethod* method)
+{
+	typedef void (*MeshCollider_set_skinWidth_m1782069040_ftn) (MeshCollider_t903564387 *, float);
+	static MeshCollider_set_skinWidth_m1782069040_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (MeshCollider_set_skinWidth_m1782069040_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MeshCollider::set_skinWidth(System.Single)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -2232,6 +2382,60 @@ extern "C" IL2CPP_METHOD_ATTR bool Physics_Raycast_m447436869 (RuntimeObject * _
 	}
 
 IL_0023:
+	{
+		bool L_4 = V_0;
+		return L_4;
+	}
+}
+// System.Boolean UnityEngine.Physics::Linecast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&,System.Int32,UnityEngine.QueryTriggerInteraction)
+extern "C" IL2CPP_METHOD_ATTR bool Physics_Linecast_m1431720142 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___start0, Vector3_t3722313464  ___end1, RaycastHit_t1056001966 * ___hitInfo2, int32_t ___layerMask3, int32_t ___queryTriggerInteraction4, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Physics_Linecast_m1431720142_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Vector3_t3722313464  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	bool V_1 = false;
+	{
+		Vector3_t3722313464  L_0 = ___end1;
+		Vector3_t3722313464  L_1 = ___start0;
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
+		Vector3_t3722313464  L_2 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
+		V_0 = L_2;
+		Vector3_t3722313464  L_3 = ___start0;
+		Vector3_t3722313464  L_4 = V_0;
+		RaycastHit_t1056001966 * L_5 = ___hitInfo2;
+		float L_6 = Vector3_get_magnitude_m27958459((Vector3_t3722313464 *)(&V_0), /*hidden argument*/NULL);
+		int32_t L_7 = ___layerMask3;
+		int32_t L_8 = ___queryTriggerInteraction4;
+		bool L_9 = Physics_Raycast_m3101461809(NULL /*static, unused*/, L_3, L_4, (RaycastHit_t1056001966 *)L_5, L_6, L_7, L_8, /*hidden argument*/NULL);
+		V_1 = L_9;
+		goto IL_0021;
+	}
+
+IL_0021:
+	{
+		bool L_10 = V_1;
+		return L_10;
+	}
+}
+// System.Boolean UnityEngine.Physics::Linecast(UnityEngine.Vector3,UnityEngine.Vector3,UnityEngine.RaycastHit&)
+extern "C" IL2CPP_METHOD_ATTR bool Physics_Linecast_m916494249 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  ___start0, Vector3_t3722313464  ___end1, RaycastHit_t1056001966 * ___hitInfo2, const RuntimeMethod* method)
+{
+	bool V_0 = false;
+	{
+		Vector3_t3722313464  L_0 = ___start0;
+		Vector3_t3722313464  L_1 = ___end1;
+		RaycastHit_t1056001966 * L_2 = ___hitInfo2;
+		bool L_3 = Physics_Linecast_m1431720142(NULL /*static, unused*/, L_0, L_1, (RaycastHit_t1056001966 *)L_2, ((int32_t)-5), 0, /*hidden argument*/NULL);
+		V_0 = L_3;
+		goto IL_0012;
+	}
+
+IL_0012:
 	{
 		bool L_4 = V_0;
 		return L_4;
@@ -2705,6 +2909,15 @@ extern "C" IL2CPP_METHOD_ATTR void Rigidbody__ctor_m1806995817 (Rigidbody_t39167
 		Component__ctor_m1928064382(__this, /*hidden argument*/NULL);
 		return;
 	}
+}
+// System.Void UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Rigidbody_set_freezeRotation_m754206839 (Rigidbody_t3916780224 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*Rigidbody_set_freezeRotation_m754206839_ftn) (Rigidbody_t3916780224 *, bool);
+	static Rigidbody_set_freezeRotation_m754206839_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Rigidbody_set_freezeRotation_m754206839_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Rigidbody::set_freezeRotation(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

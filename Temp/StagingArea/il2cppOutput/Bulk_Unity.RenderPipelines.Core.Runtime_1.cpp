@@ -1025,13 +1025,13 @@ extern const RuntimeMethod* List_1_get_Count_m2543682014_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m4003625597_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m4054045799_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Count_m809799474_RuntimeMethod_var;
-extern const RuntimeMethod* List_1_get_Item_m1333813126_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m1619081224_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m1728857346_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m1903669988_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m2047543025_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m2422941632_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m3505478873_RuntimeMethod_var;
+extern const RuntimeMethod* List_1_get_Item_m3668735396_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_set_Item_m3708146160_RuntimeMethod_var;
 extern const RuntimeMethod* Object_Instantiate_TisRectTransform_t3704657025_m480025987_RuntimeMethod_var;
 extern const RuntimeMethod* Object_Instantiate_TisTransform_t3600365921_m1332248149_RuntimeMethod_var;
@@ -16674,7 +16674,7 @@ extern "C" IL2CPP_METHOD_ATTR void List_1_Clear_m2154023298_gshared (List_1_t128
 // System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0)
 extern "C" IL2CPP_METHOD_ATTR void List_1_Add_m2080863212_gshared (List_1_t128053199 * __this, int32_t p0, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<System.Int32>::get_Item(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR int32_t List_1_get_Item_m1333813126_gshared (List_1_t128053199 * __this, int32_t p0, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR int32_t List_1_get_Item_m3668735396_gshared (List_1_t128053199 * __this, int32_t p0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.Dictionary`2<System.UInt32,System.Int32>::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m3348873258_gshared (Dictionary_2_t4225213415 * __this, const RuntimeMethod* method);
 // System.Boolean System.Collections.Generic.Dictionary`2<System.UInt32,System.Int32>::ContainsKey(!0)
@@ -16808,7 +16808,7 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_OrderBy_TisRuntimeObject
 // System.Void System.Func`2<System.Object,System.Object>::.ctor(System.Object,System.IntPtr)
 extern "C" IL2CPP_METHOD_ATTR void Func_2__ctor_m3860723828_gshared (Func_2_t2447130374 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m1259123935_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject* p0, Func_2_t2447130374 * p1, const RuntimeMethod* method);
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m3082230130_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject* p0, Func_2_t2447130374 * p1, const RuntimeMethod* method);
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<System.Object>(System.Collections.Generic.IEnumerable`1<!!0>)
 extern "C" IL2CPP_METHOD_ATTR List_1_t257213610 * Enumerable_ToList_TisRuntimeObject_m4131172864_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject* p0, const RuntimeMethod* method);
 // System.Collections.ObjectModel.ReadOnlyCollection`1<!0> System.Collections.Generic.List`1<System.Object>::AsReadOnly()
@@ -17095,9 +17095,9 @@ inline void List_1_Add_m2080863212 (List_1_t128053199 * __this, int32_t p0, cons
 	((  void (*) (List_1_t128053199 *, int32_t, const RuntimeMethod*))List_1_Add_m2080863212_gshared)(__this, p0, method);
 }
 // !0 System.Collections.Generic.List`1<System.Int32>::get_Item(System.Int32)
-inline int32_t List_1_get_Item_m1333813126 (List_1_t128053199 * __this, int32_t p0, const RuntimeMethod* method)
+inline int32_t List_1_get_Item_m3668735396 (List_1_t128053199 * __this, int32_t p0, const RuntimeMethod* method)
 {
-	return ((  int32_t (*) (List_1_t128053199 *, int32_t, const RuntimeMethod*))List_1_get_Item_m1333813126_gshared)(__this, p0, method);
+	return ((  int32_t (*) (List_1_t128053199 *, int32_t, const RuntimeMethod*))List_1_get_Item_m3668735396_gshared)(__this, p0, method);
 }
 // System.Void System.Collections.Generic.Dictionary`2<System.UInt32,System.Int32>::.ctor()
 inline void Dictionary_2__ctor_m3348873258 (Dictionary_2_t4225213415 * __this, const RuntimeMethod* method)
@@ -17942,7 +17942,7 @@ inline void Func_2__ctor_m3245570758 (Func_2_t3531569896 * __this, RuntimeObject
 // System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Reflection.FieldInfo,UnityEngine.Experimental.Rendering.VolumeParameter>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
 inline RuntimeObject* Enumerable_Select_TisFieldInfo_t_TisVolumeParameter_t1867366735_m619520266 (RuntimeObject * __this /* static, unused */, RuntimeObject* p0, Func_2_t3531569896 * p1, const RuntimeMethod* method)
 {
-	return ((  RuntimeObject* (*) (RuntimeObject * /* static, unused */, RuntimeObject*, Func_2_t3531569896 *, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m1259123935_gshared)(__this /* static, unused */, p0, p1, method);
+	return ((  RuntimeObject* (*) (RuntimeObject * /* static, unused */, RuntimeObject*, Func_2_t3531569896 *, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m3082230130_gshared)(__this /* static, unused */, p0, p1, method);
 }
 // System.Collections.Generic.List`1<!!0> System.Linq.Enumerable::ToList<UnityEngine.Experimental.Rendering.VolumeParameter>(System.Collections.Generic.IEnumerable`1<!!0>)
 inline List_1_t3339441477 * Enumerable_ToList_TisVolumeParameter_t1867366735_m3732578579 (RuntimeObject * __this /* static, unused */, RuntimeObject* p0, const RuntimeMethod* method)
@@ -21814,7 +21814,7 @@ IL_0062:
 		IL2CPP_RUNTIME_CLASS_INIT(TextureCache_t1429868522_il2cpp_TypeInfo_var);
 		List_1_t128053199 * L_17 = ((TextureCache_t1429868522_StaticFields*)il2cpp_codegen_static_fields_for(TextureCache_t1429868522_il2cpp_TypeInfo_var))->get_s_TempIntList_8();
 		int32_t L_18 = V_4;
-		int32_t L_19 = List_1_get_Item_m1333813126(L_17, L_18, /*hidden argument*/List_1_get_Item_m1333813126_RuntimeMethod_var);
+		int32_t L_19 = List_1_get_Item_m3668735396(L_17, L_18, /*hidden argument*/List_1_get_Item_m3668735396_RuntimeMethod_var);
 		uint32_t L_20 = ((L_16)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_19)))->get_countLRU_1();
 		if (L_20)
 		{
@@ -21828,7 +21828,7 @@ IL_0062:
 		IL2CPP_RUNTIME_CLASS_INIT(TextureCache_t1429868522_il2cpp_TypeInfo_var);
 		List_1_t128053199 * L_24 = ((TextureCache_t1429868522_StaticFields*)il2cpp_codegen_static_fields_for(TextureCache_t1429868522_il2cpp_TypeInfo_var))->get_s_TempIntList_8();
 		int32_t L_25 = V_4;
-		int32_t L_26 = List_1_get_Item_m1333813126(L_24, L_25, /*hidden argument*/List_1_get_Item_m1333813126_RuntimeMethod_var);
+		int32_t L_26 = List_1_get_Item_m3668735396(L_24, L_25, /*hidden argument*/List_1_get_Item_m3668735396_RuntimeMethod_var);
 		(L_21)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_22, (int32_t)L_23))), (int32_t)L_26);
 		int32_t L_27 = V_3;
 		V_3 = ((int32_t)il2cpp_codegen_add((int32_t)L_27, (int32_t)1));
@@ -21842,7 +21842,7 @@ IL_00a2:
 		IL2CPP_RUNTIME_CLASS_INIT(TextureCache_t1429868522_il2cpp_TypeInfo_var);
 		List_1_t128053199 * L_30 = ((TextureCache_t1429868522_StaticFields*)il2cpp_codegen_static_fields_for(TextureCache_t1429868522_il2cpp_TypeInfo_var))->get_s_TempIntList_8();
 		int32_t L_31 = V_4;
-		int32_t L_32 = List_1_get_Item_m1333813126(L_30, L_31, /*hidden argument*/List_1_get_Item_m1333813126_RuntimeMethod_var);
+		int32_t L_32 = List_1_get_Item_m3668735396(L_30, L_31, /*hidden argument*/List_1_get_Item_m3668735396_RuntimeMethod_var);
 		(L_28)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_29), (int32_t)L_32);
 		int32_t L_33 = V_2;
 		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_33, (int32_t)1));

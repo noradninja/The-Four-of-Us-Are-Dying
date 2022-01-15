@@ -36,8 +36,8 @@ extern const uint32_t Particle_set_rotation3D_m2156157200_MetadataUsageId;
 
 
 
-#ifndef U3CMODULEU3E_T692745542_H
-#define U3CMODULEU3E_T692745542_H
+#ifndef U3CMODULEU3E_T692745545_H
+#define U3CMODULEU3E_T692745545_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -45,7 +45,7 @@ extern const uint32_t Particle_set_rotation3D_m2156157200_MetadataUsageId;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745542 
+struct  U3CModuleU3E_t692745545 
 {
 public:
 
@@ -55,7 +55,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745542_H
+#endif // U3CMODULEU3E_T692745545_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__

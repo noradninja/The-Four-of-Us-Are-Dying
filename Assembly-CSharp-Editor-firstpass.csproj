@@ -719,6 +719,10 @@
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{39613E69-7C7B-B0BC-3FDB-A22A1CC11892}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{754CEA7D-2B57-7CD0-ED4F-941C19D8696D}</Project>      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{56678550-BBB0-B1B2-D8F4-346E0BE8C919}</Project>      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

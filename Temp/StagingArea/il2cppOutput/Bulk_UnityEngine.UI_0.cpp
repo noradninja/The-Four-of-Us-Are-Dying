@@ -1676,8 +1676,8 @@ struct Vector2U5BU5D_t1457185986;
 struct Vector3U5BU5D_t1718750761;
 
 
-#ifndef U3CMODULEU3E_T692745555_H
-#define U3CMODULEU3E_T692745555_H
+#ifndef U3CMODULEU3E_T692745560_H
+#define U3CMODULEU3E_T692745560_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -1685,7 +1685,7 @@ struct Vector3U5BU5D_t1718750761;
 #endif
 
 // <Module>
-struct  U3CModuleU3E_t692745555 
+struct  U3CModuleU3E_t692745560 
 {
 public:
 
@@ -1695,7 +1695,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CMODULEU3E_T692745555_H
+#endif // U3CMODULEU3E_T692745560_H
 #ifndef RUNTIMEOBJECT_H
 #define RUNTIMEOBJECT_H
 #ifdef __clang__
@@ -8233,8 +8233,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // WAITFORSECONDSREALTIME_T189548121_H
-#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
-#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
+#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255365_H
+#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255365_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -8242,21 +8242,21 @@ public:
 #endif
 
 // <PrivateImplementationDetails>
-struct  U3CPrivateImplementationDetailsU3E_t3057255363  : public RuntimeObject
+struct  U3CPrivateImplementationDetailsU3E_t3057255365  : public RuntimeObject
 {
 public:
 
 public:
 };
 
-struct U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields
+struct U3CPrivateImplementationDetailsU3E_t3057255365_StaticFields
 {
 public:
 	// <PrivateImplementationDetails>/$ArrayType=12 <PrivateImplementationDetails>::$field-7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46
 	U24ArrayTypeU3D12_t2488454196  ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0;
 
 public:
-	inline static int32_t get_offset_of_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0)); }
+	inline static int32_t get_offset_of_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255365_StaticFields, ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0)); }
 	inline U24ArrayTypeU3D12_t2488454196  get_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() const { return ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0; }
 	inline U24ArrayTypeU3D12_t2488454196 * get_address_of_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() { return &___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0; }
 	inline void set_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0(U24ArrayTypeU3D12_t2488454196  value)
@@ -8268,7 +8268,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
+#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255365_H
 #ifndef ENUMERATOR_T3923002270_H
 #define ENUMERATOR_T3923002270_H
 #ifdef __clang__

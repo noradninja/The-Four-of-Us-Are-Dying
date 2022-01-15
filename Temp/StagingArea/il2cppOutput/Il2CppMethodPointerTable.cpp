@@ -19,6 +19,22 @@
 
 
 
+extern "C" void ObjectImporter_CreateLoader_m374880695 ();
+extern "C" void Triangulation_ClipEar_m3407402700 ();
+extern "C" void Triangulation_ClipTriangle_m1203665322 ();
+extern "C" void Triangulation_FindMaxAreaEarVertex_m2350070018 ();
+extern "C" void Vertex_get_NextVertex_m806144045 ();
+extern "C" void Vertex_get_PreviousVertex_m921173586 ();
+extern "C" void PathSettings_FindPathComponent_m3172528021 ();
+extern "C" void TextureLoader_LoadTgaHeader_m1712712616 ();
+extern "C" void SystemServices_ParseResponseMessage_m611061774 ();
+extern "C" void MeshUtils_GetMeshBlendShapes_m1819832026 ();
+extern "C" void MeshCombiner_CombineSkinnedMeshes_m2555400222 ();
+extern "C" void MeshCombiner_GetSkinnedRenderers_m2505072323 ();
+extern "C" void MeshCombiner_CombineStaticMeshes_m1759974987 ();
+extern "C" void MeshCombiner_GetStaticRenderers_m2866249887 ();
+extern "C" void PolyfewRuntime_GetObjectMeshPairs_m2383065358 ();
+extern "C" void PolyfewRuntime_SimplifyObjectDeep_m2116880514 ();
 extern "C" void Bokeh_get_kernelSize_m3111469270 ();
 extern "C" void KeyHandler_Lookup_m3970197873 ();
 extern "C" void RegistryKey_get_Hive_m4162655731 ();
@@ -32,6 +48,7 @@ extern "C" void UnixRegistryApi_OpenSubKey_m851612282 ();
 extern "C" void Win32RegistryApi_OpenSubKey_m705243201 ();
 extern "C" void TimeZoneInfo_get_LocalZoneKey_m820481003 ();
 extern "C" void TimeZoneInfo_get_TimeZoneKey_m482211297 ();
+extern "C" void FileStream_get_SafeFileHandle_m4229279228 ();
 extern "C" void RegistryKey_get_Handle_m2752482857 ();
 extern "C" void WaitHandle_get_SafeWaitHandle_m1357296455 ();
 extern "C" void SearchResult_get_FindData_m2198293037 ();
@@ -42,73 +59,174 @@ extern "C" void SimpleCollator_GetTailContraction_m2107754083 ();
 extern "C" void CompareInfo_GetCollator_m1511461194 ();
 extern "C" void SimpleCollator_GetExtenderType_m407776429 ();
 extern "C" void MSCompatUnicodeTable_GetTailoringInfo_m1575560208 ();
+extern "C" void U3CU3Ec_U3CAuthenticateU3Eb__1_0_m1309887775 ();
+extern "C" void Kernel_LeftShift_m4140742987 ();
 extern "C" void Kernel_LeftShift_m3302851050 ();
 extern "C" void Kernel_MultiplyByDword_m1266935086 ();
 extern "C" void Kernel_RightShift_m2207393597 ();
+extern "C" void Kernel_RightShift_m3246168448 ();
 extern "C" void Kernel_Subtract_m657044818 ();
+extern "C" void Kernel_Subtract_m846005223 ();
 extern "C" void Kernel_modInverse_m3523342258 ();
+extern "C" void Kernel_modInverse_m652700340 ();
 extern "C" void ModulusRing_Difference_m1345688434 ();
+extern "C" void ModulusRing_Difference_m3686091506 ();
 extern "C" void ModulusRing_Multiply_m343333088 ();
+extern "C" void ModulusRing_Multiply_m1975391470 ();
 extern "C" void ModulusRing_Pow_m83007704 ();
+extern "C" void ModulusRing_Pow_m1124248336 ();
 extern "C" void ModulusRing_Pow_m317016278 ();
+extern "C" void ModulusRing_Pow_m729002192 ();
+extern "C" void BigInteger_GeneratePseudoPrime_m2547138838 ();
 extern "C" void BigInteger_GeneratePseudoPrime_m1941064930 ();
 extern "C" void BigInteger_GenerateRandom_m2556426062 ();
+extern "C" void BigInteger_GenerateRandom_m1790382084 ();
 extern "C" void BigInteger_GenerateRandom_m3141592944 ();
+extern "C" void BigInteger_GenerateRandom_m3872771375 ();
 extern "C" void BigInteger_ModInverse_m3469244086 ();
+extern "C" void BigInteger_ModInverse_m2426215562 ();
 extern "C" void BigInteger_ModPow_m2277842115 ();
+extern "C" void BigInteger_op_Division_m3713793389 ();
 extern "C" void BigInteger_op_Division_m2437128540 ();
+extern "C" void BigInteger_op_Implicit_m2547142909 ();
 extern "C" void BigInteger_op_Implicit_m2847009755 ();
+extern "C" void BigInteger_op_Implicit_m3414367033 ();
 extern "C" void BigInteger_op_Implicit_m378428706 ();
+extern "C" void BigInteger_op_LeftShift_m3681213422 ();
 extern "C" void BigInteger_op_LeftShift_m1192375522 ();
+extern "C" void BigInteger_op_Modulus_m2565477533 ();
 extern "C" void BigInteger_op_Modulus_m3223754023 ();
 extern "C" void BigInteger_op_Multiply_m3801644593 ();
+extern "C" void BigInteger_op_Multiply_m3683746602 ();
 extern "C" void BigInteger_op_Multiply_m3854773313 ();
+extern "C" void BigInteger_op_RightShift_m460065452 ();
 extern "C" void BigInteger_op_RightShift_m2934036419 ();
 extern "C" void BigInteger_op_Subtraction_m1575155386 ();
+extern "C" void BigInteger_op_Subtraction_m4245834512 ();
 extern "C" void SequentialSearchPrimeGeneratorBase_GenerateNewPrime_m1689384666 ();
+extern "C" void SequentialSearchPrimeGeneratorBase_GenerateNewPrime_m907640859 ();
 extern "C" void SequentialSearchPrimeGeneratorBase_GenerateNewPrime_m533229219 ();
+extern "C" void SequentialSearchPrimeGeneratorBase_GenerateNewPrime_m2891860459 ();
+extern "C" void SequentialSearchPrimeGeneratorBase_GenerateSearchBase_m1918143664 ();
 extern "C" void SequentialSearchPrimeGeneratorBase_GenerateSearchBase_m3595783982 ();
+extern "C" void Kernel_Compare_m2669603547 ();
 extern "C" void Kernel_Compare_m1530940716 ();
+extern "C" void Kernel_DwordDivMod_m1540317819 ();
 extern "C" void Kernel_DwordDivMod_m631886101 ();
 extern "C" void Kernel_multiByteDivide_m4249920547 ();
+extern "C" void Kernel_multiByteDivide_m450694282 ();
 extern "C" void PrimeGeneratorBase_get_Confidence_m359324283 ();
+extern "C" void PrimeGeneratorBase_get_Confidence_m3172213559 ();
 extern "C" void PrimeGeneratorBase_get_PrimalityTest_m2131070257 ();
+extern "C" void PrimeGeneratorBase_get_PrimalityTest_m2487240563 ();
 extern "C" void AssemblyName_GetNativeName_m2633693728 ();
+extern "C" void CFNetwork_CopyProxiesForAutoConfigurationScript_m303817052 ();
+extern "C" void CFNetwork_CopyProxiesForURL_m3242481072 ();
+extern "C" void CFProxySettings_get_Dictionary_m2400889762 ();
+extern "C" void CFNetwork_GetSystemProxySettings_m3704350829 ();
+extern "C" void CFProxy_CFProxyTypeToEnum_m3103370950 ();
+extern "C" void CFProxy_get_ProxyType_m1798149169 ();
+extern "C" void CFNetwork_ExecuteProxyAutoConfigurationURL_m3663236471 ();
+extern "C" void CFNetwork_GetProxiesForAutoConfigurationScript_m5223155 ();
+extern "C" void CFNetwork_GetProxiesForAutoConfigurationScript_m571709647 ();
+extern "C" void CFNetwork_GetProxiesForURL_m699197090 ();
+extern "C" void CFNetwork_GetProxiesForUri_m1791810095 ();
+extern "C" void CFRunLoop_get_CurrentRunLoop_m3857329098 ();
+extern "C" void CFString_Create_m2201510964 ();
+extern "C" void CFUrl_Create_m2484430943 ();
+extern "C" void AsyncHandshakeRequest_Run_m1684165545 ();
 extern "C" void AsyncReadRequest_Run_m2877399754 ();
 extern "C" void AsyncWriteRequest_Run_m3406950787 ();
+extern "C" void MobileAuthenticatedStream_ProcessHandshake_m1385946050 ();
 extern "C" void AsyncReadOrWriteRequest_get_UserBuffer_m1113208174 ();
+extern "C" void ChainValidationHelper_Create_m185021580 ();
 extern "C" void AsyncProtocolRequest_get_Parent_m2638248309 ();
+extern "C" void MobileTlsContext_get_Parent_m532676559 ();
+extern "C" void UnityTlsStream_CreateContext_m3044809826 ();
 extern "C" void RuntimeRemoteClassHandle_get_ProxyClass_m3462903531_AdjustorThunk ();
 extern "C" void RuntimeClassHandle_get_Value_m2945126791_AdjustorThunk ();
 extern "C" void RuntimeMarshal_MarshalString_m34138672 ();
 extern "C" void ASN1_Add_m2431139999 ();
 extern "C" void ASN1_Add_m3468571571 ();
 extern "C" void ASN1_Element_m2680269109 ();
+extern "C" void ASN1_Element_m4088315026 ();
 extern "C" void ASN1_get_Item_m2255075813 ();
 extern "C" void ASN1_get_Item_m3901126023 ();
 extern "C" void ASN1Convert_FromInt32_m2935389061 ();
 extern "C" void ASN1Convert_FromInt32_m1154451899 ();
+extern "C" void ASN1Convert_FromOid_m3844102704 ();
 extern "C" void ASN1Convert_FromOid_m3740816339 ();
+extern "C" void ASN1Convert_FromUnsignedBigInteger_m1312950810 ();
 extern "C" void ContentInfo_GetASN1_m3665489137 ();
+extern "C" void ContentInfo_GetASN1_m2535172199 ();
 extern "C" void ContentInfo_get_ASN1_m1776225219 ();
+extern "C" void ContentInfo_get_ASN1_m2959326143 ();
+extern "C" void ContentInfo_get_Content_m4053224038 ();
 extern "C" void ContentInfo_get_Content_m1945593776 ();
+extern "C" void PKCS12_CertificateSafeBag_m1505366012 ();
 extern "C" void PKCS12_CertificateSafeBag_m3469173172 ();
 extern "C" void SafeBag_get_ASN1_m3167501969 ();
+extern "C" void SafeBag_get_ASN1_m2293701606 ();
+extern "C" void X509Certificate_GetIssuerName_m3173047029 ();
+extern "C" void X509Certificate_GetIssuerName_m4238857993 ();
+extern "C" void X509Certificate_GetSubjectName_m3288368674 ();
+extern "C" void X509Certificate_GetSubjectName_m584504796 ();
+extern "C" void MD2_Create_m3511476020 ();
 extern "C" void MD2_Create_m1779870559 ();
+extern "C" void MD4_Create_m1588482044 ();
 extern "C" void MD4_Create_m1010953232 ();
 extern "C" void RC4_Create_m4059201118 ();
+extern "C" void Alert_get_Description_m2140461962 ();
+extern "C" void UnityTlsConversions_VerifyResultToAlertDescription_m4177764141 ();
+extern "C" void Alert_get_Level_m2435440816 ();
+extern "C" void MonoTlsConnectionInfo_get_CipherSuiteCode_m2194175656 ();
+extern "C" void MonoTlsSettings_get_EnabledCiphers_m430456440 ();
+extern "C" void ChainValidationHelper_GetInternalValidator_m2014916002 ();
+extern "C" void MonoTlsSettings_get_CertificateValidator_m1252165739 ();
+extern "C" void CertificateValidationHelper_GetInternalValidator_m480890152 ();
 extern "C" void UnityTlsProvider_CreateSslStream_m1498168376 ();
 extern "C" void UnityTlsProvider_CreateSslStreamInternal_m962257588 ();
 extern "C" void SslStream_CreateMonoSslStream_m3208885458 ();
 extern "C" void SslStream_get_Impl_m3149891854 ();
+extern "C" void MonoTlsSettings_get_ClientCertificateSelectionCallback_m177827885 ();
+extern "C" void MonoTlsSettings_get_RemoteCertificateValidationCallback_m153991427 ();
 extern "C" void UnityTlsConversions_VerifyResultToPolicyErrror_m3883138893 ();
+extern "C" void MobileAuthenticatedStream_get_Provider_m14306411 ();
+extern "C" void MonoTlsProviderFactory_CreateDefaultProviderImpl_m1038092501 ();
+extern "C" void MonoTlsProviderFactory_GetProvider_m35375509 ();
+extern "C" void MonoTlsProviderFactory_GetProviderInternal_m2709244244 ();
+extern "C" void MonoTlsProviderFactory_LookupProvider_m1821132006 ();
+extern "C" void HttpWebRequest_get_TlsProvider_m2127636544 ();
+extern "C" void ChainValidationHelper_get_Settings_m533975297 ();
+extern "C" void MobileAuthenticatedStream_get_Settings_m3126667196 ();
+extern "C" void MobileTlsContext_get_Settings_m346835864 ();
+extern "C" void MonoTlsSettings_Clone_m432136059 ();
+extern "C" void MonoTlsSettings_CloneWithValidator_m3212834737 ();
+extern "C" void MonoTlsSettings_CopyDefaultSettings_m2564289867 ();
+extern "C" void MonoTlsSettings_get_DefaultSettings_m1725413153 ();
+extern "C" void HttpWebRequest_get_TlsSettings_m844625749 ();
+extern "C" void MonoTlsConnectionInfo_get_ProtocolVersion_m2191416560 ();
+extern "C" void UnityTlsConversions_ConvertProtocolVersion_m957170432 ();
+extern "C" void ChainValidationHelper_ValidateCertificate_m2831963176 ();
+extern "C" void ChainValidationHelper_ValidateCertificate_m3957084492 ();
+extern "C" void ChainValidationHelper_ValidateChain_m709772854 ();
+extern "C" void ChainValidationHelper_ValidateChain_m1169788960 ();
+extern "C" void EncryptedData_get_EncryptionAlgorithm_m905084934 ();
 extern "C" void EncryptedData_get_EncryptionAlgorithm_m1297902161 ();
 extern "C" void PKCS12_EncryptedContentInfo_m1012097402 ();
+extern "C" void PKCS12_EncryptedContentInfo_m729936927 ();
+extern "C" void NtlmSettings_get_DefaultAuthLevel_m608340105 ();
+extern "C" void MessageBase_get_Flags_m3792791611 ();
+extern "C" void X509CertificateEnumerator_get_Current_m1004537031 ();
 extern "C" void X509CertificateEnumerator_get_Current_m3041233561 ();
 extern "C" void X509CertificateCollection_get_Item_m3219599455 ();
+extern "C" void X509CertificateCollection_get_Item_m3285563224 ();
+extern "C" void X509Certificate2ImplMono_ImportPkcs12_m4012551612 ();
 extern "C" void X509Helper_ImportPkcs12_m1951664088 ();
+extern "C" void PKCS12_get_Certificates_m166242546 ();
 extern "C" void PKCS12_get_Certificates_m1630860723 ();
 extern "C" void X509CertificateCollection_GetEnumerator_m4229251522 ();
+extern "C" void X509CertificateCollection_GetEnumerator_m1275665495 ();
 extern "C" void unitytls_tlsctx_get_ciphersuite_t_EndInvoke_m2496465941 ();
 extern "C" void unitytls_tlsctx_get_ciphersuite_t_Invoke_m1230225480 ();
 extern "C" void unitytls_errorstate_create_t_EndInvoke_m3623507821 ();
@@ -122,6 +240,8 @@ extern "C" void unitytls_key_get_ref_t_EndInvoke_m1985934506 ();
 extern "C" void unitytls_key_get_ref_t_Invoke_m3623326532 ();
 extern "C" void unitytls_tlsctx_get_protocol_t_EndInvoke_m3708519062 ();
 extern "C" void unitytls_tlsctx_get_protocol_t_Invoke_m4198540103 ();
+extern "C" void UnityTlsConversions_GetMaxProtocol_m1049620341 ();
+extern "C" void UnityTlsConversions_GetMinProtocol_m2001406480 ();
 extern "C" void unitytls_tlsctx_create_client_t_EndInvoke_m629163045 ();
 extern "C" void unitytls_tlsctx_create_client_t_Invoke_m1648628768 ();
 extern "C" void unitytls_tlsctx_create_server_t_EndInvoke_m1630706335 ();
@@ -142,6 +262,8 @@ extern "C" void unitytls_tlsctx_x509verify_callback_EndInvoke_m1857752898 ();
 extern "C" void unitytls_tlsctx_x509verify_callback_Invoke_m981387466 ();
 extern "C" void unitytls_x509verify_callback_EndInvoke_m193239696 ();
 extern "C" void unitytls_x509verify_callback_Invoke_m3163401178 ();
+extern "C" void UnityTlsContext_VerifyCallback_m4003333694 ();
+extern "C" void UnityTlsContext_VerifyCallback_m2272716052 ();
 extern "C" void AsyncMethodBuilderCore_CreateContinuationWrapper_m4016207694 ();
 extern "C" void AsyncMethodBuilderCore_GetCompletionAction_m675964062_AdjustorThunk ();
 extern "C" void AsyncMethodBuilderCore_OutputAsyncCausalityEvents_m2986432446_AdjustorThunk ();
@@ -176,6 +298,7 @@ extern "C" void Type_GetEnumValues_m2482413490 ();
 extern "C" void GameObject_GetComponentsInternal_m4006738154 ();
 extern "C" void Mesh_GetAllocArrayFromChannelImpl_m3084065604 ();
 extern "C" void NoAllocHelpers_ExtractArrayFromList_m2239661248 ();
+extern "C" void IOAsyncResult_get_AsyncCallback_m426656779 ();
 extern "C" void Attribute_GetCustomAttribute_m1569541242 ();
 extern "C" void Attribute_GetCustomAttribute_m4209656291 ();
 extern "C" void Attribute_GetCustomAttribute_m1244111375 ();
@@ -188,6 +311,60 @@ extern "C" void Attribute_GetCustomAttributes_m2797989819 ();
 extern "C" void Attribute_GetCustomAttributes_m1427582442 ();
 extern "C" void Attribute_InternalGetCustomAttributes_m1181297186 ();
 extern "C" void Attribute_InternalGetCustomAttributes_m2389970315 ();
+extern "C" void FaceGroupData_get_IsEmpty_m1268710318 ();
+extern "C" void DataSet_get_IsEmpty_m2995897659 ();
+extern "C" void U3CDownloadFileU3Ec__Iterator9_MoveNext_m1227338279 ();
+extern "C" void U3CDownloadFileWebGLU3Ec__IteratorB_MoveNext_m1577214733 ();
+extern "C" void U3CDownloadTexFileWebGLU3Ec__IteratorC_MoveNext_m3730234568 ();
+extern "C" void U3CGetProgressU3Ec__IteratorA_MoveNext_m1515315983 ();
+extern "C" void U3CLoadFromNetworkWebGLU3Ec__Iterator2_MoveNext_m1013077296 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__Iterator8_MoveNext_m207740895 ();
+extern "C" void U3CNetworkedBuildWebGLU3Ec__Iterator5_MoveNext_m3386230724 ();
+extern "C" void Loader_get_ConvertVertAxis_m1486526007 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_MoveNext_m1466589366 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_MoveNext_m3811301293 ();
+extern "C" void U3CLoadOrDownloadTextU3Ec__Iterator6_MoveNext_m3968461887 ();
+extern "C" void LoaderObj_get_HasMaterialLibrary_m4284689265 ();
+extern "C" void MathUtility_IsPointInTriangle_m641739852 ();
+extern "C" void MathUtility_IsTriangleOrientedClockwise_m1885987955 ();
+extern "C" void Triangulation_IsVertexEar_m2945400833 ();
+extern "C" void Triangulation_IsVertexReflex_m2860153763 ();
+extern "C" void ModelUtil_ScanTransparentPixels_m1346498458 ();
+extern "C" void ObjectBuilder_BuildMaterials_m3193676732 ();
+extern "C" void ObjectBuilder_BuildNextObject_m1250264897 ();
+extern "C" void ObjectBuilder_BuildObjectAsync_m1671756887 ();
+extern "C" void ObjectBuilder_Using32bitIndices_m2992317986 ();
+extern "C" void MaterialEntity_HasAnyTextures_m1127625754 ();
+extern "C" void MaterialProperties_IsSameAs_m3157177758 ();
+extern "C" void CombiningInformation_ShouldGenerateDetailAlbedoArray_m3600224334 ();
+extern "C" void CombiningInformation_ShouldGenerateDetailMaskArray_m713461264 ();
+extern "C" void CombiningInformation_ShouldGenerateDetailNormalArray_m3577260890 ();
+extern "C" void CombiningInformation_ShouldGenerateEmissionArray_m3556747682 ();
+extern "C" void CombiningInformation_ShouldGenerateHeightArray_m2537293987 ();
+extern "C" void CombiningInformation_ShouldGenerateMetallicArray_m3629331842 ();
+extern "C" void CombiningInformation_ShouldGenerateNormalArray_m2181958199 ();
+extern "C" void CombiningInformation_ShouldGenerateOcclusionArray_m2384922612 ();
+extern "C" void CombiningInformation_ShouldGenerateSpecularArray_m188365225 ();
+extern "C" void U3CUnityAsyncGETRequestU3Ec__Iterator0_MoveNext_m4099349237 ();
+extern "C" void U3CUnityAsyncPOSTRequestU3Ec__Iterator1_MoveNext_m1269536125 ();
+extern "C" void SystemServices_IsSuccessStatusCode_m42487414 ();
+extern "C" void MeshCombiner_U3CCombineSkinnedMeshesU3Em__2_m95187428 ();
+extern "C" void MeshCombiner_U3CCombineSkinnedMeshesU3Em__3_m4119395648 ();
+extern "C" void MeshCombiner_U3CCombineStaticMeshesU3Em__0_m26387854 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__9_m279581192 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__B_m602704950 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__0_m2516667631 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__2_m1968134601 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__4_m3060096019 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__6_m3522414349 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__8_m2926097980 ();
+extern "C" void PolyfewRuntime_U3CConvertSkinnedMeshesFromRenderersU3Em__F_m321113221 ();
+extern "C" void PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__D_m4211490578 ();
+extern "C" void PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__E_m3449519289 ();
+extern "C" void PolyfewRuntime_AreAnyFeasibleMeshes_m4273299243 ();
+extern "C" void U3CShowMessageU3Ec__Iterator0_MoveNext_m1628859940 ();
+extern "C" void U3CUpdateProgressU3Ec__Iterator1_MoveNext_m3108092872 ();
+extern "C" void PolygonReduction_IsMouseOverUI_m4216769291 ();
 extern "C" void U3CZoomOutU3Ec__Iterator0_MoveNext_m1587085977 ();
 extern "C" void U3CStartU3Ec__Iterator0_MoveNext_m720253420 ();
 extern "C" void U3CfadeU3Ec__Iterator0_MoveNext_m446180226 ();
@@ -241,34 +418,65 @@ extern "C" void SimpleCollator_MatchesForward_m541234454 ();
 extern "C" void SimpleCollator_MatchesForwardCore_m850743967 ();
 extern "C" void SimpleCollator_MatchesPrimitive_m3079388596 ();
 extern "C" void BigInteger_Equals_m1948500455 ();
+extern "C" void BigInteger_Equals_m63093403 ();
 extern "C" void BigInteger_IsProbablePrime_m567194283 ();
+extern "C" void BigInteger_TestBit_m2798226118 ();
 extern "C" void BigInteger_TestBit_m1507066813 ();
 extern "C" void BigInteger_TestBit_m1365094736 ();
 extern "C" void BigInteger_op_Equality_m3263851871 ();
+extern "C" void BigInteger_op_Equality_m1194739960 ();
+extern "C" void BigInteger_op_Equality_m3872814973 ();
 extern "C" void BigInteger_op_Equality_m970226143 ();
+extern "C" void BigInteger_op_GreaterThan_m2974122765 ();
 extern "C" void BigInteger_op_GreaterThan_m2062805246 ();
+extern "C" void BigInteger_op_GreaterThanOrEqual_m3313329514 ();
 extern "C" void BigInteger_op_GreaterThanOrEqual_m700865613 ();
 extern "C" void BigInteger_op_Inequality_m2365536750 ();
+extern "C" void BigInteger_op_Inequality_m2697143438 ();
 extern "C" void BigInteger_op_Inequality_m2239968970 ();
+extern "C" void BigInteger_op_Inequality_m3469726044 ();
+extern "C" void BigInteger_op_LessThan_m463398176 ();
 extern "C" void BigInteger_op_LessThan_m798881406 ();
 extern "C" void BigInteger_op_LessThanOrEqual_m2553515144 ();
+extern "C" void BigInteger_op_LessThanOrEqual_m3925173639 ();
 extern "C" void SequentialSearchPrimeGeneratorBase_IsPrimeAcceptable_m3637196143 ();
+extern "C" void SequentialSearchPrimeGeneratorBase_IsPrimeAcceptable_m1127740833 ();
+extern "C" void PrimalityTest_EndInvoke_m1035389364 ();
 extern "C" void PrimalityTest_EndInvoke_m1454743433 ();
 extern "C" void PrimalityTest_Invoke_m476975163 ();
+extern "C" void PrimalityTest_Invoke_m2948246884 ();
 extern "C" void PrimalityTests_RabinMillerTest_m1471415870 ();
+extern "C" void PrimalityTests_RabinMillerTest_m2544317101 ();
 extern "C" void PrimalityTests_SmallPrimeSppTest_m1224130639 ();
 extern "C" void PrimalityTests_Test_m2932837908 ();
+extern "C" void CFWebProxy_IsBypassed_m1139341593 ();
+extern "C" void CFNumber_CFNumberGetValue_m402168296 ();
 extern "C" void AsyncProtocolRequest_get_RunSynchronously_m693190554 ();
+extern "C" void ChainValidationHelper_SelectClientCertificate_m438409409 ();
+extern "C" void MobileAuthenticatedStream_InternalWrite_m3406118459 ();
+extern "C" void MobileAuthenticatedStream_InternalWrite_m530119457 ();
 extern "C" void MobileAuthenticatedStream_get_CanRead_m2220636602 ();
 extern "C" void MobileAuthenticatedStream_get_CanSeek_m633759865 ();
 extern "C" void MobileAuthenticatedStream_get_CanWrite_m3841633088 ();
 extern "C" void MobileAuthenticatedStream_get_IsAuthenticated_m4148336029 ();
+extern "C" void MobileTlsContext_ValidateCertificate_m1082528530 ();
+extern "C" void MobileTlsContext_ValidateCertificate_m4079223291 ();
+extern "C" void MobileTlsContext_get_AskForClientCertificate_m1475525174 ();
+extern "C" void MobileTlsContext_get_IsServer_m3430371986 ();
+extern "C" void MonoTlsStream_get_CertificateValidationFailed_m4226823951 ();
+extern "C" void U3CU3Ec__DisplayClass5_0_U3CMonoToPublicU3Eb__0_m1672356517 ();
+extern "C" void ServerCertValidationCallbackWrapper_EndInvoke_m1826954774 ();
+extern "C" void ServerCertValidationCallbackWrapper_Invoke_m3737693895 ();
+extern "C" void SystemCertificateValidator_NeedsChain_m4132135282 ();
 extern "C" void Runtime_SetGCAllowSynchronousMajor_m1374659911 ();
 extern "C" void RuntimeClassHandle_Equals_m4061579581_AdjustorThunk ();
 extern "C" void RuntimeEventHandle_Equals_m4207876153_AdjustorThunk ();
 extern "C" void RuntimePropertyHandle_Equals_m729051570_AdjustorThunk ();
 extern "C" void ASN1_CompareArray_m448994814 ();
+extern "C" void ASN1_CompareArray_m3928975006 ();
 extern "C" void ASN1_CompareValue_m251306338 ();
+extern "C" void ASN1_CompareValue_m2846313136 ();
+extern "C" void ARC4Managed_get_CanTransformMultipleBlocks_m2954319634 ();
 extern "C" void DSAManaged_get_PublicOnly_m3575594967 ();
 extern "C" void KeyPairPersistence_CanSecure_m3598829533 ();
 extern "C" void KeyPairPersistence_IsMachineProtected_m644209340 ();
@@ -285,11 +493,27 @@ extern "C" void KeyPairPersistence_get_CanChange_m4275265699 ();
 extern "C" void KeyPairPersistence_get_UseDefaultKeyContainer_m1646107069 ();
 extern "C" void KeyPairPersistence_get_UseMachineKeyStore_m3206839918 ();
 extern "C" void RSAManaged_get_PublicOnly_m595121416 ();
+extern "C" void RSAManaged_get_PublicOnly_m405847294 ();
+extern "C" void SymmetricTransform_get_CanTransformMultipleBlocks_m2036822434 ();
 extern "C" void SymmetricTransform_get_KeepLastBlock_m3105157421 ();
+extern "C" void MonoRemoteCertificateValidationCallback_EndInvoke_m749439042 ();
+extern "C" void MonoRemoteCertificateValidationCallback_Invoke_m1806289288 ();
+extern "C" void MonoTlsSettings_get_CallbackNeedsCertificateChain_m4194302287 ();
+extern "C" void MonoTlsSettings_get_SendCloseNotify_m4004168955 ();
+extern "C" void ValidationResult_get_Trusted_m1465699729 ();
+extern "C" void ValidationResult_get_UserDenied_m2687575925 ();
+extern "C" void MessageBase_CheckHeader_m17174181 ();
+extern "C" void PKCS12_Compare_m219153845 ();
 extern "C" void PKCS12_Compare_m2975811353 ();
+extern "C" void X509CertificateEnumerator_MoveNext_m3925432749 ();
 extern "C" void X509CertificateEnumerator_MoveNext_m2269241175 ();
+extern "C" void X509CertificateEnumerator_System_Collections_IEnumerator_MoveNext_m2626270621 ();
 extern "C" void X509CertificateEnumerator_System_Collections_IEnumerator_MoveNext_m708500216 ();
 extern "C" void X509Extension_Equals_m1222951829 ();
+extern "C" void X509Extension_Equals_m1779194186 ();
+extern "C" void UnityTls_get_IsSupported_m1198242632 ();
+extern "C" void UnityTlsContext_ProcessHandshake_m1836962403 ();
+extern "C" void UnityTlsContext_get_IsAuthenticated_m2050788491 ();
 extern "C" void UnityTlsProvider_ValidateCertificate_m2026050918 ();
 extern "C" void UnityTlsProvider_get_SupportsCleanShutdown_m250613484 ();
 extern "C" void UnityTlsProvider_get_SupportsConnectionInfo_m947296080 ();
@@ -355,6 +579,7 @@ extern "C" void Char_IsLetterOrDigit_m3494175785 ();
 extern "C" void Char_IsLowSurrogate_m1445307684 ();
 extern "C" void Char_IsLower_m3108076820 ();
 extern "C" void Char_IsNumber_m2445552278 ();
+extern "C" void Char_IsNumber_m3333316586 ();
 extern "C" void Char_IsPunctuation_m3984409211 ();
 extern "C" void Char_IsSeparator_m2355480827 ();
 extern "C" void Char_IsSeparatorLatin1_m482019433 ();
@@ -393,6 +618,7 @@ extern "C" void KeyCollection_get_IsSynchronized_m710285887 ();
 extern "C" void SyncHashtable_Contains_m2292068165 ();
 extern "C" void SyncHashtable_ContainsKey_m4051091192 ();
 extern "C" void SyncHashtable_get_IsSynchronized_m2941968827 ();
+extern "C" void ValueCollection_get_IsSynchronized_m2777189546 ();
 extern "C" void Hashtable_Contains_m2145146412 ();
 extern "C" void Hashtable_ContainsKey_m2963904694 ();
 extern "C" void Hashtable_KeyEquals_m2549637027 ();
@@ -402,7 +628,26 @@ extern "C" void ListDictionaryInternal_get_IsSynchronized_m3768497458 ();
 extern "C" void QueueEnumerator_MoveNext_m386897816 ();
 extern "C" void Queue_get_IsSynchronized_m1844977307 ();
 extern "C" void SortedListEnumerator_MoveNext_m744552699 ();
+extern "C" void SyncSortedList_ContainsValue_m4285462794 ();
+extern "C" void SyncSortedList_get_IsSynchronized_m2054123421 ();
+extern "C" void ValueList_Contains_m798441450 ();
+extern "C" void ValueList_get_IsFixedSize_m3594935784 ();
+extern "C" void ValueList_get_IsReadOnly_m1633411326 ();
+extern "C" void ValueList_get_IsSynchronized_m4166384571 ();
+extern "C" void SortedList_ContainsValue_m3994186420 ();
 extern "C" void SortedList_get_IsSynchronized_m2987909703 ();
+extern "C" void CompatibleComparer_Equals_m542988228 ();
+extern "C" void HybridDictionary_get_IsSynchronized_m2987560362 ();
+extern "C" void NodeEnumerator_MoveNext_m2839035034 ();
+extern "C" void ListDictionary_get_IsSynchronized_m1093324729 ();
+extern "C" void NameObjectKeysEnumerator_MoveNext_m3475484904 ();
+extern "C" void NameObjectCollectionBase_System_Collections_ICollection_get_IsSynchronized_m3084128080 ();
+extern "C" void NameObjectCollectionBase_get_IsReadOnly_m1249375452 ();
+extern "C" void StringCollection_Contains_m2861455902 ();
+extern "C" void StringCollection_System_Collections_IList_Contains_m1928615552 ();
+extern "C" void StringCollection_System_Collections_IList_get_IsFixedSize_m1299970219 ();
+extern "C" void StringCollection_System_Collections_IList_get_IsReadOnly_m455357903 ();
+extern "C" void StringCollection_get_IsSynchronized_m1559727427 ();
 extern "C" void StackEnumerator_MoveNext_m3640736776 ();
 extern "C" void Stack_get_IsSynchronized_m2265747620 ();
 extern "C" void EditorBrowsableAttribute_Equals_m3041896197 ();
@@ -437,12 +682,16 @@ extern "C" void CurrentSystemTimeZone_GetTimeZoneData_m276442816 ();
 extern "C" void DBNull_System_IConvertible_ToBoolean_m702787761 ();
 extern "C" void DateTime_Equals_m4001498422_AdjustorThunk ();
 extern "C" void DateTime_Equals_m611432332_AdjustorThunk ();
+extern "C" void DateTime_IsAmbiguousDaylightSavingTime_m3255583102_AdjustorThunk ();
+extern "C" void DateTime_IsDaylightSavingTime_m2632700238_AdjustorThunk ();
 extern "C" void DateTime_IsLeapYear_m1852497299 ();
 extern "C" void DateTime_System_IConvertible_ToBoolean_m3229932458_AdjustorThunk ();
 extern "C" void DateTime_TryCreate_m2623519445 ();
+extern "C" void DateTime_TryParse_m1691789376 ();
 extern "C" void DateTime_op_Equality_m1022058599 ();
 extern "C" void DateTime_op_GreaterThan_m3768590082 ();
 extern "C" void DateTime_op_GreaterThanOrEqual_m674703316 ();
+extern "C" void DateTime_op_Inequality_m1382517918 ();
 extern "C" void DateTime_op_LessThan_m2497205152 ();
 extern "C" void DateTime_op_LessThanOrEqual_m2360948759 ();
 extern "C" void DateTimeFormat_IsUseGenitiveForm_m1507419300 ();
@@ -506,6 +755,7 @@ extern "C" void DateTimeParse_SetDateMDY_m3385195393 ();
 extern "C" void DateTimeParse_SetDateYDM_m2115405972 ();
 extern "C" void DateTimeParse_SetDateYMD_m36773996 ();
 extern "C" void DateTimeParse_TryAdjustYear_m3562070271 ();
+extern "C" void DateTimeParse_TryParse_m2478553981 ();
 extern "C" void DateTimeParse_TryParse_m508960038 ();
 extern "C" void DateTimeParse_TryParseExact_m1866119256 ();
 extern "C" void DateTimeParse_TryParseQuoteString_m1607906839 ();
@@ -553,6 +803,7 @@ extern "C" void Enum_System_IConvertible_ToBoolean_m1977632688 ();
 extern "C" void Environment_get_HasShutdownStarted_m304027930 ();
 extern "C" void Environment_get_Is64BitProcess_m3965057704 ();
 extern "C" void Environment_get_IsRunningOnWindows_m1804804030 ();
+extern "C" void Environment_get_IsUnix_m3181067358 ();
 extern "C" void Exception_IsImmutableAgileException_m3886899510 ();
 extern "C" void Exception_get_IsTransient_m3302965932 ();
 extern "C" void Exception_nIsTransient_m2897566008 ();
@@ -626,13 +877,23 @@ extern "C" void Guid_TryParseGuidWithHexPrefix_m4104052562 ();
 extern "C" void Guid_TryParseGuidWithNoStyle_m2298143493 ();
 extern "C" void Guid_op_Equality_m4289903222 ();
 extern "C" void BinaryReader_ReadBoolean_m3271855799 ();
+extern "C" void DeflateStream_get_CanRead_m1715247727 ();
+extern "C" void DeflateStream_get_CanSeek_m129419566 ();
+extern "C" void DeflateStream_get_CanWrite_m4292365324 ();
+extern "C" void SafeDeflateStreamHandle_ReleaseHandle_m2893242183 ();
+extern "C" void SafeDeflateStreamHandle_get_IsInvalid_m2564018510 ();
+extern "C" void GZipStream_get_CanRead_m1590375473 ();
+extern "C" void GZipStream_get_CanSeek_m394433026 ();
+extern "C" void GZipStream_get_CanWrite_m3880483697 ();
 extern "C" void Directory_Exists_m1484791558 ();
 extern "C" void DirectoryInfo_get_Exists_m3142069876 ();
 extern "C" void File_Exists_m3943585060 ();
+extern "C" void FileInfo_get_Exists_m1365967814 ();
 extern "C" void FileStream_get_CanRead_m860786786 ();
 extern "C" void FileStream_get_CanSeek_m331583577 ();
 extern "C" void FileStream_get_CanWrite_m1199612770 ();
 extern "C" void FileStreamAsyncResult_get_CompletedSynchronously_m3784899217 ();
+extern "C" void FileStreamAsyncResult_get_IsCompleted_m2730893434 ();
 extern "C" void FileSystemEnumerableHelpers_IsDir_m2524844520 ();
 extern "C" void FileSystemEnumerableHelpers_IsFile_m4235022421 ();
 extern "C" void MemoryStream_EnsureCapacity_m4183736728 ();
@@ -663,8 +924,13 @@ extern "C" void NullStream_get_CanRead_m3632879826 ();
 extern "C" void NullStream_get_CanSeek_m1262650951 ();
 extern "C" void NullStream_get_CanWrite_m2595943012 ();
 extern "C" void SynchronousAsyncResult_get_CompletedSynchronously_m738455999 ();
+extern "C" void SynchronousAsyncResult_get_IsCompleted_m2941520757 ();
 extern "C" void StreamReader_DataAvailable_m835397883 ();
 extern "C" void StreamReader_IsPreamble_m3139355577 ();
+extern "C" void StreamReader_get_CheckPreamble_Prop_m2059911625 ();
+extern "C" void StreamReader_get_DetectEncoding_Prop_m3290904122 ();
+extern "C" void StreamReader_get_EndOfStream_m1353444472 ();
+extern "C" void StreamReader_get_IsBlocked_Prop_m520504929 ();
 extern "C" void StreamReader_get_LeaveOpen_m3553008741 ();
 extern "C" void StreamWriter_get_LeaveOpen_m3885420898 ();
 extern "C" void StringResultHandler_IsResultIncluded_m2214933324 ();
@@ -673,12 +939,14 @@ extern "C" void UnmanagedMemoryStream_get_CanRead_m3770815400 ();
 extern "C" void UnmanagedMemoryStream_get_CanSeek_m2636857629 ();
 extern "C" void UnmanagedMemoryStream_get_CanWrite_m2913951513 ();
 extern "C" void IOAsyncResult_get_CompletedSynchronously_m1975159955 ();
+extern "C" void IOAsyncResult_get_IsCompleted_m4009731917 ();
 extern "C" void IPv4AddressHelper_IsValid_m3381515237 ();
 extern "C" void IPv4AddressHelper_IsValidCanonical_m2893636883 ();
 extern "C" void IPv4AddressHelper_Parse_m3799420111 ();
 extern "C" void IPv4AddressHelper_ParseCanonical_m716669564 ();
 extern "C" void IPv6AddressHelper_InternalIsValid_m3418842562 ();
 extern "C" void IPv6AddressHelper_IsValid_m2688799650 ();
+extern "C" void IPv6AddressHelper_IsValidStrict_m3544697568 ();
 extern "C" void IPv6AddressHelper_Parse_m37959265 ();
 extern "C" void IPv6AddressHelper_ShouldHaveIpv4Embedded_m2888688890 ();
 extern "C" void Int16_Equals_m1479112859_AdjustorThunk ();
@@ -687,6 +955,7 @@ extern "C" void Int16_System_IConvertible_ToBoolean_m1656400658_AdjustorThunk ()
 extern "C" void Int32_Equals_m2976157357_AdjustorThunk ();
 extern "C" void Int32_Equals_m3996243976_AdjustorThunk ();
 extern "C" void Int32_System_IConvertible_ToBoolean_m2787524506_AdjustorThunk ();
+extern "C" void Int32_TryParse_m2404707562 ();
 extern "C" void Int64_Equals_m680137412_AdjustorThunk ();
 extern "C" void Int64_Equals_m858582563_AdjustorThunk ();
 extern "C" void Int64_System_IConvertible_ToBoolean_m2413769966_AdjustorThunk ();
@@ -702,14 +971,175 @@ extern "C" void MonoCustomAttrs_IsDefined_m2996012389 ();
 extern "C" void MonoCustomAttrs_IsDefinedInternal_m2193933235 ();
 extern "C" void MonoCustomAttrs_IsUserCattrProvider_m2878058089 ();
 extern "C" void MulticastDelegate_Equals_m2502840627 ();
+extern "C" void Authorization_get_Complete_m585383280 ();
+extern "C" void AutoWebProxyScriptEngine_GetProxies_m660668774 ();
+extern "C" void AutoWebProxyScriptEngine_GetProxies_m7142261 ();
+extern "C" void CaseInsensitiveAscii_Equals_m3571170287 ();
+extern "C" void SettingsSectionInternal_get_Ipv6Enabled_m2663990904 ();
+extern "C" void Cookie_DomainCharsTest_m3632599350 ();
+extern "C" void Cookie_Equals_m3342877036 ();
+extern "C" void Cookie_InternalSetName_m79631888 ();
+extern "C" void Cookie_IsDomainEqualToHost_m2083012522 ();
+extern "C" void Cookie_VerifySetDefaults_m2347944681 ();
+extern "C" void Cookie_get_Expired_m1459950990 ();
+extern "C" void Cookie_get_Plain_m4063534626 ();
+extern "C" void Cookie_get_Secure_m3212902782 ();
+extern "C" void CookieCollectionEnumerator_System_Collections_IEnumerator_MoveNext_m4202356893 ();
+extern "C" void CookieCollection_get_IsOtherVersionSeen_m1791560595 ();
+extern "C" void CookieCollection_get_IsSynchronized_m3414024167 ();
+extern "C" void CookieContainer_AgeCookies_m3710352155 ();
+extern "C" void CookieContainer_IsLocalDomain_m3071445029 ();
+extern "C" void RecognizedAttribute_IsEqualTo_m3343258602_AdjustorThunk ();
+extern "C" void CookieTokenizer_get_EndOfCookie_m763433720 ();
+extern "C" void CookieTokenizer_get_Eof_m4026775299 ();
+extern "C" void CookieTokenizer_get_Quoted_m1302838470 ();
+extern "C" void CredentialEnumerator_System_Collections_IEnumerator_MoveNext_m3602723368 ();
+extern "C" void CredentialKey_Equals_m1445845010 ();
+extern "C" void CredentialKey_IsPrefix_m613349602 ();
+extern "C" void CredentialKey_Match_m1180492807 ();
+extern "C" void DefaultCertificatePolicy_CheckValidationResult_m3811448269 ();
+extern "C" void DigestHeaderParser_GetKeywordAndValue_m1709372932 ();
+extern "C" void DigestHeaderParser_Parse_m4245784917 ();
+extern "C" void DigestSession_Parse_m1593461661 ();
+extern "C" void Dns_GetHostByAddr_internal_m2973903266 ();
+extern "C" void Dns_GetHostByName_internal_m3368803947 ();
+extern "C" void Dns_GetHostName_internal_m575858027 ();
+extern "C" void EmptyWebProxy_IsBypassed_m677269389 ();
+extern "C" void FileWebRequest_CanGetRequestStream_m1821530667 ();
+extern "C" void FileWebRequest_get_Aborted_m3662859600 ();
+extern "C" void FileWebRequest_get_UseDefaultCredentials_m3324295669 ();
+extern "C" void FtpAsyncResult_WaitUntilComplete_m801803550 ();
+extern "C" void FtpAsyncResult_get_CompletedSynchronously_m3232338726 ();
+extern "C" void FtpAsyncResult_get_GotException_m460501254 ();
+extern "C" void FtpAsyncResult_get_IsCompleted_m2746579060 ();
+extern "C" void FtpDataStream_get_CanRead_m1810661727 ();
+extern "C" void FtpDataStream_get_CanSeek_m307473482 ();
+extern "C" void FtpDataStream_get_CanWrite_m2224737779 ();
+extern "C" void FtpWebRequest_ChangeToSSLSocket_m896422621 ();
+extern "C" void FtpWebRequest_InFinalState_m1434042928 ();
+extern "C" void FtpWebRequest_InProgress_m2248546191 ();
+extern "C" void FtpWebRequest_get_EnableSsl_m2491182827 ();
+extern "C" void FtpWebRequest_get_UseDefaultCredentials_m3696933790 ();
+extern "C" void FtpWebResponse_IsFinal_m1348059617 ();
+extern "C" void AuthorizationState_CheckAuthorization_m1516031931_AdjustorThunk ();
+extern "C" void AuthorizationState_get_IsCompleted_m548391747_AdjustorThunk ();
+extern "C" void AuthorizationState_get_IsNtlmAuthenticated_m3546056487_AdjustorThunk ();
+extern "C" void HttpWebRequest_U3CSetWriteStreamInnerU3Eb__259_0_m3568970586 ();
+extern "C" void HttpWebRequest_CheckAuthorization_m1568753518 ();
+extern "C" void HttpWebRequest_CheckFinalStatus_m2636217061 ();
+extern "C" void HttpWebRequest_CheckIfForceWrite_m3896594174 ();
+extern "C" void HttpWebRequest_HandleNtlmAuth_m445508236 ();
+extern "C" void HttpWebRequest_Redirect_m1822676774 ();
+extern "C" void HttpWebRequest_get_Aborted_m1961501758 ();
+extern "C" void HttpWebRequest_get_AllowWriteStreamBuffering_m1350956362 ();
+extern "C" void HttpWebRequest_get_ExpectContinue_m1265660027 ();
+extern "C" void HttpWebRequest_get_FinishedReading_m1895117237 ();
+extern "C" void HttpWebRequest_get_InternalAllowBuffering_m1509018138 ();
+extern "C" void HttpWebRequest_get_KeepAlive_m125307640 ();
+extern "C" void HttpWebRequest_get_MethodWithBuffer_m2735706591 ();
+extern "C" void HttpWebRequest_get_ProxyQuery_m4235226594 ();
+extern "C" void HttpWebRequest_get_ReuseConnection_m3470145138 ();
+extern "C" void HttpWebRequest_get_SendChunked_m3812850078 ();
+extern "C" void HttpWebRequest_get_ThrowOnError_m4097067344 ();
+extern "C" void HttpWebRequest_get_UnsafeAuthenticatedConnectionSharing_m3134209238 ();
+extern "C" void HttpWebRequest_get_UseDefaultCredentials_m1252280517 ();
 extern "C" void IPAddress_Equals_m1823478787 ();
 extern "C" void IPAddress_Equals_m582252489 ();
+extern "C" void IPAddress_IsLoopback_m29387631 ();
+extern "C" void IPAddress_TryParse_m2320149543 ();
+extern "C" void IPEndPoint_Equals_m306328693 ();
 extern "C" void IPv6AddressFormatter_IsIPv4Compatible_m955490501_AdjustorThunk ();
 extern "C" void IPv6AddressFormatter_IsIPv4Mapped_m2735174563_AdjustorThunk ();
+extern "C" void LazyAsyncResult_LazilyCreateEvent_m4246951566 ();
+extern "C" void LazyAsyncResult_get_CompletedSynchronously_m3831496419 ();
+extern "C" void LazyAsyncResult_get_InternalPeekCompleted_m532457183 ();
+extern "C" void LazyAsyncResult_get_IsCompleted_m3199757002 ();
+extern "C" void MonoChunkStream_get_DataAvailable_m306863724 ();
+extern "C" void MonoChunkStream_get_WantMore_m2502286912 ();
+extern "C" void NclUtilities_IsAddressLocal_m55443147 ();
+extern "C" void RemoteCertificateValidationCallback_EndInvoke_m1360061860 ();
+extern "C" void RemoteCertificateValidationCallback_Invoke_m727898444 ();
 extern "C" void SslStream_get_CanRead_m1708449590 ();
 extern "C" void SslStream_get_CanSeek_m102894697 ();
 extern "C" void SslStream_get_CanWrite_m1287225252 ();
 extern "C" void SslStream_get_IsAuthenticated_m4088526788 ();
+extern "C" void ServerCertValidationCallback_Invoke_m970680335 ();
+extern "C" void ServicePoint_CallEndPointDelegate_m2947487287 ();
+extern "C" void ServicePoint_CheckAvailableForRecycling_m2511650943 ();
+extern "C" void ServicePoint_get_HasTimedOut_m2870516460 ();
+extern "C" void ServicePoint_get_SendContinue_m3018494224 ();
+extern "C" void ServicePoint_get_UseConnect_m2085353846 ();
+extern "C" void ServicePoint_get_UseNagleAlgorithm_m633218140 ();
+extern "C" void ServicePoint_get_UsesProxy_m174711556 ();
+extern "C" void SPKey_Equals_m4205549017 ();
+extern "C" void SPKey_get_UsesProxy_m3161922308 ();
+extern "C" void ServicePointManager_get_CheckCertificateRevocationList_m1716454075 ();
+extern "C" void U3CU3Ec__DisplayClass11_0_U3CRunWithLockU3Eb__0_m3682622198 ();
+extern "C" void SimpleAsyncResult_WaitUntilComplete_m562927459 ();
+extern "C" void SimpleAsyncResult_get_CompletedSynchronously_m1730313150 ();
+extern "C" void SimpleAsyncResult_get_CompletedSynchronouslyPeek_m3681140797 ();
+extern "C" void SimpleAsyncResult_get_GotException_m3693335075 ();
+extern "C" void SimpleAsyncResult_get_IsCompleted_m1032228256 ();
+extern "C" void SocketAddress_Equals_m1857492818 ();
+extern "C" void NetworkStream_get_CanRead_m995827301 ();
+extern "C" void NetworkStream_get_CanSeek_m2713257202 ();
+extern "C" void NetworkStream_get_CanWrite_m3803109243 ();
+extern "C" void SafeSocketHandle_ReleaseHandle_m115824575 ();
+extern "C" void Socket_IsProtocolSupported_m2744406924 ();
+extern "C" void Socket_IsProtocolSupported_internal_m3759258780 ();
+extern "C" void Socket_Poll_m391414345 ();
+extern "C" void Socket_Poll_internal_m3742261368 ();
+extern "C" void Socket_Poll_internal_m3148478813 ();
+extern "C" void Socket_get_Blocking_m140927673 ();
+extern "C" void Socket_get_CleanedUp_m691785454 ();
+extern "C" void Socket_get_Connected_m2875145796 ();
+extern "C" void Socket_get_DualMode_m1709958258 ();
+extern "C" void Socket_get_IsDualMode_m3276226869 ();
+extern "C" void Socket_get_OSSupportsIPv4_m1922873662 ();
+extern "C" void Socket_get_OSSupportsIPv6_m760074248 ();
+extern "C" void Socket_get_SupportsIPv4_m1296530015 ();
+extern "C" void Socket_get_SupportsIPv6_m1296530017 ();
+extern "C" void TimerNode_Cancel_m688563000 ();
+extern "C" void ValidationHelper_IsBlankString_m3811430027 ();
+extern "C" void ValidationHelper_ValidateTcpPort_m2411968702 ();
+extern "C" void WebConnection_CanReuse_m2827124740 ();
+extern "C" void WebConnection_CompleteChunkedRead_m618073306 ();
+extern "C" void WebConnection_CreateStream_m3387195587 ();
+extern "C" void WebConnection_CreateTunnel_m94461872 ();
+extern "C" void WebConnection_EndWrite_m1985976895 ();
+extern "C" void WebConnection_ExpectContent_m3637777693 ();
+extern "C" void WebConnection_ReadLine_m1318917240 ();
+extern "C" void WebConnection_Write_m3744361765 ();
+extern "C" void WebConnection_get_NtlmAuthenticated_m2082355413 ();
+extern "C" void WebConnection_get_UnsafeAuthenticatedConnectionSharing_m453020971 ();
+extern "C" void ConnectionState_TrySetBusy_m3427448496 ();
+extern "C" void ConnectionState_get_Busy_m1276687864 ();
+extern "C" void WebConnectionGroup_TryRecycle_m3555446477 ();
+extern "C" void U3CU3Ec__DisplayClass75_0_U3CSetHeadersAsyncU3Eb__0_m1607502738 ();
+extern "C" void WebConnectionStream_CheckAuthHeader_m3347742564 ();
+extern "C" void WebConnectionStream_IsNtlmAuth_m4072757025 ();
+extern "C" void WebConnectionStream_SetHeadersAsync_m709356943 ();
+extern "C" void WebConnectionStream_WriteRequestAsync_m83932417 ();
+extern "C" void WebConnectionStream_get_CanRead_m3058525165 ();
+extern "C" void WebConnectionStream_get_CanSeek_m2524996598 ();
+extern "C" void WebConnectionStream_get_CanWrite_m4074596119 ();
+extern "C" void WebConnectionStream_get_CompleteRequestWritten_m761372138 ();
+extern "C" void WebConnectionStream_get_GetResponseOnClose_m3199916967 ();
+extern "C" void WebConnectionStream_get_RequestWritten_m4293957107 ();
+extern "C" void WebHeaderCollection_AllowMultiValues_m3519361423 ();
+extern "C" void WebHeaderCollection_ContainsNonAsciiChars_m458848647 ();
+extern "C" void WebHeaderCollection_get_AllowHttpRequestHeader_m3401683334 ();
+extern "C" void WebProxy_AreAllBypassed_m3505013980 ();
+extern "C" void WebProxy_GetProxyAuto_m4183973344 ();
+extern "C" void WebProxy_IsBypassed_m2918071028 ();
+extern "C" void WebProxy_IsBypassedAuto_m1618063376 ();
+extern "C" void WebProxy_IsBypassedManual_m1352858335 ();
+extern "C" void WebProxy_IsLocal_m454657683 ();
+extern "C" void WebProxy_IsLocalInProxyHash_m3095354371 ();
+extern "C" void WebProxy_IsMatchInBypassList_m2350950534 ();
+extern "C" void WebProxy_get_UseDefaultCredentials_m1572240836 ();
+extern "C" void WebProxyWrapperOpaque_IsBypassed_m2178633714 ();
+extern "C" void WebRequest_get_UseDefaultCredentials_m2515512021 ();
 extern "C" void Number_HexNumberToInt32_m1326084851 ();
 extern "C" void Number_HexNumberToInt64_m3435997136 ();
 extern "C" void Number_HexNumberToUInt32_m549867790 ();
@@ -723,7 +1153,9 @@ extern "C" void Number_NumberToUInt32_m1291900825 ();
 extern "C" void Number_NumberToUInt64_m1177843118 ();
 extern "C" void Number_ParseNumber_m880556640 ();
 extern "C" void Number_TrailingZeros_m3669346668 ();
+extern "C" void Number_TryParseInt32_m1682248133 ();
 extern "C" void Number_TryParseInt64_m2834972724 ();
+extern "C" void Number_TryParseUInt32_m2802499845 ();
 extern "C" void Number_TryStringToNumber_m2022112580 ();
 extern "C" void Number_TryStringToNumber_m432216761 ();
 extern "C" void NumberFormatter_IsZeroOnly_m46572730 ();
@@ -738,6 +1170,7 @@ extern "C" void Object_ReferenceEquals_m610702577 ();
 extern "C" void OrdinalComparer_Equals_m1824866739 ();
 extern "C" void OrdinalComparer_Equals_m1106612171 ();
 extern "C" void ParameterizedStrings_AsBool_m301414070 ();
+extern "C" void Platform_get_IsMacOS_m1085619612 ();
 extern "C" void Assembly_Equals_m3853928877 ();
 extern "C" void Assembly_IsDefined_m1652198537 ();
 extern "C" void Assembly_get_IsFullyTrusted_m2409825282 ();
@@ -824,7 +1257,10 @@ extern "C" void ResourceEnumerator_MoveNext_m422576100 ();
 extern "C" void ResourceReader_CompareStringEqualsName_m968719874 ();
 extern "C" void ConfiguredTaskAwaiter_get_IsCompleted_m2492964255_AdjustorThunk ();
 extern "C" void InternalsVisibleToAttribute_get_AllInternalsVisible_m2449780847 ();
+extern "C" void TaskAwaiter_get_IsCompleted_m1762140293_AdjustorThunk ();
+extern "C" void YieldAwaiter_get_IsCompleted_m1640375229_AdjustorThunk ();
 extern "C" void DllImportAttribute_IsDefined_m3388999301 ();
+extern "C" void GCHandle_CheckCurrentDomain_m1705520864 ();
 extern "C" void GCHandle_Equals_m146069735_AdjustorThunk ();
 extern "C" void GCHandle_get_IsAllocated_m1058226959_AdjustorThunk ();
 extern "C" void GCHandle_op_Equality_m1052799060 ();
@@ -985,25 +1421,43 @@ extern "C" void RuntimeTypeHandle_type_is_assignable_from_m932157907 ();
 extern "C" void SByte_Equals_m865896384_AdjustorThunk ();
 extern "C" void SByte_Equals_m3032561558_AdjustorThunk ();
 extern "C" void SByte_System_IConvertible_ToBoolean_m3272910093_AdjustorThunk ();
+extern "C" void U3Cget_ClaimsU3Ed__51_MoveNext_m1673051519 ();
+extern "C" void ClaimsIdentity_IsCircular_m2939970038 ();
 extern "C" void CryptoConfig_get_AllowOnlyFipsAlgorithms_m1608951570 ();
+extern "C" void HopToThreadPoolAwaitable_get_IsCompleted_m727891479_AdjustorThunk ();
+extern "C" void CryptoStream_get_CanRead_m1208356619 ();
+extern "C" void CryptoStream_get_CanSeek_m2794446924 ();
+extern "C" void CryptoStream_get_CanWrite_m1675837824 ();
+extern "C" void CryptoStream_get_HasFlushedFinalBlock_m409177373 ();
 extern "C" void DES_IsLegalKeySize_m1207206142 ();
 extern "C" void DES_IsSemiWeakKey_m2495136119 ();
 extern "C" void DES_IsWeakKey_m1784515364 ();
+extern "C" void DSACryptoServiceProvider_get_PublicOnly_m3933928860 ();
+extern "C" void HashAlgorithm_get_CanTransformMultipleBlocks_m3844268016 ();
 extern "C" void KeySizes_IsLegal_m2429848889 ();
 extern "C" void KeySizes_IsLegalKeySize_m2571462035 ();
 extern "C" void OidCollection_get_IsSynchronized_m2968093434 ();
 extern "C" void OidEnumerator_MoveNext_m3138911739 ();
 extern "C" void RNGCryptoServiceProvider_RngOpen_m792795472 ();
+extern "C" void RSACryptoServiceProvider_get_PublicOnly_m4039982639 ();
 extern "C" void RSACryptoServiceProvider_get_UseMachineKeyStore_m1499548250 ();
+extern "C" void RijndaelManagedTransform_get_CanTransformMultipleBlocks_m3163420465 ();
 extern "C" void SymmetricAlgorithm_ValidKeySize_m145782026 ();
+extern "C" void TailStream_get_CanRead_m1466881677 ();
+extern "C" void TailStream_get_CanSeek_m4245554096 ();
+extern "C" void TailStream_get_CanWrite_m2800050779 ();
 extern "C" void TripleDES_EqualBytes_m1146289270 ();
 extern "C" void TripleDES_IsLegalKeySize_m3572438605 ();
 extern "C" void TripleDES_IsWeakKey_m2147489852 ();
 extern "C" void Utils_HasAlgorithm_m3547110133 ();
+extern "C" void Utils__ProduceLegacyHmacValues_m1822029763 ();
 extern "C" void X509BasicConstraintsExtension_get_CertificateAuthority_m3360658367 ();
 extern "C" void X509BasicConstraintsExtension_get_HasPathLengthConstraint_m2072837820 ();
+extern "C" void X509Certificate2ImplMono_Equals_m1184495489 ();
+extern "C" void X509Certificate2ImplMono_get_IsValid_m3155190174 ();
 extern "C" void X509Certificate_Equals_m3784196370 ();
 extern "C" void X509Certificate_Equals_m861530042 ();
+extern "C" void X509Certificate_get_IsValid_m3407984170 ();
 extern "C" void X509CertificateEnumerator_MoveNext_m1557350766 ();
 extern "C" void X509CertificateEnumerator_System_Collections_IEnumerator_MoveNext_m1392570645 ();
 extern "C" void X509CertificateImpl_Equals_m3406216243 ();
@@ -1013,10 +1467,15 @@ extern "C" void X509ChainElementCollection_get_IsSynchronized_m3980338507 ();
 extern "C" void X509ChainElementEnumerator_MoveNext_m3940594045 ();
 extern "C" void X509ChainImplMono_get_IsValid_m1765760849 ();
 extern "C" void X509Extension_get_Critical_m1315280133 ();
+extern "C" void X509ExtensionCollection_get_IsSynchronized_m2607599544 ();
+extern "C" void X509ExtensionEnumerator_MoveNext_m3077762850 ();
 extern "C" void X509Helper2_IsValid_m1509861197 ();
 extern "C" void X509Helper_IsValid_m3465452120 ();
 extern "C" void EvidenceEnumerator_MoveNext_m183460296 ();
 extern "C" void Evidence_get_IsSynchronized_m3446368195 ();
+extern "C" void WindowsImpersonationContext_CloseToken_m2482102689 ();
+extern "C" void WindowsImpersonationContext_RevertToSelf_m319817949 ();
+extern "C" void WindowsImpersonationContext_SetCurrentToken_m4125395107 ();
 extern "C" void SecurityElement_IsValidAttributeName_m713904709 ();
 extern "C" void SecurityElement_IsValidAttributeValue_m948345692 ();
 extern "C" void SecurityElement_IsValidTag_m1803475254 ();
@@ -1090,10 +1549,12 @@ extern "C" void InternalEncoderBestFitFallback_Equals_m1950255436 ();
 extern "C" void InternalEncoderBestFitFallbackBuffer_Fallback_m3398085814 ();
 extern "C" void InternalEncoderBestFitFallbackBuffer_Fallback_m3170134455 ();
 extern "C" void InternalEncoderBestFitFallbackBuffer_MovePrevious_m979513946 ();
+extern "C" void Group_get_Success_m3823591889 ();
 extern "C" void Match_IsMatched_m3190883795 ();
 extern "C" void Regex_IsMatch_m4067478295 ();
 extern "C" void Regex_IsMatch_m2113092601 ();
 extern "C" void Regex_IsMatch_m3266004395 ();
+extern "C" void Regex_IsMatch_m3454586611 ();
 extern "C" void Regex_IsMatch_m4013319851 ();
 extern "C" void Regex_UseOptionInvariant_m1916476998 ();
 extern "C" void Regex_UseOptionR_m2272621080 ();
@@ -1157,6 +1618,10 @@ extern "C" void UTF8Encoding_FallbackInvalidByteSequence_m2092221835 ();
 extern "C" void UTF8Encoding_InRange_m3087059993 ();
 extern "C" void Decoder_get_HasState_m2850638406 ();
 extern "C" void UnicodeEncoding_Equals_m701742893 ();
+extern "C" void AtomicBoolean_Equals_m1403066784 ();
+extern "C" void AtomicBoolean_Equals_m3534265207 ();
+extern "C" void AtomicBoolean_Exchange_m2985221762 ();
+extern "C" void AtomicBoolean_TryRelaxedSet_m184349447 ();
 extern "C" void CancellationToken_Equals_m3959452874_AdjustorThunk ();
 extern "C" void CancellationToken_Equals_m549519537_AdjustorThunk ();
 extern "C" void CancellationToken_get_CanBeCanceled_m145616282_AdjustorThunk ();
@@ -1245,6 +1710,7 @@ extern "C" void TaskScheduler_TryDequeue_m842986484 ();
 extern "C" void TaskScheduler_TryRunInline_m2522892690 ();
 extern "C" void TaskScheduler_get_RequiresAtomicStartTransition_m3501284041 ();
 extern "C" void TaskWrapperAsyncResult_System_IAsyncResult_get_CompletedSynchronously_m1461264238 ();
+extern "C" void TaskWrapperAsyncResult_System_IAsyncResult_get_IsCompleted_m735336054 ();
 extern "C" void ThreadPoolTaskScheduler_TryDequeue_m2832409362 ();
 extern "C" void ThreadPoolTaskScheduler_TryExecuteTaskInline_m1304130524 ();
 extern "C" void ThreadPoolTaskScheduler_get_RequiresAtomicStartTransition_m1675718070 ();
@@ -1255,6 +1721,7 @@ extern "C" void Thread_get_IsThreadPoolThread_m2051348829 ();
 extern "C" void Thread_get_IsThreadPoolThreadInternal_m2068280727 ();
 extern "C" void ThreadPool_IsThreadPoolHosted_m3121120083 ();
 extern "C" void ThreadPool_NotifyWorkItemComplete_m1541773342 ();
+extern "C" void ThreadPool_QueueUserWorkItem_m3658723935 ();
 extern "C" void ThreadPool_QueueUserWorkItem_m1526970260 ();
 extern "C" void ThreadPool_QueueUserWorkItemHelper_m730528440 ();
 extern "C" void ThreadPool_RequestWorkerThread_m398159993 ();
@@ -1299,6 +1766,8 @@ extern "C" void TimeZoneInfo_Equals_m2208015879 ();
 extern "C" void TimeZoneInfo_GetTimeZoneInformationForYear_m435617880 ();
 extern "C" void TimeZoneInfo_HasSameRules_m2408412741 ();
 extern "C" void TimeZoneInfo_IsAmbiguousTime_m2195454932 ();
+extern "C" void TimeZoneInfo_IsDaylightSavingTime_m3070773214 ();
+extern "C" void TimeZoneInfo_IsDaylightSavingTime_m787285489 ();
 extern "C" void TimeZoneInfo_IsInDST_m117760621 ();
 extern "C" void TimeZoneInfo_IsInDSTForYear_m1097689508 ();
 extern "C" void TimeZoneInfo_IsInvalidTime_m1172729139 ();
@@ -1361,6 +1830,7 @@ extern "C" void UInt16_System_IConvertible_ToBoolean_m3911119012_AdjustorThunk (
 extern "C" void UInt32_Equals_m351935437_AdjustorThunk ();
 extern "C" void UInt32_Equals_m4250336581_AdjustorThunk ();
 extern "C" void UInt32_System_IConvertible_ToBoolean_m1763673183_AdjustorThunk ();
+extern "C" void UInt32_TryParse_m535404612 ();
 extern "C" void UInt64_Equals_m1879425698_AdjustorThunk ();
 extern "C" void UInt64_Equals_m367573732_AdjustorThunk ();
 extern "C" void UInt64_System_IConvertible_ToBoolean_m3071416000_AdjustorThunk ();
@@ -1373,6 +1843,7 @@ extern "C" void Uri_CheckForConfigLoad_m4170525870 ();
 extern "C" void Uri_CheckForEscapedUnreserved_m756230262 ();
 extern "C" void Uri_CheckForUnicode_m2335309784 ();
 extern "C" void Uri_CheckKnownSchemes_m2932430974 ();
+extern "C" void Uri_CheckSchemeName_m108657675 ();
 extern "C" void Uri_Equals_m3263316701 ();
 extern "C" void Uri_InFact_m4048657574 ();
 extern "C" void Uri_IriParsingStatic_m3844828870 ();
@@ -1389,9 +1860,13 @@ extern "C" void Uri_StaticIsFile_m2673671656 ();
 extern "C" void Uri_StaticNotAny_m86452347 ();
 extern "C" void Uri_TryCreate_m385949523 ();
 extern "C" void Uri_get_AllowIdn_m3997129859 ();
+extern "C" void Uri_get_HasAuthority_m495367953 ();
 extern "C" void Uri_get_IsAbsoluteUri_m3666899587 ();
+extern "C" void Uri_get_IsDefaultPort_m3984463462 ();
 extern "C" void Uri_get_IsDosPath_m2076424428 ();
+extern "C" void Uri_get_IsFile_m2450018824 ();
 extern "C" void Uri_get_IsImplicitFile_m560176868 ();
+extern "C" void Uri_get_IsLoopback_m2492530169 ();
 extern "C" void Uri_get_IsNotAbsoluteUri_m768752211 ();
 extern "C" void Uri_get_IsUnc_m2977972311 ();
 extern "C" void Uri_get_IsUncOrDosPath_m2311987342 ();
@@ -1399,7 +1874,9 @@ extern "C" void Uri_get_IsUncPath_m4045766759 ();
 extern "C" void Uri_get_OriginalStringSwitched_m1166999894 ();
 extern "C" void Uri_get_UserDrivenParsing_m2668439512 ();
 extern "C" void Uri_get_UserEscaped_m3947486145 ();
+extern "C" void Uri_op_Equality_m685520154 ();
 extern "C" void Uri_op_Inequality_m839253362 ();
+extern "C" void UriBuilder_Equals_m3500940484 ();
 extern "C" void UriHelper_Is3986Unreserved_m2430471531 ();
 extern "C" void UriHelper_IsNotSafeForUnescape_m1772803964 ();
 extern "C" void UriHelper_IsReservedUnreservedOrHash_m1469489854 ();
@@ -1420,6 +1897,7 @@ extern "C" void Version_Equals_m3073813696 ();
 extern "C" void Version_Equals_m1564427710 ();
 extern "C" void Version_op_Equality_m3804852517 ();
 extern "C" void Version_op_Inequality_m1696193441 ();
+extern "C" void Version_op_LessThan_m3745610070 ();
 extern "C" void WeakReference_get_TrackResurrection_m942701017 ();
 extern "C" void WindowsConsoleDriver_GetConsoleScreenBufferInfo_m3609341087 ();
 extern "C" void WindowsConsoleDriver_IsModifierKey_m1974886538 ();
@@ -1603,6 +2081,8 @@ extern "C" void AudioSource_get_spatialize_m3609701298 ();
 extern "C" void AudioSource_get_spatializeInternal_m2117549793 ();
 extern "C" void Behaviour_get_enabled_m753527255 ();
 extern "C" void Behaviour_get_isActiveAndEnabled_m3143666263 ();
+extern "C" void BoneWeight_Equals_m2285825644_AdjustorThunk ();
+extern "C" void BoneWeight_Equals_m1462608544_AdjustorThunk ();
 extern "C" void Bounds_Contains_m1110518741_AdjustorThunk ();
 extern "C" void Bounds_Contains_Injected_m2753243697 ();
 extern "C" void Bounds_Equals_m3920299735_AdjustorThunk ();
@@ -1626,6 +2106,7 @@ extern "C" void Collider_get_enabled_m3096904824 ();
 extern "C" void Color_Equals_m3887740140_AdjustorThunk ();
 extern "C" void Color_Equals_m4060997379_AdjustorThunk ();
 extern "C" void Color_op_Equality_m1112359053 ();
+extern "C" void Color_op_Inequality_m3353772181 ();
 extern "C" void Cubemap_Internal_CreateImpl_m2853780628 ();
 extern "C" void Cubemap_IsReadable_m3200980316 ();
 extern "C" void CubemapArray_Internal_CreateImpl_m206145838 ();
@@ -1792,6 +2273,8 @@ extern "C" void GameObject_get_activeInHierarchy_m2006396688 ();
 extern "C" void GameObject_get_activeSelf_m1767405923 ();
 extern "C" void GeometryUtility_TestPlanesAABB_m2149367188 ();
 extern "C" void GeometryUtility_TestPlanesAABB_Injected_m3583300410 ();
+extern "C" void ImageConversion_LoadImage_m2182108104 ();
+extern "C" void ImageConversion_LoadImage_m601733642 ();
 extern "C" void Input_GetButton_m2064261504 ();
 extern "C" void Input_GetButtonDown_m3074252807 ();
 extern "C" void Input_GetButtonUp_m4007681079 ();
@@ -1821,11 +2304,14 @@ extern "C" void Material_SetPass_m686253719 ();
 extern "C" void Mathf_Approximately_m245805902 ();
 extern "C" void Matrix4x4_Equals_m3210071278_AdjustorThunk ();
 extern "C" void Matrix4x4_Equals_m4110661316_AdjustorThunk ();
+extern "C" void Matrix4x4_op_Equality_m928435754 ();
+extern "C" void Matrix4x4_op_Inequality_m334399549 ();
 extern "C" void Mesh_CheckCanAccessSubmesh_m1278105798 ();
 extern "C" void Mesh_CheckCanAccessSubmeshIndices_m824249680 ();
 extern "C" void Mesh_CheckCanAccessSubmeshTriangles_m3864611599 ();
 extern "C" void Mesh_HasChannel_m4256962133 ();
 extern "C" void Mesh_get_canAccess_m2239225054 ();
+extern "C" void Mesh_get_isReadable_m2894220158 ();
 extern "C" void MonoBehaviour_Internal_IsInvokingAll_m2820042090 ();
 extern "C" void MonoBehaviour_IsInvoking_m3949123101 ();
 extern "C" void MonoBehaviour_IsInvoking_m1028838749 ();
@@ -1841,6 +2327,14 @@ extern "C" void PlayerConnection_get_isConnected_m911966057 ();
 extern "C" void U3CAddAndCreateU3Ec__AnonStorey1_U3CU3Em__0_m2847856411 ();
 extern "C" void U3CInvokeMessageIdSubscribersU3Ec__AnonStorey0_U3CU3Em__0_m444206473 ();
 extern "C" void U3CUnregisterManagedCallbackU3Ec__AnonStorey2_U3CU3Em__0_m4104626642 ();
+extern "C" void UnityWebRequest_IsExecuting_m2613121384 ();
+extern "C" void UnityWebRequest_get_disposeCertificateHandlerOnDispose_m4051074453 ();
+extern "C" void UnityWebRequest_get_disposeDownloadHandlerOnDispose_m3413606992 ();
+extern "C" void UnityWebRequest_get_disposeUploadHandlerOnDispose_m2375741633 ();
+extern "C" void UnityWebRequest_get_isDone_m1752128881 ();
+extern "C" void UnityWebRequest_get_isHttpError_m797082501 ();
+extern "C" void UnityWebRequest_get_isModifiable_m4181352937 ();
+extern "C" void UnityWebRequest_get_isNetworkError_m1231611882 ();
 extern "C" void Object_CompareBaseObjects_m2405226032 ();
 extern "C" void Object_Equals_m4262027856 ();
 extern "C" void Object_IsNativeObjectAlive_m3095908075 ();
@@ -1851,6 +2345,8 @@ extern "C" void Physics2D_get_queriesHitTriggers_m1249674012 ();
 extern "C" void Physics_Internal_Raycast_m1009025456 ();
 extern "C" void Physics_Internal_RaycastTest_m1784372019 ();
 extern "C" void Physics_Internal_Raycast_Injected_m1408743426 ();
+extern "C" void Physics_Linecast_m916494249 ();
+extern "C" void Physics_Linecast_m1431720142 ();
 extern "C" void Physics_Query_RaycastTest_m3482016940 ();
 extern "C" void Physics_Query_RaycastTest_Injected_m2116672205 ();
 extern "C" void Physics_Raycast_m630863594 ();
@@ -1910,6 +2406,8 @@ extern "C" void RenderTexture_get_autoGenerateMips_m4011835635 ();
 extern "C" void RenderTexture_get_sRGB_m300498885 ();
 extern "C" void RenderTexture_get_useDynamicScale_m147630934 ();
 extern "C" void RenderTexture_get_useMipMap_m2722111545 ();
+extern "C" void Renderer_get_enabled_m3482452518 ();
+extern "C" void Renderer_get_isPartOfStaticBatch_m384187304 ();
 extern "C" void GraphicsSettings_HasShaderDefine_m4021533475 ();
 extern "C" void GraphicsSettings_HasShaderDefine_m2675917817 ();
 extern "C" void GraphicsSettings_get_useScriptableRenderPipelineBatching_m3642194983 ();
@@ -1950,6 +2448,7 @@ extern "C" void TextGenerator_Populate_Internal_m235458295 ();
 extern "C" void TextGenerator_Populate_Internal_Injected_m1708852755 ();
 extern "C" void Texture2D_Internal_CreateImpl_m110138258 ();
 extern "C" void Texture2D_IsReadable_m47074913 ();
+extern "C" void Texture2D_LoadRawTextureDataImplArray_m2906611301 ();
 extern "C" void Texture2DArray_Internal_CreateImpl_m1122945648 ();
 extern "C" void Texture3D_Internal_CreateImpl_m1882516456 ();
 extern "C" void Texture3D_IsReadable_m860573201 ();
@@ -2083,9 +2582,54 @@ extern "C" void Vector4_Equals_m1779210055_AdjustorThunk ();
 extern "C" void Vector4_Equals_m342438869_AdjustorThunk ();
 extern "C" void Vector4_op_Equality_m2403588337 ();
 extern "C" void Vector4_op_Inequality_m3625339929 ();
+extern "C" void WWW_WaitUntilDoneIfPossible_m2855479680 ();
+extern "C" void WWW_get_isDone_m3426350689 ();
+extern "C" void WWW_get_keepWaiting_m1438015190 ();
+extern "C" void WWWTranscoder_ByteSubArrayEquals_m2163464440 ();
 extern "C" void WaitForSecondsRealtime_get_keepWaiting_m846832224 ();
 extern "C" void XRSettings_get_showDeviceView_m3654891897 ();
 extern "C" void XRSettings_get_useOcclusionMesh_m2318340094 ();
+extern "C" void LODGenerator_U3CCombineSkinnedMeshesU3Em__4_m4243639076 ();
+extern "C" void LODGenerator_U3CCombineSkinnedMeshesU3Em__5_m758757843 ();
+extern "C" void LODGenerator_U3CGenerateLODsU3Em__0_m1355785022 ();
+extern "C" void LODGenerator_U3CGenerateLODsU3Em__2_m72371580 ();
+extern "C" void LODGenerator_DeleteEmptyDirectory_m2951585224 ();
+extern "C" void LODGenerator_DestroyLODs_m145996813 ();
+extern "C" void LODGenerator_DestroyLODs_m742119948 ();
+extern "C" void LODGeneratorHelper_get_AnimateCrossFading_m951132736 ();
+extern "C" void LODGeneratorHelper_get_AutoCollectRenderers_m1051647287 ();
+extern "C" void LODGeneratorHelper_get_IsGenerated_m1738377919 ();
+extern "C" void LODLevel_get_CombineMeshes_m3523987743_AdjustorThunk ();
+extern "C" void LODLevel_get_CombineSubMeshes_m58267187_AdjustorThunk ();
+extern "C" void LODLevel_get_ReceiveShadows_m3380875928_AdjustorThunk ();
+extern "C" void LODLevel_get_SkinnedMotionVectors_m2242839237_AdjustorThunk ();
+extern "C" void MeshSimplifier_AreUVsTheSame_m2559183407 ();
+extern "C" void MeshSimplifier_Flipped_m3693443433 ();
+extern "C" void MeshSimplifier_IsTriangleInAnyToleranceSphere_m2558027648 ();
+extern "C" void MeshSimplifier_TriangleContainsVertex_m3455999980 ();
+extern "C" void MeshSimplifier_TriangleLiesInSphere_m2159414223 ();
+extern "C" void MeshSimplifier_ValidateContractionThenUpdateTrisNormals_m629399528 ();
+extern "C" void MeshSimplifier_VertexLiesInSphere_m2415314065 ();
+extern "C" void MeshSimplifier_get_EnableSmartLink_m1635415475 ();
+extern "C" void MeshSimplifier_get_PreserveBorderEdges_m48362644 ();
+extern "C" void MeshSimplifier_get_PreserveBorders_m3918025841 ();
+extern "C" void MeshSimplifier_get_PreserveFoldovers_m390097794 ();
+extern "C" void MeshSimplifier_get_PreserveSeams_m435095742 ();
+extern "C" void MeshSimplifier_get_PreserveUVFoldoverEdges_m3566074483 ();
+extern "C" void MeshSimplifier_get_PreserveUVSeamEdges_m3133705872 ();
+extern "C" void MeshSimplifier_get_RecalculateNormals_m4164628260 ();
+extern "C" void MeshSimplifier_get_RegardCurvature_m573731396 ();
+extern "C" void MeshSimplifier_get_UseSortedEdgeMethod_m3399918166 ();
+extern "C" void MeshSimplifier_get_Verbose_m1801216846 ();
+extern "C" void SymmetricMatrix_ShapeIsGood_m2659419245 ();
+extern "C" void Triangle_Equals_m4208021663 ();
+extern "C" void Triangle_Equals_m2471061865 ();
+extern "C" void Vector3d_Equals_m3399303555_AdjustorThunk ();
+extern "C" void Vector3d_Equals_m1385478632_AdjustorThunk ();
+extern "C" void Vector3d_op_Equality_m3419269755 ();
+extern "C" void Vector3d_op_Inequality_m1301791954 ();
+extern "C" void Vertex_Equals_m3519319989 ();
+extern "C" void Vertex_Equals_m3382010627 ();
 extern "C" void Antialiasing_CheckResources_m2921956808 ();
 extern "C" void Bloom_CheckResources_m436226596 ();
 extern "C" void BloomAndFlares_CheckResources_m3889391286 ();
@@ -2101,8 +2645,8 @@ extern "C" void DepthOfField_CheckResources_m2653141750 ();
 extern "C" void DepthOfFieldDeprecated_CheckResources_m648304224 ();
 extern "C" void EdgeDetection_CheckResources_m3462534718 ();
 extern "C" void Fisheye_CheckResources_m3914293166 ();
-extern "C" void GlobalFog_CheckResources_m3103035368 ();
 extern "C" void GlobalFog_CheckResources_m555966212 ();
+extern "C" void GlobalFog_CheckResources_m3103035368 ();
 extern "C" void NoiseAndGrain_CheckResources_m375728997 ();
 extern "C" void PostEffectsBase_CheckResources_m1990149593 ();
 extern "C" void PostEffectsBase_CheckResources_m1900499029 ();
@@ -2114,8 +2658,8 @@ extern "C" void PostEffectsBase_CheckSupport_m3942922708 ();
 extern "C" void PostEffectsBase_CheckSupport_m2449300828 ();
 extern "C" void PostEffectsBase_CheckSupport_m2503364352 ();
 extern "C" void PostEffectsBase_CheckSupport_m533724629 ();
-extern "C" void PostEffectsBase_Dx11Support_m3041131589 ();
 extern "C" void PostEffectsBase_Dx11Support_m1740562235 ();
+extern "C" void PostEffectsBase_Dx11Support_m3041131589 ();
 extern "C" void Quads_HasMeshes_m2577740265 ();
 extern "C" void ScreenOverlay_CheckResources_m1323683532 ();
 extern "C" void ScreenSpaceAmbientObscurance_CheckResources_m3289180091 ();
@@ -2133,8 +2677,8 @@ extern "C" void SimpleCollator_Category_m119590608 ();
 extern "C" void SimpleCollator_Level1_m634954506 ();
 extern "C" void SimpleCollator_Level2_m2830638875 ();
 extern "C" void SimpleCollator_ToDashTypeValue_m6184468 ();
-extern "C" void ASN1_get_Tag_m2789147236 ();
 extern "C" void ASN1_get_Tag_m1032367219 ();
+extern "C" void ASN1_get_Tag_m2789147236 ();
 extern "C" void Boolean_System_IConvertible_ToByte_m3917074947_AdjustorThunk ();
 extern "C" void Byte_Parse_m3891448280 ();
 extern "C" void Byte_Parse_m3200377149 ();
@@ -2167,6 +2711,7 @@ extern "C" void BinaryReader_ReadByte_m2842288049 ();
 extern "C" void Int16_System_IConvertible_ToByte_m3161982419_AdjustorThunk ();
 extern "C" void Int32_System_IConvertible_ToByte_m3832391412_AdjustorThunk ();
 extern "C" void Int64_System_IConvertible_ToByte_m375085029_AdjustorThunk ();
+extern "C" void SocketAddress_get_Item_m4142520260 ();
 extern "C" void __BinaryParser_ReadByte_m3052815466 ();
 extern "C" void SByte_System_IConvertible_ToByte_m2268214252_AdjustorThunk ();
 extern "C" void X509SubjectKeyIdentifierExtension_FromHexChar_m1249358531 ();
@@ -2180,54 +2725,108 @@ extern "C" void UInt32_System_IConvertible_ToByte_m4072781199_AdjustorThunk ();
 extern "C" void UInt64_System_IConvertible_ToByte_m1501504925_AdjustorThunk ();
 extern "C" void TMP_BasicXmlTagStack_Add_m2157809038_AdjustorThunk ();
 extern "C" void TMP_BasicXmlTagStack_Remove_m3387082636_AdjustorThunk ();
+extern "C" void WWWTranscoder_Hex2Byte_m4102152163 ();
 extern "C" void UnmanagedMemoryStream_get_PositionPointer_m2743240969 ();
 extern "C" void NumberBuffer_PackForNative_m3839420667_AdjustorThunk ();
+extern "C" void SystemServices_ReadAllBytes_m778879884 ();
+extern "C" void BigInteger_GetBytes_m1259701831 ();
 extern "C" void BigInteger_GetBytes_m997192583 ();
 extern "C" void RuntimeMarshal_DecodeBlobArray_m2832342368 ();
-extern "C" void ASN1_GetBytes_m1968380955 ();
 extern "C" void ASN1_GetBytes_m3305539297 ();
+extern "C" void ASN1_GetBytes_m1968380955 ();
 extern "C" void ASN1_get_Value_m1857007406 ();
 extern "C" void ASN1_get_Value_m63296490 ();
 extern "C" void BitConverterLE_GetBytes_m3350143782 ();
 extern "C" void BitConverterLE_GetBytes_m3268825786 ();
 extern "C" void BitConverterLE_GetBytes_m4130646282 ();
+extern "C" void BitConverterLE_GetBytes_m2105698692 ();
 extern "C" void BitConverterLE_GetBytes_m2590852453 ();
-extern "C" void BitConverterLE_GetUIntBytes_m795219058 ();
 extern "C" void BitConverterLE_GetUIntBytes_m949779219 ();
+extern "C" void BitConverterLE_GetUIntBytes_m795219058 ();
 extern "C" void BitConverterLE_GetULongBytes_m1393773100 ();
+extern "C" void BitConverterLE_GetULongBytes_m2441696337 ();
 extern "C" void ARC4Managed_TransformFinalBlock_m4072170043 ();
 extern "C" void ARC4Managed_get_Key_m1506513417 ();
 extern "C" void DSAManaged_NormalizeArray_m3285505169 ();
 extern "C" void KeyBuilder_IV_m2230195376 ();
 extern "C" void KeyBuilder_Key_m876696100 ();
+extern "C" void MD2Managed_HashFinal_m808964912 ();
 extern "C" void MD2Managed_HashFinal_m32914825 ();
+extern "C" void MD2Managed_Padding_m1334210368 ();
 extern "C" void MD2Managed_Padding_m455497344 ();
+extern "C" void MD4Managed_HashFinal_m3850238392 ();
 extern "C" void MD4Managed_HashFinal_m4263276107 ();
+extern "C" void MD4Managed_Padding_m3091724296 ();
 extern "C" void MD4Managed_Padding_m814582367 ();
 extern "C" void EncryptedPrivateKeyInfo_get_EncryptedData_m1695265614 ();
+extern "C" void EncryptedPrivateKeyInfo_get_EncryptedData_m491452551 ();
 extern "C" void EncryptedPrivateKeyInfo_get_Salt_m3453455261 ();
+extern "C" void EncryptedPrivateKeyInfo_get_Salt_m1261804721 ();
+extern "C" void PrivateKeyInfo_Encode_m3039933266 ();
+extern "C" void PrivateKeyInfo_Encode_m1599810751 ();
+extern "C" void PrivateKeyInfo_Encode_m1621437631 ();
+extern "C" void PrivateKeyInfo_Normalize_m2274647848 ();
 extern "C" void PrivateKeyInfo_Normalize_m1855800471 ();
 extern "C" void PrivateKeyInfo_RemoveLeadingZero_m3921889925 ();
+extern "C" void PrivateKeyInfo_RemoveLeadingZero_m3592760008 ();
+extern "C" void PrivateKeyInfo_get_PrivateKey_m3647771102 ();
 extern "C" void PrivateKeyInfo_get_PrivateKey_m2768243057 ();
 extern "C" void RC4_get_IV_m2752509457 ();
+extern "C" void RSAManaged_GetPaddedValue_m2182626630 ();
 extern "C" void RSAManaged_GetPaddedValue_m2104792084 ();
 extern "C" void SymmetricTransform_FinalDecrypt_m1677319445 ();
 extern "C" void SymmetricTransform_FinalEncrypt_m69518647 ();
 extern "C" void SymmetricTransform_TransformFinalBlock_m4059448527 ();
+extern "C" void EncryptedData_get_EncryptedContent_m3205649670 ();
 extern "C" void EncryptedData_get_EncryptedContent_m4211024111 ();
+extern "C" void ChallengeResponse2_Compute_LM_m3838524908 ();
+extern "C" void ChallengeResponse2_Compute_NTLM_m2465685926 ();
+extern "C" void ChallengeResponse2_Compute_NTLM_Password_m3074406407 ();
+extern "C" void ChallengeResponse2_Compute_NTLMv2_m1714203447 ();
+extern "C" void ChallengeResponse2_GetResponse_m4251638688 ();
+extern "C" void ChallengeResponse2_PasswordToKey_m1050782802 ();
+extern "C" void ChallengeResponse2_PrepareDESKey_m2748989848 ();
+extern "C" void ChallengeResponse_GetResponse_m2224393208 ();
+extern "C" void ChallengeResponse_PasswordToKey_m2955876407 ();
+extern "C" void ChallengeResponse_PrepareDESKey_m1036478089 ();
+extern "C" void ChallengeResponse_get_LM_m2398177464 ();
+extern "C" void ChallengeResponse_get_NT_m2130397345 ();
+extern "C" void MessageBase_PrepareMessage_m764356068 ();
+extern "C" void Type1Message_GetBytes_m576198455 ();
+extern "C" void Type2Message_GetBytes_m556000764 ();
+extern "C" void Type2Message_get_Nonce_m1761614227 ();
+extern "C" void Type2Message_get_TargetInfo_m1674986710 ();
+extern "C" void Type3Message_EncodeString_m2531698540 ();
+extern "C" void Type3Message_GetBytes_m558745021 ();
+extern "C" void DeriveBytes_Derive_m1232352666 ();
 extern "C" void DeriveBytes_Derive_m408582823 ();
 extern "C" void DeriveBytes_DeriveIV_m3639813821 ();
+extern "C" void DeriveBytes_DeriveIV_m973925711 ();
+extern "C" void DeriveBytes_DeriveKey_m2933043667 ();
 extern "C" void DeriveBytes_DeriveKey_m2238010581 ();
+extern "C" void DeriveBytes_DeriveMAC_m2121691743 ();
 extern "C" void DeriveBytes_DeriveMAC_m694919248 ();
+extern "C" void PKCS12_Decrypt_m3441995779 ();
 extern "C" void PKCS12_Decrypt_m3310864946 ();
 extern "C" void PKCS12_Decrypt_m2241300865 ();
+extern "C" void PKCS12_Decrypt_m1280162536 ();
 extern "C" void PKCS12_Encrypt_m2617413749 ();
+extern "C" void PKCS12_Encrypt_m3618991685 ();
 extern "C" void PKCS12_GetBytes_m3933153476 ();
+extern "C" void PKCS12_GetBytes_m415958948 ();
 extern "C" void PKCS12_MAC_m3401183837 ();
+extern "C" void PKCS12_MAC_m3355614022 ();
 extern "C" void X509Certificate_GetUnsignedBigInteger_m1025066663 ();
+extern "C" void X509Certificate_GetUnsignedBigInteger_m877462855 ();
 extern "C" void X509Certificate_PEM_m1177570576 ();
+extern "C" void X509Certificate_PEM_m2020851166 ();
+extern "C" void X509Certificate_get_KeyAlgorithmParameters_m3698130868 ();
 extern "C" void X509Certificate_get_KeyAlgorithmParameters_m681676289 ();
+extern "C" void X509Certificate_get_PublicKey_m950835056 ();
 extern "C" void X509Certificate_get_RawData_m2387471414 ();
+extern "C" void X509Certificate_get_RawData_m2626675988 ();
+extern "C" void X509Certificate_get_SerialNumber_m1918700946 ();
+extern "C" void X509Certificate_get_SerialNumber_m3924188880 ();
 extern "C" void AppDomain_GetMarshalledDomainObjRef_m388766570 ();
 extern "C" void BitConverter_GetBytes_m658425501 ();
 extern "C" void BitConverter_GetBytes_m1040762521 ();
@@ -2235,12 +2834,19 @@ extern "C" void Convert_FromBase64CharPtr_m2382214254 ();
 extern "C" void Convert_FromBase64String_m3685135396 ();
 extern "C" void SortKey_get_KeyData_m3446923386 ();
 extern "C" void BinaryReader_ReadBytes_m2025629328 ();
+extern "C" void File_ReadAllBytes_m1435775076 ();
 extern "C" void MemoryStream_GetBuffer_m1167568916 ();
 extern "C" void MemoryStream_InternalGetBuffer_m4030564859 ();
 extern "C" void MemoryStream_ToArray_m3911744835 ();
+extern "C" void StreamReader_get_ByteBuffer_Prop_m977324960 ();
 extern "C" void KnownTerminals_get_ansi_m1157548325 ();
 extern "C" void KnownTerminals_get_linux_m19531034 ();
 extern "C" void KnownTerminals_get_xterm_m3599867638 ();
+extern "C" void BasicClient_GetBytes_m915311138 ();
+extern "C" void HttpWebRequest_GetRequestHeaders_m62175841 ();
+extern "C" void IPAddress_GetAddressBytes_m3103618290 ();
+extern "C" void WebAsyncResult_get_Buffer_m1662146309 ();
+extern "C" void WebConnectionStream_get_WriteBuffer_m815304309 ();
 extern "C" void AssemblyName_ComputePublicKeyToken_m824893834 ();
 extern "C" void AssemblyName_GetPublicKeyToken_m741436902 ();
 extern "C" void AssemblyName_InternalGetPublicKeyToken_m3407918444 ();
@@ -2248,19 +2854,27 @@ extern "C" void ObjRef_SerializeType_m1157251518 ();
 extern "C" void RemotingServices_SerializeCallData_m1823178986 ();
 extern "C" void RemotingServices_SerializeExceptionData_m198594692 ();
 extern "C" void __BinaryParser_ReadBytes_m1767534843 ();
+extern "C" void AesCryptoServiceProvider_get_IV_m2323542127 ();
+extern "C" void AesCryptoServiceProvider_get_Key_m249672229 ();
+extern "C" void AesManaged_get_IV_m118095902 ();
+extern "C" void AesManaged_get_Key_m538801386 ();
 extern "C" void AsnEncodedData_get_RawData_m1706087592 ();
 extern "C" void CryptoConfig_EncodeLongNumber_m4127306320 ();
 extern "C" void CryptoConfig_EncodeOID_m2635914623 ();
 extern "C" void DES_get_Key_m3419790416 ();
 extern "C" void DESTransform_GetStrongKey_m1464830895 ();
 extern "C" void HMAC_HashFinal_m1921180827 ();
+extern "C" void HMAC_get_Key_m623825087 ();
 extern "C" void HashAlgorithm_ComputeHash_m2825542963 ();
 extern "C" void HashAlgorithm_ComputeHash_m2044824070 ();
 extern "C" void HashAlgorithm_TransformFinalBlock_m3005451348 ();
 extern "C" void HashAlgorithm_get_Hash_m482540885 ();
+extern "C" void KeyedHashAlgorithm_get_Key_m1843505301 ();
+extern "C" void MACTripleDES_HashFinal_m3613553534 ();
 extern "C" void MD5CryptoServiceProvider_HashFinal_m2625727830 ();
 extern "C" void RIPEMD160Managed_HashFinal_m1016449914 ();
 extern "C" void RIPEMD160Managed__EndHash_m3348364793 ();
+extern "C" void RijndaelManagedTransform_TransformFinalBlock_m1454105523 ();
 extern "C" void SHA1CryptoServiceProvider_HashFinal_m2727634713 ();
 extern "C" void SHA1Internal_HashFinal_m1760803056 ();
 extern "C" void SHA1Managed_HashFinal_m2365675383 ();
@@ -2273,20 +2887,30 @@ extern "C" void SHA512Managed_HashFinal_m2173184560 ();
 extern "C" void SHA512Managed__EndHash_m3890351173 ();
 extern "C" void SymmetricAlgorithm_get_IV_m1875559108 ();
 extern "C" void SymmetricAlgorithm_get_Key_m3241860519 ();
+extern "C" void TailStream_get_Buffer_m3964203375 ();
 extern "C" void TripleDES_get_Key_m1921822970 ();
 extern "C" void TripleDESTransform_GetStrongKey_m292426577 ();
 extern "C" void Utils_ConvertIntToByteArray_m3163177236 ();
 extern "C" void Utils_FixupKeyParity_m1647047330 ();
 extern "C" void Utils_GenerateRandom_m2958239207 ();
+extern "C" void PublicKey_GetUnsignedBigInteger_m3873409673 ();
 extern "C" void X509BasicConstraintsExtension_Encode_m2310708419 ();
+extern "C" void X509Certificate2ImplMono_GetCertHash_m3982099414 ();
+extern "C" void X509Certificate2ImplMono_GetRawCertData_m607064946 ();
+extern "C" void X509Certificate2ImplMono_GetSerialNumber_m1542352590 ();
+extern "C" void X509Certificate_GetCertHash_m274210048 ();
 extern "C" void X509Certificate_GetRawCertData_m781236105 ();
+extern "C" void X509Certificate_GetSerialNumber_m2322035831 ();
+extern "C" void X509CertificateImpl_GetCertHash_m1622475645 ();
 extern "C" void X509CertificateImplMono_GetCertHash_m613576606 ();
 extern "C" void X509CertificateImplMono_GetRawCertData_m3928675457 ();
+extern "C" void X509CertificateImplMono_GetSerialNumber_m165483427 ();
 extern "C" void X509Helper_ConvertData_m2017214147 ();
 extern "C" void X509Helper_PEM_m325494852 ();
 extern "C" void X509KeyUsageExtension_Encode_m2128077825 ();
 extern "C" void X509SubjectKeyIdentifierExtension_Encode_m3345759265 ();
 extern "C" void X509SubjectKeyIdentifierExtension_FromHex_m1011249985 ();
+extern "C" void SecureString_GetBuffer_m4082131072 ();
 extern "C" void TermInfoReader_GetStringBytes_m3509133699 ();
 extern "C" void TermInfoReader_GetStringBytes_m289748583 ();
 extern "C" void Encoding_GetBytes_m3735967069 ();
@@ -2296,6 +2920,19 @@ extern "C" void UTF32Encoding_GetPreamble_m2844389005 ();
 extern "C" void UTF8Encoding_GetBytesUnknown_m1431889153 ();
 extern "C" void UTF8Encoding_GetPreamble_m1911470058 ();
 extern "C" void UnicodeEncoding_GetPreamble_m3002287178 ();
+extern "C" void ImageConversion_EncodeToEXR_m3885559480 ();
+extern "C" void ImageConversion_EncodeToEXR_m1059583045 ();
+extern "C" void ImageConversion_EncodeToJPG_m2306052013 ();
+extern "C" void ImageConversion_EncodeToJPG_m2489668130 ();
+extern "C" void ImageConversion_EncodeToPNG_m2292631531 ();
+extern "C" void DownloadHandler_GetData_m364367605 ();
+extern "C" void DownloadHandler_InternalGetByteArray_m4277508027 ();
+extern "C" void DownloadHandler_get_data_m1669096410 ();
+extern "C" void DownloadHandlerBuffer_GetData_m752341367 ();
+extern "C" void DownloadHandlerBuffer_InternalGetData_m3771716959 ();
+extern "C" void WWW_get_bytes_m3061182897 ();
+extern "C" void WWWTranscoder_Decode_m157051313 ();
+extern "C" void WWWTranscoder_URLDecode_m3587034544 ();
 extern "C" void BitConverter_GetHexValue_m662266794 ();
 extern "C" void Boolean_System_IConvertible_ToChar_m4279513009_AdjustorThunk ();
 extern "C" void Byte_System_IConvertible_ToChar_m2173687830_AdjustorThunk ();
@@ -2394,6 +3031,7 @@ extern "C" void Number_MatchChars_m507488035 ();
 extern "C" void BinaryReader_ReadChars_m604533226 ();
 extern "C" void Path_GetInvalidPathChars_m3959874485 ();
 extern "C" void Path_get_TrimEndChars_m4264594297 ();
+extern "C" void StreamReader_get_CharBuffer_Prop_m3568517888 ();
 extern "C" void __BinaryParser_ReadChars_m4267866172 ();
 extern "C" void String_ToCharArray_m1492846834 ();
 extern "C" void Encoding_GetBestFitBytesToUnicodeData_m847109813 ();
@@ -2407,8 +3045,11 @@ extern "C" void UriHelper_EscapeString_m4264421271 ();
 extern "C" void UriHelper_UnescapeString_m2854369216 ();
 extern "C" void UriHelper_UnescapeString_m3609332223 ();
 extern "C" void PKCS12_get_Keys_m2869762250 ();
+extern "C" void PKCS12_get_Keys_m3893933360 ();
 extern "C" void ArrayList_ReadOnly_m1905796817 ();
 extern "C" void CollectionBase_get_InnerList_m132195395 ();
+extern "C" void WebRequest_PopulatePrefixList_m3829107100 ();
+extern "C" void WebRequest_get_PrefixList_m1589524268 ();
 extern "C" void ChannelData_get_ClientProviders_m594662942 ();
 extern "C" void ChannelData_get_ServerProviders_m632481016 ();
 extern "C" void CADMethodCallMessage_GetArguments_m3041854375 ();
@@ -2420,6 +3061,7 @@ extern "C" void NodeEnumerator_get_Entry_m876638776 ();
 extern "C" void HashtableEnumerator_get_Entry_m237234018 ();
 extern "C" void NodeEnumerator_get_Entry_m503315480 ();
 extern "C" void SortedListEnumerator_get_Entry_m802102315 ();
+extern "C" void NodeEnumerator_get_Entry_m1251277814 ();
 extern "C" void ResourceEnumerator_get_Entry_m1508537883 ();
 extern "C" void DictionaryEnumerator_get_Entry_m431570648 ();
 extern "C" void TMP_Settings_GetCharacters_m1089194345 ();
@@ -2428,6 +3070,11 @@ extern "C" void TimeZoneInfo_ParseTimesTypes_m3654372957 ();
 extern "C" void TMP_FontAsset_get_kerningDictionary_m197958850 ();
 extern "C" void TMP_FontAsset_get_characterDictionary_m285004534 ();
 extern "C" void DateTimeFormatInfoScanner_get_KnownWords_m715185588 ();
+extern "C" void ObjectBuilder_get_ImportedMaterials_m2903192349 ();
+extern "C" void MeshSimplifier_GetTrianglesContainingBothVertices_m1836713614 ();
+extern "C" void MeshSimplifier_GetTrianglesContainingVertex_m2054973444 ();
+extern "C" void Claim_get_Properties_m627912764 ();
+extern "C" void ClaimsIdentity_get_Claims_m3124579412 ();
 extern "C" void FileSystemEnumerableFactory_CreateFileNameIterator_m2214299912 ();
 extern "C" void CoreUtils_U3CGetAllAssemblyTypesU3Em__0_m140892639 ();
 extern "C" void CoreUtils_GetAllAssemblyTypes_m1348388592 ();
@@ -2436,6 +3083,7 @@ extern "C" void RenderPipelineAsset_CreatedInstances_m3373478642 ();
 extern "C" void PlayableAsset_get_outputs_m2130546921 ();
 extern "C" void ToggleGroup_ActiveToggles_m3179342002 ();
 extern "C" void String_System_Collections_Generic_IEnumerableU3CSystem_CharU3E_GetEnumerator_m3706570280 ();
+extern "C" void U3Cget_ClaimsU3Ed__51_System_Collections_Generic_IEnumerableU3CSystem_Security_Claims_ClaimU3E_GetEnumerator_m2824736266 ();
 extern "C" void YogaNode_GetEnumerator_m180706924 ();
 extern "C" void SafeSerializationEventArgs_get_SerializedStates_m612496701 ();
 extern "C" void MonoCustomAttrs_GetCustomAttributesData_m3138951217 ();
@@ -2459,6 +3107,11 @@ extern "C" void TextGenerator_get_lines_m2696243854 ();
 extern "C" void TextGenerator_get_verts_m2839413408 ();
 extern "C" void IPv6AddressHelper_FindCompressionRange_m2438680693 ();
 extern "C" void PB_SaveObject_GetActivePrefabs_m2245687705 ();
+extern "C" void Triangulation_TriangulateByEarClipping_m1047215819 ();
+extern "C" void Triangulation_TriangulateConvexPolygon_m676548159 ();
+extern "C" void Triangulation_FindEarVertices_m1045158017 ();
+extern "C" void ObjectMaterialLinks_get_linkedMaterialEntities_m3038279497 ();
+extern "C" void PolyfewRuntime_GetMaterialsProperties_m3660858710 ();
 extern "C" void TimeZoneInfo_ParseTransitions_m2088696019 ();
 extern "C" void SerializationEvents_GetMethodsWithAttribute_m3196150866 ();
 extern "C" void TimeZoneInfo_CreateAdjustmentRule_m4092212465 ();
@@ -2472,20 +3125,33 @@ extern "C" void InvokableCallList_PrepareInvoke_m4003891334 ();
 extern "C" void UnityEventBase_PrepareInvoke_m1785382128 ();
 extern "C" void DebugUIHandlerContainer_GetActiveChildren_m3322371024 ();
 extern "C" void VolumeManager_GrabVolumes_m1168527548 ();
+extern "C" void PolyfewRuntime_SimplifyMeshes_m2918109052 ();
 extern "C" void LayoutGroup_get_rectChildren_m1314734460 ();
 extern "C" void OptionDataList_get_options_m1082668073 ();
 extern "C" void Dropdown_get_options_m2762539965 ();
 extern "C" void Selectable_get_allSelectables_m868218263 ();
+extern "C" void MeshUtils_GetMeshUVs_m540539698 ();
+extern "C" void MeshUtils_GetMeshUVs_m440148000 ();
+extern "C" void MeshUtils_GetMeshUVs_m3307014189 ();
+extern "C" void MeshUtils_GetMeshUVs_m3275828738 ();
 extern "C" void Hashtable_Synchronized_m2228653257 ();
 extern "C" void Environment_GetEnvironmentVariablesNoCase_m2626582559 ();
+extern "C" void DigestClient_get_Cache_m2977715726 ();
 extern "C" void ChannelData_get_CustomProperties_m1852130080 ();
 extern "C" void IllogicalCallContext_get_Datastore_m3083662522 ();
 extern "C" void LogicalCallContext_get_Datastore_m629418756 ();
 extern "C" void SecurityElement_get_Attributes_m1319762035 ();
 extern "C" void SyncHashtable_get_Keys_m1469437863 ();
+extern "C" void SyncHashtable_get_Values_m3820929471 ();
 extern "C" void Hashtable_get_Keys_m625158339 ();
+extern "C" void Hashtable_get_Values_m1643322147 ();
+extern "C" void SortedList_get_Values_m1700526404 ();
+extern "C" void PathList_get_Values_m2441809375 ();
 extern "C" void MessageDictionary_get_Values_m2813018890 ();
 extern "C" void CompatibleComparer_get_Comparer_m812247256 ();
+extern "C" void CompatibleComparer_get_Comparer_m3056740477 ();
+extern "C" void CompatibleComparer_get_DefaultComparer_m3623034394 ();
+extern "C" void Cookie_GetComparer_m2218979387 ();
 extern "C" void Exception_get_Data_m1183614691 ();
 extern "C" void SinkProviderData_get_Properties_m3454573235 ();
 extern "C" void ConstructionCall_get_Properties_m3011379795 ();
@@ -2502,13 +3168,30 @@ extern "C" void EmptyReadOnlyDictionaryInternal_GetEnumerator_m423516163 ();
 extern "C" void SyncHashtable_GetEnumerator_m4254656826 ();
 extern "C" void Hashtable_GetEnumerator_m4240267690 ();
 extern "C" void ListDictionaryInternal_GetEnumerator_m3721886559 ();
+extern "C" void SyncSortedList_GetEnumerator_m2402576560 ();
 extern "C" void SortedList_GetEnumerator_m772783392 ();
+extern "C" void HybridDictionary_GetEnumerator_m1379032493 ();
+extern "C" void ListDictionary_GetEnumerator_m3395631195 ();
 extern "C" void ResourceReader_GetEnumerator_m3404589731 ();
 extern "C" void ResourceSet_GetEnumerator_m3459697719 ();
 extern "C" void ResourceSet_GetEnumeratorHelper_m2798747297 ();
 extern "C" void RuntimeResourceSet_GetEnumerator_m3432561265 ();
 extern "C" void RuntimeResourceSet_GetEnumeratorHelper_m1976463425 ();
 extern "C" void MessageDictionary_GetEnumerator_m698671599 ();
+extern "C" void Loader_DownloadFile_m2412086704 ();
+extern "C" void Loader_DownloadFileWebGL_m48211649 ();
+extern "C" void Loader_DownloadTexFileWebGL_m3638134443 ();
+extern "C" void Loader_GetProgress_m2576694920 ();
+extern "C" void Loader_LoadFromNetworkWebGL_m1186824135 ();
+extern "C" void Loader_LoadMaterialTextureWebGL_m2119380052 ();
+extern "C" void Loader_NetworkedBuildWebGL_m1187314043 ();
+extern "C" void LoaderObj_LoadMaterialLibraryWebGL_m3990218545 ();
+extern "C" void LoaderObj_LoadModelFileNetworkedWebGL_m2848548694 ();
+extern "C" void LoaderObj_LoadOrDownloadText_m2001207502 ();
+extern "C" void SystemServices_UnityAsyncGETRequest_m638677998 ();
+extern "C" void SystemServices_UnityAsyncPOSTRequest_m1721867670 ();
+extern "C" void PolygonReduction_ShowMessage_m2115410128 ();
+extern "C" void PolygonReduction_UpdateProgress_m310607949 ();
 extern "C" void Cam_ZoomOut_m119221388 ();
 extern "C" void EnvMapAnimator_Start_m2826563342 ();
 extern "C" void FadeIn_fade_m1049307288 ();
@@ -2522,7 +3205,9 @@ extern "C" void EquivalentProbesOptimization_ExecutePass_m601333880 ();
 extern "C" void PartialVolumeFilling_ExecutePass_m3155068063 ();
 extern "C" void RemoveUnusedPoints_ExecutePass_m784667188 ();
 extern "C" void SetDistanceFromGeometry_ExecutePass_m475170126 ();
+extern "C" void X509CertificateCollection_System_Collections_IEnumerable_GetEnumerator_m647852366 ();
 extern "C" void X509CertificateCollection_System_Collections_IEnumerable_GetEnumerator_m279447643 ();
+extern "C" void X509ExtensionCollection_System_Collections_IEnumerable_GetEnumerator_m1475785462 ();
 extern "C" void X509ExtensionCollection_System_Collections_IEnumerable_GetEnumerator_m2696143383 ();
 extern "C" void PlayerController_FadeLightDynamicInput_m1165344512 ();
 extern "C" void PlayerController_FadeLightStaticInput_m1547076252 ();
@@ -2538,19 +3223,31 @@ extern "C" void CollectionBase_GetEnumerator_m654829872 ();
 extern "C" void EmptyReadOnlyDictionaryInternal_System_Collections_IEnumerable_GetEnumerator_m836496595 ();
 extern "C" void KeyCollection_GetEnumerator_m3219813926 ();
 extern "C" void SyncHashtable_System_Collections_IEnumerable_GetEnumerator_m1325482064 ();
+extern "C" void ValueCollection_GetEnumerator_m1400563028 ();
 extern "C" void Hashtable_System_Collections_IEnumerable_GetEnumerator_m2751657639 ();
 extern "C" void ListDictionaryInternal_System_Collections_IEnumerable_GetEnumerator_m1905665457 ();
 extern "C" void Queue_GetEnumerator_m3623929043 ();
+extern "C" void ValueList_GetEnumerator_m2129344739 ();
 extern "C" void SortedList_System_Collections_IEnumerable_GetEnumerator_m2738760439 ();
+extern "C" void HybridDictionary_System_Collections_IEnumerable_GetEnumerator_m168538452 ();
+extern "C" void ListDictionary_System_Collections_IEnumerable_GetEnumerator_m884729149 ();
+extern "C" void NameObjectCollectionBase_GetEnumerator_m3677320185 ();
+extern "C" void StringCollection_System_Collections_IEnumerable_GetEnumerator_m1113283171 ();
 extern "C" void Stack_GetEnumerator_m2673437525 ();
 extern "C" void StandardValuesCollection_GetEnumerator_m2314137919 ();
 extern "C" void StandardValuesCollection_System_Collections_IEnumerable_GetEnumerator_m285885173 ();
+extern "C" void CookieCollection_GetEnumerator_m1309307657 ();
+extern "C" void CredentialCache_GetEnumerator_m2434488322 ();
+extern "C" void PathList_GetEnumerator_m3707745332 ();
+extern "C" void WebHeaderCollection_GetEnumerator_m2991425604 ();
 extern "C" void ResourceReader_System_Collections_IEnumerable_GetEnumerator_m577123352 ();
 extern "C" void ResourceSet_System_Collections_IEnumerable_GetEnumerator_m2807499934 ();
 extern "C" void RuntimeResourceSet_System_Collections_IEnumerable_GetEnumerator_m1879655187 ();
 extern "C" void MessageDictionary_System_Collections_IEnumerable_GetEnumerator_m750821150 ();
+extern "C" void U3Cget_ClaimsU3Ed__51_System_Collections_IEnumerable_GetEnumerator_m1470176210 ();
 extern "C" void OidCollection_System_Collections_IEnumerable_GetEnumerator_m685937025 ();
 extern "C" void X509ChainElementCollection_System_Collections_IEnumerable_GetEnumerator_m3829089536 ();
+extern "C" void X509ExtensionCollection_System_Collections_IEnumerable_GetEnumerator_m4033897067 ();
 extern "C" void Evidence_GetEnumerator_m302914965 ();
 extern "C" void String_System_Collections_IEnumerable_GetEnumerator_m3198926340 ();
 extern "C" void Benchmark01_Start_m4262200517 ();
@@ -2586,6 +3283,10 @@ extern "C" void LayoutGroup_DelayedSetDirty_m2562435574 ();
 extern "C" void Scrollbar_ClickRepeat_m568850785 ();
 extern "C" void YogaNode_System_Collections_IEnumerable_GetEnumerator_m1826159720 ();
 extern "C" void CompatibleComparer_get_HashCodeProvider_m384981624 ();
+extern "C" void CompatibleComparer_get_DefaultHashCodeProvider_m2717920064 ();
+extern "C" void CompatibleComparer_get_HashCodeProvider_m3201200693 ();
+extern "C" void SyncSortedList_GetValueList_m1715694704 ();
+extern "C" void SortedList_GetValueList_m827607550 ();
 extern "C" void SinkProviderData_get_Children_m4009299018 ();
 extern "C" void ConstructionCall_get_ContextProperties_m4226046805 ();
 extern "C" void AggregateException_get_InnerExceptions_m3414445774 ();
@@ -2594,6 +3295,11 @@ extern "C" void TaskExceptionHolder_GetExceptionDispatchInfos_m23046082 ();
 extern "C" void TimeZoneInfo_GetSystemTimeZones_m3341427943 ();
 extern "C" void DebugManager_get_panels_m1252211722 ();
 extern "C" void VolumeComponent_get_parameters_m1706277269 ();
+extern "C" void WebConnectionGroup_get_Queue_m2310519839 ();
+extern "C" void SortedList_Synchronized_m3588493120 ();
+extern "C" void HybridDictionary_get_List_m1853268389 ();
+extern "C" void NameObjectCollectionBase_FindEntry_m2589752937 ();
+extern "C" void WebHeaderCollection_get_InnerCollection_m956553888 ();
 extern "C" void ConsoleKeyInfo_get_Key_m3819926093_AdjustorThunk ();
 extern "C" void Console_ReadKey_m1122053118 ();
 extern "C" void Console_ReadKey_m1171735637 ();
@@ -2604,7 +3310,12 @@ extern "C" void TermInfoDriver_ReadKey_m4036646575 ();
 extern "C" void TermInfoDriver_ReadKeyInternal_m1510762486 ();
 extern "C" void WindowsConsoleDriver_ReadKey_m209631140 ();
 extern "C" void __DTString_GetSubString_m2408595494_AdjustorThunk ();
+extern "C" void ASN1Convert_ToDateTime_m1246060840 ();
 extern "C" void ASN1Convert_ToDateTime_m3103388320 ();
+extern "C" void X509Certificate_get_ValidFrom_m1469376000 ();
+extern "C" void X509Certificate_get_ValidFrom_m845748800 ();
+extern "C" void X509Certificate_get_ValidUntil_m1838041919 ();
+extern "C" void X509Certificate_get_ValidUntil_m678342786 ();
 extern "C" void Boolean_System_IConvertible_ToDateTime_m603510836_AdjustorThunk ();
 extern "C" void Byte_System_IConvertible_ToDateTime_m3654084722_AdjustorThunk ();
 extern "C" void Char_System_IConvertible_ToDateTime_m3564102661_AdjustorThunk ();
@@ -2621,9 +3332,12 @@ extern "C" void DateTime_AddYears_m271357322_AdjustorThunk ();
 extern "C" void DateTime_FromBinary_m2489276715 ();
 extern "C" void DateTime_FromBinaryRaw_m3463944967 ();
 extern "C" void DateTime_Parse_m3729096069 ();
+extern "C" void DateTime_ParseExact_m3543736043 ();
 extern "C" void DateTime_ParseExact_m2711902273 ();
 extern "C" void DateTime_SpecifyKind_m3332658812 ();
 extern "C" void DateTime_System_IConvertible_ToDateTime_m616366890_AdjustorThunk ();
+extern "C" void DateTime_ToLocalTime_m3134475597_AdjustorThunk ();
+extern "C" void DateTime_ToLocalTime_m2652220044_AdjustorThunk ();
 extern "C" void DateTime_ToUniversalTime_m1945318289_AdjustorThunk ();
 extern "C" void DateTime_get_Date_m46742767_AdjustorThunk ();
 extern "C" void DateTime_get_Now_m1277138875 ();
@@ -2651,8 +3365,17 @@ extern "C" void TaiwanCalendar_get_MinSupportedDateTime_m1398579299 ();
 extern "C" void Int16_System_IConvertible_ToDateTime_m3080274979_AdjustorThunk ();
 extern "C" void Int32_System_IConvertible_ToDateTime_m1824716955_AdjustorThunk ();
 extern "C" void Int64_System_IConvertible_ToDateTime_m2535842508_AdjustorThunk ();
+extern "C" void CookieCollection_TimeStamp_m1846484418 ();
+extern "C" void DigestSession_get_LastUse_m3488420397 ();
+extern "C" void ConnectionState_get_IdleSince_m1222337842 ();
 extern "C" void __BinaryParser_ReadDateTime_m2432016758 ();
 extern "C" void SByte_System_IConvertible_ToDateTime_m1659899958_AdjustorThunk ();
+extern "C" void X509Certificate2_get_NotAfter_m1930122497 ();
+extern "C" void X509Certificate2_get_NotBefore_m2514418239 ();
+extern "C" void X509Certificate2ImplMono_GetValidFrom_m1561996788 ();
+extern "C" void X509Certificate2ImplMono_GetValidUntil_m1818057475 ();
+extern "C" void X509CertificateImplMono_GetValidFrom_m3481591650 ();
+extern "C" void X509CertificateImplMono_GetValidUntil_m3336853150 ();
 extern "C" void Single_System_IConvertible_ToDateTime_m1748479284_AdjustorThunk ();
 extern "C" void String_System_IConvertible_ToDateTime_m3578483777 ();
 extern "C" void AdjustmentRule_get_DateEnd_m610090186 ();
@@ -2775,6 +3498,8 @@ extern "C" void Convert_ToDouble_m2222536920 ();
 extern "C" void Convert_ToDouble_m1030895834 ();
 extern "C" void DBNull_System_IConvertible_ToDouble_m150664744 ();
 extern "C" void DateTime_System_IConvertible_ToDouble_m2116720007_AdjustorThunk ();
+extern "C" void DateTime_TicksToOADate_m3333452233 ();
+extern "C" void DateTime_ToOADate_m3381429418_AdjustorThunk ();
 extern "C" void Decimal_System_IConvertible_ToDouble_m3125524987_AdjustorThunk ();
 extern "C" void Decimal_ToDouble_m1460191033 ();
 extern "C" void Decimal_op_Explicit_m2816896069 ();
@@ -2788,6 +3513,7 @@ extern "C" void BinaryReader_ReadDouble_m2513998176 ();
 extern "C" void Int16_System_IConvertible_ToDouble_m1661805412_AdjustorThunk ();
 extern "C" void Int32_System_IConvertible_ToDouble_m1464782260_AdjustorThunk ();
 extern "C" void Int64_System_IConvertible_ToDouble_m99143002_AdjustorThunk ();
+extern "C" void Math_Abs_m3912393749 ();
 extern "C" void Math_Acos_m2076003797 ();
 extern "C" void Math_Atan_m2955451767 ();
 extern "C" void Math_Ceiling_m625148210 ();
@@ -2795,6 +3521,9 @@ extern "C" void Math_Cos_m1874044299 ();
 extern "C" void Math_Floor_m1840375750 ();
 extern "C" void Math_Log_m2526073084 ();
 extern "C" void Math_Log_m734258591 ();
+extern "C" void Math_Log10_m3013334228 ();
+extern "C" void Math_Max_m3148697491 ();
+extern "C" void Math_Min_m2185697350 ();
 extern "C" void Math_Pow_m754227594 ();
 extern "C" void Math_Round_m101670467 ();
 extern "C" void Math_Sin_m2190801110 ();
@@ -2817,7 +3546,30 @@ extern "C" void UInt16_System_IConvertible_ToDouble_m333121300_AdjustorThunk ();
 extern "C" void UInt32_System_IConvertible_ToDouble_m940039456_AdjustorThunk ();
 extern "C" void UInt64_System_IConvertible_ToDouble_m602078108_AdjustorThunk ();
 extern "C" void PlayableAsset_get_duration_m3549083384 ();
+extern "C" void MathHelper_Clamp_m1807551176 ();
+extern "C" void MathHelper_Min_m702473583 ();
+extern "C" void MathHelper_TriangleArea_m4081952214 ();
+extern "C" void MeshSimplifier_U3CInitEdgesU3Em__0_m1906311788 ();
+extern "C" void MeshSimplifier_CalculateError_m3056386610 ();
+extern "C" void MeshSimplifier_CurvatureError_m1956071870 ();
+extern "C" void MeshSimplifier_VertexError_m3215948139 ();
+extern "C" void MeshSimplifier_get_Aggressiveness_m1445012275 ();
+extern "C" void MeshSimplifier_get_VertexLinkDistance_m2046891038 ();
+extern "C" void MeshSimplifier_get_VertexLinkDistanceSqr_m2576899821 ();
+extern "C" void SymmetricMatrix_Determinant_m4072772112 ();
+extern "C" void SymmetricMatrix_Determinant1_m1769788320 ();
+extern "C" void SymmetricMatrix_Determinant2_m2173072847 ();
+extern "C" void SymmetricMatrix_Determinant3_m606988906 ();
+extern "C" void SymmetricMatrix_Determinant4_m1366503793 ();
+extern "C" void SymmetricMatrix_get_Item_m3589853307 ();
+extern "C" void Vector3d_Angle_m1195699414 ();
+extern "C" void Vector3d_Dot_m98289303 ();
+extern "C" void Vector3d_get_Item_m1800108872_AdjustorThunk ();
+extern "C" void Vector3d_get_Magnitude_m1524246152_AdjustorThunk ();
+extern "C" void Vector3d_get_MagnitudeSqr_m33642168_AdjustorThunk ();
 extern "C" void Enum_GetCachedValuesAndNames_m1226021774 ();
+extern "C" void ServicePoint_SendRequest_m1850173641 ();
+extern "C" void WebConnection_SendRequest_m4284869211 ();
 extern "C" void MobileAuthenticatedStream_GetIOException_m35045089 ();
 extern "C" void MobileAuthenticatedStream_GetSSPIException_m3901100621 ();
 extern "C" void SmallXmlParser_Error_m3899025466 ();
@@ -2836,6 +3588,10 @@ extern "C" void MonoIO_GetException_m1522387862 ();
 extern "C" void Error_ArgumentNull_m219206370 ();
 extern "C" void Error_MoreThanOneMatch_m2666736739 ();
 extern "C" void Error_NoElements_m207875825 ();
+extern "C" void FtpAsyncResult_get_Exception_m3265976807 ();
+extern "C" void FtpWebRequest_CreateExceptionFromResponse_m741462156 ();
+extern "C" void FtpWebRequest_GetMustImplement_m639535610 ();
+extern "C" void SimpleAsyncResult_get_Exception_m4130951627 ();
 extern "C" void Assembly_CreateNIE_m3096729393 ();
 extern "C" void Module_CreateNIE_m3912193979 ();
 extern "C" void ExceptionDispatchInfo_get_SourceException_m4136013950 ();
@@ -2927,6 +3683,7 @@ extern "C" void Char_GetLatin1UnicodeCategory_m598848909 ();
 extern "C" void Char_GetUnicodeCategory_m57882613 ();
 extern "C" void Char_GetUnicodeCategory_m3355041902 ();
 extern "C" void CharUnicodeInfo_GetUnicodeCategory_m28576098 ();
+extern "C" void CharUnicodeInfo_GetUnicodeCategory_m2648087799 ();
 extern "C" void CharUnicodeInfo_InternalGetUnicodeCategory_m3067127494 ();
 extern "C" void CharUnicodeInfo_InternalGetUnicodeCategory_m2255478459 ();
 extern "C" void UnityTlsProvider_get_ID_m911070814 ();
@@ -2936,11 +3693,17 @@ extern "C" void Module_GetModuleVersionId_m4251639471 ();
 extern "C" void Module_get_ModuleVersionId_m134110822 ();
 extern "C" void MonoModule_get_ModuleVersionId_m2110867175 ();
 extern "C" void MessageTypeSubscribers_get_MessageTypeId_m1143155832 ();
+extern "C" void PrimalityTest_BeginInvoke_m742423211 ();
 extern "C" void PrimalityTest_BeginInvoke_m1203148458 ();
+extern "C" void CFProxyAutoConfigurationResultCallback_BeginInvoke_m2504056180 ();
 extern "C" void MobileAuthenticatedStream_BeginRead_m3123025341 ();
 extern "C" void MobileAuthenticatedStream_BeginWrite_m2647814544 ();
+extern "C" void ServerCertValidationCallbackWrapper_BeginInvoke_m2434951709 ();
 extern "C" void KeyGeneratedEventHandler_BeginInvoke_m3949196697 ();
 extern "C" void KeyGeneratedEventHandler_BeginInvoke_m1299225259 ();
+extern "C" void KeyGeneratedEventHandler_BeginInvoke_m3227934731 ();
+extern "C" void MonoLocalCertificateSelectionCallback_BeginInvoke_m156686422 ();
+extern "C" void MonoRemoteCertificateValidationCallback_BeginInvoke_m4192822619 ();
 extern "C" void unitytls_errorstate_create_t_BeginInvoke_m114194774 ();
 extern "C" void unitytls_errorstate_raise_error_t_BeginInvoke_m3658850036 ();
 extern "C" void unitytls_key_free_t_BeginInvoke_m3732576704 ();
@@ -2985,6 +3748,13 @@ extern "C" void WindowsCancelHandler_BeginInvoke_m3019045381 ();
 extern "C" void ConsoleCancelEventHandler_BeginInvoke_m1699360136 ();
 extern "C" void MatchNumberDelegate_BeginInvoke_m1593045147 ();
 extern "C" void EventHandler_BeginInvoke_m829877076 ();
+extern "C" void ReadMethod_BeginInvoke_m3773273825 ();
+extern "C" void WriteMethod_BeginInvoke_m2181678049 ();
+extern "C" void DeflateStream_BeginRead_m437329223 ();
+extern "C" void DeflateStream_BeginWrite_m1021334227 ();
+extern "C" void UnmanagedReadOrWrite_BeginInvoke_m3649679282 ();
+extern "C" void GZipStream_BeginRead_m1057183783 ();
+extern "C" void GZipStream_BeginWrite_m1150475433 ();
 extern "C" void ReadDelegate_BeginInvoke_m3697522094 ();
 extern "C" void WriteDelegate_BeginInvoke_m39624777 ();
 extern "C" void FileStream_BeginRead_m2419864669 ();
@@ -3000,8 +3770,40 @@ extern "C" void Stream_BeginWriteInternal_m4069739839 ();
 extern "C" void Stream_BlockingBeginRead_m3856425234 ();
 extern "C" void Stream_BlockingBeginWrite_m4263453885 ();
 extern "C" void IOAsyncCallback_BeginInvoke_m1980568501 ();
+extern "C" void BindIPEndPoint_BeginInvoke_m516198952 ();
+extern "C" void FileWebRequest_BeginGetRequestStream_m121868385 ();
+extern "C" void FileWebRequest_BeginGetResponse_m4069851609 ();
+extern "C" void FileWebStream_BeginRead_m2606878213 ();
+extern "C" void FileWebStream_BeginWrite_m171362520 ();
+extern "C" void ReadDelegate_BeginInvoke_m2818773993 ();
+extern "C" void WriteDelegate_BeginInvoke_m4282217382 ();
+extern "C" void FtpDataStream_BeginRead_m458546936 ();
+extern "C" void FtpDataStream_BeginWrite_m51295119 ();
+extern "C" void FtpWebRequest_BeginGetRequestStream_m3969515993 ();
+extern "C" void FtpWebRequest_BeginGetResponse_m3757524768 ();
+extern "C" void HeaderParser_BeginInvoke_m468348339 ();
+extern "C" void HttpContinueDelegate_BeginInvoke_m2746263979 ();
+extern "C" void HttpWebRequest_BeginGetRequestStream_m3734840655 ();
+extern "C" void HttpWebRequest_BeginGetResponse_m366959456 ();
+extern "C" void LocalCertSelectionCallback_BeginInvoke_m553604038 ();
+extern "C" void RemoteCertificateValidationCallback_BeginInvoke_m1840268146 ();
 extern "C" void SslStream_BeginRead_m2574812991 ();
 extern "C" void SslStream_BeginWrite_m831482228 ();
+extern "C" void SimpleAsyncCallback_BeginInvoke_m3748162143 ();
+extern "C" void NetworkStream_BeginRead_m194067695 ();
+extern "C" void NetworkStream_BeginWrite_m1919375747 ();
+extern "C" void Socket_BeginReceive_m2439065097 ();
+extern "C" void Socket_BeginReceive_m2742014887 ();
+extern "C" void Socket_BeginSend_m2697766330 ();
+extern "C" void Socket_BeginSend_m385981137 ();
+extern "C" void Callback_BeginInvoke_m2961554617 ();
+extern "C" void WebAsyncResult_get_InnerAsyncResult_m4134833752 ();
+extern "C" void WebConnection_BeginRead_m2950707033 ();
+extern "C" void WebConnection_BeginWrite_m3795141727 ();
+extern "C" void WebConnectionStream_BeginRead_m2120480875 ();
+extern "C" void WebConnectionStream_BeginWrite_m91788762 ();
+extern "C" void WebRequest_BeginGetRequestStream_m3179270283 ();
+extern "C" void WebRequest_BeginGetResponse_m594613547 ();
 extern "C" void AddEventAdapter_BeginInvoke_m913431108 ();
 extern "C" void MemberFilter_BeginInvoke_m3549240552 ();
 extern "C" void GetterAdapter_BeginInvoke_m3429316396 ();
@@ -3062,6 +3864,8 @@ extern "C" void ConsoleDriver_CreateTermInfoDriver_m1555219928 ();
 extern "C" void ConsoleDriver_CreateWindowsConsoleDriver_m3110600268 ();
 extern "C" void SyncTextWriter_get_FormatProvider_m3917184493 ();
 extern "C" void TextWriter_get_FormatProvider_m4181244076 ();
+extern "C" void DeflateStreamNative_Create_m1981759079 ();
+extern "C" void DeflateStreamNative_CreateZStream_m973335090 ();
 extern "C" void Directory_CreateDirectoriesInternal_m3735342319 ();
 extern "C" void Directory_CreateDirectory_m751642867 ();
 extern "C" void DirectoryInfo_get_Parent_m3736638393 ();
@@ -3078,6 +3882,7 @@ extern "C" void CADSerializer_SerializeMessage_m899341376 ();
 extern "C" void CADSerializer_SerializeObject_m2985211104 ();
 extern "C" void MonoIO_GetFileType_m101289143 ();
 extern "C" void MonoIO_GetFileType_m3247018611 ();
+extern "C" void MonoTlsStream_CreateStream_m973768516 ();
 extern "C" void Console_Open_m3077673205 ();
 extern "C" void Console_OpenStandardError_m294613724 ();
 extern "C" void Console_OpenStandardInput_m3262421490 ();
@@ -3085,8 +3890,23 @@ extern "C" void Console_OpenStandardOutput_m1257556731 ();
 extern "C" void BinaryReader_get_BaseStream_m3993550412 ();
 extern "C" void NullStreamReader_get_BaseStream_m3342895214 ();
 extern "C" void StreamReader_get_BaseStream_m3371558792 ();
+extern "C" void StreamReader_get_Stream_Prop_m3207416110 ();
 extern "C" void StreamWriter_CreateFile_m1711269046 ();
+extern "C" void FileWebRequest_EndGetRequestStream_m1594935573 ();
+extern "C" void FileWebRequest_GetRequestStream_m1363761048 ();
+extern "C" void FileWebResponse_GetResponseStream_m3599920122 ();
+extern "C" void FtpAsyncResult_get_Stream_m2727806888 ();
+extern "C" void FtpWebRequest_EndGetRequestStream_m1909407835 ();
+extern "C" void FtpWebRequest_GetRequestStream_m3692930273 ();
+extern "C" void FtpWebResponse_GetResponseStream_m121394876 ();
+extern "C" void HttpWebRequest_EndGetRequestStream_m3649764403 ();
+extern "C" void HttpWebRequest_GetRequestStream_m3748118858 ();
+extern "C" void HttpWebResponse_GetResponseStream_m584017432 ();
 extern "C" void AuthenticatedStream_get_InnerStream_m4066215780 ();
+extern "C" void WebAsyncResult_get_WriteStream_m1124866432 ();
+extern "C" void WebRequest_EndGetRequestStream_m2938970949 ();
+extern "C" void WebRequest_GetRequestStream_m4259865359 ();
+extern "C" void WebResponse_GetResponseStream_m3988934657 ();
 extern "C" void File_OpenText_m196858847 ();
 extern "C" void TextReader_Synchronized_m3004980758 ();
 extern "C" void Console_get_Error_m1839879495 ();
@@ -3123,6 +3943,7 @@ extern "C" void Int16_Parse_m138525169 ();
 extern "C" void Int16_System_IConvertible_ToInt16_m2224134411_AdjustorThunk ();
 extern "C" void Int32_System_IConvertible_ToInt16_m453278239_AdjustorThunk ();
 extern "C" void Int64_System_IConvertible_ToInt16_m4062196970_AdjustorThunk ();
+extern "C" void Marshal_ReadInt16_m968014049 ();
 extern "C" void __BinaryParser_ReadInt16_m341923460 ();
 extern "C" void SByte_System_IConvertible_ToInt16_m885121451_AdjustorThunk ();
 extern "C" void TokenizerStream_GetNextFullToken_m2374975794 ();
@@ -3133,6 +3954,18 @@ extern "C" void TermInfoReader_GetInt16_m1206036664 ();
 extern "C" void UInt16_System_IConvertible_ToInt16_m2337134904_AdjustorThunk ();
 extern "C" void UInt32_System_IConvertible_ToInt16_m1659441601_AdjustorThunk ();
 extern "C" void UInt64_System_IConvertible_ToInt16_m3895479143_AdjustorThunk ();
+extern "C" void MathUtility_ClampListIndex_m83957190 ();
+extern "C" void Vertex_get_OriginalIndex_m3062019229 ();
+extern "C" void ModelUtil_WrapInt_m3111078135 ();
+extern "C" void ObjectBuilder_get_NumImportedMaterials_m3842166429 ();
+extern "C" void ObjectImporter_get_NumImportRequests_m3292880560 ();
+extern "C" void MeshUtils_GetUsedUVComponents_m3025434546 ();
+extern "C" void PolyfewRuntime_CountTriangles_m2304131273 ();
+extern "C" void PolyfewRuntime_CountTriangles_m373702396 ();
+extern "C" void PolyfewRuntime_CountTriangles_m651501482 ();
+extern "C" void PolyfewRuntime_SimplifyObjectDeep_m1848277320 ();
+extern "C" void PolyfewRuntime_SimplifyObjectDeep_m1848745566 ();
+extern "C" void EdgeErrorkeyedComparer_Compare_m3657097315 ();
 extern "C" void Lightbeam_get_Subdivisions_m2126347964 ();
 extern "C" void Lightbeam_get_SubdivisionsHeight_m2862509975 ();
 extern "C" void RandomGen_Next_m1987841684 ();
@@ -3172,11 +4005,21 @@ extern "C" void SimpleCollator_LastIndexOfOrdinal_m388102249 ();
 extern "C" void SimpleCollator_LastIndexOfSortKey_m2864365168 ();
 extern "C" void SimpleCollator_QuickIndexOf_m2519071357 ();
 extern "C" void SortKeyBuffer_GetOptimizedLength_m1735248204 ();
+extern "C" void BigInteger_BitCount_m2055977486 ();
 extern "C" void BigInteger_BitCount_m3710900808 ();
 extern "C" void BigInteger_GetHashCode_m1262812797 ();
+extern "C" void BigInteger_GetHashCode_m1594560121 ();
+extern "C" void BigInteger_LowestSetBit_m1199244228 ();
 extern "C" void BigInteger_LowestSetBit_m3082714978 ();
+extern "C" void PrimeGeneratorBase_get_TrialDivisionBounds_m1980088695 ();
 extern "C" void PrimeGeneratorBase_get_TrialDivisionBounds_m349266641 ();
+extern "C" void PrimalityTests_GetSPPRounds_m2558073743 ();
 extern "C" void PrimalityTests_GetSPPRounds_m228447904 ();
+extern "C" void CFArray_get_Count_m643623292 ();
+extern "C" void CFNumber_AsInt32_m1148482418 ();
+extern "C" void CFProxy_get_Port_m4213074424 ();
+extern "C" void CFRunLoop_CFRunLoopRunInMode_m581095949 ();
+extern "C" void CFRunLoop_RunInMode_m1609836476 ();
 extern "C" void AsyncProtocolRequest_get_UserResult_m1135125824 ();
 extern "C" void AsyncProtocolResult_get_UserResult_m854518103 ();
 extern "C" void AsyncReadOrWriteRequest_get_CurrentSize_m827445572 ();
@@ -3184,7 +4027,10 @@ extern "C" void BufferOffsetSize_get_EndOffset_m1071113492 ();
 extern "C" void BufferOffsetSize_get_Remaining_m551718093 ();
 extern "C" void U3CU3Ec__DisplayClass66_0_U3CInnerReadU3Eb__0_m1392690406 ();
 extern "C" void MobileAuthenticatedStream_EndRead_m1229205997 ();
+extern "C" void MobileAuthenticatedStream_InternalRead_m16956880 ();
 extern "C" void MobileAuthenticatedStream_Read_m1481280584 ();
+extern "C" void MobileAuthenticatedStream_get_ReadTimeout_m3937749431 ();
+extern "C" void MobileAuthenticatedStream_get_WriteTimeout_m1188487123 ();
 extern "C" void RuntimeClassHandle_GetHashCode_m813210722_AdjustorThunk ();
 extern "C" void RuntimeEventHandle_GetHashCode_m628952851_AdjustorThunk ();
 extern "C" void RuntimeGPtrArrayHandle_get_Length_m3501389015_AdjustorThunk ();
@@ -3195,18 +4041,34 @@ extern "C" void RuntimePropertyHandle_GetHashCode_m3028078117_AdjustorThunk ();
 extern "C" void SafeGPtrArrayHandle_get_Length_m2484684278_AdjustorThunk ();
 extern "C" void ASN1_get_Count_m3580979881 ();
 extern "C" void ASN1_get_Count_m1789520042 ();
+extern "C" void ASN1_get_Length_m3581645253 ();
 extern "C" void ASN1_get_Length_m1923878580 ();
 extern "C" void ASN1Convert_ToInt32_m254930636 ();
 extern "C" void ASN1Convert_ToInt32_m1017403318 ();
 extern "C" void ARC4Managed_InternalTransformBlock_m1085676343 ();
+extern "C" void ARC4Managed_TransformBlock_m581621139 ();
+extern "C" void ARC4Managed_get_InputBlockSize_m1864606046 ();
+extern "C" void ARC4Managed_get_OutputBlockSize_m4222910537 ();
 extern "C" void DSAManaged_get_KeySize_m2738463749 ();
+extern "C" void EncryptedPrivateKeyInfo_get_IterationCount_m2912222740 ();
 extern "C" void EncryptedPrivateKeyInfo_get_IterationCount_m2389157423 ();
+extern "C" void RSAManaged_get_KeySize_m1441482916 ();
 extern "C" void RSAManaged_get_KeySize_m1420503080 ();
 extern "C" void SymmetricTransform_InternalTransformBlock_m946892271 ();
+extern "C" void SymmetricTransform_TransformBlock_m2339552481 ();
+extern "C" void SymmetricTransform_get_InputBlockSize_m3694391316 ();
+extern "C" void SymmetricTransform_get_OutputBlockSize_m143608483 ();
+extern "C" void MessageBase_get_Type_m8196934 ();
+extern "C" void PKCS12_get_IterationCount_m3005687235 ();
 extern "C" void PKCS12_get_IterationCount_m626423090 ();
 extern "C" void PKCS12_get_MaximumPasswordLength_m883183191 ();
+extern "C" void PKCS12_get_MaximumPasswordLength_m3603260090 ();
+extern "C" void X509Certificate_get_Version_m3419034307 ();
 extern "C" void X509CertificateCollection_Add_m3136524580 ();
+extern "C" void X509CertificateCollection_Add_m2277657976 ();
+extern "C" void X509CertificateCollection_GetHashCode_m2303492950 ();
 extern "C" void X509CertificateCollection_GetHashCode_m324533873 ();
+extern "C" void X509Extension_GetHashCode_m1797796679 ();
 extern "C" void X509Extension_GetHashCode_m2866442052 ();
 extern "C" void AttrListImpl_get_Length_m1163071530 ();
 extern "C" void SmallXmlParser_Peek_m1303779789 ();
@@ -3288,19 +4150,38 @@ extern "C" void HashHelpers_ExpandPrime_m2180508331 ();
 extern "C" void HashHelpers_GetPrime_m1056954278 ();
 extern "C" void KeyCollection_get_Count_m2808914057 ();
 extern "C" void SyncHashtable_get_Count_m3689832098 ();
+extern "C" void ValueCollection_get_Count_m2967717962 ();
 extern "C" void Hashtable_GetHash_m3068611952 ();
 extern "C" void Hashtable_get_Count_m3541651130 ();
 extern "C" void ListDictionaryInternal_get_Count_m1558860039 ();
 extern "C" void LowLevelComparer_Compare_m2677746575 ();
 extern "C" void Queue_get_Count_m2065247734 ();
+extern "C" void SyncSortedList_IndexOfKey_m2604601240 ();
+extern "C" void SyncSortedList_IndexOfValue_m1067192862 ();
+extern "C" void SyncSortedList_get_Capacity_m1276989319 ();
+extern "C" void SyncSortedList_get_Count_m1239948607 ();
+extern "C" void ValueList_Add_m2080119186 ();
+extern "C" void ValueList_IndexOf_m165615185 ();
+extern "C" void ValueList_get_Count_m137843225 ();
 extern "C" void SortedList_IndexOfKey_m91331983 ();
+extern "C" void SortedList_IndexOfValue_m2674732773 ();
 extern "C" void SortedList_get_Capacity_m919184864 ();
 extern "C" void SortedList_get_Count_m3860639970 ();
+extern "C" void CompatibleComparer_GetHashCode_m3589838751 ();
+extern "C" void HybridDictionary_get_Count_m1166314536 ();
+extern "C" void ListDictionary_get_Count_m414236492 ();
+extern "C" void NameObjectCollectionBase_get_Count_m823453971 ();
+extern "C" void StringCollection_Add_m4164151265 ();
+extern "C" void StringCollection_IndexOf_m767274544 ();
+extern "C" void StringCollection_System_Collections_IList_Add_m1759995382 ();
+extern "C" void StringCollection_System_Collections_IList_IndexOf_m3253481874 ();
+extern "C" void StringCollection_get_Count_m2156595195 ();
 extern "C" void Stack_get_Count_m2258661097 ();
 extern "C" void EditorBrowsableAttribute_GetHashCode_m123071459 ();
 extern "C" void StandardValuesCollection_System_Collections_ICollection_get_Count_m2213884831 ();
 extern "C" void StandardValuesCollection_get_Count_m3646517383 ();
 extern "C" void TypeConverterAttribute_GetHashCode_m948291090 ();
+extern "C" void Win32Exception_get_NativeErrorCode_m4105802931 ();
 extern "C" void WindowsConsole_GetConsoleCP_m968475342 ();
 extern "C" void WindowsConsole_GetConsoleOutputCP_m3583527791 ();
 extern "C" void WindowsConsole_GetInputCodePage_m3071838517 ();
@@ -3337,7 +4218,9 @@ extern "C" void DateTime_GetDatePart_m592499627_AdjustorThunk ();
 extern "C" void DateTime_GetHashCode_m2261847002_AdjustorThunk ();
 extern "C" void DateTime_System_IConvertible_ToInt32_m340560789_AdjustorThunk ();
 extern "C" void DateTime_get_Day_m1623500273_AdjustorThunk ();
+extern "C" void DateTime_get_DayOfYear_m337087606_AdjustorThunk ();
 extern "C" void DateTime_get_Hour_m4153505178_AdjustorThunk ();
+extern "C" void DateTime_get_Millisecond_m671827344_AdjustorThunk ();
 extern "C" void DateTime_get_Minute_m87527789_AdjustorThunk ();
 extern "C" void DateTime_get_Month_m1566006993_AdjustorThunk ();
 extern "C" void DateTime_get_Second_m2686182256_AdjustorThunk ();
@@ -3493,6 +4376,25 @@ extern "C" void BinaryReader_ReadInt32_m2994982418 ();
 extern "C" void CStreamReader_Peek_m278635384 ();
 extern "C" void CStreamReader_Read_m1544504743 ();
 extern "C" void CStreamReader_Read_m2189062878 ();
+extern "C" void ReadMethod_EndInvoke_m897454887 ();
+extern "C" void ReadMethod_Invoke_m158234957 ();
+extern "C" void DeflateStream_EndRead_m4289412642 ();
+extern "C" void DeflateStream_Read_m2462209149 ();
+extern "C" void DeflateStream_ReadInternal_m4024881745 ();
+extern "C" void UnmanagedReadOrWrite_EndInvoke_m3141997488 ();
+extern "C" void UnmanagedReadOrWrite_Invoke_m379902121 ();
+extern "C" void DeflateStreamNative_CloseZStream_m1372499010 ();
+extern "C" void DeflateStreamNative_Flush_m1619703581 ();
+extern "C" void DeflateStreamNative_ReadZStream_m3236830394 ();
+extern "C" void DeflateStreamNative_ReadZStream_m496685786 ();
+extern "C" void DeflateStreamNative_UnmanagedRead_m4068903972 ();
+extern "C" void DeflateStreamNative_UnmanagedRead_m255710264 ();
+extern "C" void DeflateStreamNative_UnmanagedWrite_m1455650735 ();
+extern "C" void DeflateStreamNative_UnmanagedWrite_m232731864 ();
+extern "C" void DeflateStreamNative_WriteZStream_m1056552711 ();
+extern "C" void GZipStream_EndRead_m3771449318 ();
+extern "C" void GZipStream_Read_m2373086629 ();
+extern "C" void GZipStream_ReadByte_m4086121288 ();
 extern "C" void File_FillAttributeInfo_m698128191 ();
 extern "C" void ReadDelegate_EndInvoke_m1567259657 ();
 extern "C" void ReadDelegate_Invoke_m853483996 ();
@@ -3514,6 +4416,7 @@ extern "C" void MonoIO_Read_m2976218714 ();
 extern "C" void MonoIO_Write_m3999708352 ();
 extern "C" void MonoIO_Write_m962594400 ();
 extern "C" void Path_GetFullPathName_m1918736699 ();
+extern "C" void Path_findExtension_m910255017 ();
 extern "C" void U3CU3Ec_U3CBeginEndReadAsyncU3Eb__43_1_m2320513982 ();
 extern "C" void U3CU3Ec_U3CBeginReadInternalU3Eb__39_0_m2400093275 ();
 extern "C" void U3CU3Ec_U3CBeginWriteInternalU3Eb__46_0_m1491736312 ();
@@ -3524,6 +4427,8 @@ extern "C" void SynchronousAsyncResult_EndRead_m2119718149 ();
 extern "C" void Stream_BlockingEndRead_m3138371175 ();
 extern "C" void Stream_EndRead_m1896469262 ();
 extern "C" void Stream_ReadByte_m4291052673 ();
+extern "C" void Stream_get_ReadTimeout_m2137060894 ();
+extern "C" void Stream_get_WriteTimeout_m3852257656 ();
 extern "C" void NullStreamReader_Peek_m1755552867 ();
 extern "C" void NullStreamReader_Read_m3851775014 ();
 extern "C" void NullStreamReader_Read_m4144924479 ();
@@ -3533,7 +4438,12 @@ extern "C" void StreamReader_Read_m2554901735 ();
 extern "C" void StreamReader_Read_m830111915 ();
 extern "C" void StreamReader_ReadBuffer_m761134843 ();
 extern "C" void StreamReader_ReadBuffer_m1682103302 ();
+extern "C" void StreamReader_get_ByteLen_Prop_m2263083693 ();
+extern "C" void StreamReader_get_BytePos_Prop_m1043021894 ();
+extern "C" void StreamReader_get_CharLen_Prop_m3062425732 ();
+extern "C" void StreamReader_get_CharPos_Prop_m398520611 ();
 extern "C" void StreamReader_get_DefaultBufferSize_m2942779619 ();
+extern "C" void StreamReader_get_MaxCharsPerBuffer_Prop_m780069032 ();
 extern "C" void StringReader_Peek_m3605235793 ();
 extern "C" void StringReader_Read_m3322058819 ();
 extern "C" void StringReader_Read_m478895463 ();
@@ -3559,6 +4469,7 @@ extern "C" void Int32_CompareTo_m4284770383_AdjustorThunk ();
 extern "C" void Int32_CompareTo_m2864982090_AdjustorThunk ();
 extern "C" void Int32_GetHashCode_m1876651407_AdjustorThunk ();
 extern "C" void Int32_Parse_m1033611559 ();
+extern "C" void Int32_Parse_m2244041137 ();
 extern "C" void Int32_Parse_m3682462547 ();
 extern "C" void Int32_Parse_m2087562008 ();
 extern "C" void Int32_System_IConvertible_ToInt32_m265310525_AdjustorThunk ();
@@ -3578,10 +4489,101 @@ extern "C" void Math_Min_m3468062251 ();
 extern "C" void AttributeInfo_get_InheritanceLevel_m1477952822 ();
 extern "C" void MulticastDelegate_GetHashCode_m3864330728 ();
 extern "C" void MulticastDelegate_LastIndexOf_m3242225077 ();
+extern "C" void CaseInsensitiveAscii_Compare_m1652199145 ();
+extern "C" void CaseInsensitiveAscii_FastGetHashCode_m2310971705 ();
+extern "C" void CaseInsensitiveAscii_GetHashCode_m3921352001 ();
+extern "C" void Comparer_System_Collections_IComparer_Compare_m619915158 ();
+extern "C" void Cookie_GetHashCode_m4036932073 ();
+extern "C" void Cookie_get_Version_m940319904 ();
+extern "C" void CookieCollection_IndexOf_m57857903 ();
+extern "C" void CookieCollection_InternalAdd_m3642455922 ();
+extern "C" void CookieCollection_get_Count_m3988188318 ();
+extern "C" void CookieContainer_ExpireCollection_m3339691179 ();
+extern "C" void CredentialKey_GetHashCode_m1804988110 ();
+extern "C" void FileWebRequest_get_Timeout_m3510043324 ();
+extern "C" void FileWebStream_EndRead_m3063776554 ();
+extern "C" void FileWebStream_Read_m3672124602 ();
+extern "C" void ReadDelegate_EndInvoke_m2502569465 ();
+extern "C" void ReadDelegate_Invoke_m1244157056 ();
+extern "C" void FtpDataStream_EndRead_m2026651420 ();
+extern "C" void FtpDataStream_Read_m2042823585 ();
+extern "C" void FtpDataStream_ReadInternal_m1445022698 ();
+extern "C" void FtpWebRequest_GetPortV4_m1101806239 ();
+extern "C" void FtpWebRequest_GetPortV6_m2609849329 ();
+extern "C" void FtpWebRequest_get_ReadWriteTimeout_m1510839785 ();
+extern "C" void FtpWebRequest_get_Timeout_m2535696897 ();
+extern "C" void HttpWebRequest_get_ReadWriteTimeout_m289624615 ();
+extern "C" void HttpWebRequest_get_Timeout_m1527929571 ();
 extern "C" void IPAddress_GetHashCode_m1210636859 ();
+extern "C" void IPEndPoint_GetHashCode_m3458818862 ();
+extern "C" void IPEndPoint_get_Port_m2842923226 ();
+extern "C" void Chunk_Read_m1899323248 ();
+extern "C" void MonoChunkStream_Read_m2449136904 ();
+extern "C" void MonoChunkStream_ReadFromChunks_m189318239 ();
+extern "C" void MonoChunkStream_get_ChunkLeft_m2121264135 ();
+extern "C" void CommonUnixIPGlobalProperties_getdomainname_m1181469814 ();
+extern "C" void Win32NetworkInterface_GetNetworkParams_m2297365948 ();
+extern "C" void PathListComparer_System_Collections_IComparer_Compare_m3318255939 ();
+extern "C" void PathList_GetCookiesCount_m4012631531 ();
+extern "C" void PathList_get_Count_m669527148 ();
 extern "C" void SslStream_EndRead_m3563632709 ();
 extern "C" void SslStream_Read_m576235997 ();
+extern "C" void SslStream_get_ReadTimeout_m583510994 ();
+extern "C" void SslStream_get_WriteTimeout_m111948981 ();
+extern "C" void ServicePoint_get_ConnectionLimit_m3279274329 ();
+extern "C" void SPKey_GetHashCode_m1832733826 ();
+extern "C" void ServicePointManager_get_DnsRefreshTimeout_m2777228149 ();
+extern "C" void SocketAddress_GetHashCode_m1436747884 ();
+extern "C" void SocketAddress_get_Size_m3420662108 ();
+extern "C" void NetworkStream_EndRead_m1637001035 ();
+extern "C" void NetworkStream_Read_m89488240 ();
+extern "C" void NetworkStream_get_ReadTimeout_m266050210 ();
+extern "C" void NetworkStream_get_WriteTimeout_m936731250 ();
+extern "C" void Socket_EndReceive_m2385446150 ();
+extern "C" void Socket_EndReceive_m3009256849 ();
+extern "C" void Socket_EndReceiveFrom_m1036960845 ();
+extern "C" void Socket_EndSend_m2816431255 ();
+extern "C" void Socket_EndSend_m1244041542 ();
+extern "C" void Socket_EndSendTo_m3552536842 ();
+extern "C" void Socket_IOControl_m449145276 ();
+extern "C" void Socket_IOControl_m2060869247 ();
+extern "C" void Socket_IOControl_internal_m676748339 ();
+extern "C" void Socket_IOControl_internal_m3809077560 ();
+extern "C" void Socket_Receive_m3794758455 ();
+extern "C" void Socket_Receive_m840169338 ();
+extern "C" void Socket_Receive_m2722177980 ();
+extern "C" void Socket_Receive_m2053758874 ();
+extern "C" void Socket_ReceiveFrom_m4213975345 ();
+extern "C" void Socket_ReceiveFrom_internal_m3325136542 ();
+extern "C" void Socket_ReceiveFrom_internal_m3020781080 ();
+extern "C" void Socket_Receive_internal_m1850300390 ();
+extern "C" void Socket_Receive_internal_m1041794929 ();
+extern "C" void Socket_Receive_internal_m3910046341 ();
+extern "C" void Socket_Receive_internal_m1088206903 ();
+extern "C" void Socket_Send_m2509318470 ();
+extern "C" void Socket_Send_m576183475 ();
+extern "C" void Socket_Send_m1328269865 ();
+extern "C" void Socket_Send_m4178278673 ();
+extern "C" void Socket_Send_internal_m3843698549 ();
+extern "C" void Socket_Send_internal_m3765077036 ();
+extern "C" void Socket_Send_internal_m796698044 ();
+extern "C" void Socket_Send_internal_m1960113657 ();
+extern "C" void Socket_get_FamilyHint_m2256720159 ();
 extern "C" void SocketException_WSAGetLastError_internal_m1236276956 ();
+extern "C" void WebAsyncResult_get_NBytes_m1181398750 ();
+extern "C" void WebAsyncResult_get_Offset_m368370234 ();
+extern "C" void WebAsyncResult_get_Size_m4148452880 ();
+extern "C" void WebConnection_EndRead_m3553040041 ();
+extern "C" void WebConnection_EnsureRead_m1250887662 ();
+extern "C" void WebConnection_GetResponse_m3731018748 ();
+extern "C" void WebConnection_Read_m1054701704 ();
+extern "C" void WebConnectionStream_EndRead_m3979704604 ();
+extern "C" void WebConnectionStream_Read_m4279029041 ();
+extern "C" void WebConnectionStream_get_ReadTimeout_m410091343 ();
+extern "C" void WebConnectionStream_get_WriteBufferLength_m2987307428 ();
+extern "C" void WebConnectionStream_get_WriteTimeout_m2819824264 ();
+extern "C" void WebHeaderCollection_get_Count_m3224978046 ();
+extern "C" void WebRequest_get_Timeout_m195273593 ();
 extern "C" void Number_ParseInt32_m2921977585 ();
 extern "C" void NumberFormatter_CountTrailingZeros_m1178387884 ();
 extern "C" void NumberFormatter_CountTrailingZeros_m1036924976 ();
@@ -3606,6 +4608,7 @@ extern "C" void ParameterizedStrings_snprintf_m2214825040 ();
 extern "C" void ParamsArray_get_Length_m2066088949_AdjustorThunk ();
 extern "C" void ParseNumbers_StringToInt_m4226374370 ();
 extern "C" void ParseNumbers_StringToInt_m3391431632 ();
+extern "C" void Platform_uname_m3913857930 ();
 extern "C" void Random_InternalSample_m1821740210 ();
 extern "C" void Random_Next_m622212209 ();
 extern "C" void Random_Next_m2295149237 ();
@@ -3653,6 +4656,7 @@ extern "C" void GCHandle_GetHashCode_m2446251778_AdjustorThunk ();
 extern "C" void GCHandle_GetTargetHandle_m423901123 ();
 extern "C" void Marshal_GetHRForException_m813614142 ();
 extern "C" void Marshal_GetLastWin32Error_m1272610344 ();
+extern "C" void Marshal_ReadInt32_m3638363878 ();
 extern "C" void Marshal_Release_m3880542832 ();
 extern "C" void Marshal_ReleaseInternal_m4147013606 ();
 extern "C" void Marshal_SizeOf_m3069307747 ();
@@ -3704,11 +4708,20 @@ extern "C" void SByte_CompareTo_m3835733927_AdjustorThunk ();
 extern "C" void SByte_CompareTo_m2441919575_AdjustorThunk ();
 extern "C" void SByte_GetHashCode_m2824841835_AdjustorThunk ();
 extern "C" void SByte_System_IConvertible_ToInt32_m1636694485_AdjustorThunk ();
+extern "C" void AesCryptoServiceProvider_get_FeedbackSize_m1042259489 ();
+extern "C" void AesCryptoServiceProvider_get_KeySize_m1957235978 ();
+extern "C" void AesManaged_get_FeedbackSize_m2153614958 ();
+extern "C" void AesManaged_get_KeySize_m1181452829 ();
 extern "C" void AsymmetricAlgorithm_get_KeySize_m2113907895 ();
+extern "C" void CryptoStream_Read_m27131851 ();
 extern "C" void DSACryptoServiceProvider_get_KeySize_m786836990 ();
 extern "C" void HMAC_get_BlockSizeValue_m455678067 ();
+extern "C" void HMACSHA384_get_BlockSize_m580913546 ();
+extern "C" void HMACSHA512_get_BlockSize_m1501243993 ();
 extern "C" void HashAlgorithm_TransformBlock_m4006041779 ();
 extern "C" void HashAlgorithm_get_HashSize_m1025185937 ();
+extern "C" void HashAlgorithm_get_InputBlockSize_m257350079 ();
+extern "C" void HashAlgorithm_get_OutputBlockSize_m750814790 ();
 extern "C" void KeySizes_get_MaxSize_m3897255827 ();
 extern "C" void KeySizes_get_MinSize_m1903718763 ();
 extern "C" void KeySizes_get_SkipSize_m2783487614 ();
@@ -3718,17 +4731,33 @@ extern "C" void RC2_get_EffectiveKeySize_m285632245 ();
 extern "C" void RC2_get_KeySize_m146781412 ();
 extern "C" void RC2CryptoServiceProvider_get_EffectiveKeySize_m3835262416 ();
 extern "C" void RSACryptoServiceProvider_get_KeySize_m2654153358 ();
+extern "C" void RijndaelManagedTransform_DecryptData_m4104717438 ();
+extern "C" void RijndaelManagedTransform_EncryptData_m1478679353 ();
+extern "C" void RijndaelManagedTransform_MulX_m503147123 ();
+extern "C" void RijndaelManagedTransform_SubWord_m3684667904 ();
+extern "C" void RijndaelManagedTransform_TransformBlock_m1610137419 ();
+extern "C" void RijndaelManagedTransform_get_InputBlockSize_m435716830 ();
+extern "C" void RijndaelManagedTransform_get_OutputBlockSize_m2021582601 ();
+extern "C" void RijndaelManagedTransform_rot1_m2335601179 ();
+extern "C" void RijndaelManagedTransform_rot2_m2335959644 ();
+extern "C" void RijndaelManagedTransform_rot3_m2335923773 ();
 extern "C" void SymmetricAlgorithm_get_BlockSize_m3551721617 ();
 extern "C" void SymmetricAlgorithm_get_FeedbackSize_m3666584308 ();
 extern "C" void SymmetricAlgorithm_get_KeySize_m4185004893 ();
+extern "C" void TailStream_Read_m1890787708 ();
 extern "C" void Utils_ConvertByteArrayToInt_m883068143 ();
 extern "C" void X509BasicConstraintsExtension_get_PathLengthConstraint_m1198369084 ();
+extern "C" void X509Certificate2_get_Version_m2534012675 ();
+extern "C" void X509Certificate2ImplMono_get_Version_m199339614 ();
 extern "C" void X509Certificate_GetHashCode_m3969199094 ();
+extern "C" void X509CertificateCollection_Add_m907905475 ();
 extern "C" void X509CertificateCollection_GetHashCode_m1953348376 ();
 extern "C" void X509CertificateImpl_GetHashCode_m3856895821 ();
 extern "C" void X509CertificateImplCollection_get_Count_m48198922 ();
 extern "C" void X509ChainElementCollection_get_Count_m1678779750 ();
+extern "C" void X509ExtensionCollection_get_Count_m3589967016 ();
 extern "C" void Evidence_get_Count_m4079441921 ();
+extern "C" void SecureString_get_Length_m2668828297 ();
 extern "C" void SecurityDocument_EncodedStringSize_m1895392735 ();
 extern "C" void Parser_DetermineFormat_m2454869699 ();
 extern "C" void StreamTokenReader_Read_m1330533836 ();
@@ -3740,6 +4769,7 @@ extern "C" void Single_GetHashCode_m1558506138_AdjustorThunk ();
 extern "C" void Single_System_IConvertible_ToInt32_m872115569_AdjustorThunk ();
 extern "C" void String_Compare_m3831643854 ();
 extern "C" void String_Compare_m1966407346 ();
+extern "C" void String_Compare_m1071830722 ();
 extern "C" void String_Compare_m1293271421 ();
 extern "C" void String_Compare_m3203413707 ();
 extern "C" void String_CompareOrdinal_m1012192092 ();
@@ -4002,6 +5032,7 @@ extern "C" void UnicodeEncoding_GetChars_m3561826263 ();
 extern "C" void UnicodeEncoding_GetHashCode_m354003420 ();
 extern "C" void UnicodeEncoding_GetMaxByteCount_m3053620432 ();
 extern "C" void UnicodeEncoding_GetMaxCharCount_m1592623696 ();
+extern "C" void AtomicBoolean_GetHashCode_m908361725 ();
 extern "C" void CancellationToken_GetHashCode_m1602930091_AdjustorThunk ();
 extern "C" void CancellationTokenRegistration_GetHashCode_m1751857596_AdjustorThunk ();
 extern "C" void CancellationTokenSource_get_ThreadIDExecutingCallbacks_m2243484164 ();
@@ -4077,6 +5108,7 @@ extern "C" void Uri_CalculateCaseInsensitiveHashCode_m1472649974 ();
 extern "C" void Uri_FromHex_m2610708947 ();
 extern "C" void Uri_GetHashCode_m321999866 ();
 extern "C" void Uri_get_Port_m184067428 ();
+extern "C" void UriBuilder_GetHashCode_m2450580240 ();
 extern "C" void UriParser_get_DefaultPort_m2544851211 ();
 extern "C" void ValueTuple_CombineHashCodes_m2782652282 ();
 extern "C" void ValueTuple_CompareTo_m2936302085_AdjustorThunk ();
@@ -4173,6 +5205,11 @@ extern "C" void AnimationCurve_get_length_m1548433259 ();
 extern "C" void AttributeHelperEngine_GetDefaultExecutionOrderFor_m2255077112 ();
 extern "C" void AudioListener_GetNumExtensionProperties_m3139224773 ();
 extern "C" void AudioSource_GetNumExtensionProperties_m1231815209 ();
+extern "C" void BoneWeight_GetHashCode_m2108060355_AdjustorThunk ();
+extern "C" void BoneWeight_get_boneIndex0_m1574980135_AdjustorThunk ();
+extern "C" void BoneWeight_get_boneIndex1_m1574914599_AdjustorThunk ();
+extern "C" void BoneWeight_get_boneIndex2_m1574849063_AdjustorThunk ();
+extern "C" void BoneWeight_get_boneIndex3_m1574783527_AdjustorThunk ();
 extern "C" void Bounds_GetHashCode_m1844059663_AdjustorThunk ();
 extern "C" void Camera_GetAllCameras_m668492922 ();
 extern "C" void Camera_GetAllCamerasCount_m2278705835 ();
@@ -4282,8 +5319,12 @@ extern "C" void Mathf_NextPowerOfTwo_m1637187628 ();
 extern "C" void Mathf_RoundToInt_m1874334613 ();
 extern "C" void Matrix4x4_GetHashCode_m4034747639_AdjustorThunk ();
 extern "C" void Mesh_DefaultDimensionForChannel_m576040980 ();
+extern "C" void Mesh_GetBlendShapeFrameCount_m1794976068 ();
+extern "C" void Mesh_get_blendShapeCount_m1891235216 ();
 extern "C" void Mesh_get_subMeshCount_m3992802841 ();
 extern "C" void Mesh_get_vertexCount_m884140614 ();
+extern "C" void UnityWebRequest_GetTimeoutMsec_m3466682689 ();
+extern "C" void UnityWebRequest_get_timeout_m2314066168 ();
 extern "C" void NoAllocHelpers_SafeLength_m3994544446 ();
 extern "C" void Object_GetHashCode_m1944636947 ();
 extern "C" void Object_GetInstanceID_m1255174761 ();
@@ -4417,6 +5458,18 @@ extern "C" void Vector3Int_get_x_m3022184941_AdjustorThunk ();
 extern "C" void Vector3Int_get_y_m3022184942_AdjustorThunk ();
 extern "C" void Vector3Int_get_z_m3022184939_AdjustorThunk ();
 extern "C" void Vector4_GetHashCode_m536821243_AdjustorThunk ();
+extern "C" void BorderVertexComparer_Compare_m521191365 ();
+extern "C" void MeshSimplifier_get_BlendShapeCount_m940161621 ();
+extern "C" void MeshSimplifier_get_MaxIterationCount_m1471737111 ();
+extern "C" void MeshSimplifier_get_SubMeshCount_m3647804822 ();
+extern "C" void MeshUtils_GetUsedUVComponents_m1178065395 ();
+extern "C" void ToleranceSphere_get_initialEnclosedTrianglesCount_m619195682 ();
+extern "C" void ToleranceSphere_get_leastTrianglesCount_m3642666427 ();
+extern "C" void Triangle_GetAttributeIndex_m3468463477 ();
+extern "C" void Triangle_GetHashCode_m2468551349 ();
+extern "C" void Triangle_get_Item_m682153601 ();
+extern "C" void Vector3d_GetHashCode_m2778650559_AdjustorThunk ();
+extern "C" void Vertex_GetHashCode_m111307803 ();
 extern "C" void CameraMotionBlur_divRoundUp_m2155025214 ();
 extern "C" void DepthOfFieldDeprecated_GetDividerBasedOnQuality_m3329640183 ();
 extern "C" void DepthOfFieldDeprecated_GetLowResolutionDividerBasedOnQuality_m1153573643 ();
@@ -4430,6 +5483,7 @@ extern "C" void NumberFormatInfo_get_CurrencyGroupSizes_m4277438361 ();
 extern "C" void NumberFormatInfo_get_NumberGroupSizes_m380700070 ();
 extern "C" void NumberFormatInfo_get_PercentGroupSizes_m2638339535 ();
 extern "C" void TaiwanCalendar_get_Eras_m634152241 ();
+extern "C" void Cookie_get_PortList_m712992926 ();
 extern "C" void ValueTypeFixupInfo_get_ParentIndex_m3451536119 ();
 extern "C" void TMP_FontAsset_GetCharactersArray_m3102877706 ();
 extern "C" void TMP_Style_get_styleClosingTagArray_m2112580620 ();
@@ -4439,8 +5493,12 @@ extern "C" void AdditionalShadowData_GetShadowData_m1397452025 ();
 extern "C" void Mesh_GetIndices_m2873123901 ();
 extern "C" void Mesh_GetIndices_m1466450660 ();
 extern "C" void Mesh_GetIndicesImpl_m3233954035 ();
+extern "C" void Mesh_GetTriangles_m973693202 ();
+extern "C" void Mesh_GetTriangles_m3335994153 ();
 extern "C" void Mesh_GetTrianglesImpl_m1492496479 ();
 extern "C" void Mesh_get_triangles_m3059934743 ();
+extern "C" void MeshSimplifier_GetSubMeshTriangles_m2484914691 ();
+extern "C" void MeshSimplifier_GetAllSubMeshTriangles_m2449508547 ();
 extern "C" void KeyHandler_GetRegisteredBootTime_m3471934269 ();
 extern "C" void KeyHandler_GetSystemBootTime_m2387166859 ();
 extern "C" void MobileAuthenticatedStream_Seek_m3503029717 ();
@@ -4473,7 +5531,10 @@ extern "C" void DateTime_DateToTicks_m2164983130 ();
 extern "C" void DateTime_GetSystemTimeAsFileTime_m2411511003 ();
 extern "C" void DateTime_System_IConvertible_ToInt64_m850544508_AdjustorThunk ();
 extern "C" void DateTime_TimeToTicks_m1288320201 ();
+extern "C" void DateTime_ToBinary_m1193069875_AdjustorThunk ();
 extern "C" void DateTime_ToBinaryRaw_m1783595006_AdjustorThunk ();
+extern "C" void DateTime_ToFileTime_m215920971_AdjustorThunk ();
+extern "C" void DateTime_ToFileTimeUtc_m398715979_AdjustorThunk ();
 extern "C" void DateTime_get_InternalTicks_m407588505_AdjustorThunk ();
 extern "C" void DateTime_get_Ticks_m1550640881_AdjustorThunk ();
 extern "C" void Decimal_System_IConvertible_ToInt64_m1446427516_AdjustorThunk ();
@@ -4485,6 +5546,12 @@ extern "C" void GregorianCalendarHelper_DateToTicks_m4080708574 ();
 extern "C" void GregorianCalendarHelper_GetAbsoluteDate_m3213748685 ();
 extern "C" void GregorianCalendarHelper_TimeToTicks_m1176068362 ();
 extern "C" void BinaryReader_ReadInt64_m939370142 ();
+extern "C" void DeflateStream_Seek_m3685451449 ();
+extern "C" void DeflateStream_get_Length_m1099282904 ();
+extern "C" void DeflateStream_get_Position_m1563329739 ();
+extern "C" void GZipStream_Seek_m383901059 ();
+extern "C" void GZipStream_get_Length_m3140588920 ();
+extern "C" void GZipStream_get_Position_m3655800481 ();
 extern "C" void FileStream_Seek_m2017853129 ();
 extern "C" void FileStream_get_Length_m426703983 ();
 extern "C" void FileStream_get_Position_m3002807042 ();
@@ -4511,13 +5578,27 @@ extern "C" void Int64_System_IConvertible_ToInt64_m1560218307_AdjustorThunk ();
 extern "C" void IntPtr_ToInt64_m192765549_AdjustorThunk ();
 extern "C" void LocalDataStoreElement_get_Cookie_m4110983829 ();
 extern "C" void LocalDataStoreSlot_get_Cookie_m1496406513 ();
+extern "C" void FileWebRequest_get_ContentLength_m1073763698 ();
+extern "C" void FtpDataStream_Seek_m2525604345 ();
+extern "C" void FtpDataStream_get_Length_m853866729 ();
+extern "C" void FtpDataStream_get_Position_m1472390831 ();
+extern "C" void FtpWebRequest_get_ContentLength_m1315791521 ();
+extern "C" void HttpWebRequest_get_ContentLength_m1719441816 ();
 extern "C" void IPAddress_get_ScopeId_m4237202723 ();
 extern "C" void SslStream_Seek_m2499592124 ();
 extern "C" void SslStream_get_Length_m1403894209 ();
 extern "C" void SslStream_get_Position_m2568970827 ();
+extern "C" void NetworkStream_Seek_m873044447 ();
+extern "C" void NetworkStream_get_Length_m2134439603 ();
+extern "C" void NetworkStream_get_Position_m4060665641 ();
+extern "C" void WebConnectionStream_Seek_m3960780793 ();
+extern "C" void WebConnectionStream_get_Length_m750039804 ();
+extern "C" void WebConnectionStream_get_Position_m2559024493 ();
+extern "C" void WebRequest_get_ContentLength_m47669036 ();
 extern "C" void Number_ParseInt64_m2940187703 ();
 extern "C" void NumberFormatter_GetTenPowerOf_m3725144548 ();
 extern "C" void ParseNumbers_StringToLong_m2176311858 ();
+extern "C" void Marshal_ReadInt64_m3518540566 ();
 extern "C" void FormatterConverter_ToInt64_m495840699 ();
 extern "C" void ObjectReader_GetId_m2422777517 ();
 extern "C" void ObjectWriter_GetAssemblyId_m1704123689 ();
@@ -4532,6 +5613,12 @@ extern "C" void ObjectIDGenerator_HasId_m2325309976 ();
 extern "C" void SerializationInfo_GetInt64_m2503729515 ();
 extern "C" void ValueTypeFixupInfo_get_ContainerID_m1035224420 ();
 extern "C" void SByte_System_IConvertible_ToInt64_m2107229906_AdjustorThunk ();
+extern "C" void CryptoStream_Seek_m575242055 ();
+extern "C" void CryptoStream_get_Length_m1779430739 ();
+extern "C" void CryptoStream_get_Position_m1986268930 ();
+extern "C" void TailStream_Seek_m2944265254 ();
+extern "C" void TailStream_get_Length_m1965470908 ();
+extern "C" void TailStream_get_Position_m2489596103 ();
 extern "C" void Single_System_IConvertible_ToInt64_m1650421025_AdjustorThunk ();
 extern "C" void String_System_IConvertible_ToInt64_m3494136111 ();
 extern "C" void Interlocked_CompareExchange_m1385746522 ();
@@ -4543,6 +5630,7 @@ extern "C" void TimeSpan_get_Ticks_m2137362016_AdjustorThunk ();
 extern "C" void UInt16_System_IConvertible_ToInt64_m3635199533_AdjustorThunk ();
 extern "C" void UInt32_System_IConvertible_ToInt64_m2261037378_AdjustorThunk ();
 extern "C" void UInt64_System_IConvertible_ToInt64_m4241475606_AdjustorThunk ();
+extern "C" void UnityWebRequest_get_responseCode_m1090830473 ();
 extern "C" void Profiler_GetAllocatedMemoryForGraphicsDriver_m3206053525 ();
 extern "C" void Profiler_GetTotalAllocatedMemoryLong_m1325325760 ();
 extern "C" void Profiler_GetTotalReservedMemoryLong_m800596178 ();
@@ -4551,6 +5639,31 @@ extern "C" void Recorder_get_elapsedNanoseconds_m3772087879 ();
 extern "C" void UnixRegistryApi_GetHandle_m4049701445 ();
 extern "C" void Win32RegistryApi_GetHandle_m3804948039 ();
 extern "C" void MSCompatUnicodeTable_GetResource_m731831298 ();
+extern "C" void CFArray_CFArrayGetCount_m1002749626 ();
+extern "C" void CFArray_CFArrayGetValueAtIndex_m3670347928 ();
+extern "C" void CFArray_get_Item_m411150077 ();
+extern "C" void CFDictionary_CFDictionaryGetValue_m2375246273 ();
+extern "C" void CFDictionary_GetValue_m2058097258 ();
+extern "C" void CFDictionary_get_Item_m1774255411 ();
+extern "C" void CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScript_m3303129332 ();
+extern "C" void CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScriptSequential_m924242219 ();
+extern "C" void CFNetwork_CFNetworkCopyProxiesForURL_m484828488 ();
+extern "C" void CFNetwork_CFNetworkCopySystemProxySettings_m1347893462 ();
+extern "C" void CFNetwork_CFNetworkExecuteProxyAutoConfigurationURL_m291606633 ();
+extern "C" void CFObject_CFRetain_m1826705405 ();
+extern "C" void CFObject_GetCFObjectHandle_m4202268843 ();
+extern "C" void CFObject_GetIndirect_m3832654966 ();
+extern "C" void CFObject_dlopen_m2196904543 ();
+extern "C" void CFObject_dlsym_m595782338 ();
+extern "C" void CFObject_get_Handle_m307265504 ();
+extern "C" void CFProxy_get_AutoConfigurationJavaScript_m2126828292 ();
+extern "C" void CFProxy_get_AutoConfigurationUrl_m744644921 ();
+extern "C" void CFRunLoop_CFRunLoopGetCurrent_m2892019185 ();
+extern "C" void CFString_CFStringCreateWithCharacters_m2316698363 ();
+extern "C" void CFString_CFStringGetCharacters_m175531504 ();
+extern "C" void CFString_CFStringGetCharactersPtr_m860561497 ();
+extern "C" void CFString_CFStringGetLength_m1176686223 ();
+extern "C" void CFUrl_CFURLCreateWithString_m3595712251 ();
 extern "C" void RuntimeClassHandle_GetTypeFromClass_m807974483 ();
 extern "C" void RuntimeEventHandle_get_Value_m1062083376_AdjustorThunk ();
 extern "C" void RuntimeGPtrArrayHandle_Lookup_m3313232507_AdjustorThunk ();
@@ -4570,6 +5683,10 @@ extern "C" void unitytls_tlsctx_read_callback_Invoke_m2256848271 ();
 extern "C" void unitytls_tlsctx_write_callback_EndInvoke_m3615535194 ();
 extern "C" void unitytls_tlsctx_write_callback_Invoke_m1010073999 ();
 extern "C" void UnityTls_GetUnityTlsInterface_m3854094726 ();
+extern "C" void UnityTlsContext_ReadCallback_m2637265962 ();
+extern "C" void UnityTlsContext_ReadCallback_m3273793046 ();
+extern "C" void UnityTlsContext_WriteCallback_m1810981895 ();
+extern "C" void UnityTlsContext_WriteCallback_m574372540 ();
 extern "C" void MonoIO_FindFirstFile_m3931443048 ();
 extern "C" void MonoIO_FindFirstFile_m1358799729 ();
 extern "C" void MonoIO_Open_m3880579526 ();
@@ -4580,9 +5697,22 @@ extern "C" void MonoIO_get_ConsoleOutput_m1601613425 ();
 extern "C" void IntPtr_op_Explicit_m1593216315 ();
 extern "C" void IntPtr_op_Explicit_m1593085246 ();
 extern "C" void IntPtr_op_Explicit_m536245531 ();
+extern "C" void Socket_Accept_internal_m3246009452 ();
+extern "C" void Socket_Socket_internal_m1681190592 ();
+extern "C" void Socket_get_Handle_m2249751627 ();
+extern "C" void SocketAsyncResult_get_Handle_m3169920889 ();
 extern "C" void Assembly_GetManifestResourceInternal_m1224391897 ();
 extern "C" void GCHandle_AddrOfPinnedObject_m3427142301_AdjustorThunk ();
 extern "C" void GCHandle_GetAddrOfPinnedObject_m2015802832 ();
+extern "C" void GCHandle_ToIntPtr_m3288225389 ();
+extern "C" void GCHandle_op_Explicit_m127498741 ();
+extern "C" void Marshal_AllocCoTaskMem_m1327939722 ();
+extern "C" void Marshal_AllocHGlobal_m491131085 ();
+extern "C" void Marshal_AllocHGlobal_m1179842693 ();
+extern "C" void Marshal_ReadIntPtr_m3520540806 ();
+extern "C" void Marshal_SecureStringToCoTaskMemUnicode_m693246360 ();
+extern "C" void Marshal_SecureStringToGlobalAllocUnicode_m2008075760 ();
+extern "C" void Marshal_UnsafeAddrOfPinnedArrayElement_m150120357 ();
 extern "C" void SafeHandle_DangerousGetHandle_m3697436134 ();
 extern "C" void RealProxy_GetCOMIUnknown_m1539359038 ();
 extern "C" void RealProxy_SupportsInterface_m489535339 ();
@@ -4598,6 +5728,8 @@ extern "C" void RuntimeTypeHandle_GetGenericParameterInfo_m3729660962 ();
 extern "C" void RuntimeTypeHandle_get_Value_m1525396455_AdjustorThunk ();
 extern "C" void RNGCryptoServiceProvider_RngGetBytes_m1695806698 ();
 extern "C" void RNGCryptoServiceProvider_RngInitialize_m2025286560 ();
+extern "C" void WindowsIdentity_GetCurrentToken_m841791956 ();
+extern "C" void WindowsImpersonationContext_DuplicateToken_m2331993248 ();
 extern "C" void Interlocked_CompareExchange_m3932212864 ();
 extern "C" void Interlocked_Exchange_m1377582200 ();
 extern "C" void NativeEventCalls_CreateEvent_internal_m2699526724 ();
@@ -4610,6 +5742,9 @@ extern "C" void GUIStyle_Internal_Create_m2274420027 ();
 extern "C" void GUIStyleState_Init_m1843829800 ();
 extern "C" void Gradient_Init_m2499008394 ();
 extern "C" void MaterialPropertyBlock_CreateImpl_m770231657 ();
+extern "C" void DownloadHandlerBuffer_Create_m1196797347 ();
+extern "C" void UnityWebRequest_Create_m1328190473 ();
+extern "C" void UploadHandlerRaw_Create_m2571854625 ();
 extern "C" void Object_GetCachedPtr_m151292858 ();
 extern "C" void RectOffset_InternalCreate_m1442450486 ();
 extern "C" void CommandBuffer_CreateGPUFence_Internal_m3096465777 ();
@@ -4632,11 +5767,220 @@ extern "C" void RealProxy_DetachServer_m2659254781 ();
 extern "C" void RealProxy_GetUnwrappedServer_m3118312093 ();
 extern "C" void SingletonIdentity_GetServerObject_m4017943093 ();
 extern "C" void Delegate_AllocDelegateLike_internal_m494838883 ();
+extern "C" void NtlmClient_Authenticate_m3788011141 ();
+extern "C" void NtlmClient_PreAuthenticate_m3480122211 ();
+extern "C" void NtlmSession_Authenticate_m3073397663 ();
+extern "C" void AuthenticationManager_Authenticate_m220441371 ();
+extern "C" void AuthenticationManager_DoAuthenticate_m167986645 ();
+extern "C" void AuthenticationManager_PreAuthenticate_m1971834472 ();
+extern "C" void BasicClient_Authenticate_m4006824009 ();
+extern "C" void BasicClient_InternalAuthenticate_m2040421753 ();
+extern "C" void BasicClient_PreAuthenticate_m4235346218 ();
+extern "C" void DigestClient_Authenticate_m568073821 ();
+extern "C" void DigestClient_PreAuthenticate_m2772445502 ();
+extern "C" void DigestSession_Authenticate_m842272638 ();
+extern "C" void NtlmClient_Authenticate_m3658344546 ();
+extern "C" void NtlmClient_PreAuthenticate_m476806672 ();
+extern "C" void WebProxy_get_ScriptEngine_m3661054305 ();
+extern "C" void DefaultProxySectionInternal_GetSection_m384150699 ();
+extern "C" void SettingsSectionInternal_get_Section_m1539574765 ();
+extern "C" void CookieCollection_get_Item_m2278675250 ();
+extern "C" void CookieParser_Get_m3159593224 ();
+extern "C" void CookieContainer_CookieCutter_m2390028045 ();
+extern "C" void CookieContainer_InternalGetCookies_m3783736142 ();
+extern "C" void RecognizedAttribute_get_Token_m2610969802_AdjustorThunk ();
+extern "C" void CookieTokenizer_FindNext_m1223825793 ();
+extern "C" void CookieTokenizer_Next_m71221901 ();
+extern "C" void CookieTokenizer_TokenFromName_m37240203 ();
+extern "C" void CookieTokenizer_get_Token_m3873020637 ();
+extern "C" void Cookie_get_Variant_m1454309833 ();
+extern "C" void HeaderVariantInfo_get_Variant_m2835642499_AdjustorThunk ();
+extern "C" void HttpWebRequest_get_AutomaticDecompression_m4238495726 ();
+extern "C" void EndPoint_Create_m1199447448 ();
+extern "C" void IPEndPoint_Create_m2430938779 ();
+extern "C" void Socket_get_LocalEndPoint_m456692531 ();
+extern "C" void FtpWebRequest_GetResponseStatus_m3460206581 ();
+extern "C" void FtpWebRequest_SendCommand_m3628069055 ();
+extern "C" void FtpWebRequest_SendCommand_m2533286792 ();
+extern "C" void FtpWebRequest_ServiceNotAvailable_m4410319 ();
+extern "C" void FtpStatus_get_StatusCode_m1935822399 ();
+extern "C" void FtpWebRequest_get_State_m269588234 ();
+extern "C" void FtpAsyncResult_get_Response_m559123986 ();
+extern "C" void HeaderInfoTable_get_Item_m1854174928 ();
+extern "C" void HttpWebResponse_get_StatusCode_m3435907869 ();
+extern "C" void MonoTlsStream_get_Request_m62998229 ();
+extern "C" void WebConnectionData_get_request_m2565424488 ();
+extern "C" void AuthorizationState_get_NtlmAuthState_m3351126274_AdjustorThunk ();
+extern "C" void WebAsyncResult_get_Response_m931788217 ();
+extern "C" void ServicePointManager_GetLegacyCertificatePolicy_m1373482136 ();
+extern "C" void CFWebProxy_get_Credentials_m2623016350 ();
+extern "C" void CredentialCache_get_DefaultCredentials_m1013927782 ();
+extern "C" void EmptyWebProxy_get_Credentials_m2412659262 ();
+extern "C" void FileWebRequest_get_Credentials_m911512064 ();
+extern "C" void FtpWebRequest_get_Credentials_m2084048291 ();
+extern "C" void HttpWebRequest_get_Credentials_m869552648 ();
+extern "C" void WebProxy_get_Credentials_m4043769984 ();
+extern "C" void WebProxyWrapperOpaque_get_Credentials_m4219336078 ();
+extern "C" void WebRequest_get_Credentials_m338312678 ();
+extern "C" void IPAddress_InternalParse_m2099847741 ();
+extern "C" void IPAddress_MapToIPv6_m4027273287 ();
+extern "C" void IPAddress_Parse_m2200822423 ();
+extern "C" void IPEndPoint_get_Address_m834732349 ();
+extern "C" void SocketAddress_GetIPAddress_m1387719498 ();
+extern "C" void IPHostEntry_get_AddressList_m1351062776 ();
+extern "C" void NclUtilities_get_LocalAddresses_m4204406609 ();
+extern "C" void BindIPEndPoint_EndInvoke_m955039265 ();
+extern "C" void BindIPEndPoint_Invoke_m1788714159 ();
+extern "C" void SocketAddress_GetIPEndPoint_m836939424 ();
+extern "C" void Socket_RemapIPEndPoint_m3015939529 ();
+extern "C" void Dns_GetHostByAddressFromString_m2538152794 ();
+extern "C" void Dns_GetHostByName_m3261817827 ();
+extern "C" void Dns_GetHostEntry_m3727355895 ();
+extern "C" void Dns_GetHostEntry_m2165252375 ();
+extern "C" void Dns_hostent_to_IPHostEntry_m1060477774 ();
+extern "C" void NclUtilities_GetLocalHost_m2515270477 ();
+extern "C" void ServicePoint_get_HostEntry_m1249515277 ();
+extern "C" void CFNetwork_GetDefaultProxy_m3029574576 ();
+extern "C" void DefaultProxySectionInternal_GetDefaultProxy_UsingOldMonoCode_m2986865109 ();
+extern "C" void DefaultProxySectionInternal_GetSystemWebProxy_m729512686 ();
+extern "C" void DefaultProxySectionInternal_get_WebProxy_m3484180234 ();
+extern "C" void FileWebRequest_get_Proxy_m1145630604 ();
+extern "C" void FtpWebRequest_get_Proxy_m3203187140 ();
+extern "C" void GlobalProxySelection_GetEmptyWebProxy_m773174980 ();
+extern "C" void GlobalProxySelection_get_Select_m3427048860 ();
+extern "C" void HttpWebRequest_get_Proxy_m96405923 ();
+extern "C" void WebProxy_CreateDefaultProxy_m3620105084 ();
+extern "C" void WebRequest_get_DefaultWebProxy_m4155870144 ();
+extern "C" void WebRequest_get_InternalDefaultWebProxy_m1982940918 ();
+extern "C" void WebRequest_get_Proxy_m317269301 ();
+extern "C" void WebRequestPrefixElement_get_Creator_m447103823 ();
+extern "C" void KnownHttpVerb_Parse_m2549705968 ();
+extern "C" void LazyAsyncResult_get_CurrentThreadContext_m1285677760 ();
+extern "C" void MonoChunkStream_GetChunkSize_m973709835 ();
+extern "C" void MonoChunkStream_ReadBody_m1177550691 ();
+extern "C" void MonoChunkStream_ReadCRLF_m2919855902 ();
+extern "C" void MonoChunkStream_ReadTrailer_m3812543480 ();
+extern "C" void CredentialCache_GetCredential_m3066571691 ();
+extern "C" void NetworkCredential_GetCredential_m3997853042 ();
+extern "C" void WebConnection_get_NtlmCredential_m2384740598 ();
+extern "C" void IPGlobalProperties_GetIPGlobalProperties_m3740523740 ();
+extern "C" void IPGlobalProperties_InternalGetIPGlobalProperties_m2092566057 ();
+extern "C" void Win32NetworkInterface_get_FixedInfo_m3715854652 ();
+extern "C" void WebConnectionData_get_ReadState_m4024752547 ();
+extern "C" void MobileAuthenticatedStream_get_AuthenticatedStream_m1691169205 ();
+extern "C" void CallbackHelpers_MonoToInternal_m1710200631 ();
+extern "C" void CallbackHelpers_MonoToPublic_m3981770249 ();
+extern "C" void ServerCertValidationCallback_get_ValidationCallback_m3775939199 ();
+extern "C" void ServicePointManager_get_ServerCertificateValidationCallback_m984921647 ();
+extern "C" void ServicePointManager_get_SecurityProtocol_m4259357356 ();
+extern "C" void HttpWebRequest_get_ServerCertValidationCallback_m1368859789 ();
+extern "C" void ServicePointManager_get_ServerCertValidationCallback_m261155263 ();
+extern "C" void FtpWebRequest_GetServicePoint_m2343154667 ();
+extern "C" void FtpWebRequest_get_ServicePoint_m2462547689 ();
+extern "C" void HttpWebRequest_GetServicePoint_m2640244283 ();
+extern "C" void HttpWebRequest_get_ServicePoint_m1080482337 ();
+extern "C" void HttpWebRequest_get_ServicePointNoLock_m1614107899 ();
+extern "C" void ServicePointManager_FindServicePoint_m4119451290 ();
+extern "C" void ConnectionState_get_ServicePoint_m2205514463 ();
+extern "C" void EndPoint_Serialize_m2876280324 ();
+extern "C" void IPEndPoint_Serialize_m504081642 ();
+extern "C" void Socket_LocalEndPoint_internal_m3061712115 ();
+extern "C" void Socket_LocalEndPoint_internal_m1475836735 ();
+extern "C" void EndPoint_get_AddressFamily_m2518972320 ();
+extern "C" void IPAddress_get_AddressFamily_m1010663936 ();
+extern "C" void IPEndPoint_get_AddressFamily_m744740897 ();
+extern "C" void SocketAddress_get_Family_m3641031639 ();
+extern "C" void Socket_get_AddressFamily_m51841532 ();
+extern "C" void Socket_get_ProtocolType_m1935110519 ();
+extern "C" void Socket_Accept_internal_m868353226 ();
+extern "C" void FtpWebRequest_InitDataConnection_m1033696962 ();
+extern "C" void FtpWebRequest_SetupPassiveConnection_m1074084270 ();
+extern "C" void Socket_Accept_m4157022177 ();
+extern "C" void Socket_EndAccept_m1313896210 ();
+extern "C" void Socket_EndAccept_m2591091503 ();
+extern "C" void SocketAsyncEventArgs_get_AcceptSocket_m2976413550 ();
+extern "C" void Socket_ValidateEndIAsyncResult_m3260976934 ();
+extern "C" void SocketAsyncResult_get_ErrorCode_m3197843861 ();
+extern "C" void SocketException_get_SocketErrorCode_m2767669540 ();
+extern "C" void Socket_get_SocketType_m1610605419 ();
+extern "C" void TimerThread_CreateQueue_m2900821011 ();
+extern "C" void TimerNode_get_Next_m1150785631 ();
+extern "C" void TimerNode_get_Prev_m2370560326 ();
+extern "C" void ConnectionState_get_Connection_m3295091074 ();
+extern "C" void WebConnectionGroup_CreateOrReuseConnection_m4225937228 ();
+extern "C" void WebConnectionGroup_GetConnection_m3713157279 ();
+extern "C" void WebConnectionStream_get_Connection_m3939220024 ();
+extern "C" void ServicePoint_GetConnectionGroup_m2497020374 ();
+extern "C" void ConnectionState_get_Group_m2806105227 ();
+extern "C" void WebConnectionGroup_FindIdleConnection_m4134649307 ();
+extern "C" void ExceptionHelper_get_RequestAbortedException_m1752622923 ();
+extern "C" void MonoTlsStream_get_ExceptionStatus_m2449772005 ();
+extern "C" void WebException_get_Status_m1481596798 ();
+extern "C" void FileWebRequest_get_Headers_m4152067273 ();
+extern "C" void FileWebResponse_get_Headers_m2667678104 ();
+extern "C" void FtpWebRequest_get_Headers_m335680636 ();
+extern "C" void FtpWebResponse_get_Headers_m4180562887 ();
+extern "C" void HttpWebRequest_get_Headers_m3367476308 ();
+extern "C" void HttpWebResponse_get_Headers_m1893021054 ();
+extern "C" void WebConnection_ReadHeaders_m1556875581 ();
+extern "C" void WebRequest_get_Headers_m1915717959 ();
+extern "C" void WebResponse_get_Headers_m1380453460 ();
+extern "C" void WebProxyWrapper_get_WebProxy_m2153040522 ();
+extern "C" void FileWebRequestCreator_Create_m987324668 ();
+extern "C" void FtpRequestCreator_Create_m3326083364 ();
+extern "C" void HttpRequestCreator_Create_m400548686 ();
+extern "C" void DesignerWebRequestCreate_Create_m2094132177 ();
+extern "C" void WebRequest_Create_m1521009289 ();
+extern "C" void WebRequest_Create_m2603246108 ();
+extern "C" void WebRequest_Create_m2007167695 ();
+extern "C" void FileWebRequest_EndGetResponse_m1700023619 ();
+extern "C" void FileWebRequest_GetResponse_m3124097980 ();
+extern "C" void FtpWebRequest_EndGetResponse_m47755679 ();
+extern "C" void FtpWebRequest_GetResponse_m3487454795 ();
+extern "C" void HttpWebRequest_EndGetResponse_m2990303978 ();
+extern "C" void HttpWebRequest_GetResponse_m3946423754 ();
+extern "C" void WebRequest_EndGetResponse_m983572203 ();
+extern "C" void WebRequest_GetResponse_m791144225 ();
+extern "C" void ExceptionHelper_get_MethodNotImplementedException_m3246761159 ();
+extern "C" void ExceptionHelper_get_PropertyNotImplementedException_m714844147 ();
 extern "C" void PropertyInfo_CreateNIE_m3848418176 ();
+extern "C" void ExceptionHelper_get_PropertyNotSupportedException_m2873062019 ();
+extern "C" void MonoTlsSettings_get_EnabledProtocols_m3477630224 ();
+extern "C" void MonoTlsSettings_get_UseServicePointManagerCallback_m1876043725 ();
+extern "C" void MonoTlsSettings_get_CertificateValidationTime_m2983256467 ();
 extern "C" void CultureNotFoundException_get_InvalidCultureId_m1922356104 ();
+extern "C" void MeshSimplifier_GetVertexWorldPosition_m1749240226 ();
 extern "C" void NumberFormatter_GetClone_m4126883757 ();
 extern "C" void NumberFormatter_GetInstance_m3219961273 ();
 extern "C" void CustomInfo_Parse_m4163382069 ();
+extern "C" void U3CDownloadFileU3Ec__Iterator9_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3373556171 ();
+extern "C" void U3CDownloadFileU3Ec__Iterator9_System_Collections_IEnumerator_get_Current_m4148803838 ();
+extern "C" void U3CDownloadFileWebGLU3Ec__IteratorB_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3203822462 ();
+extern "C" void U3CDownloadFileWebGLU3Ec__IteratorB_System_Collections_IEnumerator_get_Current_m1296490046 ();
+extern "C" void U3CDownloadTexFileWebGLU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m753385300 ();
+extern "C" void U3CDownloadTexFileWebGLU3Ec__IteratorC_System_Collections_IEnumerator_get_Current_m347175968 ();
+extern "C" void U3CGetProgressU3Ec__IteratorA_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3331301368 ();
+extern "C" void U3CGetProgressU3Ec__IteratorA_System_Collections_IEnumerator_get_Current_m1882130736 ();
+extern "C" void U3CLoadFromNetworkWebGLU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4029991323 ();
+extern "C" void U3CLoadFromNetworkWebGLU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m2689149348 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1891724440 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m4024634486 ();
+extern "C" void U3CNetworkedBuildWebGLU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1039465446 ();
+extern "C" void U3CNetworkedBuildWebGLU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m1020462150 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m538357752 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m245048138 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3645041252 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m4286431448 ();
+extern "C" void U3CLoadOrDownloadTextU3Ec__Iterator6_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2762854541 ();
+extern "C" void U3CLoadOrDownloadTextU3Ec__Iterator6_System_Collections_IEnumerator_get_Current_m1254094889 ();
+extern "C" void U3CUnityAsyncGETRequestU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2908101688 ();
+extern "C" void U3CUnityAsyncGETRequestU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m3533462672 ();
+extern "C" void U3CUnityAsyncPOSTRequestU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m962276233 ();
+extern "C" void U3CUnityAsyncPOSTRequestU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m380545453 ();
+extern "C" void U3CShowMessageU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m168475554 ();
+extern "C" void U3CShowMessageU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m1302050492 ();
+extern "C" void U3CUpdateProgressU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2516251807 ();
+extern "C" void U3CUpdateProgressU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m1270164944 ();
 extern "C" void U3CZoomOutU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4261788491 ();
 extern "C" void U3CZoomOutU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m819444876 ();
 extern "C" void U3CStartU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3772281978 ();
@@ -4669,7 +6013,11 @@ extern "C" void RegistryKey_GetValue_m3464954649 ();
 extern "C" void RegistryKey_get_InternalHandle_m1437117813 ();
 extern "C" void UnixRegistryApi_GetValue_m81555051 ();
 extern "C" void Win32RegistryApi_GetValue_m192549162 ();
+extern "C" void NoReflectionHelper_GetInternalValidator_m343836325 ();
+extern "C" void MonoTlsSettings_get_UserSettings_m1441628049 ();
 extern "C" void PKCS12_Clone_m93617975 ();
+extern "C" void PKCS12_Clone_m2085085101 ();
+extern "C" void X509CertificateEnumerator_System_Collections_IEnumerator_get_Current_m1846030361 ();
 extern "C" void X509CertificateEnumerator_System_Collections_IEnumerator_get_Current_m418791713 ();
 extern "C" void U3CFadeLightDynamicInputU3Ec__Iterator3_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2848564963 ();
 extern "C" void U3CFadeLightDynamicInputU3Ec__Iterator3_System_Collections_IEnumerator_get_Current_m1305644212 ();
@@ -4738,6 +6086,7 @@ extern "C" void KeyCollection_get_SyncRoot_m182464640 ();
 extern "C" void SyncHashtable_Clone_m3726939774 ();
 extern "C" void SyncHashtable_get_Item_m2686606216 ();
 extern "C" void SyncHashtable_get_SyncRoot_m2724224665 ();
+extern "C" void ValueCollection_get_SyncRoot_m3158034854 ();
 extern "C" void Hashtable_Clone_m3078962909 ();
 extern "C" void Hashtable_get_Item_m2003685141 ();
 extern "C" void Hashtable_get_SyncRoot_m2370273929 ();
@@ -4757,11 +6106,31 @@ extern "C" void SortedListEnumerator_Clone_m1885836381 ();
 extern "C" void SortedListEnumerator_get_Current_m509562304 ();
 extern "C" void SortedListEnumerator_get_Key_m2211182743 ();
 extern "C" void SortedListEnumerator_get_Value_m4016317133 ();
+extern "C" void SyncSortedList_Clone_m1554415040 ();
+extern "C" void SyncSortedList_GetByIndex_m2524087392 ();
+extern "C" void SyncSortedList_GetKey_m2564096347 ();
+extern "C" void SyncSortedList_get_Item_m1287216427 ();
+extern "C" void SyncSortedList_get_SyncRoot_m2044600112 ();
+extern "C" void ValueList_get_Item_m698594302 ();
+extern "C" void ValueList_get_SyncRoot_m615844645 ();
 extern "C" void SortedList_Clone_m928094797 ();
 extern "C" void SortedList_GetByIndex_m3848565786 ();
 extern "C" void SortedList_GetKey_m658905367 ();
 extern "C" void SortedList_get_Item_m3673863299 ();
 extern "C" void SortedList_get_SyncRoot_m914428425 ();
+extern "C" void HybridDictionary_get_Item_m319681963 ();
+extern "C" void HybridDictionary_get_SyncRoot_m1538457321 ();
+extern "C" void NodeEnumerator_get_Current_m3114585690 ();
+extern "C" void NodeEnumerator_get_Key_m303954471 ();
+extern "C" void NodeEnumerator_get_Value_m3906478675 ();
+extern "C" void ListDictionary_get_Item_m1272472363 ();
+extern "C" void ListDictionary_get_SyncRoot_m4242825143 ();
+extern "C" void NameObjectKeysEnumerator_get_Current_m3831146515 ();
+extern "C" void NameObjectCollectionBase_BaseGet_m2807961990 ();
+extern "C" void NameObjectCollectionBase_BaseGet_m2890420524 ();
+extern "C" void NameObjectCollectionBase_System_Collections_ICollection_get_SyncRoot_m138749698 ();
+extern "C" void StringCollection_System_Collections_IList_get_Item_m992663664 ();
+extern "C" void StringCollection_get_SyncRoot_m3505240827 ();
 extern "C" void StackEnumerator_Clone_m1119293544 ();
 extern "C" void StackEnumerator_get_Current_m403551154 ();
 extern "C" void Stack_Clone_m2625073663 ();
@@ -4803,6 +6172,22 @@ extern "C" void Int64_System_IConvertible_ToType_m3223988955_AdjustorThunk ();
 extern "C" void LocalDataStore_GetData_m3421385861 ();
 extern "C" void LocalDataStoreElement_get_Value_m898842925 ();
 extern "C" void MarshalByRefObject_InitializeLifetimeService_m3972547550 ();
+extern "C" void DefaultProxySectionInternal_get_ClassSyncObject_m125181342 ();
+extern "C" void CookieCollectionEnumerator_System_Collections_IEnumerator_get_Current_m3850098179 ();
+extern "C" void CookieCollection_get_SyncRoot_m727993059 ();
+extern "C" void CredentialEnumerator_System_Collections_IEnumerator_get_Current_m2894369356 ();
+extern "C" void FtpAsyncResult_get_AsyncState_m2681421917 ();
+extern "C" void LazyAsyncResult_InternalWaitForCompletion_m1545046281 ();
+extern "C" void LazyAsyncResult_WaitForCompletion_m106761697 ();
+extern "C" void LazyAsyncResult_get_AsyncObject_m4034816191 ();
+extern "C" void LazyAsyncResult_get_AsyncState_m2660932643 ();
+extern "C" void NclUtilities_get_LocalAddressesLock_m2203267984 ();
+extern "C" void PathList_get_Item_m433719466 ();
+extern "C" void PathList_get_SyncRoot_m2516597328 ();
+extern "C" void SimpleAsyncResult_get_AsyncState_m1324575894 ();
+extern "C" void Socket_GetSocketOption_m419986124 ();
+extern "C" void Socket_get_InternalSyncObject_m390753244 ();
+extern "C" void WebRequest_get_InternalSyncObject_m1533568516 ();
 extern "C" void Object_MemberwiseClone_m1474068832 ();
 extern "C" void OperatingSystem_Clone_m1122165140 ();
 extern "C" void FormatParam_get_Object_m3814550174_AdjustorThunk ();
@@ -4974,11 +6359,16 @@ extern "C" void RuntimeType_InvokeMember_m1667874762 ();
 extern "C" void RuntimeType_IsConvertibleToPrimitiveType_m3886678640 ();
 extern "C" void RuntimeType_TryConvertToType_m414386109 ();
 extern "C" void SByte_System_IConvertible_ToType_m4075253447_AdjustorThunk ();
+extern "C" void U3Cget_ClaimsU3Ed__51_System_Collections_IEnumerator_get_Current_m1980774890 ();
+extern "C" void CryptoConfig_CreateFromName_m1538277313 ();
+extern "C" void CryptoConfig_CreateFromName_m2674746512 ();
 extern "C" void OidCollection_get_SyncRoot_m3531934854 ();
 extern "C" void OidEnumerator_System_Collections_IEnumerator_get_Current_m3426335186 ();
 extern "C" void X509CertificateEnumerator_System_Collections_IEnumerator_get_Current_m4218613192 ();
 extern "C" void X509ChainElementCollection_get_SyncRoot_m4174373457 ();
 extern "C" void X509ChainElementEnumerator_System_Collections_IEnumerator_get_Current_m1913555061 ();
+extern "C" void X509ExtensionCollection_get_SyncRoot_m2667861032 ();
+extern "C" void X509ExtensionEnumerator_System_Collections_IEnumerator_get_Current_m2494161059 ();
 extern "C" void EvidenceEnumerator_get_Current_m1264365535 ();
 extern "C" void Evidence_get_SyncRoot_m2835084965 ();
 extern "C" void Single_System_IConvertible_ToType_m3312441682_AdjustorThunk ();
@@ -5062,6 +6452,8 @@ extern "C" void Foldout_ValidateValue_m956081007 ();
 extern "C" void Value_GetValue_m488732414 ();
 extern "C" void GUIUtility_Internal_GetDefaultSkin_m995660429 ();
 extern "C" void DefaultValueAttribute_get_Value_m3086344020 ();
+extern "C" void JsonUtility_FromJson_m4191471030 ();
+extern "C" void JsonUtility_FromJsonInternal_m3788604114 ();
 extern "C" void PlayableBehaviour_Clone_m2851991741 ();
 extern "C" void SetupCoroutine_InvokeMember_m2661944898 ();
 extern "C" void Enumerator_get_Current_m2591725252 ();
@@ -5079,6 +6471,7 @@ extern "C" void U3CClickRepeatU3Ec__Iterator0_System_Collections_Generic_IEnumer
 extern "C" void U3CClickRepeatU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m543328413 ();
 extern "C" void ReadOnlyArrayList_ToArray_m2129231561 ();
 extern "C" void ArrayList_ToArray_m3827492363 ();
+extern "C" void Queue_ToArray_m812120461 ();
 extern "C" void MonoCustomAttrs_GetCustomAttributes_m1775925192 ();
 extern "C" void MonoCustomAttrs_GetCustomAttributes_m1347331976 ();
 extern "C" void MonoCustomAttrs_GetCustomAttributesBase_m2734301467 ();
@@ -5353,17 +6746,23 @@ extern "C" void Type_get_Attributes_m58528356 ();
 extern "C" void ResourceReader_GetEnumeratorInternal_m1283379956 ();
 extern "C" void NeutralResourcesLanguageAttribute_get_Location_m2128408853 ();
 extern "C" void AsyncTaskMethodBuilder_Create_m2603633305 ();
+extern "C" void AsyncVoidMethodBuilder_Create_m1976941025 ();
 extern "C" void DictionaryHashHelpers_get_SerializationInfoTable_m2316479637 ();
 extern "C" void HashHelpers_get_SerializationInfoTable_m3286167511 ();
 extern "C" void Task_ConfigureAwait_m898394246 ();
 extern "C" void ConfiguredTaskAwaitable_GetAwaiter_m2777384263_AdjustorThunk ();
 extern "C" void Task_GetAwaiter_m3638629061 ();
+extern "C" void Task_Yield_m2010610529 ();
+extern "C" void YieldAwaitable_GetAwaiter_m2145771564_AdjustorThunk ();
 extern "C" void AsyncProtocolResult_get_Error_m3058435573 ();
 extern "C" void MobileAuthenticatedStream_SetException_m2616150076 ();
 extern "C" void ExceptionDispatchInfo_Capture_m2882203257 ();
 extern "C" void Task_GetCancellationExceptionDispatchInfo_m929218425 ();
 extern "C" void TaskExceptionHolder_GetCancellationExceptionDispatchInfo_m504721926 ();
+extern "C" void GCHandle_Alloc_m3053200191 ();
 extern "C" void GCHandle_Alloc_m3823409740 ();
+extern "C" void GCHandle_FromIntPtr_m3880792486 ();
+extern "C" void GCHandle_op_Explicit_m976572069 ();
 extern "C" void FieldInfo_get_marshal_info_m3224789210 ();
 extern "C" void MarshalAsAttribute_Copy_m3596363673 ();
 extern "C" void RemotingConfiguration_IsRemotelyActivatedClientType_m4117048589 ();
@@ -5617,30 +7016,58 @@ extern "C" void UInt16_System_IConvertible_ToSByte_m2219828332_AdjustorThunk ();
 extern "C" void UInt32_System_IConvertible_ToSByte_m1061556466_AdjustorThunk ();
 extern "C" void UInt64_System_IConvertible_ToSByte_m30962591_AdjustorThunk ();
 extern "C" void UnityTlsProvider_get_SupportedProtocols_m2766232207 ();
+extern "C" void Claim_Clone_m276050063 ();
+extern "C" void U3Cget_ClaimsU3Ed__51_System_Collections_Generic_IEnumeratorU3CSystem_Security_Claims_ClaimU3E_get_Current_m1497436269 ();
+extern "C" void ClaimsIdentity_FindFirst_m3554441075 ();
+extern "C" void Claim_get_Subject_m4008085394 ();
+extern "C" void ClaimsIdentity_Clone_m601653171 ();
+extern "C" void ClaimsIdentity_get_Actor_m765230199 ();
 extern "C" void X509BasicConstraintsExtension_Decode_m120598446 ();
 extern "C" void X509EnhancedKeyUsageExtension_Decode_m3726500073 ();
 extern "C" void X509KeyUsageExtension_Decode_m3150759625 ();
 extern "C" void X509SubjectKeyIdentifierExtension_Decode_m1505409124 ();
 extern "C" void PublicKey_get_EncodedKeyValue_m199315148 ();
 extern "C" void PublicKey_get_EncodedParameters_m4197029957 ();
+extern "C" void PublicKey_get_Key_m3077215602 ();
+extern "C" void X509Certificate2_get_PrivateKey_m450647294 ();
+extern "C" void X509Certificate2ImplMono_get_PrivateKey_m447648088 ();
+extern "C" void AesCryptoServiceProvider_get_Mode_m859524667 ();
+extern "C" void AesManaged_get_Mode_m2644624863 ();
 extern "C" void SymmetricAlgorithm_get_Mode_m654054760 ();
+extern "C" void HopToThreadPoolAwaitable_GetAwaiter_m1239336846_AdjustorThunk ();
 extern "C" void KeyPairPersistence_Copy_m2577206651 ();
 extern "C" void CspParameters_get_Flags_m4238672607 ();
 extern "C" void DES_Create_m1258183099 ();
+extern "C" void PrivateKeyInfo_DecodeDSA_m2335813142 ();
 extern "C" void PrivateKeyInfo_DecodeDSA_m771724585 ();
+extern "C" void X509Certificate_get_DSA_m2644963799 ();
 extern "C" void X509Certificate_get_DSA_m1760272844 ();
 extern "C" void DSA_Create_m1220983153 ();
+extern "C" void PublicKey_DecodeDSA_m3490622362 ();
 extern "C" void DSAManaged_ExportParameters_m1426347745 ();
 extern "C" void PKCS12_GetExistingParameters_m3511027613 ();
+extern "C" void PKCS12_GetExistingParameters_m3446652479 ();
 extern "C" void DSACryptoServiceProvider_ExportParameters_m591135777 ();
 extern "C" void HMAC_Create_m2390117573 ();
+extern "C" void PKCS1_CreateFromName_m700794140 ();
 extern "C" void PKCS1_CreateFromName_m146696614 ();
 extern "C" void ARC4Managed_CreateDecryptor_m2839020070 ();
 extern "C" void ARC4Managed_CreateEncryptor_m2144475135 ();
+extern "C" void AesCryptoServiceProvider_CreateDecryptor_m3603952599 ();
+extern "C" void AesCryptoServiceProvider_CreateDecryptor_m1328793350 ();
+extern "C" void AesCryptoServiceProvider_CreateEncryptor_m732637922 ();
+extern "C" void AesCryptoServiceProvider_CreateEncryptor_m1407541527 ();
+extern "C" void AesManaged_CreateDecryptor_m752875210 ();
+extern "C" void AesManaged_CreateDecryptor_m692040246 ();
+extern "C" void AesManaged_CreateEncryptor_m1611897367 ();
+extern "C" void AesManaged_CreateEncryptor_m2294080233 ();
 extern "C" void DESCryptoServiceProvider_CreateDecryptor_m3245980552 ();
 extern "C" void DESCryptoServiceProvider_CreateEncryptor_m2830855064 ();
 extern "C" void RC2CryptoServiceProvider_CreateDecryptor_m3810731330 ();
 extern "C" void RC2CryptoServiceProvider_CreateEncryptor_m1615052595 ();
+extern "C" void RijndaelManaged_CreateDecryptor_m1421727258 ();
+extern "C" void RijndaelManaged_CreateEncryptor_m263736311 ();
+extern "C" void RijndaelManaged_NewEncryptor_m2879777809 ();
 extern "C" void SymmetricAlgorithm_CreateDecryptor_m3477646776 ();
 extern "C" void SymmetricAlgorithm_CreateEncryptor_m617415315 ();
 extern "C" void TripleDESCryptoServiceProvider_CreateDecryptor_m740960117 ();
@@ -5649,41 +7076,81 @@ extern "C" void SymmetricAlgorithm_get_LegalKeySizes_m1340766361 ();
 extern "C" void MD5_Create_m3522414168 ();
 extern "C" void OidCollection_get_Item_m984725507 ();
 extern "C" void PublicKey_get_Oid_m2056027242 ();
+extern "C" void X509Certificate2_get_SignatureAlgorithm_m2810155907 ();
+extern "C" void X509Certificate2ImplMono_get_SignatureAlgorithm_m1685648403 ();
+extern "C" void AesCryptoServiceProvider_get_Padding_m3261497210 ();
+extern "C" void AesManaged_get_Padding_m3004521386 ();
 extern "C" void SymmetricAlgorithm_get_Padding_m1011382560 ();
 extern "C" void RC2_Create_m2516417038 ();
 extern "C" void RIPEMD160_Create_m3195876322 ();
 extern "C" void Utils_get_StaticRandomNumberGenerator_m3998993329 ();
+extern "C" void PrivateKeyInfo_DecodeRSA_m4129124827 ();
 extern "C" void PrivateKeyInfo_DecodeRSA_m2889346634 ();
 extern "C" void X509Certificate_get_RSA_m171561738 ();
+extern "C" void X509Certificate_get_RSA_m1755006809 ();
 extern "C" void RSA_Create_m4065275734 ();
+extern "C" void PublicKey_DecodeRSA_m1824703659 ();
 extern "C" void RSAManaged_ExportParameters_m280454101 ();
+extern "C" void RSAManaged_ExportParameters_m1754454264 ();
 extern "C" void RSACryptoServiceProvider_ExportParameters_m3871179960 ();
 extern "C" void BigInteger_get_Rng_m4216817480 ();
+extern "C" void BigInteger_get_Rng_m3283260184 ();
 extern "C" void DSAManaged_get_Random_m923751780 ();
 extern "C" void KeyBuilder_get_Rng_m1353817187 ();
 extern "C" void PKCS12_get_RNG_m2649456600 ();
+extern "C" void PKCS12_get_RNG_m64541056 ();
 extern "C" void RandomNumberGenerator_Create_m4162970280 ();
 extern "C" void SHA1_Create_m1390871308 ();
 extern "C" void SHA256_Create_m610202894 ();
 extern "C" void SHA384_Create_m3237405884 ();
 extern "C" void SHA512_Create_m3934606971 ();
+extern "C" void PKCS12_GetSymmetricAlgorithm_m3480654844 ();
 extern "C" void PKCS12_GetSymmetricAlgorithm_m1390440284 ();
+extern "C" void SymmetricAlgorithm_Create_m2726390826 ();
 extern "C" void TripleDES_Create_m3761371613 ();
+extern "C" void X509Certificate2_get_PublicKey_m370665820 ();
+extern "C" void X509Certificate2ImplMono_get_PublicKey_m1158306339 ();
+extern "C" void ChainValidationHelper_DefaultSelectionCallback_m3541256544 ();
+extern "C" void MobileAuthenticatedStream_get_InternalLocalCertificate_m2787578847 ();
+extern "C" void MobileTlsContext_SelectClientCertificate_m1928717509 ();
+extern "C" void MobileTlsContext_get_LocalServerCertificate_m1659090433 ();
+extern "C" void U3CU3Ec__DisplayClass8_0_U3CMonoToInternalU3Eb__0_m3800143544 ();
+extern "C" void MonoLocalCertificateSelectionCallback_EndInvoke_m1794702192 ();
+extern "C" void MonoLocalCertificateSelectionCallback_Invoke_m3086542150 ();
+extern "C" void UnityTlsContext_get_LocalClientCertificate_m398027640 ();
+extern "C" void LocalCertSelectionCallback_EndInvoke_m3613070888 ();
+extern "C" void LocalCertSelectionCallback_Invoke_m1692344453 ();
 extern "C" void X509CertificateEnumerator_get_Current_m364341970 ();
+extern "C" void X509CertificateCollection_get_Item_m1177942658 ();
+extern "C" void X509Certificate2_get_Impl_m3008352797 ();
+extern "C" void X509Helper2_Import_m2379872975 ();
+extern "C" void X509Helper2_Import_m2596019773 ();
+extern "C" void MobileTlsContext_get_ClientCertificates_m800981176 ();
 extern "C" void MonoTlsSettings_get_TrustAnchors_m1471927348 ();
+extern "C" void CertHelper_NativeChainToManagedCollection_m3715941214 ();
+extern "C" void HttpWebRequest_get_ClientCertificates_m1369160996 ();
 extern "C" void X509CertificateCollection_GetEnumerator_m1686475779 ();
+extern "C" void X509Certificate2ImplMono_Clone_m4033569785 ();
 extern "C" void X509Certificate_get_Impl_m112040495 ();
 extern "C" void X509CertificateImplCollection_get_Item_m2124075370 ();
 extern "C" void X509CertificateImplMono_Clone_m2691821495 ();
+extern "C" void MyNativeHelper_Import_m1299979664 ();
 extern "C" void X509Helper_Import_m2730756183 ();
 extern "C" void X509Helper_Import_m3675298546 ();
 extern "C" void X509Helper_ImportCore_m2440286727 ();
+extern "C" void X509Helper_InitFromCertificate_m3506677473 ();
 extern "C" void X509Helper_InitFromCertificate_m2533824453 ();
+extern "C" void X509Certificate2ImplMono_get_IntermediateCertificates_m2927533872 ();
+extern "C" void X509CertificateImplCollection_Clone_m239523168 ();
 extern "C" void SystemCertificateValidator_CreateX509Chain_m4142357983 ();
 extern "C" void X509Chain_get_Impl_m1192871005 ();
 extern "C" void X509Helper2_CreateChainImpl_m279807262 ();
 extern "C" void X509KeyUsageExtension_GetValidFlags_m3447294145 ();
 extern "C" void X509KeyUsageExtension_get_KeyUsages_m3263859785 ();
+extern "C" void WebRequest_SafeCaptureIdenity_m273049891 ();
+extern "C" void WindowsIdentity_GetCurrent_m1580103511 ();
+extern "C" void WindowsIdentity_Impersonate_m410889906 ();
+extern "C" void SecureStringHelper_CreateSecureString_m111498626 ();
 extern "C" void SecurityParser_ToXml_m3880004309 ();
 extern "C" void SecurityDocument_GetElement_m4023429941 ();
 extern "C" void SecurityDocument_GetRootElement_m2919638098 ();
@@ -5693,6 +7160,10 @@ extern "C" void SecurityElement_SearchForChildByTag_m900466299 ();
 extern "C" void Parser_GetTopElement_m3102143671 ();
 extern "C" void SecurityElement_GetAttribute_m3347489583 ();
 extern "C" void SharedStatics_GetSharedStringMaker_m1916072940 ();
+extern "C" void Loader_get_Scaling_m2390523726 ();
+extern "C" void LoaderObj_ParseFloat_m589828340 ();
+extern "C" void Vertex_get_TriangleArea_m716965693 ();
+extern "C" void FlyCamera_ClampAngle_m2291207133 ();
 extern "C" void Bokeh_CalculateFocalLength_m3828135260 ();
 extern "C" void Bokeh_CalculateFocusDistance_m1697713241 ();
 extern "C" void Bokeh_CalculateMaxCoCRadius_m3320994274 ();
@@ -5828,6 +7299,10 @@ extern "C" void AudioListener_ReadExtensionPropertyValue_m2443832840 ();
 extern "C" void AudioListenerExtension_ReadExtensionProperty_m3059773029 ();
 extern "C" void AudioSource_ReadExtensionPropertyValue_m72717540 ();
 extern "C" void AudioSourceExtension_ReadExtensionProperty_m2693120442 ();
+extern "C" void BoneWeight_get_weight0_m749725712_AdjustorThunk ();
+extern "C" void BoneWeight_get_weight1_m3088377872_AdjustorThunk ();
+extern "C" void BoneWeight_get_weight2_m367388688_AdjustorThunk ();
+extern "C" void BoneWeight_get_weight3_m2706040848_AdjustorThunk ();
 extern "C" void Camera_get_aspect_m862507514 ();
 extern "C" void Camera_get_depth_m2555926613 ();
 extern "C" void Camera_get_farClipPlane_m538536689 ();
@@ -5837,6 +7312,7 @@ extern "C" void Camera_get_orthographicSize_m3903216845 ();
 extern "C" void Canvas_get_referencePixelsPerUnit_m3420541976 ();
 extern "C" void Canvas_get_scaleFactor_m3314757802 ();
 extern "C" void CanvasGroup_get_alpha_m2918269489 ();
+extern "C" void Color_get_grayscale_m315155229_AdjustorThunk ();
 extern "C" void BaseInput_GetAxisRaw_m706550436 ();
 extern "C" void PointerEventData_get_clickTime_m3061953952 ();
 extern "C" void StandaloneInputModule_get_inputActionsPerSecond_m3946624274 ();
@@ -5927,6 +7403,9 @@ extern "C" void Mathf_Sqrt_m3337154061 ();
 extern "C" void Mathf_Tan_m2342620340 ();
 extern "C" void Matrix4x4_get_Item_m567451091_AdjustorThunk ();
 extern "C" void Matrix4x4_get_Item_m134152955_AdjustorThunk ();
+extern "C" void Mesh_GetBlendShapeFrameWeight_m196188021 ();
+extern "C" void UnityWebRequest_GetDownloadProgress_m576848224 ();
+extern "C" void UnityWebRequest_get_downloadProgress_m338301737 ();
 extern "C" void Plane_get_distance_m3054241251_AdjustorThunk ();
 extern "C" void QualitySettings_get_shadowNearPlaneOffset_m1165383745 ();
 extern "C" void Quaternion_Dot_m1392781996 ();
@@ -6076,6 +7555,7 @@ extern "C" void Vector4_Magnitude_m3651986219 ();
 extern "C" void Vector4_SqrMagnitude_m1488236336 ();
 extern "C" void Vector4_get_Item_m2380866393_AdjustorThunk ();
 extern "C" void Vector4_get_sqrMagnitude_m3767723558_AdjustorThunk ();
+extern "C" void WWW_get_progress_m841454562 ();
 extern "C" void XRSettings_get_eyeTextureResolutionScale_m412626763 ();
 extern "C" void XRSettings_get_occlusionMaskScale_m2144347014 ();
 extern "C" void XRSettings_get_renderViewportScale_m2749454428 ();
@@ -6083,9 +7563,29 @@ extern "C" void XRSettings_get_renderViewportScaleInternal_m3611281628 ();
 extern "C" void BaselineFunction_EndInvoke_m2579535211 ();
 extern "C" void BaselineFunction_Invoke_m3417436033 ();
 extern "C" void YogaNode_BaselineInternal_m3366972940 ();
+extern "C" void LODLevel_get_FadeTransitionWidth_m2379017509_AdjustorThunk ();
+extern "C" void LODLevel_get_Quality_m2379592969_AdjustorThunk ();
+extern "C" void LODLevel_get_ScreenRelativeTransitionHeight_m1369118883_AdjustorThunk ();
 extern "C" void DepthOfField_FocalDistance01_m539904656 ();
 extern "C" void DepthOfFieldDeprecated_FocalDistance01_m2827097724 ();
 extern "C" void Tonemapping_UpdateCurve_m2076606369 ();
+extern "C" void DataSet_FixMaterialName_m4105272472 ();
+extern "C" void DataSet_GetFaceIndicesKey_m1299236802 ();
+extern "C" void DataSet_get_CurrGroupName_m328131300 ();
+extern "C" void Loader_GetDirName_m478508244 ();
+extern "C" void Loader_GetTextureUrl_m332705725 ();
+extern "C" void LoaderObj_ParseMaterialLibName_m1925034140 ();
+extern "C" void MultiObjectImporter_get_RootPath_m1172854735 ();
+extern "C" void PathSettings_FullPath_m90131287 ();
+extern "C" void PathSettings_get_RootPath_m974904680 ();
+extern "C" void MessagePatternPair_get_parsedMessage_m981437915_AdjustorThunk ();
+extern "C" void MessagePatternPair_get_patternAppended_m3982213604_AdjustorThunk ();
+extern "C" void SystemServices_GetQueryStringFromKeyValues_m3236804080 ();
+extern "C" void OBJExporterImporter_ConstructOBJString_m599715515 ();
+extern "C" void OBJExporterImporter_ExportTexture_m2197564473 ();
+extern "C" void OBJExporterImporter_MaterialToString_m1450109953 ();
+extern "C" void OBJExporterImporter_TryExportTexture_m3157967826 ();
+extern "C" void Locale_GetText_m3520169047 ();
 extern "C" void Locale_GetText_m3374010885 ();
 extern "C" void Locale_GetText_m1601577974 ();
 extern "C" void ExpandString_Expand_m2223183969 ();
@@ -6104,20 +7604,31 @@ extern "C" void UnixRegistryApi_ToUnix_m2769099556 ();
 extern "C" void Win32Native_GetMessage_m1998947842 ();
 extern "C" void Win32RegistryApi_CombineName_m2712912705 ();
 extern "C" void Win32RegistryApi_ToString_m927632342 ();
+extern "C" void NtlmClient_get_AuthenticationType_m51968676 ();
+extern "C" void BigInteger_ToString_m3927393477 ();
 extern "C" void BigInteger_ToString_m3278248272 ();
 extern "C" void BigInteger_ToString_m570257729 ();
+extern "C" void BigInteger_ToString_m3260066955 ();
+extern "C" void BigInteger_ToString_m1181683046 ();
 extern "C" void BigInteger_ToString_m3475000413 ();
+extern "C" void CFProxy_get_HostName_m3256594794 ();
+extern "C" void CFProxy_get_Password_m194975178 ();
+extern "C" void CFProxy_get_Username_m4129332844 ();
+extern "C" void CFString_AsString_m3024457809 ();
+extern "C" void CFString_ToString_m834010119 ();
 extern "C" void AsyncProtocolRequest_ToString_m1738687818 ();
 extern "C" void AsyncProtocolRequest_get_Name_m1954591517 ();
 extern "C" void AsyncReadOrWriteRequest_ToString_m3057996401 ();
 extern "C" void BufferOffsetSize_ToString_m2007583874 ();
+extern "C" void MobileTlsContext_get_ServerName_m1604723090 ();
+extern "C" void MobileTlsContext_get_TargetHost_m956960372 ();
 extern "C" void Runtime_GetDisplayName_m2773861196 ();
 extern "C" void Runtime_GetNativeStackTrace_m1562971667 ();
 extern "C" void RuntimeMarshal_PtrToUtf8String_m504390466 ();
-extern "C" void ASN1_ToString_m1340204511 ();
 extern "C" void ASN1_ToString_m45458043 ();
-extern "C" void ASN1Convert_ToOid_m3847701408 ();
+extern "C" void ASN1_ToString_m1340204511 ();
 extern "C" void ASN1Convert_ToOid_m1223840396 ();
+extern "C" void ASN1Convert_ToOid_m3847701408 ();
 extern "C" void CryptoConvert_ToHex_m4034982758 ();
 extern "C" void KeyPairPersistence_ToXml_m812591779 ();
 extern "C" void KeyPairPersistence_get_ContainerName_m4274536094 ();
@@ -6125,11 +7636,29 @@ extern "C" void KeyPairPersistence_get_Filename_m2760692036 ();
 extern "C" void KeyPairPersistence_get_KeyValue_m2994490605 ();
 extern "C" void KeyPairPersistence_get_MachinePath_m3812267291 ();
 extern "C" void KeyPairPersistence_get_UserPath_m610275969 ();
+extern "C" void EncryptedPrivateKeyInfo_get_Algorithm_m3027828440 ();
 extern "C" void EncryptedPrivateKeyInfo_get_Algorithm_m2142585301 ();
 extern "C" void RSAManaged_ToXmlString_m645792083 ();
+extern "C" void RSAManaged_ToXmlString_m2369501989 ();
+extern "C" void Alert_ToString_m2140927589 ();
+extern "C" void MonoTlsConnectionInfo_ToString_m2337041500 ();
+extern "C" void ContentInfo_get_ContentType_m4018261807 ();
 extern "C" void ContentInfo_get_ContentType_m275324816 ();
+extern "C" void Type2Message_get_TargetName_m4153138828 ();
+extern "C" void Type3Message_DecodeString_m2271784492 ();
 extern "C" void SafeBag_get_BagOID_m2165567310 ();
+extern "C" void SafeBag_get_BagOID_m2153399743 ();
+extern "C" void X501_ToString_m2260475203 ();
 extern "C" void X501_ToString_m4186311521 ();
+extern "C" void X501_ToString_m3840057611 ();
+extern "C" void X501_ToString_m2278029064 ();
+extern "C" void X509Certificate_get_IssuerName_m47554030 ();
+extern "C" void X509Certificate_get_IssuerName_m605048065 ();
+extern "C" void X509Certificate_get_KeyAlgorithm_m3935660380 ();
+extern "C" void X509Certificate_get_SignatureAlgorithm_m122054440 ();
+extern "C" void X509Certificate_get_SubjectName_m3871411396 ();
+extern "C" void X509Certificate_get_SubjectName_m3160893681 ();
+extern "C" void X509Extension_ToString_m3727002866 ();
 extern "C" void X509Extension_ToString_m3664524823 ();
 extern "C" void UnityTlsProvider_get_Name_m1593580798 ();
 extern "C" void AttrListImpl_GetName_m2880551319 ();
@@ -6140,6 +7669,7 @@ extern "C" void SmallXmlParser_ReadUntil_m2715581630 ();
 extern "C" void SR_Format_m1749913990 ();
 extern "C" void SR_Format_m1395559496 ();
 extern "C" void SR_GetString_m724370819 ();
+extern "C" void SR_GetString_m4069745605 ();
 extern "C" void SR_GetString_m1137630943 ();
 extern "C" void SR_GetString_m2133537544 ();
 extern "C" void AggregateException_ToString_m1626992942 ();
@@ -6167,15 +7697,27 @@ extern "C" void Char_ToString_m3588025615_AdjustorThunk ();
 extern "C" void Char_ToString_m954857583 ();
 extern "C" void Char_ToString_m278452217_AdjustorThunk ();
 extern "C" void KeyValuePair_PairToString_m4006145442 ();
+extern "C" void NameObjectCollectionBase_BaseGetKey_m2677971642 ();
+extern "C" void NameValueCollection_Get_m2464480741 ();
+extern "C" void NameValueCollection_Get_m1006871566 ();
+extern "C" void NameValueCollection_GetAsOneString_m63520621 ();
+extern "C" void NameValueCollection_GetKey_m3458770877 ();
+extern "C" void NameValueCollection_get_Item_m3979995533 ();
+extern "C" void StringCollection_get_Item_m4180232243 ();
 extern "C" void TypeConverterAttribute_get_ConverterTypeName_m2038465322 ();
 extern "C" void Win32Exception_GetErrorMessage_m1928344171 ();
 extern "C" void Convert_ToBase64String_m3839334935 ();
+extern "C" void Convert_ToBase64String_m1959325926 ();
 extern "C" void Convert_ToBase64String_m484571023 ();
 extern "C" void Convert_ToString_m4090591090 ();
 extern "C" void Convert_ToString_m2614817407 ();
 extern "C" void Convert_ToString_m1854379141 ();
 extern "C" void DBNull_ToString_m3638608738 ();
 extern "C" void DBNull_ToString_m1318017576 ();
+extern "C" void DateTime_ToLongDateString_m220253197_AdjustorThunk ();
+extern "C" void DateTime_ToLongTimeString_m3124825860_AdjustorThunk ();
+extern "C" void DateTime_ToShortDateString_m2934767635_AdjustorThunk ();
+extern "C" void DateTime_ToShortTimeString_m1551520344_AdjustorThunk ();
 extern "C" void DateTime_ToString_m884486936_AdjustorThunk ();
 extern "C" void DateTime_ToString_m1916142975_AdjustorThunk ();
 extern "C" void DateTime_ToString_m2992030064_AdjustorThunk ();
@@ -6205,6 +7747,7 @@ extern "C" void DomainNameHelper_UnicodeEquivalent_m3209706559 ();
 extern "C" void DomainNameHelper_UnicodeEquivalent_m4198839304 ();
 extern "C" void Double_ToString_m1229922074_AdjustorThunk ();
 extern "C" void Double_ToString_m3828879243_AdjustorThunk ();
+extern "C" void Double_ToString_m896573572_AdjustorThunk ();
 extern "C" void Double_ToString_m1051753975_AdjustorThunk ();
 extern "C" void Empty_ToString_m3247884066 ();
 extern "C" void Enum_GetName_m2151614395 ();
@@ -6229,8 +7772,11 @@ extern "C" void Environment_GetStackTrace_m2270587337 ();
 extern "C" void Environment_GetWindowsFolderPath_m1738399646 ();
 extern "C" void Environment_ReadXdgUserDir_m2654856189 ();
 extern "C" void Environment_UnixGetFolderPath_m2925581583 ();
+extern "C" void Environment_get_MachineName_m10524133 ();
 extern "C" void Environment_get_NewLine_m3211016485 ();
 extern "C" void Environment_get_StackTrace_m1029502882 ();
+extern "C" void Environment_get_UserDomainName_m850452101 ();
+extern "C" void Environment_get_UserName_m3847352169 ();
 extern "C" void Environment_internalGetEnvironmentVariable_m3668851860 ();
 extern "C" void Environment_internalGetEnvironmentVariable_native_m379925244 ();
 extern "C" void Environment_internalGetHome_m2575860206 ();
@@ -6367,6 +7913,9 @@ extern "C" void Directory_GetDemandDir_m3334461828 ();
 extern "C" void Directory_InsecureGetCurrentDirectory_m586046823 ();
 extern "C" void DirectoryInfo_ToString_m330992229 ();
 extern "C" void DirectoryInfo_get_Name_m796493862 ();
+extern "C" void FileInfo_GetDisplayPath_m374745275 ();
+extern "C" void FileInfo_ToString_m1090232810 ();
+extern "C" void FileInfo_get_Name_m33729499 ();
 extern "C" void FileLoadException_FormatFileLoadExceptionMessage_m4002886404 ();
 extern "C" void FileLoadException_ToString_m2989457882 ();
 extern "C" void FileLoadException_get_FusionLog_m1660750489 ();
@@ -6376,15 +7925,19 @@ extern "C" void FileNotFoundException_get_FusionLog_m2035314252 ();
 extern "C" void FileNotFoundException_get_Message_m2807351025 ();
 extern "C" void FileStream_GetSecureFileName_m449783930 ();
 extern "C" void FileStream_GetSecureFileName_m2419304749 ();
+extern "C" void FileSystemInfo_get_DisplayPath_m3036658982 ();
 extern "C" void FileSystemInfo_get_FullName_m3468398407 ();
 extern "C" void MonoIO_GetCurrentDirectory_m762333289 ();
 extern "C" void Path_CanonicalizePath_m620086118 ();
+extern "C" void Path_ChangeExtension_m2296349858 ();
 extern "C" void Path_CleanPath_m3974596557 ();
 extern "C" void Path_Combine_m3389272516 ();
 extern "C" void Path_Combine_m2030093709 ();
 extern "C" void Path_Combine_m2162809250 ();
 extern "C" void Path_GetDirectoryName_m3496866581 ();
+extern "C" void Path_GetExtension_m1021339115 ();
 extern "C" void Path_GetFileName_m1354558116 ();
+extern "C" void Path_GetFileNameWithoutExtension_m895535029 ();
 extern "C" void Path_GetFullPath_m4142135635 ();
 extern "C" void Path_GetFullPathInternal_m1405359470 ();
 extern "C" void Path_GetFullPathName_m3830227129 ();
@@ -6433,9 +7986,91 @@ extern "C" void MissingFieldException_get_Message_m2809639043 ();
 extern "C" void MissingMemberException_FormatSignature_m2752617863 ();
 extern "C" void MissingMemberException_get_Message_m54658002 ();
 extern "C" void MissingMethodException_get_Message_m3161775487 ();
+extern "C" void Authorization_get_Message_m457444391 ();
+extern "C" void BasicClient_get_AuthenticationType_m1658655756 ();
+extern "C" void Cookie_ToString_m1999862136 ();
+extern "C" void Cookie_get_Comment_m938800276 ();
+extern "C" void Cookie_get_Domain_m3273283673 ();
+extern "C" void Cookie_get_DomainKey_m3486228023 ();
+extern "C" void Cookie_get_Name_m2251414039 ();
+extern "C" void Cookie_get_Path_m3866976232 ();
+extern "C" void Cookie_get_Value_m415149921 ();
+extern "C" void Cookie_get__Domain_m672794332 ();
+extern "C" void Cookie_get__Path_m2208677912 ();
+extern "C" void Cookie_get__Port_m1658572818 ();
+extern "C" void Cookie_get__Version_m3535151426 ();
+extern "C" void CookieContainer_GetCookieHeader_m3804824737 ();
+extern "C" void CookieContainer_GetCookieHeader_m1289139136 ();
+extern "C" void CookieParser_CheckQuoted_m3844255685 ();
+extern "C" void CookieTokenizer_Extract_m960479859 ();
+extern "C" void CookieTokenizer_get_Name_m41746745 ();
+extern "C" void CookieTokenizer_get_Value_m3839528110 ();
+extern "C" void CredentialKey_ToString_m4193699741 ();
+extern "C" void DigestClient_get_AuthenticationType_m2210998317 ();
+extern "C" void DigestHeaderParser_GetKey_m560398311 ();
+extern "C" void DigestHeaderParser_get_Algorithm_m2871660183 ();
+extern "C" void DigestHeaderParser_get_Nonce_m2249622360 ();
+extern "C" void DigestHeaderParser_get_Opaque_m1764949209 ();
+extern "C" void DigestHeaderParser_get_QOP_m4036197700 ();
+extern "C" void DigestHeaderParser_get_Realm_m932476129 ();
+extern "C" void DigestSession_HA1_m2108344264 ();
+extern "C" void DigestSession_HA2_m1089477595 ();
+extern "C" void DigestSession_HashToHexString_m2645563245 ();
+extern "C" void DigestSession_Response_m3890789839 ();
+extern "C" void DigestSession_get_Algorithm_m794936792 ();
+extern "C" void DigestSession_get_CNonce_m3083255582 ();
+extern "C" void DigestSession_get_Nonce_m3852273541 ();
+extern "C" void DigestSession_get_Opaque_m32525443 ();
+extern "C" void DigestSession_get_QOP_m2650211740 ();
+extern "C" void DigestSession_get_Realm_m3487888410 ();
+extern "C" void Dns_GetHostName_m986149514 ();
+extern "C" void FileWebRequest_get_Method_m901669219 ();
+extern "C" void FtpStatus_get_StatusDescription_m2739034646 ();
+extern "C" void FtpWebRequest_FormatAddress_m2475505155 ();
+extern "C" void FtpWebRequest_FormatAddressV6_m3140172702 ();
+extern "C" void FtpWebRequest_GetInitialPath_m252477829 ();
+extern "C" void FtpWebRequest_GetRemoteFolderPath_m351623698 ();
+extern "C" void FtpWebRequest_get_DataType_m3448270912 ();
+extern "C" void FtpWebRequest_get_Method_m184683741 ();
+extern "C" void HeaderVariantInfo_get_Name_m360960477_AdjustorThunk ();
+extern "C" void AuthorizationState_ToString_m3556794860_AdjustorThunk ();
+extern "C" void HttpWebRequest_GetHeaders_m3768893913 ();
+extern "C" void HttpWebRequest_get_Host_m1187695647 ();
+extern "C" void HttpWebRequest_get_Method_m837169067 ();
+extern "C" void HttpWebRequest_get_TransferEncoding_m1718199537 ();
+extern "C" void HttpWebResponse_get_StatusDescription_m2108835333 ();
 extern "C" void IPAddress_ToString_m1181734207 ();
+extern "C" void IPEndPoint_ToString_m2322375169 ();
+extern "C" void IPHostEntry_get_HostName_m1470262901 ();
 extern "C" void IPv6AddressFormatter_ToString_m1696981683_AdjustorThunk ();
+extern "C" void MonoChunkStream_RemoveChunkExtension_m1028484117 ();
+extern "C" void NetRes_GetWebStatusString_m1872002768 ();
+extern "C" void NetRes_GetWebStatusString_m3099140498 ();
+extern "C" void NetworkCredential_InternalGetDomain_m3065628852 ();
+extern "C" void NetworkCredential_InternalGetPassword_m2589528676 ();
+extern "C" void NetworkCredential_InternalGetUserName_m3179069421 ();
+extern "C" void NetworkCredential_get_Domain_m153886306 ();
+extern "C" void NetworkCredential_get_Password_m2968490334 ();
+extern "C" void NetworkCredential_get_UserName_m1950179274 ();
+extern "C" void CommonUnixIPGlobalProperties_get_DomainName_m3322870252 ();
+extern "C" void Win32IPGlobalProperties_get_DomainName_m3467829811 ();
+extern "C" void NtlmClient_get_AuthenticationType_m1739840890 ();
+extern "C" void SocketAddress_ToString_m797278434 ();
 extern "C" void SocketException_get_Message_m1742236578 ();
+extern "C" void HTTP_REQUEST_HEADER_ID_ToString_m285473541 ();
+extern "C" void SecureStringHelper_CreateString_m2819186690 ();
+extern "C" void ValidationHelper_ExceptionMessage_m1265427269 ();
+extern "C" void ValidationHelper_MakeStringNull_m2319736105 ();
+extern "C" void ValidationHelper_ToString_m3637526118 ();
+extern "C" void WebConnectionGroup_get_Name_m837259254 ();
+extern "C" void WebExceptionMapping_GetWebStatusString_m3110747443 ();
+extern "C" void WebHeaderCollection_CheckBadChars_m186292639 ();
+extern "C" void WebHeaderCollection_Get_m3921484261 ();
+extern "C" void WebHeaderCollection_Get_m805014777 ();
+extern "C" void WebHeaderCollection_GetAsString_m1676534746 ();
+extern "C" void WebHeaderCollection_GetKey_m809097130 ();
+extern "C" void WebHeaderCollection_ToString_m1263025316 ();
+extern "C" void WebRequest_get_Method_m1872254915 ();
 extern "C" void Number_FormatDecimal_m709047813 ();
 extern "C" void Number_FormatDouble_m3280585553 ();
 extern "C" void Number_FormatInt32_m4077139532 ();
@@ -6545,6 +8180,8 @@ extern "C" void TypeForwardedFromAttribute_get_AssemblyFullName_m3035968748 ();
 extern "C" void COMException_ToString_m2192592964 ();
 extern "C" void DllImportAttribute_get_Value_m621189650 ();
 extern "C" void ExternalException_ToString_m3624952709 ();
+extern "C" void Marshal_PtrToStringAnsi_m2474145239 ();
+extern "C" void Marshal_PtrToStringUni_m175561854 ();
 extern "C" void ActivatedClientTypeEntry_ToString_m2494181680 ();
 extern "C" void ActivatedClientTypeEntry_get_ApplicationUrl_m2894992111 ();
 extern "C" void ActivatedServiceTypeEntry_ToString_m1591455874 ();
@@ -6642,6 +8279,12 @@ extern "C" void SByte_ToString_m3584531119_AdjustorThunk ();
 extern "C" void SByte_ToString_m1735624261_AdjustorThunk ();
 extern "C" void SByte_ToString_m3343368847_AdjustorThunk ();
 extern "C" void SByte_ToString_m2708934884_AdjustorThunk ();
+extern "C" void Claim_ToString_m4222319073 ();
+extern "C" void Claim_get_Type_m2905991604 ();
+extern "C" void Claim_get_Value_m3864400481 ();
+extern "C" void ClaimsIdentity_SerializeClaims_m202223928 ();
+extern "C" void ClaimsIdentity_get_AuthenticationType_m1910179080 ();
+extern "C" void ClaimsIdentity_get_Name_m2876031689 ();
 extern "C" void AsnEncodedData_BasicConstraintsExtension_m181086136 ();
 extern "C" void AsnEncodedData_Default_m4101664970 ();
 extern "C" void AsnEncodedData_EnhancedKeyUsageExtension_m56921642 ();
@@ -6653,20 +8296,43 @@ extern "C" void AsnEncodedData_ToString_m440213605 ();
 extern "C" void AsymmetricAlgorithm_ToXmlString_m2282287899 ();
 extern "C" void CAPI_CryptFindOIDInfoKeyFromName_m2581168086 ();
 extern "C" void CAPI_CryptFindOIDInfoNameFromKey_m319383758 ();
+extern "C" void CryptoConfig_MapNameToOID_m2044758263 ();
+extern "C" void CryptoConfig_MapNameToOID_m433585183 ();
 extern "C" void DSA_ToXmlString_m3836885162 ();
+extern "C" void Oid_get_FriendlyName_m1299931775 ();
 extern "C" void Oid_get_Value_m743416803 ();
 extern "C" void RSA_ToXmlString_m2922661427 ();
 extern "C" void Utils_DiscardWhiteSpaces_m155908701 ();
 extern "C" void Utils_DiscardWhiteSpaces_m2755365647 ();
 extern "C" void X509BasicConstraintsExtension_ToString_m1809935297 ();
+extern "C" void X509Certificate2_ToString_m3891217889 ();
+extern "C" void X509Certificate2_ToString_m4246350784 ();
+extern "C" void X509Certificate2_get_SerialNumber_m1315874713 ();
+extern "C" void X509Certificate2_get_Thumbprint_m392121246 ();
+extern "C" void X509Certificate2ImplMono_GetIssuerName_m1471829655 ();
+extern "C" void X509Certificate2ImplMono_GetSubjectName_m1781585546 ();
+extern "C" void X509Certificate2ImplMono_ToString_m2816258475 ();
+extern "C" void X509Certificate2ImplMono_ToString_m2444289495 ();
+extern "C" void X509Certificate_GetCertHashString_m3484127109 ();
+extern "C" void X509Certificate_GetSerialNumberString_m2772092361 ();
 extern "C" void X509Certificate_ToString_m3415629710 ();
+extern "C" void X509Certificate_ToString_m2340207075 ();
+extern "C" void X509Certificate_get_Issuer_m2934704867 ();
+extern "C" void X509Certificate_get_Subject_m2638144878 ();
+extern "C" void X509CertificateImplMono_GetIssuerName_m1851908077 ();
+extern "C" void X509CertificateImplMono_GetSubjectName_m4180800209 ();
+extern "C" void X509CertificateImplMono_ToString_m695573008 ();
 extern "C" void X509EnhancedKeyUsageExtension_ToString_m350388564 ();
 extern "C" void X509Extension_FormatUnkownData_m3636863676 ();
+extern "C" void X509Helper_ToHexString_m749786210 ();
 extern "C" void X509KeyUsageExtension_ToString_m3542316380 ();
 extern "C" void X509SubjectKeyIdentifierExtension_ToString_m12089275 ();
 extern "C" void X509SubjectKeyIdentifierExtension_get_SubjectKeyIdentifier_m3059478847 ();
 extern "C" void X509Utils_FindOidInfo_m3273336396 ();
 extern "C" void X509Utils_FindOidInfoWithFallback_m3303294769 ();
+extern "C" void WindowsIdentity_GetTokenName_m2370798233 ();
+extern "C" void WindowsIdentity_get_AuthenticationType_m2794530159 ();
+extern "C" void WindowsIdentity_get_Name_m670606912 ();
 extern "C" void SecurityDocument_GetString_m2624502405 ();
 extern "C" void SecurityAttribute_get_Name_m2543977264 ();
 extern "C" void SecurityAttribute_get_Value_m2111064489 ();
@@ -6719,11 +8385,13 @@ extern "C" void String_Format_m630303134 ();
 extern "C" void String_FormatHelper_m914691277 ();
 extern "C" void String_Insert_m3534971326 ();
 extern "C" void String_InternalSubString_m3065262335 ();
+extern "C" void String_Join_m2554858014 ();
 extern "C" void String_Join_m2050845953 ();
 extern "C" void String_Join_m29736248 ();
 extern "C" void String_Normalize_m1410854147 ();
 extern "C" void String_PadHelper_m633834744 ();
 extern "C" void String_PadRight_m50345030 ();
+extern "C" void String_Remove_m1524948975 ();
 extern "C" void String_Remove_m562998446 ();
 extern "C" void String_Replace_m3726209165 ();
 extern "C" void String_Replace_m1273907647 ();
@@ -6738,6 +8406,7 @@ extern "C" void String_ToLower_m3490221821 ();
 extern "C" void String_ToLowerInvariant_m110751226 ();
 extern "C" void String_ToString_m838249115 ();
 extern "C" void String_ToString_m3872792296 ();
+extern "C" void String_ToUpper_m3324454496 ();
 extern "C" void String_ToUpper_m1599942017 ();
 extern "C" void String_ToUpperInvariant_m2531236323 ();
 extern "C" void String_Trim_m923598732 ();
@@ -6821,22 +8490,35 @@ extern "C" void UIntPtr_ToString_m984583492_AdjustorThunk ();
 extern "C" void UncNameHelper_ParseCanonicalName_m2193492373 ();
 extern "C" void Uri_CombineUri_m3504099696 ();
 extern "C" void Uri_CreateHostStringHelper_m3531622141 ();
+extern "C" void Uri_EscapeDataString_m2743853427 ();
 extern "C" void Uri_EscapeUnescapeIri_m3727477417 ();
 extern "C" void Uri_GetComponents_m4033187838 ();
 extern "C" void Uri_GetComponentsHelper_m4097442089 ();
 extern "C" void Uri_GetEscapedParts_m3527369307 ();
+extern "C" void Uri_GetLocalPath_m296187027 ();
 extern "C" void Uri_GetParts_m1374986044 ();
 extern "C" void Uri_GetRelativeSerializationString_m2870805846 ();
 extern "C" void Uri_GetUnescapedParts_m314544613 ();
 extern "C" void Uri_GetUriPartsFromUserString_m3342131949 ();
+extern "C" void Uri_InternalEscapeString_m537903901 ();
 extern "C" void Uri_ReCreateParts_m4010664075 ();
 extern "C" void Uri_StripBidiControlCharacter_m3614987413 ();
 extern "C" void Uri_ToString_m3742105950 ();
 extern "C" void Uri_UnescapeDataString_m3282767665 ();
+extern "C" void Uri_get_AbsolutePath_m590948575 ();
 extern "C" void Uri_get_AbsoluteUri_m2582056986 ();
+extern "C" void Uri_get_Authority_m3816772302 ();
 extern "C" void Uri_get_DnsSafeHost_m3434390226 ();
+extern "C" void Uri_get_Fragment_m575158891 ();
+extern "C" void Uri_get_Host_m42857288 ();
+extern "C" void Uri_get_LocalPath_m2837234216 ();
 extern "C" void Uri_get_OriginalString_m3715995233 ();
+extern "C" void Uri_get_PathAndQuery_m2396197970 ();
+extern "C" void Uri_get_PrivateAbsolutePath_m1709492967 ();
+extern "C" void Uri_get_Query_m2772518875 ();
 extern "C" void Uri_get_Scheme_m2109479391 ();
+extern "C" void Uri_get_UserInfo_m1985954539 ();
+extern "C" void UriBuilder_ToString_m1259521445 ();
 extern "C" void UriParser_GetComponents_m2774442831 ();
 extern "C" void UriParser_InternalGetComponents_m1544498498 ();
 extern "C" void UriParser_InternalResolve_m3957604214 ();
@@ -6868,6 +8550,8 @@ extern "C" void TMP_Text_GetParsedText_m226253720 ();
 extern "C" void TMP_Text_get_text_m3381890347 ();
 extern "C" void TMP_WordInfo_GetWord_m2703671493_AdjustorThunk ();
 extern "C" void TMPro_ExtensionMethods_ArrayToString_m2567160532 ();
+extern "C" void Application_get_dataPath_m4232621142 ();
+extern "C" void Application_get_persistentDataPath_m1428108154 ();
 extern "C" void AudioSettings_GetAmbisonicDecoderPluginName_m19603540 ();
 extern "C" void AudioSettings_GetSpatializerPluginName_m1324100978 ();
 extern "C" void Bounds_ToString_m4208690781_AdjustorThunk ();
@@ -6904,9 +8588,20 @@ extern "C" void GUIStyle_ToString_m3014660435 ();
 extern "C" void GUIStyle_get_name_m2109418832 ();
 extern "C" void GUIUtility_get_systemCopyBuffer_m2735901425 ();
 extern "C" void Input_get_compositionString_m2336588846 ();
+extern "C" void JsonUtility_ToJson_m3644929270 ();
+extern "C" void JsonUtility_ToJson_m471732085 ();
+extern "C" void JsonUtility_ToJsonInternal_m1985815576 ();
 extern "C" void Logger_GetString_m3669755330 ();
 extern "C" void Matrix4x4_ToString_m2476911929_AdjustorThunk ();
+extern "C" void Mesh_GetBlendShapeName_m2641015160 ();
 extern "C" void MonoBehaviour_GetScriptClassName_m1053457852 ();
+extern "C" void DownloadHandler_GetContentType_m4249877960 ();
+extern "C" void DownloadHandler_GetText_m600283602 ();
+extern "C" void DownloadHandler_get_text_m2427232382 ();
+extern "C" void UnityWebRequest_GetUrl_m3419782119 ();
+extern "C" void UnityWebRequest_GetWebErrorString_m4076320575 ();
+extern "C" void UnityWebRequest_get_error_m1613086199 ();
+extern "C" void UnityWebRequest_get_url_m2568598920 ();
 extern "C" void Object_GetName_m4137306623 ();
 extern "C" void Object_ToString_m3272709752 ();
 extern "C" void Object_ToString_m1579850521 ();
@@ -6946,18 +8641,46 @@ extern "C" void Vector2Int_ToString_m4168766109_AdjustorThunk ();
 extern "C" void Vector3_ToString_m759076600_AdjustorThunk ();
 extern "C" void Vector3Int_ToString_m3033835977_AdjustorThunk ();
 extern "C" void Vector4_ToString_m1596036856_AdjustorThunk ();
+extern "C" void WWW_GetStatusCodeName_m3580893459 ();
+extern "C" void WWW_get_error_m3055313367 ();
+extern "C" void WWW_get_text_m898164367 ();
+extern "C" void WWW_get_url_m3672399347 ();
 extern "C" void TypeInferenceRuleAttribute_ToString_m4089326196 ();
+extern "C" void WebRequestUtils_MakeInitialUrl_m973728695 ();
+extern "C" void WebRequestUtils_MakeUriString_m291605890 ();
 extern "C" void WebRequestUtils_RedirectTo_m55747000 ();
+extern "C" void WebRequestUtils_URLDecode_m2727298221 ();
+extern "C" void DebugMeshPerf_ToString_m3456539566 ();
+extern "C" void Edge_ToString_m1982095919 ();
+extern "C" void LODGenerator_MakePathSafe_m1610124688 ();
+extern "C" void LODGenerator_ValidateSaveAssetsPath_m1530750245 ();
+extern "C" void LODGeneratorHelper_get_SaveAssetsPath_m66530154 ();
+extern "C" void Ref_ToString_m2081405151 ();
+extern "C" void SymmetricMatrix_ToString_m1526080082 ();
+extern "C" void Triangle_ToString_m2036090084 ();
+extern "C" void Vector3d_ToString_m3329300008_AdjustorThunk ();
+extern "C" void Vector3d_ToString_m2112698771_AdjustorThunk ();
+extern "C" void Vertex_ToString_m376178229 ();
 extern "C" void StringComparer_get_CurrentCultureIgnoreCase_m2393721523 ();
 extern "C" void StringComparer_get_InvariantCultureIgnoreCase_m2404489191 ();
 extern "C" void StringComparer_get_Ordinal_m2103862281 ();
 extern "C" void StringComparer_get_OrdinalIgnoreCase_m2680809380 ();
+extern "C" void LoaderObj_ParseTexturePaths_m2486515998 ();
 extern "C" void KeyHandler_GetSubKeyNames_m3609278569 ();
 extern "C" void RegistryKey_GetSubKeyNames_m2158391902 ();
 extern "C" void UnixRegistryApi_GetSubKeyNames_m580520828 ();
 extern "C" void Win32RegistryApi_GetSubKeyNames_m487479114 ();
+extern "C" void MonoTlsSettings_get_CertificateSearchPaths_m655766883 ();
 extern "C" void AttrListImpl_get_Names_m977594476 ();
 extern "C" void AttrListImpl_get_Values_m3139810172 ();
+extern "C" void NameObjectCollectionBase_BaseGetAllKeys_m3974965581 ();
+extern "C" void NameValueCollection_GetAsStringArray_m2855262980 ();
+extern "C" void NameValueCollection_GetValues_m772065291 ();
+extern "C" void NameValueCollection_get_AllKeys_m2125191680 ();
+extern "C" void DateTime_GetDateTimeFormats_m3421493225_AdjustorThunk ();
+extern "C" void DateTime_GetDateTimeFormats_m2474376420_AdjustorThunk ();
+extern "C" void DateTimeFormat_GetAllDateTimes_m3181678382 ();
+extern "C" void DateTimeFormat_GetAllDateTimes_m489554109 ();
 extern "C" void Enum_GetNames_m2200571060 ();
 extern "C" void Enum_InternalGetNames_m3679831039 ();
 extern "C" void Environment_GetEnvironmentVariableNames_m1718238521 ();
@@ -7014,10 +8737,19 @@ extern "C" void Directory_GetFiles_m932257245 ();
 extern "C" void Directory_InternalGetDirectories_m353212005 ();
 extern "C" void Directory_InternalGetFileDirectoryNames_m3598171290 ();
 extern "C" void Directory_InternalGetFiles_m236895616 ();
+extern "C" void File_ReadAllLines_m349741884 ();
+extern "C" void File_ReadAllLines_m2281910820 ();
+extern "C" void HeaderInfoTable_ParseMultiValue_m2835404333 ();
+extern "C" void HeaderInfoTable_ParseSingleValue_m3901523052 ();
+extern "C" void HeaderParser_EndInvoke_m3944384636 ();
+extern "C" void HeaderParser_Invoke_m1808134633 ();
+extern "C" void WebHeaderCollection_GetValues_m2828584819 ();
+extern "C" void WebHeaderCollection_get_AllKeys_m2853044734 ();
 extern "C" void RuntimeType_GetEnumNames_m2990610882 ();
 extern "C" void String_InternalSplitKeepEmptyEntries_m901972134 ();
 extern "C" void String_InternalSplitOmitEmptyEntries_m990064860 ();
 extern "C" void String_Split_m3646115398 ();
+extern "C" void String_Split_m1466646415 ();
 extern "C" void String_SplitInternal_m3428642536 ();
 extern "C" void Type_GetEnumNames_m2300271623 ();
 extern "C" void XRGraphicsConfig_get_supportedDevices_m3388965943 ();
@@ -7025,6 +8757,7 @@ extern "C" void Material_GetShaderKeywords_m3331850800 ();
 extern "C" void Material_get_shaderKeywords_m541729302 ();
 extern "C" void XRSettings_get_supportedDevices_m64055051 ();
 extern "C" void ByteMatcher_Match_m3094067305 ();
+extern "C" void StreamReader_get_Decoder_Prop_m2881127175 ();
 extern "C" void ASCIIEncoding_GetDecoder_m2247302044 ();
 extern "C" void Encoding_GetDecoder_m1656450963 ();
 extern "C" void EncodingNLS_GetDecoder_m2090028528 ();
@@ -7077,10 +8810,14 @@ extern "C" void EncodingHelper_GetDefaultEncoding_m4100613880 ();
 extern "C" void EncodingHelper_get_UTF8Unmarked_m4051408559 ();
 extern "C" void EncodingProvider_GetEncodingFromProvider_m3582342018 ();
 extern "C" void EncodingProvider_GetEncodingFromProvider_m547069816 ();
+extern "C" void DownloadHandler_GetTextEncoder_m3244408468 ();
+extern "C" void WWWForm_get_DefaultEncoding_m4131957975 ();
 extern "C" void Normalization_QuickCheck_m1620044236 ();
 extern "C" void Regex_CacheCode_m2357307429 ();
 extern "C" void Regex_LookupCachedAndUpdate_m771950898 ();
 extern "C" void Match_get_Empty_m2060287462 ();
+extern "C" void Regex_Match_m2255756165 ();
+extern "C" void Regex_Match_m4145799399 ();
 extern "C" void Regex_Run_m3049341450 ();
 extern "C" void RegexRunner_Scan_m1515286539 ();
 extern "C" void RegexRunner_TidyMatch_m2177818455 ();
@@ -7121,6 +8858,7 @@ extern "C" void ParseNumbers_ConvertToBase2_m1198918311 ();
 extern "C" void ParseNumbers_ConvertToBase8_m1544816379 ();
 extern "C" void PointerSpec_Append_m521691687 ();
 extern "C" void Normalization_Combine_m102156561 ();
+extern "C" void StringBuilder_Append_m1417019054 ();
 extern "C" void StringBuilder_Append_m2383614642 ();
 extern "C" void StringBuilder_Append_m764680372 ();
 extern "C" void StringBuilder_Append_m2180175564 ();
@@ -7192,9 +8930,27 @@ extern "C" void SynchronizationContext_get_Current_m3666546046 ();
 extern "C" void SynchronizationContext_get_CurrentNoFlow_m3947879792 ();
 extern "C" void UnitySynchronizationContext_CreateCopy_m34905290 ();
 extern "C" void Task_get_CurrentStackGuard_m1653934586 ();
+extern "C" void Loader_Build_m2321866369 ();
+extern "C" void Loader_LoadMaterialTexture_m2387831242 ();
+extern "C" void Loader_LoadMaterialTexture_m952797623 ();
+extern "C" void Loader_NetworkedBuild_m914437704 ();
+extern "C" void LoaderObj_LoadMaterialLibrary_m1741815164 ();
+extern "C" void LoaderObj_LoadMaterialLibrary_m4130749772 ();
+extern "C" void LoaderObj_LoadModelFile_m1730933747 ();
+extern "C" void LoaderObj_LoadModelFileNetworked_m1942612841 ();
+extern "C" void SystemServices_AsyncReachabilityCheck_m2090151446 ();
+extern "C" void SystemServices_AsyncResourceDownload_m1209913551 ();
+extern "C" void SystemServices_RunDelayedCommand_m1900484235 ();
+extern "C" void SystemServices_SendHTTPRequestAsync_m2289727555 ();
+extern "C" void SystemServices_WriteBytesAsync_m3560208797 ();
+extern "C" void SystemServices_WriteTextureAsync_m1443445690 ();
+extern "C" void OBJExporterImporter_ExportMeshToOBJ_m2280150143 ();
+extern "C" void OBJExporterImporter_ImportFromLocalFileSystem_m1159319730 ();
 extern "C" void AsyncProtocolRequest_ProcessOperation_m113656365 ();
 extern "C" void MobileAuthenticatedStream_InnerWrite_m3591825083 ();
+extern "C" void MobileAuthenticatedStream_ProcessAuthentication_m979422748 ();
 extern "C" void MobileAuthenticatedStream_WriteAsync_m3803054234 ();
+extern "C" void GZipStream_WriteAsync_m1820564395 ();
 extern "C" void FileStream_WriteAsync_m3766186288 ();
 extern "C" void MemoryStream_WriteAsync_m412387300 ();
 extern "C" void NullStream_WriteAsync_m1432912081 ();
@@ -7204,11 +8960,17 @@ extern "C" void Stream_WriteAsync_m3557756746 ();
 extern "C" void UnmanagedMemoryStream_WriteAsync_m1255715319 ();
 extern "C" void AsyncMethodBuilderCore_TryGetContinuationTask_m1810906364 ();
 extern "C" void AsyncTaskMethodBuilder_get_Task_m115678985_AdjustorThunk ();
+extern "C" void AsyncVoidMethodBuilder_get_Task_m1502099545_AdjustorThunk ();
+extern "C" void CryptoStream_WriteAsync_m3151980906 ();
+extern "C" void CryptoStream_WriteAsyncInternal_m2536873399 ();
 extern "C" void SemaphoreSlim_WaitAsync_m3107910213 ();
 extern "C" void AwaitTaskContinuation_CreateTask_m2017999490 ();
+extern "C" void Task_ContinueWith_m693071538 ();
+extern "C" void Task_ContinueWith_m3968596572 ();
 extern "C" void Task_ContinueWith_m1818927876 ();
 extern "C" void Task_ContinueWith_m922426921 ();
 extern "C" void Task_CreateReplicaTask_m1034319094 ();
+extern "C" void Task_Delay_m2131508895 ();
 extern "C" void Task_Delay_m3217627525 ();
 extern "C" void Task_FromCancellation_m961699946 ();
 extern "C" void Task_FromException_m3324787540 ();
@@ -7218,32 +8980,54 @@ extern "C" void Task_Run_m1807195689 ();
 extern "C" void Task_get_CompletedTask_m459565641 ();
 extern "C" void Task_get_HandedOverChildReplica_m1654751661 ();
 extern "C" void Task_get_InternalCurrent_m1175361608 ();
+extern "C" void TaskFactory_StartNew_m85728641 ();
 extern "C" void U3CU3Ec_U3C_cctorU3Eb__295_0_m2103434548 ();
 extern "C" void Task_EnsureContingentPropertiesInitialized_m1531521476 ();
 extern "C" void Task_EnsureContingentPropertiesInitializedCore_m167947768 ();
 extern "C" void Task_OptionsMethod_m1047756451 ();
 extern "C" void Task_get_CreationOptions_m2591210370 ();
 extern "C" void Task_get_Options_m928503907 ();
+extern "C" void Task_get_Factory_m1867023094 ();
 extern "C" void Task_get_ExecutingTaskScheduler_m2823307735 ();
+extern "C" void TaskScheduler_get_Current_m2848373821 ();
 extern "C" void TaskScheduler_get_Default_m1400371958 ();
 extern "C" void TaskScheduler_get_InternalCurrent_m3872855803 ();
 extern "C" void Task_get_Status_m403050069 ();
 extern "C" void AsyncProtocolRequest_StartOperation_m2596759969 ();
 extern "C" void SemaphoreSlim_WaitAsync_m1002871641 ();
 extern "C" void SemaphoreSlim_WaitUntilCountOrTimeoutAsync_m2302015872 ();
+extern "C" void U3CU3Ec__DisplayClass78_0_U3CGetRequestStreamAsyncU3Eb__1_m1942056259 ();
+extern "C" void WebRequest_U3CGetRequestStreamAsyncU3Eb__78_0_m4024301302 ();
+extern "C" void WebRequest_GetRequestStreamAsync_m1710608624 ();
 extern "C" void MobileAuthenticatedStream_InnerRead_m1183245555 ();
 extern "C" void MobileAuthenticatedStream_ReadAsync_m2676896515 ();
 extern "C" void MobileAuthenticatedStream_StartOperation_m74811008 ();
+extern "C" void GZipStream_ReadAsync_m576459817 ();
 extern "C" void FileStream_ReadAsync_m4203644815 ();
 extern "C" void MemoryStream_ReadAsync_m54979168 ();
 extern "C" void NullStream_ReadAsync_m409390598 ();
 extern "C" void Stream_BeginEndReadAsync_m3205112820 ();
+extern "C" void Stream_ReadAsync_m1523724214 ();
 extern "C" void Stream_ReadAsync_m1661051365 ();
+extern "C" void StreamReader_ReadAsyncInternal_m1286562712 ();
+extern "C" void StreamReader_ReadBufferAsync_m3469474401 ();
+extern "C" void TextReader_ReadAsyncInternal_m178090620 ();
 extern "C" void UnmanagedMemoryStream_ReadAsync_m2720683609 ();
+extern "C" void CryptoStream_ReadAsync_m3097409822 ();
+extern "C" void CryptoStream_ReadAsyncInternal_m3337684600 ();
 extern "C" void AsyncTaskCache_CreateInt32Tasks_m1653604144 ();
 extern "C" void AsyncProtocolRequest_InnerRead_m1229791229 ();
+extern "C" void StreamReader_ReadToEndAsync_m3322639319 ();
+extern "C" void StreamReader_ReadToEndAsyncInternal_m444844830 ();
+extern "C" void StringReader_ReadToEndAsync_m4237545678 ();
+extern "C" void SyncTextReader_ReadToEndAsync_m3498616981 ();
+extern "C" void TextReader_ReadToEndAsync_m3395900697 ();
 extern "C" void Task_WhenAny_m377770228 ();
 extern "C" void TaskFactory_CommonCWAnyLogic_m2930841392 ();
+extern "C" void Loader_Load_m2803392965 ();
+extern "C" void Loader_LoadFromNetwork_m284757336 ();
+extern "C" void ObjectImporter_ImportModelAsync_m3700572444 ();
+extern "C" void ObjectImporter_ImportModelFromNetwork_m561684935 ();
 extern "C" void U3CU3Ec_U3CBeginEndWriteAsyncU3Eb__53_1_m1802758897 ();
 extern "C" void Thread_GetCurrentThread_m3861654801 ();
 extern "C" void Thread_get_CurrentThread_m4142136012 ();
@@ -7255,6 +9039,9 @@ extern "C" void Scheduler_get_Instance_m2990168607 ();
 extern "C" void FileStreamAsyncResult_get_AsyncWaitHandle_m1811816191 ();
 extern "C" void SynchronousAsyncResult_get_AsyncWaitHandle_m578906976 ();
 extern "C" void IOAsyncResult_get_AsyncWaitHandle_m782089690 ();
+extern "C" void FtpAsyncResult_get_AsyncWaitHandle_m1468110686 ();
+extern "C" void LazyAsyncResult_get_AsyncWaitHandle_m696999632 ();
+extern "C" void SimpleAsyncResult_get_AsyncWaitHandle_m2590763727 ();
 extern "C" void AsyncResult_get_AsyncWaitHandle_m1971359513 ();
 extern "C" void ManualResetEventSlim_get_WaitHandle_m666328113 ();
 extern "C" void Task_System_IAsyncResult_get_AsyncWaitHandle_m3346726451 ();
@@ -7323,6 +9110,7 @@ extern "C" void TransitionTime_CreateFixedDateRule_m3958556326 ();
 extern "C" void TransitionTime_CreateFloatingDateRule_m386701864 ();
 extern "C" void TransitionTime_CreateTransitionTime_m3556662655 ();
 extern "C" void __DTString_GetSeparatorToken_m2062126902_AdjustorThunk ();
+extern "C" void PolyfewRuntime_ConvertSkinnedMeshesFromRenderers_m576780255 ();
 extern "C" void ArraySpec_Resolve_m1822362958 ();
 extern "C" void Enum_GetUnderlyingType_m2480312097 ();
 extern "C" void Exception_GetType_m2227967756 ();
@@ -7492,6 +9280,7 @@ extern "C" void Type_GetGenericParameterConstraints_m1960964210 ();
 extern "C" void AttributeHelperEngine_GetRequiredComponents_m568829708 ();
 extern "C" void TypedReference_MakeTypedReference_m4218624797 ();
 extern "C" void TypedReference_MakeTypedReferenceInternal_m3020709588 ();
+extern "C" void BitConverterLE_ToUInt16_m2422733049 ();
 extern "C" void BitConverter_ToUInt16_m4076849680 ();
 extern "C" void Boolean_System_IConvertible_ToUInt16_m3465173538_AdjustorThunk ();
 extern "C" void Byte_System_IConvertible_ToUInt16_m1879180133_AdjustorThunk ();
@@ -7534,17 +9323,27 @@ extern "C" void UInt64_System_IConvertible_ToUInt16_m4165747038_AdjustorThunk ()
 extern "C" void Uri_CheckAuthorityHelper_m1874333981 ();
 extern "C" void Uri_ParseSchemeCheckImplicitFile_m3192443454 ();
 extern "C" void Uri_get_SecuredPathIndex_m398373065 ();
+extern "C" void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m2563088408 ();
 extern "C" void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m3680781468 ();
 extern "C" void U3CPrivateImplementationDetailsU3E_ComputeStringHash_m4063532059 ();
 extern "C" void MSCompatUnicodeTable_UInt32FromBytePtr_m2910318928 ();
+extern "C" void Kernel_DwordMod_m3830036736 ();
 extern "C" void Kernel_DwordMod_m4183681925 ();
+extern "C" void Kernel_SingleByteDivideInPlace_m2393683267 ();
 extern "C" void Kernel_SingleByteDivideInPlace_m907158225 ();
 extern "C" void Kernel_modInverse_m668448880 ();
+extern "C" void Kernel_modInverse_m4048046181 ();
 extern "C" void BigInteger_op_Modulus_m1987692259 ();
+extern "C" void BigInteger_op_Modulus_m3242311550 ();
+extern "C" void BitConverterLE_ToUInt32_m1866481534 ();
+extern "C" void MD4Managed_F_m2794461001 ();
 extern "C" void MD4Managed_F_m2464097827 ();
+extern "C" void MD4Managed_G_m2118206422 ();
 extern "C" void MD4Managed_G_m3705643367 ();
+extern "C" void MD4Managed_H_m213605525 ();
 extern "C" void MD4Managed_H_m4202333451 ();
 extern "C" void MD4Managed_ROL_m3321598589 ();
+extern "C" void MD4Managed_ROL_m691796253 ();
 extern "C" void BitConverter_ToUInt32_m3737646381 ();
 extern "C" void Boolean_System_IConvertible_ToUInt32_m2723177447_AdjustorThunk ();
 extern "C" void Byte_System_IConvertible_ToUInt32_m1049546902_AdjustorThunk ();
@@ -7584,6 +9383,7 @@ extern "C" void NumberFormatter_FastToDecHex_m699829267 ();
 extern "C" void NumberFormatter_ToDecHex_m1238855594 ();
 extern "C" void __BinaryParser_ReadUInt32_m4236106736 ();
 extern "C" void SByte_System_IConvertible_ToUInt32_m4275534457_AdjustorThunk ();
+extern "C" void AesTransform_SubByte_m3350159546 ();
 extern "C" void DESTransform_CipherFunct_m3527261721 ();
 extern "C" void RIPEMD160Managed_F_m2051853483 ();
 extern "C" void RIPEMD160Managed_G_m3625715749 ();
@@ -7608,6 +9408,7 @@ extern "C" void TimeZoneInfo_EnumDynamicTimeZoneInformation_m3457584466 ();
 extern "C" void TimeZoneInfo_GetDynamicTimeZoneInformation_m678136723 ();
 extern "C" void TimeZoneInfo_GetDynamicTimeZoneInformationEffectiveYears_m3900307810 ();
 extern "C" void UInt16_System_IConvertible_ToUInt32_m1074326139_AdjustorThunk ();
+extern "C" void UInt32_Parse_m3270868885 ();
 extern "C" void UInt32_Parse_m3755665066 ();
 extern "C" void UInt32_Parse_m1373460382 ();
 extern "C" void UInt32_System_IConvertible_ToUInt32_m1744564280_AdjustorThunk ();
@@ -7640,6 +9441,8 @@ extern "C" void ShadowmapBase_get_height_m2915208785 ();
 extern "C" void ShadowmapBase_get_slices_m4041240399 ();
 extern "C" void ShadowmapBase_get_width_m3673530297 ();
 extern "C" void TextureCache_GetTextureHash_m1449751330 ();
+extern "C" void Mesh_GetIndexCount_m859190368 ();
+extern "C" void Mesh_GetIndexCountImpl_m4003246655 ();
 extern "C" void Texture_get_updateCount_m2762024326 ();
 extern "C" void BitConverter_ToUInt64_m1220063212 ();
 extern "C" void Boolean_System_IConvertible_ToUInt64_m1739877596_AdjustorThunk ();
@@ -7696,22 +9499,46 @@ extern "C" void UInt32_System_IConvertible_ToUInt64_m1094958903_AdjustorThunk ()
 extern "C" void UInt64_Parse_m1485858293 ();
 extern "C" void UInt64_Parse_m819899889 ();
 extern "C" void UInt64_System_IConvertible_ToUInt64_m2135047981_AdjustorThunk ();
+extern "C" void Edge_CalculateKey_m4037239241 ();
 extern "C" void Enum_InternalGetValues_m1059718424 ();
+extern "C" void CFWebProxy_ExecuteProxyAutoConfigurationURL_m104646007 ();
+extern "C" void CFWebProxy_GetProxy_m294039492 ();
+extern "C" void CFWebProxy_GetProxyUri_m1779378488 ();
+extern "C" void CFWebProxy_GetProxyUriFromScript_m4242154088 ();
+extern "C" void CFWebProxy_SelectProxy_m459710337 ();
+extern "C" void EmptyWebProxy_GetProxy_m2094016683 ();
+extern "C" void FileWebRequest_get_RequestUri_m947679769 ();
+extern "C" void FtpWebRequest_get_RequestUri_m907077889 ();
+extern "C" void HttpWebRequest_get_Address_m1609525404 ();
+extern "C" void HttpWebRequest_get_AuthUri_m3720408082 ();
+extern "C" void HttpWebRequest_get_RequestUri_m1528754012 ();
+extern "C" void ServicePoint_get_Address_m4189969258 ();
+extern "C" void WebProxy_GetProxy_m3150838504 ();
+extern "C" void WebProxy_ProxyUri_m3467768412 ();
+extern "C" void WebProxyWrapperOpaque_GetProxy_m211424586 ();
+extern "C" void WebRequest_get_RequestUri_m2259001472 ();
 extern "C" void Uri_CreateHelper_m2703197614 ();
 extern "C" void Uri_ResolveHelper_m3305423888 ();
+extern "C" void UriBuilder_get_Uri_m3514502640 ();
 extern "C" void Uri_CheckCanonical_m2874851832 ();
 extern "C" void Uri_get_HostType_m34989097 ();
 extern "C" void Uri_EnsureUriInfo_m3246889132 ();
 extern "C" void Uri_GetException_m26092414 ();
 extern "C" void Uri_ParseMinimal_m443648661 ();
+extern "C" void Uri_get_HostNameType_m1143766868 ();
 extern "C" void Uri_get_Syntax_m1230266677 ();
 extern "C" void UriParser_FindOrFetchAsUnknownV1Syntax_m82912732 ();
+extern "C" void UriParser_GetSyntax_m811769415 ();
 extern "C" void UriParser_InternalOnNewUri_m4146786771 ();
 extern "C" void UriParser_OnNewUri_m1388610744 ();
 extern "C" void UriParser_get_Flags_m1339933774 ();
+extern "C" void MobileAuthenticatedStream_InternalRead_m3507415975 ();
 extern "C" void MobileAuthenticatedStream_ProcessRead_m2116869112 ();
 extern "C" void MobileAuthenticatedStream_ProcessWrite_m1610824738 ();
+extern "C" void UnityTlsContext_Read_m2903607179 ();
+extern "C" void UnityTlsContext_Write_m1308053234 ();
 extern "C" void Environment_CreateVersionFromString_m1270430627 ();
+extern "C" void ServicePoint_get_ProtocolVersion_m2707266366 ();
 extern "C" void AssemblyName_get_Version_m538083430 ();
 extern "C" void PB_PrefabData__ctor_m1490799808 ();
 extern "C" void PB_SaveObject__ctor_m1667202632 ();
@@ -7719,6 +9546,347 @@ extern "C" void PB_SaveObject_AddPrefab_m1631284962 ();
 extern "C" void PB_SaveObject_UpgradeSave_m1639196825 ();
 extern "C" void AutoRotate__ctor_m2743996959 ();
 extern "C" void AutoRotate_Update_m2274550285 ();
+extern "C" void FaceGroupData__ctor_m2225826792 ();
+extern "C" void ObjectData__ctor_m1841806144 ();
+extern "C" void DataSet__ctor_m1879147193 ();
+extern "C" void DataSet_AddColor_m2588791549 ();
+extern "C" void DataSet_AddFaceIndices_m121732860 ();
+extern "C" void DataSet_AddGroup_m2443320429 ();
+extern "C" void DataSet_AddMaterialName_m2493411803 ();
+extern "C" void DataSet_AddNormal_m2896360749 ();
+extern "C" void DataSet_AddObject_m4137082091 ();
+extern "C" void DataSet_AddUV_m1236936773 ();
+extern "C" void DataSet_AddVertex_m4258718712 ();
+extern "C" void DataSet_PrintSummary_m2301394793 ();
+extern "C" void ImportOptions__ctor_m648762805 ();
+extern "C" void U3CBuildU3Ec__async3_MoveNext_m1596334786_AdjustorThunk ();
+extern "C" void U3CBuildU3Ec__async3_SetStateMachine_m1915896277_AdjustorThunk ();
+extern "C" void U3CDownloadFileU3Ec__Iterator9__ctor_m3861899008 ();
+extern "C" void U3CDownloadFileU3Ec__Iterator9_Dispose_m197438926 ();
+extern "C" void U3CDownloadFileU3Ec__Iterator9_Reset_m2805703264 ();
+extern "C" void U3CDownloadFileWebGLU3Ec__IteratorB__ctor_m1991976062 ();
+extern "C" void U3CDownloadFileWebGLU3Ec__IteratorB_Dispose_m3760168364 ();
+extern "C" void U3CDownloadFileWebGLU3Ec__IteratorB_Reset_m4248032903 ();
+extern "C" void U3CDownloadTexFileWebGLU3Ec__IteratorC__ctor_m2205449345 ();
+extern "C" void U3CDownloadTexFileWebGLU3Ec__IteratorC_Dispose_m2830575213 ();
+extern "C" void U3CDownloadTexFileWebGLU3Ec__IteratorC_Reset_m550647909 ();
+extern "C" void U3CGetProgressU3Ec__IteratorA__ctor_m1182973465 ();
+extern "C" void U3CGetProgressU3Ec__IteratorA_Dispose_m1666873476 ();
+extern "C" void U3CGetProgressU3Ec__IteratorA_Reset_m2009570046 ();
+extern "C" void U3CLoadU3Ec__async0_MoveNext_m2541098102_AdjustorThunk ();
+extern "C" void U3CLoadU3Ec__async0_SetStateMachine_m766861374_AdjustorThunk ();
+extern "C" void U3CLoadFromNetworkU3Ec__async1_MoveNext_m279563611_AdjustorThunk ();
+extern "C" void U3CLoadFromNetworkU3Ec__async1_SetStateMachine_m2211262982_AdjustorThunk ();
+extern "C" void U3CLoadFromNetworkWebGLU3Ec__Iterator2__ctor_m814733634 ();
+extern "C" void U3CLoadFromNetworkWebGLU3Ec__Iterator2_Dispose_m897220824 ();
+extern "C" void U3CLoadFromNetworkWebGLU3Ec__Iterator2_Reset_m400659618 ();
+extern "C" void U3CLoadMaterialTextureU3Ec__async6_MoveNext_m2316897439_AdjustorThunk ();
+extern "C" void U3CLoadMaterialTextureU3Ec__async6_SetStateMachine_m3401983247_AdjustorThunk ();
+extern "C" void U3CLoadMaterialTextureU3Ec__AnonStoreyD__ctor_m177775453 ();
+extern "C" void U3CLoadMaterialTextureU3Ec__AnonStoreyD_U3CU3Em__0_m3729981692 ();
+extern "C" void U3CLoadMaterialTextureU3Ec__AnonStoreyD_U3CU3Em__1_m3587923512 ();
+extern "C" void U3CLoadMaterialTextureU3Ec__async7_MoveNext_m2351460290_AdjustorThunk ();
+extern "C" void U3CLoadMaterialTextureU3Ec__async7_SetStateMachine_m3614152391_AdjustorThunk ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__AnonStoreyE__ctor_m1351105779 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__AnonStoreyE_U3CU3Em__0_m2763441875 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__AnonStoreyE_U3CU3Em__1_m480636761 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__Iterator8__ctor_m1445433615 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__Iterator8_Dispose_m1228624288 ();
+extern "C" void U3CLoadMaterialTextureWebGLU3Ec__Iterator8_Reset_m3016040287 ();
+extern "C" void U3CNetworkedBuildU3Ec__async4_MoveNext_m2745632631_AdjustorThunk ();
+extern "C" void U3CNetworkedBuildU3Ec__async4_SetStateMachine_m1732312776_AdjustorThunk ();
+extern "C" void U3CNetworkedBuildWebGLU3Ec__Iterator5__ctor_m2802670173 ();
+extern "C" void U3CNetworkedBuildWebGLU3Ec__Iterator5_Dispose_m3442318001 ();
+extern "C" void U3CNetworkedBuildWebGLU3Ec__Iterator5_Reset_m125340172 ();
+extern "C" void Loader__cctor_m245155066 ();
+extern "C" void Loader__ctor_m3255566213 ();
+extern "C" void Loader_OnCreated_m743114028 ();
+extern "C" void Loader_OnLoadFailed_m3150465350 ();
+extern "C" void Loader_OnLoaded_m1574231833 ();
+extern "C" void Loader_add_ModelCreated_m151964446 ();
+extern "C" void Loader_add_ModelError_m3244594520 ();
+extern "C" void Loader_add_ModelLoaded_m518576602 ();
+extern "C" void Loader_remove_ModelCreated_m3321074965 ();
+extern "C" void Loader_remove_ModelError_m4101557118 ();
+extern "C" void Loader_remove_ModelLoaded_m2323318820 ();
+extern "C" void Loader_set_ConvertVertAxis_m1947231605 ();
+extern "C" void Loader_set_Scaling_m2645094036 ();
+extern "C" void U3CLoadMaterialLibraryU3Ec__async3_MoveNext_m1717438858_AdjustorThunk ();
+extern "C" void U3CLoadMaterialLibraryU3Ec__async3_SetStateMachine_m62335106_AdjustorThunk ();
+extern "C" void U3CLoadMaterialLibraryU3Ec__AnonStorey9__ctor_m1997591244 ();
+extern "C" void U3CLoadMaterialLibraryU3Ec__AnonStorey9_U3CU3Em__0_m1976284609 ();
+extern "C" void U3CLoadMaterialLibraryU3Ec__AnonStorey9_U3CU3Em__1_m3962019889 ();
+extern "C" void U3CLoadMaterialLibraryU3Ec__async4_MoveNext_m3079473546_AdjustorThunk ();
+extern "C" void U3CLoadMaterialLibraryU3Ec__async4_SetStateMachine_m1727368952_AdjustorThunk ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__AnonStoreyA__ctor_m2420529103 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__AnonStoreyA_U3CU3Em__0_m294648399 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__AnonStoreyA_U3CU3Em__1_m292324850 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__Iterator5__ctor_m1208551793 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_Dispose_m1453339536 ();
+extern "C" void U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_Reset_m1011987206 ();
+extern "C" void U3CLoadModelFileU3Ec__async0_MoveNext_m908795010_AdjustorThunk ();
+extern "C" void U3CLoadModelFileU3Ec__async0_SetStateMachine_m3770000884_AdjustorThunk ();
+extern "C" void U3CLoadModelFileNetworkedU3Ec__AnonStorey7__ctor_m1061913466 ();
+extern "C" void U3CLoadModelFileNetworkedU3Ec__AnonStorey7_U3CU3Em__0_m1481445901 ();
+extern "C" void U3CLoadModelFileNetworkedU3Ec__AnonStorey7_U3CU3Em__1_m815363926 ();
+extern "C" void U3CLoadModelFileNetworkedU3Ec__async1_MoveNext_m881524014_AdjustorThunk ();
+extern "C" void U3CLoadModelFileNetworkedU3Ec__async1_SetStateMachine_m731285854_AdjustorThunk ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__AnonStorey8__ctor_m321153310 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__AnonStorey8_U3CU3Em__0_m1229083317 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__AnonStorey8_U3CU3Em__1_m1127156662 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2__ctor_m2233634992 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_Dispose_m562364020 ();
+extern "C" void U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_Reset_m42481412 ();
+extern "C" void U3CLoadOrDownloadTextU3Ec__Iterator6__ctor_m3117803010 ();
+extern "C" void U3CLoadOrDownloadTextU3Ec__Iterator6_Dispose_m3812581278 ();
+extern "C" void U3CLoadOrDownloadTextU3Ec__Iterator6_Reset_m2379590555 ();
+extern "C" void BumpParamDef__ctor_m2828540933 ();
+extern "C" void LoaderObj__ctor_m1932028736 ();
+extern "C" void LoaderObj_GetFaceIndicesByOneFaceLine_m715108142 ();
+extern "C" void LoaderObj_ParseBumpParameters_m2924099076 ();
+extern "C" void LoaderObj_ParseGeometryData_m1869140770 ();
+extern "C" void LoaderObj_ParseMaterialData_m844815116 ();
+extern "C" void LoaderObj_ParseMaterialData_m2732690102 ();
+extern "C" void LoadingProgress__ctor_m3035364448 ();
+extern "C" void MaterialData__ctor_m2296830745 ();
+extern "C" void Triangle__ctor_m3262211906 ();
+extern "C" void Vertex__ctor_m3576514641 ();
+extern "C" void Vertex_ComputeTriangleArea_m487272102 ();
+extern "C" void Vertex_set_NextVertex_m2651069169 ();
+extern "C" void Vertex_set_OriginalIndex_m3902073754 ();
+extern "C" void Vertex_set_Position_m2953251585 ();
+extern "C" void Vertex_set_PreviousVertex_m2033300065 ();
+extern "C" void ModelImportInfo__ctor_m1106413490 ();
+extern "C" void ModelUtil__ctor_m230479007 ();
+extern "C" void ModelUtil_DetectMtlBlendFadeOrCutout_m124401552 ();
+extern "C" void ModelUtil_SetupMaterialWithBlendMode_m2282544682 ();
+extern "C" void MultiObjectImporter__ctor_m904579824 ();
+extern "C" void MultiObjectImporter_ImportModelListAsync_m544621876 ();
+extern "C" void MultiObjectImporter_Start_m2379031238 ();
+extern "C" void BuildStatus__ctor_m2483677491 ();
+extern "C" void ProgressInfo__ctor_m1065682754 ();
+extern "C" void ObjectBuilder__cctor_m3908875554 ();
+extern "C" void ObjectBuilder__ctor_m2504906510 ();
+extern "C" void ObjectBuilder_BuildMeshCollider_m2074577849 ();
+extern "C" void ObjectBuilder_InitBuildMaterials_m742564013 ();
+extern "C" void ObjectBuilder_Solve_m2922800411 ();
+extern "C" void ObjectBuilder_StartBuildObjectAsync_m146565480 ();
+extern "C" void U3CImportModelAsyncU3Ec__async0_MoveNext_m2514199461_AdjustorThunk ();
+extern "C" void U3CImportModelAsyncU3Ec__async0_SetStateMachine_m206278151_AdjustorThunk ();
+extern "C" void U3CImportModelFromNetworkU3Ec__async1_MoveNext_m3737295256_AdjustorThunk ();
+extern "C" void U3CImportModelFromNetworkU3Ec__async1_SetStateMachine_m1213960117_AdjustorThunk ();
+extern "C" void ObjectImporter__ctor_m633480097 ();
+extern "C" void ObjectImporter_ImportModelFromNetworkWebGL_m4204389768 ();
+extern "C" void ObjectImporter_OnImportError_m4026958340 ();
+extern "C" void ObjectImporter_OnImported_m1161203239 ();
+extern "C" void ObjectImporter_OnImportingComplete_m3594805070 ();
+extern "C" void ObjectImporter_OnModelCreated_m510257268 ();
+extern "C" void ObjectImporter_Update_m882193369 ();
+extern "C" void ObjectImporter_UpdateStatus_m1791706885 ();
+extern "C" void ObjectImporter_add_CreatedModel_m3722197689 ();
+extern "C" void ObjectImporter_add_ImportError_m2853548700 ();
+extern "C" void ObjectImporter_add_ImportedModel_m2050732977 ();
+extern "C" void ObjectImporter_add_ImportingComplete_m4205383842 ();
+extern "C" void ObjectImporter_add_ImportingStart_m4148131912 ();
+extern "C" void ObjectImporter_remove_CreatedModel_m98571013 ();
+extern "C" void ObjectImporter_remove_ImportError_m500790391 ();
+extern "C" void ObjectImporter_remove_ImportedModel_m3891316276 ();
+extern "C" void ObjectImporter_remove_ImportingComplete_m4152696788 ();
+extern "C" void ObjectImporter_remove_ImportingStart_m702298877 ();
+extern "C" void ObjectImporterUI__ctor_m245666312 ();
+extern "C" void ObjectImporterUI_Awake_m1509048549 ();
+extern "C" void ObjectImporterUI_OnDisable_m2493758448 ();
+extern "C" void ObjectImporterUI_OnEnable_m2374151729 ();
+extern "C" void ObjectImporterUI_OnImportComplete_m1910964204 ();
+extern "C" void ObjectImporterUI_OnImportStart_m3119146751 ();
+extern "C" void ObjectImporterUI_Update_m4272402320 ();
+extern "C" void PathSettings__ctor_m2311898670 ();
+extern "C" void SingleLoadingProgress__ctor_m8490512 ();
+extern "C" void TgaHeader__ctor_m1243714047 ();
+extern "C" void TextureLoader__ctor_m474182024 ();
+extern "C" void Triangulator_Triangulate_m4158053140 ();
+extern "C" void CombineMetaData__ctor_m3168878782 ();
+extern "C" void MaterialEntity__ctor_m1609233209 ();
+extern "C" void MaterialProperties__ctor_m2596085527 ();
+extern "C" void MaterialProperties_BurnAttrToImg_m1452824560 ();
+extern "C" void MaterialProperties_FillPropertiesFromMaterial_m77054878 ();
+extern "C" void MeshData__ctor_m2188737184 ();
+extern "C" void TextureArrayGroup__ctor_m3604818987 ();
+extern "C" void TextureArrayGroup_InitializeDefaultArraySettings_m726716088 ();
+extern "C" void TextureArrayUserSettings__ctor_m3418096169 ();
+extern "C" void CombiningInformation__ctor_m3199113447 ();
+extern "C" void ObjectMaterialLinks__ctor_m2282201317 ();
+extern "C" void ObjectMaterialLinks_Start_m2759326201 ();
+extern "C" void ObjectMaterialLinks_set_linkedMaterialEntities_m3705186428 ();
+extern "C" void PolyFewHost__ctor_m1257232802 ();
+extern "C" void PolyFewHost_Start_m4195223432 ();
+extern "C" void RefreshEnforcer__ctor_m2577304648 ();
+extern "C" void RefreshEnforcer_Start_m3145264688 ();
+extern "C" void RefreshEnforcer_Update_m3635532086 ();
+extern "C" void U3CAsyncReachabilityCheckU3Ec__AnonStoreyA__ctor_m3442815097 ();
+extern "C" void U3CAsyncReachabilityCheckU3Ec__AnonStoreyA_U3CU3Em__0_m1288150501 ();
+extern "C" void U3CAsyncReachabilityCheckU3Ec__async4_MoveNext_m2235115652_AdjustorThunk ();
+extern "C" void U3CAsyncReachabilityCheckU3Ec__async4_SetStateMachine_m4003437197_AdjustorThunk ();
+extern "C" void U3CAsyncResourceDownloadU3Ec__AnonStorey9__ctor_m1279423499 ();
+extern "C" void U3CAsyncResourceDownloadU3Ec__AnonStorey9_U3CU3Em__0_m2590688398 ();
+extern "C" void U3CAsyncResourceDownloadU3Ec__async3_MoveNext_m4244717550_AdjustorThunk ();
+extern "C" void U3CAsyncResourceDownloadU3Ec__async3_SetStateMachine_m3171235425_AdjustorThunk ();
+extern "C" void U3CBlockingReachabilityCheckU3Ec__AnonStoreyB__ctor_m1859331447 ();
+extern "C" void U3CBlockingReachabilityCheckU3Ec__AnonStoreyB_U3CU3Em__0_m378677410 ();
+extern "C" void U3CRunDelayedCommandU3Ec__async5_MoveNext_m2730369265_AdjustorThunk ();
+extern "C" void U3CRunDelayedCommandU3Ec__async5_SetStateMachine_m580970924_AdjustorThunk ();
+extern "C" void U3CSendHTTPRequestAsyncU3Ec__AnonStorey8__ctor_m3568019399 ();
+extern "C" void U3CSendHTTPRequestAsyncU3Ec__AnonStorey8_U3CU3Em__0_m1405798426 ();
+extern "C" void U3CSendHTTPRequestAsyncU3Ec__AnonStorey8_U3CU3Em__1_m3362113562 ();
+extern "C" void U3CSendHTTPRequestAsyncU3Ec__async2_MoveNext_m3425950550_AdjustorThunk ();
+extern "C" void U3CSendHTTPRequestAsyncU3Ec__async2_SetStateMachine_m3659240974_AdjustorThunk ();
+extern "C" void U3CUnityAsyncGETRequestU3Ec__Iterator0__ctor_m2401293038 ();
+extern "C" void U3CUnityAsyncGETRequestU3Ec__Iterator0_Dispose_m3239442540 ();
+extern "C" void U3CUnityAsyncGETRequestU3Ec__Iterator0_Reset_m2628776777 ();
+extern "C" void U3CUnityAsyncPOSTRequestU3Ec__Iterator1__ctor_m2822182026 ();
+extern "C" void U3CUnityAsyncPOSTRequestU3Ec__Iterator1_Dispose_m1320803127 ();
+extern "C" void U3CUnityAsyncPOSTRequestU3Ec__Iterator1_Reset_m2011956378 ();
+extern "C" void U3CWriteBytesAsyncU3Ec__async7_MoveNext_m3582831216_AdjustorThunk ();
+extern "C" void U3CWriteBytesAsyncU3Ec__async7_SetStateMachine_m745778231_AdjustorThunk ();
+extern "C" void U3CWriteTextureAsyncU3Ec__async6_MoveNext_m1992926187_AdjustorThunk ();
+extern "C" void U3CWriteTextureAsyncU3Ec__async6_SetStateMachine_m1439167429_AdjustorThunk ();
+extern "C" void HTTPMethod__ctor_m2999665024 ();
+extern "C" void MessagePatternPair__ctor_m1362905345_AdjustorThunk ();
+extern "C" void MessagePatternPair_set_parsedMessage_m1574459211_AdjustorThunk ();
+extern "C" void MessagePatternPair_set_patternAppended_m2195588078_AdjustorThunk ();
+extern "C" void SystemServices_BlockingReachabilityCheck_m3081583804 ();
+extern "C" void SystemServices_SendHTTPRequestBlocking_m3978243419 ();
+extern "C" void SystemServices_SetPatterns_m2103161686 ();
+extern "C" void SystemServices_UnityBlockingGETRequest_m1401903069 ();
+extern "C" void SystemServices_UnityBlockingPOSTRequest_m2174057976 ();
+extern "C" void FlyCamera__cctor_m3944373225 ();
+extern "C" void FlyCamera__ctor_m2561126652 ();
+extern "C" void FlyCamera_Start_m3554616188 ();
+extern "C" void FlyCamera_Update_m2318094292 ();
+extern "C" void BlendShape__ctor_m606669482_AdjustorThunk ();
+extern "C" void BlendShapeFrame__ctor_m4140605833_AdjustorThunk ();
+extern "C" void BlendShapeFrame__ctor_m2177934244_AdjustorThunk ();
+extern "C" void MeshUtils_ApplyMeshBlendShapes_m3644144868 ();
+extern "C" void MeshUtils_GetIndexMinMax_m2475151475 ();
+extern "C" void MeshCombiner__cctor_m1788199845 ();
+extern "C" void MeshCombiner_CombineMeshesUnity_m1440651638 ();
+extern "C" void MeshCombiner_CopyVertexPositions_m1868952963 ();
+extern "C" void MeshCombiner_ParentAndOffsetTransform_m3486064337 ();
+extern "C" void MeshCombiner_ParentAndResetTransform_m1992922683 ();
+extern "C" void MeshCombiner_RemapBones_m3597788567 ();
+extern "C" void MeshCombiner_TransformNormals_m2637223116 ();
+extern "C" void MeshCombiner_TransformTangents_m289077797 ();
+extern "C" void MeshCombiner_TransformVertices_m776757645 ();
+extern "C" void U3CExportGameObjectToOBJU3Ec__AnonStorey12__ctor_m530512390 ();
+extern "C" void U3CExportGameObjectToOBJU3Ec__AnonStorey12_U3CU3Em__0_m22102041 ();
+extern "C" void U3CExportGameObjectToOBJU3Ec__async2_MoveNext_m1411503174_AdjustorThunk ();
+extern "C" void U3CExportGameObjectToOBJU3Ec__async2_SetStateMachine_m585412331_AdjustorThunk ();
+extern "C" void U3CImportOBJFromFileSystemU3Ec__AnonStorey10__ctor_m3551582123 ();
+extern "C" void U3CImportOBJFromFileSystemU3Ec__AnonStorey10_U3CU3Em__0_m1731981059 ();
+extern "C" void U3CImportOBJFromFileSystemU3Ec__async0_MoveNext_m1058485429_AdjustorThunk ();
+extern "C" void U3CImportOBJFromFileSystemU3Ec__async0_SetStateMachine_m1676690121_AdjustorThunk ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__AnonStorey11__ctor_m3940907362 ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__AnonStorey11_U3CU3Em__0_m3137110352 ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__AnonStorey11_U3CU3Em__1_m2154704699 ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__async1_MoveNext_m3036872189_AdjustorThunk ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__async1_SetStateMachine_m3285237123_AdjustorThunk ();
+extern "C" void U3CSimplifyMeshesU3Ec__AnonStoreyC__ctor_m689722548 ();
+extern "C" void U3CSimplifyMeshesU3Ec__AnonStoreyC_U3CU3Em__0_m1139359155 ();
+extern "C" void U3CSimplifyMeshesU3Ec__AnonStoreyC_U3CU3Em__1_m1139359156 ();
+extern "C" void U3CSimplifyMeshesU3Ec__AnonStoreyC_U3CU3Em__2_m1139359157 ();
+extern "C" void U3CSimplifyMeshesU3Ec__AnonStoreyD__ctor_m689721739 ();
+extern "C" void U3CSimplifyMeshesU3Ec__AnonStoreyE__ctor_m689720650 ();
+extern "C" void U3CSimplifyMeshesU3Ec__AnonStoreyF__ctor_m706112009 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey3__ctor_m2431483681 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey3_U3CU3Em__0_m2064660423 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey3_U3CU3Em__1_m2064660422 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey3_U3CU3Em__2_m2064660421 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey4__ctor_m2431485018 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey5__ctor_m2431485843 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey6__ctor_m2431486932 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey6_U3CU3Em__0_m2064663392 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey6_U3CU3Em__1_m2064663393 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey7__ctor_m2431488021 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey8__ctor_m2431489390 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey9__ctor_m2431490199 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey9_U3CU3Em__0_m2064670685 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey9_U3CU3Em__1_m2064670684 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStorey9_U3CU3Em__2_m2064670687 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStoreyA__ctor_m2431605647 ();
+extern "C" void U3CSimplifyObjectDeepU3Ec__AnonStoreyB__ctor_m2431606736 ();
+extern "C" void CustomMeshActionStructure__ctor_m1771748096 ();
+extern "C" void MaterialProperties__ctor_m2761310185 ();
+extern "C" void MaterialProperties_BurnAttrToImg_m2414992500 ();
+extern "C" void MeshRendererPair__ctor_m2158333609 ();
+extern "C" void MeshRendererPair_Destruct_m538603926 ();
+extern "C" void OBJExportOptions__ctor_m4258985630 ();
+extern "C" void OBJImportOptions__ctor_m2386172362 ();
+extern "C" void ObjectMeshPairs__ctor_m2006683822 ();
+extern "C" void PreservationSphere__ctor_m109871299 ();
+extern "C" void SimplificationOptions__ctor_m1553451226 ();
+extern "C" void SimplificationOptions__ctor_m2395757493 ();
+extern "C" void PolyfewRuntime__ctor_m3126978058 ();
+extern "C" void PolyfewRuntime_AssignReducedMesh_m2554476197 ();
+extern "C" void PolyfewRuntime_ChangeMaterialProperties_m4068497918 ();
+extern "C" void PolyfewRuntime_CombineMeshesInGameObject_m268484930 ();
+extern "C" void PolyfewRuntime_ConvertSkinnedMeshesInGameObject_m890175997 ();
+extern "C" void PolyfewRuntime_ExportGameObjectToOBJ_m576085814 ();
+extern "C" void PolyfewRuntime_ImportOBJFromFileSystem_m2818987386 ();
+extern "C" void PolyfewRuntime_ImportOBJFromNetwork_m1707090563 ();
+extern "C" void PolyfewRuntime_SetParametersForSimplifier_m3516415438 ();
+extern "C" void U3CExportGameObjectToOBJU3Ec__AnonStorey4__ctor_m2075231653 ();
+extern "C" void U3CExportGameObjectToOBJU3Ec__AnonStorey4_U3CU3Em__0_m2557125348 ();
+extern "C" void U3CImportOBJU3Ec__AnonStorey2__ctor_m1387984021 ();
+extern "C" void U3CImportOBJU3Ec__AnonStorey2_U3CU3Em__0_m3714105476 ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__AnonStorey3__ctor_m2781710176 ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__AnonStorey3_U3CU3Em__0_m2210738070 ();
+extern "C" void U3CImportOBJFromNetworkU3Ec__AnonStorey3_U3CU3Em__1_m3909859074 ();
+extern "C" void U3CShowMessageU3Ec__Iterator0__ctor_m727580675 ();
+extern "C" void U3CShowMessageU3Ec__Iterator0_Dispose_m3606179102 ();
+extern "C" void U3CShowMessageU3Ec__Iterator0_Reset_m2932271382 ();
+extern "C" void U3CUpdateProgressU3Ec__Iterator1__ctor_m1000926561 ();
+extern "C" void U3CUpdateProgressU3Ec__Iterator1_Dispose_m137239620 ();
+extern "C" void U3CUpdateProgressU3Ec__Iterator1_Reset_m3598744709 ();
+extern "C" void PolygonReduction__ctor_m1513805930 ();
+extern "C" void PolygonReduction_U3CExportGameObjectToOBJU3Em__3_m37016288 ();
+extern "C" void PolygonReduction_U3CImportOBJU3Em__2_m3277791253 ();
+extern "C" void PolygonReduction_U3COnReductionChangeU3Em__0_m2719726375 ();
+extern "C" void PolygonReduction_U3CSimplifyLosslessU3Em__1_m2119262611 ();
+extern "C" void PolygonReduction_AssignMeshesFromPairs_m1377282920 ();
+extern "C" void PolygonReduction_ExportGameObjectToOBJ_m2382381608 ();
+extern "C" void PolygonReduction_ImportOBJ_m2466692532 ();
+extern "C" void PolygonReduction_ImportOBJFromNetwork_m4198777591 ();
+extern "C" void PolygonReduction_OnPreservationStrengthChange_m3228707603 ();
+extern "C" void PolygonReduction_OnReductionChange_m2260146986 ();
+extern "C" void PolygonReduction_OnSliderDeselect_m1385299762 ();
+extern "C" void PolygonReduction_OnSliderSelect_m2677710804 ();
+extern "C" void PolygonReduction_OnToggleStateChanged_m2033976341 ();
+extern "C" void PolygonReduction_Reset_m3080683473 ();
+extern "C" void PolygonReduction_ResetSettings_m2032790679 ();
+extern "C" void PolygonReduction_SimplifyLossless_m3099538419 ();
+extern "C" void PolygonReduction_Start_m2417385278 ();
+extern "C" void PolygonReduction_Update_m352589968 ();
+extern "C" void U3CExportMeshToOBJU3Ec__async0_MoveNext_m795831665_AdjustorThunk ();
+extern "C" void U3CExportMeshToOBJU3Ec__async0_SetStateMachine_m2548532313_AdjustorThunk ();
+extern "C" void U3CImportFromLocalFileSystemU3Ec__async1_MoveNext_m862428734_AdjustorThunk ();
+extern "C" void U3CImportFromLocalFileSystemU3Ec__async1_SetStateMachine_m2656130170_AdjustorThunk ();
+extern "C" void U3CImportFromNetworkU3Ec__async2_MoveNext_m4148566053_AdjustorThunk ();
+extern "C" void U3CImportFromNetworkU3Ec__async2_SetStateMachine_m534562164_AdjustorThunk ();
+extern "C" void U3CImportFromNetworkWebGLU3Ec__AnonStorey4__ctor_m1616623592 ();
+extern "C" void U3CImportFromNetworkWebGLU3Ec__AnonStorey4_U3CU3Em__0_m2613898091 ();
+extern "C" void U3CImportFromNetworkWebGLU3Ec__AnonStorey4_U3CU3Em__1_m76398191 ();
+extern "C" void U3CImportFromNetworkWebGLU3Ec__async3_MoveNext_m2616382666_AdjustorThunk ();
+extern "C" void U3CImportFromNetworkWebGLU3Ec__async3_SetStateMachine_m362655400_AdjustorThunk ();
+extern "C" void OBJExporterImporter__ctor_m521551101 ();
+extern "C" void OBJExporterImporter_ExportGameObjectToOBJ_m3323720109 ();
+extern "C" void OBJExporterImporter_ImportFromNetwork_m1278998873 ();
+extern "C" void OBJExporterImporter_ImportFromNetworkWebGL_m331212839 ();
+extern "C" void OBJExporterImporter_InitializeExporter_m3304155578 ();
+extern "C" void OBJExporterImporter_InitializeExporter_m4119496054 ();
+extern "C" void UtilityServicesRuntime__ctor_m3273973878 ();
+extern "C" void UtilityServicesRuntime_CollectChildRenderersForCombining_m2748856271 ();
+extern "C" void UtilityServicesRuntime_ParentAndOffsetTransform_m2994683679 ();
+extern "C" void UtilityServicesRuntime_ParentAndResetTransform_m4232084026 ();
 extern "C" void U3CZoomOutU3Ec__Iterator0__ctor_m1092846161 ();
 extern "C" void U3CZoomOutU3Ec__Iterator0_Dispose_m4088019382 ();
 extern "C" void U3CZoomOutU3Ec__Iterator0_Reset_m2527577989 ();
@@ -7748,6 +9916,8 @@ extern "C" void DisplayFPS_Start_m7765586 ();
 extern "C" void DisplayFPS_Update_m973555522 ();
 extern "C" void DitherEffect__ctor_m3130180519 ();
 extern "C" void DitherEffect_OnRenderImage_m231058717 ();
+extern "C" void EdgeErrorkeyedComparer__ctor_m2039591374 ();
+extern "C" void EdgeListExt__cctor_m2841261363 ();
 extern "C" void EmptyGraphic__ctor_m1285547390 ();
 extern "C" void EmptyGraphic_OnPopulateMesh_m2369973523 ();
 extern "C" void EmptyGraphic_SetMaterialDirty_m4061521985 ();
@@ -7962,28 +10132,91 @@ extern "C" void SortKeyBuffer_AppendNormal_m2338808729 ();
 extern "C" void SortKeyBuffer_Initialize_m3786111493 ();
 extern "C" void SortKeyBuffer_Reset_m1409351310 ();
 extern "C" void TailoringInfo__ctor_m2283562302 ();
+extern "C" void U3CU3Ec__cctor_m213456361 ();
+extern "C" void U3CU3Ec__ctor_m3229642877 ();
+extern "C" void NtlmClient__cctor_m453270488 ();
+extern "C" void NtlmClient__ctor_m1381816452 ();
+extern "C" void NtlmSession__ctor_m1068225513 ();
 extern "C" void Kernel_MinusEq_m1955542202 ();
+extern "C" void Kernel_MinusEq_m2152832554 ();
+extern "C" void Kernel_Multiply_m193213393 ();
 extern "C" void Kernel_Multiply_m1995233235 ();
 extern "C" void Kernel_MultiplyMod2p32pmod_m4241526284 ();
+extern "C" void Kernel_MultiplyMod2p32pmod_m451690680 ();
 extern "C" void Kernel_PlusEq_m1955533564 ();
+extern "C" void Kernel_PlusEq_m136676638 ();
 extern "C" void ModulusRing__ctor_m2100816195 ();
+extern "C" void ModulusRing__ctor_m2420310199 ();
 extern "C" void ModulusRing_BarrettReduction_m167376748 ();
+extern "C" void ModulusRing_BarrettReduction_m3024442734 ();
 extern "C" void BigInteger__cctor_m562779619 ();
+extern "C" void BigInteger__cctor_m102257529 ();
 extern "C" void BigInteger__ctor_m1426225719 ();
+extern "C" void BigInteger__ctor_m2108826647 ();
 extern "C" void BigInteger__ctor_m224778556 ();
+extern "C" void BigInteger__ctor_m2644482640 ();
 extern "C" void BigInteger__ctor_m397734603 ();
+extern "C" void BigInteger__ctor_m3473491062 ();
 extern "C" void BigInteger__ctor_m3991350270 ();
+extern "C" void BigInteger__ctor_m2601366464 ();
 extern "C" void BigInteger__ctor_m3985126171 ();
+extern "C" void BigInteger__ctor_m2474659844 ();
+extern "C" void BigInteger_Clear_m2995574218 ();
 extern "C" void BigInteger_Clear_m3104012800 ();
+extern "C" void BigInteger_Incr2_m1531167978 ();
 extern "C" void BigInteger_Incr2_m2179060417 ();
+extern "C" void BigInteger_Normalize_m3021106862 ();
 extern "C" void BigInteger_Normalize_m4163607703 ();
 extern "C" void BigInteger_Randomize_m2194703121 ();
 extern "C" void BigInteger_Randomize_m410563259 ();
+extern "C" void BigInteger_SetBit_m1387902198 ();
 extern "C" void BigInteger_SetBit_m1985185235 ();
 extern "C" void BigInteger_SetBit_m337653943 ();
+extern "C" void BigInteger_SetBit_m1723423691 ();
 extern "C" void PrimeGeneratorBase__ctor_m2973488305 ();
+extern "C" void PrimeGeneratorBase__ctor_m2423671149 ();
 extern "C" void SequentialSearchPrimeGeneratorBase__ctor_m3077428553 ();
+extern "C" void SequentialSearchPrimeGeneratorBase__ctor_m577913576 ();
+extern "C" void PrimalityTest__ctor_m763620166 ();
 extern "C" void PrimalityTest__ctor_m2228551695 ();
+extern "C" void CFArray__cctor_m3799625831 ();
+extern "C" void CFArray__ctor_m1903909651 ();
+extern "C" void CFDictionary__cctor_m2374380551 ();
+extern "C" void CFDictionary__ctor_m2715111062 ();
+extern "C" void U3CU3Ec__DisplayClass13_0__ctor_m661813827 ();
+extern "C" void U3CU3Ec__DisplayClass13_0_U3CExecuteProxyAutoConfigurationURLU3Eb__0_m2694075153 ();
+extern "C" void CFProxyAutoConfigurationResultCallback__ctor_m3326831323 ();
+extern "C" void CFProxyAutoConfigurationResultCallback_EndInvoke_m3917502550 ();
+extern "C" void CFProxyAutoConfigurationResultCallback_Invoke_m965639529 ();
+extern "C" void CFWebProxy__ctor_m3770609225 ();
+extern "C" void GetProxyData__ctor_m759515017 ();
+extern "C" void GetProxyData_Dispose_m2710419033 ();
+extern "C" void CFNetwork__cctor_m243831456 ();
+extern "C" void CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScriptThread_m3555933794 ();
+extern "C" void CFObject__ctor_m596499085 ();
+extern "C" void CFObject_CFRelease_m2797350312 ();
+extern "C" void CFObject_Dispose_m2497169197 ();
+extern "C" void CFObject_Dispose_m1273647554 ();
+extern "C" void CFObject_Finalize_m2237806501 ();
+extern "C" void CFObject_Release_m1001760164 ();
+extern "C" void CFObject_Retain_m2474383236 ();
+extern "C" void CFObject_dlclose_m3646576298 ();
+extern "C" void CFObject_set_Handle_m3434789835 ();
+extern "C" void CFProxy__cctor_m2444530606 ();
+extern "C" void CFProxy__ctor_m439029593 ();
+extern "C" void CFProxySettings__cctor_m277964760 ();
+extern "C" void CFProxySettings__ctor_m3994659438 ();
+extern "C" void CFRange__ctor_m3886167604_AdjustorThunk ();
+extern "C" void CFRunLoop__ctor_m1257055159 ();
+extern "C" void CFRunLoop_AddSource_m1967660794 ();
+extern "C" void CFRunLoop_CFRunLoopAddSource_m2965042489 ();
+extern "C" void CFRunLoop_CFRunLoopRemoveSource_m763029824 ();
+extern "C" void CFRunLoop_CFRunLoopStop_m1918505947 ();
+extern "C" void CFRunLoop_RemoveSource_m1028016313 ();
+extern "C" void CFRunLoop_Stop_m3093059680 ();
+extern "C" void CFString__ctor_m290680435 ();
+extern "C" void CFUrl__ctor_m1457090725 ();
+extern "C" void AsyncHandshakeRequest__ctor_m3485110453 ();
 extern "C" void U3CInnerReadU3Ed__25_MoveNext_m3626833002_AdjustorThunk ();
 extern "C" void U3CInnerReadU3Ed__25_SetStateMachine_m1872593985_AdjustorThunk ();
 extern "C" void U3CProcessOperationU3Ed__24_MoveNext_m3618245518_AdjustorThunk ();
@@ -7991,6 +10224,8 @@ extern "C" void U3CProcessOperationU3Ed__24_SetStateMachine_m1847873774_Adjustor
 extern "C" void U3CStartOperationU3Ed__23_MoveNext_m2778698028_AdjustorThunk ();
 extern "C" void U3CStartOperationU3Ed__23_SetStateMachine_m1722856988_AdjustorThunk ();
 extern "C" void AsyncProtocolRequest__ctor_m2247237635 ();
+extern "C" void AsyncProtocolRequest_RequestRead_m3692739054 ();
+extern "C" void AsyncProtocolRequest_RequestWrite_m2242948388 ();
 extern "C" void AsyncProtocolRequest_set_UserResult_m546480187 ();
 extern "C" void AsyncProtocolResult__ctor_m3847204940 ();
 extern "C" void AsyncProtocolResult__ctor_m2979667235 ();
@@ -7999,28 +10234,42 @@ extern "C" void AsyncReadOrWriteRequest_set_CurrentSize_m2867965766 ();
 extern "C" void AsyncReadRequest__ctor_m4225139128 ();
 extern "C" void AsyncWriteRequest__ctor_m2715700648 ();
 extern "C" void BufferOffsetSize2__ctor_m2699554667 ();
+extern "C" void BufferOffsetSize2_AppendData_m2863894092 ();
+extern "C" void BufferOffsetSize2_MakeRoom_m3582672808 ();
 extern "C" void BufferOffsetSize2_Reset_m3518760952 ();
 extern "C" void BufferOffsetSize__ctor_m2101572568 ();
+extern "C" void ChainValidationHelper__ctor_m1390521503 ();
 extern "C" void U3CU3Ec__DisplayClass66_0__ctor_m2195021340 ();
 extern "C" void U3CInnerReadU3Ed__66_MoveNext_m3831140736_AdjustorThunk ();
 extern "C" void U3CInnerReadU3Ed__66_SetStateMachine_m1201820091_AdjustorThunk ();
 extern "C" void U3CInnerWriteU3Ed__67_MoveNext_m256243508_AdjustorThunk ();
 extern "C" void U3CInnerWriteU3Ed__67_SetStateMachine_m2634015813_AdjustorThunk ();
+extern "C" void U3CProcessAuthenticationU3Ed__47_MoveNext_m4056596982_AdjustorThunk ();
+extern "C" void U3CProcessAuthenticationU3Ed__47_SetStateMachine_m3204264459_AdjustorThunk ();
 extern "C" void U3CStartOperationU3Ed__58_MoveNext_m2753508916_AdjustorThunk ();
 extern "C" void U3CStartOperationU3Ed__58_SetStateMachine_m3471844915_AdjustorThunk ();
 extern "C" void MobileAuthenticatedStream__cctor_m3668863800 ();
 extern "C" void MobileAuthenticatedStream__ctor_m4070405799 ();
 extern "C" void MobileAuthenticatedStream_U3CInnerWriteU3Eb__67_0_m1100969782 ();
+extern "C" void MobileAuthenticatedStream_AuthenticateAsClient_m3336452272 ();
 extern "C" void MobileAuthenticatedStream_CheckThrow_m3982772620 ();
 extern "C" void MobileAuthenticatedStream_Dispose_m34998259 ();
 extern "C" void MobileAuthenticatedStream_EndWrite_m178351640 ();
 extern "C" void MobileAuthenticatedStream_Flush_m1701402090 ();
 extern "C" void MobileAuthenticatedStream_Write_m343411896 ();
 extern "C" void MobileAuthenticatedStream_set_Position_m2903160421 ();
+extern "C" void MobileTlsContext__ctor_m3163915392 ();
 extern "C" void MobileTlsContext_Dispose_m1310769470 ();
 extern "C" void MobileTlsContext_Dispose_m50561717 ();
 extern "C" void MobileTlsContext_Finalize_m3061609725 ();
 extern "C" void MonoTlsProviderFactory__cctor_m2240045709 ();
+extern "C" void MonoTlsProviderFactory_InitializeInternal_m2925452808 ();
+extern "C" void MonoTlsProviderFactory_InitializeProviderRegistration_m2781693486 ();
+extern "C" void MonoTlsStream__ctor_m2909716305 ();
+extern "C" void MonoTlsStream_set_CertificateValidationFailed_m2435816553 ();
+extern "C" void U3CU3Ec__DisplayClass5_0__ctor_m1052120824 ();
+extern "C" void U3CU3Ec__DisplayClass8_0__ctor_m2551395893 ();
+extern "C" void ServerCertValidationCallbackWrapper__ctor_m2727365875 ();
 extern "C" void SystemCertificateValidator__cctor_m2476960537 ();
 extern "C" void Runtime_InstallSignalHandlers_m1589660775 ();
 extern "C" void Runtime_RemoveSignalHandlers_m4170094694 ();
@@ -8040,20 +10289,22 @@ extern "C" void SafeGPtrArrayHandle_Dispose_m2812856379_AdjustorThunk ();
 extern "C" void SafeStringMarshal__ctor_m376944834_AdjustorThunk ();
 extern "C" void SafeStringMarshal_Dispose_m3168640865_AdjustorThunk ();
 extern "C" void SafeStringMarshal_GFree_m3460491837 ();
-extern "C" void ASN1__ctor_m1239252869 ();
 extern "C" void ASN1__ctor_m3727822613 ();
-extern "C" void ASN1__ctor_m682794872 ();
+extern "C" void ASN1__ctor_m1239252869 ();
 extern "C" void ASN1__ctor_m3193227595 ();
+extern "C" void ASN1__ctor_m682794872 ();
 extern "C" void ASN1__ctor_m1601690794 ();
 extern "C" void ASN1__ctor_m1638893325 ();
 extern "C" void ASN1_Decode_m1695284166 ();
 extern "C" void ASN1_Decode_m1245286596 ();
-extern "C" void ASN1_DecodeTLV_m1200977460 ();
 extern "C" void ASN1_DecodeTLV_m3927350254 ();
-extern "C" void ASN1_set_Value_m2803403806 ();
+extern "C" void ASN1_DecodeTLV_m1200977460 ();
 extern "C" void ASN1_set_Value_m647861841 ();
+extern "C" void ASN1_set_Value_m2803403806 ();
 extern "C" void BitConverterLE_UIntFromBytes_m3974925535 ();
+extern "C" void BitConverterLE_UIntFromBytes_m3926041003 ();
 extern "C" void BitConverterLE_ULongFromBytes_m1677445591 ();
+extern "C" void BitConverterLE_UShortFromBytes_m3272953552 ();
 extern "C" void ARC4Managed__ctor_m2439761726 ();
 extern "C" void ARC4Managed_CheckInput_m49728936 ();
 extern "C" void ARC4Managed_Dispose_m3688661280 ();
@@ -8083,39 +10334,69 @@ extern "C" void KeyPairPersistence_Remove_m1876145547 ();
 extern "C" void KeyPairPersistence_Save_m3111435398 ();
 extern "C" void KeyPairPersistence_set_KeyValue_m3459302102 ();
 extern "C" void MD2__ctor_m2461592874 ();
+extern "C" void MD2__ctor_m2402458789 ();
 extern "C" void MD2Managed__cctor_m1322637883 ();
+extern "C" void MD2Managed__cctor_m1915574725 ();
+extern "C" void MD2Managed__ctor_m3243422744 ();
 extern "C" void MD2Managed__ctor_m1938571474 ();
+extern "C" void MD2Managed_HashCore_m1280598655 ();
 extern "C" void MD2Managed_HashCore_m1838241992 ();
+extern "C" void MD2Managed_Initialize_m2341076836 ();
 extern "C" void MD2Managed_Initialize_m1076356985 ();
+extern "C" void MD2Managed_MD2Transform_m3143426291 ();
 extern "C" void MD2Managed_MD2Transform_m3198877043 ();
 extern "C" void MD4__ctor_m346997000 ();
+extern "C" void MD4__ctor_m919379109 ();
+extern "C" void MD4Managed__ctor_m2284724408 ();
 extern "C" void MD4Managed__ctor_m1352537464 ();
 extern "C" void MD4Managed_Decode_m2903879267 ();
+extern "C" void MD4Managed_Decode_m4273685594 ();
 extern "C" void MD4Managed_Encode_m3227372435 ();
+extern "C" void MD4Managed_Encode_m386285215 ();
+extern "C" void MD4Managed_FF_m3294771481 ();
 extern "C" void MD4Managed_FF_m552049531 ();
+extern "C" void MD4Managed_GG_m1845276249 ();
 extern "C" void MD4Managed_GG_m3919899814 ();
+extern "C" void MD4Managed_HH_m2535673516 ();
 extern "C" void MD4Managed_HH_m2007192814 ();
 extern "C" void MD4Managed_HashCore_m2285130046 ();
+extern "C" void MD4Managed_HashCore_m3384203071 ();
 extern "C" void MD4Managed_Initialize_m259821887 ();
+extern "C" void MD4Managed_Initialize_m469436465 ();
+extern "C" void MD4Managed_MD4Transform_m1101832482 ();
 extern "C" void MD4Managed_MD4Transform_m4229962163 ();
+extern "C" void PKCS1__cctor_m2848504824 ();
 extern "C" void PKCS1__cctor_m266708662 ();
+extern "C" void EncryptedPrivateKeyInfo__ctor_m3415744930 ();
 extern "C" void EncryptedPrivateKeyInfo__ctor_m3217539356 ();
+extern "C" void EncryptedPrivateKeyInfo__ctor_m25839594 ();
 extern "C" void EncryptedPrivateKeyInfo__ctor_m3274704095 ();
 extern "C" void EncryptedPrivateKeyInfo_Decode_m2516465782 ();
+extern "C" void EncryptedPrivateKeyInfo_Decode_m3008916518 ();
+extern "C" void PrivateKeyInfo__ctor_m3331475997 ();
 extern "C" void PrivateKeyInfo__ctor_m2811023496 ();
+extern "C" void PrivateKeyInfo__ctor_m2715455038 ();
 extern "C" void PrivateKeyInfo__ctor_m2414235375 ();
+extern "C" void PrivateKeyInfo_Decode_m986145117 ();
 extern "C" void PrivateKeyInfo_Decode_m682813286 ();
 extern "C" void RC4__cctor_m2867736395 ();
 extern "C" void RC4__ctor_m816307314 ();
 extern "C" void RC4_set_IV_m4164085508 ();
 extern "C" void KeyGeneratedEventHandler__ctor_m1990062371 ();
+extern "C" void KeyGeneratedEventHandler__ctor_m4032730305 ();
 extern "C" void KeyGeneratedEventHandler_EndInvoke_m3057317531 ();
+extern "C" void KeyGeneratedEventHandler_EndInvoke_m2862962495 ();
 extern "C" void KeyGeneratedEventHandler_Invoke_m2527485594 ();
+extern "C" void KeyGeneratedEventHandler_Invoke_m99769071 ();
 extern "C" void RSAManaged__ctor_m3394311431 ();
+extern "C" void RSAManaged_Dispose_m2347279430 ();
 extern "C" void RSAManaged_Dispose_m1863653890 ();
+extern "C" void RSAManaged_Finalize_m297255587 ();
 extern "C" void RSAManaged_Finalize_m3915335854 ();
 extern "C" void RSAManaged_GenerateKeyPair_m2221292703 ();
+extern "C" void RSAManaged_GenerateKeyPair_m2364618953 ();
 extern "C" void RSAManaged_ImportParameters_m1844641996 ();
+extern "C" void RSAManaged_ImportParameters_m1117427048 ();
 extern "C" void RSAManaged_add_KeyGenerated_m3688329863 ();
 extern "C" void RSAManaged_remove_KeyGenerated_m2046909903 ();
 extern "C" void SymmetricTransform__ctor_m25459519 ();
@@ -8130,52 +10411,152 @@ extern "C" void SymmetricTransform_Random_m2004892672 ();
 extern "C" void SymmetricTransform_System_IDisposable_Dispose_m3676111272 ();
 extern "C" void SymmetricTransform_ThrowBadPaddingException_m2926778011 ();
 extern "C" void SymmetricTransform_Transform_m3073016850 ();
+extern "C" void Alert__ctor_m3454890044 ();
+extern "C" void Alert_inferAlertLevel_m3772649164 ();
+extern "C" void CertificateValidationHelper__cctor_m3987015388 ();
+extern "C" void MonoLocalCertificateSelectionCallback__ctor_m7962002 ();
+extern "C" void MonoRemoteCertificateValidationCallback__ctor_m2422871402 ();
+extern "C" void MonoTlsConnectionInfo__ctor_m2448521303 ();
+extern "C" void MonoTlsConnectionInfo_set_CipherSuiteCode_m504438431 ();
+extern "C" void MonoTlsConnectionInfo_set_PeerDomainName_m860135070 ();
+extern "C" void MonoTlsConnectionInfo_set_ProtocolVersion_m3428272857 ();
 extern "C" void MonoTlsProvider__ctor_m354200425 ();
+extern "C" void MonoTlsSettings__ctor_m3932836947 ();
+extern "C" void MonoTlsSettings__ctor_m1540983530 ();
+extern "C" void MonoTlsSettings_set_CertificateSearchPaths_m2272766668 ();
+extern "C" void MonoTlsSettings_set_CertificateValidationTime_m2362522525 ();
+extern "C" void MonoTlsSettings_set_ClientCertificateSelectionCallback_m373140571 ();
+extern "C" void MonoTlsSettings_set_EnabledCiphers_m2645321496 ();
+extern "C" void MonoTlsSettings_set_EnabledProtocols_m2108924511 ();
+extern "C" void MonoTlsSettings_set_RemoteCertificateValidationCallback_m1115381675 ();
+extern "C" void MonoTlsSettings_set_SendCloseNotify_m545663457 ();
+extern "C" void MonoTlsSettings_set_TrustAnchors_m2945333956 ();
+extern "C" void MonoTlsSettings_set_UseServicePointManagerCallback_m2449958594 ();
+extern "C" void MonoTlsSettings_set_UserSettings_m427063071 ();
+extern "C" void TlsException__ctor_m1429622943 ();
+extern "C" void TlsException__ctor_m2591765141 ();
+extern "C" void ValidationResult__ctor_m3405453222 ();
 extern "C" void ContentInfo__ctor_m28146633 ();
+extern "C" void ContentInfo__ctor_m1955840786 ();
+extern "C" void ContentInfo__ctor_m3397951412 ();
 extern "C" void ContentInfo__ctor_m2639021892 ();
 extern "C" void ContentInfo__ctor_m1888388023 ();
+extern "C" void ContentInfo__ctor_m2928874476 ();
+extern "C" void ContentInfo__ctor_m2855743200 ();
 extern "C" void ContentInfo__ctor_m3072134336 ();
 extern "C" void ContentInfo_set_Content_m2745521966 ();
+extern "C" void ContentInfo_set_Content_m2581255245 ();
+extern "C" void ContentInfo_set_ContentType_m3848100294 ();
 extern "C" void ContentInfo_set_ContentType_m3961495440 ();
+extern "C" void EncryptedData__ctor_m257803736 ();
 extern "C" void EncryptedData__ctor_m3841552120 ();
+extern "C" void EncryptedData__ctor_m4001546383 ();
 extern "C" void EncryptedData__ctor_m2497911783 ();
+extern "C" void ChallengeResponse2__cctor_m2451067002 ();
+extern "C" void ChallengeResponse2_Compute_m1395485354 ();
+extern "C" void ChallengeResponse2_Compute_NTLMv2_Session_m3780308122 ();
+extern "C" void ChallengeResponse__cctor_m1421572888 ();
+extern "C" void ChallengeResponse__ctor_m909693900 ();
+extern "C" void ChallengeResponse__ctor_m1766420171 ();
+extern "C" void ChallengeResponse_Dispose_m2049787730 ();
+extern "C" void ChallengeResponse_Dispose_m3277980124 ();
+extern "C" void ChallengeResponse_Finalize_m1050972457 ();
+extern "C" void ChallengeResponse_set_Challenge_m2001764172 ();
+extern "C" void ChallengeResponse_set_Password_m644923800 ();
+extern "C" void MessageBase__cctor_m1010600254 ();
+extern "C" void MessageBase__ctor_m685679560 ();
+extern "C" void MessageBase_Decode_m2327798753 ();
+extern "C" void MessageBase_set_Flags_m1606870589 ();
+extern "C" void NtlmSettings__cctor_m2659531526 ();
+extern "C" void Type1Message__ctor_m3321522007 ();
+extern "C" void Type1Message_Decode_m1816611154 ();
+extern "C" void Type1Message_set_Domain_m2961818014 ();
+extern "C" void Type1Message_set_Host_m144948456 ();
+extern "C" void Type2Message__ctor_m1757683206 ();
+extern "C" void Type2Message_Decode_m2305427869 ();
+extern "C" void Type2Message_Finalize_m1432481727 ();
+extern "C" void Type3Message__ctor_m999579862 ();
+extern "C" void Type3Message_Decode_m2959565873 ();
+extern "C" void Type3Message_Finalize_m2763659896 ();
+extern "C" void Type3Message_set_Domain_m127093028 ();
+extern "C" void Type3Message_set_Password_m3307927806 ();
+extern "C" void Type3Message_set_Username_m3043951953 ();
 extern "C" void DeriveBytes__cctor_m1212925033 ();
+extern "C" void DeriveBytes__cctor_m3019062497 ();
+extern "C" void DeriveBytes__ctor_m2211845228 ();
 extern "C" void DeriveBytes__ctor_m3611803810 ();
+extern "C" void DeriveBytes_Adjust_m1814768799 ();
 extern "C" void DeriveBytes_Adjust_m640796917 ();
 extern "C" void DeriveBytes_set_HashName_m3752780137 ();
+extern "C" void DeriveBytes_set_HashName_m3612196732 ();
 extern "C" void DeriveBytes_set_IterationCount_m3235108425 ();
+extern "C" void DeriveBytes_set_IterationCount_m3824132378 ();
 extern "C" void DeriveBytes_set_Password_m3005258189 ();
+extern "C" void DeriveBytes_set_Password_m4086840123 ();
 extern "C" void DeriveBytes_set_Salt_m441577179 ();
+extern "C" void DeriveBytes_set_Salt_m1400945044 ();
 extern "C" void PKCS12__cctor_m2862471915 ();
+extern "C" void PKCS12__cctor_m3271060407 ();
 extern "C" void PKCS12__ctor_m2768693996 ();
+extern "C" void PKCS12__ctor_m1854440921 ();
+extern "C" void PKCS12__ctor_m1587304645 ();
 extern "C" void PKCS12__ctor_m2089474062 ();
+extern "C" void PKCS12__ctor_m2483239261 ();
 extern "C" void PKCS12__ctor_m1771540803 ();
+extern "C" void PKCS12_AddCertificate_m3679554094 ();
 extern "C" void PKCS12_AddCertificate_m3857004455 ();
 extern "C" void PKCS12_AddCertificate_m3618696508 ();
+extern "C" void PKCS12_AddCertificate_m3820167082 ();
 extern "C" void PKCS12_AddPrivateKey_m1542850936 ();
+extern "C" void PKCS12_AddPrivateKey_m1877554254 ();
+extern "C" void PKCS12_Decode_m163534693 ();
 extern "C" void PKCS12_Decode_m1913457787 ();
+extern "C" void PKCS12_Finalize_m507756088 ();
 extern "C" void PKCS12_Finalize_m1390639705 ();
+extern "C" void PKCS12_ReadSafeBag_m3435973087 ();
 extern "C" void PKCS12_ReadSafeBag_m1585166574 ();
 extern "C" void PKCS12_RemoveCertificate_m1177171903 ();
+extern "C" void PKCS12_RemoveCertificate_m3555301339 ();
 extern "C" void PKCS12_RemoveCertificate_m1421555398 ();
+extern "C" void PKCS12_RemoveCertificate_m2774912578 ();
 extern "C" void PKCS12_set_IterationCount_m1399630158 ();
+extern "C" void PKCS12_set_IterationCount_m2605460921 ();
+extern "C" void PKCS12_set_Password_m4088935795 ();
 extern "C" void PKCS12_set_Password_m3259330454 ();
 extern "C" void SafeBag__ctor_m369012969 ();
+extern "C" void SafeBag__ctor_m3881032521 ();
 extern "C" void X501__cctor_m1166912714 ();
+extern "C" void X501__cctor_m2428304915 ();
+extern "C" void X501_AppendEntry_m2479013363 ();
 extern "C" void X501_AppendEntry_m2470239841 ();
 extern "C" void X509Certificate__cctor_m198658613 ();
+extern "C" void X509Certificate__cctor_m1746020738 ();
 extern "C" void X509Certificate__ctor_m3656389950 ();
+extern "C" void X509Certificate__ctor_m553243489 ();
+extern "C" void X509Certificate_GetObjectData_m2952009451 ();
 extern "C" void X509Certificate_GetObjectData_m2057262401 ();
 extern "C" void X509Certificate_Parse_m1106379228 ();
+extern "C" void X509Certificate_Parse_m54358579 ();
+extern "C" void X509Certificate_set_DSA_m753722200 ();
+extern "C" void X509Certificate_set_RSA_m3534515075 ();
+extern "C" void X509CertificateEnumerator__ctor_m85694331 ();
 extern "C" void X509CertificateEnumerator__ctor_m3747779152 ();
 extern "C" void X509CertificateCollection__ctor_m3365535796 ();
+extern "C" void X509CertificateCollection__ctor_m2066277891 ();
+extern "C" void X509Extension__ctor_m710637961 ();
 extern "C" void X509Extension__ctor_m1750445243 ();
 extern "C" void X509Extension_Decode_m833805412 ();
+extern "C" void X509Extension_Decode_m3172373814 ();
+extern "C" void X509Extension_WriteLine_m1662885247 ();
 extern "C" void X509Extension_WriteLine_m1400196767 ();
+extern "C" void X509ExtensionCollection__ctor_m2474799343 ();
 extern "C" void X509ExtensionCollection__ctor_m2416193357 ();
+extern "C" void X509ExtensionCollection__ctor_m551870633 ();
 extern "C" void X509ExtensionCollection__ctor_m3315097415 ();
 extern "C" void CertHelper_AddCertificateToNativeChain_m3389970623 ();
 extern "C" void CertHelper_AddCertificatesToNativeChain_m1534954420 ();
+extern "C" void Debug_CheckAndThrow_m3340652565 ();
+extern "C" void Debug_CheckAndThrow_m568412774 ();
 extern "C" void unitytls_errorstate_create_t__ctor_m3574293266 ();
 extern "C" void unitytls_errorstate_raise_error_t__ctor_m3388542564 ();
 extern "C" void unitytls_errorstate_raise_error_t_EndInvoke_m1989918521 ();
@@ -8244,8 +10625,17 @@ extern "C" void unitytls_tlsctx_write_callback__ctor_m3479788805 ();
 extern "C" void unitytls_tlsctx_x509verify_callback__ctor_m2368547228 ();
 extern "C" void unitytls_x509verify_callback__ctor_m2591068774 ();
 extern "C" void UnityTls__cctor_m2408899148 ();
+extern "C" void UnityTlsContext__ctor_m3745233880 ();
+extern "C" void UnityTlsContext_CertificateCallback_m2074768585 ();
+extern "C" void UnityTlsContext_CertificateCallback_m3892869084 ();
+extern "C" void UnityTlsContext_Dispose_m2820087906 ();
+extern "C" void UnityTlsContext_ExtractNativeKeyAndChainFromManagedCertificate_m3543144651 ();
+extern "C" void UnityTlsContext_FinishHandshake_m752664986 ();
+extern "C" void UnityTlsContext_Shutdown_m3857541029 ();
+extern "C" void UnityTlsContext_StartHandshake_m1751330757 ();
 extern "C" void UnityTlsProvider__ctor_m552185683 ();
 extern "C" void UnityTlsStream__ctor_m1523863898 ();
+extern "C" void MonoPInvokeCallbackAttribute__ctor_m2558661764 ();
 extern "C" void SecurityParser__ctor_m1786039976 ();
 extern "C" void SecurityParser_LoadXml_m1638830459 ();
 extern "C" void SecurityParser_OnChars_m396174937 ();
@@ -8506,7 +10896,9 @@ extern "C" void Buffer_BlockCopy_m2884209081 ();
 extern "C" void Buffer_Memcpy_m2035854300 ();
 extern "C" void Buffer_Memcpy_m314807872 ();
 extern "C" void Buffer_Memcpy_m2940566499 ();
+extern "C" void Buffer_SetByte_m316948066 ();
 extern "C" void Buffer_ZeroMemory_m3102858865 ();
+extern "C" void Buffer__SetByte_m1099280919 ();
 extern "C" void Buffer_memcpy1_m68652553 ();
 extern "C" void Buffer_memcpy2_m3728527076 ();
 extern "C" void Buffer_memcpy4_m1388822303 ();
@@ -8526,10 +10918,12 @@ extern "C" void ReadOnlyArrayList__ctor_m1897442383 ();
 extern "C" void ReadOnlyArrayList_AddRange_m3234785668 ();
 extern "C" void ReadOnlyArrayList_Clear_m4035948969 ();
 extern "C" void ReadOnlyArrayList_CopyTo_m325945532 ();
+extern "C" void ReadOnlyArrayList_CopyTo_m1714876295 ();
 extern "C" void ReadOnlyArrayList_Insert_m3296000020 ();
 extern "C" void ReadOnlyArrayList_InsertRange_m85432697 ();
 extern "C" void ReadOnlyArrayList_Remove_m3567154403 ();
 extern "C" void ReadOnlyArrayList_RemoveAt_m2719622470 ();
+extern "C" void ReadOnlyArrayList_RemoveRange_m2639670197 ();
 extern "C" void ReadOnlyArrayList_set_Capacity_m334940035 ();
 extern "C" void ReadOnlyArrayList_set_Item_m2525151595 ();
 extern "C" void ArrayList__cctor_m3052737821 ();
@@ -8538,12 +10932,15 @@ extern "C" void ArrayList__ctor_m2130986447 ();
 extern "C" void ArrayList__ctor_m3828927650 ();
 extern "C" void ArrayList_AddRange_m3758299474 ();
 extern "C" void ArrayList_Clear_m3564447992 ();
+extern "C" void ArrayList_CopyTo_m3530931172 ();
 extern "C" void ArrayList_CopyTo_m3962521159 ();
+extern "C" void ArrayList_CopyTo_m3105450421 ();
 extern "C" void ArrayList_EnsureCapacity_m3016383533 ();
 extern "C" void ArrayList_Insert_m3524057793 ();
 extern "C" void ArrayList_InsertRange_m1740766984 ();
 extern "C" void ArrayList_Remove_m4274871153 ();
 extern "C" void ArrayList_RemoveAt_m761734947 ();
+extern "C" void ArrayList_RemoveRange_m2259829391 ();
 extern "C" void ArrayList_set_Capacity_m1058991803 ();
 extern "C" void ArrayList_set_Item_m2003485935 ();
 extern "C" void CaseInsensitiveComparer__ctor_m1508720200 ();
@@ -8604,6 +11001,8 @@ extern "C" void SyncHashtable_GetObjectData_m672594935 ();
 extern "C" void SyncHashtable_OnDeserialization_m176184756 ();
 extern "C" void SyncHashtable_Remove_m4179265271 ();
 extern "C" void SyncHashtable_set_Item_m2451773607 ();
+extern "C" void ValueCollection__ctor_m1618749086 ();
+extern "C" void ValueCollection_CopyTo_m439661528 ();
 extern "C" void Hashtable__ctor_m1815022027 ();
 extern "C" void Hashtable__ctor_m2861288786 ();
 extern "C" void Hashtable__ctor_m3192564643 ();
@@ -8642,10 +11041,23 @@ extern "C" void Queue__ctor_m2030580699 ();
 extern "C" void Queue__ctor_m3552486878 ();
 extern "C" void Queue__ctor_m2226872579 ();
 extern "C" void Queue__ctor_m2335855895 ();
+extern "C" void Queue_Clear_m898976850 ();
 extern "C" void Queue_CopyTo_m737385843 ();
 extern "C" void Queue_Enqueue_m4206203487 ();
 extern "C" void Queue_SetCapacity_m2477650163 ();
 extern "C" void SortedListEnumerator__ctor_m1038192608 ();
+extern "C" void SyncSortedList__ctor_m3358352329 ();
+extern "C" void SyncSortedList_Add_m1732900135 ();
+extern "C" void SyncSortedList_CopyTo_m1689549427 ();
+extern "C" void SyncSortedList_RemoveAt_m248114338 ();
+extern "C" void SyncSortedList_set_Item_m1476967925 ();
+extern "C" void ValueList__ctor_m4152204531 ();
+extern "C" void ValueList_Clear_m256055789 ();
+extern "C" void ValueList_CopyTo_m2181516009 ();
+extern "C" void ValueList_Insert_m1729004996 ();
+extern "C" void ValueList_Remove_m900907577 ();
+extern "C" void ValueList_RemoveAt_m386488652 ();
+extern "C" void ValueList_set_Item_m2809756815 ();
 extern "C" void SortedList__cctor_m1247132 ();
 extern "C" void SortedList__ctor_m1261191695 ();
 extern "C" void SortedList__ctor_m3247584155 ();
@@ -8659,6 +11071,55 @@ extern "C" void SortedList_Insert_m3413986029 ();
 extern "C" void SortedList_RemoveAt_m1767403850 ();
 extern "C" void SortedList_set_Capacity_m509376950 ();
 extern "C" void SortedList_set_Item_m32382988 ();
+extern "C" void CompatibleComparer__ctor_m2920869396 ();
+extern "C" void HybridDictionary__ctor_m2970901694 ();
+extern "C" void HybridDictionary_Add_m912320053 ();
+extern "C" void HybridDictionary_ChangeOver_m379035322 ();
+extern "C" void HybridDictionary_CopyTo_m3592404936 ();
+extern "C" void HybridDictionary_set_Item_m2997363718 ();
+extern "C" void DictionaryNode__ctor_m2480329019 ();
+extern "C" void NodeEnumerator__ctor_m2912083748 ();
+extern "C" void ListDictionary__ctor_m2955211750 ();
+extern "C" void ListDictionary__ctor_m438204031 ();
+extern "C" void ListDictionary_Add_m3918308031 ();
+extern "C" void ListDictionary_CopyTo_m1633862866 ();
+extern "C" void ListDictionary_set_Item_m1659493973 ();
+extern "C" void NameObjectEntry__ctor_m614750814 ();
+extern "C" void NameObjectKeysEnumerator__ctor_m2056242163 ();
+extern "C" void NameObjectCollectionBase__cctor_m1204874075 ();
+extern "C" void NameObjectCollectionBase__ctor_m2090733912 ();
+extern "C" void NameObjectCollectionBase__ctor_m3828441930 ();
+extern "C" void NameObjectCollectionBase__ctor_m2288607023 ();
+extern "C" void NameObjectCollectionBase__ctor_m2913187925 ();
+extern "C" void NameObjectCollectionBase__ctor_m1512146076 ();
+extern "C" void NameObjectCollectionBase_BaseAdd_m3437748750 ();
+extern "C" void NameObjectCollectionBase_BaseRemove_m970901962 ();
+extern "C" void NameObjectCollectionBase_BaseSet_m2307774678 ();
+extern "C" void NameObjectCollectionBase_GetObjectData_m199708727 ();
+extern "C" void NameObjectCollectionBase_OnDeserialization_m619757901 ();
+extern "C" void NameObjectCollectionBase_Reset_m3985051645 ();
+extern "C" void NameObjectCollectionBase_Reset_m2830962996 ();
+extern "C" void NameObjectCollectionBase_System_Collections_ICollection_CopyTo_m1225689553 ();
+extern "C" void NameValueCollection__ctor_m1115358332 ();
+extern "C" void NameValueCollection__ctor_m2890045557 ();
+extern "C" void NameValueCollection__ctor_m1800514663 ();
+extern "C" void NameValueCollection__ctor_m4090053322 ();
+extern "C" void NameValueCollection_Add_m2418530856 ();
+extern "C" void NameValueCollection_InvalidateCachedArrays_m194313763 ();
+extern "C" void NameValueCollection_Remove_m3237017023 ();
+extern "C" void NameValueCollection_Set_m2358615760 ();
+extern "C" void NameValueCollection_set_Item_m1362981538 ();
+extern "C" void StringCollection__ctor_m490010228 ();
+extern "C" void StringCollection_Clear_m3647152978 ();
+extern "C" void StringCollection_CopyTo_m1450011689 ();
+extern "C" void StringCollection_Insert_m2300187778 ();
+extern "C" void StringCollection_Remove_m3605634414 ();
+extern "C" void StringCollection_RemoveAt_m402186489 ();
+extern "C" void StringCollection_System_Collections_ICollection_CopyTo_m838222095 ();
+extern "C" void StringCollection_System_Collections_IList_Insert_m1948524567 ();
+extern "C" void StringCollection_System_Collections_IList_Remove_m1133367149 ();
+extern "C" void StringCollection_System_Collections_IList_set_Item_m1455563237 ();
+extern "C" void StringCollection_set_Item_m4148591189 ();
 extern "C" void StackEnumerator__ctor_m18517055 ();
 extern "C" void Stack__ctor_m2907601956 ();
 extern "C" void Stack__ctor_m3503577671 ();
@@ -8985,6 +11446,7 @@ extern "C" void GuidResult_SetFailure_m4176925274_AdjustorThunk ();
 extern "C" void Guid__cctor_m1202095334 ();
 extern "C" void Guid__ctor_m3421080095_AdjustorThunk ();
 extern "C" void Guid__ctor_m2423264394_AdjustorThunk ();
+extern "C" void BinaryReader__ctor_m2602947653 ();
 extern "C" void BinaryReader__ctor_m2266204403 ();
 extern "C" void BinaryReader__ctor_m605133977 ();
 extern "C" void BinaryReader_Close_m3868286242 ();
@@ -9023,6 +11485,36 @@ extern "C" void CStreamWriter_Write_m2532518825 ();
 extern "C" void CStreamWriter_Write_m2625434818 ();
 extern "C" void CStreamWriter_Write_m2721888638 ();
 extern "C" void CStreamWriter_Write_m2594036893 ();
+extern "C" void ReadMethod__ctor_m3454788154 ();
+extern "C" void WriteMethod__ctor_m3113528835 ();
+extern "C" void WriteMethod_EndInvoke_m1603343818 ();
+extern "C" void WriteMethod_Invoke_m1619441034 ();
+extern "C" void DeflateStream__ctor_m1455391489 ();
+extern "C" void DeflateStream__ctor_m3390202582 ();
+extern "C" void DeflateStream__ctor_m3573829724 ();
+extern "C" void DeflateStream_Dispose_m959848075 ();
+extern "C" void DeflateStream_EndWrite_m1295999073 ();
+extern "C" void DeflateStream_Flush_m2668044568 ();
+extern "C" void DeflateStream_Write_m4264238449 ();
+extern "C" void DeflateStream_WriteInternal_m4168753255 ();
+extern "C" void DeflateStream_set_Position_m1956031577 ();
+extern "C" void SafeDeflateStreamHandle__ctor_m3926025387 ();
+extern "C" void UnmanagedReadOrWrite__ctor_m4099972177 ();
+extern "C" void DeflateStreamNative__ctor_m1757329268 ();
+extern "C" void DeflateStreamNative_CheckResult_m276740021 ();
+extern "C" void DeflateStreamNative_Dispose_m2713887098 ();
+extern "C" void DeflateStreamNative_Finalize_m1363912817 ();
+extern "C" void DeflateStreamNative_Flush_m2908773117 ();
+extern "C" void DeflateStreamNative_WriteZStream_m4258525530 ();
+extern "C" void GZipStream__ctor_m1551560069 ();
+extern "C" void GZipStream__ctor_m2126151311 ();
+extern "C" void GZipStream_CheckDeflateStream_m1090465304 ();
+extern "C" void GZipStream_Dispose_m519432882 ();
+extern "C" void GZipStream_EndWrite_m2556809823 ();
+extern "C" void GZipStream_Flush_m1592300520 ();
+extern "C" void GZipStream_ThrowStreamClosedException_m1418565426 ();
+extern "C" void GZipStream_Write_m2833522967 ();
+extern "C" void GZipStream_set_Position_m3660732374 ();
 extern "C" void SearchData__ctor_m4162952925 ();
 extern "C" void Directory_Delete_m2573534060 ();
 extern "C" void Directory_Delete_m3266154992 ();
@@ -9043,6 +11535,12 @@ extern "C" void EndOfStreamException__ctor_m2202021005 ();
 extern "C" void EndOfStreamException__ctor_m1590165188 ();
 extern "C" void EndOfStreamException__ctor_m2720774049 ();
 extern "C" void File_Delete_m321251800 ();
+extern "C" void File_WriteAllBytes_m4252682105 ();
+extern "C" void File_WriteAllText_m167356635 ();
+extern "C" void File_WriteAllText_m1974532535 ();
+extern "C" void FileInfo__ctor_m1254204251 ();
+extern "C" void FileInfo__ctor_m3289795077 ();
+extern "C" void FileInfo_Init_m3003176326 ();
 extern "C" void FileLoadException__ctor_m3879680456 ();
 extern "C" void FileLoadException__ctor_m3104411427 ();
 extern "C" void FileLoadException__ctor_m2951358491 ();
@@ -9063,7 +11561,9 @@ extern "C" void FileStream__ctor_m3087090334 ();
 extern "C" void FileStream__ctor_m2784380556 ();
 extern "C" void FileStream__ctor_m2889718780 ();
 extern "C" void FileStream__ctor_m3340685739 ();
+extern "C" void FileStream__ctor_m2221843109 ();
 extern "C" void FileStream__ctor_m3151488352 ();
+extern "C" void FileStream__ctor_m3062020188 ();
 extern "C" void FileStream__ctor_m103400947 ();
 extern "C" void FileStream_Dispose_m2599766137 ();
 extern "C" void FileStream_EndWrite_m4002445354 ();
@@ -9085,6 +11585,7 @@ extern "C" void FileSystemInfo__ctor_m3035148496 ();
 extern "C" void FileSystemInfo__ctor_m3769019897 ();
 extern "C" void FileSystemInfo_GetObjectData_m812231621 ();
 extern "C" void FileSystemInfo_Refresh_m1023608177 ();
+extern "C" void FileSystemInfo_set_DisplayPath_m609962158 ();
 extern "C" void IOException__ctor_m971599150 ();
 extern "C" void IOException__ctor_m58488270 ();
 extern "C" void IOException__ctor_m3662782713 ();
@@ -9149,6 +11650,12 @@ extern "C" void Stream_EndWrite_m1721488587 ();
 extern "C" void Stream_RunReadWriteTask_m958181622 ();
 extern "C" void Stream_RunReadWriteTaskWhenReady_m2027379200 ();
 extern "C" void Stream_WriteByte_m1519852120 ();
+extern "C" void U3CReadAsyncInternalU3Ed__65_MoveNext_m3473460893_AdjustorThunk ();
+extern "C" void U3CReadAsyncInternalU3Ed__65_SetStateMachine_m1435478584_AdjustorThunk ();
+extern "C" void U3CReadBufferAsyncU3Ed__98_MoveNext_m661868703_AdjustorThunk ();
+extern "C" void U3CReadBufferAsyncU3Ed__98_SetStateMachine_m2059545784_AdjustorThunk ();
+extern "C" void U3CReadToEndAsyncInternalU3Ed__63_MoveNext_m1175967012_AdjustorThunk ();
+extern "C" void U3CReadToEndAsyncInternalU3Ed__63_SetStateMachine_m3811170576_AdjustorThunk ();
 extern "C" void NullStreamReader__ctor_m3077615088 ();
 extern "C" void NullStreamReader_Dispose_m1643118158 ();
 extern "C" void StreamReader__cctor_m874052303 ();
@@ -9168,6 +11675,11 @@ extern "C" void StreamReader_DetectEncoding_m2965401895 ();
 extern "C" void StreamReader_Dispose_m156389394 ();
 extern "C" void StreamReader_Init_m2879630337 ();
 extern "C" void StreamReader_Init_m1205532414 ();
+extern "C" void StreamReader_set_ByteLen_Prop_m1576937156 ();
+extern "C" void StreamReader_set_BytePos_Prop_m3539751988 ();
+extern "C" void StreamReader_set_CharLen_Prop_m226340675 ();
+extern "C" void StreamReader_set_CharPos_Prop_m4183451842 ();
+extern "C" void StreamReader_set_IsBlocked_Prop_m4062191080 ();
 extern "C" void StreamWriter__cctor_m1229272693 ();
 extern "C" void StreamWriter__ctor_m3897937622 ();
 extern "C" void StreamWriter__ctor_m1288454107 ();
@@ -9192,6 +11704,8 @@ extern "C" void StringReader_Dispose_m1915799905 ();
 extern "C" void StringResultHandler__ctor_m2155428846 ();
 extern "C" void U3CU3Ec__cctor_m3834697479 ();
 extern "C" void U3CU3Ec__ctor_m3783018625 ();
+extern "C" void U3CReadToEndAsyncU3Ed__14_MoveNext_m331911256_AdjustorThunk ();
+extern "C" void U3CReadToEndAsyncU3Ed__14_SetStateMachine_m2422106636_AdjustorThunk ();
 extern "C" void NullTextReader__ctor_m2871254925 ();
 extern "C" void SyncTextReader__ctor_m1563813042 ();
 extern "C" void SyncTextReader_Dispose_m54403843 ();
@@ -9275,6 +11789,12 @@ extern "C" void __Error_WrongAsyncResult_m4181844776 ();
 extern "C" void IOAsyncCallback__ctor_m3248627329 ();
 extern "C" void IOAsyncCallback_EndInvoke_m4101473787 ();
 extern "C" void IOAsyncCallback_Invoke_m4135167970 ();
+extern "C" void IOAsyncResult__ctor_m1044573569 ();
+extern "C" void IOAsyncResult_set_CompletedSynchronously_m3658237697 ();
+extern "C" void IOAsyncResult_set_IsCompleted_m2347043755 ();
+extern "C" void IOSelector_Add_m2838266828 ();
+extern "C" void IOSelectorJob__ctor_m1611324785 ();
+extern "C" void IOSelectorJob_MarkDisposed_m1053029016 ();
 extern "C" void IOSelectorJob_System_Threading_IThreadPoolWorkItem_ExecuteWorkItem_m2696504768 ();
 extern "C" void IOSelectorJob_System_Threading_IThreadPoolWorkItem_MarkAborted_m2333578466 ();
 extern "C" void IndexOutOfRangeException__ctor_m2441337274 ();
@@ -9347,14 +11867,283 @@ extern "C" void MulticastDelegate_GetObjectData_m3957553424 ();
 extern "C" void MulticastNotSupportedException__ctor_m2750561050 ();
 extern "C" void MulticastNotSupportedException__ctor_m521229206 ();
 extern "C" void MulticastNotSupportedException__ctor_m663960493 ();
+extern "C" void AuthenticationManager__cctor_m2462735150 ();
+extern "C" void AuthenticationManager_EnsureModules_m3673793880 ();
+extern "C" void Authorization__ctor_m1042942506 ();
+extern "C" void Authorization__ctor_m1248414549 ();
+extern "C" void BasicClient__ctor_m1144959636 ();
+extern "C" void BindIPEndPoint__ctor_m3266317527 ();
+extern "C" void CaseInsensitiveAscii__cctor_m258705655 ();
+extern "C" void CaseInsensitiveAscii__ctor_m2924053818 ();
+extern "C" void Comparer__ctor_m622249416 ();
+extern "C" void DefaultProxySectionInternal__ctor_m2423092146 ();
+extern "C" void SettingsSectionInternal__cctor_m1201638947 ();
+extern "C" void SettingsSectionInternal__ctor_m2088828526 ();
+extern "C" void Cookie__cctor_m3648156207 ();
+extern "C" void Cookie__ctor_m130314892 ();
+extern "C" void Cookie_set_Comment_m3273060062 ();
+extern "C" void Cookie_set_CommentUri_m514817537 ();
+extern "C" void Cookie_set_Discard_m1634972755 ();
+extern "C" void Cookie_set_Domain_m3100331118 ();
+extern "C" void Cookie_set_Expires_m1452686449 ();
+extern "C" void Cookie_set_HttpOnly_m1606103865 ();
+extern "C" void Cookie_set_Path_m1468440617 ();
+extern "C" void Cookie_set_Port_m1447813981 ();
+extern "C" void Cookie_set_Secure_m1144375275 ();
+extern "C" void Cookie_set_Value_m3029678175 ();
+extern "C" void Cookie_set_Version_m3274352061 ();
+extern "C" void CookieCollectionEnumerator__ctor_m3787236743 ();
+extern "C" void CookieCollection__ctor_m1000462790 ();
+extern "C" void CookieCollection_Add_m473237455 ();
+extern "C" void CookieCollection_Add_m2335546787 ();
+extern "C" void CookieCollection_CopyTo_m4238450065 ();
+extern "C" void CookieCollection_RemoveAt_m3215532298 ();
+extern "C" void CookieContainer__cctor_m686088327 ();
+extern "C" void CookieContainer__ctor_m715580786 ();
+extern "C" void CookieContainer_Add_m2909607730 ();
+extern "C" void CookieContainer_AddRemoveDomain_m2083128809 ();
+extern "C" void CookieContainer_BuildCookieCollectionFromDomainMatches_m1055748136 ();
+extern "C" void CookieContainer_MergeUpdateCollections_m1597670700 ();
+extern "C" void CookieException__ctor_m3096844272 ();
+extern "C" void CookieException__ctor_m3438359767 ();
+extern "C" void CookieException__ctor_m3844021349 ();
+extern "C" void CookieException__ctor_m3966587263 ();
+extern "C" void CookieException_GetObjectData_m964015457 ();
+extern "C" void CookieException_System_Runtime_Serialization_ISerializable_GetObjectData_m3530970078 ();
+extern "C" void CookieParser__ctor_m352952167 ();
+extern "C" void RecognizedAttribute__ctor_m2706071181_AdjustorThunk ();
+extern "C" void CookieTokenizer__cctor_m1618384133 ();
+extern "C" void CookieTokenizer__ctor_m1661161554 ();
+extern "C" void CookieTokenizer_Reset_m1469859480 ();
+extern "C" void CookieTokenizer_set_EndOfCookie_m289426291 ();
+extern "C" void CookieTokenizer_set_Name_m2963063609 ();
+extern "C" void CookieTokenizer_set_Quoted_m2266637170 ();
+extern "C" void CookieTokenizer_set_Token_m473331585 ();
+extern "C" void CookieTokenizer_set_Value_m850013014 ();
+extern "C" void CredentialEnumerator__ctor_m13454729 ();
+extern "C" void DigestClient__cctor_m973447523 ();
+extern "C" void DigestClient__ctor_m1598449366 ();
+extern "C" void DigestClient_CheckExpired_m149989480 ();
+extern "C" void DigestHeaderParser__cctor_m4060796889 ();
+extern "C" void DigestHeaderParser__ctor_m1788016284 ();
+extern "C" void DigestHeaderParser_SkipWhitespace_m1682657916 ();
+extern "C" void DigestSession__cctor_m318265375 ();
+extern "C" void DigestSession__ctor_m601709392 ();
+extern "C" void Dns__cctor_m683868677 ();
+extern "C" void Dns_Error_11001_m3845926492 ();
+extern "C" void EmptyWebProxy__ctor_m860633317 ();
 extern "C" void EndPoint__ctor_m2608146098 ();
+extern "C" void FileWebRequest__cctor_m2831586767 ();
+extern "C" void FileWebRequest__ctor_m41755936 ();
+extern "C" void FileWebRequest__ctor_m3189951510 ();
+extern "C" void FileWebRequest_Abort_m3846575800 ();
+extern "C" void FileWebRequest_GetObjectData_m577359674 ();
+extern "C" void FileWebRequest_GetRequestStreamCallback_m1700152991 ();
+extern "C" void FileWebRequest_GetResponseCallback_m2987371476 ();
+extern "C" void FileWebRequest_System_Runtime_Serialization_ISerializable_GetObjectData_m1504466482 ();
+extern "C" void FileWebRequest_UnblockReader_m2050763199 ();
+extern "C" void FileWebRequest_set_ContentLength_m559343124 ();
+extern "C" void FileWebRequest_set_ContentType_m4074119636 ();
+extern "C" void FileWebRequest_set_Credentials_m2496127692 ();
+extern "C" void FileWebRequest_set_Method_m984238228 ();
+extern "C" void FileWebRequest_set_Timeout_m2025134082 ();
+extern "C" void FileWebRequestCreator__ctor_m2638763787 ();
+extern "C" void FileWebResponse__ctor_m1083177906 ();
+extern "C" void FileWebResponse__ctor_m70121420 ();
+extern "C" void FileWebResponse_CheckDisposed_m3293736908 ();
+extern "C" void FileWebResponse_Close_m416836077 ();
+extern "C" void FileWebResponse_GetObjectData_m4283659003 ();
+extern "C" void FileWebResponse_System_Net_ICloseEx_CloseEx_m149171184 ();
+extern "C" void FileWebResponse_System_Runtime_Serialization_ISerializable_GetObjectData_m232863864 ();
+extern "C" void FileWebStream__ctor_m534304008 ();
+extern "C" void FileWebStream__ctor_m1671639551 ();
+extern "C" void FileWebStream_CheckError_m2428473889 ();
+extern "C" void FileWebStream_Dispose_m949706213 ();
+extern "C" void FileWebStream_EndWrite_m1194170274 ();
+extern "C" void FileWebStream_System_Net_ICloseEx_CloseEx_m1916921980 ();
+extern "C" void FileWebStream_Write_m1421719308 ();
+extern "C" void FtpAsyncResult__ctor_m524856605 ();
+extern "C" void FtpAsyncResult_DoCallback_m998142903 ();
+extern "C" void FtpAsyncResult_SetCompleted_m3601468790 ();
+extern "C" void FtpAsyncResult_SetCompleted_m2849243376 ();
+extern "C" void FtpAsyncResult_SetCompleted_m1279429529 ();
+extern "C" void FtpAsyncResult_set_Stream_m2533266488 ();
+extern "C" void ReadDelegate__ctor_m4059842624 ();
+extern "C" void WriteDelegate__ctor_m3568392013 ();
+extern "C" void WriteDelegate_EndInvoke_m4146667621 ();
+extern "C" void WriteDelegate_Invoke_m3329596849 ();
+extern "C" void FtpDataStream__ctor_m4139269767 ();
+extern "C" void FtpDataStream_CheckDisposed_m3833461916 ();
+extern "C" void FtpDataStream_Close_m3268039883 ();
+extern "C" void FtpDataStream_Dispose_m2867414550 ();
+extern "C" void FtpDataStream_EndWrite_m2288126240 ();
+extern "C" void FtpDataStream_Finalize_m2643715456 ();
+extern "C" void FtpDataStream_Flush_m3154007243 ();
+extern "C" void FtpDataStream_System_IDisposable_Dispose_m2806312366 ();
+extern "C" void FtpDataStream_Write_m4109720742 ();
+extern "C" void FtpDataStream_WriteInternal_m1021407502 ();
+extern "C" void FtpDataStream_set_Position_m3950238701 ();
+extern "C" void FtpRequestCreator__ctor_m23058707 ();
+extern "C" void FtpStatus__ctor_m1706090984 ();
+extern "C" void FtpWebRequest__cctor_m699542155 ();
+extern "C" void FtpWebRequest__ctor_m751131654 ();
+extern "C" void FtpWebRequest_Abort_m2164812681 ();
+extern "C" void FtpWebRequest_Authenticate_m3499993166 ();
+extern "C" void FtpWebRequest_CWDAndSetFileName_m3751202631 ();
+extern "C" void FtpWebRequest_CheckFinalState_m1657985045 ();
+extern "C" void FtpWebRequest_CheckIfAborted_m4220179630 ();
+extern "C" void FtpWebRequest_CheckRequestStarted_m1572969670 ();
+extern "C" void FtpWebRequest_CloseConnection_m2159926326 ();
+extern "C" void FtpWebRequest_CloseControlConnection_m1302744984 ();
+extern "C" void FtpWebRequest_CloseDataConnection_m473296206 ();
+extern "C" void FtpWebRequest_DownloadData_m3221826187 ();
+extern "C" void FtpWebRequest_InitiateSecureConnection_m1876937554 ();
+extern "C" void FtpWebRequest_OpenControlConnection_m1915116578 ();
+extern "C" void FtpWebRequest_OpenDataConnection_m2761204651 ();
+extern "C" void FtpWebRequest_OperationCompleted_m77641069 ();
+extern "C" void FtpWebRequest_ProcessMethod_m3735617216 ();
+extern "C" void FtpWebRequest_ProcessRequest_m2589290874 ();
+extern "C" void FtpWebRequest_ProcessSimpleMethod_m3222265549 ();
+extern "C" void FtpWebRequest_ResolveHost_m3463382846 ();
+extern "C" void FtpWebRequest_SetCompleteWithError_m3611237847 ();
+extern "C" void FtpWebRequest_SetTransferCompleted_m1178172310 ();
+extern "C" void FtpWebRequest_SetType_m889883767 ();
+extern "C" void FtpWebRequest_UploadData_m2791203992 ();
+extern "C" void FtpWebRequest_set_ContentLength_m1798916307 ();
+extern "C" void FtpWebRequest_set_ContentType_m2762078365 ();
+extern "C" void FtpWebRequest_set_Credentials_m1276649473 ();
+extern "C" void FtpWebRequest_set_Headers_m3433144208 ();
+extern "C" void FtpWebRequest_set_Method_m1968634227 ();
+extern "C" void FtpWebRequest_set_State_m191779305 ();
+extern "C" void FtpWebRequest_set_Timeout_m1158875527 ();
+extern "C" void FtpWebResponse__ctor_m132049627 ();
+extern "C" void FtpWebResponse__ctor_m3273086612 ();
+extern "C" void FtpWebResponse__ctor_m3888855406 ();
+extern "C" void FtpWebResponse_CheckDisposed_m2152411271 ();
+extern "C" void FtpWebResponse_Close_m3407016815 ();
+extern "C" void FtpWebResponse_UpdateStatus_m937617454 ();
+extern "C" void FtpWebResponse_set_BannerMessage_m1768086374 ();
+extern "C" void FtpWebResponse_set_LastModified_m3755041463 ();
+extern "C" void FtpWebResponse_set_StatusCode_m1931108959 ();
+extern "C" void FtpWebResponse_set_Stream_m556839434 ();
+extern "C" void FtpWebResponse_set_WelcomeMessage_m3871327441 ();
+extern "C" void HeaderInfo__ctor_m3856703528 ();
+extern "C" void HeaderInfoTable__cctor_m1864840678 ();
+extern "C" void HeaderInfoTable__ctor_m1866721604 ();
+extern "C" void HeaderParser__ctor_m3954054193 ();
+extern "C" void HeaderVariantInfo__ctor_m3174290741_AdjustorThunk ();
+extern "C" void HttpContinueDelegate__ctor_m2928381845 ();
+extern "C" void HttpContinueDelegate_EndInvoke_m1388437871 ();
+extern "C" void HttpContinueDelegate_Invoke_m1343264165 ();
+extern "C" void HttpRequestCreator__ctor_m2389332355 ();
+extern "C" void HttpVersion__cctor_m1653189495 ();
+extern "C" void U3CU3Ec__DisplayClass238_0__ctor_m534480636 ();
+extern "C" void U3CU3Ec__DisplayClass238_0_U3CBeginGetResponseU3Eb__0_m3736447996 ();
+extern "C" void AuthorizationState__ctor_m1224452023_AdjustorThunk ();
+extern "C" void AuthorizationState_Reset_m2643235403_AdjustorThunk ();
+extern "C" void HttpWebRequest__cctor_m1467954389 ();
+extern "C" void HttpWebRequest__ctor_m1789065007 ();
+extern "C" void HttpWebRequest__ctor_m1376613083 ();
+extern "C" void HttpWebRequest_U3CSetWriteStreamU3Eb__258_0_m4232864729 ();
+extern "C" void HttpWebRequest_U3CSetWriteStreamU3Eb__258_1_m3955481731 ();
+extern "C" void HttpWebRequest_Abort_m3163190852 ();
+extern "C" void HttpWebRequest_CheckRequestStarted_m2585848005 ();
+extern "C" void HttpWebRequest_CheckSendError_m2266605752 ();
+extern "C" void HttpWebRequest_DoContinueDelegate_m3383944917 ();
+extern "C" void HttpWebRequest_DoPreAuthenticate_m1424851389 ();
+extern "C" void HttpWebRequest_GetObjectData_m1226445448 ();
+extern "C" void HttpWebRequest_ResetAuthorization_m3834937269 ();
+extern "C" void HttpWebRequest_RewriteRedirectToGet_m2245315294 ();
+extern "C" void HttpWebRequest_SetResponseData_m1747650150 ();
+extern "C" void HttpWebRequest_SetResponseError_m4064263808 ();
+extern "C" void HttpWebRequest_SetSpecialHeaders_m2553007387 ();
+extern "C" void HttpWebRequest_SetWriteStream_m2739138088 ();
+extern "C" void HttpWebRequest_SetWriteStreamError_m1495555337 ();
+extern "C" void HttpWebRequest_SetWriteStreamError_m336408989 ();
+extern "C" void HttpWebRequest_SetWriteStreamInner_m824927426 ();
+extern "C" void HttpWebRequest_System_Runtime_Serialization_ISerializable_GetObjectData_m900393946 ();
+extern "C" void HttpWebRequest_set_Address_m3321373420 ();
+extern "C" void HttpWebRequest_set_AutomaticDecompression_m3449856760 ();
+extern "C" void HttpWebRequest_set_ContentLength_m1924274623 ();
+extern "C" void HttpWebRequest_set_ContentType_m2247267371 ();
+extern "C" void HttpWebRequest_set_Credentials_m2824480114 ();
+extern "C" void HttpWebRequest_set_ExpectContinue_m494724185 ();
+extern "C" void HttpWebRequest_set_FinishedReading_m2455679796 ();
+extern "C" void HttpWebRequest_set_Headers_m348860780 ();
+extern "C" void HttpWebRequest_set_InternalContentLength_m1954123929 ();
+extern "C" void HttpWebRequest_set_Method_m4248268164 ();
+extern "C" void HttpWebRequest_set_ReuseConnection_m3288622955 ();
+extern "C" void HttpWebRequest_set_ThrowOnError_m514616671 ();
+extern "C" void HttpWebRequest_set_Timeout_m3284739078 ();
+extern "C" void HttpWebResponse__ctor_m1618273601 ();
+extern "C" void HttpWebResponse__ctor_m470181940 ();
+extern "C" void HttpWebResponse_CheckDisposed_m3271607901 ();
+extern "C" void HttpWebResponse_Close_m584988241 ();
+extern "C" void HttpWebResponse_Dispose_m2105431493 ();
+extern "C" void HttpWebResponse_FillCookies_m2099537096 ();
+extern "C" void HttpWebResponse_GetObjectData_m3741544833 ();
+extern "C" void HttpWebResponse_ReadAll_m677937028 ();
+extern "C" void HttpWebResponse_System_IDisposable_Dispose_m794624260 ();
+extern "C" void HttpWebResponse_System_Runtime_Serialization_ISerializable_GetObjectData_m1888769183 ();
 extern "C" void IPAddress__cctor_m3038355099 ();
 extern "C" void IPAddress__ctor_m212134278 ();
 extern "C" void IPAddress__ctor_m1728349942 ();
 extern "C" void IPAddress__ctor_m921977496 ();
+extern "C" void IPAddress__ctor_m368216647 ();
+extern "C" void IPEndPoint__cctor_m3129021540 ();
+extern "C" void IPEndPoint__ctor_m2833647099 ();
+extern "C" void IPHostEntry__ctor_m3185986391 ();
+extern "C" void IPHostEntry_set_AddressList_m895991257 ();
+extern "C" void IPHostEntry_set_Aliases_m727031720 ();
+extern "C" void IPHostEntry_set_HostName_m1112531386 ();
 extern "C" void IPv6AddressFormatter__ctor_m1751086962_AdjustorThunk ();
+extern "C" void InternalException__ctor_m2590138556 ();
+extern "C" void KnownHttpVerb__cctor_m429758526 ();
+extern "C" void KnownHttpVerb__ctor_m2604494108 ();
+extern "C" void ThreadContext__ctor_m2708273126 ();
+extern "C" void LazyAsyncResult__ctor_m4065652744 ();
+extern "C" void LazyAsyncResult_Cleanup_m171098265 ();
+extern "C" void LazyAsyncResult_Complete_m1685059211 ();
+extern "C" void LazyAsyncResult_InvokeCallback_m2308161903 ();
+extern "C" void LazyAsyncResult_ProtectedInvokeCallback_m1812167064 ();
+extern "C" void LazyAsyncResult_WorkerThreadComplete_m1123407821 ();
+extern "C" void Logging__cctor_m3589455087 ();
+extern "C" void Chunk__ctor_m2102970238 ();
+extern "C" void MonoChunkStream__ctor_m2491428210 ();
+extern "C" void MonoChunkStream__ctor_m1272507573 ();
+extern "C" void MonoChunkStream_InternalWrite_m3269432069 ();
+extern "C" void MonoChunkStream_ResetBuffer_m3146850297 ();
+extern "C" void MonoChunkStream_ThrowProtocolViolation_m1157326735 ();
+extern "C" void MonoChunkStream_Write_m3040529004 ();
+extern "C" void MonoChunkStream_WriteAndReadBack_m2930844533 ();
+extern "C" void NetworkCredential__ctor_m2171369688 ();
+extern "C" void NetworkCredential__ctor_m3496297373 ();
+extern "C" void NetworkCredential_set_Domain_m2066831681 ();
+extern "C" void NetworkCredential_set_Password_m781509224 ();
+extern "C" void NetworkCredential_set_UserName_m537558698 ();
+extern "C" void CommonUnixIPGlobalProperties__ctor_m2334165341 ();
+extern "C" void IPGlobalProperties__ctor_m2997729991 ();
+extern "C" void MibIPGlobalProperties__cctor_m1399753744 ();
+extern "C" void MibIPGlobalProperties__ctor_m382854684 ();
+extern "C" void NetworkInformationException__ctor_m1042018490 ();
+extern "C" void NetworkInformationException__ctor_m3218200151 ();
+extern "C" void UnixIPGlobalProperties__ctor_m131705248 ();
+extern "C" void Win32IPGlobalProperties__ctor_m1772432178 ();
+extern "C" void Win32NetworkInterface__cctor_m1329161106 ();
+extern "C" void NtlmClient__ctor_m601797646 ();
+extern "C" void PathListComparer__cctor_m4159747597 ();
+extern "C" void PathListComparer__ctor_m2457711856 ();
+extern "C" void PathList__ctor_m2594618257 ();
+extern "C" void PathList_set_Item_m2496539297 ();
+extern "C" void ProtocolViolationException__ctor_m3494069637 ();
+extern "C" void ProtocolViolationException__ctor_m1970521726 ();
+extern "C" void ProtocolViolationException__ctor_m1575418383 ();
+extern "C" void ProtocolViolationException_GetObjectData_m3244936269 ();
+extern "C" void ProtocolViolationException_System_Runtime_Serialization_ISerializable_GetObjectData_m2045101867 ();
 extern "C" void AuthenticatedStream__ctor_m2546959456 ();
 extern "C" void AuthenticatedStream_Dispose_m2809320002 ();
+extern "C" void LocalCertSelectionCallback__ctor_m386164261 ();
+extern "C" void RemoteCertificateValidationCallback__ctor_m1251969663 ();
 extern "C" void SslStream__ctor_m669531117 ();
 extern "C" void SslStream_CheckDisposed_m108984730 ();
 extern "C" void SslStream_Dispose_m3651067425 ();
@@ -9362,9 +12151,315 @@ extern "C" void SslStream_EndWrite_m4230550996 ();
 extern "C" void SslStream_Flush_m1522960015 ();
 extern "C" void SslStream_Write_m462410050 ();
 extern "C" void SslStream_set_Position_m2208958757 ();
+extern "C" void CallbackContext__ctor_m463300618 ();
+extern "C" void ServerCertValidationCallback__ctor_m3702464936 ();
+extern "C" void ServerCertValidationCallback_Callback_m4094854916 ();
+extern "C" void ServicePoint__ctor_m4022457269 ();
+extern "C" void ServicePoint_U3CGetConnectionGroupU3Eb__66_0_m2384897977 ();
+extern "C" void ServicePoint_IdleTimerCallback_m2062114730 ();
+extern "C" void ServicePoint_KeepAliveSetup_m1439766054 ();
+extern "C" void ServicePoint_PutBytes_m1954185421 ();
+extern "C" void ServicePoint_RemoveConnectionGroup_m1619826718 ();
+extern "C" void ServicePoint_SetTcpKeepAlive_m1397995104 ();
+extern "C" void ServicePoint_SetVersion_m218713483 ();
+extern "C" void ServicePoint_UpdateClientCertificate_m3591076172 ();
+extern "C" void ServicePoint_UpdateServerCertificate_m400846069 ();
+extern "C" void ServicePoint_set_Expect100Continue_m1237635858 ();
+extern "C" void ServicePoint_set_SendContinue_m3004714502 ();
+extern "C" void ServicePoint_set_UseConnect_m1377758489 ();
+extern "C" void ServicePoint_set_UseNagleAlgorithm_m1374731041 ();
+extern "C" void ServicePoint_set_UsesProxy_m2758604003 ();
+extern "C" void SPKey__ctor_m2807051469 ();
+extern "C" void ServicePointManager__cctor_m3222177795 ();
+extern "C" void SimpleAsyncCallback__ctor_m2647477404 ();
+extern "C" void SimpleAsyncCallback_EndInvoke_m843864638 ();
+extern "C" void SimpleAsyncCallback_Invoke_m1556536928 ();
+extern "C" void U3CU3Ec__DisplayClass11_0__ctor_m3459980745 ();
+extern "C" void U3CU3Ec__DisplayClass11_0_U3CRunWithLockU3Eb__1_m2227804549 ();
+extern "C" void U3CU3Ec__DisplayClass9_0__ctor_m2402425430 ();
+extern "C" void U3CU3Ec__DisplayClass9_0_U3C_ctorU3Eb__0_m778917517 ();
+extern "C" void SimpleAsyncResult__ctor_m302284371 ();
+extern "C" void SimpleAsyncResult__ctor_m2857079850 ();
+extern "C" void SimpleAsyncResult_DoCallback_internal_m3054769675 ();
+extern "C" void SimpleAsyncResult_DoCallback_private_m3635007888 ();
+extern "C" void SimpleAsyncResult_Reset_internal_m1051157640 ();
+extern "C" void SimpleAsyncResult_Run_m2632813164 ();
+extern "C" void SimpleAsyncResult_RunWithLock_m2419669062 ();
+extern "C" void SimpleAsyncResult_SetCompleted_m3748086251 ();
+extern "C" void SimpleAsyncResult_SetCompleted_m515399313 ();
+extern "C" void SimpleAsyncResult_SetCompleted_internal_m3990539307 ();
+extern "C" void SimpleAsyncResult_SetCompleted_internal_m1548663497 ();
+extern "C" void SimpleAsyncResult_WaitUntilComplete_m1711352865 ();
+extern "C" void SocketAddress__ctor_m3121787210 ();
+extern "C" void SocketAddress__ctor_m2840053504 ();
+extern "C" void SocketAddress__ctor_m487026317 ();
+extern "C" void LingerOption__ctor_m2538367620 ();
+extern "C" void LingerOption_set_Enabled_m1826728409 ();
+extern "C" void LingerOption_set_LingerTime_m4070974897 ();
+extern "C" void NetworkStream__ctor_m1741284015 ();
+extern "C" void NetworkStream__ctor_m594102681 ();
+extern "C" void NetworkStream_Dispose_m4074776990 ();
+extern "C" void NetworkStream_EndWrite_m2616051554 ();
+extern "C" void NetworkStream_Finalize_m382940703 ();
+extern "C" void NetworkStream_Flush_m1348361755 ();
+extern "C" void NetworkStream_InitNetworkStream_m961292768 ();
+extern "C" void NetworkStream_Write_m172181053 ();
+extern "C" void NetworkStream_set_Position_m4274646361 ();
+extern "C" void SafeSocketHandle__cctor_m564687165 ();
+extern "C" void SafeSocketHandle__ctor_m339710951 ();
+extern "C" void SafeSocketHandle_RegisterForBlockingSyscall_m2358257996 ();
+extern "C" void SafeSocketHandle_UnRegisterForBlockingSyscall_m89159727 ();
+extern "C" void U3CU3Ec__cctor_m532654084 ();
+extern "C" void U3CU3Ec__ctor_m2896289733 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_0_m2242655620 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_1_m2423046525 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_10_m233669948 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_11_m3585703175 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_12_m1607004806 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_13_m4146416281 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_14_m4067735120 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_2_m854572685 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_3_m1470574082 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_4_m3609314407 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_5_m3281058751 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_6_m3221995463 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_7_m1186665062 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_8_m84584810 ();
+extern "C" void U3CU3Ec_U3C_cctorU3Eb__309_9_m1253681822 ();
+extern "C" void U3CU3Ec_U3CBeginSendU3Eb__241_0_m1921471321 ();
+extern "C" void U3CU3Ec__DisplayClass242_0__ctor_m571730096 ();
+extern "C" void U3CU3Ec__DisplayClass242_0_U3CBeginSendCallbackU3Eb__0_m759158135 ();
+extern "C" void U3CU3Ec__DisplayClass298_0__ctor_m3200109011 ();
+extern "C" void U3CU3Ec__DisplayClass298_0_U3CQueueIOSelectorJobU3Eb__0_m3346106331 ();
+extern "C" void Socket__cctor_m857260626 ();
+extern "C" void Socket__ctor_m3479084642 ();
+extern "C" void Socket__ctor_m3891211138 ();
+extern "C" void Socket_Accept_m789917158 ();
+extern "C" void Socket_BeginMConnect_m4086520346 ();
+extern "C" void Socket_BeginSConnect_m4212968585 ();
+extern "C" void Socket_BeginSendCallback_m1460608609 ();
+extern "C" void Socket_Bind_m1387808352 ();
+extern "C" void Socket_Bind_internal_m2004496361 ();
+extern "C" void Socket_Bind_internal_m2670275492 ();
+extern "C" void Socket_Blocking_internal_m937501832 ();
+extern "C" void Socket_Blocking_internal_m257811699 ();
+extern "C" void Socket_Close_m3289097516 ();
+extern "C" void Socket_Close_m2076598688 ();
+extern "C" void Socket_Close_internal_m3541237784 ();
+extern "C" void Socket_Connect_m798630981 ();
+extern "C" void Socket_Connect_internal_m1130612002 ();
+extern "C" void Socket_Connect_internal_m3396660944 ();
+extern "C" void Socket_Disconnect_m1621188342 ();
+extern "C" void Socket_Disconnect_internal_m3671451617 ();
+extern "C" void Socket_Disconnect_internal_m1225498763 ();
+extern "C" void Socket_Dispose_m614819465 ();
+extern "C" void Socket_Dispose_m3459017717 ();
+extern "C" void Socket_EndConnect_m498417972 ();
+extern "C" void Socket_EndDisconnect_m4234608499 ();
+extern "C" void Socket_Finalize_m1356936501 ();
+extern "C" void Socket_GetSocketOption_obj_internal_m3909434119 ();
+extern "C" void Socket_GetSocketOption_obj_internal_m533670452 ();
+extern "C" void Socket_InitializeSockets_m3417479393 ();
+extern "C" void Socket_InternalShutdown_m1075955397 ();
+extern "C" void Socket_Linger_m363798742 ();
+extern "C" void Socket_Listen_m3184049021 ();
+extern "C" void Socket_Listen_internal_m314292295 ();
+extern "C" void Socket_Listen_internal_m2767807186 ();
+extern "C" void Socket_QueueIOSelectorJob_m1532315495 ();
+extern "C" void Socket_SetIPProtectionLevel_m702436415 ();
+extern "C" void Socket_SetSocketOption_m483522974 ();
+extern "C" void Socket_SetSocketOption_internal_m2890815837 ();
+extern "C" void Socket_SetSocketOption_internal_m2968096094 ();
+extern "C" void Socket_Shutdown_internal_m4083092300 ();
+extern "C" void Socket_Shutdown_internal_m3507063392 ();
+extern "C" void Socket_SocketDefaults_m2103159556 ();
+extern "C" void Socket_ThrowIfBufferNull_m3748732293 ();
+extern "C" void Socket_ThrowIfBufferOutOfRange_m1472522590 ();
+extern "C" void Socket_ThrowIfDisposedAndClosed_m2521335859 ();
+extern "C" void Socket_ThrowIfUdp_m3991967902 ();
+extern "C" void Socket_cancel_blocking_socket_operation_m922726505 ();
+extern "C" void Socket_set_Blocking_m2255852279 ();
+extern "C" void Socket_set_DontFragment_m1311305537 ();
+extern "C" void Socket_set_DualMode_m3338159327 ();
+extern "C" void Socket_set_NoDelay_m3209939872 ();
+extern "C" void SocketAsyncEventArgs_Complete_m640063065 ();
+extern "C" void SocketAsyncEventArgs_Dispose_m75246699 ();
+extern "C" void SocketAsyncEventArgs_Dispose_m1052872840 ();
+extern "C" void SocketAsyncEventArgs_Finalize_m2742700199 ();
+extern "C" void SocketAsyncEventArgs_OnCompleted_m377032193 ();
+extern "C" void SocketAsyncEventArgs_set_AcceptSocket_m803500985 ();
+extern "C" void SocketAsyncEventArgs_set_BytesTransferred_m3887301794 ();
+extern "C" void SocketAsyncEventArgs_set_SocketError_m2833015933 ();
+extern "C" void U3CU3Ec__cctor_m2809933815 ();
+extern "C" void U3CU3Ec__ctor_m944601489 ();
+extern "C" void U3CU3Ec_U3CCompleteU3Eb__27_0_m3635841825 ();
+extern "C" void SocketAsyncResult__ctor_m2222378430 ();
+extern "C" void SocketAsyncResult_CheckIfThrowDelayedException_m1791470585 ();
+extern "C" void SocketAsyncResult_Complete_m2139287463 ();
+extern "C" void SocketAsyncResult_Complete_m4036770188 ();
+extern "C" void SocketAsyncResult_Complete_m772415312 ();
+extern "C" void SocketAsyncResult_Complete_m1649959738 ();
+extern "C" void SocketAsyncResult_Complete_m2013919124 ();
+extern "C" void SocketAsyncResult_Complete_m4080713924 ();
+extern "C" void SocketAsyncResult_Complete_m3033430476 ();
+extern "C" void SocketAsyncResult_CompleteDisposed_m3648698353 ();
 extern "C" void SocketException__ctor_m480722159 ();
+extern "C" void SocketException__ctor_m1369613389 ();
+extern "C" void SocketException__ctor_m3042788307 ();
 extern "C" void SocketException__ctor_m985972657 ();
 extern "C" void SocketException__ctor_m3558609746 ();
+extern "C" void SystemNetworkCredential__cctor_m559915852 ();
+extern "C" void SystemNetworkCredential__ctor_m3792767285 ();
+extern "C" void Callback__ctor_m2918749280 ();
+extern "C" void Callback_EndInvoke_m405768436 ();
+extern "C" void Callback_Invoke_m4185709191 ();
+extern "C" void InfiniteTimerQueue__ctor_m1392887597 ();
+extern "C" void Queue__ctor_m1094493313 ();
+extern "C" void Timer__ctor_m3542848881 ();
+extern "C" void Timer_Dispose_m2370742773 ();
+extern "C" void TimerNode__ctor_m1623469998 ();
+extern "C" void TimerNode_set_Next_m162860594 ();
+extern "C" void TimerNode_set_Prev_m1257715160 ();
+extern "C" void TimerQueue__ctor_m68967505 ();
+extern "C" void TimerThread__cctor_m4183456827 ();
+extern "C" void TimerThread_OnDomainUnload_m112035087 ();
+extern "C" void TimerThread_StopTimerThread_m1476219093 ();
+extern "C" void HTTP_REQUEST_HEADER_ID__cctor_m2555245410 ();
+extern "C" void HttpApi__cctor_m514859596 ();
+extern "C" void ValidationHelper__cctor_m2059238382 ();
+extern "C" void WebAsyncResult__ctor_m2054281158 ();
+extern "C" void WebAsyncResult__ctor_m4245223108 ();
+extern "C" void WebAsyncResult__ctor_m3529977349 ();
+extern "C" void WebAsyncResult_DoCallback_m1336537550 ();
+extern "C" void WebAsyncResult_Reset_m208950746 ();
+extern "C" void WebAsyncResult_SetCompleted_m471828713 ();
+extern "C" void WebAsyncResult_SetCompleted_m2879962625 ();
+extern "C" void WebAsyncResult_SetCompleted_m1095618586 ();
+extern "C" void WebAsyncResult_set_InnerAsyncResult_m4260877195 ();
+extern "C" void WebAsyncResult_set_NBytes_m2701756818 ();
+extern "C" void AbortHelper__ctor_m842092169 ();
+extern "C" void AbortHelper_Abort_m1162957833 ();
+extern "C" void WebConnection__ctor_m4229643654 ();
+extern "C" void WebConnection_U3CSendRequestU3Eb__41_0_m3242074501 ();
+extern "C" void WebConnection_Abort_m20739763 ();
+extern "C" void WebConnection_Close_m1464903054 ();
+extern "C" void WebConnection_Connect_m2850066444 ();
+extern "C" void WebConnection_FlushContents_m3149390488 ();
+extern "C" void WebConnection_HandleError_m738788885 ();
+extern "C" void WebConnection_InitConnection_m1346209371 ();
+extern "C" void WebConnection_InitRead_m3547797554 ();
+extern "C" void WebConnection_NextRead_m3275930655 ();
+extern "C" void WebConnection_ReadDone_m4265791416 ();
+extern "C" void WebConnection_ResetNtlm_m1997409512 ();
+extern "C" void WebConnection_SendNext_m1567013439 ();
+extern "C" void WebConnection_set_NtlmAuthenticated_m3388586408 ();
+extern "C" void WebConnection_set_NtlmCredential_m4103205352 ();
+extern "C" void WebConnection_set_PriorityRequest_m1465137853 ();
+extern "C" void WebConnection_set_UnsafeAuthenticatedConnectionSharing_m987184906 ();
+extern "C" void WebConnectionData__ctor_m2596484140 ();
+extern "C" void WebConnectionData__ctor_m3924339920 ();
+extern "C" void WebConnectionData_set_ReadState_m1219866531 ();
+extern "C" void WebConnectionData_set_request_m2687368876 ();
+extern "C" void ConnectionState__ctor_m2068236286 ();
+extern "C" void ConnectionState_SetIdle_m2481845986 ();
+extern "C" void ConnectionState_set_Connection_m63781982 ();
+extern "C" void ConnectionState_set_Group_m3167695302 ();
+extern "C" void WebConnectionGroup__ctor_m4209428564 ();
+extern "C" void WebConnectionGroup_PrepareSharingNtlm_m3982393373 ();
+extern "C" void WebConnectionGroup_add_ConnectionClosed_m43227740 ();
+extern "C" void WebConnectionGroup_remove_ConnectionClosed_m2318136007 ();
+extern "C" void U3CU3Ec__DisplayClass75_0__ctor_m2800177376 ();
+extern "C" void U3CU3Ec__DisplayClass76_0__ctor_m2800171847 ();
+extern "C" void U3CU3Ec__DisplayClass76_0_U3CSetHeadersAsyncU3Eb__0_m3387509175 ();
+extern "C" void U3CU3Ec__DisplayClass80_0__ctor_m1848080972 ();
+extern "C" void U3CU3Ec__DisplayClass80_0_U3CWriteRequestAsyncU3Eb__0_m2242617246 ();
+extern "C" void U3CU3Ec__DisplayClass80_0_U3CWriteRequestAsyncU3Eb__1_m2378670477 ();
+extern "C" void WebConnectionStream__cctor_m2995607677 ();
+extern "C" void WebConnectionStream__ctor_m1091771122 ();
+extern "C" void WebConnectionStream__ctor_m3833248332 ();
+extern "C" void WebConnectionStream_CheckComplete_m1795453731 ();
+extern "C" void WebConnectionStream_CheckResponseInBuffer_m3201279978 ();
+extern "C" void WebConnectionStream_CheckWriteOverflow_m962631185 ();
+extern "C" void WebConnectionStream_Close_m1981057778 ();
+extern "C" void WebConnectionStream_EndWrite_m1860918953 ();
+extern "C" void WebConnectionStream_Flush_m3309079282 ();
+extern "C" void WebConnectionStream_ForceCompletion_m543651373 ();
+extern "C" void WebConnectionStream_InternalClose_m2666563675 ();
+extern "C" void WebConnectionStream_KillBuffer_m3997100420 ();
+extern "C" void WebConnectionStream_ReadAll_m3145919104 ();
+extern "C" void WebConnectionStream_ReadCallbackWrapper_m3664552025 ();
+extern "C" void WebConnectionStream_SetHeadersAsync_m2644509534 ();
+extern "C" void WebConnectionStream_Write_m1061706378 ();
+extern "C" void WebConnectionStream_WriteAsyncCB_m1742239648 ();
+extern "C" void WebConnectionStream_WriteCallbackWrapper_m641430686 ();
+extern "C" void WebConnectionStream_set_Position_m537414785 ();
+extern "C" void WebConnectionStream_set_ReadBuffer_m2380223665 ();
+extern "C" void WebConnectionStream_set_ReadBufferOffset_m2243374622 ();
+extern "C" void WebConnectionStream_set_ReadBufferSize_m3389230 ();
+extern "C" void WebConnectionStream_set_SendChunked_m532577291 ();
+extern "C" void WebException__ctor_m3272147077 ();
+extern "C" void WebException__ctor_m3600308346 ();
+extern "C" void WebException__ctor_m2000471014 ();
+extern "C" void WebException__ctor_m3995319482 ();
+extern "C" void WebException__ctor_m2761056832 ();
+extern "C" void WebException__ctor_m2775493423 ();
+extern "C" void WebException__ctor_m2864788884 ();
+extern "C" void WebException__ctor_m4084416308 ();
+extern "C" void WebException__ctor_m3621846952 ();
+extern "C" void WebException__ctor_m3540123886 ();
+extern "C" void WebException_GetObjectData_m922074473 ();
+extern "C" void WebException_System_Runtime_Serialization_ISerializable_GetObjectData_m3329056988 ();
+extern "C" void WebExceptionMapping__cctor_m3317630178 ();
+extern "C" void WebHeaderCollection__cctor_m2093192431 ();
+extern "C" void WebHeaderCollection__ctor_m896654210 ();
+extern "C" void WebHeaderCollection__ctor_m3869665640 ();
+extern "C" void WebHeaderCollection__ctor_m1308130075 ();
+extern "C" void WebHeaderCollection_Add_m928193981 ();
+extern "C" void WebHeaderCollection_Add_m183143026 ();
+extern "C" void WebHeaderCollection_AddInternal_m3052165385 ();
+extern "C" void WebHeaderCollection_ChangeInternal_m1766136805 ();
+extern "C" void WebHeaderCollection_GetObjectData_m730985326 ();
+extern "C" void WebHeaderCollection_NormalizeCommonHeaders_m2399969767 ();
+extern "C" void WebHeaderCollection_OnDeserialization_m3998891408 ();
+extern "C" void WebHeaderCollection_Remove_m4092434409 ();
+extern "C" void WebHeaderCollection_Remove_m275303502 ();
+extern "C" void WebHeaderCollection_RemoveInternal_m2712218737 ();
+extern "C" void WebHeaderCollection_Set_m2824231721 ();
+extern "C" void WebHeaderCollection_SetInternal_m126443775 ();
+extern "C" void WebHeaderCollection_System_Runtime_Serialization_ISerializable_GetObjectData_m2698261559 ();
+extern "C" void WebHeaderCollection_ThrowOnRestrictedHeader_m2617707554 ();
+extern "C" void WebProxy__ctor_m4061043939 ();
+extern "C" void WebProxy__ctor_m1486557132 ();
+extern "C" void WebProxy__ctor_m3723076346 ();
+extern "C" void WebProxy__ctor_m3758467778 ();
+extern "C" void WebProxy_GetObjectData_m2475888157 ();
+extern "C" void WebProxy_System_Runtime_Serialization_ISerializable_GetObjectData_m430220241 ();
+extern "C" void WebProxy_UnsafeUpdateFromRegistry_m585121876 ();
+extern "C" void WebProxy_UpdateRegExList_m1919914812 ();
+extern "C" void WebProxy_set_UseDefaultCredentials_m617650985 ();
+extern "C" void U3CU3Ec__DisplayClass78_0__ctor_m1887191066 ();
+extern "C" void DesignerWebRequestCreate__ctor_m2013891472 ();
+extern "C" void WebRequest__cctor_m3940074084 ();
+extern "C" void WebRequest__ctor_m3593280671 ();
+extern "C" void WebRequest__ctor_m2895531935 ();
+extern "C" void WebRequest_Abort_m1387679547 ();
+extern "C" void WebRequest_GetObjectData_m1299992613 ();
+extern "C" void WebRequest_System_Runtime_Serialization_ISerializable_GetObjectData_m3856360037 ();
+extern "C" void WebRequest_set_ContentLength_m261374951 ();
+extern "C" void WebRequest_set_ContentType_m3069761267 ();
+extern "C" void WebRequest_set_Credentials_m1430198380 ();
+extern "C" void WebRequest_set_Headers_m857278311 ();
+extern "C" void WebRequest_set_Method_m1087261754 ();
+extern "C" void WebRequest_set_Timeout_m1373594751 ();
+extern "C" void WebRequestPrefixElement__ctor_m106813755 ();
+extern "C" void WebRequestPrefixElement_set_Creator_m3082387009 ();
+extern "C" void WebResponse__ctor_m824854825 ();
+extern "C" void WebResponse__ctor_m3907452824 ();
+extern "C" void WebResponse_Close_m3195977952 ();
+extern "C" void WebResponse_Dispose_m1024766730 ();
+extern "C" void WebResponse_Dispose_m2564598473 ();
+extern "C" void WebResponse_GetObjectData_m3150548104 ();
+extern "C" void WebResponse_System_Runtime_Serialization_ISerializable_GetObjectData_m4038369249 ();
 extern "C" void NonSerializedAttribute__ctor_m3763812670 ();
 extern "C" void NotImplementedException__ctor_m3058704252 ();
 extern "C" void NotImplementedException__ctor_m2408412972 ();
@@ -9372,6 +12467,7 @@ extern "C" void NotImplementedException__ctor_m3095902440 ();
 extern "C" void NotSupportedException__ctor_m2730133172 ();
 extern "C" void NotSupportedException__ctor_m922781896 ();
 extern "C" void NotSupportedException__ctor_m2494070935 ();
+extern "C" void NotSupportedException__ctor_m3821573888 ();
 extern "C" void NullConsoleDriver__cctor_m2486557847 ();
 extern "C" void NullConsoleDriver__ctor_m46361837 ();
 extern "C" void NullReferenceException__ctor_m744513393 ();
@@ -9461,6 +12557,7 @@ extern "C" void ParamsArray__ctor_m768620809_AdjustorThunk ();
 extern "C" void ParamsArray__ctor_m1030763077_AdjustorThunk ();
 extern "C" void ParseNumbers_EndianSwap_m2389406326 ();
 extern "C" void ParsingInfo_Init_m2473069872_AdjustorThunk ();
+extern "C" void Platform_CheckOS_m1308309308 ();
 extern "C" void PlatformNotSupportedException__ctor_m1787918017 ();
 extern "C" void PlatformNotSupportedException__ctor_m1693043795 ();
 extern "C" void PointerSpec__ctor_m1621035005 ();
@@ -9652,6 +12749,10 @@ extern "C" void AsyncTaskMethodBuilder__cctor_m1116092499 ();
 extern "C" void AsyncTaskMethodBuilder_SetException_m3731552766_AdjustorThunk ();
 extern "C" void AsyncTaskMethodBuilder_SetResult_m3263625660_AdjustorThunk ();
 extern "C" void AsyncTaskMethodBuilder_SetStateMachine_m2617690961_AdjustorThunk ();
+extern "C" void AsyncVoidMethodBuilder_NotifySynchronizationContextOfCompletion_m4233786584_AdjustorThunk ();
+extern "C" void AsyncVoidMethodBuilder_SetException_m1109381469_AdjustorThunk ();
+extern "C" void AsyncVoidMethodBuilder_SetResult_m1991744790_AdjustorThunk ();
+extern "C" void AsyncVoidMethodBuilder_SetStateMachine_m2384003025_AdjustorThunk ();
 extern "C" void CompilationRelaxationsAttribute__ctor_m72043333 ();
 extern "C" void CompilationRelaxationsAttribute__ctor_m2313138045 ();
 extern "C" void CompilerGeneratedAttribute__ctor_m3151881902 ();
@@ -9684,6 +12785,7 @@ extern "C" void StringFreezingAttribute__ctor_m2350592359 ();
 extern "C" void TaskAwaiter__ctor_m184772309_AdjustorThunk ();
 extern "C" void TaskAwaiter_GetResult_m3227166796_AdjustorThunk ();
 extern "C" void TaskAwaiter_HandleNonSuccessAndDebuggerNotification_m1809831056 ();
+extern "C" void TaskAwaiter_OnCompleted_m1937864511_AdjustorThunk ();
 extern "C" void TaskAwaiter_OnCompletedInternal_m3370334999 ();
 extern "C" void TaskAwaiter_ThrowForNonSuccess_m3820817516 ();
 extern "C" void TaskAwaiter_UnsafeOnCompleted_m3475059602_AdjustorThunk ();
@@ -9692,6 +12794,12 @@ extern "C" void TupleElementNamesAttribute__ctor_m2515293854 ();
 extern "C" void TypeDependencyAttribute__ctor_m2657976061 ();
 extern "C" void TypeForwardedFromAttribute__ctor_m482798923 ();
 extern "C" void UnsafeValueTypeAttribute__ctor_m4042133753 ();
+extern "C" void YieldAwaiter__cctor_m3956244687 ();
+extern "C" void YieldAwaiter_GetResult_m3551555982_AdjustorThunk ();
+extern "C" void YieldAwaiter_OnCompleted_m3099984602_AdjustorThunk ();
+extern "C" void YieldAwaiter_QueueContinuation_m3182259807 ();
+extern "C" void YieldAwaiter_RunAction_m2126311257 ();
+extern "C" void YieldAwaiter_UnsafeOnCompleted_m1040728190_AdjustorThunk ();
 extern "C" void CriticalFinalizerObject__ctor_m3245424448 ();
 extern "C" void CriticalFinalizerObject_Finalize_m2010384847 ();
 extern "C" void ReliabilityContractAttribute__ctor_m2124570898 ();
@@ -9713,6 +12821,8 @@ extern "C" void ExternalException__ctor_m2877839282 ();
 extern "C" void ExternalException__ctor_m4224477539 ();
 extern "C" void ExternalException__ctor_m575519339 ();
 extern "C" void FieldOffsetAttribute__ctor_m591213967 ();
+extern "C" void GCHandle__ctor_m737078856_AdjustorThunk ();
+extern "C" void GCHandle__ctor_m3452170611_AdjustorThunk ();
 extern "C" void GCHandle__ctor_m2690474163_AdjustorThunk ();
 extern "C" void GCHandle_Free_m1457699368_AdjustorThunk ();
 extern "C" void GCHandle_FreeHandle_m2765220421 ();
@@ -9720,11 +12830,17 @@ extern "C" void GuidAttribute__ctor_m3183273657 ();
 extern "C" void InAttribute__ctor_m3499482504 ();
 extern "C" void InterfaceTypeAttribute__ctor_m3307583035 ();
 extern "C" void Marshal__cctor_m4007734770 ();
+extern "C" void Marshal_ClearUnicode_m2326035609 ();
+extern "C" void Marshal_Copy_m1562111546 ();
 extern "C" void Marshal_Copy_m1222846562 ();
 extern "C" void Marshal_Copy_m1714210296 ();
 extern "C" void Marshal_FreeBSTR_m2788901813 ();
+extern "C" void Marshal_FreeHGlobal_m1757369653 ();
 extern "C" void Marshal_StructureToPtr_m2294149499 ();
+extern "C" void Marshal_WriteInt16_m2918699913 ();
+extern "C" void Marshal_ZeroFreeGlobalAllocUnicode_m1136939103 ();
 extern "C" void Marshal_copy_from_unmanaged_m2834266824 ();
+extern "C" void Marshal_copy_to_unmanaged_m3612458659 ();
 extern "C" void MarshalDirectiveException__ctor_m629358357 ();
 extern "C" void MarshalDirectiveException__ctor_m636944700 ();
 extern "C" void MarshalDirectiveException__ctor_m3483530984 ();
@@ -10472,7 +13588,55 @@ extern "C" void AllowPartiallyTrustedCallersAttribute__ctor_m1248209229 ();
 extern "C" void AuthenticationException__ctor_m30644731 ();
 extern "C" void AuthenticationException__ctor_m4021409972 ();
 extern "C" void AuthenticationException__ctor_m1225129457 ();
+extern "C" void Claim__ctor_m560495157 ();
+extern "C" void Claim__ctor_m925588550 ();
+extern "C" void Claim__ctor_m92808774 ();
+extern "C" void Claim_OnDeserializedMethod_m1696660466 ();
+extern "C" void Claim_set_Subject_m2014788445 ();
+extern "C" void U3Cget_ClaimsU3Ed__51__ctor_m2072997981 ();
+extern "C" void U3Cget_ClaimsU3Ed__51_U3CU3Em__Finally1_m3060671760 ();
+extern "C" void U3Cget_ClaimsU3Ed__51_System_IDisposable_Dispose_m3808859965 ();
+extern "C" void ClaimsIdentity__ctor_m4233838133 ();
+extern "C" void ClaimsIdentity__ctor_m4039595015 ();
+extern "C" void ClaimsIdentity__ctor_m774501317 ();
+extern "C" void ClaimsIdentity__ctor_m1400409419 ();
+extern "C" void ClaimsIdentity__ctor_m577228747 ();
+extern "C" void ClaimsIdentity_Deserialize_m956164347 ();
+extern "C" void ClaimsIdentity_DeserializeClaims_m2773766138 ();
+extern "C" void ClaimsIdentity_GetObjectData_m1224681264 ();
+extern "C" void ClaimsIdentity_OnDeserializedMethod_m1149206708 ();
+extern "C" void ClaimsIdentity_OnDeserializingMethod_m134688790 ();
+extern "C" void ClaimsIdentity_OnSerializingMethod_m381813449 ();
+extern "C" void ClaimsIdentity_SafeAddClaim_m330309067 ();
+extern "C" void ClaimsIdentity_SafeAddClaims_m3858210639 ();
+extern "C" void ClaimsIdentity_set_Actor_m1125290988 ();
+extern "C" void Aes__cctor_m3602760359 ();
+extern "C" void Aes__ctor_m3948213386 ();
+extern "C" void AesCryptoServiceProvider__ctor_m3527218652 ();
+extern "C" void AesCryptoServiceProvider_Dispose_m156197556 ();
+extern "C" void AesCryptoServiceProvider_GenerateIV_m2862162833 ();
+extern "C" void AesCryptoServiceProvider_GenerateKey_m2038339615 ();
+extern "C" void AesCryptoServiceProvider_set_IV_m1872168943 ();
+extern "C" void AesCryptoServiceProvider_set_Key_m1299633668 ();
+extern "C" void AesCryptoServiceProvider_set_KeySize_m1700177054 ();
+extern "C" void AesCryptoServiceProvider_set_Mode_m376974175 ();
+extern "C" void AesCryptoServiceProvider_set_Padding_m1667433282 ();
+extern "C" void AesManaged__ctor_m1349486362 ();
+extern "C" void AesManaged_Dispose_m615303088 ();
+extern "C" void AesManaged_GenerateIV_m1368817386 ();
+extern "C" void AesManaged_GenerateKey_m2004209814 ();
+extern "C" void AesManaged_set_IV_m3705704588 ();
+extern "C" void AesManaged_set_Key_m767972181 ();
+extern "C" void AesManaged_set_KeySize_m1150692274 ();
+extern "C" void AesManaged_set_Mode_m1307055158 ();
+extern "C" void AesManaged_set_Padding_m2564892480 ();
+extern "C" void AesTransform__cctor_m2567644034 ();
+extern "C" void AesTransform__ctor_m3143546745 ();
+extern "C" void AesTransform_Decrypt128_m3018534522 ();
+extern "C" void AesTransform_ECB_m240244807 ();
+extern "C" void AesTransform_Encrypt128_m424393011 ();
 extern "C" void AsnEncodedData__ctor_m3792312694 ();
+extern "C" void AsnEncodedData__ctor_m119764527 ();
 extern "C" void AsnEncodedData_CopyFrom_m3929882393 ();
 extern "C" void AsnEncodedData_set_Oid_m351300829 ();
 extern "C" void AsnEncodedData_set_RawData_m1598714608 ();
@@ -10482,6 +13646,22 @@ extern "C" void AsymmetricAlgorithm_Dispose_m2924213236 ();
 extern "C" void AsymmetricAlgorithm_Dispose_m3527217714 ();
 extern "C" void AsymmetricAlgorithm_FromXmlString_m1565374883 ();
 extern "C" void AsymmetricAlgorithm_set_KeySize_m2163393617 ();
+extern "C" void AsymmetricSignatureDeformatter__ctor_m88114807 ();
+extern "C" void AsymmetricSignatureFormatter__ctor_m3278494933 ();
+extern "C" void U3CReadAsyncInternalU3Ed__34_MoveNext_m2031173151_AdjustorThunk ();
+extern "C" void U3CReadAsyncInternalU3Ed__34_SetStateMachine_m3908521864_AdjustorThunk ();
+extern "C" void U3CWriteAsyncInternalU3Ed__37_MoveNext_m3969482856_AdjustorThunk ();
+extern "C" void U3CWriteAsyncInternalU3Ed__37_SetStateMachine_m4067691956_AdjustorThunk ();
+extern "C" void HopToThreadPoolAwaitable_GetResult_m2404467789_AdjustorThunk ();
+extern "C" void HopToThreadPoolAwaitable_OnCompleted_m1603305937_AdjustorThunk ();
+extern "C" void CryptoStream__ctor_m2579441618 ();
+extern "C" void CryptoStream_Clear_m3344566550 ();
+extern "C" void CryptoStream_Dispose_m25308232 ();
+extern "C" void CryptoStream_Flush_m3506473051 ();
+extern "C" void CryptoStream_FlushFinalBlock_m2793658271 ();
+extern "C" void CryptoStream_InitializeBuffer_m124780956 ();
+extern "C" void CryptoStream_Write_m2782388599 ();
+extern "C" void CryptoStream_set_Position_m2220811560 ();
 extern "C" void CryptographicException__ctor_m1391449859 ();
 extern "C" void CryptographicException__ctor_m3486909073 ();
 extern "C" void CryptographicException__ctor_m503735289 ();
@@ -10517,23 +13697,42 @@ extern "C" void DSACryptoServiceProvider_Dispose_m1092393028 ();
 extern "C" void DSACryptoServiceProvider_Finalize_m1286601265 ();
 extern "C" void DSACryptoServiceProvider_ImportParameters_m611916501 ();
 extern "C" void DSACryptoServiceProvider_OnKeyGenerated_m2274596916 ();
+extern "C" void DSASignatureDeformatter__ctor_m2759753186 ();
+extern "C" void DSASignatureDescription__ctor_m2058525095 ();
+extern "C" void DSASignatureFormatter__ctor_m2328815619 ();
 extern "C" void HMAC__ctor_m97939284 ();
 extern "C" void HMAC_Dispose_m3665032088 ();
 extern "C" void HMAC_HashCore_m3684104066 ();
 extern "C" void HMAC_Initialize_m3157696427 ();
 extern "C" void HMAC_InitializeKey_m4266546792 ();
 extern "C" void HMAC_UpdateIOPadBuffers_m392554853 ();
+extern "C" void HMAC_set_BlockSizeValue_m2639576659 ();
 extern "C" void HMAC_set_Key_m2848363914 ();
+extern "C" void HMACMD5__ctor_m3129799368 ();
+extern "C" void HMACMD5__ctor_m3008609295 ();
+extern "C" void HMACRIPEMD160__ctor_m4073272899 ();
+extern "C" void HMACRIPEMD160__ctor_m2981281487 ();
 extern "C" void HMACSHA1__ctor_m4144697316 ();
 extern "C" void HMACSHA1__ctor_m446190279 ();
 extern "C" void HMACSHA1__ctor_m2392899823 ();
+extern "C" void HMACSHA256__ctor_m346174875 ();
+extern "C" void HMACSHA256__ctor_m3379531528 ();
+extern "C" void HMACSHA384__ctor_m82969736 ();
+extern "C" void HMACSHA384__ctor_m1677515580 ();
+extern "C" void HMACSHA512__ctor_m2615612210 ();
+extern "C" void HMACSHA512__ctor_m348055215 ();
 extern "C" void HashAlgorithm__ctor_m190815979 ();
+extern "C" void HashAlgorithm_Clear_m210566534 ();
 extern "C" void HashAlgorithm_Dispose_m1871119657 ();
 extern "C" void HashAlgorithm_Dispose_m620242512 ();
 extern "C" void KeySizes__ctor_m3113946058 ();
 extern "C" void KeyedHashAlgorithm__ctor_m4053775756 ();
 extern "C" void KeyedHashAlgorithm_Dispose_m2325408902 ();
 extern "C" void KeyedHashAlgorithm_set_Key_m711403901 ();
+extern "C" void MACTripleDES__ctor_m1301195406 ();
+extern "C" void MACTripleDES_Dispose_m3118990285 ();
+extern "C" void MACTripleDES_HashCore_m2803969153 ();
+extern "C" void MACTripleDES_Initialize_m3918381832 ();
 extern "C" void MD5__ctor_m3848300604 ();
 extern "C" void MD5CryptoServiceProvider__cctor_m2609586198 ();
 extern "C" void MD5CryptoServiceProvider__ctor_m3271163125 ();
@@ -10554,6 +13753,7 @@ extern "C" void OidCollection_System_Collections_ICollection_CopyTo_m2400658497 
 extern "C" void OidEnumerator__ctor_m257525176 ();
 extern "C" void RC2__cctor_m2656505455 ();
 extern "C" void RC2__ctor_m1146135664 ();
+extern "C" void RC2_set_KeySize_m2968816949 ();
 extern "C" void RC2CryptoServiceProvider__cctor_m2305340148 ();
 extern "C" void RC2CryptoServiceProvider__ctor_m420166935 ();
 extern "C" void RC2CryptoServiceProvider_GenerateIV_m1412313176 ();
@@ -10588,9 +13788,29 @@ extern "C" void RSACryptoServiceProvider_Dispose_m1199148535 ();
 extern "C" void RSACryptoServiceProvider_Finalize_m1969564496 ();
 extern "C" void RSACryptoServiceProvider_ImportParameters_m614616705 ();
 extern "C" void RSACryptoServiceProvider_OnKeyGenerated_m863837376 ();
+extern "C" void RSAPKCS1SHA1SignatureDescription__ctor_m621804060 ();
+extern "C" void RSAPKCS1SHA256SignatureDescription__ctor_m1492821747 ();
+extern "C" void RSAPKCS1SHA384SignatureDescription__ctor_m928352185 ();
+extern "C" void RSAPKCS1SHA512SignatureDescription__ctor_m770868799 ();
+extern "C" void RSAPKCS1SignatureDeformatter__ctor_m3540701537 ();
+extern "C" void RSAPKCS1SignatureDescription__ctor_m1979747438 ();
+extern "C" void RSAPKCS1SignatureFormatter__ctor_m1234483002 ();
 extern "C" void RandomNumberGenerator__ctor_m1589693309 ();
 extern "C" void RandomNumberGenerator_Dispose_m1185098319 ();
 extern "C" void RandomNumberGenerator_Dispose_m1978955313 ();
+extern "C" void Rijndael__cctor_m680530060 ();
+extern "C" void Rijndael__ctor_m4179966697 ();
+extern "C" void RijndaelManaged__ctor_m1562735454 ();
+extern "C" void RijndaelManaged_GenerateIV_m667430910 ();
+extern "C" void RijndaelManaged_GenerateKey_m1736287430 ();
+extern "C" void RijndaelManagedTransform__cctor_m2373606231 ();
+extern "C" void RijndaelManagedTransform__ctor_m3935711447 ();
+extern "C" void RijndaelManagedTransform_Dec_m2421369688 ();
+extern "C" void RijndaelManagedTransform_Dispose_m216065913 ();
+extern "C" void RijndaelManagedTransform_Dispose_m802058757 ();
+extern "C" void RijndaelManagedTransform_Enc_m1534038590 ();
+extern "C" void RijndaelManagedTransform_GenerateKeyExpansion_m1770589967 ();
+extern "C" void RijndaelManagedTransform_Reset_m2046121569 ();
 extern "C" void SHA1__ctor_m2454864745 ();
 extern "C" void SHA1CryptoServiceProvider__ctor_m4195188793 ();
 extern "C" void SHA1CryptoServiceProvider_Dispose_m1653611664 ();
@@ -10639,13 +13859,27 @@ extern "C" void SHA512Managed_InitializeState_m2201580691 ();
 extern "C" void SHA512Managed_SHA512Expand_m2525424522 ();
 extern "C" void SHA512Managed_SHATransform_m1150420746 ();
 extern "C" void SHA512Managed__HashData_m2930198518 ();
+extern "C" void SignatureDescription__ctor_m3689246904 ();
+extern "C" void SignatureDescription_set_DeformatterAlgorithm_m2634775062 ();
+extern "C" void SignatureDescription_set_DigestAlgorithm_m1385003273 ();
+extern "C" void SignatureDescription_set_FormatterAlgorithm_m3829972493 ();
+extern "C" void SignatureDescription_set_KeyAlgorithm_m3497860189 ();
 extern "C" void SymmetricAlgorithm__ctor_m467277132 ();
 extern "C" void SymmetricAlgorithm_Clear_m3302238152 ();
 extern "C" void SymmetricAlgorithm_Dispose_m3678375739 ();
 extern "C" void SymmetricAlgorithm_Dispose_m1120980942 ();
+extern "C" void SymmetricAlgorithm_set_BlockSize_m812732862 ();
 extern "C" void SymmetricAlgorithm_set_IV_m3196220308 ();
 extern "C" void SymmetricAlgorithm_set_Key_m1775642191 ();
+extern "C" void SymmetricAlgorithm_set_KeySize_m3805756466 ();
 extern "C" void SymmetricAlgorithm_set_Mode_m4060916368 ();
+extern "C" void SymmetricAlgorithm_set_Padding_m1690860683 ();
+extern "C" void TailStream__ctor_m1224603666 ();
+extern "C" void TailStream_Clear_m759969422 ();
+extern "C" void TailStream_Dispose_m1234292632 ();
+extern "C" void TailStream_Flush_m2213219029 ();
+extern "C" void TailStream_Write_m2568464618 ();
+extern "C" void TailStream_set_Position_m1649077617 ();
 extern "C" void TripleDES__cctor_m652613395 ();
 extern "C" void TripleDES__ctor_m4045412014 ();
 extern "C" void TripleDES_set_Key_m3464715319 ();
@@ -10662,27 +13896,51 @@ extern "C" void Utils_DWORDToLittleEndian_m2337584850 ();
 extern "C" void Utils_QuadWordFromBigEndian_m696841818 ();
 extern "C" void Utils_QuadWordToBigEndian_m1808769854 ();
 extern "C" void PublicKey__cctor_m269574593 ();
+extern "C" void PublicKey__ctor_m1834139044 ();
 extern "C" void X509BasicConstraintsExtension__ctor_m3136793028 ();
 extern "C" void X509BasicConstraintsExtension__ctor_m3721156175 ();
 extern "C" void X509BasicConstraintsExtension__ctor_m1244152959 ();
 extern "C" void X509BasicConstraintsExtension_CopyFrom_m1931463033 ();
+extern "C" void X509Certificate2__cctor_m4292326511 ();
+extern "C" void X509Certificate2__ctor_m3983787587 ();
+extern "C" void X509Certificate2__ctor_m3948937360 ();
+extern "C" void X509Certificate2_AppendBuffer_m445040858 ();
+extern "C" void X509Certificate2_Import_m4026562329 ();
+extern "C" void X509Certificate2_Reset_m3988214799 ();
 extern "C" void X509Certificate2Collection__cctor_m1106890913 ();
+extern "C" void X509Certificate2Impl__ctor_m2201072781 ();
+extern "C" void X509Certificate2ImplMono__cctor_m2520024431 ();
+extern "C" void X509Certificate2ImplMono__ctor_m3209317732 ();
+extern "C" void X509Certificate2ImplMono__ctor_m3537229770 ();
+extern "C" void X509Certificate2ImplMono__ctor_m3866943730 ();
+extern "C" void X509Certificate2ImplMono_AppendBuffer_m3346455520 ();
+extern "C" void X509Certificate2ImplMono_Import_m2024797549 ();
+extern "C" void X509Certificate2ImplMono_Reset_m1660850808 ();
 extern "C" void X509Certificate__ctor_m1321742168 ();
+extern "C" void X509Certificate__ctor_m1413707489 ();
+extern "C" void X509Certificate__ctor_m1008109281 ();
 extern "C" void X509Certificate__ctor_m4186241804 ();
+extern "C" void X509Certificate__ctor_m191107012 ();
 extern "C" void X509Certificate__ctor_m1615516314 ();
 extern "C" void X509Certificate_Dispose_m2151523080 ();
 extern "C" void X509Certificate_Dispose_m3624713560 ();
 extern "C" void X509Certificate_Import_m3563119820 ();
+extern "C" void X509Certificate_ImportHandle_m3345665337 ();
 extern "C" void X509Certificate_Reset_m2350932593 ();
 extern "C" void X509Certificate_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m1836612204 ();
 extern "C" void X509Certificate_System_Runtime_Serialization_ISerializable_GetObjectData_m1891910043 ();
 extern "C" void X509CertificateEnumerator__ctor_m943731472 ();
 extern "C" void X509CertificateCollection__ctor_m147081211 ();
+extern "C" void X509CertificateCollection__ctor_m1035674262 ();
+extern "C" void X509CertificateCollection_AddRange_m2650657275 ();
 extern "C" void X509CertificateImpl__ctor_m3304665486 ();
 extern "C" void X509CertificateImpl_Dispose_m2632237318 ();
 extern "C" void X509CertificateImpl_Dispose_m1529556596 ();
 extern "C" void X509CertificateImpl_Finalize_m277055488 ();
 extern "C" void X509CertificateImpl_ThrowIfContextInvalid_m1865141720 ();
+extern "C" void X509CertificateImplCollection__ctor_m4163429795 ();
+extern "C" void X509CertificateImplCollection__ctor_m351709902 ();
+extern "C" void X509CertificateImplCollection_Add_m2754476179 ();
 extern "C" void X509CertificateImplCollection_Dispose_m2690341342 ();
 extern "C" void X509CertificateImplCollection_Dispose_m4007137012 ();
 extern "C" void X509CertificateImplCollection_Finalize_m700508022 ();
@@ -10712,7 +13970,14 @@ extern "C" void X509EnhancedKeyUsageExtension_CopyFrom_m3750050754 ();
 extern "C" void X509Extension__ctor_m1624259472 ();
 extern "C" void X509Extension_CopyFrom_m474590450 ();
 extern "C" void X509Extension_set_Critical_m1180944253 ();
+extern "C" void X509ExtensionCollection__cctor_m1169297509 ();
+extern "C" void X509ExtensionCollection_System_Collections_ICollection_CopyTo_m2505796149 ();
+extern "C" void X509ExtensionEnumerator__ctor_m827820494 ();
+extern "C" void MyNativeHelper__ctor_m3683709320 ();
+extern "C" void X509Helper2_Initialize_m4215653071 ();
+extern "C" void X509Helper2_ThrowIfContextInvalid_m247512399 ();
 extern "C" void X509Helper2_ThrowIfContextInvalid_m1043854274 ();
+extern "C" void X509Helper_InstallNativeHelper_m1191985038 ();
 extern "C" void X509Helper_ThrowIfContextInvalid_m2855098691 ();
 extern "C" void X509KeyUsageExtension__ctor_m1098820427 ();
 extern "C" void X509KeyUsageExtension__ctor_m1105912158 ();
@@ -10737,6 +14002,7 @@ extern "C" void SecurityAttribute__ctor_m731834492 ();
 extern "C" void SecurityAttribute_set_Action_m2311651264 ();
 extern "C" void SecurityAttribute_set_Unrestricted_m2028707146 ();
 extern "C" void SecurityPermissionAttribute_set_ControlAppDomain_m618096486 ();
+extern "C" void SecurityPermissionAttribute_set_ControlPrincipal_m2178200400 ();
 extern "C" void SecurityPermissionAttribute_set_Flags_m1110767718 ();
 extern "C" void SecurityPermissionAttribute_set_Infrastructure_m4170171695 ();
 extern "C" void SecurityPermissionAttribute_set_SerializationFormatter_m1861697955 ();
@@ -10745,6 +14011,23 @@ extern "C" void SecurityPermissionAttribute_set_UnmanagedCode_m1338720592 ();
 extern "C" void EvidenceEnumerator__ctor_m3211544433 ();
 extern "C" void Evidence__ctor_m415538579 ();
 extern "C" void Evidence_CopyTo_m872435527 ();
+extern "C" void WindowsIdentity__cctor_m1315799505 ();
+extern "C" void WindowsIdentity__ctor_m2393419445 ();
+extern "C" void WindowsIdentity__ctor_m3086466707 ();
+extern "C" void WindowsIdentity_Dispose_m3466258450 ();
+extern "C" void WindowsIdentity_SetToken_m5416170 ();
+extern "C" void WindowsIdentity_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m3428853631 ();
+extern "C" void WindowsIdentity_System_Runtime_Serialization_ISerializable_GetObjectData_m2539658116 ();
+extern "C" void WindowsImpersonationContext__ctor_m1421675779 ();
+extern "C" void WindowsImpersonationContext_Dispose_m1824099561 ();
+extern "C" void WindowsImpersonationContext_Undo_m1788549904 ();
+extern "C" void SecureString__cctor_m1119796178 ();
+extern "C" void SecureString__ctor_m3758011503 ();
+extern "C" void SecureString__ctor_m3858760223 ();
+extern "C" void SecureString_Alloc_m3394320149 ();
+extern "C" void SecureString_Decrypt_m3709208681 ();
+extern "C" void SecureString_Dispose_m2058418160 ();
+extern "C" void SecureString_Encrypt_m3450275650 ();
 extern "C" void SecurityCriticalAttribute__ctor_m2491468454 ();
 extern "C" void SecurityDocument__ctor_m2184623272 ();
 extern "C" void SecurityDocument_AddString_m4175409622 ();
@@ -11164,6 +14447,8 @@ extern "C" void AbandonedMutexException__ctor_m1614683599 ();
 extern "C" void AbandonedMutexException__ctor_m3664482073 ();
 extern "C" void AbandonedMutexException__ctor_m1298898255 ();
 extern "C" void AbandonedMutexException_SetupException_m2048349130 ();
+extern "C" void AtomicBoolean__ctor_m2830875096 ();
+extern "C" void AutoResetEvent__ctor_m3710433672 ();
 extern "C" void CancellationCallbackCoreWorkArguments__ctor_m3294819760_AdjustorThunk ();
 extern "C" void CancellationCallbackInfo__ctor_m1827777858 ();
 extern "C" void CancellationCallbackInfo_ExecuteCallback_m3875509614 ();
@@ -11294,6 +14579,8 @@ extern "C" void SpinLock_ExitSlowPath_m4172266368_AdjustorThunk ();
 extern "C" void SpinLock_TryEnter_m3232453791_AdjustorThunk ();
 extern "C" void SpinWait_SpinOnce_m3000802948_AdjustorThunk ();
 extern "C" void SynchronizationContext__ctor_m2514243817 ();
+extern "C" void SynchronizationContext_OperationCompleted_m51204712 ();
+extern "C" void SynchronizationContext_OperationStarted_m1309693218 ();
 extern "C" void SynchronizationContext_Post_m2119776762 ();
 extern "C" void SynchronizationContext_Send_m3071723711 ();
 extern "C" void SynchronizationContext_SetSynchronizationContext_m1249070039 ();
@@ -11352,6 +14639,7 @@ extern "C" void Task__cctor_m1239267871 ();
 extern "C" void Task__ctor_m3380090582 ();
 extern "C" void Task__ctor_m2785691336 ();
 extern "C" void Task__ctor_m388757629 ();
+extern "C" void Task__ctor_m3094793396 ();
 extern "C" void Task_AddCompletionAction_m3494787879 ();
 extern "C" void Task_AddCompletionAction_m1063589734 ();
 extern "C" void Task_AddException_m1219930878 ();
@@ -11420,6 +14708,7 @@ extern "C" void CompleteOnInvokePromise_Invoke_m838488529 ();
 extern "C" void TaskFactory__ctor_m89339648 ();
 extern "C" void TaskFactory__ctor_m296518814 ();
 extern "C" void TaskFactory_CheckCreationOptions_m1813633372 ();
+extern "C" void TaskFactory_CheckFromAsyncOptions_m4125018144 ();
 extern "C" void TaskFactory_CheckMultiTaskContinuationOptions_m4248755655 ();
 extern "C" void TaskScheduler__cctor_m3492554976 ();
 extern "C" void TaskScheduler__ctor_m1745633553 ();
@@ -11630,6 +14919,7 @@ extern "C" void Uri__cctor_m38080231 ();
 extern "C" void Uri__ctor_m3848281005 ();
 extern "C" void Uri__ctor_m800430703 ();
 extern "C" void Uri__ctor_m3040793867 ();
+extern "C" void Uri__ctor_m4293005803 ();
 extern "C" void Uri__ctor_m253204164 ();
 extern "C" void Uri__ctor_m2575587343 ();
 extern "C" void Uri_CheckAuthorityHelperHandleAnyHostIri_m4211487119 ();
@@ -11637,6 +14927,7 @@ extern "C" void Uri_CheckAuthorityHelperHandleDnsIri_m463162491 ();
 extern "C" void Uri_CreateHostString_m3292914987 ();
 extern "C" void Uri_CreateThis_m3082555610 ();
 extern "C" void Uri_CreateThisFromUri_m1978654183 ();
+extern "C" void Uri_CreateUri_m1357951263 ();
 extern "C" void Uri_CreateUriInfo_m1685781179 ();
 extern "C" void Uri_EnsureHostString_m2556618523 ();
 extern "C" void Uri_EnsureParseRemaining_m4226769679 ();
@@ -11651,6 +14942,11 @@ extern "C" void Uri_PrivateParseMinimalIri_m1848845107 ();
 extern "C" void Uri_SetUserDrivenParsing_m4081518052 ();
 extern "C" void Uri_System_Runtime_Serialization_ISerializable_GetObjectData_m4023918416 ();
 extern "C" void Uri_UnescapeOnly_m2657986672 ();
+extern "C" void UriBuilder__ctor_m2700491786 ();
+extern "C" void UriBuilder_SetFieldsFromUri_m237881163 ();
+extern "C" void UriBuilder_set_Host_m2493895927 ();
+extern "C" void UriBuilder_set_Path_m3892261086 ();
+extern "C" void UriBuilder_set_Scheme_m1372973315 ();
 extern "C" void UriFormatException__ctor_m1115096473 ();
 extern "C" void UriFormatException__ctor_m3466512970 ();
 extern "C" void UriFormatException__ctor_m3083316541 ();
@@ -11668,6 +14964,7 @@ extern "C" void ValueType__ctor_m2036258423 ();
 extern "C" void Variant_Clear_m3388694274_AdjustorThunk ();
 extern "C" void Version__cctor_m3568671087 ();
 extern "C" void Version__ctor_m872301635 ();
+extern "C" void Version__ctor_m3537335798 ();
 extern "C" void Version__ctor_m417728625 ();
 extern "C" void Version_AppendPositiveNumber_m308762805 ();
 extern "C" void WeakReference__ctor_m24376735 ();
@@ -12707,6 +16004,10 @@ extern "C" void ThreadSafeAttribute__ctor_m601575521 ();
 extern "C" void UnmarshalledAttribute__ctor_m534761184 ();
 extern "C" void VisibleToOtherModulesAttribute__ctor_m3491053854 ();
 extern "C" void VisibleToOtherModulesAttribute__ctor_m3047626183 ();
+extern "C" void BoneWeight_set_boneIndex0_m1320779249_AdjustorThunk ();
+extern "C" void BoneWeight_set_boneIndex1_m1320814988_AdjustorThunk ();
+extern "C" void BoneWeight_set_boneIndex2_m1320977735_AdjustorThunk ();
+extern "C" void BoneWeight_set_boneIndex3_m1321014602_AdjustorThunk ();
 extern "C" void BootConfigData__ctor_m4255151374 ();
 extern "C" void Bounds__ctor_m1937678907_AdjustorThunk ();
 extern "C" void Bounds_Encapsulate_m3553480203_AdjustorThunk ();
@@ -12792,6 +16093,7 @@ extern "C" void CanvasRenderer_set_popMaterialCount_m1224846275 ();
 extern "C" void ClassLibraryInitializer_Init_m988673678 ();
 extern "C" void Collider_ClosestPoint_Injected_m2343114216 ();
 extern "C" void Collider_get_bounds_Injected_m2832026935 ();
+extern "C" void Collider_set_isTrigger_m1770557358 ();
 extern "C" void Color32__ctor_m4150508762_AdjustorThunk ();
 extern "C" void Color__ctor_m286683560_AdjustorThunk ();
 extern "C" void Color__ctor_m2943235014_AdjustorThunk ();
@@ -12860,11 +16162,14 @@ extern "C" void Debug_DrawRay_m376463475 ();
 extern "C" void Debug_Log_m4051431634 ();
 extern "C" void Debug_LogError_m2850623458 ();
 extern "C" void Debug_LogError_m1665621915 ();
+extern "C" void Debug_LogErrorFormat_m575266265 ();
 extern "C" void Debug_LogErrorFormat_m3558239521 ();
 extern "C" void Debug_LogException_m2207318968 ();
 extern "C" void Debug_LogException_m2248249292 ();
+extern "C" void Debug_LogFormat_m309087137 ();
 extern "C" void Debug_LogWarning_m3752629331 ();
 extern "C" void Debug_LogWarning_m831581295 ();
+extern "C" void Debug_LogWarningFormat_m2535776735 ();
 extern "C" void Debug_LogWarningFormat_m1153215311 ();
 extern "C" void DebugLogHandler__ctor_m3380237231 ();
 extern "C" void DebugLogHandler_Internal_Log_m4175774469 ();
@@ -13906,6 +17211,10 @@ extern "C" void Input_set_simulateMouseWithTouches_m338675028 ();
 extern "C" void DefaultValueAttribute__ctor_m1514328230 ();
 extern "C" void ExcludeFromDocsAttribute__ctor_m1509941807 ();
 extern "C" void Keyframe__ctor_m391431887_AdjustorThunk ();
+extern "C" void LOD__ctor_m561740013_AdjustorThunk ();
+extern "C" void LODGroup_SetLODs_m704416562 ();
+extern "C" void LODGroup_set_animateCrossFading_m2629639020 ();
+extern "C" void LODGroup_set_fadeMode_m2238099390 ();
 extern "C" void Light__ctor_m519278302 ();
 extern "C" void Light_get_color_Injected_m1214570263 ();
 extern "C" void Light_set_intensity_m2345549762 ();
@@ -13915,6 +17224,7 @@ extern "C" void Logger__ctor_m439059923 ();
 extern "C" void Logger_Log_m969976427 ();
 extern "C" void Logger_Log_m2585387088 ();
 extern "C" void Logger_LogException_m4285204825 ();
+extern "C" void Logger_LogFormat_m3030796110 ();
 extern "C" void Logger_LogFormat_m3300686007 ();
 extern "C" void Logger_set_filterLogType_m3622751173 ();
 extern "C" void Logger_set_logEnabled_m1180597166 ();
@@ -13949,6 +17259,7 @@ extern "C" void Material_SetMatrix_m751249077 ();
 extern "C" void Material_SetMatrix_m4094650785 ();
 extern "C" void Material_SetMatrixImpl_m4121653577 ();
 extern "C" void Material_SetMatrixImpl_Injected_m4155197193 ();
+extern "C" void Material_SetOverrideTag_m806530364 ();
 extern "C" void Material_SetShaderKeywords_m3578516992 ();
 extern "C" void Material_SetTexture_m3009528825 ();
 extern "C" void Material_SetTexture_m1829349465 ();
@@ -13983,12 +17294,19 @@ extern "C" void Matrix4x4_Transpose_Injected_m103762442 ();
 extern "C" void Matrix4x4_set_Item_m4102745984_AdjustorThunk ();
 extern "C" void Matrix4x4_set_Item_m1906605342_AdjustorThunk ();
 extern "C" void Mesh__ctor_m2533762929 ();
+extern "C" void Mesh_AddBlendShapeFrame_m2920294038 ();
 extern "C" void Mesh_Clear_m2630385472 ();
+extern "C" void Mesh_ClearBlendShapes_m3194924980 ();
 extern "C" void Mesh_ClearImpl_m1688330970 ();
 extern "C" void Mesh_CombineMeshes_m2946567306 ();
 extern "C" void Mesh_CombineMeshesImpl_m64868513 ();
 extern "C" void Mesh_GetArrayFromChannelImpl_m1562947892 ();
+extern "C" void Mesh_GetBlendShapeFrameVertices_m2207147822 ();
 extern "C" void Mesh_GetColors_m545476286 ();
+extern "C" void Mesh_GetTriangles_m3640547167 ();
+extern "C" void Mesh_GetTriangles_m1229604837 ();
+extern "C" void Mesh_GetTrianglesNonAllocImpl_m2919686804 ();
+extern "C" void Mesh_GetUVs_m55185155 ();
 extern "C" void Mesh_Internal_Create_m2853543051 ();
 extern "C" void Mesh_MarkDynamic_m813264685 ();
 extern "C" void Mesh_MarkDynamicImpl_m206310269 ();
@@ -13996,6 +17314,10 @@ extern "C" void Mesh_PrintErrorCantAccessChannel_m2109128075 ();
 extern "C" void Mesh_PrintErrorCantAccessIndices_m1546924005 ();
 extern "C" void Mesh_RecalculateBounds_m39931642 ();
 extern "C" void Mesh_RecalculateBoundsImpl_m2362089642 ();
+extern "C" void Mesh_RecalculateNormals_m467587154 ();
+extern "C" void Mesh_RecalculateNormalsImpl_m3102285457 ();
+extern "C" void Mesh_RecalculateTangents_m1236595664 ();
+extern "C" void Mesh_RecalculateTangentsImpl_m2340358000 ();
 extern "C" void Mesh_SetArrayForChannelImpl_m2642100114 ();
 extern "C" void Mesh_SetColors_m637808999 ();
 extern "C" void Mesh_SetColors_m104655071 ();
@@ -14005,22 +17327,35 @@ extern "C" void Mesh_SetSizedArrayForChannel_m2565120436 ();
 extern "C" void Mesh_SetTangents_m1615111656 ();
 extern "C" void Mesh_SetTriangles_m1523451247 ();
 extern "C" void Mesh_SetTriangles_m2205169959 ();
+extern "C" void Mesh_SetTriangles_m3871477336 ();
+extern "C" void Mesh_SetTriangles_m138364303 ();
 extern "C" void Mesh_SetTrianglesImpl_m1015576670 ();
 extern "C" void Mesh_SetUVs_m3071410036 ();
+extern "C" void Mesh_SetUVs_m3071344500 ();
+extern "C" void Mesh_SetUVs_m3071541108 ();
 extern "C" void Mesh_SetVertices_m685324028 ();
 extern "C" void Mesh_UploadMeshData_m969465843 ();
 extern "C" void Mesh_UploadMeshDataImpl_m755635474 ();
 extern "C" void Mesh_get_bounds_Injected_m1357996462 ();
+extern "C" void Mesh_set_bindposes_m506051887 ();
+extern "C" void Mesh_set_boneWeights_m3094710230 ();
 extern "C" void Mesh_set_bounds_m901235523 ();
 extern "C" void Mesh_set_bounds_Injected_m3085176334 ();
 extern "C" void Mesh_set_colors_m2218481242 ();
 extern "C" void Mesh_set_colors32_m645370667 ();
+extern "C" void Mesh_set_indexFormat_m2511990320 ();
 extern "C" void Mesh_set_normals_m332514528 ();
+extern "C" void Mesh_set_subMeshCount_m3209867014 ();
 extern "C" void Mesh_set_tangents_m1592250690 ();
 extern "C" void Mesh_set_triangles_m255556250 ();
 extern "C" void Mesh_set_uv_m1258646872 ();
 extern "C" void Mesh_set_uv2_m2840654016 ();
 extern "C" void Mesh_set_vertices_m2084450642 ();
+extern "C" void MeshCollider_set_convex_m840510835 ();
+extern "C" void MeshCollider_set_cookingOptions_m2964344721 ();
+extern "C" void MeshCollider_set_inflateMesh_m1778269099 ();
+extern "C" void MeshCollider_set_sharedMesh_m1986498669 ();
+extern "C" void MeshCollider_set_skinWidth_m1782069040 ();
 extern "C" void MeshFilter_DontStripMeshFilter_m2877155929 ();
 extern "C" void MeshFilter_set_mesh_m1415871686 ();
 extern "C" void MeshFilter_set_sharedMesh_m2173122548 ();
@@ -14048,6 +17383,12 @@ extern "C" void NativeClassAttribute_set_QualifiedNativeName_m801351239 ();
 extern "C" void CertificateHandler_Dispose_m2100863831 ();
 extern "C" void CertificateHandler_Finalize_m2289088740 ();
 extern "C" void CertificateHandler_Release_m648790222 ();
+extern "C" void DownloadHandler__ctor_m2126376377 ();
+extern "C" void DownloadHandler_Dispose_m2747726581 ();
+extern "C" void DownloadHandler_Finalize_m3135872287 ();
+extern "C" void DownloadHandler_Release_m3024555697 ();
+extern "C" void DownloadHandlerBuffer__ctor_m914761499 ();
+extern "C" void DownloadHandlerBuffer_InternalCreateBuffer_m301356089 ();
 extern "C" void MessageEventArgs__ctor_m14798785 ();
 extern "C" void U3CBlockUntilRecvMsgU3Ec__AnonStorey2__ctor_m1575056730 ();
 extern "C" void U3CBlockUntilRecvMsgU3Ec__AnonStorey2_U3CU3Em__0_m2225790220 ();
@@ -14074,6 +17415,34 @@ extern "C" void MessageTypeSubscribers_set_MessageTypeId_m841325789 ();
 extern "C" void PlayerEditorConnectionEvents__ctor_m3177489832 ();
 extern "C" void PlayerEditorConnectionEvents_InvokeMessageIdSubscribers_m2094591713 ();
 extern "C" void PlayerEditorConnectionEvents_UnregisterManagedCallback_m400366024 ();
+extern "C" void UnityWebRequest__ctor_m1214915267 ();
+extern "C" void UnityWebRequest__ctor_m3895125645 ();
+extern "C" void UnityWebRequest_Abort_m1490033122 ();
+extern "C" void UnityWebRequest_Dispose_m3261105905 ();
+extern "C" void UnityWebRequest_DisposeHandlers_m3575283268 ();
+extern "C" void UnityWebRequest_Finalize_m2219008825 ();
+extern "C" void UnityWebRequest_InternalDestroy_m2954597795 ();
+extern "C" void UnityWebRequest_InternalSetCustomMethod_m3670745235 ();
+extern "C" void UnityWebRequest_InternalSetDefaults_m3669466854 ();
+extern "C" void UnityWebRequest_InternalSetMethod_m287631745 ();
+extern "C" void UnityWebRequest_InternalSetUrl_m1036291515 ();
+extern "C" void UnityWebRequest_Release_m2347155176 ();
+extern "C" void UnityWebRequest_SetRequestHeader_m2927335855 ();
+extern "C" void UnityWebRequest_set_disposeCertificateHandlerOnDispose_m4266558538 ();
+extern "C" void UnityWebRequest_set_disposeDownloadHandlerOnDispose_m2026832119 ();
+extern "C" void UnityWebRequest_set_disposeUploadHandlerOnDispose_m2753289015 ();
+extern "C" void UnityWebRequest_set_downloadHandler_m970510352 ();
+extern "C" void UnityWebRequest_set_method_m3969249710 ();
+extern "C" void UnityWebRequest_set_timeout_m3621399360 ();
+extern "C" void UnityWebRequest_set_uploadHandler_m54574009 ();
+extern "C" void UnityWebRequest_set_url_m2541992937 ();
+extern "C" void UnityWebRequestAsyncOperation__ctor_m1252495487 ();
+extern "C" void UnityWebRequestAsyncOperation_set_webRequest_m3712663211 ();
+extern "C" void UploadHandler__ctor_m1351468229 ();
+extern "C" void UploadHandler_Dispose_m3057340132 ();
+extern "C" void UploadHandler_Finalize_m3322774190 ();
+extern "C" void UploadHandler_Release_m2289600429 ();
+extern "C" void UploadHandlerRaw__ctor_m1397254157 ();
 extern "C" void NoAllocHelpers_Internal_ResizeList_m2682269827 ();
 extern "C" void Object__cctor_m2398773973 ();
 extern "C" void Object__ctor_m1087895580 ();
@@ -14154,11 +17523,13 @@ extern "C" void QualitySettings_set_vSyncCount_m3131636076 ();
 extern "C" void Quaternion__cctor_m2965965177 ();
 extern "C" void Quaternion__ctor_m435141806_AdjustorThunk ();
 extern "C" void Quaternion_AngleAxis_Injected_m2955537622 ();
+extern "C" void Quaternion_FromToRotation_Injected_m2732854426 ();
 extern "C" void Quaternion_Internal_FromEulerRad_Injected_m3023241449 ();
 extern "C" void Quaternion_Internal_ToEulerRad_Injected_m3187447139 ();
 extern "C" void Quaternion_Inverse_Injected_m4070500351 ();
 extern "C" void Quaternion_Lerp_Injected_m609271094 ();
 extern "C" void Quaternion_LookRotation_Injected_m3680180073 ();
+extern "C" void Quaternion_SetFromToRotation_m2673591795_AdjustorThunk ();
 extern "C" void RangeAttribute__ctor_m32920615 ();
 extern "C" void RangeInt__ctor_m240963897_AdjustorThunk ();
 extern "C" void Ray__ctor_m168149494_AdjustorThunk ();
@@ -14280,12 +17651,21 @@ extern "C" void RenderTextureDescriptor_set_volumeDepth_m157981773_AdjustorThunk
 extern "C" void RenderTextureDescriptor_set_vrUsage_m4041389224_AdjustorThunk ();
 extern "C" void RenderTextureDescriptor_set_width_m2491653054_AdjustorThunk ();
 extern "C" void Renderer_SetMaterial_m1194250780 ();
+extern "C" void Renderer_SetMaterialArray_m1096125577 ();
 extern "C" void Renderer_get_bounds_Injected_m3112887345 ();
+extern "C" void Renderer_set_enabled_m1727253150 ();
+extern "C" void Renderer_set_lightProbeUsage_m858788046 ();
+extern "C" void Renderer_set_material_m1157964140 ();
+extern "C" void Renderer_set_motionVectorGenerationMode_m1046698850 ();
 extern "C" void Renderer_set_receiveShadows_m108599289 ();
+extern "C" void Renderer_set_reflectionProbeUsage_m784866423 ();
 extern "C" void Renderer_set_shadowCastingMode_m987547713 ();
 extern "C" void Renderer_set_sharedMaterial_m2374163090 ();
+extern "C" void Renderer_set_sharedMaterials_m2162241463 ();
 extern "C" void Renderer_set_sortingLayerID_m849284518 ();
 extern "C" void Renderer_set_sortingOrder_m549573253 ();
+extern "C" void RendererExtensions_UpdateGIMaterials_m1323656079 ();
+extern "C" void RendererExtensions_UpdateGIMaterialsForRenderer_m2478197202 ();
 extern "C" void CommandBuffer__ctor_m3028411456 ();
 extern "C" void CommandBuffer_BeginSample_m204508461 ();
 extern "C" void CommandBuffer_Blit_m32042010 ();
@@ -14367,6 +17747,7 @@ extern "C" void RenderTargetIdentifier__ctor_m2966131472_AdjustorThunk ();
 extern "C" void RequireComponent__ctor_m886241599 ();
 extern "C" void RequireComponent__ctor_m1154052627 ();
 extern "C" void Rigidbody__ctor_m1806995817 ();
+extern "C" void Rigidbody_set_freezeRotation_m754206839 ();
 extern "C" void RuntimeInitializeOnLoadMethodAttribute__ctor_m787294852 ();
 extern "C" void RuntimeInitializeOnLoadMethodAttribute_set_loadType_m1884529061 ();
 extern "C" void SceneManager_GetSceneByName_Injected_m2418011035 ();
@@ -14401,6 +17782,12 @@ extern "C" void SetupCoroutine_InvokeMoveNext_m3199342729 ();
 extern "C" void Shader__ctor_m837260462 ();
 extern "C" void Shader_SetGlobalTexture_m3892103344 ();
 extern "C" void Shader_SetGlobalTextureImpl_m1248900127 ();
+extern "C" void SkinnedMeshRenderer_BakeMesh_m2270373039 ();
+extern "C" void SkinnedMeshRenderer_set_bones_m4136734710 ();
+extern "C" void SkinnedMeshRenderer_set_quality_m699927355 ();
+extern "C" void SkinnedMeshRenderer_set_rootBone_m4271355631 ();
+extern "C" void SkinnedMeshRenderer_set_sharedMesh_m2397334786 ();
+extern "C" void SkinnedMeshRenderer_set_skinnedMotionVectors_m3578095715 ();
 extern "C" void SliderState__ctor_m3367986001 ();
 extern "C" void SpaceAttribute__ctor_m3235906033 ();
 extern "C" void SpaceAttribute__ctor_m2972541600 ();
@@ -14438,16 +17825,30 @@ extern "C" void TextMesh_set_color_Injected_m3072507631 ();
 extern "C" void TextMesh_set_font_m4234894873 ();
 extern "C" void TextMesh_set_fontSize_m147394684 ();
 extern "C" void TextMesh_set_text_m446189179 ();
+extern "C" void Texture2D__ctor_m373113269 ();
+extern "C" void Texture2D__ctor_m2862217990 ();
 extern "C" void Texture2D__ctor_m1269666504 ();
 extern "C" void Texture2D__ctor_m3176621650 ();
 extern "C" void Texture2D_Apply_m2271746283 ();
 extern "C" void Texture2D_Apply_m2470606565 ();
 extern "C" void Texture2D_ApplyImpl_m2371374512 ();
 extern "C" void Texture2D_GetPixelBilinearImpl_Injected_m511713733 ();
+extern "C" void Texture2D_GetPixelImpl_Injected_m2017448414 ();
 extern "C" void Texture2D_Internal_Create_m3592711635 ();
+extern "C" void Texture2D_LoadRawTextureData_m1232009149 ();
+extern "C" void Texture2D_ReadPixels_m3395504488 ();
+extern "C" void Texture2D_ReadPixels_m1510783487 ();
+extern "C" void Texture2D_ReadPixelsImpl_m1282786589 ();
+extern "C" void Texture2D_ReadPixelsImpl_Injected_m2454631042 ();
+extern "C" void Texture2D_SetAllPixels32_m734711553 ();
 extern "C" void Texture2D_SetPixel_m2984741184 ();
 extern "C" void Texture2D_SetPixelImpl_m3515369686 ();
 extern "C" void Texture2D_SetPixelImpl_Injected_m3338020812 ();
+extern "C" void Texture2D_SetPixels_m4222070067 ();
+extern "C" void Texture2D_SetPixels_m639021706 ();
+extern "C" void Texture2D_SetPixels32_m1141065075 ();
+extern "C" void Texture2D_SetPixels32_m2156254057 ();
+extern "C" void Texture2D_SetPixelsImpl_m1199623022 ();
 extern "C" void Texture2DArray__ctor_m1759046501 ();
 extern "C" void Texture2DArray__ctor_m4056612996 ();
 extern "C" void Texture2DArray__ctor_m2627654179 ();
@@ -15301,6 +18702,9 @@ extern "C" void Vector4__ctor_m432325927_AdjustorThunk ();
 extern "C" void Vector4__ctor_m2498754347_AdjustorThunk ();
 extern "C" void Vector4_Set_m1571742605_AdjustorThunk ();
 extern "C" void Vector4_set_Item_m1183742235_AdjustorThunk ();
+extern "C" void WWW__ctor_m2915079343 ();
+extern "C" void WWW_Dispose_m2256148703 ();
+extern "C" void WWWTranscoder__cctor_m1887474915 ();
 extern "C" void WaitForEndOfFrame__ctor_m1381314187 ();
 extern "C" void WaitForSeconds__ctor_m2199082655 ();
 extern "C" void WaitForSecondsRealtime__ctor_m507157904 ();
@@ -15331,6 +18735,176 @@ extern "C" void MathfInternal__cctor_m2622893686 ();
 extern "C" void TypeInferenceRuleAttribute__ctor_m2736695831 ();
 extern "C" void TypeInferenceRuleAttribute__ctor_m3137488504 ();
 extern "C" void WebRequestUtils__cctor_m4190982137 ();
+extern "C" void BlendShape__ctor_m160810998_AdjustorThunk ();
+extern "C" void BlendShapeContainer__ctor_m1432732156 ();
+extern "C" void BlendShapeContainer_InterpolateVertexAttributes_m2386260029 ();
+extern "C" void BlendShapeContainer_MoveVertexElement_m2778993123 ();
+extern "C" void BlendShapeContainer_Resize_m2779712424 ();
+extern "C" void BlendShapeFrame__ctor_m221238251_AdjustorThunk ();
+extern "C" void BlendShapeFrame__ctor_m3832290237_AdjustorThunk ();
+extern "C" void BlendShapeFrameContainer__ctor_m3862859636 ();
+extern "C" void BlendShapeFrameContainer_InterpolateVertexAttributes_m32344298 ();
+extern "C" void BlendShapeFrameContainer_MoveVertexElement_m373619866 ();
+extern "C" void BlendShapeFrameContainer_Resize_m4226094648 ();
+extern "C" void BorderVertex__ctor_m4213849781_AdjustorThunk ();
+extern "C" void BorderVertexComparer__cctor_m3104683328 ();
+extern "C" void BorderVertexComparer__ctor_m3285383653 ();
+extern "C" void DebugMeshPerf__ctor_m850851706 ();
+extern "C" void DebugMeshPerf_Reset_m281372854 ();
+extern "C" void Edge__ctor_m1816295556 ();
+extern "C" void Edge_InitIndex_m2567368121 ();
+extern "C" void Edge_ReplaceVertex_m1607187732 ();
+extern "C" void LODBackupComponent__ctor_m668782304 ();
+extern "C" void LODBackupComponent_set_OriginalRenderers_m1776381273 ();
+extern "C" void LODGenerator_CollectChildRenderersForLOD_m3988540713 ();
+extern "C" void LODGenerator_CreateBackup_m3552740549 ();
+extern "C" void LODGenerator_CreateParentDirectory_m1468392865 ();
+extern "C" void LODGenerator_DestroyLODAsset_m4015388314 ();
+extern "C" void LODGenerator_DestroyLODAssets_m301254172 ();
+extern "C" void LODGenerator_DestroyLODMaterialAsset_m2694207065 ();
+extern "C" void LODGenerator_DestroyObject_m882203392 ();
+extern "C" void LODGenerator_ParentAndOffsetTransform_m1680299076 ();
+extern "C" void LODGenerator_ParentAndResetTransform_m2711387115 ();
+extern "C" void LODGenerator_RestoreBackup_m1064958370 ();
+extern "C" void LODGenerator_SaveAsset_m4062268824 ();
+extern "C" void LODGenerator_SaveLODMeshAsset_m3135921997 ();
+extern "C" void LODGenerator_SetupLevelRenderer_m535349332 ();
+extern "C" void LODGeneratorHelper__ctor_m1795393670 ();
+extern "C" void LODGeneratorHelper_Reset_m1163295111 ();
+extern "C" void LODGeneratorHelper_set_AnimateCrossFading_m4204911129 ();
+extern "C" void LODGeneratorHelper_set_AutoCollectRenderers_m629401830 ();
+extern "C" void LODGeneratorHelper_set_FadeMode_m63964505 ();
+extern "C" void LODGeneratorHelper_set_Levels_m2713624117 ();
+extern "C" void LODGeneratorHelper_set_SaveAssetsPath_m1882028272 ();
+extern "C" void LODGeneratorHelper_set_SimplificationOptions_m2546872998 ();
+extern "C" void LODLevel__ctor_m3198387692_AdjustorThunk ();
+extern "C" void LODLevel__ctor_m3667876451_AdjustorThunk ();
+extern "C" void LODLevel__ctor_m2006186715_AdjustorThunk ();
+extern "C" void LODLevel_set_CombineMeshes_m3823260547_AdjustorThunk ();
+extern "C" void LODLevel_set_CombineSubMeshes_m753298952_AdjustorThunk ();
+extern "C" void LODLevel_set_FadeTransitionWidth_m1240950619_AdjustorThunk ();
+extern "C" void LODLevel_set_LightProbeUsage_m2247954427_AdjustorThunk ();
+extern "C" void LODLevel_set_MotionVectorGenerationMode_m2780314012_AdjustorThunk ();
+extern "C" void LODLevel_set_Quality_m4193822948_AdjustorThunk ();
+extern "C" void LODLevel_set_ReceiveShadows_m1371702447_AdjustorThunk ();
+extern "C" void LODLevel_set_ReflectionProbeUsage_m1993331321_AdjustorThunk ();
+extern "C" void LODLevel_set_Renderers_m3672413270_AdjustorThunk ();
+extern "C" void LODLevel_set_ScreenRelativeTransitionHeight_m3116561033_AdjustorThunk ();
+extern "C" void LODLevel_set_ShadowCastingMode_m3881745440_AdjustorThunk ();
+extern "C" void LODLevel_set_SkinQuality_m2806245428_AdjustorThunk ();
+extern "C" void LODLevel_set_SkinnedMotionVectors_m2926117655_AdjustorThunk ();
+extern "C" void MeshCombiner_CopyVertexPositions_m3741375302 ();
+extern "C" void MeshCombiner_RemapBones_m31395292 ();
+extern "C" void MeshCombiner_TransformNormals_m3374480504 ();
+extern "C" void MeshCombiner_TransformTangents_m3799848991 ();
+extern "C" void MeshCombiner_TransformVertices_m230517699 ();
+extern "C" void MeshSimplifier__cctor_m3580918212 ();
+extern "C" void MeshSimplifier__ctor_m4148128197 ();
+extern "C" void MeshSimplifier__ctor_m3410678258 ();
+extern "C" void MeshSimplifier_AddBlendShape_m1334230992 ();
+extern "C" void MeshSimplifier_AddBlendShapes_m1952402109 ();
+extern "C" void MeshSimplifier_AddSubMeshTriangles_m3378534796 ();
+extern "C" void MeshSimplifier_AddSubMeshTriangles_m1893764442 ();
+extern "C" void MeshSimplifier_CalculateBarycentricCoords_m2933878360 ();
+extern "C" void MeshSimplifier_CalculateEdgeError_m1256537924 ();
+extern "C" void MeshSimplifier_CalculateEdgePenaltyMatrix_m1687683240 ();
+extern "C" void MeshSimplifier_CalculateSubMeshOffsets_m2365147613 ();
+extern "C" void MeshSimplifier_ClearBlendShapes_m3282910101 ();
+extern "C" void MeshSimplifier_ClearSubMeshes_m1599039808 ();
+extern "C" void MeshSimplifier_CompactMesh_m2029097189 ();
+extern "C" void MeshSimplifier_DistributeEdgePenaltyMatrix_m1589459789 ();
+extern "C" void MeshSimplifier_DistributeEdgePenaltyMatrix_m2836348538 ();
+extern "C" void MeshSimplifier_GetTrianglesContainingBothVertices_m2060200654 ();
+extern "C" void MeshSimplifier_GetTrianglesContainingVertex_m1178734355 ();
+extern "C" void MeshSimplifier_GetUVs_m3661982049 ();
+extern "C" void MeshSimplifier_GetUVs_m3661982050 ();
+extern "C" void MeshSimplifier_GetUVs_m3661982055 ();
+extern "C" void MeshSimplifier_InitEdges_m518574259 ();
+extern "C" void MeshSimplifier_Initialize_m2468301691 ();
+extern "C" void MeshSimplifier_InterpolateVertexAttributes_m3297816259 ();
+extern "C" void MeshSimplifier_RemoveEdgePass_m1929152575 ();
+extern "C" void MeshSimplifier_RemoveVertexPass_m1202516737 ();
+extern "C" void MeshSimplifier_SetUVs_m3286430346 ();
+extern "C" void MeshSimplifier_SetUVs_m3286430345 ();
+extern "C" void MeshSimplifier_SetUVs_m3286430352 ();
+extern "C" void MeshSimplifier_SetUVs_m2774353193 ();
+extern "C" void MeshSimplifier_SetUVs_m45469838 ();
+extern "C" void MeshSimplifier_SetUVs_m3580922247 ();
+extern "C" void MeshSimplifier_SetUVsAuto_m2872883244 ();
+extern "C" void MeshSimplifier_SimplifyMesh_m1937664039 ();
+extern "C" void MeshSimplifier_SimplifyMeshByEdge_m195068134 ();
+extern "C" void MeshSimplifier_SimplifyMeshLossless_m4228780985 ();
+extern "C" void MeshSimplifier_UpdateMesh_m281198535 ();
+extern "C" void MeshSimplifier_UpdateReferences_m2502097664 ();
+extern "C" void MeshSimplifier_UpdateTriangles_m964513011 ();
+extern "C" void MeshSimplifier_set_Aggressiveness_m3044755630 ();
+extern "C" void MeshSimplifier_set_BoneWeights_m696459782 ();
+extern "C" void MeshSimplifier_set_Colors_m552522389 ();
+extern "C" void MeshSimplifier_set_EnableSmartLink_m3639040077 ();
+extern "C" void MeshSimplifier_set_MaxIterationCount_m4252218235 ();
+extern "C" void MeshSimplifier_set_Normals_m1321623239 ();
+extern "C" void MeshSimplifier_set_PreserveBorderEdges_m2358601671 ();
+extern "C" void MeshSimplifier_set_PreserveBorders_m230442454 ();
+extern "C" void MeshSimplifier_set_PreserveFoldovers_m1276351771 ();
+extern "C" void MeshSimplifier_set_PreserveSeams_m303457682 ();
+extern "C" void MeshSimplifier_set_PreserveUVFoldoverEdges_m1648844816 ();
+extern "C" void MeshSimplifier_set_PreserveUVSeamEdges_m3340690559 ();
+extern "C" void MeshSimplifier_set_RecalculateNormals_m1050338660 ();
+extern "C" void MeshSimplifier_set_RegardCurvature_m3979303329 ();
+extern "C" void MeshSimplifier_set_Tangents_m1042656604 ();
+extern "C" void MeshSimplifier_set_UV1_m3631831650 ();
+extern "C" void MeshSimplifier_set_UV2_m3299420443 ();
+extern "C" void MeshSimplifier_set_UV3_m3158662320 ();
+extern "C" void MeshSimplifier_set_UV4_m1067578121 ();
+extern "C" void MeshSimplifier_set_UV5_m662750550 ();
+extern "C" void MeshSimplifier_set_UV6_m3368881711 ();
+extern "C" void MeshSimplifier_set_UV7_m1863877060 ();
+extern "C" void MeshSimplifier_set_UV8_m2912273670 ();
+extern "C" void MeshSimplifier_set_UseSortedEdgeMethod_m1626725903 ();
+extern "C" void MeshSimplifier_set_Verbose_m1527884126 ();
+extern "C" void MeshSimplifier_set_VertexLinkDistance_m2150847011 ();
+extern "C" void MeshSimplifier_set_VertexLinkDistanceSqr_m1833566035 ();
+extern "C" void MeshSimplifier_set_Vertices_m3147882711 ();
+extern "C" void MeshUtils_ApplyMeshBlendShapes_m3937449181 ();
+extern "C" void MeshUtils_GetIndexMinMax_m2912894125 ();
+extern "C" void MeshUtils_LOG_m1550002032 ();
+extern "C" void Ref__ctor_m2782886859 ();
+extern "C" void Ref_Set_m1411912456 ();
+extern "C" void SimplificationOptions__cctor_m1602915886 ();
+extern "C" void SymmetricMatrix__ctor_m4177615465 ();
+extern "C" void SymmetricMatrix__ctor_m5434497 ();
+extern "C" void SymmetricMatrix__ctor_m1000036902 ();
+extern "C" void SymmetricMatrix__ctor_m3432920201 ();
+extern "C" void SymmetricMatrix_Add_m976005852 ();
+extern "C" void SymmetricMatrix_Add_m3582730656 ();
+extern "C" void SymmetricMatrix_Clear_m3092727200 ();
+extern "C" void SymmetricMatrix_Multiply_m2658029365 ();
+extern "C" void SymmetricMatrix_Subtract_m1442014644 ();
+extern "C" void SymmetricMatrix_Subtract_m2546361498 ();
+extern "C" void ToleranceSphere__ctor_m3649920775 ();
+extern "C" void ToleranceSphere__ctor_m785203240 ();
+extern "C" void ToleranceSphere_SetInitialEnclosedTrianglesCount_m2061484088 ();
+extern "C" void ToleranceSphere_set_initialEnclosedTrianglesCount_m608662280 ();
+extern "C" void ToleranceSphere_set_leastTrianglesCount_m1510693668 ();
+extern "C" void Triangle__ctor_m768246545 ();
+extern "C" void Triangle_GetAttributeIndices_m4189193085 ();
+extern "C" void Triangle_GetErrors_m1921210127 ();
+extern "C" void Triangle_SetAttributeIndex_m2489796813 ();
+extern "C" void Triangle_set_Item_m1706064738 ();
+extern "C" void Vector3d__cctor_m2017877425 ();
+extern "C" void Vector3d__ctor_m2200445045_AdjustorThunk ();
+extern "C" void Vector3d__ctor_m469451642_AdjustorThunk ();
+extern "C" void Vector3d__ctor_m4234793148_AdjustorThunk ();
+extern "C" void Vector3d_Clamp_m3994770166_AdjustorThunk ();
+extern "C" void Vector3d_Cross_m4273055132 ();
+extern "C" void Vector3d_Lerp_m3449571620 ();
+extern "C" void Vector3d_Normalize_m3562771470_AdjustorThunk ();
+extern "C" void Vector3d_Normalize_m2244511709 ();
+extern "C" void Vector3d_Scale_m3132415445_AdjustorThunk ();
+extern "C" void Vector3d_Scale_m1348525473 ();
+extern "C" void Vector3d_Set_m2187476584_AdjustorThunk ();
+extern "C" void Vector3d_set_Item_m3344246512_AdjustorThunk ();
+extern "C" void Vertex__ctor_m1404661152 ();
 extern "C" void Antialiasing__ctor_m1181971224 ();
 extern "C" void Antialiasing_OnRenderImage_m2165403448 ();
 extern "C" void Bloom__ctor_m838728537 ();
@@ -15419,8 +18993,8 @@ extern "C" void EdgeDetection_SetCameraFlag_m3582410528 ();
 extern "C" void EdgeDetection_Start_m2808765100 ();
 extern "C" void Fisheye__ctor_m4146723838 ();
 extern "C" void Fisheye_OnRenderImage_m235855080 ();
-extern "C" void GlobalFog__ctor_m1046257831 ();
 extern "C" void GlobalFog__ctor_m3956504235 ();
+extern "C" void GlobalFog__ctor_m1046257831 ();
 extern "C" void GlobalFog_CustomGraphicsBlit_m3343642230 ();
 extern "C" void GlobalFog_OnRenderImage_m1372265461 ();
 extern "C" void GlobalFog_OnRenderImage_m3651418340 ();
@@ -15448,18 +19022,18 @@ extern "C" void NoiseAndScratches_SanitizeParameters_m1262699030 ();
 extern "C" void NoiseAndScratches_Start_m3041500591 ();
 extern "C" void PostEffectsBase__ctor_m3237562702 ();
 extern "C" void PostEffectsBase__ctor_m3249494038 ();
-extern "C" void PostEffectsBase_DrawBorder_m3420332712 ();
 extern "C" void PostEffectsBase_DrawBorder_m579349500 ();
-extern "C" void PostEffectsBase_NotSupported_m256234407 ();
+extern "C" void PostEffectsBase_DrawBorder_m3420332712 ();
 extern "C" void PostEffectsBase_NotSupported_m139199785 ();
+extern "C" void PostEffectsBase_NotSupported_m256234407 ();
 extern "C" void PostEffectsBase_OnDestroy_m1683196003 ();
-extern "C" void PostEffectsBase_OnEnable_m2114875658 ();
 extern "C" void PostEffectsBase_OnEnable_m1990449152 ();
+extern "C" void PostEffectsBase_OnEnable_m2114875658 ();
 extern "C" void PostEffectsBase_RemoveCreatedMaterials_m3398098368 ();
-extern "C" void PostEffectsBase_ReportAutoDisable_m412809422 ();
 extern "C" void PostEffectsBase_ReportAutoDisable_m1041276315 ();
-extern "C" void PostEffectsBase_Start_m1325885336 ();
+extern "C" void PostEffectsBase_ReportAutoDisable_m412809422 ();
 extern "C" void PostEffectsBase_Start_m1238239914 ();
+extern "C" void PostEffectsBase_Start_m1325885336 ();
 extern "C" void PostEffectsHelper__ctor_m655433481 ();
 extern "C" void PostEffectsHelper_DrawBorder_m2101521792 ();
 extern "C" void PostEffectsHelper_DrawLowLevelPlaneAlignedWithCamera_m4135922617 ();
@@ -15613,6 +19187,8 @@ extern "C" void AudioExtensionManager_AddAmbisonicDecoderExtension_m3197702864 (
 extern "C" void AudioExtensionManager_AddSpatializerExtension_m820561940 ();
 extern "C" void AudioSource_AddAmbisonicExtension_m304476911 ();
 extern "C" void AudioSource_AddSpatializerExtension_m2560794359 ();
+extern "C" void Mesh_get_boneWeights_m371091495 ();
+extern "C" void MeshSimplifier_get_BoneWeights_m1149737027 ();
 extern "C" void BootConfigData_WrapBootConfigData_m329603588 ();
 extern "C" void TMP_Text_GetCompoundBounds_m2235300010 ();
 extern "C" void TMP_Text_GetTextBounds_m3826499275 ();
@@ -15650,6 +19226,7 @@ extern "C" void RaycastHit_get_collider_m1464180279_AdjustorThunk ();
 extern "C" void RaycastHit2D_get_collider_m1549426026_AdjustorThunk ();
 extern "C" void CharacterController_Move_m1547317252 ();
 extern "C" void CharacterController_Move_Injected_m2968855874 ();
+extern "C" void LoaderObj_StringsToColor_m1836921696 ();
 extern "C" void SSMS_get_blurTint_m2291273546 ();
 extern "C" void ColorTween_get_startColor_m3859712736_AdjustorThunk ();
 extern "C" void ColorTween_get_targetColor_m4052057762_AdjustorThunk ();
@@ -15670,6 +19247,7 @@ extern "C" void Color_get_magenta_m208363462 ();
 extern "C" void Color_get_red_m3227813939 ();
 extern "C" void Color_get_white_m332174077 ();
 extern "C" void Color_get_yellow_m1287957903 ();
+extern "C" void Color_op_Addition_m3293657895 ();
 extern "C" void Color_op_Implicit_m2665280078 ();
 extern "C" void Color_op_Multiply_m2768890077 ();
 extern "C" void Color_op_Multiply_m2887457390 ();
@@ -15685,8 +19263,10 @@ extern "C" void Material_GetColorImpl_m3455148844 ();
 extern "C" void Material_get_color_m3827673574 ();
 extern "C" void RenderSettings_get_fogColor_m1270918470 ();
 extern "C" void TextMesh_get_color_m469563338 ();
+extern "C" void Texture2D_GetPixel_m1195410881 ();
 extern "C" void Texture2D_GetPixelBilinear_m1950540195 ();
 extern "C" void Texture2D_GetPixelBilinearImpl_m3066735611 ();
+extern "C" void Texture2D_GetPixelImpl_m2573669691 ();
 extern "C" void ColorBlock_get_disabledColor_m4200465259_AdjustorThunk ();
 extern "C" void ColorBlock_get_highlightedColor_m588402203_AdjustorThunk ();
 extern "C" void ColorBlock_get_normalColor_m4055946654_AdjustorThunk ();
@@ -15707,10 +19287,15 @@ extern "C" void TMPro_ExtensionMethods_Tint_m2720930742 ();
 extern "C" void TMPro_ExtensionMethods_Tint_m4256874427 ();
 extern "C" void Color32_op_Implicit_m2658259763 ();
 extern "C" void Mesh_get_colors32_m1253190811 ();
+extern "C" void Texture2D_GetPixels32_m647746242 ();
+extern "C" void Texture2D_GetPixels32_m1841405004 ();
 extern "C" void QualitySettings_get_activeColorSpace_m2902748248 ();
+extern "C" void Mesh_get_colors_m1375263373 ();
 extern "C" void Texture2D_GetPixels_m2081641574 ();
 extern "C" void Texture2D_GetPixels_m2757678651 ();
 extern "C" void Texture2D_GetPixels_m4117143883 ();
+extern "C" void DebugMeshPerf_UpdateVertexColor_m3173752261 ();
+extern "C" void MeshSimplifier_get_Colors_m1239889564 ();
 extern "C" void Component_GetComponent_m886226392 ();
 extern "C" void Component_GetComponentInChildren_m388868270 ();
 extern "C" void Component_GetComponentInParent_m779177818 ();
@@ -15888,6 +19473,9 @@ extern "C" void GUISkin_get_label_m1693050720 ();
 extern "C" void GUISkin_get_toggle_m3142377070 ();
 extern "C" void GUISkin_get_window_m3313298495 ();
 extern "C" void GUIStyle_get_none_m1545577352 ();
+extern "C" void Loader_GetModelByPath_m2387584809 ();
+extern "C" void ObjectBuilder_ImportSubObject_m2724269954 ();
+extern "C" void PolyfewRuntime_CombineMeshesFromRenderers_m4013097295 ();
 extern "C" void TMP_DefaultControls_CreateDropdown_m712595150 ();
 extern "C" void TMP_DefaultControls_CreateInputField_m3195582532 ();
 extern "C" void TMP_DefaultControls_CreateScrollbar_m3789800425 ();
@@ -15914,6 +19502,7 @@ extern "C" void RaycastResult_get_gameObject_m2570051527_AdjustorThunk ();
 extern "C" void StandaloneInputModule_GetCurrentFocusedGameObject_m2194131683 ();
 extern "C" void GameObject_CreatePrimitive_m2902598419 ();
 extern "C" void GameObject_Find_m2032535176 ();
+extern "C" void GameObject_get_gameObject_m3693461266 ();
 extern "C" void DefaultControls_CreateButton_m2899824576 ();
 extern "C" void DefaultControls_CreateDropdown_m3286664171 ();
 extern "C" void DefaultControls_CreateImage_m2462935101 ();
@@ -15943,6 +19532,10 @@ extern "C" void AnimationCurve_GetKey_m2204974347 ();
 extern "C" void AnimationCurve_get_Item_m4209227769 ();
 extern "C" void AnimationCurve_GetKeys_m2478473802 ();
 extern "C" void AnimationCurve_get_keys_m1672862131 ();
+extern "C" void LODGeneratorHelper_get_FadeMode_m3376694386 ();
+extern "C" void LODGenerator_GenerateLODs_m2321759169 ();
+extern "C" void LODGenerator_GenerateLODs_m3688404464 ();
+extern "C" void LODGenerator_GenerateLODs_m235568808 ();
 extern "C" void PhysicsRaycaster_get_eventMask_m1544028986 ();
 extern "C" void LayerMask_op_Implicit_m90232283 ();
 extern "C" void VisibleLight_GetLightObject_m4182718466 ();
@@ -15951,6 +19544,7 @@ extern "C" void Light_get_type_m2372674058 ();
 extern "C" void SupportedRenderingFeatures_get_supportedLightmapBakeTypes_m1596512019 ();
 extern "C" void SupportedRenderingFeatures_get_supportedLightmapsModes_m141329491 ();
 extern "C" void Logger_get_filterLogType_m1177392786 ();
+extern "C" void ObjectBuilder_BuildMaterial_m2209255087 ();
 extern "C" void Bloom_CreateMaterial_m1360384135 ();
 extern "C" void BloomQuad_CreateMaterial_m4187581161 ();
 extern "C" void TMP_MaterialManager_GetBaseMaterial_m1300167703 ();
@@ -16023,8 +19617,8 @@ extern "C" void ContrastStretch_get_materialLum_m1926118876 ();
 extern "C" void ContrastStretch_get_materialReduce_m523115858 ();
 extern "C" void ImageEffectBase_get_material_m3574076220 ();
 extern "C" void NoiseAndScratches_get_material_m744105905 ();
-extern "C" void PostEffectsBase_CheckShaderAndCreateMaterial_m242186546 ();
 extern "C" void PostEffectsBase_CheckShaderAndCreateMaterial_m3315883224 ();
+extern "C" void PostEffectsBase_CheckShaderAndCreateMaterial_m242186546 ();
 extern "C" void PostEffectsBase_CreateMaterial_m98207487 ();
 extern "C" void PostEffectsBase_CreateMaterial_m4290998842 ();
 extern "C" void ScreenSpaceAmbientOcclusion_CreateMaterial_m2238170128 ();
@@ -16036,6 +19630,9 @@ extern "C" void TextMeshPro_GetMaterials_m590919290 ();
 extern "C" void TextMeshPro_GetSharedMaterials_m2542289676 ();
 extern "C" void TextMeshProUGUI_GetMaterials_m3551052134 ();
 extern "C" void TextMeshProUGUI_GetSharedMaterials_m3818457991 ();
+extern "C" void Renderer_GetSharedMaterialArray_m3184378747 ();
+extern "C" void Renderer_get_sharedMaterials_m76747498 ();
+extern "C" void MeshCombiner_ScaleMatrix_m3708809078 ();
 extern "C" void Camera_GetStereoProjectionMatrix_m708259953 ();
 extern "C" void Camera_GetStereoViewMatrix_m3087162056 ();
 extern "C" void Camera_get_projectionMatrix_m667780853 ();
@@ -16066,6 +19663,15 @@ extern "C" void Matrix4x4_get_zero_m2898777066 ();
 extern "C" void Matrix4x4_op_Multiply_m1876492807 ();
 extern "C" void Transform_get_localToWorldMatrix_m4155710351 ();
 extern "C" void Transform_get_worldToLocalMatrix_m399704877 ();
+extern "C" void MeshCombiner_ScaleMatrix_m3302886893 ();
+extern "C" void Mesh_get_bindposes_m597973920 ();
+extern "C" void MeshUtils_CreateMesh_m2756094359 ();
+extern "C" void MeshUtils_CreateMesh_m2914690936 ();
+extern "C" void MeshUtils_CreateMesh_m1385272390 ();
+extern "C" void MeshCombiner_CombineMeshes_m610032307 ();
+extern "C" void MeshCombiner_CombineMeshes_m2002785295 ();
+extern "C" void MeshCombiner_CombineMeshes_m2860662349 ();
+extern "C" void MeshCombiner_CombineMeshes_m4014511618 ();
 extern "C" void Lightbeam_GenerateMesh_m3458264300 ();
 extern "C" void BloomQuad_CreateQuadMesh_m4008139501 ();
 extern "C" void SleekRenderPostProcess_CreateScreenSpaceQuadMesh_m4040740804 ();
@@ -16077,17 +19683,50 @@ extern "C" void TextMeshPro_get_mesh_m1610589525 ();
 extern "C" void TextMeshProUGUI_get_mesh_m754353733 ();
 extern "C" void CoreUtils_CreateCubeMesh_m3914200323 ();
 extern "C" void MeshFilter_get_sharedMesh_m1726897210 ();
+extern "C" void SkinnedMeshRenderer_get_sharedMesh_m1611698282 ();
 extern "C" void Graphic_get_workerMesh_m997382591 ();
 extern "C" void InputField_get_mesh_m4128834741 ();
+extern "C" void LODGenerator_SimplifyMesh_m1401300977 ();
+extern "C" void MeshCombiner_CombineMeshes_m814866081 ();
+extern "C" void MeshCombiner_CombineMeshes_m3761363312 ();
+extern "C" void MeshCombiner_CombineMeshes_m2227043525 ();
+extern "C" void MeshCombiner_CombineMeshes_m2778661661 ();
+extern "C" void MeshSimplifier_ToMesh_m1188656358 ();
+extern "C" void MeshUtils_CreateMesh_m1519210094 ();
+extern "C" void MeshUtils_CreateMesh_m3887052921 ();
+extern "C" void MeshUtils_CreateMesh_m899343122 ();
 extern "C" void Quads_GetMesh_m2552046488 ();
 extern "C" void Triangles_GetMesh_m1896089306 ();
 extern "C" void Mesh_GetUVChannel_m1848830416 ();
+extern "C" void MeshCollider_get_cookingOptions_m2188498099 ();
+extern "C" void MeshCombiner_U3CCombineStaticMeshesU3Em__1_m2803344242 ();
 extern "C" void TMP_SubMesh_get_meshFilter_m2803653466 ();
 extern "C" void TextMeshPro_get_meshFilter_m1945656418 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__A_m1355805655 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__1_m1985619507 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__5_m3600257559 ();
+extern "C" void UtilityServicesRuntime_CreateStaticLevelRenderer_m556122152 ();
+extern "C" void LODGenerator_U3CGenerateLODsU3Em__1_m2691773384 ();
+extern "C" void LODGenerator_CreateLevelRenderer_m2500596210 ();
 extern "C" void Quads_GetMeshes_m3846717567 ();
 extern "C" void Triangles_GetMeshes_m3491158630 ();
+extern "C" void LODLevel_get_MotionVectorGenerationMode_m1220378361_AdjustorThunk ();
+extern "C" void UnityWebRequest_get_certificateHandler_m3453757623 ();
+extern "C" void UnityWebRequest_get_downloadHandler_m534911913 ();
 extern "C" void PlayerConnection_CreateInstance_m902052006 ();
 extern "C" void PlayerConnection_get_instance_m1750121257 ();
+extern "C" void UnityWebRequest_Get_m996521828 ();
+extern "C" void UnityWebRequest_GetError_m1229724170 ();
+extern "C" void UnityWebRequest_InternalSetRequestHeader_m2218760805 ();
+extern "C" void UnityWebRequest_SetCustomMethod_m305650395 ();
+extern "C" void UnityWebRequest_SetDownloadHandler_m2637095256 ();
+extern "C" void UnityWebRequest_SetMethod_m3005196532 ();
+extern "C" void UnityWebRequest_SetTimeoutMsec_m3688870318 ();
+extern "C" void UnityWebRequest_SetUploadHandler_m2465141380 ();
+extern "C" void UnityWebRequest_SetUrl_m4135786364 ();
+extern "C" void UnityWebRequest_BeginWebRequest_m464964044 ();
+extern "C" void UnityWebRequest_SendWebRequest_m489860187 ();
+extern "C" void UnityWebRequest_get_uploadHandler_m3692520788 ();
 extern "C" void AudioExtensionManager_GetAudioListener_m817760607 ();
 extern "C" void ArgumentCache_get_unityObjectArgument_m3434100 ();
 extern "C" void PersistentCall_get_target_m830923650 ();
@@ -16138,6 +19777,7 @@ extern "C" void PropertyNameUtils_PropertyNameFromString_m3719796130 ();
 extern "C" void Quaternion_AngleAxis_m1767165696 ();
 extern "C" void Quaternion_Euler_m3049309462 ();
 extern "C" void Quaternion_Euler_m1803555822 ();
+extern "C" void Quaternion_FromToRotation_m3769621427 ();
 extern "C" void Quaternion_Internal_FromEulerRad_m1647759854 ();
 extern "C" void Quaternion_Inverse_m1311579081 ();
 extern "C" void Quaternion_Lerp_m1238806789 ();
@@ -16240,13 +19880,16 @@ extern "C" void Camera_get_targetTexture_m2278634983 ();
 extern "C" void CoreUtils_get_emptyUAV_m2220465546 ();
 extern "C" void RTHandle_get_rt_m2991761700 ();
 extern "C" void RTHandle_op_Implicit_m3936502303 ();
+extern "C" void RenderTexture_GetActive_m3713258833 ();
 extern "C" void RenderTexture_GetTemporary_m3066872062 ();
 extern "C" void RenderTexture_GetTemporary_m2234063094 ();
 extern "C" void RenderTexture_GetTemporary_m3378328322 ();
+extern "C" void RenderTexture_GetTemporary_m1363375227 ();
 extern "C" void RenderTexture_GetTemporary_m307390032 ();
 extern "C" void RenderTexture_GetTemporaryImpl_m1087262133 ();
 extern "C" void RenderTexture_GetTemporary_Internal_m3558187963 ();
 extern "C" void RenderTexture_INTERNAL_CALL_GetTemporary_Internal_m3898599721 ();
+extern "C" void RenderTexture_get_active_m2427925032 ();
 extern "C" void XRGraphicsConfig_get_eyeTextureDesc_m3787662206 ();
 extern "C" void RenderTexture_GetDescriptor_m2430275682 ();
 extern "C" void RenderTexture_get_descriptor_m722729156 ();
@@ -16259,6 +19902,10 @@ extern "C" void RenderTexture_get_format_m3846871418 ();
 extern "C" void RenderTexture_get_memorylessMode_m1619860261 ();
 extern "C" void TMP_SubMesh_get_renderer_m3763046808 ();
 extern "C" void TextMeshPro_get_renderer_m1228047599 ();
+extern "C" void UtilityServicesRuntime_GetChildRenderersForCombining_m2764586950 ();
+extern "C" void LODBackupComponent_get_OriginalRenderers_m3285541357 ();
+extern "C" void LODGenerator_GetChildRenderersForLOD_m672093309 ();
+extern "C" void LODLevel_get_Renderers_m464161934_AdjustorThunk ();
 extern "C" void CommandBufferPool_Get_m1633834707 ();
 extern "C" void CommandBufferPool_Get_m2695417963 ();
 extern "C" void CommandBuffer_CreateGPUFence_m2564130409 ();
@@ -16266,11 +19913,14 @@ extern "C" void CommandBuffer_CreateGPUFence_m160068672 ();
 extern "C" void SystemInfo_GetGraphicsDeviceType_m2860401330 ();
 extern "C" void SystemInfo_get_graphicsDeviceType_m2360462293 ();
 extern "C" void Graphics_get_activeTier_m320885658 ();
+extern "C" void LODLevel_get_LightProbeUsage_m3748808369_AdjustorThunk ();
+extern "C" void LODLevel_get_ReflectionProbeUsage_m1593772585_AdjustorThunk ();
 extern "C" void RTHandle_get_nameID_m3469092298 ();
 extern "C" void RTHandle_op_Implicit_m2578467842 ();
 extern "C" void RenderTargetIdentifier_op_Implicit_m1310414951 ();
 extern "C" void RenderTargetIdentifier_op_Implicit_m2644497587 ();
 extern "C" void RenderTargetIdentifier_op_Implicit_m3327331520 ();
+extern "C" void LODLevel_get_ShadowCastingMode_m4156284218_AdjustorThunk ();
 extern "C" void RenderTexture_get_dimension_m1872679392 ();
 extern "C" void Texture_GetDimension_m741367190 ();
 extern "C" void Texture_get_dimension_m602359225 ();
@@ -16284,6 +19934,13 @@ extern "C" void ScriptableObject_CreateScriptableObjectInstanceFromType_m2783367
 extern "C" void RenderPipelineAsset_GetDefaultShader_m1474888220 ();
 extern "C" void Material_get_shader_m1331119247 ();
 extern "C" void Shader_Find_m2092206247 ();
+extern "C" void LODLevel_get_SkinQuality_m3895560648_AdjustorThunk ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__C_m2157946003 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__3_m3362742270 ();
+extern "C" void PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__7_m573846474 ();
+extern "C" void UtilityServicesRuntime_CreateSkinnedLevelRenderer_m2574866959 ();
+extern "C" void LODGenerator_U3CGenerateLODsU3Em__3_m1200569251 ();
+extern "C" void LODGenerator_CreateSkinnedLevelRenderer_m3091056185 ();
 extern "C" void OptionData_get_image_m4154233247 ();
 extern "C" void OptionData_get_image_m2796360767 ();
 extern "C" void Image_get_activeSprite_m3797951869 ();
@@ -16318,10 +19975,21 @@ extern "C" void Image_get_mainTexture_m44717343 ();
 extern "C" void RawImage_get_mainTexture_m2396337033 ();
 extern "C" void RawImage_get_texture_m2319641407 ();
 extern "C" void Text_get_mainTexture_m3501892889 ();
+extern "C" void Loader_LoadTexture_m3310386584 ();
+extern "C" void ModelUtil_HeightToNormalMap_m262338021 ();
+extern "C" void TextureLoader_LoadDDSManual_m2916855477 ();
+extern "C" void TextureLoader_LoadTGA_m3335071566 ();
+extern "C" void TextureLoader_LoadTGA_m1038381800 ();
+extern "C" void TextureLoader_LoadTexture_m666676556 ();
+extern "C" void TextureLoader_LoadTextureFromUrl_m2845482855 ();
+extern "C" void MaterialProperties_NewTexture_m1146089958 ();
+extern "C" void UtilityServicesRuntime_DuplicateTexture_m2355676577 ();
 extern "C" void SSMS_get_fadeRamp_m3925677967 ();
 extern "C" void Sprite_get_associatedAlphaSplitTexture_m1197622862 ();
 extern "C" void Sprite_get_texture_m3976398399 ();
 extern "C" void Texture2D_get_whiteTexture_m2176011403 ();
+extern "C" void WWW_CreateTextureFromDownloadedData_m573316725 ();
+extern "C" void WWW_get_texture_m3513075325 ();
 extern "C" void CoreUtils_get_blackVolumeTexture_m3927544811 ();
 extern "C" void Cubemap_get_format_m2679694422 ();
 extern "C" void CubemapArray_get_format_m196397659 ();
@@ -16343,6 +20011,9 @@ extern "C" void TouchScreenKeyboard_get_status_m3936201565 ();
 extern "C" void TMP_InputField_get_keyboardType_m2216083030 ();
 extern "C" void InputField_get_keyboardType_m1248105267 ();
 extern "C" void Touch_get_type_m960232264_AdjustorThunk ();
+extern "C" void MeshCombiner_FindBestRootBone_m4242232012 ();
+extern "C" void MeshCombiner_FindBestRootBone_m2015713099 ();
+extern "C" void MeshCombiner_GetTopLevelParent_m481179101 ();
 extern "C" void Bokeh_get_pointOfFocus_m3167416432 ();
 extern "C" void TMP_InputField_UnityEngine_UI_ICanvasElement_get_transform_m1205335128 ();
 extern "C" void TMP_MaterialManager_FindRootSortOverrideCanvas_m353210011 ();
@@ -16351,6 +20022,9 @@ extern "C" void TextMeshPro_get_transform_m1806733876 ();
 extern "C" void Component_get_transform_m3162698980 ();
 extern "C" void GameObject_get_transform_m1369836730 ();
 extern "C" void RaycastHit_get_transform_m942054759_AdjustorThunk ();
+extern "C" void SkinnedMeshRenderer_get_rootBone_m1530334984 ();
+extern "C" void Transform_Find_m1729760951 ();
+extern "C" void Transform_FindRelativeTransformWithPath_m3437048164 ();
 extern "C" void Transform_GetChild_m1092972975 ();
 extern "C" void Transform_GetParent_m1669681345 ();
 extern "C" void Transform_get_parent_m835071599 ();
@@ -16363,6 +20037,10 @@ extern "C" void ScrollRect_UnityEngine_UI_ICanvasElement_get_transform_m36375721
 extern "C" void Scrollbar_UnityEngine_UI_ICanvasElement_get_transform_m859714578 ();
 extern "C" void Slider_UnityEngine_UI_ICanvasElement_get_transform_m1577867913 ();
 extern "C" void Toggle_UnityEngine_UI_ICanvasElement_get_transform_m854783724 ();
+extern "C" void LODGenerator_FindBestRootBone_m326494524 ();
+extern "C" void LODGenerator_FindBestRootBone_m1244262137 ();
+extern "C" void MeshCombiner_GetTopLevelParent_m3375533524 ();
+extern "C" void SkinnedMeshRenderer_get_bones_m333719399 ();
 extern "C" void Selectable_get_animationTriggers_m1217552961 ();
 extern "C" void AspectRatioFitter_get_aspectMode_m3735191157 ();
 extern "C" void Button_get_onClick_m2332132945 ();
@@ -16457,6 +20135,7 @@ extern "C" void DropdownItem_get_toggle_m2434100135 ();
 extern "C" void Toggle_get_group_m4124882852 ();
 extern "C" void Texture_CreateNonReadableException_m1462630389 ();
 extern "C" void RenderTexture_get_vrUsage_m1378911425 ();
+extern "C" void Vertex_GetPosOnPlane_m54929610 ();
 extern "C" void RenderTextureUtils_GetTextureScreenScale_m332725056 ();
 extern "C" void TMP_Settings_get_defaultTextMeshProTextContainerSize_m1071256409 ();
 extern "C" void TMP_Settings_get_defaultTextMeshProUITextContainerSize_m3876402408 ();
@@ -16539,10 +20218,29 @@ extern "C" void ScaleFunc_EndInvoke_m482314465 ();
 extern "C" void ScaleFunc_Invoke_m1883450302 ();
 extern "C" void Vector2Int_Max_m1987984156 ();
 extern "C" void Vector2Int_get_one_m4097715302 ();
+extern "C" void MeshUtils_GetSubMeshIndexMinMax_m3948928112 ();
+extern "C" void MeshUtils_GetSubMeshIndexMinMax_m3258175519 ();
+extern "C" void MeshUtils_ConvertUVsTo2D_m2343556576 ();
 extern "C" void Mesh_get_uv_m4017248 ();
 extern "C" void Mesh_get_uv2_m3615020997 ();
 extern "C" void Mesh_get_uv3_m3614955461 ();
 extern "C" void Mesh_get_uv4_m3615414213 ();
+extern "C" void MeshSimplifier_GetUVs2D_m1954790533 ();
+extern "C" void MeshSimplifier_get_UV1_m1425822218 ();
+extern "C" void MeshSimplifier_get_UV2_m1425822221 ();
+extern "C" void MeshSimplifier_get_UV3_m1425822220 ();
+extern "C" void MeshSimplifier_get_UV4_m1425822215 ();
+extern "C" void MeshSimplifier_get_UV5_m1425822214 ();
+extern "C" void MeshSimplifier_get_UV6_m1425822217 ();
+extern "C" void MeshSimplifier_get_UV7_m1425822216 ();
+extern "C" void MeshSimplifier_get_UV8_m1425822227 ();
+extern "C" void MeshUtils_ConvertUVsTo2D_m4116547415 ();
+extern "C" void LoaderObj_ConvertVec3_m3689351380 ();
+extern "C" void MathUtility_ComputeNormal_m3970854146 ();
+extern "C" void Vertex_get_Position_m4022624606 ();
+extern "C" void Triangulator_FindPlaneNormal_m1471103245 ();
+extern "C" void OBJExporterImporter_MultiplyVec3s_m3223022724 ();
+extern "C" void OBJExporterImporter_RotateAroundPoint_m485500929 ();
 extern "C" void Lightbeam_CalculateVertex_m77895897 ();
 extern "C" void Bounds_get_center_m1418449258_AdjustorThunk ();
 extern "C" void Bounds_get_extents_m1304537151_AdjustorThunk ();
@@ -16580,6 +20278,7 @@ extern "C" void Transform_TransformDirection_m3193513622 ();
 extern "C" void Transform_TransformDirection_m3784028109 ();
 extern "C" void Transform_TransformPoint_m226827784 ();
 extern "C" void Transform_TransformVector_m1951285617 ();
+extern "C" void Transform_get_eulerAngles_m2743581774 ();
 extern "C" void Transform_get_forward_m747522392 ();
 extern "C" void Transform_get_localEulerAngles_m2136926248 ();
 extern "C" void Transform_get_localPosition_m4234289348 ();
@@ -16616,6 +20315,8 @@ extern "C" void Vector3_op_Multiply_m3376773913 ();
 extern "C" void Vector3_op_Subtraction_m3073674971 ();
 extern "C" void Vector3_op_UnaryNegation_m1951478815 ();
 extern "C" void Vector4_op_Implicit_m1158564884 ();
+extern "C" void Vector3d_op_Explicit_m606323217 ();
+extern "C" void MeshUtils_ConvertUVsTo3D_m2778901106 ();
 extern "C" void TMP_Text_GetTextContainerLocalCorners_m534756339 ();
 extern "C" void TextContainer_get_corners_m1021111467 ();
 extern "C" void TextContainer_get_worldCorners_m2936120334 ();
@@ -16623,6 +20324,10 @@ extern "C" void TextMeshPro_GetTextContainerLocalCorners_m3173212714 ();
 extern "C" void TextMeshProUGUI_GetTextContainerLocalCorners_m1438312655 ();
 extern "C" void Mesh_get_normals_m4099615978 ();
 extern "C" void Mesh_get_vertices_m3585684815 ();
+extern "C" void MeshSimplifier_GetUVs3D_m831700169 ();
+extern "C" void MeshSimplifier_get_Normals_m3930750971 ();
+extern "C" void MeshSimplifier_get_Vertices_m3085838764 ();
+extern "C" void MeshUtils_ConvertUVsTo3D_m427212984 ();
 extern "C" void ShaderUtilities_GetFontExtent_m2680525854 ();
 extern "C" void TMP_Text_get_margin_m2906935196 ();
 extern "C" void TextContainer_get_margins_m3143536785 ();
@@ -16631,6 +20336,7 @@ extern "C" void Color_op_Implicit_m986621988 ();
 extern "C" void GeometryUtils_CameraSpacePlane_m3291428864 ();
 extern "C" void GeometryUtils_Plane_m3007569782 ();
 extern "C" void Material_GetVector_m2472259403 ();
+extern "C" void Material_GetVector_m806950826 ();
 extern "C" void Matrix4x4_GetColumn_m461504848_AdjustorThunk ();
 extern "C" void Matrix4x4_op_Multiply_m1839501195 ();
 extern "C" void Sprite_GetInnerUVs_m3161811504 ();
@@ -16646,20 +20352,45 @@ extern "C" void Vector4_Normalize_m25160693 ();
 extern "C" void Vector4_get_normalized_m1857816712_AdjustorThunk ();
 extern "C" void Vector4_get_one_m1616703050 ();
 extern "C" void Vector4_get_zero_m1422399515 ();
+extern "C" void Vector4_op_Addition_m787366691 ();
 extern "C" void Vector4_op_Division_m264790546 ();
 extern "C" void Vector4_op_Implicit_m237151757 ();
 extern "C" void Vector4_op_Implicit_m2966035112 ();
 extern "C" void Vector4_op_Multiply_m3757294449 ();
 extern "C" void Vector4_op_Multiply_m213790997 ();
 extern "C" void Vector4_op_Subtraction_m1632208160 ();
+extern "C" void MeshSimplifier_NormalizeTangent_m2168417861 ();
 extern "C" void Mesh_get_tangents_m3279676290 ();
+extern "C" void MeshSimplifier_GetUVs4D_m2196933171 ();
+extern "C" void MeshSimplifier_get_Tangents_m3437458389 ();
 extern "C" void FontData_get_verticalOverflow_m4132840071 ();
 extern "C" void Text_get_verticalOverflow_m2420459396 ();
 extern "C" void XRSettings_get_gameViewRenderMode_m1349500750 ();
 extern "C" void MeasureFunction_EndInvoke_m3256525429 ();
 extern "C" void MeasureFunction_Invoke_m1464925114 ();
 extern "C" void YogaNode_MeasureInternal_m1491511231 ();
-extern const Il2CppMethodPointer g_MethodPointers[16640] = 
+extern "C" void BlendShapeContainer_ToBlendShape_m1800208812 ();
+extern "C" void MeshSimplifier_GetBlendShape_m3694630012 ();
+extern "C" void BlendShapeFrameContainer_ToBlendShapeFrame_m4145868179 ();
+extern "C" void MeshSimplifier_GetAllBlendShapes_m4182589303 ();
+extern "C" void MeshUtils_GetMeshBlendShapes_m3418211225 ();
+extern "C" void DebugMeshPerf_get_Data_m2357917044 ();
+extern "C" void LODGenerator_CombineSkinnedMeshes_m3730411307 ();
+extern "C" void LODGenerator_GetSkinnedRenderers_m2624900256 ();
+extern "C" void LODGenerator_CombineStaticMeshes_m3025999153 ();
+extern "C" void LODGenerator_GetStaticRenderers_m3847856462 ();
+extern "C" void LODGeneratorHelper_get_Levels_m1646956036 ();
+extern "C" void LODGeneratorHelper_get_SimplificationOptions_m2927596664 ();
+extern "C" void SymmetricMatrix_op_Addition_m3258523451 ();
+extern "C" void Vector3d_get_Normalized_m3712621051_AdjustorThunk ();
+extern "C" void Vector3d_op_Addition_m3050185132 ();
+extern "C" void Vector3d_op_Division_m362615608 ();
+extern "C" void Vector3d_op_Implicit_m3013639765 ();
+extern "C" void Vector3d_op_Multiply_m1886375103 ();
+extern "C" void Vector3d_op_Multiply_m2030899402 ();
+extern "C" void Vector3d_op_Subtraction_m2355905167 ();
+extern "C" void Vector3d_op_UnaryNegation_m1799911454 ();
+extern const Il2CppMethodPointer g_MethodPointers[20371] = 
 {
 	U3CPrivateImplementationDetailsU3E_ComputeStringHash_m4063532059,
 	Locale_GetText_m3374010885,
@@ -17040,8 +20771,12 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ARC4Managed_CreateDecryptor_m2839020070,
 	ARC4Managed_GenerateIV_m519902972,
 	ARC4Managed_GenerateKey_m4032943432,
+	ARC4Managed_get_CanTransformMultipleBlocks_m2954319634,
+	ARC4Managed_get_InputBlockSize_m1864606046,
+	ARC4Managed_get_OutputBlockSize_m4222910537,
 	ARC4Managed_KeySetup_m1284729381,
 	ARC4Managed_CheckInput_m49728936,
+	ARC4Managed_TransformBlock_m581621139,
 	ARC4Managed_InternalTransformBlock_m1085676343,
 	ARC4Managed_TransformFinalBlock_m4072170043,
 	DSAManaged__ctor_m962128842,
@@ -17162,12 +20897,16 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SymmetricTransform_Finalize_m1463466895,
 	SymmetricTransform_System_IDisposable_Dispose_m3676111272,
 	SymmetricTransform_Dispose_m3894715243,
+	SymmetricTransform_get_CanTransformMultipleBlocks_m2036822434,
+	SymmetricTransform_get_InputBlockSize_m3694391316,
+	SymmetricTransform_get_OutputBlockSize_m143608483,
 	SymmetricTransform_Transform_m3073016850,
 	SymmetricTransform_CBC_m435753239,
 	SymmetricTransform_CFB_m1051508796,
 	SymmetricTransform_OFB_m3842617151,
 	SymmetricTransform_CTS_m2571643614,
 	SymmetricTransform_CheckInput_m1829858759,
+	SymmetricTransform_TransformBlock_m2339552481,
 	SymmetricTransform_get_KeepLastBlock_m3105157421,
 	SymmetricTransform_InternalTransformBlock_m946892271,
 	SymmetricTransform_Random_m2004892672,
@@ -17234,15 +20973,23 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SafeBag_get_BagOID_m2165567310,
 	SafeBag_get_ASN1_m3167501969,
 	X501_ToString_m4186311521,
+	X501_ToString_m2278029064,
 	X501_AppendEntry_m2470239841,
 	X501__cctor_m1166912714,
 	X509Certificate_Parse_m1106379228,
 	X509Certificate__ctor_m3656389950,
 	X509Certificate_GetUnsignedBigInteger_m1025066663,
 	X509Certificate_get_DSA_m1760272844,
+	X509Certificate_get_IssuerName_m605048065,
 	X509Certificate_get_KeyAlgorithmParameters_m681676289,
 	X509Certificate_get_RSA_m171561738,
 	X509Certificate_get_RawData_m2387471414,
+	X509Certificate_get_SerialNumber_m1918700946,
+	X509Certificate_get_SubjectName_m3160893681,
+	X509Certificate_get_ValidFrom_m1469376000,
+	X509Certificate_get_ValidUntil_m678342786,
+	X509Certificate_GetIssuerName_m4238857993,
+	X509Certificate_GetSubjectName_m584504796,
 	X509Certificate_GetObjectData_m2057262401,
 	X509Certificate_PEM_m1177570576,
 	X509Certificate__cctor_m198658613,
@@ -17610,11 +21357,13 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Boolean__cctor_m1091629305,
 	Buffer_InternalBlockCopy_m1003287272,
 	Buffer_IndexOfByte_m2444067461,
+	Buffer__SetByte_m1099280919,
 	Buffer__ByteLength_m333917984,
 	Buffer_ZeroMemory_m3102858865,
 	Buffer_Memcpy_m2940566499,
 	Buffer_Memcpy_m314807872,
 	Buffer_ByteLength_m2639516074,
+	Buffer_SetByte_m316948066,
 	Buffer_BlockCopy_m2884209081,
 	Buffer_memcpy4_m1388822303,
 	Buffer_memcpy2_m3728527076,
@@ -17706,6 +21455,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Char_IsControl_m3144109079,
 	Char_CheckNumber_m2635095806,
 	Char_IsNumber_m2445552278,
+	Char_IsNumber_m3333316586,
 	Char_CheckSeparator_m2624770489,
 	Char_IsSeparatorLatin1_m482019433,
 	Char_IsSeparator_m2355480827,
@@ -17741,7 +21491,9 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ArrayList_Clear_m3564447992,
 	ArrayList_Clone_m2682741233,
 	ArrayList_Contains_m974354901,
+	ArrayList_CopyTo_m3530931172,
 	ArrayList_CopyTo_m3962521159,
+	ArrayList_CopyTo_m3105450421,
 	ArrayList_EnsureCapacity_m3016383533,
 	ArrayList_GetEnumerator_m3176119603,
 	ArrayList_IndexOf_m771193320,
@@ -17750,6 +21502,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ArrayList_ReadOnly_m1905796817,
 	ArrayList_Remove_m4274871153,
 	ArrayList_RemoveAt_m761734947,
+	ArrayList_RemoveRange_m2259829391,
 	ArrayList_ToArray_m3827492363,
 	ArrayList_ToArray_m3439706433,
 	ArrayList__cctor_m3052737821,
@@ -17773,12 +21526,14 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ReadOnlyArrayList_Clone_m4292923283,
 	ReadOnlyArrayList_Contains_m2549722426,
 	ReadOnlyArrayList_CopyTo_m325945532,
+	ReadOnlyArrayList_CopyTo_m1714876295,
 	ReadOnlyArrayList_GetEnumerator_m643550738,
 	ReadOnlyArrayList_IndexOf_m3097590629,
 	ReadOnlyArrayList_Insert_m3296000020,
 	ReadOnlyArrayList_InsertRange_m85432697,
 	ReadOnlyArrayList_Remove_m3567154403,
 	ReadOnlyArrayList_RemoveAt_m2719622470,
+	ReadOnlyArrayList_RemoveRange_m2639670197,
 	ReadOnlyArrayList_ToArray_m2129231561,
 	ReadOnlyArrayList_ToArray_m3977608157,
 	CaseInsensitiveComparer__ctor_m1508720200,
@@ -17913,6 +21668,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Hashtable_get_IsSynchronized_m1426775249,
 	Hashtable_KeyEquals_m2549637027,
 	Hashtable_get_Keys_m625158339,
+	Hashtable_get_Values_m1643322147,
 	Hashtable_Insert_m2703585737,
 	Hashtable_putEntry_m2253323588,
 	Hashtable_Remove_m4032631466,
@@ -17951,8 +21707,15 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SyncHashtable_System_Collections_IEnumerable_GetEnumerator_m1325482064,
 	SyncHashtable_GetEnumerator_m4254656826,
 	SyncHashtable_get_Keys_m1469437863,
+	SyncHashtable_get_Values_m3820929471,
 	SyncHashtable_Remove_m4179265271,
 	SyncHashtable_OnDeserialization_m176184756,
+	ValueCollection__ctor_m1618749086,
+	ValueCollection_CopyTo_m439661528,
+	ValueCollection_GetEnumerator_m1400563028,
+	ValueCollection_get_IsSynchronized_m2777189546,
+	ValueCollection_get_SyncRoot_m3158034854,
+	ValueCollection_get_Count_m2967717962,
 	ListDictionaryInternal__ctor_m990485921,
 	ListDictionaryInternal_get_Item_m3157048070,
 	ListDictionaryInternal_set_Item_m4225526038,
@@ -17980,12 +21743,14 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Queue_Clone_m178259971,
 	Queue_get_IsSynchronized_m1844977307,
 	Queue_get_SyncRoot_m3475037374,
+	Queue_Clear_m898976850,
 	Queue_CopyTo_m737385843,
 	Queue_Enqueue_m4206203487,
 	Queue_GetEnumerator_m3623929043,
 	Queue_Dequeue_m2397857002,
 	Queue_Peek_m2705722908,
 	Queue_GetElement_m2491472922,
+	Queue_ToArray_m812120461,
 	Queue_SetCapacity_m2477650163,
 	QueueEnumerator__ctor_m611027847,
 	QueueEnumerator_Clone_m1475796429,
@@ -18000,20 +21765,25 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SortedList_get_Capacity_m919184864,
 	SortedList_set_Capacity_m509376950,
 	SortedList_get_Count_m3860639970,
+	SortedList_get_Values_m1700526404,
 	SortedList_get_IsSynchronized_m2987909703,
 	SortedList_get_SyncRoot_m914428425,
 	SortedList_Clone_m928094797,
+	SortedList_ContainsValue_m3994186420,
 	SortedList_CopyTo_m3001281572,
 	SortedList_EnsureCapacity_m3386419759,
 	SortedList_GetByIndex_m3848565786,
 	SortedList_System_Collections_IEnumerable_GetEnumerator_m2738760439,
 	SortedList_GetEnumerator_m772783392,
 	SortedList_GetKey_m658905367,
+	SortedList_GetValueList_m827607550,
 	SortedList_get_Item_m3673863299,
 	SortedList_set_Item_m32382988,
 	SortedList_IndexOfKey_m91331983,
+	SortedList_IndexOfValue_m2674732773,
 	SortedList_Insert_m3413986029,
 	SortedList_RemoveAt_m1767403850,
+	SortedList_Synchronized_m3588493120,
 	SortedList__cctor_m1247132,
 	SortedListEnumerator__ctor_m1038192608,
 	SortedListEnumerator_Clone_m1885836381,
@@ -18022,6 +21792,41 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SortedListEnumerator_get_Entry_m802102315,
 	SortedListEnumerator_get_Current_m509562304,
 	SortedListEnumerator_get_Value_m4016317133,
+	SyncSortedList__ctor_m3358352329,
+	SyncSortedList_get_Count_m1239948607,
+	SyncSortedList_get_SyncRoot_m2044600112,
+	SyncSortedList_get_IsSynchronized_m2054123421,
+	SyncSortedList_get_Item_m1287216427,
+	SyncSortedList_set_Item_m1476967925,
+	SyncSortedList_Add_m1732900135,
+	SyncSortedList_get_Capacity_m1276989319,
+	SyncSortedList_Clone_m1554415040,
+	SyncSortedList_ContainsValue_m4285462794,
+	SyncSortedList_CopyTo_m1689549427,
+	SyncSortedList_GetByIndex_m2524087392,
+	SyncSortedList_GetEnumerator_m2402576560,
+	SyncSortedList_GetKey_m2564096347,
+	SyncSortedList_GetValueList_m1715694704,
+	SyncSortedList_IndexOfKey_m2604601240,
+	SyncSortedList_IndexOfValue_m1067192862,
+	SyncSortedList_RemoveAt_m248114338,
+	ValueList__ctor_m4152204531,
+	ValueList_get_Count_m137843225,
+	ValueList_get_IsReadOnly_m1633411326,
+	ValueList_get_IsFixedSize_m3594935784,
+	ValueList_get_IsSynchronized_m4166384571,
+	ValueList_get_SyncRoot_m615844645,
+	ValueList_Add_m2080119186,
+	ValueList_Clear_m256055789,
+	ValueList_Contains_m798441450,
+	ValueList_CopyTo_m2181516009,
+	ValueList_Insert_m1729004996,
+	ValueList_get_Item_m698594302,
+	ValueList_set_Item_m2809756815,
+	ValueList_GetEnumerator_m2129344739,
+	ValueList_IndexOf_m165615185,
+	ValueList_Remove_m900907577,
+	ValueList_RemoveAt_m386488652,
 	Stack__ctor_m2907601956,
 	Stack__ctor_m3503577671,
 	Stack_get_Count_m2258661097,
@@ -18276,6 +22081,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Convert_ToString_m2614817407,
 	Convert_ToInt32_m391894676,
 	Convert_ToBase64String_m3839334935,
+	Convert_ToBase64String_m1959325926,
 	Convert_ToBase64String_m484571023,
 	Convert_ConvertToBase64Array_m570013707,
 	Convert_ToBase64_CalculateAndValidateOutputLength_m673193013,
@@ -18342,15 +22148,20 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	DateTime_FromBinary_m2489276715,
 	DateTime_FromBinaryRaw_m3463944967,
 	DateTime_System_Runtime_Serialization_ISerializable_GetObjectData_m407091487_AdjustorThunk,
+	DateTime_IsDaylightSavingTime_m2632700238_AdjustorThunk,
 	DateTime_SpecifyKind_m3332658812,
+	DateTime_ToBinary_m1193069875_AdjustorThunk,
 	DateTime_ToBinaryRaw_m1783595006_AdjustorThunk,
 	DateTime_get_Date_m46742767_AdjustorThunk,
 	DateTime_GetDatePart_m592499627_AdjustorThunk,
 	DateTime_get_Day_m1623500273_AdjustorThunk,
 	DateTime_get_DayOfWeek_m2326490739_AdjustorThunk,
+	DateTime_get_DayOfYear_m337087606_AdjustorThunk,
 	DateTime_GetHashCode_m2261847002_AdjustorThunk,
 	DateTime_get_Hour_m4153505178_AdjustorThunk,
+	DateTime_IsAmbiguousDaylightSavingTime_m3255583102_AdjustorThunk,
 	DateTime_get_Kind_m2154871796_AdjustorThunk,
+	DateTime_get_Millisecond_m671827344_AdjustorThunk,
 	DateTime_get_Minute_m87527789_AdjustorThunk,
 	DateTime_get_Month_m1566006993_AdjustorThunk,
 	DateTime_get_Now_m1277138875,
@@ -18362,19 +22173,34 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	DateTime_get_Year_m1184003812_AdjustorThunk,
 	DateTime_IsLeapYear_m1852497299,
 	DateTime_Parse_m3729096069,
+	DateTime_ParseExact_m3543736043,
 	DateTime_ParseExact_m2711902273,
+	DateTime_TicksToOADate_m3333452233,
+	DateTime_ToOADate_m3381429418_AdjustorThunk,
+	DateTime_ToFileTime_m215920971_AdjustorThunk,
+	DateTime_ToFileTimeUtc_m398715979_AdjustorThunk,
+	DateTime_ToLocalTime_m3134475597_AdjustorThunk,
+	DateTime_ToLocalTime_m2652220044_AdjustorThunk,
+	DateTime_ToLongDateString_m220253197_AdjustorThunk,
+	DateTime_ToLongTimeString_m3124825860_AdjustorThunk,
+	DateTime_ToShortDateString_m2934767635_AdjustorThunk,
+	DateTime_ToShortTimeString_m1551520344_AdjustorThunk,
 	DateTime_ToString_m884486936_AdjustorThunk,
 	DateTime_ToString_m1916142975_AdjustorThunk,
 	DateTime_ToString_m2992030064_AdjustorThunk,
 	DateTime_ToUniversalTime_m1945318289_AdjustorThunk,
+	DateTime_TryParse_m1691789376,
 	DateTime_op_Addition_m1857121695,
 	DateTime_op_Subtraction_m529926081,
 	DateTime_op_Subtraction_m3579235380,
 	DateTime_op_Equality_m1022058599,
+	DateTime_op_Inequality_m1382517918,
 	DateTime_op_LessThan_m2497205152,
 	DateTime_op_LessThanOrEqual_m2360948759,
 	DateTime_op_GreaterThan_m3768590082,
 	DateTime_op_GreaterThanOrEqual_m674703316,
+	DateTime_GetDateTimeFormats_m3421493225_AdjustorThunk,
+	DateTime_GetDateTimeFormats_m2474376420_AdjustorThunk,
 	DateTime_GetTypeCode_m2908224082_AdjustorThunk,
 	DateTime_System_IConvertible_ToBoolean_m3229932458_AdjustorThunk,
 	DateTime_System_IConvertible_ToChar_m197318076_AdjustorThunk,
@@ -18410,6 +22236,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	DateTimeFormat_ExpandPredefinedFormat_m460807480,
 	DateTimeFormat_Format_m2386693640,
 	DateTimeFormat_Format_m4081720209,
+	DateTimeFormat_GetAllDateTimes_m3181678382,
+	DateTimeFormat_GetAllDateTimes_m489554109,
 	DateTimeFormat_InvalidFormatForLocal_m2750038190,
 	DateTimeFormat_InvalidFormatForUtc_m4049737651,
 	DateTimeFormat__cctor_m3783628461,
@@ -18455,6 +22283,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	DateTimeParse_ProcessHebrewTerminalState_m3391340196,
 	DateTimeParse_ProcessTerminaltState_m969877188,
 	DateTimeParse_Parse_m2623651942,
+	DateTimeParse_TryParse_m2478553981,
 	DateTimeParse_TryParse_m508960038,
 	DateTimeParse_DetermineTimeZoneAdjustments_m1071606919,
 	DateTimeParse_DateTimeOffsetTimeZonePostProcessing_m2037059951,
@@ -18703,6 +22532,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Double_Equals_m2309369974_AdjustorThunk,
 	Double_GetHashCode_m2295714610_AdjustorThunk,
 	Double_ToString_m1229922074_AdjustorThunk,
+	Double_ToString_m896573572_AdjustorThunk,
 	Double_ToString_m3828879243_AdjustorThunk,
 	Double_ToString_m1051753975_AdjustorThunk,
 	Double_Parse_m4153729520,
@@ -18786,6 +22616,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Environment_GetResourceStringEncodingName_m496649580,
 	Environment_get_CurrentManagedThreadId_m3454612449,
 	Environment_get_HasShutdownStarted_m304027930,
+	Environment_get_MachineName_m10524133,
 	Environment_GetNewLine_m2073395726,
 	Environment_get_NewLine_m3211016485,
 	Environment_get_Platform_m520224871,
@@ -18794,6 +22625,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Environment_CreateVersionFromString_m1270430627,
 	Environment_get_StackTrace_m1029502882,
 	Environment_get_TickCount_m2088073110,
+	Environment_get_UserDomainName_m850452101,
+	Environment_get_UserName_m3847352169,
 	Environment_Exit_m313790512,
 	Environment_ExpandEnvironmentVariables_m690857396,
 	Environment_internalGetEnvironmentVariable_native_m379925244,
@@ -18813,6 +22646,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Environment_GetMachineConfigPath_m43519138,
 	Environment_internalGetHome_m2575860206,
 	Environment_GetPageSize_m3815890913,
+	Environment_get_IsUnix_m3181067358,
 	Environment_GetStackTrace_m2270587337,
 	EventArgs__ctor_m32674013,
 	EventArgs__cctor_m1889823314,
@@ -18917,6 +22751,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	CharUnicodeInfo_InternalConvertToUtf32_m3584357582,
 	CharUnicodeInfo_IsWhiteSpace_m140502982,
 	CharUnicodeInfo_GetUnicodeCategory_m28576098,
+	CharUnicodeInfo_GetUnicodeCategory_m2648087799,
 	CharUnicodeInfo_InternalGetUnicodeCategory_m3067127494,
 	CharUnicodeInfo_InternalGetCategoryValue_m3642495617,
 	CharUnicodeInfo_InternalGetUnicodeCategory_m2255478459,
@@ -19455,6 +23290,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	GuidResult_SetFailure_m1246975250_AdjustorThunk,
 	GuidResult_SetFailure_m4176925274_AdjustorThunk,
 	GuidResult_GetGuidParseException_m2556040111_AdjustorThunk,
+	BinaryReader__ctor_m2602947653,
 	BinaryReader__ctor_m2266204403,
 	BinaryReader__ctor_m605133977,
 	BinaryReader_get_BaseStream_m3993550412,
@@ -19564,7 +23400,20 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	File_Open_m664439378,
 	File_OpenRead_m2936789020,
 	File_OpenText_m196858847,
+	File_ReadAllBytes_m1435775076,
+	File_ReadAllLines_m2281910820,
+	File_ReadAllLines_m349741884,
+	File_WriteAllBytes_m4252682105,
+	File_WriteAllText_m167356635,
+	File_WriteAllText_m1974532535,
 	File_FillAttributeInfo_m698128191,
+	FileInfo__ctor_m3289795077,
+	FileInfo_Init_m3003176326,
+	FileInfo_GetDisplayPath_m374745275,
+	FileInfo__ctor_m1254204251,
+	FileInfo_get_Name_m33729499,
+	FileInfo_get_Exists_m1365967814,
+	FileInfo_ToString_m1090232810,
 	FileLoadException__ctor_m3879680456,
 	FileLoadException__ctor_m2951358491,
 	FileLoadException_get_Message_m1316268913,
@@ -19587,6 +23436,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	FileStream__ctor_m2784380556,
 	FileStream__ctor_m2889718780,
 	FileStream__ctor_m3340685739,
+	FileStream__ctor_m2221843109,
+	FileStream__ctor_m3062020188,
 	FileStream__ctor_m103400947,
 	FileStream__ctor_m3151488352,
 	FileStream_Init_m1625665090,
@@ -19596,6 +23447,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	FileStream_get_Length_m426703983,
 	FileStream_get_Position_m3002807042,
 	FileStream_set_Position_m196127886,
+	FileStream_get_SafeFileHandle_m4229279228,
 	FileStream_ExposeHandle_m570567406,
 	FileStream_ReadByte_m2651547500,
 	FileStream_WriteByte_m3899504766,
@@ -19636,6 +23488,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	FileStreamAsyncResult_get_AsyncState_m3919989221,
 	FileStreamAsyncResult_get_CompletedSynchronously_m3784899217,
 	FileStreamAsyncResult_get_AsyncWaitHandle_m1811816191,
+	FileStreamAsyncResult_get_IsCompleted_m2730893434,
 	FileSystemEnumerableFactory_CreateFileNameIterator_m2214299912,
 	FileSystemEnumerableHelpers_IsDir_m2524844520,
 	FileSystemEnumerableHelpers_IsFile_m4235022421,
@@ -19644,6 +23497,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	FileSystemInfo_get_FullName_m3468398407,
 	FileSystemInfo_Refresh_m1023608177,
 	FileSystemInfo_GetObjectData_m812231621,
+	FileSystemInfo_get_DisplayPath_m3036658982,
+	FileSystemInfo_set_DisplayPath_m609962158,
 	IOException__ctor_m971599150,
 	IOException__ctor_m3662782713,
 	IOException__ctor_m2367100481,
@@ -19724,10 +23579,13 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	MonoIO_DumpHandles_m70450092,
 	MonoIO_RemapPath_m1142466502,
 	MonoIO__cctor_m3715714639,
+	Path_ChangeExtension_m2296349858,
 	Path_Combine_m3389272516,
 	Path_CleanPath_m3974596557,
 	Path_GetDirectoryName_m3496866581,
+	Path_GetExtension_m1021339115,
 	Path_GetFileName_m1354558116,
+	Path_GetFileNameWithoutExtension_m895535029,
 	Path_GetFullPath_m4142135635,
 	Path_GetFullPathInternal_m1405359470,
 	Path_GetFullPathName_m1918736699,
@@ -19738,6 +23596,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Path_GetPathRoot_m3499444155,
 	Path_IsPathRooted_m3515805419,
 	Path_GetInvalidPathChars_m3959874485,
+	Path_findExtension_m910255017,
 	Path__cctor_m3273994011,
 	Path_GetServerAndShare_m2640882202,
 	Path_SameRoot_m1518354096,
@@ -19763,12 +23622,15 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SearchResult_get_UserPath_m2944568601,
 	SearchResult_get_FindData_m2198293037,
 	Stream_EnsureAsyncActiveSemaphoreInitialized_m3409776203,
+	Stream_get_ReadTimeout_m2137060894,
+	Stream_get_WriteTimeout_m3852257656,
 	Stream_Close_m771352034,
 	Stream_Dispose_m2589290611,
 	Stream_Dispose_m874059170,
 	Stream_BeginRead_m2233539237,
 	Stream_BeginReadInternal_m3557702350,
 	Stream_EndRead_m1896469262,
+	Stream_ReadAsync_m1523724214,
 	Stream_ReadAsync_m1661051365,
 	Stream_BeginEndReadAsync_m3205112820,
 	Stream_BeginWrite_m1696564506,
@@ -19824,6 +23686,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SynchronousAsyncResult__ctor_m147832428,
 	SynchronousAsyncResult__ctor_m3555699810,
 	SynchronousAsyncResult__ctor_m2982367260,
+	SynchronousAsyncResult_get_IsCompleted_m2941520757,
 	SynchronousAsyncResult_get_AsyncWaitHandle_m578906976,
 	SynchronousAsyncResult_get_AsyncState_m1668768011,
 	SynchronousAsyncResult_get_CompletedSynchronously_m738455999,
@@ -19851,6 +23714,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	StreamReader_get_CurrentEncoding_m2034825559,
 	StreamReader_get_BaseStream_m3371558792,
 	StreamReader_get_LeaveOpen_m3553008741,
+	StreamReader_get_EndOfStream_m1353444472,
 	StreamReader_Peek_m2272511193,
 	StreamReader_DataAvailable_m835397883,
 	StreamReader_Read_m2554901735,
@@ -19862,7 +23726,34 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	StreamReader_ReadBuffer_m761134843,
 	StreamReader_ReadBuffer_m1682103302,
 	StreamReader_ReadLine_m1468498645,
+	StreamReader_ReadToEndAsync_m3322639319,
+	StreamReader_ReadToEndAsyncInternal_m444844830,
+	StreamReader_ReadAsyncInternal_m1286562712,
+	StreamReader_get_CharLen_Prop_m3062425732,
+	StreamReader_set_CharLen_Prop_m226340675,
+	StreamReader_get_CharPos_Prop_m398520611,
+	StreamReader_set_CharPos_Prop_m4183451842,
+	StreamReader_get_ByteLen_Prop_m2263083693,
+	StreamReader_set_ByteLen_Prop_m1576937156,
+	StreamReader_get_BytePos_Prop_m1043021894,
+	StreamReader_set_BytePos_Prop_m3539751988,
+	StreamReader_get_CheckPreamble_Prop_m2059911625,
+	StreamReader_get_Decoder_Prop_m2881127175,
+	StreamReader_get_DetectEncoding_Prop_m3290904122,
+	StreamReader_get_CharBuffer_Prop_m3568517888,
+	StreamReader_get_ByteBuffer_Prop_m977324960,
+	StreamReader_get_IsBlocked_Prop_m520504929,
+	StreamReader_set_IsBlocked_Prop_m4062191080,
+	StreamReader_get_Stream_Prop_m3207416110,
+	StreamReader_get_MaxCharsPerBuffer_Prop_m780069032,
+	StreamReader_ReadBufferAsync_m3469474401,
 	StreamReader__cctor_m874052303,
+	U3CReadAsyncInternalU3Ed__65_MoveNext_m3473460893_AdjustorThunk,
+	U3CReadAsyncInternalU3Ed__65_SetStateMachine_m1435478584_AdjustorThunk,
+	U3CReadBufferAsyncU3Ed__98_MoveNext_m661868703_AdjustorThunk,
+	U3CReadBufferAsyncU3Ed__98_SetStateMachine_m2059545784_AdjustorThunk,
+	U3CReadToEndAsyncInternalU3Ed__63_MoveNext_m1175967012_AdjustorThunk,
+	U3CReadToEndAsyncInternalU3Ed__63_SetStateMachine_m3811170576_AdjustorThunk,
 	NullStreamReader__ctor_m3077615088,
 	NullStreamReader_get_BaseStream_m3342895214,
 	NullStreamReader_get_CurrentEncoding_m166380928,
@@ -19902,6 +23793,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	StringReader_Read_m478895463,
 	StringReader_ReadToEnd_m2679201613,
 	StringReader_ReadLine_m2337102945,
+	StringReader_ReadToEndAsync_m4237545678,
 	StringResultHandler__ctor_m2155428846,
 	StringResultHandler_IsResultIncluded_m2214933324,
 	StringResultHandler_CreateObject_m17690411,
@@ -19913,12 +23805,16 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TextReader_Read_m4213268240,
 	TextReader_ReadToEnd_m2648397074,
 	TextReader_ReadLine_m2549275032,
+	TextReader_ReadToEndAsync_m3395900697,
+	TextReader_ReadAsyncInternal_m178090620,
 	TextReader_Synchronized_m3004980758,
 	TextReader__cctor_m322748985,
 	U3CU3Ec__cctor_m3834697479,
 	U3CU3Ec__ctor_m3783018625,
 	U3CU3Ec_U3C_cctorU3Eb__22_0_m3998479443,
 	U3CU3Ec_U3C_cctorU3Eb__22_1_m2590308745,
+	U3CReadToEndAsyncU3Ed__14_MoveNext_m331911256_AdjustorThunk,
+	U3CReadToEndAsyncU3Ed__14_SetStateMachine_m2422106636_AdjustorThunk,
 	NullTextReader__ctor_m2871254925,
 	NullTextReader_Read_m147812561,
 	NullTextReader_ReadLine_m2308083993,
@@ -19929,6 +23825,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SyncTextReader_Read_m2340588710,
 	SyncTextReader_ReadLine_m1927927799,
 	SyncTextReader_ReadToEnd_m4224080191,
+	SyncTextReader_ReadToEndAsync_m3498616981,
 	TextWriter_get_InitialNewLine_m3351786163,
 	TextWriter__ctor_m2859954372,
 	TextWriter__ctor_m4042271706,
@@ -20065,8 +23962,10 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Int32_ToString_m1760361794_AdjustorThunk,
 	Int32_ToString_m2507389746_AdjustorThunk,
 	Int32_Parse_m1033611559,
+	Int32_Parse_m2244041137,
 	Int32_Parse_m2087562008,
 	Int32_Parse_m3682462547,
+	Int32_TryParse_m2404707562,
 	Int32_GetTypeCode_m1648562395_AdjustorThunk,
 	Int32_System_IConvertible_ToBoolean_m2787524506_AdjustorThunk,
 	Int32_System_IConvertible_ToChar_m2005926864_AdjustorThunk,
@@ -20192,16 +24091,20 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Math_Round_m254158705,
 	Math_Sqrt_m1297338011,
 	Math_Log_m2526073084,
+	Math_Log10_m3013334228,
 	Math_Pow_m754227594,
 	Math_Abs_m1208936174,
 	Math_AbsHelper_m2283591397,
 	Math_Abs_m3353607971,
+	Math_Abs_m3912393749,
 	Math_Max_m1873195862,
 	Math_Max_m684537189,
 	Math_Max_m482125436,
+	Math_Max_m3148697491,
 	Math_Min_m3468062251,
 	Math_Min_m187254930,
 	Math_Min_m3253079129,
+	Math_Min_m2185697350,
 	Math_Log_m734258591,
 	Math__cctor_m3647417371,
 	MemberAccessException__ctor_m2501221062,
@@ -20269,6 +24172,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	NotImplementedException__ctor_m2408412972,
 	NotSupportedException__ctor_m2730133172,
 	NotSupportedException__ctor_m2494070935,
+	NotSupportedException__ctor_m3821573888,
 	NotSupportedException__ctor_m922781896,
 	NullConsoleDriver_ReadKey_m2411929863,
 	NullConsoleDriver__ctor_m46361837,
@@ -20307,7 +24211,9 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Number_ParseUInt64_m2694014565,
 	Number_StringToNumber_m3403356828,
 	Number_TrailingZeros_m3669346668,
+	Number_TryParseInt32_m1682248133,
 	Number_TryParseInt64_m2834972724,
+	Number_TryParseUInt32_m2802499845,
 	Number_TryStringToNumber_m2022112580,
 	Number_TryStringToNumber_m432216761,
 	NumberBuffer__ctor_m2393852463_AdjustorThunk,
@@ -21163,6 +25069,12 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	AsyncTaskMethodBuilder_SetResult_m3263625660_AdjustorThunk,
 	AsyncTaskMethodBuilder_SetException_m3731552766_AdjustorThunk,
 	AsyncTaskMethodBuilder__cctor_m1116092499,
+	AsyncVoidMethodBuilder_Create_m1976941025,
+	AsyncVoidMethodBuilder_SetStateMachine_m2384003025_AdjustorThunk,
+	AsyncVoidMethodBuilder_SetResult_m1991744790_AdjustorThunk,
+	AsyncVoidMethodBuilder_SetException_m1109381469_AdjustorThunk,
+	AsyncVoidMethodBuilder_NotifySynchronizationContextOfCompletion_m4233786584_AdjustorThunk,
+	AsyncVoidMethodBuilder_get_Task_m1502099545_AdjustorThunk,
 	CompilationRelaxationsAttribute__ctor_m72043333,
 	CompilationRelaxationsAttribute__ctor_m2313138045,
 	CompilationRelaxationsAttribute_get_CompilationRelaxations_m3580072397,
@@ -21204,6 +25116,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	StateMachineAttribute__ctor_m3983937195,
 	StringFreezingAttribute__ctor_m2350592359,
 	TaskAwaiter__ctor_m184772309_AdjustorThunk,
+	TaskAwaiter_get_IsCompleted_m1762140293_AdjustorThunk,
+	TaskAwaiter_OnCompleted_m1937864511_AdjustorThunk,
 	TaskAwaiter_UnsafeOnCompleted_m3475059602_AdjustorThunk,
 	TaskAwaiter_GetResult_m3227166796_AdjustorThunk,
 	TaskAwaiter_ValidateEnd_m2858169533,
@@ -21215,6 +25129,14 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TypeForwardedFromAttribute__ctor_m482798923,
 	TypeForwardedFromAttribute_get_AssemblyFullName_m3035968748,
 	UnsafeValueTypeAttribute__ctor_m4042133753,
+	YieldAwaitable_GetAwaiter_m2145771564_AdjustorThunk,
+	YieldAwaiter_get_IsCompleted_m1640375229_AdjustorThunk,
+	YieldAwaiter_OnCompleted_m3099984602_AdjustorThunk,
+	YieldAwaiter_UnsafeOnCompleted_m1040728190_AdjustorThunk,
+	YieldAwaiter_QueueContinuation_m3182259807,
+	YieldAwaiter_RunAction_m2126311257,
+	YieldAwaiter_GetResult_m3551555982_AdjustorThunk,
+	YieldAwaiter__cctor_m3956244687,
 	CriticalFinalizerObject__ctor_m3245424448,
 	CriticalFinalizerObject_Finalize_m2010384847,
 	ReliabilityContractAttribute__ctor_m2124570898,
@@ -21244,12 +25166,18 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ExternalException__ctor_m4224477539,
 	ExternalException_ToString_m3624952709,
 	FieldOffsetAttribute__ctor_m591213967,
+	GCHandle__ctor_m737078856_AdjustorThunk,
+	GCHandle__ctor_m3452170611_AdjustorThunk,
 	GCHandle__ctor_m2690474163_AdjustorThunk,
 	GCHandle_get_IsAllocated_m1058226959_AdjustorThunk,
 	GCHandle_get_Target_m1824973883_AdjustorThunk,
 	GCHandle_AddrOfPinnedObject_m3427142301_AdjustorThunk,
+	GCHandle_Alloc_m3053200191,
 	GCHandle_Alloc_m3823409740,
 	GCHandle_Free_m1457699368_AdjustorThunk,
+	GCHandle_op_Explicit_m127498741,
+	GCHandle_op_Explicit_m976572069,
+	GCHandle_CheckCurrentDomain_m1705520864,
 	GCHandle_GetTarget_m1711976502,
 	GCHandle_GetTargetHandle_m423901123,
 	GCHandle_FreeHandle_m2765220421,
@@ -21257,20 +25185,40 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	GCHandle_op_Equality_m1052799060,
 	GCHandle_Equals_m146069735_AdjustorThunk,
 	GCHandle_GetHashCode_m2446251778_AdjustorThunk,
+	GCHandle_FromIntPtr_m3880792486,
+	GCHandle_ToIntPtr_m3288225389,
 	GuidAttribute__ctor_m3183273657,
 	InAttribute__ctor_m3499482504,
 	InterfaceTypeAttribute__ctor_m3307583035,
+	Marshal_AllocCoTaskMem_m1327939722,
+	Marshal_AllocHGlobal_m1179842693,
+	Marshal_AllocHGlobal_m491131085,
+	Marshal_copy_to_unmanaged_m3612458659,
 	Marshal_copy_from_unmanaged_m2834266824,
+	Marshal_Copy_m1562111546,
 	Marshal_Copy_m1222846562,
 	Marshal_Copy_m1714210296,
 	Marshal_FreeBSTR_m2788901813,
+	Marshal_FreeHGlobal_m1757369653,
+	Marshal_ClearUnicode_m2326035609,
+	Marshal_ZeroFreeGlobalAllocUnicode_m1136939103,
 	Marshal_GetHRForException_m813614142,
 	Marshal_GetLastWin32Error_m1272610344,
+	Marshal_PtrToStringAnsi_m2474145239,
+	Marshal_PtrToStringUni_m175561854,
 	Marshal_PtrToStructure_m771949023,
+	Marshal_ReadInt16_m968014049,
+	Marshal_ReadInt32_m3638363878,
+	Marshal_ReadInt64_m3518540566,
+	Marshal_ReadIntPtr_m3520540806,
 	Marshal_ReleaseInternal_m4147013606,
 	Marshal_Release_m3880542832,
 	Marshal_SizeOf_m3069307747,
+	Marshal_SecureStringToCoTaskMemUnicode_m693246360,
+	Marshal_SecureStringToGlobalAllocUnicode_m2008075760,
 	Marshal_StructureToPtr_m2294149499,
+	Marshal_UnsafeAddrOfPinnedArrayElement_m150120357,
+	Marshal_WriteInt16_m2918699913,
 	Marshal__cctor_m4007734770,
 	MarshalAsAttribute_Copy_m3596363673,
 	MarshalDirectiveException__ctor_m629358357,
@@ -22870,6 +26818,49 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SByte_System_IConvertible_ToType_m4075253447_AdjustorThunk,
 	STAThreadAttribute__ctor_m136465049,
 	AllowPartiallyTrustedCallersAttribute__ctor_m1248209229,
+	Claim__ctor_m925588550,
+	Claim__ctor_m92808774,
+	Claim__ctor_m560495157,
+	Claim_OnDeserializedMethod_m1696660466,
+	Claim_get_Properties_m627912764,
+	Claim_get_Subject_m4008085394,
+	Claim_set_Subject_m2014788445,
+	Claim_get_Type_m2905991604,
+	Claim_get_Value_m3864400481,
+	Claim_Clone_m276050063,
+	Claim_ToString_m4222319073,
+	ClaimsIdentity__ctor_m4233838133,
+	ClaimsIdentity__ctor_m4039595015,
+	ClaimsIdentity__ctor_m1400409419,
+	ClaimsIdentity__ctor_m577228747,
+	ClaimsIdentity__ctor_m774501317,
+	ClaimsIdentity_get_AuthenticationType_m1910179080,
+	ClaimsIdentity_get_Actor_m765230199,
+	ClaimsIdentity_set_Actor_m1125290988,
+	ClaimsIdentity_get_Claims_m3124579412,
+	ClaimsIdentity_get_Name_m2876031689,
+	ClaimsIdentity_Clone_m601653171,
+	ClaimsIdentity_SafeAddClaims_m3858210639,
+	ClaimsIdentity_SafeAddClaim_m330309067,
+	ClaimsIdentity_FindFirst_m3554441075,
+	ClaimsIdentity_OnSerializingMethod_m381813449,
+	ClaimsIdentity_OnDeserializedMethod_m1149206708,
+	ClaimsIdentity_OnDeserializingMethod_m134688790,
+	ClaimsIdentity_GetObjectData_m1224681264,
+	ClaimsIdentity_DeserializeClaims_m2773766138,
+	ClaimsIdentity_SerializeClaims_m202223928,
+	ClaimsIdentity_IsCircular_m2939970038,
+	ClaimsIdentity_Deserialize_m956164347,
+	U3Cget_ClaimsU3Ed__51__ctor_m2072997981,
+	U3Cget_ClaimsU3Ed__51_System_IDisposable_Dispose_m3808859965,
+	U3Cget_ClaimsU3Ed__51_MoveNext_m1673051519,
+	U3Cget_ClaimsU3Ed__51_U3CU3Em__Finally1_m3060671760,
+	U3Cget_ClaimsU3Ed__51_System_Collections_Generic_IEnumeratorU3CSystem_Security_Claims_ClaimU3E_get_Current_m1497436269,
+	U3Cget_ClaimsU3Ed__51_System_Collections_IEnumerator_get_Current_m1980774890,
+	U3Cget_ClaimsU3Ed__51_System_Collections_Generic_IEnumerableU3CSystem_Security_Claims_ClaimU3E_GetEnumerator_m2824736266,
+	U3Cget_ClaimsU3Ed__51_System_Collections_IEnumerable_GetEnumerator_m1470176210,
+	Aes__ctor_m3948213386,
+	Aes__cctor_m3602760359,
 	AsymmetricAlgorithm__ctor_m1554933721,
 	AsymmetricAlgorithm_Dispose_m2924213236,
 	AsymmetricAlgorithm_Clear_m1528825448,
@@ -22878,9 +26869,43 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	AsymmetricAlgorithm_set_KeySize_m2163393617,
 	AsymmetricAlgorithm_FromXmlString_m1565374883,
 	AsymmetricAlgorithm_ToXmlString_m2282287899,
+	AsymmetricSignatureDeformatter__ctor_m88114807,
+	AsymmetricSignatureFormatter__ctor_m3278494933,
 	CryptoConfig_EncodeOID_m2635914623,
 	CryptoConfig_EncodeLongNumber_m4127306320,
 	CryptoConfig_get_AllowOnlyFipsAlgorithms_m1608951570,
+	CryptoConfig_CreateFromName_m1538277313,
+	CryptoConfig_CreateFromName_m2674746512,
+	CryptoConfig_MapNameToOID_m433585183,
+	CryptoConfig_MapNameToOID_m2044758263,
+	CryptoStream__ctor_m2579441618,
+	CryptoStream_get_CanRead_m1208356619,
+	CryptoStream_get_CanSeek_m2794446924,
+	CryptoStream_get_CanWrite_m1675837824,
+	CryptoStream_get_Length_m1779430739,
+	CryptoStream_get_Position_m1986268930,
+	CryptoStream_set_Position_m2220811560,
+	CryptoStream_get_HasFlushedFinalBlock_m409177373,
+	CryptoStream_FlushFinalBlock_m2793658271,
+	CryptoStream_Flush_m3506473051,
+	CryptoStream_Seek_m575242055,
+	CryptoStream_Read_m27131851,
+	CryptoStream_ReadAsync_m3097409822,
+	CryptoStream_ReadAsyncInternal_m3337684600,
+	CryptoStream_Write_m2782388599,
+	CryptoStream_WriteAsync_m3151980906,
+	CryptoStream_WriteAsyncInternal_m2536873399,
+	CryptoStream_Clear_m3344566550,
+	CryptoStream_Dispose_m25308232,
+	CryptoStream_InitializeBuffer_m124780956,
+	U3CReadAsyncInternalU3Ed__34_MoveNext_m2031173151_AdjustorThunk,
+	U3CReadAsyncInternalU3Ed__34_SetStateMachine_m3908521864_AdjustorThunk,
+	U3CWriteAsyncInternalU3Ed__37_MoveNext_m3969482856_AdjustorThunk,
+	U3CWriteAsyncInternalU3Ed__37_SetStateMachine_m4067691956_AdjustorThunk,
+	HopToThreadPoolAwaitable_GetAwaiter_m1239336846_AdjustorThunk,
+	HopToThreadPoolAwaitable_get_IsCompleted_m727891479_AdjustorThunk,
+	HopToThreadPoolAwaitable_OnCompleted_m1603305937_AdjustorThunk,
+	HopToThreadPoolAwaitable_GetResult_m2404467789_AdjustorThunk,
 	CryptographicException__ctor_m1391449859,
 	CryptographicException__ctor_m503735289,
 	CryptographicException__ctor_m3803155940,
@@ -22927,13 +26952,19 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	DSACryptoServiceProvider_Common_m2921186191,
 	DSACryptoServiceProvider_Finalize_m1286601265,
 	DSACryptoServiceProvider_get_KeySize_m786836990,
+	DSACryptoServiceProvider_get_PublicOnly_m3933928860,
 	DSACryptoServiceProvider_ExportParameters_m591135777,
 	DSACryptoServiceProvider_ImportParameters_m611916501,
 	DSACryptoServiceProvider_Dispose_m1092393028,
 	DSACryptoServiceProvider_OnKeyGenerated_m2274596916,
+	DSASignatureDeformatter__ctor_m2759753186,
+	DSASignatureDescription__ctor_m2058525095,
+	DSASignatureFormatter__ctor_m2328815619,
 	HMAC_get_BlockSizeValue_m455678067,
+	HMAC_set_BlockSizeValue_m2639576659,
 	HMAC_UpdateIOPadBuffers_m392554853,
 	HMAC_InitializeKey_m4266546792,
+	HMAC_get_Key_m623825087,
 	HMAC_set_Key_m2848363914,
 	HMAC_Create_m2390117573,
 	HMAC_Initialize_m3157696427,
@@ -22941,17 +26972,33 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	HMAC_HashFinal_m1921180827,
 	HMAC_Dispose_m3665032088,
 	HMAC__ctor_m97939284,
+	HMACMD5__ctor_m3129799368,
+	HMACMD5__ctor_m3008609295,
+	HMACRIPEMD160__ctor_m4073272899,
+	HMACRIPEMD160__ctor_m2981281487,
 	HMACSHA1__ctor_m4144697316,
 	HMACSHA1__ctor_m446190279,
 	HMACSHA1__ctor_m2392899823,
+	HMACSHA256__ctor_m346174875,
+	HMACSHA256__ctor_m3379531528,
+	HMACSHA384__ctor_m82969736,
+	HMACSHA384__ctor_m1677515580,
+	HMACSHA384_get_BlockSize_m580913546,
+	HMACSHA512__ctor_m2615612210,
+	HMACSHA512__ctor_m348055215,
+	HMACSHA512_get_BlockSize_m1501243993,
 	HashAlgorithm__ctor_m190815979,
 	HashAlgorithm_get_HashSize_m1025185937,
 	HashAlgorithm_get_Hash_m482540885,
 	HashAlgorithm_ComputeHash_m2825542963,
 	HashAlgorithm_ComputeHash_m2044824070,
+	HashAlgorithm_get_InputBlockSize_m257350079,
+	HashAlgorithm_get_OutputBlockSize_m750814790,
+	HashAlgorithm_get_CanTransformMultipleBlocks_m3844268016,
 	HashAlgorithm_TransformBlock_m4006041779,
 	HashAlgorithm_TransformFinalBlock_m3005451348,
 	HashAlgorithm_Dispose_m1871119657,
+	HashAlgorithm_Clear_m210566534,
 	HashAlgorithm_Dispose_m620242512,
 	KeySizes_get_MinSize_m1903718763,
 	KeySizes_get_MaxSize_m3897255827,
@@ -22961,7 +27008,13 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	KeySizes_IsLegalKeySize_m2571462035,
 	KeyedHashAlgorithm__ctor_m4053775756,
 	KeyedHashAlgorithm_Dispose_m2325408902,
+	KeyedHashAlgorithm_get_Key_m1843505301,
 	KeyedHashAlgorithm_set_Key_m711403901,
+	MACTripleDES__ctor_m1301195406,
+	MACTripleDES_Initialize_m3918381832,
+	MACTripleDES_HashCore_m2803969153,
+	MACTripleDES_HashFinal_m3613553534,
+	MACTripleDES_Dispose_m3118990285,
 	MD5__ctor_m3848300604,
 	MD5_Create_m3522414168,
 	MD5CryptoServiceProvider__ctor_m3271163125,
@@ -22977,6 +27030,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	RC2__ctor_m1146135664,
 	RC2_get_EffectiveKeySize_m285632245,
 	RC2_get_KeySize_m146781412,
+	RC2_set_KeySize_m2968816949,
 	RC2_Create_m2516417038,
 	RC2__cctor_m2656505455,
 	RC2CryptoServiceProvider__ctor_m420166935,
@@ -23027,15 +27081,51 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	RSACryptoServiceProvider_Common_m3217200543,
 	RSACryptoServiceProvider_Finalize_m1969564496,
 	RSACryptoServiceProvider_get_KeySize_m2654153358,
+	RSACryptoServiceProvider_get_PublicOnly_m4039982639,
 	RSACryptoServiceProvider_ExportParameters_m3871179960,
 	RSACryptoServiceProvider_ImportParameters_m614616705,
 	RSACryptoServiceProvider_Dispose_m1199148535,
 	RSACryptoServiceProvider_OnKeyGenerated_m863837376,
 	RSACryptoServiceProvider__cctor_m3113818354,
+	RSAPKCS1SHA1SignatureDescription__ctor_m621804060,
+	RSAPKCS1SHA256SignatureDescription__ctor_m1492821747,
+	RSAPKCS1SHA384SignatureDescription__ctor_m928352185,
+	RSAPKCS1SHA512SignatureDescription__ctor_m770868799,
+	RSAPKCS1SignatureDeformatter__ctor_m3540701537,
+	RSAPKCS1SignatureDescription__ctor_m1979747438,
+	RSAPKCS1SignatureFormatter__ctor_m1234483002,
 	RandomNumberGenerator__ctor_m1589693309,
 	RandomNumberGenerator_Create_m4162970280,
 	RandomNumberGenerator_Dispose_m1185098319,
 	RandomNumberGenerator_Dispose_m1978955313,
+	Rijndael__ctor_m4179966697,
+	Rijndael__cctor_m680530060,
+	RijndaelManaged__ctor_m1562735454,
+	RijndaelManaged_CreateEncryptor_m263736311,
+	RijndaelManaged_CreateDecryptor_m1421727258,
+	RijndaelManaged_GenerateKey_m1736287430,
+	RijndaelManaged_GenerateIV_m667430910,
+	RijndaelManaged_NewEncryptor_m2879777809,
+	RijndaelManagedTransform__ctor_m3935711447,
+	RijndaelManagedTransform_Dispose_m216065913,
+	RijndaelManagedTransform_Dispose_m802058757,
+	RijndaelManagedTransform_get_InputBlockSize_m435716830,
+	RijndaelManagedTransform_get_OutputBlockSize_m2021582601,
+	RijndaelManagedTransform_get_CanTransformMultipleBlocks_m3163420465,
+	RijndaelManagedTransform_TransformBlock_m1610137419,
+	RijndaelManagedTransform_TransformFinalBlock_m1454105523,
+	RijndaelManagedTransform_Reset_m2046121569,
+	RijndaelManagedTransform_EncryptData_m1478679353,
+	RijndaelManagedTransform_DecryptData_m4104717438,
+	RijndaelManagedTransform_Enc_m1534038590,
+	RijndaelManagedTransform_Dec_m2421369688,
+	RijndaelManagedTransform_GenerateKeyExpansion_m1770589967,
+	RijndaelManagedTransform_rot1_m2335601179,
+	RijndaelManagedTransform_rot2_m2335959644,
+	RijndaelManagedTransform_rot3_m2335923773,
+	RijndaelManagedTransform_SubWord_m3684667904,
+	RijndaelManagedTransform_MulX_m503147123,
+	RijndaelManagedTransform__cctor_m2373606231,
 	SHA1__ctor_m2454864745,
 	SHA1_Create_m1390871308,
 	SHA1CryptoServiceProvider__ctor_m4195188793,
@@ -23119,11 +27209,17 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SHA512Managed_sigma_1_m885526015,
 	SHA512Managed_SHA512Expand_m2525424522,
 	SHA512Managed__cctor_m257307024,
+	SignatureDescription__ctor_m3689246904,
+	SignatureDescription_set_KeyAlgorithm_m3497860189,
+	SignatureDescription_set_DigestAlgorithm_m1385003273,
+	SignatureDescription_set_FormatterAlgorithm_m3829972493,
+	SignatureDescription_set_DeformatterAlgorithm_m2634775062,
 	SymmetricAlgorithm__ctor_m467277132,
 	SymmetricAlgorithm_Dispose_m3678375739,
 	SymmetricAlgorithm_Clear_m3302238152,
 	SymmetricAlgorithm_Dispose_m1120980942,
 	SymmetricAlgorithm_get_BlockSize_m3551721617,
+	SymmetricAlgorithm_set_BlockSize_m812732862,
 	SymmetricAlgorithm_get_FeedbackSize_m3666584308,
 	SymmetricAlgorithm_get_IV_m1875559108,
 	SymmetricAlgorithm_set_IV_m3196220308,
@@ -23131,12 +27227,29 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SymmetricAlgorithm_set_Key_m1775642191,
 	SymmetricAlgorithm_get_LegalKeySizes_m1340766361,
 	SymmetricAlgorithm_get_KeySize_m4185004893,
+	SymmetricAlgorithm_set_KeySize_m3805756466,
 	SymmetricAlgorithm_get_Mode_m654054760,
 	SymmetricAlgorithm_set_Mode_m4060916368,
 	SymmetricAlgorithm_get_Padding_m1011382560,
+	SymmetricAlgorithm_set_Padding_m1690860683,
 	SymmetricAlgorithm_ValidKeySize_m145782026,
+	SymmetricAlgorithm_Create_m2726390826,
 	SymmetricAlgorithm_CreateEncryptor_m617415315,
 	SymmetricAlgorithm_CreateDecryptor_m3477646776,
+	TailStream__ctor_m1224603666,
+	TailStream_Clear_m759969422,
+	TailStream_Dispose_m1234292632,
+	TailStream_get_Buffer_m3964203375,
+	TailStream_get_CanRead_m1466881677,
+	TailStream_get_CanSeek_m4245554096,
+	TailStream_get_CanWrite_m2800050779,
+	TailStream_get_Length_m1965470908,
+	TailStream_get_Position_m2489596103,
+	TailStream_set_Position_m1649077617,
+	TailStream_Flush_m2213219029,
+	TailStream_Seek_m2944265254,
+	TailStream_Read_m1890787708,
+	TailStream_Write_m2568464618,
 	TripleDES__ctor_m4045412014,
 	TripleDES_get_Key_m1921822970,
 	TripleDES_set_Key_m3464715319,
@@ -23168,14 +27281,27 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Utils_DWORDToBigEndian_m1121111060,
 	Utils_QuadWordFromBigEndian_m696841818,
 	Utils_QuadWordToBigEndian_m1808769854,
+	Utils__ProduceLegacyHmacValues_m1822029763,
+	X509Certificate__ctor_m1008109281,
+	X509Certificate__ctor_m1413707489,
 	X509Certificate__ctor_m1615516314,
+	X509Certificate__ctor_m191107012,
+	X509Certificate_ImportHandle_m3345665337,
 	X509Certificate_get_Impl_m112040495,
+	X509Certificate_get_IsValid_m3407984170,
 	X509Certificate_Equals_m861530042,
+	X509Certificate_GetCertHash_m274210048,
+	X509Certificate_GetCertHashString_m3484127109,
 	X509Certificate_GetHashCode_m3969199094,
 	X509Certificate_GetRawCertData_m781236105,
+	X509Certificate_GetSerialNumber_m2322035831,
+	X509Certificate_GetSerialNumberString_m2772092361,
 	X509Certificate_ToString_m3415629710,
+	X509Certificate_ToString_m2340207075,
 	X509Certificate__ctor_m1321742168,
 	X509Certificate__ctor_m4186241804,
+	X509Certificate_get_Issuer_m2934704867,
+	X509Certificate_get_Subject_m2638144878,
 	X509Certificate_Equals_m3784196370,
 	X509Certificate_Import_m3563119820,
 	X509Certificate_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m1836612204,
@@ -23184,6 +27310,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	X509Certificate_Dispose_m3624713560,
 	X509Certificate_Reset_m2350932593,
 	X509CertificateImpl_ThrowIfContextInvalid_m1865141720,
+	X509CertificateImpl_GetCertHash_m1622475645,
 	X509CertificateImpl_GetHashCode_m3856895821,
 	X509CertificateImpl_Equals_m3406216243,
 	X509CertificateImpl_Dispose_m2632237318,
@@ -23193,11 +27320,19 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	X509CertificateImplMono__ctor_m3571609497,
 	X509CertificateImplMono_get_IsValid_m2444313535,
 	X509CertificateImplMono_Clone_m2691821495,
+	X509CertificateImplMono_GetIssuerName_m1851908077,
+	X509CertificateImplMono_GetSubjectName_m4180800209,
 	X509CertificateImplMono_GetRawCertData_m3928675457,
 	X509CertificateImplMono_GetCertHash_m613576606,
+	X509CertificateImplMono_GetValidFrom_m3481591650,
+	X509CertificateImplMono_GetValidUntil_m3336853150,
 	X509CertificateImplMono_Equals_m2922634716,
+	X509CertificateImplMono_GetSerialNumber_m165483427,
+	X509CertificateImplMono_ToString_m695573008,
 	X509CertificateImplMono_Dispose_m3545908891,
+	X509Helper_InstallNativeHelper_m1191985038,
 	X509Helper_Import_m2730756183,
+	X509Helper_InitFromCertificate_m3506677473,
 	X509Helper_InitFromCertificate_m2533824453,
 	X509Helper_IsValid_m3465452120,
 	X509Helper_ThrowIfContextInvalid_m2855098691,
@@ -23207,6 +27342,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	X509Helper_ConvertData_m2017214147,
 	X509Helper_ImportCore_m2440286727,
 	X509Helper_Import_m3675298546,
+	X509Helper_ToHexString_m749786210,
 	CodeAccessSecurityAttribute__ctor_m3436477178,
 	EnvironmentPermissionAttribute_set_Read_m350085520,
 	HostProtectionAttribute__ctor_m531878327,
@@ -23219,6 +27355,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SecurityAttribute_set_Unrestricted_m2028707146,
 	SecurityAttribute_set_Action_m2311651264,
 	SecurityPermissionAttribute_set_ControlAppDomain_m618096486,
+	SecurityPermissionAttribute_set_ControlPrincipal_m2178200400,
 	SecurityPermissionAttribute_set_Infrastructure_m4170171695,
 	SecurityPermissionAttribute_set_SerializationFormatter_m1861697955,
 	SecurityPermissionAttribute_set_SkipVerification_m4061350763,
@@ -23233,6 +27370,35 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	EvidenceEnumerator__ctor_m3211544433,
 	EvidenceEnumerator_MoveNext_m183460296,
 	EvidenceEnumerator_get_Current_m1264365535,
+	WindowsIdentity__ctor_m2393419445,
+	WindowsIdentity__ctor_m3086466707,
+	WindowsIdentity_Dispose_m3466258450,
+	WindowsIdentity_GetCurrent_m1580103511,
+	WindowsIdentity_Impersonate_m410889906,
+	WindowsIdentity_get_AuthenticationType_m2794530159,
+	WindowsIdentity_get_Name_m670606912,
+	WindowsIdentity_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m3428853631,
+	WindowsIdentity_System_Runtime_Serialization_ISerializable_GetObjectData_m2539658116,
+	WindowsIdentity_SetToken_m5416170,
+	WindowsIdentity_GetCurrentToken_m841791956,
+	WindowsIdentity_GetTokenName_m2370798233,
+	WindowsIdentity__cctor_m1315799505,
+	WindowsImpersonationContext__ctor_m1421675779,
+	WindowsImpersonationContext_Dispose_m1824099561,
+	WindowsImpersonationContext_Undo_m1788549904,
+	WindowsImpersonationContext_CloseToken_m2482102689,
+	WindowsImpersonationContext_DuplicateToken_m2331993248,
+	WindowsImpersonationContext_SetCurrentToken_m4125395107,
+	WindowsImpersonationContext_RevertToSelf_m319817949,
+	SecureString__cctor_m1119796178,
+	SecureString__ctor_m3758011503,
+	SecureString__ctor_m3858760223,
+	SecureString_get_Length_m2668828297,
+	SecureString_Dispose_m2058418160,
+	SecureString_Encrypt_m3450275650,
+	SecureString_Decrypt_m3709208681,
+	SecureString_Alloc_m3394320149,
+	SecureString_GetBuffer_m4082131072,
 	SecurityCriticalAttribute__ctor_m2491468454,
 	SecurityDocument__ctor_m2184623272,
 	SecurityDocument_GuaranteeSize_m1414581038,
@@ -23359,6 +27525,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	StackOverflowException__ctor_m3139217097,
 	StackOverflowException__ctor_m3777153282,
 	String_Join_m2050845953,
+	String_Join_m2554858014,
 	String_Join_m29736248,
 	String_CompareOrdinalIgnoreCaseHelper_m831932380,
 	String_EqualsHelper_m1441869209,
@@ -23378,6 +27545,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	String_GetHashCode_m1906374149,
 	String_GetLegacyNonRandomizedHashCode_m1232685035,
 	String_Split_m3646115398,
+	String_Split_m1466646415,
 	String_SplitInternal_m3428642536,
 	String_InternalSplitKeepEmptyEntries_m901972134,
 	String_InternalSplitOmitEmptyEntries_m990064860,
@@ -23403,6 +27571,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	String_CtorCharPtr_m1269543898,
 	String_CtorCharPtrStartLength_m2801827237,
 	String__ctor_m229724522,
+	String_Compare_m1071830722,
 	String_Compare_m3203413707,
 	String_Compare_m1293271421,
 	String_Compare_m3831643854,
@@ -23437,6 +27606,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	String_ToLower_m2029374922,
 	String_ToLower_m3490221821,
 	String_ToLowerInvariant_m110751226,
+	String_ToUpper_m3324454496,
 	String_ToUpper_m1599942017,
 	String_ToUpperInvariant_m2531236323,
 	String_ToString_m838249115,
@@ -23451,6 +27621,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	String_Replace_m3726209165,
 	String_Replace_m1273907647,
 	String_Remove_m562998446,
+	String_Remove_m1524948975,
 	String_Format_m2844511972,
 	String_Format_m2556382932,
 	String_Format_m3339413201,
@@ -23925,6 +28096,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	StringBuilder_AppendLine_m1438862993,
 	StringBuilder_Insert_m1991415059,
 	StringBuilder_Remove_m940064945,
+	StringBuilder_Append_m1417019054,
 	StringBuilder_Append_m2383614642,
 	StringBuilder_Append_m890240332,
 	StringBuilder_Append_m3611229522,
@@ -24115,6 +28287,13 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	AbandonedMutexException__ctor_m3664482073,
 	AbandonedMutexException_SetupException_m2048349130,
 	AbandonedMutexException__ctor_m1298898255,
+	AtomicBoolean_TryRelaxedSet_m184349447,
+	AtomicBoolean_Exchange_m2985221762,
+	AtomicBoolean_Equals_m3534265207,
+	AtomicBoolean_Equals_m1403066784,
+	AtomicBoolean_GetHashCode_m908361725,
+	AtomicBoolean__ctor_m2830875096,
+	AutoResetEvent__ctor_m3710433672,
 	CancellationCallbackCoreWorkArguments__ctor_m3294819760_AdjustorThunk,
 	CancellationCallbackInfo__ctor_m1827777858,
 	CancellationCallbackInfo_ExecuteCallback_m3875509614,
@@ -24351,6 +28530,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SynchronizationContext__ctor_m2514243817,
 	SynchronizationContext_Send_m3071723711,
 	SynchronizationContext_Post_m2119776762,
+	SynchronizationContext_OperationStarted_m1309693218,
+	SynchronizationContext_OperationCompleted_m51204712,
 	SynchronizationContext_SetSynchronizationContext_m1249070039,
 	SynchronizationContext_get_Current_m3666546046,
 	SynchronizationContext_get_CurrentNoFlow_m3947879792,
@@ -24405,6 +28586,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Task_RemoveFromActiveTasks_m3338298932,
 	Task__ctor_m2785691336,
 	Task__ctor_m3380090582,
+	Task__ctor_m3094793396,
 	Task__ctor_m388757629,
 	Task_TaskConstructorCore_m549958937,
 	Task_AssignCancellationToken_m1690011386,
@@ -24446,6 +28628,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Task_get_AsyncState_m2023606958,
 	Task_System_IAsyncResult_get_CompletedSynchronously_m2155283641,
 	Task_get_ExecutingTaskScheduler_m2823307735,
+	Task_get_Factory_m1867023094,
 	Task_get_CompletedTask_m459565641,
 	Task_get_CompletedEvent_m3097339089,
 	Task_get_IsSelfReplicatingRoot_m3998940698,
@@ -24492,6 +28675,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Task_GetAwaiter_m3638629061,
 	Task_ConfigureAwait_m898394246,
 	Task_SetContinuationForAwait_m561610512,
+	Task_Yield_m2010610529,
 	Task_Wait_m3400956199,
 	Task_Wait_m2706153006,
 	Task_WrappedTryRunInline_m4140327029,
@@ -24506,6 +28690,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Task_SetCancellationAcknowledged_m97510063,
 	Task_FinishContinuations_m651739200,
 	Task_LogFinishCompletionNotification_m2500690513,
+	Task_ContinueWith_m693071538,
+	Task_ContinueWith_m3968596572,
 	Task_ContinueWith_m1818927876,
 	Task_ContinueWith_m922426921,
 	Task_CreationOptionsFromContinuationOptions_m1757157180,
@@ -24518,6 +28704,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Task_FromException_m3324787540,
 	Task_FromCancellation_m961699946,
 	Task_Run_m1807195689,
+	Task_Delay_m2131508895,
 	Task_Delay_m3217627525,
 	Task_WhenAny_m377770228,
 	Task__cctor_m1239267871,
@@ -24560,6 +28747,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TaskFactory__ctor_m89339648,
 	TaskFactory__ctor_m296518814,
 	TaskFactory_CheckCreationOptions_m1813633372,
+	TaskFactory_StartNew_m85728641,
+	TaskFactory_CheckFromAsyncOptions_m4125018144,
 	TaskFactory_CommonCWAnyLogic_m2930841392,
 	TaskFactory_CheckMultiTaskContinuationOptions_m4248755655,
 	CompleteOnInvokePromise__ctor_m2178615687,
@@ -24572,6 +28761,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TaskScheduler__ctor_m1745633553,
 	TaskScheduler_AddToActiveTaskSchedulers_m446604333,
 	TaskScheduler_get_Default_m1400371958,
+	TaskScheduler_get_Current_m2848373821,
 	TaskScheduler_get_InternalCurrent_m3872855803,
 	TaskScheduler_get_Id_m1632459061,
 	TaskScheduler_PublishUnobservedTaskException_m1144102238,
@@ -24592,6 +28782,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TaskWrapperAsyncResult__ctor_m2613763674,
 	TaskWrapperAsyncResult_System_IAsyncResult_get_AsyncState_m67269097,
 	TaskWrapperAsyncResult_System_IAsyncResult_get_CompletedSynchronously_m1461264238,
+	TaskWrapperAsyncResult_System_IAsyncResult_get_IsCompleted_m735336054,
 	TaskWrapperAsyncResult_System_IAsyncResult_get_AsyncWaitHandle_m3327853676,
 	ThreadPoolTaskScheduler__ctor_m3102757189,
 	ThreadPoolTaskScheduler_LongRunningThreadWork_m3561619887,
@@ -24664,6 +28855,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ThreadPool_RegisterWaitForSingleObject_m2328023622,
 	ThreadPool_RegisterWaitForSingleObject_m3011264028,
 	ThreadPool_QueueUserWorkItem_m1526970260,
+	ThreadPool_QueueUserWorkItem_m3658723935,
 	ThreadPool_UnsafeQueueUserWorkItem_m247000765,
 	ThreadPool_QueueUserWorkItemHelper_m730528440,
 	ThreadPool_UnsafeQueueCustomWorkItem_m3195526182,
@@ -24883,6 +29075,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TimeZoneInfo_IsAmbiguousTime_m2195454932,
 	TimeZoneInfo_IsInDST_m117760621,
 	TimeZoneInfo_IsInDSTForYear_m1097689508,
+	TimeZoneInfo_IsDaylightSavingTime_m3070773214,
+	TimeZoneInfo_IsDaylightSavingTime_m787285489,
 	TimeZoneInfo_IsInvalidTime_m1172729139,
 	TimeZoneInfo_System_Runtime_Serialization_IDeserializationCallback_OnDeserialization_m3043568815,
 	TimeZoneInfo_Validate_m1076521260,
@@ -25125,8 +29319,10 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	UInt32_ToString_m4293943134_AdjustorThunk,
 	UInt32_ToString_m2066897296_AdjustorThunk,
 	UInt32_ToString_m2420423038_AdjustorThunk,
+	UInt32_Parse_m3270868885,
 	UInt32_Parse_m1373460382,
 	UInt32_Parse_m3755665066,
+	UInt32_TryParse_m535404612,
 	UInt32_GetTypeCode_m88917904_AdjustorThunk,
 	UInt32_System_IConvertible_ToBoolean_m1763673183_AdjustorThunk,
 	UInt32_System_IConvertible_ToChar_m1873050533_AdjustorThunk,
@@ -25217,6 +29413,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ValueType_ToString_m2292123621,
 	Variant_Clear_m3388694274_AdjustorThunk,
 	Version__ctor_m417728625,
+	Version__ctor_m3537335798,
 	Version__ctor_m872301635,
 	Version_get_Major_m2457928275,
 	Version_get_Minor_m150536655,
@@ -25233,6 +29430,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Version_AppendPositiveNumber_m308762805,
 	Version_op_Equality_m3804852517,
 	Version_op_Inequality_m1696193441,
+	Version_op_LessThan_m3745610070,
 	Version__cctor_m3568671087,
 	WeakReference_AllocateHandle_m1478975559,
 	WeakReference__ctor_m24376735,
@@ -25284,12 +29482,122 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	__Il2CppComDelegate_Finalize_m2460829410,
 	__Il2CppComObject_Finalize_m2923638372,
 	U3CPrivateImplementationDetailsU3E_ComputeStringHash_m3680781468,
+	NtlmClient_Authenticate_m3788011141,
+	NtlmClient_PreAuthenticate_m3480122211,
+	NtlmClient_get_AuthenticationType_m51968676,
+	NtlmClient__ctor_m1381816452,
+	NtlmClient__cctor_m453270488,
+	U3CU3Ec__cctor_m213456361,
+	U3CU3Ec__ctor_m3229642877,
+	U3CU3Ec_U3CAuthenticateU3Eb__1_0_m1309887775,
+	NtlmSession__ctor_m1068225513,
+	NtlmSession_Authenticate_m3073397663,
+	CFArray__ctor_m1903909651,
+	CFArray__cctor_m3799625831,
+	CFArray_CFArrayGetCount_m1002749626,
+	CFArray_get_Count_m643623292,
+	CFArray_CFArrayGetValueAtIndex_m3670347928,
+	CFArray_get_Item_m411150077,
+	CFDictionary__cctor_m2374380551,
+	CFDictionary__ctor_m2715111062,
+	CFDictionary_CFDictionaryGetValue_m2375246273,
+	CFDictionary_GetValue_m2058097258,
+	CFDictionary_get_Item_m1774255411,
+	CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScriptSequential_m924242219,
+	CFNetwork_CFNetworkExecuteProxyAutoConfigurationURL_m291606633,
+	CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScriptThread_m3555933794,
+	CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScript_m3303129332,
+	CFNetwork_CopyProxiesForAutoConfigurationScript_m303817052,
+	CFNetwork_GetProxiesForAutoConfigurationScript_m5223155,
+	CFNetwork_GetProxiesForAutoConfigurationScript_m571709647,
+	CFNetwork_ExecuteProxyAutoConfigurationURL_m3663236471,
+	CFNetwork_CFNetworkCopyProxiesForURL_m484828488,
+	CFNetwork_CopyProxiesForURL_m3242481072,
+	CFNetwork_GetProxiesForURL_m699197090,
+	CFNetwork_GetProxiesForUri_m1791810095,
+	CFNetwork_CFNetworkCopySystemProxySettings_m1347893462,
+	CFNetwork_GetSystemProxySettings_m3704350829,
+	CFNetwork_GetDefaultProxy_m3029574576,
+	CFNetwork__cctor_m243831456,
+	U3CU3Ec__DisplayClass13_0__ctor_m661813827,
+	U3CU3Ec__DisplayClass13_0_U3CExecuteProxyAutoConfigurationURLU3Eb__0_m2694075153,
+	CFProxyAutoConfigurationResultCallback__ctor_m3326831323,
+	CFProxyAutoConfigurationResultCallback_Invoke_m965639529,
+	CFProxyAutoConfigurationResultCallback_BeginInvoke_m2504056180,
+	CFProxyAutoConfigurationResultCallback_EndInvoke_m3917502550,
+	CFWebProxy__ctor_m3770609225,
+	CFWebProxy_get_Credentials_m2623016350,
+	CFWebProxy_GetProxyUri_m1779378488,
+	CFWebProxy_GetProxyUriFromScript_m4242154088,
+	CFWebProxy_ExecuteProxyAutoConfigurationURL_m104646007,
+	CFWebProxy_SelectProxy_m459710337,
+	CFWebProxy_GetProxy_m294039492,
+	CFWebProxy_IsBypassed_m1139341593,
+	GetProxyData_Dispose_m2710419033,
+	GetProxyData__ctor_m759515017,
+	CFNumber_CFNumberGetValue_m402168296,
+	CFNumber_AsInt32_m1148482418,
+	CFObject_dlopen_m2196904543,
+	CFObject_dlsym_m595782338,
+	CFObject_dlclose_m3646576298,
+	CFObject_GetIndirect_m3832654966,
+	CFObject_GetCFObjectHandle_m4202268843,
+	CFObject__ctor_m596499085,
+	CFObject_Finalize_m2237806501,
+	CFObject_get_Handle_m307265504,
+	CFObject_set_Handle_m3434789835,
+	CFObject_CFRetain_m1826705405,
+	CFObject_Retain_m2474383236,
+	CFObject_CFRelease_m2797350312,
+	CFObject_Release_m1001760164,
+	CFObject_Dispose_m1273647554,
+	CFObject_Dispose_m2497169197,
+	CFProxy__cctor_m2444530606,
+	CFProxy__ctor_m439029593,
+	CFProxy_CFProxyTypeToEnum_m3103370950,
+	CFProxy_get_AutoConfigurationJavaScript_m2126828292,
+	CFProxy_get_AutoConfigurationUrl_m744644921,
+	CFProxy_get_HostName_m3256594794,
+	CFProxy_get_Password_m194975178,
+	CFProxy_get_Port_m4213074424,
+	CFProxy_get_ProxyType_m1798149169,
+	CFProxy_get_Username_m4129332844,
+	CFProxySettings__cctor_m277964760,
+	CFProxySettings__ctor_m3994659438,
+	CFProxySettings_get_Dictionary_m2400889762,
+	CFRange__ctor_m3886167604_AdjustorThunk,
+	CFRunLoop_CFRunLoopAddSource_m2965042489,
+	CFRunLoop_CFRunLoopRemoveSource_m763029824,
+	CFRunLoop_CFRunLoopRunInMode_m581095949,
+	CFRunLoop_CFRunLoopGetCurrent_m2892019185,
+	CFRunLoop_CFRunLoopStop_m1918505947,
+	CFRunLoop__ctor_m1257055159,
+	CFRunLoop_get_CurrentRunLoop_m3857329098,
+	CFRunLoop_AddSource_m1967660794,
+	CFRunLoop_RemoveSource_m1028016313,
+	CFRunLoop_RunInMode_m1609836476,
+	CFRunLoop_Stop_m3093059680,
+	CFString__ctor_m290680435,
+	CFString_CFStringCreateWithCharacters_m2316698363,
+	CFString_Create_m2201510964,
+	CFString_CFStringGetLength_m1176686223,
+	CFString_CFStringGetCharactersPtr_m860561497,
+	CFString_CFStringGetCharacters_m175531504,
+	CFString_AsString_m3024457809,
+	CFString_ToString_m834010119,
+	CFUrl__ctor_m1457090725,
+	CFUrl_CFURLCreateWithString_m3595712251,
+	CFUrl_Create_m2484430943,
+	AsyncHandshakeRequest__ctor_m3485110453,
+	AsyncHandshakeRequest_Run_m1684165545,
 	AsyncProtocolRequest_get_Parent_m2638248309,
 	AsyncProtocolRequest_get_RunSynchronously_m693190554,
 	AsyncProtocolRequest_get_Name_m1954591517,
 	AsyncProtocolRequest_get_UserResult_m1135125824,
 	AsyncProtocolRequest_set_UserResult_m546480187,
 	AsyncProtocolRequest__ctor_m2247237635,
+	AsyncProtocolRequest_RequestRead_m3692739054,
+	AsyncProtocolRequest_RequestWrite_m2242948388,
 	AsyncProtocolRequest_StartOperation_m2596759969,
 	AsyncProtocolRequest_ProcessOperation_m113656365,
 	AsyncProtocolRequest_InnerRead_m1229791229,
@@ -25319,11 +29627,28 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	BufferOffsetSize_ToString_m2007583874,
 	BufferOffsetSize2__ctor_m2699554667,
 	BufferOffsetSize2_Reset_m3518760952,
+	BufferOffsetSize2_MakeRoom_m3582672808,
+	BufferOffsetSize2_AppendData_m2863894092,
+	ChainValidationHelper_GetInternalValidator_m2014916002,
+	ChainValidationHelper_Create_m185021580,
+	ChainValidationHelper__ctor_m1390521503,
+	ChainValidationHelper_DefaultSelectionCallback_m3541256544,
+	ChainValidationHelper_get_Settings_m533975297,
+	ChainValidationHelper_SelectClientCertificate_m438409409,
+	ChainValidationHelper_ValidateCertificate_m3957084492,
+	ChainValidationHelper_ValidateCertificate_m2831963176,
+	ChainValidationHelper_ValidateChain_m1169788960,
+	ChainValidationHelper_ValidateChain_m709772854,
 	MobileAuthenticatedStream__ctor_m4070405799,
+	MobileAuthenticatedStream_get_Settings_m3126667196,
+	MobileAuthenticatedStream_get_Provider_m14306411,
 	MobileAuthenticatedStream_CheckThrow_m3982772620,
 	MobileAuthenticatedStream_GetSSPIException_m3901100621,
 	MobileAuthenticatedStream_GetIOException_m35045089,
 	MobileAuthenticatedStream_SetException_m2616150076,
+	MobileAuthenticatedStream_AuthenticateAsClient_m3336452272,
+	MobileAuthenticatedStream_get_AuthenticatedStream_m1691169205,
+	MobileAuthenticatedStream_ProcessAuthentication_m979422748,
 	MobileAuthenticatedStream_BeginRead_m3123025341,
 	MobileAuthenticatedStream_EndRead_m1229205997,
 	MobileAuthenticatedStream_BeginWrite_m2647814544,
@@ -25333,13 +29658,19 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	MobileAuthenticatedStream_ReadAsync_m2676896515,
 	MobileAuthenticatedStream_WriteAsync_m3803054234,
 	MobileAuthenticatedStream_StartOperation_m74811008,
+	MobileAuthenticatedStream_InternalRead_m16956880,
+	MobileAuthenticatedStream_InternalRead_m3507415975,
+	MobileAuthenticatedStream_InternalWrite_m530119457,
+	MobileAuthenticatedStream_InternalWrite_m3406118459,
 	MobileAuthenticatedStream_InnerRead_m1183245555,
 	MobileAuthenticatedStream_InnerWrite_m3591825083,
+	MobileAuthenticatedStream_ProcessHandshake_m1385946050,
 	MobileAuthenticatedStream_ProcessRead_m2116869112,
 	MobileAuthenticatedStream_ProcessWrite_m1610824738,
 	MobileAuthenticatedStream_get_IsAuthenticated_m4148336029,
 	MobileAuthenticatedStream_Dispose_m34998259,
 	MobileAuthenticatedStream_Flush_m1701402090,
+	MobileAuthenticatedStream_get_InternalLocalCertificate_m2787578847,
 	MobileAuthenticatedStream_Seek_m3503029717,
 	MobileAuthenticatedStream_get_CanRead_m2220636602,
 	MobileAuthenticatedStream_get_CanWrite_m3841633088,
@@ -25347,6 +29678,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	MobileAuthenticatedStream_get_Length_m896892631,
 	MobileAuthenticatedStream_get_Position_m631195484,
 	MobileAuthenticatedStream_set_Position_m2903160421,
+	MobileAuthenticatedStream_get_ReadTimeout_m3937749431,
+	MobileAuthenticatedStream_get_WriteTimeout_m1188487123,
 	MobileAuthenticatedStream__cctor_m3668863800,
 	MobileAuthenticatedStream_U3CInnerWriteU3Eb__67_0_m1100969782,
 	U3CU3Ec__DisplayClass66_0__ctor_m2195021340,
@@ -25355,17 +29688,59 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	U3CInnerReadU3Ed__66_SetStateMachine_m1201820091_AdjustorThunk,
 	U3CInnerWriteU3Ed__67_MoveNext_m256243508_AdjustorThunk,
 	U3CInnerWriteU3Ed__67_SetStateMachine_m2634015813_AdjustorThunk,
+	U3CProcessAuthenticationU3Ed__47_MoveNext_m4056596982_AdjustorThunk,
+	U3CProcessAuthenticationU3Ed__47_SetStateMachine_m3204264459_AdjustorThunk,
 	U3CStartOperationU3Ed__58_MoveNext_m2753508916_AdjustorThunk,
 	U3CStartOperationU3Ed__58_SetStateMachine_m3471844915_AdjustorThunk,
+	MobileTlsContext__ctor_m3163915392,
+	MobileTlsContext_get_Parent_m532676559,
+	MobileTlsContext_get_Settings_m346835864,
+	MobileTlsContext_get_IsServer_m3430371986,
+	MobileTlsContext_get_TargetHost_m956960372,
+	MobileTlsContext_get_ServerName_m1604723090,
+	MobileTlsContext_get_AskForClientCertificate_m1475525174,
+	MobileTlsContext_get_ClientCertificates_m800981176,
+	MobileTlsContext_get_LocalServerCertificate_m1659090433,
+	MobileTlsContext_ValidateCertificate_m1082528530,
+	MobileTlsContext_ValidateCertificate_m4079223291,
+	MobileTlsContext_SelectClientCertificate_m1928717509,
 	MobileTlsContext_Dispose_m1310769470,
 	MobileTlsContext_Dispose_m50561717,
 	MobileTlsContext_Finalize_m3061609725,
+	MonoTlsProviderFactory_GetProviderInternal_m2709244244,
+	MonoTlsProviderFactory_InitializeInternal_m2925452808,
+	MonoTlsProviderFactory_LookupProvider_m1821132006,
+	MonoTlsProviderFactory_InitializeProviderRegistration_m2781693486,
+	MonoTlsProviderFactory_CreateDefaultProviderImpl_m1038092501,
+	MonoTlsProviderFactory_GetProvider_m35375509,
 	MonoTlsProviderFactory__cctor_m2240045709,
+	MonoTlsStream_get_Request_m62998229,
+	MonoTlsStream_get_ExceptionStatus_m2449772005,
+	MonoTlsStream_get_CertificateValidationFailed_m4226823951,
+	MonoTlsStream_set_CertificateValidationFailed_m2435816553,
+	MonoTlsStream__ctor_m2909716305,
+	MonoTlsStream_CreateStream_m973768516,
+	NoReflectionHelper_GetInternalValidator_m343836325,
+	CallbackHelpers_MonoToPublic_m3981770249,
+	CallbackHelpers_MonoToInternal_m1710200631,
+	U3CU3Ec__DisplayClass5_0__ctor_m1052120824,
+	U3CU3Ec__DisplayClass5_0_U3CMonoToPublicU3Eb__0_m1672356517,
+	U3CU3Ec__DisplayClass8_0__ctor_m2551395893,
+	U3CU3Ec__DisplayClass8_0_U3CMonoToInternalU3Eb__0_m3800143544,
+	ServerCertValidationCallbackWrapper__ctor_m2727365875,
+	ServerCertValidationCallbackWrapper_Invoke_m3737693895,
+	ServerCertValidationCallbackWrapper_BeginInvoke_m2434951709,
+	ServerCertValidationCallbackWrapper_EndInvoke_m1826954774,
 	SystemCertificateValidator__cctor_m2476960537,
 	SystemCertificateValidator_CreateX509Chain_m4142357983,
+	SystemCertificateValidator_NeedsChain_m4132135282,
 	CertHelper_AddCertificatesToNativeChain_m1534954420,
 	CertHelper_AddCertificateToNativeChain_m3389970623,
+	CertHelper_NativeChainToManagedCollection_m3715941214,
+	Debug_CheckAndThrow_m568412774,
+	Debug_CheckAndThrow_m3340652565,
 	UnityTls_GetUnityTlsInterface_m3854094726,
+	UnityTls_get_IsSupported_m1198242632,
 	UnityTls_get_NativeInterface_m3537583611,
 	UnityTls__cctor_m2408899148,
 	unitytls_interface_struct__ctor_m2441253307,
@@ -25513,6 +29888,29 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	unitytls_x509verify_callback_Invoke_m3163401178,
 	unitytls_x509verify_callback_BeginInvoke_m4236871278,
 	unitytls_x509verify_callback_EndInvoke_m193239696,
+	UnityTlsContext__ctor_m3745233880,
+	UnityTlsContext_ExtractNativeKeyAndChainFromManagedCertificate_m3543144651,
+	UnityTlsContext_get_IsAuthenticated_m2050788491,
+	UnityTlsContext_get_LocalClientCertificate_m398027640,
+	UnityTlsContext_Read_m2903607179,
+	UnityTlsContext_Write_m1308053234,
+	UnityTlsContext_Shutdown_m3857541029,
+	UnityTlsContext_Dispose_m2820087906,
+	UnityTlsContext_StartHandshake_m1751330757,
+	UnityTlsContext_ProcessHandshake_m1836962403,
+	UnityTlsContext_FinishHandshake_m752664986,
+	UnityTlsContext_WriteCallback_m574372540,
+	UnityTlsContext_WriteCallback_m1810981895,
+	UnityTlsContext_ReadCallback_m3273793046,
+	UnityTlsContext_ReadCallback_m2637265962,
+	UnityTlsContext_VerifyCallback_m2272716052,
+	UnityTlsContext_VerifyCallback_m4003333694,
+	UnityTlsContext_CertificateCallback_m3892869084,
+	UnityTlsContext_CertificateCallback_m2074768585,
+	UnityTlsConversions_GetMinProtocol_m2001406480,
+	UnityTlsConversions_GetMaxProtocol_m1049620341,
+	UnityTlsConversions_ConvertProtocolVersion_m957170432,
+	UnityTlsConversions_VerifyResultToAlertDescription_m4177764141,
 	UnityTlsConversions_VerifyResultToPolicyErrror_m3883138893,
 	UnityTlsProvider_get_Name_m1593580798,
 	UnityTlsProvider_get_ID_m911070814,
@@ -25526,9 +29924,118 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	UnityTlsProvider_ValidateCertificate_m2026050918,
 	UnityTlsProvider__ctor_m552185683,
 	UnityTlsStream__ctor_m1523863898,
+	UnityTlsStream_CreateContext_m3044809826,
+	MonoPInvokeCallbackAttribute__ctor_m2558661764,
 	SR_GetString_m2133537544,
 	SR_GetString_m724370819,
 	SR_GetString_m1137630943,
+	CompatibleComparer__ctor_m2920869396,
+	CompatibleComparer_Equals_m542988228,
+	CompatibleComparer_GetHashCode_m3589838751,
+	CompatibleComparer_get_Comparer_m3056740477,
+	CompatibleComparer_get_HashCodeProvider_m3201200693,
+	CompatibleComparer_get_DefaultComparer_m3623034394,
+	CompatibleComparer_get_DefaultHashCodeProvider_m2717920064,
+	HybridDictionary__ctor_m2970901694,
+	HybridDictionary_get_Item_m319681963,
+	HybridDictionary_set_Item_m2997363718,
+	HybridDictionary_get_List_m1853268389,
+	HybridDictionary_ChangeOver_m379035322,
+	HybridDictionary_get_Count_m1166314536,
+	HybridDictionary_get_IsSynchronized_m2987560362,
+	HybridDictionary_get_SyncRoot_m1538457321,
+	HybridDictionary_Add_m912320053,
+	HybridDictionary_CopyTo_m3592404936,
+	HybridDictionary_GetEnumerator_m1379032493,
+	HybridDictionary_System_Collections_IEnumerable_GetEnumerator_m168538452,
+	ListDictionary__ctor_m2955211750,
+	ListDictionary__ctor_m438204031,
+	ListDictionary_get_Item_m1272472363,
+	ListDictionary_set_Item_m1659493973,
+	ListDictionary_get_Count_m414236492,
+	ListDictionary_get_IsSynchronized_m1093324729,
+	ListDictionary_get_SyncRoot_m4242825143,
+	ListDictionary_Add_m3918308031,
+	ListDictionary_CopyTo_m1633862866,
+	ListDictionary_GetEnumerator_m3395631195,
+	ListDictionary_System_Collections_IEnumerable_GetEnumerator_m884729149,
+	DictionaryNode__ctor_m2480329019,
+	NodeEnumerator__ctor_m2912083748,
+	NodeEnumerator_get_Current_m3114585690,
+	NodeEnumerator_get_Entry_m1251277814,
+	NodeEnumerator_get_Key_m303954471,
+	NodeEnumerator_get_Value_m3906478675,
+	NodeEnumerator_MoveNext_m2839035034,
+	NameObjectCollectionBase__ctor_m2090733912,
+	NameObjectCollectionBase__ctor_m3828441930,
+	NameObjectCollectionBase__ctor_m2913187925,
+	NameObjectCollectionBase__ctor_m2288607023,
+	NameObjectCollectionBase__ctor_m1512146076,
+	NameObjectCollectionBase_GetObjectData_m199708727,
+	NameObjectCollectionBase_OnDeserialization_m619757901,
+	NameObjectCollectionBase_Reset_m3985051645,
+	NameObjectCollectionBase_Reset_m2830962996,
+	NameObjectCollectionBase_FindEntry_m2589752937,
+	NameObjectCollectionBase_get_IsReadOnly_m1249375452,
+	NameObjectCollectionBase_BaseAdd_m3437748750,
+	NameObjectCollectionBase_BaseRemove_m970901962,
+	NameObjectCollectionBase_BaseGet_m2890420524,
+	NameObjectCollectionBase_BaseSet_m2307774678,
+	NameObjectCollectionBase_BaseGet_m2807961990,
+	NameObjectCollectionBase_BaseGetKey_m2677971642,
+	NameObjectCollectionBase_GetEnumerator_m3677320185,
+	NameObjectCollectionBase_get_Count_m823453971,
+	NameObjectCollectionBase_System_Collections_ICollection_CopyTo_m1225689553,
+	NameObjectCollectionBase_System_Collections_ICollection_get_SyncRoot_m138749698,
+	NameObjectCollectionBase_System_Collections_ICollection_get_IsSynchronized_m3084128080,
+	NameObjectCollectionBase_BaseGetAllKeys_m3974965581,
+	NameObjectCollectionBase__cctor_m1204874075,
+	NameObjectEntry__ctor_m614750814,
+	NameObjectKeysEnumerator__ctor_m2056242163,
+	NameObjectKeysEnumerator_MoveNext_m3475484904,
+	NameObjectKeysEnumerator_get_Current_m3831146515,
+	NameValueCollection__ctor_m1115358332,
+	NameValueCollection__ctor_m1800514663,
+	NameValueCollection__ctor_m2890045557,
+	NameValueCollection__ctor_m4090053322,
+	NameValueCollection_InvalidateCachedArrays_m194313763,
+	NameValueCollection_GetAsOneString_m63520621,
+	NameValueCollection_GetAsStringArray_m2855262980,
+	NameValueCollection_Add_m2418530856,
+	NameValueCollection_Get_m1006871566,
+	NameValueCollection_GetValues_m772065291,
+	NameValueCollection_Set_m2358615760,
+	NameValueCollection_Remove_m3237017023,
+	NameValueCollection_get_Item_m3979995533,
+	NameValueCollection_set_Item_m1362981538,
+	NameValueCollection_Get_m2464480741,
+	NameValueCollection_GetKey_m3458770877,
+	NameValueCollection_get_AllKeys_m2125191680,
+	StringCollection_get_Item_m4180232243,
+	StringCollection_set_Item_m4148591189,
+	StringCollection_get_Count_m2156595195,
+	StringCollection_System_Collections_IList_get_IsReadOnly_m455357903,
+	StringCollection_System_Collections_IList_get_IsFixedSize_m1299970219,
+	StringCollection_Add_m4164151265,
+	StringCollection_Clear_m3647152978,
+	StringCollection_Contains_m2861455902,
+	StringCollection_CopyTo_m1450011689,
+	StringCollection_IndexOf_m767274544,
+	StringCollection_Insert_m2300187778,
+	StringCollection_get_IsSynchronized_m1559727427,
+	StringCollection_Remove_m3605634414,
+	StringCollection_RemoveAt_m402186489,
+	StringCollection_get_SyncRoot_m3505240827,
+	StringCollection_System_Collections_IList_get_Item_m992663664,
+	StringCollection_System_Collections_IList_set_Item_m1455563237,
+	StringCollection_System_Collections_IList_Add_m1759995382,
+	StringCollection_System_Collections_IList_Contains_m1928615552,
+	StringCollection_System_Collections_IList_IndexOf_m3253481874,
+	StringCollection_System_Collections_IList_Insert_m1948524567,
+	StringCollection_System_Collections_IList_Remove_m1133367149,
+	StringCollection_System_Collections_ICollection_CopyTo_m838222095,
+	StringCollection_System_Collections_IEnumerable_GetEnumerator_m1113283171,
+	StringCollection__ctor_m490010228,
 	ArrayConverter__ctor_m2521114374,
 	BaseNumberConverter__ctor_m3644937142,
 	BooleanConverter__ctor_m1022907603,
@@ -25565,6 +30072,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Win32Exception__ctor_m3118723333,
 	Win32Exception__ctor_m11747318,
 	Win32Exception__ctor_m3265219078,
+	Win32Exception_get_NativeErrorCode_m4105802931,
 	Win32Exception_GetObjectData_m2897703401,
 	Win32Exception_GetErrorMessage_m1928344171,
 	Win32Exception_InitializeErrorMessages_m56403396,
@@ -25580,15 +30088,97 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	DomainNameHelper_UnicodeEquivalent_m3209706559,
 	DomainNameHelper_IsASCIILetterOrDigit_m1237464360,
 	DomainNameHelper_IsValidDomainLabelCharacter_m2301033434,
+	DeflateStream__ctor_m1455391489,
+	DeflateStream__ctor_m3573829724,
+	DeflateStream__ctor_m3390202582,
+	DeflateStream_Dispose_m959848075,
+	DeflateStream_ReadInternal_m4024881745,
+	DeflateStream_Read_m2462209149,
+	DeflateStream_WriteInternal_m4168753255,
+	DeflateStream_Write_m4264238449,
+	DeflateStream_Flush_m2668044568,
+	DeflateStream_BeginRead_m437329223,
+	DeflateStream_BeginWrite_m1021334227,
+	DeflateStream_EndRead_m4289412642,
+	DeflateStream_EndWrite_m1295999073,
+	DeflateStream_Seek_m3685451449,
+	DeflateStream_get_CanRead_m1715247727,
+	DeflateStream_get_CanSeek_m129419566,
+	DeflateStream_get_CanWrite_m4292365324,
+	DeflateStream_get_Length_m1099282904,
+	DeflateStream_get_Position_m1563329739,
+	DeflateStream_set_Position_m1956031577,
+	ReadMethod__ctor_m3454788154,
+	ReadMethod_Invoke_m158234957,
+	ReadMethod_BeginInvoke_m3773273825,
+	ReadMethod_EndInvoke_m897454887,
+	WriteMethod__ctor_m3113528835,
+	WriteMethod_Invoke_m1619441034,
+	WriteMethod_BeginInvoke_m2181678049,
+	WriteMethod_EndInvoke_m1603343818,
+	DeflateStreamNative__ctor_m1757329268,
+	DeflateStreamNative_Create_m1981759079,
+	DeflateStreamNative_Finalize_m1363912817,
+	DeflateStreamNative_Dispose_m2713887098,
+	DeflateStreamNative_Flush_m2908773117,
+	DeflateStreamNative_ReadZStream_m496685786,
+	DeflateStreamNative_WriteZStream_m4258525530,
+	DeflateStreamNative_UnmanagedRead_m255710264,
+	DeflateStreamNative_UnmanagedRead_m4068903972,
+	DeflateStreamNative_UnmanagedWrite_m232731864,
+	DeflateStreamNative_UnmanagedWrite_m1455650735,
+	DeflateStreamNative_CheckResult_m276740021,
+	DeflateStreamNative_CreateZStream_m973335090,
+	DeflateStreamNative_CloseZStream_m1372499010,
+	DeflateStreamNative_Flush_m1619703581,
+	DeflateStreamNative_ReadZStream_m3236830394,
+	DeflateStreamNative_WriteZStream_m1056552711,
+	SafeDeflateStreamHandle_get_IsInvalid_m2564018510,
+	SafeDeflateStreamHandle__ctor_m3926025387,
+	SafeDeflateStreamHandle_ReleaseHandle_m2893242183,
+	UnmanagedReadOrWrite__ctor_m4099972177,
+	UnmanagedReadOrWrite_Invoke_m379902121,
+	UnmanagedReadOrWrite_BeginInvoke_m3649679282,
+	UnmanagedReadOrWrite_EndInvoke_m3141997488,
+	GZipStream__ctor_m1551560069,
+	GZipStream__ctor_m2126151311,
+	GZipStream_get_CanRead_m1590375473,
+	GZipStream_get_CanWrite_m3880483697,
+	GZipStream_get_CanSeek_m394433026,
+	GZipStream_get_Length_m3140588920,
+	GZipStream_get_Position_m3655800481,
+	GZipStream_set_Position_m3660732374,
+	GZipStream_Flush_m1592300520,
+	GZipStream_Seek_m383901059,
+	GZipStream_ReadByte_m4086121288,
+	GZipStream_BeginRead_m1057183783,
+	GZipStream_EndRead_m3771449318,
+	GZipStream_Read_m2373086629,
+	GZipStream_BeginWrite_m1150475433,
+	GZipStream_EndWrite_m2556809823,
+	GZipStream_Write_m2833522967,
+	GZipStream_Dispose_m519432882,
+	GZipStream_ReadAsync_m576459817,
+	GZipStream_WriteAsync_m1820564395,
+	GZipStream_CheckDeflateStream_m1090465304,
+	GZipStream_ThrowStreamClosedException_m1418565426,
 	IOAsyncCallback__ctor_m3248627329,
 	IOAsyncCallback_Invoke_m4135167970,
 	IOAsyncCallback_BeginInvoke_m1980568501,
 	IOAsyncCallback_EndInvoke_m4101473787,
+	IOAsyncResult__ctor_m1044573569,
+	IOAsyncResult_get_AsyncCallback_m426656779,
 	IOAsyncResult_get_AsyncState_m2837164062,
 	IOAsyncResult_get_AsyncWaitHandle_m782089690,
 	IOAsyncResult_get_CompletedSynchronously_m1975159955,
+	IOAsyncResult_set_CompletedSynchronously_m3658237697,
+	IOAsyncResult_get_IsCompleted_m4009731917,
+	IOAsyncResult_set_IsCompleted_m2347043755,
+	IOSelector_Add_m2838266828,
+	IOSelectorJob__ctor_m1611324785,
 	IOSelectorJob_System_Threading_IThreadPoolWorkItem_ExecuteWorkItem_m2696504768,
 	IOSelectorJob_System_Threading_IThreadPoolWorkItem_MarkAborted_m2333578466,
+	IOSelectorJob_MarkDisposed_m1053029016,
 	IPv4AddressHelper_ParseCanonicalName_m600421924,
 	IPv4AddressHelper_ParseHostNumber_m1312067467,
 	IPv4AddressHelper_IsValid_m3381515237,
@@ -25602,30 +30192,671 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	IPv6AddressHelper_ShouldHaveIpv4Embedded_m2888688890,
 	IPv6AddressHelper_InternalIsValid_m3418842562,
 	IPv6AddressHelper_IsValid_m2688799650,
+	IPv6AddressHelper_IsValidStrict_m3544697568,
 	IPv6AddressHelper_Parse_m37959265,
 	IriHelper_CheckIriUnicodeRange_m2504575242,
 	IriHelper_CheckIriUnicodeRange_m272609807,
 	IriHelper_CheckIsReserved_m2105483522,
 	IriHelper_EscapeUnescapeIri_m1552564458,
+	AuthenticationManager_EnsureModules_m3673793880,
+	AuthenticationManager_Authenticate_m220441371,
+	AuthenticationManager_DoAuthenticate_m167986645,
+	AuthenticationManager_PreAuthenticate_m1971834472,
+	AuthenticationManager__cctor_m2462735150,
+	Authorization__ctor_m1042942506,
+	Authorization__ctor_m1248414549,
+	Authorization_get_Message_m457444391,
+	Authorization_get_Complete_m585383280,
+	AutoWebProxyScriptEngine_GetProxies_m660668774,
+	AutoWebProxyScriptEngine_GetProxies_m7142261,
+	BasicClient_Authenticate_m4006824009,
+	BasicClient_GetBytes_m915311138,
+	BasicClient_InternalAuthenticate_m2040421753,
+	BasicClient_PreAuthenticate_m4235346218,
+	BasicClient_get_AuthenticationType_m1658655756,
+	BasicClient__ctor_m1144959636,
+	BindIPEndPoint__ctor_m3266317527,
+	BindIPEndPoint_Invoke_m1788714159,
+	BindIPEndPoint_BeginInvoke_m516198952,
+	BindIPEndPoint_EndInvoke_m955039265,
+	CaseInsensitiveAscii_GetHashCode_m3921352001,
+	CaseInsensitiveAscii_Compare_m1652199145,
+	CaseInsensitiveAscii_FastGetHashCode_m2310971705,
+	CaseInsensitiveAscii_Equals_m3571170287,
+	CaseInsensitiveAscii__ctor_m2924053818,
+	CaseInsensitiveAscii__cctor_m258705655,
+	Comparer_System_Collections_IComparer_Compare_m619915158,
+	Comparer__ctor_m622249416,
+	DefaultProxySectionInternal_GetDefaultProxy_UsingOldMonoCode_m2986865109,
+	DefaultProxySectionInternal_GetSystemWebProxy_m729512686,
+	DefaultProxySectionInternal_get_ClassSyncObject_m125181342,
+	DefaultProxySectionInternal_GetSection_m384150699,
+	DefaultProxySectionInternal_get_WebProxy_m3484180234,
+	DefaultProxySectionInternal__ctor_m2423092146,
+	SettingsSectionInternal_get_Section_m1539574765,
+	SettingsSectionInternal_get_Ipv6Enabled_m2663990904,
+	SettingsSectionInternal__ctor_m2088828526,
+	SettingsSectionInternal__cctor_m1201638947,
+	Cookie__ctor_m130314892,
+	Cookie_get_Comment_m938800276,
+	Cookie_set_Comment_m3273060062,
+	Cookie_set_CommentUri_m514817537,
+	Cookie_set_HttpOnly_m1606103865,
+	Cookie_set_Discard_m1634972755,
+	Cookie_get_Domain_m3273283673,
+	Cookie_set_Domain_m3100331118,
+	Cookie_get__Domain_m672794332,
+	Cookie_get_Expired_m1459950990,
+	Cookie_set_Expires_m1452686449,
+	Cookie_get_Name_m2251414039,
+	Cookie_InternalSetName_m79631888,
+	Cookie_get_Path_m3866976232,
+	Cookie_set_Path_m1468440617,
+	Cookie_get__Path_m2208677912,
+	Cookie_get_Plain_m4063534626,
+	Cookie_IsDomainEqualToHost_m2083012522,
+	Cookie_VerifySetDefaults_m2347944681,
+	Cookie_DomainCharsTest_m3632599350,
+	Cookie_set_Port_m1447813981,
+	Cookie_get_PortList_m712992926,
+	Cookie_get__Port_m1658572818,
+	Cookie_get_Secure_m3212902782,
+	Cookie_set_Secure_m1144375275,
+	Cookie_get_Value_m415149921,
+	Cookie_set_Value_m3029678175,
+	Cookie_get_Variant_m1454309833,
+	Cookie_get_DomainKey_m3486228023,
+	Cookie_get_Version_m940319904,
+	Cookie_set_Version_m3274352061,
+	Cookie_get__Version_m3535151426,
+	Cookie_GetComparer_m2218979387,
+	Cookie_Equals_m3342877036,
+	Cookie_GetHashCode_m4036932073,
+	Cookie_ToString_m1999862136,
+	Cookie__cctor_m3648156207,
+	CookieCollection__ctor_m1000462790,
+	CookieCollection_get_Item_m2278675250,
+	CookieCollection_Add_m473237455,
+	CookieCollection_Add_m2335546787,
+	CookieCollection_get_Count_m3988188318,
+	CookieCollection_get_IsSynchronized_m3414024167,
+	CookieCollection_get_SyncRoot_m727993059,
+	CookieCollection_CopyTo_m4238450065,
+	CookieCollection_TimeStamp_m1846484418,
+	CookieCollection_get_IsOtherVersionSeen_m1791560595,
+	CookieCollection_InternalAdd_m3642455922,
+	CookieCollection_IndexOf_m57857903,
+	CookieCollection_RemoveAt_m3215532298,
+	CookieCollection_GetEnumerator_m1309307657,
+	CookieCollectionEnumerator__ctor_m3787236743,
+	CookieCollectionEnumerator_System_Collections_IEnumerator_get_Current_m3850098179,
+	CookieCollectionEnumerator_System_Collections_IEnumerator_MoveNext_m4202356893,
+	CookieContainer__ctor_m715580786,
+	CookieContainer_AddRemoveDomain_m2083128809,
+	CookieContainer_Add_m2909607730,
+	CookieContainer_AgeCookies_m3710352155,
+	CookieContainer_ExpireCollection_m3339691179,
+	CookieContainer_IsLocalDomain_m3071445029,
+	CookieContainer_CookieCutter_m2390028045,
+	CookieContainer_InternalGetCookies_m3783736142,
+	CookieContainer_BuildCookieCollectionFromDomainMatches_m1055748136,
+	CookieContainer_MergeUpdateCollections_m1597670700,
+	CookieContainer_GetCookieHeader_m3804824737,
+	CookieContainer_GetCookieHeader_m1289139136,
+	CookieContainer__cctor_m686088327,
+	CookieException__ctor_m3096844272,
+	CookieException__ctor_m3844021349,
+	CookieException__ctor_m3966587263,
+	CookieException__ctor_m3438359767,
+	CookieException_System_Runtime_Serialization_ISerializable_GetObjectData_m3530970078,
+	CookieException_GetObjectData_m964015457,
+	CookieParser__ctor_m352952167,
+	CookieParser_Get_m3159593224,
+	CookieParser_CheckQuoted_m3844255685,
+	CookieTokenizer__ctor_m1661161554,
+	CookieTokenizer_get_EndOfCookie_m763433720,
+	CookieTokenizer_set_EndOfCookie_m289426291,
+	CookieTokenizer_get_Eof_m4026775299,
+	CookieTokenizer_get_Name_m41746745,
+	CookieTokenizer_set_Name_m2963063609,
+	CookieTokenizer_get_Quoted_m1302838470,
+	CookieTokenizer_set_Quoted_m2266637170,
+	CookieTokenizer_get_Token_m3873020637,
+	CookieTokenizer_set_Token_m473331585,
+	CookieTokenizer_get_Value_m3839528110,
+	CookieTokenizer_set_Value_m850013014,
+	CookieTokenizer_Extract_m960479859,
+	CookieTokenizer_FindNext_m1223825793,
+	CookieTokenizer_Next_m71221901,
+	CookieTokenizer_Reset_m1469859480,
+	CookieTokenizer_TokenFromName_m37240203,
+	CookieTokenizer__cctor_m1618384133,
+	RecognizedAttribute__ctor_m2706071181_AdjustorThunk,
+	RecognizedAttribute_get_Token_m2610969802_AdjustorThunk,
+	RecognizedAttribute_IsEqualTo_m3343258602_AdjustorThunk,
+	CredentialCache_GetCredential_m3066571691,
+	CredentialCache_GetEnumerator_m2434488322,
+	CredentialCache_get_DefaultCredentials_m1013927782,
+	CredentialEnumerator__ctor_m13454729,
+	CredentialEnumerator_System_Collections_IEnumerator_get_Current_m2894369356,
+	CredentialEnumerator_System_Collections_IEnumerator_MoveNext_m3602723368,
+	CredentialKey_Match_m1180492807,
+	CredentialKey_IsPrefix_m613349602,
+	CredentialKey_GetHashCode_m1804988110,
+	CredentialKey_Equals_m1445845010,
+	CredentialKey_ToString_m4193699741,
+	DefaultCertificatePolicy_CheckValidationResult_m3811448269,
+	DigestClient_get_Cache_m2977715726,
+	DigestClient_CheckExpired_m149989480,
+	DigestClient_Authenticate_m568073821,
+	DigestClient_PreAuthenticate_m2772445502,
+	DigestClient_get_AuthenticationType_m2210998317,
+	DigestClient__ctor_m1598449366,
+	DigestClient__cctor_m973447523,
+	DigestHeaderParser__ctor_m1788016284,
+	DigestHeaderParser_get_Realm_m932476129,
+	DigestHeaderParser_get_Opaque_m1764949209,
+	DigestHeaderParser_get_Nonce_m2249622360,
+	DigestHeaderParser_get_Algorithm_m2871660183,
+	DigestHeaderParser_get_QOP_m4036197700,
+	DigestHeaderParser_Parse_m4245784917,
+	DigestHeaderParser_SkipWhitespace_m1682657916,
+	DigestHeaderParser_GetKey_m560398311,
+	DigestHeaderParser_GetKeywordAndValue_m1709372932,
+	DigestHeaderParser__cctor_m4060796889,
+	DigestSession__cctor_m318265375,
+	DigestSession__ctor_m601709392,
+	DigestSession_get_Algorithm_m794936792,
+	DigestSession_get_Realm_m3487888410,
+	DigestSession_get_Nonce_m3852273541,
+	DigestSession_get_Opaque_m32525443,
+	DigestSession_get_QOP_m2650211740,
+	DigestSession_get_CNonce_m3083255582,
+	DigestSession_Parse_m1593461661,
+	DigestSession_HashToHexString_m2645563245,
+	DigestSession_HA1_m2108344264,
+	DigestSession_HA2_m1089477595,
+	DigestSession_Response_m3890789839,
+	DigestSession_Authenticate_m842272638,
+	DigestSession_get_LastUse_m3488420397,
+	Dns__cctor_m683868677,
+	Dns_GetHostByName_internal_m3368803947,
+	Dns_GetHostByAddr_internal_m2973903266,
+	Dns_GetHostName_internal_m575858027,
+	Dns_Error_11001_m3845926492,
+	Dns_hostent_to_IPHostEntry_m1060477774,
+	Dns_GetHostByAddressFromString_m2538152794,
+	Dns_GetHostEntry_m2165252375,
+	Dns_GetHostEntry_m3727355895,
+	Dns_GetHostByName_m3261817827,
+	Dns_GetHostName_m986149514,
+	EmptyWebProxy__ctor_m860633317,
+	EmptyWebProxy_GetProxy_m2094016683,
+	EmptyWebProxy_IsBypassed_m677269389,
+	EmptyWebProxy_get_Credentials_m2412659262,
+	EndPoint_get_AddressFamily_m2518972320,
+	EndPoint_Serialize_m2876280324,
+	EndPoint_Create_m1199447448,
 	EndPoint__ctor_m2608146098,
+	ExceptionHelper_get_MethodNotImplementedException_m3246761159,
+	ExceptionHelper_get_PropertyNotImplementedException_m714844147,
+	ExceptionHelper_get_PropertyNotSupportedException_m2873062019,
+	ExceptionHelper_get_RequestAbortedException_m1752622923,
+	FileWebRequest__ctor_m3189951510,
+	FileWebRequest__ctor_m41755936,
+	FileWebRequest_System_Runtime_Serialization_ISerializable_GetObjectData_m1504466482,
+	FileWebRequest_GetObjectData_m577359674,
+	FileWebRequest_get_Aborted_m3662859600,
+	FileWebRequest_get_ContentLength_m1073763698,
+	FileWebRequest_set_ContentLength_m559343124,
+	FileWebRequest_set_ContentType_m4074119636,
+	FileWebRequest_get_Credentials_m911512064,
+	FileWebRequest_set_Credentials_m2496127692,
+	FileWebRequest_get_Headers_m4152067273,
+	FileWebRequest_get_Method_m901669219,
+	FileWebRequest_set_Method_m984238228,
+	FileWebRequest_get_Proxy_m1145630604,
+	FileWebRequest_get_Timeout_m3510043324,
+	FileWebRequest_set_Timeout_m2025134082,
+	FileWebRequest_get_RequestUri_m947679769,
+	FileWebRequest_BeginGetRequestStream_m121868385,
+	FileWebRequest_BeginGetResponse_m4069851609,
+	FileWebRequest_CanGetRequestStream_m1821530667,
+	FileWebRequest_EndGetRequestStream_m1594935573,
+	FileWebRequest_EndGetResponse_m1700023619,
+	FileWebRequest_GetRequestStream_m1363761048,
+	FileWebRequest_GetResponse_m3124097980,
+	FileWebRequest_GetRequestStreamCallback_m1700152991,
+	FileWebRequest_GetResponseCallback_m2987371476,
+	FileWebRequest_UnblockReader_m2050763199,
+	FileWebRequest_get_UseDefaultCredentials_m3324295669,
+	FileWebRequest_Abort_m3846575800,
+	FileWebRequest__cctor_m2831586767,
+	FileWebRequestCreator__ctor_m2638763787,
+	FileWebRequestCreator_Create_m987324668,
+	FileWebResponse__ctor_m1083177906,
+	FileWebResponse__ctor_m70121420,
+	FileWebResponse_System_Runtime_Serialization_ISerializable_GetObjectData_m232863864,
+	FileWebResponse_GetObjectData_m4283659003,
+	FileWebResponse_get_Headers_m2667678104,
+	FileWebResponse_CheckDisposed_m3293736908,
+	FileWebResponse_Close_m416836077,
+	FileWebResponse_System_Net_ICloseEx_CloseEx_m149171184,
+	FileWebResponse_GetResponseStream_m3599920122,
+	FileWebStream__ctor_m534304008,
+	FileWebStream__ctor_m1671639551,
+	FileWebStream_Dispose_m949706213,
+	FileWebStream_System_Net_ICloseEx_CloseEx_m1916921980,
+	FileWebStream_Read_m3672124602,
+	FileWebStream_Write_m1421719308,
+	FileWebStream_BeginRead_m2606878213,
+	FileWebStream_EndRead_m3063776554,
+	FileWebStream_BeginWrite_m171362520,
+	FileWebStream_EndWrite_m1194170274,
+	FileWebStream_CheckError_m2428473889,
+	FtpAsyncResult__ctor_m524856605,
+	FtpAsyncResult_get_AsyncState_m2681421917,
+	FtpAsyncResult_get_AsyncWaitHandle_m1468110686,
+	FtpAsyncResult_get_CompletedSynchronously_m3232338726,
+	FtpAsyncResult_get_IsCompleted_m2746579060,
+	FtpAsyncResult_get_GotException_m460501254,
+	FtpAsyncResult_get_Exception_m3265976807,
+	FtpAsyncResult_get_Response_m559123986,
+	FtpAsyncResult_get_Stream_m2727806888,
+	FtpAsyncResult_set_Stream_m2533266488,
+	FtpAsyncResult_WaitUntilComplete_m801803550,
+	FtpAsyncResult_SetCompleted_m2849243376,
+	FtpAsyncResult_SetCompleted_m1279429529,
+	FtpAsyncResult_SetCompleted_m3601468790,
+	FtpAsyncResult_DoCallback_m998142903,
+	FtpDataStream__ctor_m4139269767,
+	FtpDataStream_get_CanRead_m1810661727,
+	FtpDataStream_get_CanWrite_m2224737779,
+	FtpDataStream_get_CanSeek_m307473482,
+	FtpDataStream_get_Length_m853866729,
+	FtpDataStream_get_Position_m1472390831,
+	FtpDataStream_set_Position_m3950238701,
+	FtpDataStream_Close_m3268039883,
+	FtpDataStream_Flush_m3154007243,
+	FtpDataStream_Seek_m2525604345,
+	FtpDataStream_ReadInternal_m1445022698,
+	FtpDataStream_BeginRead_m458546936,
+	FtpDataStream_EndRead_m2026651420,
+	FtpDataStream_Read_m2042823585,
+	FtpDataStream_WriteInternal_m1021407502,
+	FtpDataStream_BeginWrite_m51295119,
+	FtpDataStream_EndWrite_m2288126240,
+	FtpDataStream_Write_m4109720742,
+	FtpDataStream_Finalize_m2643715456,
+	FtpDataStream_System_IDisposable_Dispose_m2806312366,
+	FtpDataStream_Dispose_m2867414550,
+	FtpDataStream_CheckDisposed_m3833461916,
+	ReadDelegate__ctor_m4059842624,
+	ReadDelegate_Invoke_m1244157056,
+	ReadDelegate_BeginInvoke_m2818773993,
+	ReadDelegate_EndInvoke_m2502569465,
+	WriteDelegate__ctor_m3568392013,
+	WriteDelegate_Invoke_m3329596849,
+	WriteDelegate_BeginInvoke_m4282217382,
+	WriteDelegate_EndInvoke_m4146667621,
+	FtpRequestCreator_Create_m3326083364,
+	FtpRequestCreator__ctor_m23058707,
+	FtpStatus__ctor_m1706090984,
+	FtpStatus_get_StatusCode_m1935822399,
+	FtpStatus_get_StatusDescription_m2739034646,
+	FtpWebRequest__ctor_m751131654,
+	FtpWebRequest_GetMustImplement_m639535610,
+	FtpWebRequest_set_ContentType_m2762078365,
+	FtpWebRequest_get_ContentLength_m1315791521,
+	FtpWebRequest_set_ContentLength_m1798916307,
+	FtpWebRequest_get_Credentials_m2084048291,
+	FtpWebRequest_set_Credentials_m1276649473,
+	FtpWebRequest_get_EnableSsl_m2491182827,
+	FtpWebRequest_get_Headers_m335680636,
+	FtpWebRequest_set_Headers_m3433144208,
+	FtpWebRequest_get_Method_m184683741,
+	FtpWebRequest_set_Method_m1968634227,
+	FtpWebRequest_get_Proxy_m3203187140,
+	FtpWebRequest_get_ReadWriteTimeout_m1510839785,
+	FtpWebRequest_get_RequestUri_m907077889,
+	FtpWebRequest_get_ServicePoint_m2462547689,
+	FtpWebRequest_get_UseDefaultCredentials_m3696933790,
+	FtpWebRequest_get_Timeout_m2535696897,
+	FtpWebRequest_set_Timeout_m1158875527,
+	FtpWebRequest_get_DataType_m3448270912,
+	FtpWebRequest_get_State_m269588234,
+	FtpWebRequest_set_State_m191779305,
+	FtpWebRequest_Abort_m2164812681,
+	FtpWebRequest_BeginGetResponse_m3757524768,
+	FtpWebRequest_EndGetResponse_m47755679,
+	FtpWebRequest_GetResponse_m3487454795,
+	FtpWebRequest_BeginGetRequestStream_m3969515993,
+	FtpWebRequest_EndGetRequestStream_m1909407835,
+	FtpWebRequest_GetRequestStream_m3692930273,
+	FtpWebRequest_GetServicePoint_m2343154667,
+	FtpWebRequest_ResolveHost_m3463382846,
+	FtpWebRequest_ProcessRequest_m2589290874,
+	FtpWebRequest_SetType_m889883767,
+	FtpWebRequest_GetRemoteFolderPath_m351623698,
+	FtpWebRequest_CWDAndSetFileName_m3751202631,
+	FtpWebRequest_ProcessMethod_m3735617216,
+	FtpWebRequest_CloseControlConnection_m1302744984,
+	FtpWebRequest_CloseDataConnection_m473296206,
+	FtpWebRequest_CloseConnection_m2159926326,
+	FtpWebRequest_ProcessSimpleMethod_m3222265549,
+	FtpWebRequest_UploadData_m2791203992,
+	FtpWebRequest_DownloadData_m3221826187,
+	FtpWebRequest_CheckRequestStarted_m1572969670,
+	FtpWebRequest_OpenControlConnection_m1915116578,
+	FtpWebRequest_GetInitialPath_m252477829,
+	FtpWebRequest_SetupPassiveConnection_m1074084270,
+	FtpWebRequest_GetPortV4_m1101806239,
+	FtpWebRequest_GetPortV6_m2609849329,
+	FtpWebRequest_FormatAddress_m2475505155,
+	FtpWebRequest_FormatAddressV6_m3140172702,
+	FtpWebRequest_CreateExceptionFromResponse_m741462156,
+	FtpWebRequest_SetTransferCompleted_m1178172310,
+	FtpWebRequest_OperationCompleted_m77641069,
+	FtpWebRequest_SetCompleteWithError_m3611237847,
+	FtpWebRequest_InitDataConnection_m1033696962,
+	FtpWebRequest_OpenDataConnection_m2761204651,
+	FtpWebRequest_Authenticate_m3499993166,
+	FtpWebRequest_SendCommand_m2533286792,
+	FtpWebRequest_SendCommand_m3628069055,
+	FtpWebRequest_ServiceNotAvailable_m4410319,
+	FtpWebRequest_GetResponseStatus_m3460206581,
+	FtpWebRequest_InitiateSecureConnection_m1876937554,
+	FtpWebRequest_ChangeToSSLSocket_m896422621,
+	FtpWebRequest_InFinalState_m1434042928,
+	FtpWebRequest_InProgress_m2248546191,
+	FtpWebRequest_CheckIfAborted_m4220179630,
+	FtpWebRequest_CheckFinalState_m1657985045,
+	FtpWebRequest__cctor_m699542155,
+	FtpWebResponse__ctor_m132049627,
+	FtpWebResponse__ctor_m3888855406,
+	FtpWebResponse__ctor_m3273086612,
+	FtpWebResponse_get_Headers_m4180562887,
+	FtpWebResponse_set_LastModified_m3755041463,
+	FtpWebResponse_set_BannerMessage_m1768086374,
+	FtpWebResponse_set_WelcomeMessage_m3871327441,
+	FtpWebResponse_set_StatusCode_m1931108959,
+	FtpWebResponse_Close_m3407016815,
+	FtpWebResponse_GetResponseStream_m121394876,
+	FtpWebResponse_set_Stream_m556839434,
+	FtpWebResponse_UpdateStatus_m937617454,
+	FtpWebResponse_CheckDisposed_m2152411271,
+	FtpWebResponse_IsFinal_m1348059617,
+	GlobalProxySelection_get_Select_m3427048860,
+	GlobalProxySelection_GetEmptyWebProxy_m773174980,
+	HeaderInfo__ctor_m3856703528,
+	HeaderInfoTable_ParseSingleValue_m3901523052,
+	HeaderInfoTable_ParseMultiValue_m2835404333,
+	HeaderInfoTable__cctor_m1864840678,
+	HeaderInfoTable_get_Item_m1854174928,
+	HeaderInfoTable__ctor_m1866721604,
+	HeaderParser__ctor_m3954054193,
+	HeaderParser_Invoke_m1808134633,
+	HeaderParser_BeginInvoke_m468348339,
+	HeaderParser_EndInvoke_m3944384636,
+	HeaderVariantInfo__ctor_m3174290741_AdjustorThunk,
+	HeaderVariantInfo_get_Name_m360960477_AdjustorThunk,
+	HeaderVariantInfo_get_Variant_m2835642499_AdjustorThunk,
+	HttpContinueDelegate__ctor_m2928381845,
+	HttpContinueDelegate_Invoke_m1343264165,
+	HttpContinueDelegate_BeginInvoke_m2746263979,
+	HttpContinueDelegate_EndInvoke_m1388437871,
+	HttpRequestCreator__ctor_m2389332355,
+	HttpRequestCreator_Create_m400548686,
+	HttpVersion__cctor_m1653189495,
+	HttpWebRequest__cctor_m1467954389,
+	HttpWebRequest__ctor_m1376613083,
+	HttpWebRequest__ctor_m1789065007,
+	HttpWebRequest_ResetAuthorization_m3834937269,
+	HttpWebRequest_SetSpecialHeaders_m2553007387,
+	HttpWebRequest_get_Address_m1609525404,
+	HttpWebRequest_set_Address_m3321373420,
+	HttpWebRequest_get_AllowWriteStreamBuffering_m1350956362,
+	HttpWebRequest_get_AutomaticDecompression_m4238495726,
+	HttpWebRequest_set_AutomaticDecompression_m3449856760,
+	HttpWebRequest_get_InternalAllowBuffering_m1509018138,
+	HttpWebRequest_get_MethodWithBuffer_m2735706591,
+	HttpWebRequest_get_TlsProvider_m2127636544,
+	HttpWebRequest_get_TlsSettings_m844625749,
+	HttpWebRequest_get_ClientCertificates_m1369160996,
+	HttpWebRequest_get_ContentLength_m1719441816,
+	HttpWebRequest_set_ContentLength_m1924274623,
+	HttpWebRequest_set_InternalContentLength_m1954123929,
+	HttpWebRequest_get_ThrowOnError_m4097067344,
+	HttpWebRequest_set_ThrowOnError_m514616671,
+	HttpWebRequest_set_ContentType_m2247267371,
+	HttpWebRequest_get_Credentials_m869552648,
+	HttpWebRequest_set_Credentials_m2824480114,
+	HttpWebRequest_get_Headers_m3367476308,
+	HttpWebRequest_set_Headers_m348860780,
+	HttpWebRequest_get_Host_m1187695647,
+	HttpWebRequest_get_KeepAlive_m125307640,
+	HttpWebRequest_get_ReadWriteTimeout_m289624615,
+	HttpWebRequest_get_Method_m837169067,
+	HttpWebRequest_set_Method_m4248268164,
+	HttpWebRequest_get_Proxy_m96405923,
+	HttpWebRequest_get_RequestUri_m1528754012,
+	HttpWebRequest_get_SendChunked_m3812850078,
+	HttpWebRequest_get_ServicePoint_m1080482337,
+	HttpWebRequest_get_ServicePointNoLock_m1614107899,
+	HttpWebRequest_get_Timeout_m1527929571,
+	HttpWebRequest_set_Timeout_m3284739078,
+	HttpWebRequest_get_TransferEncoding_m1718199537,
+	HttpWebRequest_get_UseDefaultCredentials_m1252280517,
+	HttpWebRequest_get_UnsafeAuthenticatedConnectionSharing_m3134209238,
+	HttpWebRequest_get_ExpectContinue_m1265660027,
+	HttpWebRequest_set_ExpectContinue_m494724185,
+	HttpWebRequest_get_AuthUri_m3720408082,
+	HttpWebRequest_get_ProxyQuery_m4235226594,
+	HttpWebRequest_get_ServerCertValidationCallback_m1368859789,
+	HttpWebRequest_GetServicePoint_m2640244283,
+	HttpWebRequest_BeginGetRequestStream_m3734840655,
+	HttpWebRequest_EndGetRequestStream_m3649764403,
+	HttpWebRequest_GetRequestStream_m3748118858,
+	HttpWebRequest_CheckIfForceWrite_m3896594174,
+	HttpWebRequest_BeginGetResponse_m366959456,
+	HttpWebRequest_EndGetResponse_m2990303978,
+	HttpWebRequest_GetResponse_m3946423754,
+	HttpWebRequest_get_FinishedReading_m1895117237,
+	HttpWebRequest_set_FinishedReading_m2455679796,
+	HttpWebRequest_get_Aborted_m1961501758,
+	HttpWebRequest_Abort_m3163190852,
+	HttpWebRequest_System_Runtime_Serialization_ISerializable_GetObjectData_m900393946,
+	HttpWebRequest_GetObjectData_m1226445448,
+	HttpWebRequest_CheckRequestStarted_m2585848005,
+	HttpWebRequest_DoContinueDelegate_m3383944917,
+	HttpWebRequest_RewriteRedirectToGet_m2245315294,
+	HttpWebRequest_Redirect_m1822676774,
+	HttpWebRequest_GetHeaders_m3768893913,
+	HttpWebRequest_DoPreAuthenticate_m1424851389,
+	HttpWebRequest_SetWriteStreamError_m336408989,
+	HttpWebRequest_GetRequestHeaders_m62175841,
+	HttpWebRequest_SetWriteStream_m2739138088,
+	HttpWebRequest_SetWriteStreamInner_m824927426,
+	HttpWebRequest_SetWriteStreamError_m1495555337,
+	HttpWebRequest_SetResponseError_m4064263808,
+	HttpWebRequest_CheckSendError_m2266605752,
+	HttpWebRequest_HandleNtlmAuth_m445508236,
+	HttpWebRequest_SetResponseData_m1747650150,
+	HttpWebRequest_CheckAuthorization_m1568753518,
+	HttpWebRequest_CheckFinalStatus_m2636217061,
+	HttpWebRequest_get_ReuseConnection_m3470145138,
+	HttpWebRequest_set_ReuseConnection_m3288622955,
+	HttpWebRequest_U3CSetWriteStreamU3Eb__258_0_m4232864729,
+	HttpWebRequest_U3CSetWriteStreamU3Eb__258_1_m3955481731,
+	HttpWebRequest_U3CSetWriteStreamInnerU3Eb__259_0_m3568970586,
+	U3CU3Ec__DisplayClass238_0__ctor_m534480636,
+	U3CU3Ec__DisplayClass238_0_U3CBeginGetResponseU3Eb__0_m3736447996,
+	AuthorizationState_get_IsCompleted_m548391747_AdjustorThunk,
+	AuthorizationState_get_NtlmAuthState_m3351126274_AdjustorThunk,
+	AuthorizationState_get_IsNtlmAuthenticated_m3546056487_AdjustorThunk,
+	AuthorizationState__ctor_m1224452023_AdjustorThunk,
+	AuthorizationState_CheckAuthorization_m1516031931_AdjustorThunk,
+	AuthorizationState_Reset_m2643235403_AdjustorThunk,
+	AuthorizationState_ToString_m3556794860_AdjustorThunk,
+	HttpWebResponse__ctor_m470181940,
+	HttpWebResponse__ctor_m1618273601,
+	HttpWebResponse_get_Headers_m1893021054,
+	HttpWebResponse_get_StatusCode_m3435907869,
+	HttpWebResponse_get_StatusDescription_m2108835333,
+	HttpWebResponse_ReadAll_m677937028,
+	HttpWebResponse_GetResponseStream_m584017432,
+	HttpWebResponse_System_Runtime_Serialization_ISerializable_GetObjectData_m1888769183,
+	HttpWebResponse_GetObjectData_m3741544833,
+	HttpWebResponse_Close_m584988241,
+	HttpWebResponse_System_IDisposable_Dispose_m794624260,
+	HttpWebResponse_Dispose_m2105431493,
+	HttpWebResponse_CheckDisposed_m3271607901,
+	HttpWebResponse_FillCookies_m2099537096,
 	IPAddress__ctor_m921977496,
 	IPAddress__ctor_m212134278,
+	IPAddress__ctor_m368216647,
 	IPAddress__ctor_m1728349942,
+	IPAddress_TryParse_m2320149543,
+	IPAddress_Parse_m2200822423,
+	IPAddress_InternalParse_m2099847741,
+	IPAddress_GetAddressBytes_m3103618290,
+	IPAddress_get_AddressFamily_m1010663936,
 	IPAddress_get_ScopeId_m4237202723,
 	IPAddress_ToString_m1181734207,
+	IPAddress_IsLoopback_m29387631,
 	IPAddress_Equals_m582252489,
 	IPAddress_Equals_m1823478787,
 	IPAddress_GetHashCode_m1210636859,
+	IPAddress_MapToIPv6_m4027273287,
 	IPAddress__cctor_m3038355099,
+	IPEndPoint_get_AddressFamily_m744740897,
+	IPEndPoint__ctor_m2833647099,
+	IPEndPoint_get_Address_m834732349,
+	IPEndPoint_get_Port_m2842923226,
+	IPEndPoint_ToString_m2322375169,
+	IPEndPoint_Serialize_m504081642,
+	IPEndPoint_Create_m2430938779,
+	IPEndPoint_Equals_m306328693,
+	IPEndPoint_GetHashCode_m3458818862,
+	IPEndPoint__cctor_m3129021540,
+	IPHostEntry_get_HostName_m1470262901,
+	IPHostEntry_set_HostName_m1112531386,
+	IPHostEntry_set_Aliases_m727031720,
+	IPHostEntry_get_AddressList_m1351062776,
+	IPHostEntry_set_AddressList_m895991257,
+	IPHostEntry__ctor_m3185986391,
 	IPv6AddressFormatter__ctor_m1751086962_AdjustorThunk,
 	IPv6AddressFormatter_SwapUShort_m4160104566,
 	IPv6AddressFormatter_AsIPv4Int_m1385145212_AdjustorThunk,
 	IPv6AddressFormatter_IsIPv4Compatible_m955490501_AdjustorThunk,
 	IPv6AddressFormatter_IsIPv4Mapped_m2735174563_AdjustorThunk,
 	IPv6AddressFormatter_ToString_m1696981683_AdjustorThunk,
+	InternalException__ctor_m2590138556,
+	KnownHttpVerb__ctor_m2604494108,
+	KnownHttpVerb__cctor_m429758526,
+	KnownHttpVerb_Parse_m2549705968,
+	LazyAsyncResult_get_CurrentThreadContext_m1285677760,
+	LazyAsyncResult__ctor_m4065652744,
+	LazyAsyncResult_get_AsyncObject_m4034816191,
+	LazyAsyncResult_get_AsyncState_m2660932643,
+	LazyAsyncResult_get_AsyncWaitHandle_m696999632,
+	LazyAsyncResult_LazilyCreateEvent_m4246951566,
+	LazyAsyncResult_get_CompletedSynchronously_m3831496419,
+	LazyAsyncResult_get_IsCompleted_m3199757002,
+	LazyAsyncResult_get_InternalPeekCompleted_m532457183,
+	LazyAsyncResult_ProtectedInvokeCallback_m1812167064,
+	LazyAsyncResult_InvokeCallback_m2308161903,
+	LazyAsyncResult_Complete_m1685059211,
+	LazyAsyncResult_WorkerThreadComplete_m1123407821,
+	LazyAsyncResult_Cleanup_m171098265,
+	LazyAsyncResult_InternalWaitForCompletion_m1545046281,
+	LazyAsyncResult_WaitForCompletion_m106761697,
+	ThreadContext__ctor_m2708273126,
+	Logging__cctor_m3589455087,
+	MonoChunkStream__ctor_m2491428210,
+	MonoChunkStream__ctor_m1272507573,
+	MonoChunkStream_ResetBuffer_m3146850297,
+	MonoChunkStream_WriteAndReadBack_m2930844533,
+	MonoChunkStream_Read_m2449136904,
+	MonoChunkStream_ReadFromChunks_m189318239,
+	MonoChunkStream_Write_m3040529004,
+	MonoChunkStream_InternalWrite_m3269432069,
+	MonoChunkStream_get_WantMore_m2502286912,
+	MonoChunkStream_get_DataAvailable_m306863724,
+	MonoChunkStream_get_ChunkLeft_m2121264135,
+	MonoChunkStream_ReadBody_m1177550691,
+	MonoChunkStream_GetChunkSize_m973709835,
+	MonoChunkStream_RemoveChunkExtension_m1028484117,
+	MonoChunkStream_ReadCRLF_m2919855902,
+	MonoChunkStream_ReadTrailer_m3812543480,
+	MonoChunkStream_ThrowProtocolViolation_m1157326735,
+	Chunk__ctor_m2102970238,
+	Chunk_Read_m1899323248,
+	NclUtilities_IsAddressLocal_m55443147,
+	NclUtilities_GetLocalHost_m2515270477,
+	NclUtilities_get_LocalAddresses_m4204406609,
+	NclUtilities_get_LocalAddressesLock_m2203267984,
+	NetRes_GetWebStatusString_m3099140498,
+	NetRes_GetWebStatusString_m1872002768,
+	NetworkCredential__ctor_m2171369688,
+	NetworkCredential__ctor_m3496297373,
+	NetworkCredential_get_UserName_m1950179274,
+	NetworkCredential_set_UserName_m537558698,
+	NetworkCredential_get_Password_m2968490334,
+	NetworkCredential_set_Password_m781509224,
+	NetworkCredential_get_Domain_m153886306,
+	NetworkCredential_set_Domain_m2066831681,
+	NetworkCredential_InternalGetUserName_m3179069421,
+	NetworkCredential_InternalGetPassword_m2589528676,
+	NetworkCredential_InternalGetDomain_m3065628852,
+	NetworkCredential_GetCredential_m3997853042,
+	CommonUnixIPGlobalProperties_getdomainname_m1181469814,
+	CommonUnixIPGlobalProperties_get_DomainName_m3322870252,
+	CommonUnixIPGlobalProperties__ctor_m2334165341,
+	IPGlobalProperties_GetIPGlobalProperties_m3740523740,
+	IPGlobalProperties_InternalGetIPGlobalProperties_m2092566057,
+	IPGlobalProperties__ctor_m2997729991,
+	MibIPGlobalProperties__ctor_m382854684,
+	MibIPGlobalProperties__cctor_m1399753744,
+	NetworkInformationException__ctor_m1042018490,
+	NetworkInformationException__ctor_m3218200151,
+	UnixIPGlobalProperties__ctor_m131705248,
+	Win32IPGlobalProperties_get_DomainName_m3467829811,
+	Win32IPGlobalProperties__ctor_m1772432178,
+	Win32NetworkInterface_GetNetworkParams_m2297365948,
+	Win32NetworkInterface_get_FixedInfo_m3715854652,
+	Win32NetworkInterface__cctor_m1329161106,
+	NtlmClient__ctor_m601797646,
+	NtlmClient_Authenticate_m3658344546,
+	NtlmClient_PreAuthenticate_m476806672,
+	NtlmClient_get_AuthenticationType_m1739840890,
+	PathList__ctor_m2594618257,
+	PathList_get_Count_m669527148,
+	PathList_GetCookiesCount_m4012631531,
+	PathList_get_Values_m2441809375,
+	PathList_get_Item_m433719466,
+	PathList_set_Item_m2496539297,
+	PathList_GetEnumerator_m3707745332,
+	PathList_get_SyncRoot_m2516597328,
+	PathListComparer_System_Collections_IComparer_Compare_m3318255939,
+	PathListComparer__ctor_m2457711856,
+	PathListComparer__cctor_m4159747597,
+	ProtocolViolationException__ctor_m3494069637,
+	ProtocolViolationException__ctor_m1575418383,
+	ProtocolViolationException__ctor_m1970521726,
+	ProtocolViolationException_System_Runtime_Serialization_ISerializable_GetObjectData_m2045101867,
+	ProtocolViolationException_GetObjectData_m3244936269,
 	AuthenticatedStream__ctor_m2546959456,
 	AuthenticatedStream_get_InnerStream_m4066215780,
 	AuthenticatedStream_Dispose_m2809320002,
+	LocalCertSelectionCallback__ctor_m386164261,
+	LocalCertSelectionCallback_Invoke_m1692344453,
+	LocalCertSelectionCallback_BeginInvoke_m553604038,
+	LocalCertSelectionCallback_EndInvoke_m3613070888,
+	RemoteCertificateValidationCallback__ctor_m1251969663,
+	RemoteCertificateValidationCallback_Invoke_m727898444,
+	RemoteCertificateValidationCallback_BeginInvoke_m1840268146,
+	RemoteCertificateValidationCallback_EndInvoke_m1360061860,
 	SslStream_get_Impl_m3149891854,
 	SslStream__ctor_m669531117,
 	SslStream_CreateMonoSslStream_m3208885458,
@@ -25633,6 +30864,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SslStream_get_CanSeek_m102894697,
 	SslStream_get_CanRead_m1708449590,
 	SslStream_get_CanWrite_m1287225252,
+	SslStream_get_ReadTimeout_m583510994,
+	SslStream_get_WriteTimeout_m111948981,
 	SslStream_get_Length_m1403894209,
 	SslStream_get_Position_m2568970827,
 	SslStream_set_Position_m2208958757,
@@ -25646,15 +30879,590 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	SslStream_EndRead_m3563632709,
 	SslStream_BeginWrite_m831482228,
 	SslStream_EndWrite_m4230550996,
+	ServerCertValidationCallback__ctor_m3702464936,
+	ServerCertValidationCallback_get_ValidationCallback_m3775939199,
+	ServerCertValidationCallback_Callback_m4094854916,
+	ServerCertValidationCallback_Invoke_m970680335,
+	CallbackContext__ctor_m463300618,
+	ServicePoint__ctor_m4022457269,
+	ServicePoint_get_Address_m4189969258,
+	ServicePoint_get_ConnectionLimit_m3279274329,
+	ServicePoint_get_ProtocolVersion_m2707266366,
+	ServicePoint_set_Expect100Continue_m1237635858,
+	ServicePoint_get_UseNagleAlgorithm_m633218140,
+	ServicePoint_set_UseNagleAlgorithm_m1374731041,
+	ServicePoint_get_SendContinue_m3018494224,
+	ServicePoint_set_SendContinue_m3004714502,
+	ServicePoint_SetTcpKeepAlive_m1397995104,
+	ServicePoint_KeepAliveSetup_m1439766054,
+	ServicePoint_PutBytes_m1954185421,
+	ServicePoint_get_UsesProxy_m174711556,
+	ServicePoint_set_UsesProxy_m2758604003,
+	ServicePoint_get_UseConnect_m2085353846,
+	ServicePoint_set_UseConnect_m1377758489,
+	ServicePoint_GetConnectionGroup_m2497020374,
+	ServicePoint_RemoveConnectionGroup_m1619826718,
+	ServicePoint_CheckAvailableForRecycling_m2511650943,
+	ServicePoint_IdleTimerCallback_m2062114730,
+	ServicePoint_get_HasTimedOut_m2870516460,
+	ServicePoint_get_HostEntry_m1249515277,
+	ServicePoint_SetVersion_m218713483,
+	ServicePoint_SendRequest_m1850173641,
+	ServicePoint_UpdateServerCertificate_m400846069,
+	ServicePoint_UpdateClientCertificate_m3591076172,
+	ServicePoint_CallEndPointDelegate_m2947487287,
+	ServicePoint_U3CGetConnectionGroupU3Eb__66_0_m2384897977,
+	ServicePointManager__cctor_m3222177795,
+	ServicePointManager_GetLegacyCertificatePolicy_m1373482136,
+	ServicePointManager_get_CheckCertificateRevocationList_m1716454075,
+	ServicePointManager_get_DnsRefreshTimeout_m2777228149,
+	ServicePointManager_get_SecurityProtocol_m4259357356,
+	ServicePointManager_get_ServerCertValidationCallback_m261155263,
+	ServicePointManager_get_ServerCertificateValidationCallback_m984921647,
+	ServicePointManager_FindServicePoint_m4119451290,
+	SPKey__ctor_m2807051469,
+	SPKey_get_UsesProxy_m3161922308,
+	SPKey_GetHashCode_m1832733826,
+	SPKey_Equals_m4205549017,
+	SimpleAsyncCallback__ctor_m2647477404,
+	SimpleAsyncCallback_Invoke_m1556536928,
+	SimpleAsyncCallback_BeginInvoke_m3748162143,
+	SimpleAsyncCallback_EndInvoke_m843864638,
+	SimpleAsyncResult__ctor_m2857079850,
+	SimpleAsyncResult__ctor_m302284371,
+	SimpleAsyncResult_Run_m2632813164,
+	SimpleAsyncResult_RunWithLock_m2419669062,
+	SimpleAsyncResult_Reset_internal_m1051157640,
+	SimpleAsyncResult_SetCompleted_m515399313,
+	SimpleAsyncResult_SetCompleted_m3748086251,
+	SimpleAsyncResult_SetCompleted_internal_m1548663497,
+	SimpleAsyncResult_SetCompleted_internal_m3990539307,
+	SimpleAsyncResult_DoCallback_private_m3635007888,
+	SimpleAsyncResult_DoCallback_internal_m3054769675,
+	SimpleAsyncResult_WaitUntilComplete_m1711352865,
+	SimpleAsyncResult_WaitUntilComplete_m562927459,
+	SimpleAsyncResult_get_AsyncState_m1324575894,
+	SimpleAsyncResult_get_AsyncWaitHandle_m2590763727,
+	SimpleAsyncResult_get_CompletedSynchronously_m1730313150,
+	SimpleAsyncResult_get_CompletedSynchronouslyPeek_m3681140797,
+	SimpleAsyncResult_get_IsCompleted_m1032228256,
+	SimpleAsyncResult_get_GotException_m3693335075,
+	SimpleAsyncResult_get_Exception_m4130951627,
+	U3CU3Ec__DisplayClass11_0__ctor_m3459980745,
+	U3CU3Ec__DisplayClass11_0_U3CRunWithLockU3Eb__0_m3682622198,
+	U3CU3Ec__DisplayClass11_0_U3CRunWithLockU3Eb__1_m2227804549,
+	U3CU3Ec__DisplayClass9_0__ctor_m2402425430,
+	U3CU3Ec__DisplayClass9_0_U3C_ctorU3Eb__0_m778917517,
+	SocketAddress_get_Family_m3641031639,
+	SocketAddress_get_Size_m3420662108,
+	SocketAddress_get_Item_m4142520260,
+	SocketAddress__ctor_m487026317,
+	SocketAddress__ctor_m3121787210,
+	SocketAddress__ctor_m2840053504,
+	SocketAddress_GetIPAddress_m1387719498,
+	SocketAddress_GetIPEndPoint_m836939424,
+	SocketAddress_Equals_m1857492818,
+	SocketAddress_GetHashCode_m1436747884,
+	SocketAddress_ToString_m797278434,
+	LingerOption__ctor_m2538367620,
+	LingerOption_set_Enabled_m1826728409,
+	LingerOption_set_LingerTime_m4070974897,
+	NetworkStream__ctor_m1741284015,
+	NetworkStream__ctor_m594102681,
+	NetworkStream_get_CanRead_m995827301,
+	NetworkStream_get_CanSeek_m2713257202,
+	NetworkStream_get_CanWrite_m3803109243,
+	NetworkStream_get_ReadTimeout_m266050210,
+	NetworkStream_get_WriteTimeout_m936731250,
+	NetworkStream_get_Length_m2134439603,
+	NetworkStream_get_Position_m4060665641,
+	NetworkStream_set_Position_m4274646361,
+	NetworkStream_Seek_m873044447,
+	NetworkStream_InitNetworkStream_m961292768,
+	NetworkStream_Read_m89488240,
+	NetworkStream_Write_m172181053,
+	NetworkStream_Dispose_m4074776990,
+	NetworkStream_Finalize_m382940703,
+	NetworkStream_BeginRead_m194067695,
+	NetworkStream_EndRead_m1637001035,
+	NetworkStream_BeginWrite_m1919375747,
+	NetworkStream_EndWrite_m2616051554,
+	NetworkStream_Flush_m1348361755,
+	SafeSocketHandle__ctor_m339710951,
+	SafeSocketHandle_ReleaseHandle_m115824575,
+	SafeSocketHandle_RegisterForBlockingSyscall_m2358257996,
+	SafeSocketHandle_UnRegisterForBlockingSyscall_m89159727,
+	SafeSocketHandle__cctor_m564687165,
+	Socket__ctor_m3479084642,
+	Socket_get_SupportsIPv4_m1296530015,
+	Socket_get_OSSupportsIPv4_m1922873662,
+	Socket_get_SupportsIPv6_m1296530017,
+	Socket_get_OSSupportsIPv6_m760074248,
+	Socket_get_Handle_m2249751627,
+	Socket_get_AddressFamily_m51841532,
+	Socket_get_SocketType_m1610605419,
+	Socket_get_ProtocolType_m1935110519,
+	Socket_set_DontFragment_m1311305537,
+	Socket_get_DualMode_m1709958258,
+	Socket_set_DualMode_m3338159327,
+	Socket_get_IsDualMode_m3276226869,
+	Socket_Send_m1328269865,
+	Socket_Send_m2509318470,
+	Socket_Receive_m3794758455,
+	Socket_Receive_m2722177980,
+	Socket_IOControl_m2060869247,
+	Socket_SetIPProtectionLevel_m702436415,
+	Socket_BeginSend_m2697766330,
+	Socket_EndSend_m2816431255,
+	Socket_BeginReceive_m2439065097,
+	Socket_EndReceive_m2385446150,
+	Socket_get_InternalSyncObject_m390753244,
+	Socket_get_CleanedUp_m691785454,
+	Socket_InitializeSockets_m3417479393,
+	Socket_Dispose_m614819465,
+	Socket_Finalize_m1356936501,
+	Socket_InternalShutdown_m1075955397,
+	Socket__ctor_m3891211138,
+	Socket_SocketDefaults_m2103159556,
+	Socket_Socket_internal_m1681190592,
+	Socket_get_LocalEndPoint_m456692531,
+	Socket_LocalEndPoint_internal_m1475836735,
+	Socket_LocalEndPoint_internal_m3061712115,
+	Socket_get_Blocking_m140927673,
+	Socket_set_Blocking_m2255852279,
+	Socket_Blocking_internal_m257811699,
+	Socket_Blocking_internal_m937501832,
+	Socket_get_Connected_m2875145796,
+	Socket_set_NoDelay_m3209939872,
+	Socket_Poll_m391414345,
+	Socket_Poll_internal_m3148478813,
+	Socket_Poll_internal_m3742261368,
+	Socket_Accept_m4157022177,
+	Socket_Accept_m789917158,
+	Socket_EndAccept_m2591091503,
+	Socket_EndAccept_m1313896210,
+	Socket_Accept_internal_m868353226,
+	Socket_Accept_internal_m3246009452,
+	Socket_Bind_m1387808352,
+	Socket_Bind_internal_m2670275492,
+	Socket_Bind_internal_m2004496361,
+	Socket_Listen_m3184049021,
+	Socket_Listen_internal_m2767807186,
+	Socket_Listen_internal_m314292295,
+	Socket_Connect_m798630981,
+	Socket_BeginMConnect_m4086520346,
+	Socket_BeginSConnect_m4212968585,
+	Socket_EndConnect_m498417972,
+	Socket_Connect_internal_m3396660944,
+	Socket_Connect_internal_m1130612002,
+	Socket_Disconnect_m1621188342,
+	Socket_EndDisconnect_m4234608499,
+	Socket_Disconnect_internal_m1225498763,
+	Socket_Disconnect_internal_m3671451617,
+	Socket_Receive_m840169338,
+	Socket_Receive_m2053758874,
+	Socket_BeginReceive_m2742014887,
+	Socket_EndReceive_m3009256849,
+	Socket_Receive_internal_m1088206903,
+	Socket_Receive_internal_m1041794929,
+	Socket_Receive_internal_m3910046341,
+	Socket_Receive_internal_m1850300390,
+	Socket_ReceiveFrom_m4213975345,
+	Socket_EndReceiveFrom_m1036960845,
+	Socket_ReceiveFrom_internal_m3020781080,
+	Socket_ReceiveFrom_internal_m3325136542,
+	Socket_Send_m576183475,
+	Socket_Send_m4178278673,
+	Socket_BeginSend_m385981137,
+	Socket_BeginSendCallback_m1460608609,
+	Socket_EndSend_m1244041542,
+	Socket_Send_internal_m1960113657,
+	Socket_Send_internal_m3765077036,
+	Socket_Send_internal_m796698044,
+	Socket_Send_internal_m3843698549,
+	Socket_EndSendTo_m3552536842,
+	Socket_GetSocketOption_m419986124,
+	Socket_GetSocketOption_obj_internal_m533670452,
+	Socket_GetSocketOption_obj_internal_m3909434119,
+	Socket_SetSocketOption_m483522974,
+	Socket_SetSocketOption_internal_m2968096094,
+	Socket_SetSocketOption_internal_m2890815837,
+	Socket_IOControl_m449145276,
+	Socket_IOControl_internal_m3809077560,
+	Socket_IOControl_internal_m676748339,
+	Socket_Close_m3289097516,
+	Socket_Close_m2076598688,
+	Socket_Close_internal_m3541237784,
+	Socket_Shutdown_internal_m3507063392,
+	Socket_Shutdown_internal_m4083092300,
+	Socket_Dispose_m3459017717,
+	Socket_Linger_m363798742,
+	Socket_ThrowIfDisposedAndClosed_m2521335859,
+	Socket_ThrowIfBufferNull_m3748732293,
+	Socket_ThrowIfBufferOutOfRange_m1472522590,
+	Socket_ThrowIfUdp_m3991967902,
+	Socket_ValidateEndIAsyncResult_m3260976934,
+	Socket_QueueIOSelectorJob_m1532315495,
+	Socket_RemapIPEndPoint_m3015939529,
+	Socket_cancel_blocking_socket_operation_m922726505,
+	Socket_get_FamilyHint_m2256720159,
+	Socket_IsProtocolSupported_internal_m3759258780,
+	Socket_IsProtocolSupported_m2744406924,
+	Socket__cctor_m857260626,
+	U3CU3Ec__cctor_m532654084,
+	U3CU3Ec__ctor_m2896289733,
+	U3CU3Ec_U3CBeginSendU3Eb__241_0_m1921471321,
+	U3CU3Ec_U3C_cctorU3Eb__309_0_m2242655620,
+	U3CU3Ec_U3C_cctorU3Eb__309_1_m2423046525,
+	U3CU3Ec_U3C_cctorU3Eb__309_2_m854572685,
+	U3CU3Ec_U3C_cctorU3Eb__309_3_m1470574082,
+	U3CU3Ec_U3C_cctorU3Eb__309_4_m3609314407,
+	U3CU3Ec_U3C_cctorU3Eb__309_5_m3281058751,
+	U3CU3Ec_U3C_cctorU3Eb__309_6_m3221995463,
+	U3CU3Ec_U3C_cctorU3Eb__309_7_m1186665062,
+	U3CU3Ec_U3C_cctorU3Eb__309_8_m84584810,
+	U3CU3Ec_U3C_cctorU3Eb__309_9_m1253681822,
+	U3CU3Ec_U3C_cctorU3Eb__309_10_m233669948,
+	U3CU3Ec_U3C_cctorU3Eb__309_11_m3585703175,
+	U3CU3Ec_U3C_cctorU3Eb__309_12_m1607004806,
+	U3CU3Ec_U3C_cctorU3Eb__309_13_m4146416281,
+	U3CU3Ec_U3C_cctorU3Eb__309_14_m4067735120,
+	U3CU3Ec__DisplayClass242_0__ctor_m571730096,
+	U3CU3Ec__DisplayClass242_0_U3CBeginSendCallbackU3Eb__0_m759158135,
+	U3CU3Ec__DisplayClass298_0__ctor_m3200109011,
+	U3CU3Ec__DisplayClass298_0_U3CQueueIOSelectorJobU3Eb__0_m3346106331,
+	SocketAsyncEventArgs_get_AcceptSocket_m2976413550,
+	SocketAsyncEventArgs_set_AcceptSocket_m803500985,
+	SocketAsyncEventArgs_set_BytesTransferred_m3887301794,
+	SocketAsyncEventArgs_set_SocketError_m2833015933,
+	SocketAsyncEventArgs_Finalize_m2742700199,
+	SocketAsyncEventArgs_Dispose_m1052872840,
+	SocketAsyncEventArgs_Dispose_m75246699,
+	SocketAsyncEventArgs_Complete_m640063065,
+	SocketAsyncEventArgs_OnCompleted_m377032193,
+	SocketAsyncResult_get_Handle_m3169920889,
+	SocketAsyncResult__ctor_m2222378430,
+	SocketAsyncResult_get_ErrorCode_m3197843861,
+	SocketAsyncResult_CheckIfThrowDelayedException_m1791470585,
+	SocketAsyncResult_CompleteDisposed_m3648698353,
+	SocketAsyncResult_Complete_m2139287463,
+	SocketAsyncResult_Complete_m4036770188,
+	SocketAsyncResult_Complete_m2013919124,
+	SocketAsyncResult_Complete_m1649959738,
+	SocketAsyncResult_Complete_m772415312,
+	SocketAsyncResult_Complete_m4080713924,
+	SocketAsyncResult_Complete_m3033430476,
+	U3CU3Ec__cctor_m2809933815,
+	U3CU3Ec__ctor_m944601489,
+	U3CU3Ec_U3CCompleteU3Eb__27_0_m3635841825,
 	SocketException_WSAGetLastError_internal_m1236276956,
 	SocketException__ctor_m480722159,
+	SocketException__ctor_m3042788307,
+	SocketException__ctor_m1369613389,
 	SocketException__ctor_m985972657,
 	SocketException__ctor_m3558609746,
 	SocketException_get_Message_m1742236578,
+	SocketException_get_SocketErrorCode_m2767669540,
+	SystemNetworkCredential__ctor_m3792767285,
+	SystemNetworkCredential__cctor_m559915852,
+	TimerThread__cctor_m4183456827,
+	TimerThread_CreateQueue_m2900821011,
+	TimerThread_StopTimerThread_m1476219093,
+	TimerThread_OnDomainUnload_m112035087,
+	Callback__ctor_m2918749280,
+	Callback_Invoke_m4185709191,
+	Callback_BeginInvoke_m2961554617,
+	Callback_EndInvoke_m405768436,
+	InfiniteTimerQueue__ctor_m1392887597,
+	Queue__ctor_m1094493313,
+	Timer__ctor_m3542848881,
+	Timer_Dispose_m2370742773,
+	TimerNode__ctor_m1623469998,
+	TimerNode_get_Next_m1150785631,
+	TimerNode_set_Next_m162860594,
+	TimerNode_get_Prev_m2370560326,
+	TimerNode_set_Prev_m1257715160,
+	TimerNode_Cancel_m688563000,
+	TimerQueue__ctor_m68967505,
+	HttpApi__cctor_m514859596,
+	HTTP_REQUEST_HEADER_ID_ToString_m285473541,
+	HTTP_REQUEST_HEADER_ID__cctor_m2555245410,
+	SecureStringHelper_CreateString_m2819186690,
+	SecureStringHelper_CreateSecureString_m111498626,
+	ValidationHelper_MakeStringNull_m2319736105,
+	ValidationHelper_ExceptionMessage_m1265427269,
+	ValidationHelper_ToString_m3637526118,
+	ValidationHelper_IsBlankString_m3811430027,
+	ValidationHelper_ValidateTcpPort_m2411968702,
+	ValidationHelper__cctor_m2059238382,
+	WebAsyncResult__ctor_m2054281158,
+	WebAsyncResult__ctor_m3529977349,
+	WebAsyncResult__ctor_m4245223108,
+	WebAsyncResult_Reset_m208950746,
+	WebAsyncResult_SetCompleted_m2879962625,
+	WebAsyncResult_SetCompleted_m471828713,
+	WebAsyncResult_SetCompleted_m1095618586,
+	WebAsyncResult_DoCallback_m1336537550,
+	WebAsyncResult_get_NBytes_m1181398750,
+	WebAsyncResult_set_NBytes_m2701756818,
+	WebAsyncResult_get_InnerAsyncResult_m4134833752,
+	WebAsyncResult_set_InnerAsyncResult_m4260877195,
+	WebAsyncResult_get_WriteStream_m1124866432,
+	WebAsyncResult_get_Response_m931788217,
+	WebAsyncResult_get_Buffer_m1662146309,
+	WebAsyncResult_get_Offset_m368370234,
+	WebAsyncResult_get_Size_m4148452880,
+	WebConnection__ctor_m4229643654,
+	WebConnection_CanReuse_m2827124740,
+	WebConnection_Connect_m2850066444,
+	WebConnection_CreateTunnel_m94461872,
+	WebConnection_ReadHeaders_m1556875581,
+	WebConnection_FlushContents_m3149390488,
+	WebConnection_CreateStream_m3387195587,
+	WebConnection_HandleError_m738788885,
+	WebConnection_ReadDone_m4265791416,
+	WebConnection_ExpectContent_m3637777693,
+	WebConnection_InitRead_m3547797554,
+	WebConnection_GetResponse_m3731018748,
+	WebConnection_InitConnection_m1346209371,
+	WebConnection_SendRequest_m4284869211,
+	WebConnection_SendNext_m1567013439,
+	WebConnection_NextRead_m3275930655,
+	WebConnection_ReadLine_m1318917240,
+	WebConnection_BeginRead_m2950707033,
+	WebConnection_EndRead_m3553040041,
+	WebConnection_EnsureRead_m1250887662,
+	WebConnection_CompleteChunkedRead_m618073306,
+	WebConnection_BeginWrite_m3795141727,
+	WebConnection_EndWrite_m1985976895,
+	WebConnection_Read_m1054701704,
+	WebConnection_Write_m3744361765,
+	WebConnection_Close_m1464903054,
+	WebConnection_Abort_m20739763,
+	WebConnection_ResetNtlm_m1997409512,
+	WebConnection_set_PriorityRequest_m1465137853,
+	WebConnection_get_NtlmAuthenticated_m2082355413,
+	WebConnection_set_NtlmAuthenticated_m3388586408,
+	WebConnection_get_NtlmCredential_m2384740598,
+	WebConnection_set_NtlmCredential_m4103205352,
+	WebConnection_get_UnsafeAuthenticatedConnectionSharing_m453020971,
+	WebConnection_set_UnsafeAuthenticatedConnectionSharing_m987184906,
+	WebConnection_U3CSendRequestU3Eb__41_0_m3242074501,
+	AbortHelper_Abort_m1162957833,
+	AbortHelper__ctor_m842092169,
+	WebConnectionData__ctor_m2596484140,
+	WebConnectionData__ctor_m3924339920,
+	WebConnectionData_get_request_m2565424488,
+	WebConnectionData_set_request_m2687368876,
+	WebConnectionData_get_ReadState_m4024752547,
+	WebConnectionData_set_ReadState_m1219866531,
+	WebConnectionGroup__ctor_m4209428564,
+	WebConnectionGroup_add_ConnectionClosed_m43227740,
+	WebConnectionGroup_remove_ConnectionClosed_m2318136007,
+	WebConnectionGroup_GetConnection_m3713157279,
+	WebConnectionGroup_PrepareSharingNtlm_m3982393373,
+	WebConnectionGroup_FindIdleConnection_m4134649307,
+	WebConnectionGroup_CreateOrReuseConnection_m4225937228,
+	WebConnectionGroup_get_Name_m837259254,
+	WebConnectionGroup_get_Queue_m2310519839,
+	WebConnectionGroup_TryRecycle_m3555446477,
+	ConnectionState_get_Connection_m3295091074,
+	ConnectionState_set_Connection_m63781982,
+	ConnectionState_get_Group_m2806105227,
+	ConnectionState_set_Group_m3167695302,
+	ConnectionState_get_ServicePoint_m2205514463,
+	ConnectionState_get_Busy_m1276687864,
+	ConnectionState_get_IdleSince_m1222337842,
+	ConnectionState_TrySetBusy_m3427448496,
+	ConnectionState_SetIdle_m2481845986,
+	ConnectionState__ctor_m2068236286,
+	WebConnectionStream__ctor_m3833248332,
+	WebConnectionStream__ctor_m1091771122,
+	WebConnectionStream_CheckAuthHeader_m3347742564,
+	WebConnectionStream_IsNtlmAuth_m4072757025,
+	WebConnectionStream_CheckResponseInBuffer_m3201279978,
+	WebConnectionStream_get_Connection_m3939220024,
+	WebConnectionStream_get_ReadTimeout_m410091343,
+	WebConnectionStream_get_WriteTimeout_m2819824264,
+	WebConnectionStream_get_CompleteRequestWritten_m761372138,
+	WebConnectionStream_set_SendChunked_m532577291,
+	WebConnectionStream_set_ReadBuffer_m2380223665,
+	WebConnectionStream_set_ReadBufferOffset_m2243374622,
+	WebConnectionStream_set_ReadBufferSize_m3389230,
+	WebConnectionStream_get_WriteBuffer_m815304309,
+	WebConnectionStream_get_WriteBufferLength_m2987307428,
+	WebConnectionStream_ForceCompletion_m543651373,
+	WebConnectionStream_CheckComplete_m1795453731,
+	WebConnectionStream_ReadAll_m3145919104,
+	WebConnectionStream_WriteCallbackWrapper_m641430686,
+	WebConnectionStream_ReadCallbackWrapper_m3664552025,
+	WebConnectionStream_Read_m4279029041,
+	WebConnectionStream_BeginRead_m2120480875,
+	WebConnectionStream_EndRead_m3979704604,
+	WebConnectionStream_WriteAsyncCB_m1742239648,
+	WebConnectionStream_BeginWrite_m91788762,
+	WebConnectionStream_CheckWriteOverflow_m962631185,
+	WebConnectionStream_EndWrite_m1860918953,
+	WebConnectionStream_Write_m1061706378,
+	WebConnectionStream_Flush_m3309079282,
+	WebConnectionStream_SetHeadersAsync_m2644509534,
+	WebConnectionStream_SetHeadersAsync_m709356943,
+	WebConnectionStream_get_RequestWritten_m4293957107,
+	WebConnectionStream_WriteRequestAsync_m83932417,
+	WebConnectionStream_InternalClose_m2666563675,
+	WebConnectionStream_get_GetResponseOnClose_m3199916967,
+	WebConnectionStream_Close_m1981057778,
+	WebConnectionStream_KillBuffer_m3997100420,
+	WebConnectionStream_Seek_m3960780793,
+	WebConnectionStream_get_CanSeek_m2524996598,
+	WebConnectionStream_get_CanRead_m3058525165,
+	WebConnectionStream_get_CanWrite_m4074596119,
+	WebConnectionStream_get_Length_m750039804,
+	WebConnectionStream_get_Position_m2559024493,
+	WebConnectionStream_set_Position_m537414785,
+	WebConnectionStream__cctor_m2995607677,
+	U3CU3Ec__DisplayClass75_0__ctor_m2800177376,
+	U3CU3Ec__DisplayClass75_0_U3CSetHeadersAsyncU3Eb__0_m1607502738,
+	U3CU3Ec__DisplayClass76_0__ctor_m2800171847,
+	U3CU3Ec__DisplayClass76_0_U3CSetHeadersAsyncU3Eb__0_m3387509175,
+	U3CU3Ec__DisplayClass80_0__ctor_m1848080972,
+	U3CU3Ec__DisplayClass80_0_U3CWriteRequestAsyncU3Eb__0_m2242617246,
+	U3CU3Ec__DisplayClass80_0_U3CWriteRequestAsyncU3Eb__1_m2378670477,
+	WebException__ctor_m3272147077,
+	WebException__ctor_m2000471014,
+	WebException__ctor_m3995319482,
+	WebException__ctor_m2864788884,
+	WebException__ctor_m4084416308,
+	WebException__ctor_m2761056832,
+	WebException__ctor_m3621846952,
+	WebException__ctor_m2775493423,
+	WebException__ctor_m3540123886,
+	WebException__ctor_m3600308346,
+	WebException_System_Runtime_Serialization_ISerializable_GetObjectData_m3329056988,
+	WebException_GetObjectData_m922074473,
+	WebException_get_Status_m1481596798,
+	WebExceptionMapping_GetWebStatusString_m3110747443,
+	WebExceptionMapping__cctor_m3317630178,
+	WebHeaderCollection_NormalizeCommonHeaders_m2399969767,
+	WebHeaderCollection_get_InnerCollection_m956553888,
+	WebHeaderCollection_AllowMultiValues_m3519361423,
+	WebHeaderCollection_get_AllowHttpRequestHeader_m3401683334,
+	WebHeaderCollection_Remove_m4092434409,
+	WebHeaderCollection_AddInternal_m3052165385,
+	WebHeaderCollection_ChangeInternal_m1766136805,
+	WebHeaderCollection_RemoveInternal_m2712218737,
+	WebHeaderCollection_CheckBadChars_m186292639,
+	WebHeaderCollection_ContainsNonAsciiChars_m458848647,
+	WebHeaderCollection_ThrowOnRestrictedHeader_m2617707554,
+	WebHeaderCollection_Add_m183143026,
+	WebHeaderCollection_Add_m928193981,
+	WebHeaderCollection_Set_m2824231721,
+	WebHeaderCollection_SetInternal_m126443775,
+	WebHeaderCollection_Remove_m275303502,
+	WebHeaderCollection_GetValues_m2828584819,
+	WebHeaderCollection_ToString_m1263025316,
+	WebHeaderCollection_GetAsString_m1676534746,
+	WebHeaderCollection__ctor_m896654210,
+	WebHeaderCollection__ctor_m3869665640,
+	WebHeaderCollection__ctor_m1308130075,
+	WebHeaderCollection_OnDeserialization_m3998891408,
+	WebHeaderCollection_GetObjectData_m730985326,
+	WebHeaderCollection_System_Runtime_Serialization_ISerializable_GetObjectData_m2698261559,
+	WebHeaderCollection_Get_m805014777,
+	WebHeaderCollection_GetEnumerator_m2991425604,
+	WebHeaderCollection_get_Count_m3224978046,
+	WebHeaderCollection_Get_m3921484261,
+	WebHeaderCollection_GetKey_m809097130,
+	WebHeaderCollection_get_AllKeys_m2853044734,
+	WebHeaderCollection__cctor_m2093192431,
+	WebProxy__ctor_m4061043939,
+	WebProxy__ctor_m3758467778,
+	WebProxy_get_Credentials_m4043769984,
+	WebProxy_get_UseDefaultCredentials_m1572240836,
+	WebProxy_set_UseDefaultCredentials_m617650985,
+	WebProxy_GetProxy_m3150838504,
+	WebProxy_UpdateRegExList_m1919914812,
+	WebProxy_IsMatchInBypassList_m2350950534,
+	WebProxy_IsLocal_m454657683,
+	WebProxy_IsLocalInProxyHash_m3095354371,
+	WebProxy_IsBypassed_m2918071028,
+	WebProxy_IsBypassedManual_m1352858335,
+	WebProxy__ctor_m3723076346,
+	WebProxy_System_Runtime_Serialization_ISerializable_GetObjectData_m430220241,
+	WebProxy_GetObjectData_m2475888157,
+	WebProxy_get_ScriptEngine_m3661054305,
+	WebProxy_CreateDefaultProxy_m3620105084,
+	WebProxy__ctor_m1486557132,
+	WebProxy_UnsafeUpdateFromRegistry_m585121876,
+	WebProxy_GetProxyAuto_m4183973344,
+	WebProxy_IsBypassedAuto_m1618063376,
+	WebProxy_AreAllBypassed_m3505013980,
+	WebProxy_ProxyUri_m3467768412,
+	WebRequest_get_InternalSyncObject_m1533568516,
+	WebRequest_Create_m2007167695,
+	WebRequest_Create_m1521009289,
+	WebRequest_Create_m2603246108,
+	WebRequest_get_PrefixList_m1589524268,
+	WebRequest_PopulatePrefixList_m3829107100,
+	WebRequest__ctor_m3593280671,
+	WebRequest__ctor_m2895531935,
+	WebRequest_System_Runtime_Serialization_ISerializable_GetObjectData_m3856360037,
+	WebRequest_GetObjectData_m1299992613,
+	WebRequest_get_Method_m1872254915,
+	WebRequest_set_Method_m1087261754,
+	WebRequest_get_RequestUri_m2259001472,
+	WebRequest_get_Headers_m1915717959,
+	WebRequest_set_Headers_m857278311,
+	WebRequest_get_ContentLength_m47669036,
+	WebRequest_set_ContentLength_m261374951,
+	WebRequest_set_ContentType_m3069761267,
+	WebRequest_get_Credentials_m338312678,
+	WebRequest_set_Credentials_m1430198380,
+	WebRequest_get_UseDefaultCredentials_m2515512021,
+	WebRequest_get_Proxy_m317269301,
+	WebRequest_get_Timeout_m195273593,
+	WebRequest_set_Timeout_m1373594751,
+	WebRequest_GetRequestStream_m4259865359,
+	WebRequest_GetResponse_m791144225,
+	WebRequest_BeginGetResponse_m594613547,
+	WebRequest_EndGetResponse_m983572203,
+	WebRequest_BeginGetRequestStream_m3179270283,
+	WebRequest_EndGetRequestStream_m2938970949,
+	WebRequest_GetRequestStreamAsync_m1710608624,
+	WebRequest_SafeCaptureIdenity_m273049891,
+	WebRequest_Abort_m1387679547,
+	WebRequest_get_InternalDefaultWebProxy_m1982940918,
+	WebRequest_get_DefaultWebProxy_m4155870144,
+	WebRequest__cctor_m3940074084,
+	WebRequest_U3CGetRequestStreamAsyncU3Eb__78_0_m4024301302,
+	U3CU3Ec__DisplayClass78_0__ctor_m1887191066,
+	U3CU3Ec__DisplayClass78_0_U3CGetRequestStreamAsyncU3Eb__1_m1942056259,
+	DesignerWebRequestCreate_Create_m2094132177,
+	DesignerWebRequestCreate__ctor_m2013891472,
+	WebProxyWrapper_get_WebProxy_m2153040522,
+	WebProxyWrapperOpaque_GetProxy_m211424586,
+	WebProxyWrapperOpaque_IsBypassed_m2178633714,
+	WebProxyWrapperOpaque_get_Credentials_m4219336078,
+	WebRequestPrefixElement_get_Creator_m447103823,
+	WebRequestPrefixElement_set_Creator_m3082387009,
+	WebRequestPrefixElement__ctor_m106813755,
+	WebResponse__ctor_m824854825,
+	WebResponse__ctor_m3907452824,
+	WebResponse_System_Runtime_Serialization_ISerializable_GetObjectData_m4038369249,
+	WebResponse_GetObjectData_m3150548104,
+	WebResponse_Close_m3195977952,
+	WebResponse_Dispose_m1024766730,
+	WebResponse_Dispose_m2564598473,
+	WebResponse_GetResponseStream_m3988934657,
+	WebResponse_get_Headers_m1380453460,
+	Platform_uname_m3913857930,
+	Platform_CheckOS_m1308309308,
+	Platform_get_IsMacOS_m1085619612,
 	AuthenticationException__ctor_m30644731,
 	AuthenticationException__ctor_m1225129457,
 	AuthenticationException__ctor_m4021409972,
 	AsnEncodedData__ctor_m3792312694,
+	AsnEncodedData__ctor_m119764527,
 	AsnEncodedData_set_Oid_m351300829,
 	AsnEncodedData_get_RawData_m1706087592,
 	AsnEncodedData_set_RawData_m1598714608,
@@ -25675,6 +31483,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Oid__ctor_m911618594,
 	Oid_get_Value_m743416803,
 	Oid_set_Value_m282289058,
+	Oid_get_FriendlyName_m1299931775,
 	OidCollection__ctor_m4001685071,
 	OidCollection_Add_m2569544356,
 	OidCollection_get_Item_m984725507,
@@ -25686,9 +31495,14 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	OidEnumerator__ctor_m257525176,
 	OidEnumerator_System_Collections_IEnumerator_get_Current_m3426335186,
 	OidEnumerator_MoveNext_m3138911739,
+	PublicKey__ctor_m1834139044,
 	PublicKey_get_EncodedKeyValue_m199315148,
 	PublicKey_get_EncodedParameters_m4197029957,
+	PublicKey_get_Key_m3077215602,
 	PublicKey_get_Oid_m2056027242,
+	PublicKey_GetUnsignedBigInteger_m3873409673,
+	PublicKey_DecodeDSA_m3490622362,
+	PublicKey_DecodeRSA_m1824703659,
 	PublicKey__cctor_m269574593,
 	X509BasicConstraintsExtension__ctor_m3136793028,
 	X509BasicConstraintsExtension__ctor_m1244152959,
@@ -25700,8 +31514,55 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	X509BasicConstraintsExtension_Decode_m120598446,
 	X509BasicConstraintsExtension_Encode_m2310708419,
 	X509BasicConstraintsExtension_ToString_m1809935297,
+	X509Certificate2_get_Impl_m3008352797,
+	X509Certificate2__ctor_m3983787587,
+	X509Certificate2__ctor_m3948937360,
+	X509Certificate2_get_NotAfter_m1930122497,
+	X509Certificate2_get_NotBefore_m2514418239,
+	X509Certificate2_get_PrivateKey_m450647294,
+	X509Certificate2_get_PublicKey_m370665820,
+	X509Certificate2_get_SerialNumber_m1315874713,
+	X509Certificate2_get_SignatureAlgorithm_m2810155907,
+	X509Certificate2_get_Thumbprint_m392121246,
+	X509Certificate2_get_Version_m2534012675,
+	X509Certificate2_Import_m4026562329,
+	X509Certificate2_Reset_m3988214799,
+	X509Certificate2_ToString_m3891217889,
+	X509Certificate2_ToString_m4246350784,
+	X509Certificate2_AppendBuffer_m445040858,
+	X509Certificate2__cctor_m4292326511,
 	X509Certificate2Collection__cctor_m1106890913,
+	X509Certificate2Impl__ctor_m2201072781,
+	X509Certificate2ImplMono_get_IsValid_m3155190174,
+	X509Certificate2ImplMono__ctor_m3537229770,
+	X509Certificate2ImplMono__ctor_m3866943730,
+	X509Certificate2ImplMono_Clone_m4033569785,
+	X509Certificate2ImplMono_GetIssuerName_m1471829655,
+	X509Certificate2ImplMono_GetSubjectName_m1781585546,
+	X509Certificate2ImplMono_GetRawCertData_m607064946,
+	X509Certificate2ImplMono_GetCertHash_m3982099414,
+	X509Certificate2ImplMono_GetValidFrom_m1561996788,
+	X509Certificate2ImplMono_GetValidUntil_m1818057475,
+	X509Certificate2ImplMono_Equals_m1184495489,
+	X509Certificate2ImplMono_GetSerialNumber_m1542352590,
+	X509Certificate2ImplMono__ctor_m3209317732,
+	X509Certificate2ImplMono_get_PrivateKey_m447648088,
+	X509Certificate2ImplMono_get_PublicKey_m1158306339,
+	X509Certificate2ImplMono_get_SignatureAlgorithm_m1685648403,
+	X509Certificate2ImplMono_get_Version_m199339614,
+	X509Certificate2ImplMono_ImportPkcs12_m4012551612,
+	X509Certificate2ImplMono_Import_m2024797549,
+	X509Certificate2ImplMono_Reset_m1660850808,
+	X509Certificate2ImplMono_ToString_m2816258475,
+	X509Certificate2ImplMono_ToString_m2444289495,
+	X509Certificate2ImplMono_AppendBuffer_m3346455520,
+	X509Certificate2ImplMono_get_IntermediateCertificates_m2927533872,
+	X509Certificate2ImplMono__cctor_m2520024431,
 	X509CertificateCollection__ctor_m147081211,
+	X509CertificateCollection__ctor_m1035674262,
+	X509CertificateCollection_get_Item_m1177942658,
+	X509CertificateCollection_Add_m907905475,
+	X509CertificateCollection_AddRange_m2650657275,
 	X509CertificateCollection_GetEnumerator_m1686475779,
 	X509CertificateCollection_GetHashCode_m1953348376,
 	X509CertificateEnumerator__ctor_m943731472,
@@ -25709,8 +31570,12 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	X509CertificateEnumerator_System_Collections_IEnumerator_get_Current_m4218613192,
 	X509CertificateEnumerator_System_Collections_IEnumerator_MoveNext_m1392570645,
 	X509CertificateEnumerator_MoveNext_m1557350766,
+	X509CertificateImplCollection__ctor_m4163429795,
+	X509CertificateImplCollection__ctor_m351709902,
 	X509CertificateImplCollection_get_Count_m48198922,
 	X509CertificateImplCollection_get_Item_m2124075370,
+	X509CertificateImplCollection_Add_m2754476179,
+	X509CertificateImplCollection_Clone_m239523168,
 	X509CertificateImplCollection_Dispose_m2690341342,
 	X509CertificateImplCollection_Dispose_m4007137012,
 	X509CertificateImplCollection_Finalize_m700508022,
@@ -25750,10 +31615,25 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	X509Extension_set_Critical_m1180944253,
 	X509Extension_CopyFrom_m474590450,
 	X509Extension_FormatUnkownData_m3636863676,
+	X509ExtensionCollection_get_Count_m3589967016,
+	X509ExtensionCollection_get_IsSynchronized_m2607599544,
+	X509ExtensionCollection_get_SyncRoot_m2667861032,
+	X509ExtensionCollection_System_Collections_ICollection_CopyTo_m2505796149,
+	X509ExtensionCollection_System_Collections_IEnumerable_GetEnumerator_m4033897067,
+	X509ExtensionCollection__cctor_m1169297509,
+	X509ExtensionEnumerator__ctor_m827820494,
+	X509ExtensionEnumerator_System_Collections_IEnumerator_get_Current_m2494161059,
+	X509ExtensionEnumerator_MoveNext_m3077762850,
+	X509Helper2_Initialize_m4215653071,
+	X509Helper2_ThrowIfContextInvalid_m247512399,
+	X509Helper2_Import_m2379872975,
+	X509Helper2_Import_m2596019773,
 	X509Helper2_CreateChainImpl_m279807262,
 	X509Helper2_IsValid_m1509861197,
 	X509Helper2_ThrowIfContextInvalid_m1043854274,
 	X509Helper2_GetInvalidChainContextException_m163510118,
+	MyNativeHelper_Import_m1299979664,
+	MyNativeHelper__ctor_m3683709320,
 	X509KeyUsageExtension__ctor_m1098820427,
 	X509KeyUsageExtension__ctor_m1105912158,
 	X509KeyUsageExtension__ctor_m524748856,
@@ -25787,6 +31667,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ExclusiveReference_Release_m2687036909,
 	ExclusiveReference__ctor_m2326373018,
 	Group__ctor_m2865950562,
+	Group_get_Success_m3823591889,
 	Group__cctor_m2230627219,
 	Match_get_Empty_m2060287462,
 	Match__ctor_m1633264197,
@@ -25813,9 +31694,12 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Regex_get_RightToLeft_m2317867572,
 	Regex_ToString_m1548107455,
 	Regex_IsMatch_m3266004395,
+	Regex_IsMatch_m3454586611,
 	Regex_IsMatch_m4013319851,
 	Regex_IsMatch_m4067478295,
 	Regex_IsMatch_m2113092601,
+	Regex_Match_m2255756165,
+	Regex_Match_m4145799399,
 	Regex_InitializeReferences_m2368828986,
 	Regex_Run_m3049341450,
 	Regex_LookupCachedAndUpdate_m771950898,
@@ -26102,31 +31986,50 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Uri_EnsureHostString_m2556618523,
 	Uri__ctor_m800430703,
 	Uri__ctor_m3040793867,
+	Uri__ctor_m4293005803,
+	Uri_CreateUri_m1357951263,
 	Uri__ctor_m253204164,
 	Uri_GetCombinedString_m2728463461,
 	Uri_GetException_m26092414,
 	Uri__ctor_m3848281005,
 	Uri_System_Runtime_Serialization_ISerializable_GetObjectData_m4023918416,
 	Uri_GetObjectData_m935079997,
+	Uri_get_AbsolutePath_m590948575,
+	Uri_get_PrivateAbsolutePath_m1709492967,
 	Uri_get_AbsoluteUri_m2582056986,
+	Uri_get_LocalPath_m2837234216,
+	Uri_get_Authority_m3816772302,
+	Uri_get_HostNameType_m1143766868,
+	Uri_get_IsDefaultPort_m3984463462,
+	Uri_get_IsFile_m2450018824,
+	Uri_get_IsLoopback_m2492530169,
+	Uri_get_PathAndQuery_m2396197970,
 	Uri_get_IsUnc_m2977972311,
+	Uri_get_Host_m42857288,
 	Uri_StaticIsFile_m2673671656,
 	Uri_get_InitializeLock_m4180097934,
 	Uri_InitializeUriConfig_m255196268,
+	Uri_GetLocalPath_m296187027,
 	Uri_get_Port_m184067428,
+	Uri_get_Query_m2772518875,
+	Uri_get_Fragment_m575158891,
 	Uri_get_Scheme_m2109479391,
 	Uri_get_OriginalStringSwitched_m1166999894,
 	Uri_get_OriginalString_m3715995233,
 	Uri_get_DnsSafeHost_m3434390226,
 	Uri_get_IsAbsoluteUri_m3666899587,
 	Uri_get_UserEscaped_m3947486145,
+	Uri_get_UserInfo_m1985954539,
 	Uri_IsGenDelim_m691514017,
+	Uri_CheckSchemeName_m108657675,
 	Uri_IsHexDigit_m3389749670,
 	Uri_FromHex_m2610708947,
 	Uri_GetHashCode_m321999866,
 	Uri_ToString_m3742105950,
+	Uri_op_Equality_m685520154,
 	Uri_op_Inequality_m839253362,
 	Uri_Equals_m3263316701,
+	Uri_InternalEscapeString_m537903901,
 	Uri_ParseScheme_m3301597092,
 	Uri_ParseMinimal_m443648661,
 	Uri_PrivateParseMinimal_m3207950663,
@@ -26155,6 +32058,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Uri_Compress_m1801856598,
 	Uri_CalculateCaseInsensitiveHashCode_m1472649974,
 	Uri_CombineUri_m3504099696,
+	Uri_get_HasAuthority_m495367953,
 	Uri_IsLWS_m563721732,
 	Uri_IsAsciiLetter_m1196218737,
 	Uri_IsAsciiLetterOrDigit_m2810128337,
@@ -26168,6 +32072,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Uri_TryCreate_m385949523,
 	Uri_GetComponents_m4033187838,
 	Uri_UnescapeDataString_m3282767665,
+	Uri_EscapeDataString_m2743853427,
 	Uri_EscapeUnescapeIri_m3727477417,
 	Uri__ctor_m2575587343,
 	Uri_CreateHelper_m2703197614,
@@ -26178,6 +32083,15 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Uri__cctor_m38080231,
 	MoreInfo__ctor_m3639489874,
 	UriInfo__ctor_m556353075,
+	UriBuilder__ctor_m2700491786,
+	UriBuilder_set_Host_m2493895927,
+	UriBuilder_set_Path_m3892261086,
+	UriBuilder_set_Scheme_m1372973315,
+	UriBuilder_get_Uri_m3514502640,
+	UriBuilder_Equals_m3500940484,
+	UriBuilder_GetHashCode_m2450580240,
+	UriBuilder_SetFieldsFromUri_m237881163,
+	UriBuilder_ToString_m1259521445,
 	UriFormatException__ctor_m1115096473,
 	UriFormatException__ctor_m3083316541,
 	UriFormatException__ctor_m3466512970,
@@ -26209,6 +32123,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	UriParser_IsFullMatch_m528315200,
 	UriParser__ctor_m1924902178,
 	UriParser_FindOrFetchAsUnknownV1Syntax_m82912732,
+	UriParser_GetSyntax_m811769415,
 	UriParser_get_IsSimple_m3157087347,
 	UriParser_InternalOnNewUri_m4146786771,
 	UriParser_InternalValidate_m3709279262,
@@ -26216,30 +32131,439 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	UriParser_InternalGetComponents_m1544498498,
 	BuiltInUriParser__ctor_m4154603378,
 	UriTypeConverter__ctor_m148525934,
+	U3CPrivateImplementationDetailsU3E_ComputeStringHash_m2563088408,
+	Locale_GetText_m3520169047,
+	BigInteger__ctor_m3473491062,
+	BigInteger__ctor_m2108826647,
+	BigInteger__ctor_m2644482640,
+	BigInteger__ctor_m2601366464,
+	BigInteger__ctor_m2474659844,
+	BigInteger_op_Implicit_m3414367033,
+	BigInteger_op_Implicit_m2547142909,
+	BigInteger_op_Subtraction_m4245834512,
+	BigInteger_op_Modulus_m3242311550,
+	BigInteger_op_Modulus_m2565477533,
+	BigInteger_op_Division_m3713793389,
+	BigInteger_op_Multiply_m3683746602,
+	BigInteger_op_LeftShift_m3681213422,
+	BigInteger_op_RightShift_m460065452,
+	BigInteger_get_Rng_m3283260184,
+	BigInteger_GenerateRandom_m3872771375,
+	BigInteger_GenerateRandom_m1790382084,
+	BigInteger_BitCount_m2055977486,
+	BigInteger_TestBit_m2798226118,
+	BigInteger_SetBit_m1387902198,
+	BigInteger_SetBit_m1723423691,
+	BigInteger_LowestSetBit_m1199244228,
+	BigInteger_GetBytes_m1259701831,
+	BigInteger_op_Equality_m3872814973,
+	BigInteger_op_Inequality_m3469726044,
+	BigInteger_op_Equality_m1194739960,
+	BigInteger_op_Inequality_m2697143438,
+	BigInteger_op_GreaterThan_m2974122765,
+	BigInteger_op_LessThan_m463398176,
+	BigInteger_op_GreaterThanOrEqual_m3313329514,
+	BigInteger_op_LessThanOrEqual_m3925173639,
+	BigInteger_ToString_m3260066955,
+	BigInteger_ToString_m1181683046,
+	BigInteger_Normalize_m3021106862,
+	BigInteger_Clear_m2995574218,
+	BigInteger_GetHashCode_m1594560121,
+	BigInteger_ToString_m3927393477,
+	BigInteger_Equals_m63093403,
+	BigInteger_ModInverse_m2426215562,
+	BigInteger_GeneratePseudoPrime_m2547138838,
+	BigInteger_Incr2_m1531167978,
+	BigInteger__cctor_m102257529,
+	Kernel_Subtract_m846005223,
+	Kernel_MinusEq_m2152832554,
+	Kernel_PlusEq_m136676638,
+	Kernel_Compare_m2669603547,
+	Kernel_SingleByteDivideInPlace_m2393683267,
+	Kernel_DwordMod_m3830036736,
+	Kernel_DwordDivMod_m1540317819,
+	Kernel_multiByteDivide_m450694282,
+	Kernel_LeftShift_m4140742987,
+	Kernel_RightShift_m3246168448,
+	Kernel_Multiply_m193213393,
+	Kernel_MultiplyMod2p32pmod_m451690680,
+	Kernel_modInverse_m4048046181,
+	Kernel_modInverse_m652700340,
+	ModulusRing__ctor_m2420310199,
+	ModulusRing_BarrettReduction_m3024442734,
+	ModulusRing_Multiply_m1975391470,
+	ModulusRing_Difference_m3686091506,
+	ModulusRing_Pow_m1124248336,
+	ModulusRing_Pow_m729002192,
+	PrimeGeneratorBase_get_Confidence_m3172213559,
+	PrimeGeneratorBase_get_PrimalityTest_m2487240563,
+	PrimeGeneratorBase_get_TrialDivisionBounds_m1980088695,
+	PrimeGeneratorBase__ctor_m2423671149,
+	SequentialSearchPrimeGeneratorBase_GenerateSearchBase_m1918143664,
+	SequentialSearchPrimeGeneratorBase_GenerateNewPrime_m907640859,
+	SequentialSearchPrimeGeneratorBase_GenerateNewPrime_m2891860459,
+	SequentialSearchPrimeGeneratorBase_IsPrimeAcceptable_m1127740833,
+	SequentialSearchPrimeGeneratorBase__ctor_m577913576,
+	PrimalityTest__ctor_m763620166,
+	PrimalityTest_Invoke_m2948246884,
+	PrimalityTest_BeginInvoke_m742423211,
+	PrimalityTest_EndInvoke_m1035389364,
+	PrimalityTests_GetSPPRounds_m2558073743,
+	PrimalityTests_RabinMillerTest_m2544317101,
 	ASN1__ctor_m1239252869,
 	ASN1__ctor_m682794872,
 	ASN1__ctor_m1638893325,
 	ASN1_get_Count_m1789520042,
 	ASN1_get_Tag_m2789147236,
+	ASN1_get_Length_m3581645253,
 	ASN1_get_Value_m63296490,
 	ASN1_set_Value_m647861841,
+	ASN1_CompareArray_m3928975006,
+	ASN1_CompareValue_m2846313136,
 	ASN1_Add_m2431139999,
 	ASN1_GetBytes_m1968380955,
 	ASN1_Decode_m1245286596,
 	ASN1_DecodeTLV_m3927350254,
 	ASN1_get_Item_m2255075813,
+	ASN1_Element_m4088315026,
 	ASN1_ToString_m45458043,
 	ASN1Convert_FromInt32_m1154451899,
+	ASN1Convert_FromOid_m3844102704,
+	ASN1Convert_FromUnsignedBigInteger_m1312950810,
 	ASN1Convert_ToInt32_m1017403318,
 	ASN1Convert_ToOid_m3847701408,
+	ASN1Convert_ToDateTime_m1246060840,
 	BitConverterLE_GetUIntBytes_m795219058,
+	BitConverterLE_GetULongBytes_m2441696337,
 	BitConverterLE_GetBytes_m3268825786,
+	BitConverterLE_GetBytes_m2105698692,
+	BitConverterLE_UShortFromBytes_m3272953552,
+	BitConverterLE_UIntFromBytes_m3926041003,
+	BitConverterLE_ToUInt16_m2422733049,
+	BitConverterLE_ToUInt32_m1866481534,
 	CryptoConvert_ToHex_m4034982758,
+	MD2__ctor_m2402458789,
+	MD2_Create_m3511476020,
+	MD2Managed_Padding_m1334210368,
+	MD2Managed__ctor_m3243422744,
+	MD2Managed_Initialize_m2341076836,
+	MD2Managed_HashCore_m1280598655,
+	MD2Managed_HashFinal_m808964912,
+	MD2Managed_MD2Transform_m3143426291,
+	MD2Managed__cctor_m1915574725,
+	MD4__ctor_m919379109,
+	MD4_Create_m1588482044,
+	MD4Managed__ctor_m2284724408,
+	MD4Managed_Initialize_m469436465,
+	MD4Managed_HashCore_m3384203071,
+	MD4Managed_HashFinal_m3850238392,
+	MD4Managed_Padding_m3091724296,
+	MD4Managed_F_m2794461001,
+	MD4Managed_G_m2118206422,
+	MD4Managed_H_m213605525,
+	MD4Managed_ROL_m691796253,
+	MD4Managed_FF_m3294771481,
+	MD4Managed_GG_m1845276249,
+	MD4Managed_HH_m2535673516,
+	MD4Managed_Encode_m386285215,
+	MD4Managed_Decode_m4273685594,
+	MD4Managed_MD4Transform_m1101832482,
+	PKCS1_CreateFromName_m700794140,
+	PKCS1__cctor_m2848504824,
+	EncryptedPrivateKeyInfo__ctor_m3415744930,
+	EncryptedPrivateKeyInfo__ctor_m25839594,
+	EncryptedPrivateKeyInfo_get_Algorithm_m3027828440,
+	EncryptedPrivateKeyInfo_get_EncryptedData_m491452551,
+	EncryptedPrivateKeyInfo_get_Salt_m1261804721,
+	EncryptedPrivateKeyInfo_get_IterationCount_m2912222740,
+	EncryptedPrivateKeyInfo_Decode_m3008916518,
+	PrivateKeyInfo__ctor_m3331475997,
+	PrivateKeyInfo__ctor_m2715455038,
+	PrivateKeyInfo_get_PrivateKey_m3647771102,
+	PrivateKeyInfo_Decode_m986145117,
+	PrivateKeyInfo_RemoveLeadingZero_m3592760008,
+	PrivateKeyInfo_Normalize_m2274647848,
+	PrivateKeyInfo_DecodeRSA_m4129124827,
+	PrivateKeyInfo_Encode_m1621437631,
+	PrivateKeyInfo_DecodeDSA_m2335813142,
+	PrivateKeyInfo_Encode_m1599810751,
+	PrivateKeyInfo_Encode_m3039933266,
+	RSAManaged_Finalize_m297255587,
+	RSAManaged_GenerateKeyPair_m2364618953,
+	RSAManaged_get_KeySize_m1441482916,
+	RSAManaged_get_PublicOnly_m405847294,
+	RSAManaged_ExportParameters_m1754454264,
+	RSAManaged_ImportParameters_m1117427048,
+	RSAManaged_Dispose_m2347279430,
+	RSAManaged_ToXmlString_m2369501989,
+	RSAManaged_GetPaddedValue_m2182626630,
+	KeyGeneratedEventHandler__ctor_m4032730305,
+	KeyGeneratedEventHandler_Invoke_m99769071,
+	KeyGeneratedEventHandler_BeginInvoke_m3227934731,
+	KeyGeneratedEventHandler_EndInvoke_m2862962495,
+	Alert_get_Level_m2435440816,
+	Alert_get_Description_m2140461962,
+	Alert__ctor_m3454890044,
+	Alert_inferAlertLevel_m3772649164,
+	Alert_ToString_m2140927589,
+	CertificateValidationHelper__cctor_m3987015388,
+	CertificateValidationHelper_GetInternalValidator_m480890152,
+	MonoLocalCertificateSelectionCallback__ctor_m7962002,
+	MonoLocalCertificateSelectionCallback_Invoke_m3086542150,
+	MonoLocalCertificateSelectionCallback_BeginInvoke_m156686422,
+	MonoLocalCertificateSelectionCallback_EndInvoke_m1794702192,
+	MonoRemoteCertificateValidationCallback__ctor_m2422871402,
+	MonoRemoteCertificateValidationCallback_Invoke_m1806289288,
+	MonoRemoteCertificateValidationCallback_BeginInvoke_m4192822619,
+	MonoRemoteCertificateValidationCallback_EndInvoke_m749439042,
+	MonoTlsConnectionInfo_get_CipherSuiteCode_m2194175656,
+	MonoTlsConnectionInfo_set_CipherSuiteCode_m504438431,
+	MonoTlsConnectionInfo_get_ProtocolVersion_m2191416560,
+	MonoTlsConnectionInfo_set_ProtocolVersion_m3428272857,
+	MonoTlsConnectionInfo_set_PeerDomainName_m860135070,
+	MonoTlsConnectionInfo_ToString_m2337041500,
+	MonoTlsConnectionInfo__ctor_m2448521303,
 	MonoTlsProvider__ctor_m354200425,
+	MonoTlsSettings_get_RemoteCertificateValidationCallback_m153991427,
+	MonoTlsSettings_set_RemoteCertificateValidationCallback_m1115381675,
+	MonoTlsSettings_get_ClientCertificateSelectionCallback_m177827885,
+	MonoTlsSettings_set_ClientCertificateSelectionCallback_m373140571,
+	MonoTlsSettings_get_UseServicePointManagerCallback_m1876043725,
+	MonoTlsSettings_set_UseServicePointManagerCallback_m2449958594,
+	MonoTlsSettings_get_CallbackNeedsCertificateChain_m4194302287,
+	MonoTlsSettings_get_CertificateValidationTime_m2983256467,
+	MonoTlsSettings_set_CertificateValidationTime_m2362522525,
 	MonoTlsSettings_get_TrustAnchors_m1471927348,
+	MonoTlsSettings_set_TrustAnchors_m2945333956,
+	MonoTlsSettings_get_UserSettings_m1441628049,
+	MonoTlsSettings_set_UserSettings_m427063071,
+	MonoTlsSettings_get_CertificateSearchPaths_m655766883,
+	MonoTlsSettings_set_CertificateSearchPaths_m2272766668,
+	MonoTlsSettings_get_SendCloseNotify_m4004168955,
+	MonoTlsSettings_set_SendCloseNotify_m545663457,
+	MonoTlsSettings_get_EnabledProtocols_m3477630224,
+	MonoTlsSettings_set_EnabledProtocols_m2108924511,
+	MonoTlsSettings_get_EnabledCiphers_m430456440,
+	MonoTlsSettings_set_EnabledCiphers_m2645321496,
+	MonoTlsSettings__ctor_m3932836947,
+	MonoTlsSettings_get_DefaultSettings_m1725413153,
+	MonoTlsSettings_CopyDefaultSettings_m2564289867,
+	MonoTlsSettings_get_CertificateValidator_m1252165739,
+	MonoTlsSettings_CloneWithValidator_m3212834737,
+	MonoTlsSettings_Clone_m432136059,
+	MonoTlsSettings__ctor_m1540983530,
+	TlsException__ctor_m1429622943,
+	TlsException__ctor_m2591765141,
+	ValidationResult__ctor_m3405453222,
+	ValidationResult_get_Trusted_m1465699729,
+	ValidationResult_get_UserDenied_m2687575925,
+	ContentInfo__ctor_m1955840786,
+	ContentInfo__ctor_m2855743200,
+	ContentInfo__ctor_m2928874476,
+	ContentInfo__ctor_m3397951412,
+	ContentInfo_get_ASN1_m2959326143,
+	ContentInfo_get_Content_m4053224038,
+	ContentInfo_set_Content_m2581255245,
+	ContentInfo_get_ContentType_m4018261807,
+	ContentInfo_set_ContentType_m3848100294,
+	ContentInfo_GetASN1_m2535172199,
+	EncryptedData__ctor_m257803736,
+	EncryptedData__ctor_m4001546383,
+	EncryptedData_get_EncryptionAlgorithm_m905084934,
+	EncryptedData_get_EncryptedContent_m3205649670,
+	ChallengeResponse__ctor_m909693900,
+	ChallengeResponse__ctor_m1766420171,
+	ChallengeResponse_Finalize_m1050972457,
+	ChallengeResponse_set_Password_m644923800,
+	ChallengeResponse_set_Challenge_m2001764172,
+	ChallengeResponse_get_LM_m2398177464,
+	ChallengeResponse_get_NT_m2130397345,
+	ChallengeResponse_Dispose_m2049787730,
+	ChallengeResponse_Dispose_m3277980124,
+	ChallengeResponse_GetResponse_m2224393208,
+	ChallengeResponse_PrepareDESKey_m1036478089,
+	ChallengeResponse_PasswordToKey_m2955876407,
+	ChallengeResponse__cctor_m1421572888,
+	ChallengeResponse2_Compute_LM_m3838524908,
+	ChallengeResponse2_Compute_NTLM_Password_m3074406407,
+	ChallengeResponse2_Compute_NTLM_m2465685926,
+	ChallengeResponse2_Compute_NTLMv2_Session_m3780308122,
+	ChallengeResponse2_Compute_NTLMv2_m1714203447,
+	ChallengeResponse2_Compute_m1395485354,
+	ChallengeResponse2_GetResponse_m4251638688,
+	ChallengeResponse2_PrepareDESKey_m2748989848,
+	ChallengeResponse2_PasswordToKey_m1050782802,
+	ChallengeResponse2__cctor_m2451067002,
+	MessageBase__ctor_m685679560,
+	MessageBase_get_Flags_m3792791611,
+	MessageBase_set_Flags_m1606870589,
+	MessageBase_get_Type_m8196934,
+	MessageBase_PrepareMessage_m764356068,
+	MessageBase_Decode_m2327798753,
+	MessageBase_CheckHeader_m17174181,
+	MessageBase__cctor_m1010600254,
+	NtlmSettings_get_DefaultAuthLevel_m608340105,
+	NtlmSettings__cctor_m2659531526,
+	Type1Message__ctor_m3321522007,
+	Type1Message_set_Domain_m2961818014,
+	Type1Message_set_Host_m144948456,
+	Type1Message_Decode_m1816611154,
+	Type1Message_GetBytes_m576198455,
+	Type2Message__ctor_m1757683206,
+	Type2Message_Finalize_m1432481727,
+	Type2Message_get_Nonce_m1761614227,
+	Type2Message_get_TargetName_m4153138828,
+	Type2Message_get_TargetInfo_m1674986710,
+	Type2Message_Decode_m2305427869,
+	Type2Message_GetBytes_m556000764,
+	Type3Message__ctor_m999579862,
+	Type3Message_Finalize_m2763659896,
+	Type3Message_set_Domain_m127093028,
+	Type3Message_set_Password_m3307927806,
+	Type3Message_set_Username_m3043951953,
+	Type3Message_Decode_m2959565873,
+	Type3Message_DecodeString_m2271784492,
+	Type3Message_EncodeString_m2531698540,
+	Type3Message_GetBytes_m558745021,
+	PKCS12__ctor_m1854440921,
+	PKCS12__ctor_m1587304645,
+	PKCS12__ctor_m2483239261,
+	PKCS12_Decode_m163534693,
+	PKCS12_Finalize_m507756088,
+	PKCS12_set_Password_m4088935795,
+	PKCS12_get_IterationCount_m3005687235,
+	PKCS12_set_IterationCount_m2605460921,
+	PKCS12_get_Keys_m3893933360,
+	PKCS12_get_Certificates_m166242546,
+	PKCS12_get_RNG_m64541056,
+	PKCS12_Compare_m219153845,
+	PKCS12_GetSymmetricAlgorithm_m3480654844,
+	PKCS12_Decrypt_m1280162536,
+	PKCS12_Decrypt_m3441995779,
+	PKCS12_Encrypt_m3618991685,
+	PKCS12_GetExistingParameters_m3446652479,
+	PKCS12_AddPrivateKey_m1877554254,
+	PKCS12_ReadSafeBag_m3435973087,
+	PKCS12_CertificateSafeBag_m1505366012,
+	PKCS12_MAC_m3355614022,
+	PKCS12_GetBytes_m415958948,
+	PKCS12_EncryptedContentInfo_m729936927,
+	PKCS12_AddCertificate_m3679554094,
+	PKCS12_AddCertificate_m3820167082,
+	PKCS12_RemoveCertificate_m3555301339,
+	PKCS12_RemoveCertificate_m2774912578,
+	PKCS12_Clone_m2085085101,
+	PKCS12_get_MaximumPasswordLength_m3603260090,
+	PKCS12__cctor_m3271060407,
+	DeriveBytes__ctor_m2211845228,
+	DeriveBytes_set_HashName_m3612196732,
+	DeriveBytes_set_IterationCount_m3824132378,
+	DeriveBytes_set_Password_m4086840123,
+	DeriveBytes_set_Salt_m1400945044,
+	DeriveBytes_Adjust_m1814768799,
+	DeriveBytes_Derive_m1232352666,
+	DeriveBytes_DeriveKey_m2933043667,
+	DeriveBytes_DeriveIV_m973925711,
+	DeriveBytes_DeriveMAC_m2121691743,
+	DeriveBytes__cctor_m3019062497,
+	SafeBag__ctor_m3881032521,
+	SafeBag_get_BagOID_m2153399743,
+	SafeBag_get_ASN1_m2293701606,
+	X501_ToString_m2260475203,
+	X501_ToString_m3840057611,
+	X501_AppendEntry_m2479013363,
+	X501__cctor_m2428304915,
+	X509Certificate_Parse_m54358579,
+	X509Certificate__ctor_m553243489,
+	X509Certificate_GetUnsignedBigInteger_m877462855,
+	X509Certificate_get_DSA_m2644963799,
+	X509Certificate_set_DSA_m753722200,
+	X509Certificate_get_IssuerName_m47554030,
+	X509Certificate_get_KeyAlgorithm_m3935660380,
+	X509Certificate_get_KeyAlgorithmParameters_m3698130868,
+	X509Certificate_get_PublicKey_m950835056,
+	X509Certificate_get_RSA_m1755006809,
+	X509Certificate_set_RSA_m3534515075,
+	X509Certificate_get_RawData_m2626675988,
+	X509Certificate_get_SerialNumber_m3924188880,
+	X509Certificate_get_SignatureAlgorithm_m122054440,
+	X509Certificate_get_SubjectName_m3871411396,
+	X509Certificate_get_ValidFrom_m845748800,
+	X509Certificate_get_ValidUntil_m1838041919,
+	X509Certificate_get_Version_m3419034307,
+	X509Certificate_GetIssuerName_m3173047029,
+	X509Certificate_GetSubjectName_m3288368674,
+	X509Certificate_GetObjectData_m2952009451,
+	X509Certificate_PEM_m2020851166,
+	X509Certificate__cctor_m1746020738,
+	X509CertificateCollection__ctor_m2066277891,
+	X509CertificateCollection_get_Item_m3285563224,
+	X509CertificateCollection_Add_m2277657976,
+	X509CertificateCollection_GetEnumerator_m1275665495,
+	X509CertificateCollection_System_Collections_IEnumerable_GetEnumerator_m647852366,
+	X509CertificateCollection_GetHashCode_m2303492950,
+	X509CertificateEnumerator__ctor_m85694331,
+	X509CertificateEnumerator_get_Current_m1004537031,
+	X509CertificateEnumerator_System_Collections_IEnumerator_get_Current_m1846030361,
+	X509CertificateEnumerator_System_Collections_IEnumerator_MoveNext_m2626270621,
+	X509CertificateEnumerator_MoveNext_m3925432749,
+	X509Extension__ctor_m710637961,
+	X509Extension_Decode_m3172373814,
+	X509Extension_Equals_m1779194186,
+	X509Extension_GetHashCode_m1797796679,
+	X509Extension_WriteLine_m1662885247,
+	X509Extension_ToString_m3727002866,
+	X509ExtensionCollection__ctor_m2474799343,
+	X509ExtensionCollection__ctor_m551870633,
+	X509ExtensionCollection_System_Collections_IEnumerable_GetEnumerator_m1475785462,
+	SR_GetString_m4069745605,
 	Error_ArgumentNull_m219206370,
 	Error_MoreThanOneMatch_m2666736739,
 	Error_NoElements_m207875825,
+	AesCryptoServiceProvider__ctor_m3527218652,
+	AesCryptoServiceProvider_GenerateIV_m2862162833,
+	AesCryptoServiceProvider_GenerateKey_m2038339615,
+	AesCryptoServiceProvider_CreateDecryptor_m1328793350,
+	AesCryptoServiceProvider_CreateEncryptor_m1407541527,
+	AesCryptoServiceProvider_get_IV_m2323542127,
+	AesCryptoServiceProvider_set_IV_m1872168943,
+	AesCryptoServiceProvider_get_Key_m249672229,
+	AesCryptoServiceProvider_set_Key_m1299633668,
+	AesCryptoServiceProvider_get_KeySize_m1957235978,
+	AesCryptoServiceProvider_set_KeySize_m1700177054,
+	AesCryptoServiceProvider_get_FeedbackSize_m1042259489,
+	AesCryptoServiceProvider_get_Mode_m859524667,
+	AesCryptoServiceProvider_set_Mode_m376974175,
+	AesCryptoServiceProvider_get_Padding_m3261497210,
+	AesCryptoServiceProvider_set_Padding_m1667433282,
+	AesCryptoServiceProvider_CreateDecryptor_m3603952599,
+	AesCryptoServiceProvider_CreateEncryptor_m732637922,
+	AesCryptoServiceProvider_Dispose_m156197556,
+	AesManaged__ctor_m1349486362,
+	AesManaged_get_FeedbackSize_m2153614958,
+	AesManaged_get_IV_m118095902,
+	AesManaged_set_IV_m3705704588,
+	AesManaged_get_Key_m538801386,
+	AesManaged_set_Key_m767972181,
+	AesManaged_get_KeySize_m1181452829,
+	AesManaged_set_KeySize_m1150692274,
+	AesManaged_get_Mode_m2644624863,
+	AesManaged_set_Mode_m1307055158,
+	AesManaged_get_Padding_m3004521386,
+	AesManaged_set_Padding_m2564892480,
+	AesManaged_CreateDecryptor_m752875210,
+	AesManaged_CreateDecryptor_m692040246,
+	AesManaged_CreateEncryptor_m1611897367,
+	AesManaged_CreateEncryptor_m2294080233,
+	AesManaged_Dispose_m615303088,
+	AesManaged_GenerateIV_m1368817386,
+	AesManaged_GenerateKey_m2004209814,
+	AesTransform__ctor_m3143546745,
+	AesTransform_ECB_m240244807,
+	AesTransform_SubByte_m3350159546,
+	AesTransform_Encrypt128_m424393011,
+	AesTransform_Decrypt128_m3018534522,
+	AesTransform__cctor_m2567644034,
 	AssetFileNameExtensionAttribute__ctor_m592302761,
 	FreeFunctionAttribute__ctor_m225850777,
 	FreeFunctionAttribute__ctor_m3967403258,
@@ -26326,6 +32650,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Application_get_isPlaying_m100394690,
 	Application_get_platform_m2150679437,
 	Application_get_isMobilePlatform_m751658814,
+	Application_get_dataPath_m4232621142,
+	Application_get_persistentDataPath_m1428108154,
 	Application_set_targetFrameRate_m3682352535,
 	Application_CallLowMemory_m2813539296,
 	Application_CallLogCallback_m255562505,
@@ -26359,6 +32685,21 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Behaviour_get_enabled_m753527255,
 	Behaviour_set_enabled_m20417929,
 	Behaviour_get_isActiveAndEnabled_m3143666263,
+	BoneWeight_get_weight0_m749725712_AdjustorThunk,
+	BoneWeight_get_weight1_m3088377872_AdjustorThunk,
+	BoneWeight_get_weight2_m367388688_AdjustorThunk,
+	BoneWeight_get_weight3_m2706040848_AdjustorThunk,
+	BoneWeight_get_boneIndex0_m1574980135_AdjustorThunk,
+	BoneWeight_set_boneIndex0_m1320779249_AdjustorThunk,
+	BoneWeight_get_boneIndex1_m1574914599_AdjustorThunk,
+	BoneWeight_set_boneIndex1_m1320814988_AdjustorThunk,
+	BoneWeight_get_boneIndex2_m1574849063_AdjustorThunk,
+	BoneWeight_set_boneIndex2_m1320977735_AdjustorThunk,
+	BoneWeight_get_boneIndex3_m1574783527_AdjustorThunk,
+	BoneWeight_set_boneIndex3_m1321014602_AdjustorThunk,
+	BoneWeight_GetHashCode_m2108060355_AdjustorThunk,
+	BoneWeight_Equals_m2285825644_AdjustorThunk,
+	BoneWeight_Equals_m1462608544_AdjustorThunk,
 	BootConfigData__ctor_m4255151374,
 	BootConfigData_WrapBootConfigData_m329603588,
 	Bounds__ctor_m1937678907_AdjustorThunk,
@@ -26464,10 +32805,12 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Color_GetHashCode_m1829208463_AdjustorThunk,
 	Color_Equals_m3887740140_AdjustorThunk,
 	Color_Equals_m4060997379_AdjustorThunk,
+	Color_op_Addition_m3293657895,
 	Color_op_Multiply_m2615156251,
 	Color_op_Multiply_m2887457390,
 	Color_op_Multiply_m2768890077,
 	Color_op_Equality_m1112359053,
+	Color_op_Inequality_m3353772181,
 	Color_Lerp_m973389909,
 	Color_get_red_m3227813939,
 	Color_get_green_m490390750,
@@ -26478,6 +32821,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Color_get_magenta_m208363462,
 	Color_get_gray_m1471337008,
 	Color_get_clear_m1016382534,
+	Color_get_grayscale_m315155229_AdjustorThunk,
 	Color_get_linear_m3140936232_AdjustorThunk,
 	Color_get_gamma_m1819833637_AdjustorThunk,
 	Color_op_Implicit_m986621988,
@@ -26561,13 +32905,16 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Debug_DrawRay_m1257991655,
 	Debug_DrawRay_m376463475,
 	Debug_Log_m4051431634,
+	Debug_LogFormat_m309087137,
 	Debug_LogError_m2850623458,
 	Debug_LogError_m1665621915,
+	Debug_LogErrorFormat_m575266265,
 	Debug_LogErrorFormat_m3558239521,
 	Debug_LogException_m2207318968,
 	Debug_LogException_m2248249292,
 	Debug_LogWarning_m3752629331,
 	Debug_LogWarning_m831581295,
+	Debug_LogWarningFormat_m2535776735,
 	Debug_LogWarningFormat_m1153215311,
 	Debug__cctor_m1523394265,
 	Debug_DrawLine_Injected_m522801634,
@@ -26776,6 +33123,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	GameObject_BroadcastMessage_m217296818,
 	GameObject_Internal_CreateGameObject_m2533291801,
 	GameObject_Find_m2032535176,
+	GameObject_get_gameObject_m3693461266,
 	GeometryUtility_CalculateFrustumPlanes_m809305451,
 	GeometryUtility_CalculateFrustumPlanes_m1194921787,
 	GeometryUtility_CalculateFrustumPlanes_m2877064416,
@@ -26866,6 +33214,10 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Keyframe__ctor_m391431887_AdjustorThunk,
 	Keyframe_get_time_m803196188_AdjustorThunk,
 	Keyframe_get_value_m3427894467_AdjustorThunk,
+	LOD__ctor_m561740013_AdjustorThunk,
+	LODGroup_set_fadeMode_m2238099390,
+	LODGroup_set_animateCrossFading_m2629639020,
+	LODGroup_SetLODs_m704416562,
 	LayerMask_op_Implicit_m3296792737,
 	LayerMask_op_Implicit_m90232283,
 	LayerMask_get_value_m1881709263_AdjustorThunk,
@@ -26891,6 +33243,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Logger_GetString_m3669755330,
 	Logger_Log_m969976427,
 	Logger_Log_m2585387088,
+	Logger_LogFormat_m3030796110,
 	Logger_LogFormat_m3300686007,
 	Logger_LogException_m4285204825,
 	LowerResBlitTexture_LowerResBlitTextureDontStripMe_m2024164512,
@@ -26915,6 +33268,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Material_DisableKeyword_m1245091008,
 	Material_get_passCount_m3995310840,
 	Material_FindPass_m1115547424,
+	Material_SetOverrideTag_m806530364,
 	Material_SetPass_m686253719,
 	Material_CopyPropertiesFromMaterial_m2896226580,
 	Material_GetShaderKeywords_m3331850800,
@@ -26946,6 +33300,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Material_GetFloat_m2836278142,
 	Material_GetColor_m2707324984,
 	Material_GetColor_m4231777338,
+	Material_GetVector_m806950826,
 	Material_GetVector_m2472259403,
 	Material_GetTexture_m3545614349,
 	Material_GetTexture_m2683508263,
@@ -27018,6 +33373,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Matrix4x4_Equals_m4110661316_AdjustorThunk,
 	Matrix4x4_op_Multiply_m1876492807,
 	Matrix4x4_op_Multiply_m1839501195,
+	Matrix4x4_op_Equality_m928435754,
+	Matrix4x4_op_Inequality_m334399549,
 	Matrix4x4_GetColumn_m461504848_AdjustorThunk,
 	Matrix4x4_SetColumn_m2328592759_AdjustorThunk,
 	Matrix4x4_SetRow_m2327530647_AdjustorThunk,
@@ -27037,21 +33394,39 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Matrix4x4_Perspective_Injected_m704767771,
 	Mesh__ctor_m2533762929,
 	Mesh_Internal_Create_m2853543051,
+	Mesh_set_indexFormat_m2511990320,
+	Mesh_GetIndexCountImpl_m4003246655,
 	Mesh_GetTrianglesImpl_m1492496479,
 	Mesh_GetIndicesImpl_m3233954035,
 	Mesh_SetIndicesImpl_m17767641,
+	Mesh_GetTrianglesNonAllocImpl_m2919686804,
 	Mesh_PrintErrorCantAccessChannel_m2109128075,
 	Mesh_HasChannel_m4256962133,
 	Mesh_SetArrayForChannelImpl_m2642100114,
 	Mesh_GetAllocArrayFromChannelImpl_m3084065604,
 	Mesh_GetArrayFromChannelImpl_m1562947892,
+	Mesh_get_blendShapeCount_m1891235216,
+	Mesh_ClearBlendShapes_m3194924980,
+	Mesh_GetBlendShapeName_m2641015160,
+	Mesh_GetBlendShapeFrameCount_m1794976068,
+	Mesh_GetBlendShapeFrameWeight_m196188021,
+	Mesh_GetBlendShapeFrameVertices_m2207147822,
+	Mesh_AddBlendShapeFrame_m2920294038,
+	Mesh_get_boneWeights_m371091495,
+	Mesh_set_boneWeights_m3094710230,
+	Mesh_get_bindposes_m597973920,
+	Mesh_set_bindposes_m506051887,
+	Mesh_get_isReadable_m2894220158,
 	Mesh_get_canAccess_m2239225054,
 	Mesh_get_vertexCount_m884140614,
 	Mesh_get_subMeshCount_m3992802841,
+	Mesh_set_subMeshCount_m3209867014,
 	Mesh_get_bounds_m2004960313,
 	Mesh_set_bounds_m901235523,
 	Mesh_ClearImpl_m1688330970,
 	Mesh_RecalculateBoundsImpl_m2362089642,
+	Mesh_RecalculateNormalsImpl_m3102285457,
+	Mesh_RecalculateTangentsImpl_m2340358000,
 	Mesh_MarkDynamicImpl_m206310269,
 	Mesh_UploadMeshDataImpl_m755635474,
 	Mesh_CombineMeshesImpl_m64868513,
@@ -27070,6 +33445,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Mesh_set_uv2_m2840654016,
 	Mesh_get_uv3_m3614955461,
 	Mesh_get_uv4_m3615414213,
+	Mesh_get_colors_m1375263373,
 	Mesh_set_colors_m2218481242,
 	Mesh_get_colors32_m1253190811,
 	Mesh_set_colors32_m645370667,
@@ -27080,19 +33456,31 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Mesh_SetColors_m104655071,
 	Mesh_SetColors_m637808999,
 	Mesh_SetUVs_m3071410036,
+	Mesh_SetUVs_m3071344500,
+	Mesh_SetUVs_m3071541108,
+	Mesh_GetUVs_m55185155,
 	Mesh_PrintErrorCantAccessIndices_m1546924005,
 	Mesh_CheckCanAccessSubmesh_m1278105798,
 	Mesh_CheckCanAccessSubmeshTriangles_m3864611599,
 	Mesh_CheckCanAccessSubmeshIndices_m824249680,
 	Mesh_get_triangles_m3059934743,
 	Mesh_set_triangles_m255556250,
+	Mesh_GetTriangles_m973693202,
+	Mesh_GetTriangles_m3335994153,
+	Mesh_GetTriangles_m3640547167,
+	Mesh_GetTriangles_m1229604837,
 	Mesh_GetIndices_m2873123901,
 	Mesh_GetIndices_m1466450660,
+	Mesh_GetIndexCount_m859190368,
 	Mesh_SetTrianglesImpl_m1015576670,
+	Mesh_SetTriangles_m3871477336,
+	Mesh_SetTriangles_m138364303,
 	Mesh_SetTriangles_m1523451247,
 	Mesh_SetTriangles_m2205169959,
 	Mesh_Clear_m2630385472,
 	Mesh_RecalculateBounds_m39931642,
+	Mesh_RecalculateNormals_m467587154,
+	Mesh_RecalculateTangents_m1236595664,
 	Mesh_MarkDynamic_m813264685,
 	Mesh_UploadMeshData_m969465843,
 	Mesh_CombineMeshes_m2946567306,
@@ -27305,6 +33693,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	QualitySettings_get_antiAliasing_m1365131962,
 	QualitySettings_get_activeColorSpace_m2902748248,
 	Quaternion__ctor_m435141806_AdjustorThunk,
+	Quaternion_FromToRotation_m3769621427,
 	Quaternion_Inverse_m1311579081,
 	Quaternion_Lerp_m1238806789,
 	Quaternion_Internal_FromEulerRad_m1647759854,
@@ -27323,11 +33712,13 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Quaternion_get_eulerAngles_m3425202016_AdjustorThunk,
 	Quaternion_Euler_m3049309462,
 	Quaternion_Euler_m1803555822,
+	Quaternion_SetFromToRotation_m2673591795_AdjustorThunk,
 	Quaternion_GetHashCode_m2636680144_AdjustorThunk,
 	Quaternion_Equals_m1863659319_AdjustorThunk,
 	Quaternion_Equals_m2038868948_AdjustorThunk,
 	Quaternion_ToString_m2203056442_AdjustorThunk,
 	Quaternion__cctor_m2965965177,
+	Quaternion_FromToRotation_Injected_m2732854426,
 	Quaternion_Inverse_Injected_m4070500351,
 	Quaternion_Lerp_Injected_m609271094,
 	Quaternion_Internal_FromEulerRad_Injected_m3023241449,
@@ -27491,7 +33882,9 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	RenderTexture_set_enableRandomWrite_m2404509411,
 	RenderTexture_get_useDynamicScale_m147630934,
 	RenderTexture_set_useDynamicScale_m3175028669,
+	RenderTexture_GetActive_m3713258833,
 	RenderTexture_SetActive_m3264606947,
+	RenderTexture_get_active_m2427925032,
 	RenderTexture_set_active_m1437732586,
 	RenderTexture_GetColorBuffer_m666379236,
 	RenderTexture_GetDepthBuffer_m2953897590,
@@ -27508,6 +33901,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	RenderTexture_ValidateRenderTextureDesc_m1651269986,
 	RenderTexture_GetTemporary_m307390032,
 	RenderTexture_GetTemporaryImpl_m1087262133,
+	RenderTexture_GetTemporary_m1363375227,
 	RenderTexture_GetTemporary_m3378328322,
 	RenderTexture_GetTemporary_m2234063094,
 	RenderTexture_GetTemporary_m3066872062,
@@ -27542,16 +33936,29 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Renderer_GetMaterial_m1815496413,
 	Renderer_GetSharedMaterial_m156276941,
 	Renderer_SetMaterial_m1194250780,
+	Renderer_SetMaterialArray_m1096125577,
+	Renderer_get_enabled_m3482452518,
+	Renderer_set_enabled_m1727253150,
 	Renderer_set_shadowCastingMode_m987547713,
 	Renderer_set_receiveShadows_m108599289,
+	Renderer_set_motionVectorGenerationMode_m1046698850,
+	Renderer_set_lightProbeUsage_m858788046,
+	Renderer_set_reflectionProbeUsage_m784866423,
 	Renderer_get_sortingLayerID_m3902855301,
 	Renderer_set_sortingLayerID_m849284518,
 	Renderer_get_sortingOrder_m344607889,
 	Renderer_set_sortingOrder_m549573253,
+	Renderer_get_isPartOfStaticBatch_m384187304,
+	Renderer_GetSharedMaterialArray_m3184378747,
 	Renderer_get_material_m4171603682,
+	Renderer_set_material_m1157964140,
 	Renderer_get_sharedMaterial_m1936632411,
 	Renderer_set_sharedMaterial_m2374163090,
+	Renderer_get_sharedMaterials_m76747498,
+	Renderer_set_sharedMaterials_m2162241463,
 	Renderer_get_bounds_Injected_m3112887345,
+	RendererExtensions_UpdateGIMaterials_m1323656079,
+	RendererExtensions_UpdateGIMaterialsForRenderer_m2478197202,
 	CommandBuffer__ctor_m3028411456,
 	CommandBuffer_Finalize_m993456318,
 	CommandBuffer_Dispose_m146760806,
@@ -27699,6 +34106,15 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Shader_PropertyToID_m1030499873,
 	Shader_SetGlobalTextureImpl_m1248900127,
 	Shader_SetGlobalTexture_m3892103344,
+	SkinnedMeshRenderer_set_quality_m699927355,
+	SkinnedMeshRenderer_get_rootBone_m1530334984,
+	SkinnedMeshRenderer_set_rootBone_m4271355631,
+	SkinnedMeshRenderer_get_bones_m333719399,
+	SkinnedMeshRenderer_set_bones_m4136734710,
+	SkinnedMeshRenderer_get_sharedMesh_m1611698282,
+	SkinnedMeshRenderer_set_sharedMesh_m2397334786,
+	SkinnedMeshRenderer_set_skinnedMotionVectors_m3578095715,
+	SkinnedMeshRenderer_BakeMesh_m2270373039,
 	SortingLayer_GetLayerValueFromID_m1947934714,
 	SpaceAttribute__ctor_m3235906033,
 	SpaceAttribute__ctor_m2972541600,
@@ -27796,9 +34212,16 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Texture_get_texelSize_Injected_m2677033317,
 	Texture2D__ctor_m3176621650,
 	Texture2D__ctor_m1269666504,
+	Texture2D__ctor_m2862217990,
+	Texture2D__ctor_m373113269,
+	Texture2D_SetAllPixels32_m734711553,
+	Texture2D_SetPixels32_m1141065075,
+	Texture2D_SetPixels32_m2156254057,
 	Texture2D_GetPixels_m2081641574,
 	Texture2D_GetPixels_m2757678651,
 	Texture2D_GetPixels_m4117143883,
+	Texture2D_GetPixels32_m1841405004,
+	Texture2D_GetPixels32_m647746242,
 	Texture2D_get_format_m2371899271,
 	Texture2D_get_whiteTexture_m2176011403,
 	Texture2D_Internal_CreateImpl_m110138258,
@@ -27806,13 +34229,25 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Texture2D_IsReadable_m47074913,
 	Texture2D_ApplyImpl_m2371374512,
 	Texture2D_SetPixelImpl_m3515369686,
+	Texture2D_GetPixelImpl_m2573669691,
 	Texture2D_GetPixelBilinearImpl_m3066735611,
+	Texture2D_ReadPixelsImpl_m1282786589,
+	Texture2D_SetPixelsImpl_m1199623022,
+	Texture2D_LoadRawTextureDataImplArray_m2906611301,
 	Texture2D_SetPixel_m2984741184,
+	Texture2D_SetPixels_m639021706,
+	Texture2D_SetPixels_m4222070067,
+	Texture2D_GetPixel_m1195410881,
 	Texture2D_GetPixelBilinear_m1950540195,
+	Texture2D_LoadRawTextureData_m1232009149,
 	Texture2D_Apply_m2470606565,
 	Texture2D_Apply_m2271746283,
+	Texture2D_ReadPixels_m1510783487,
+	Texture2D_ReadPixels_m3395504488,
 	Texture2D_SetPixelImpl_Injected_m3338020812,
+	Texture2D_GetPixelImpl_Injected_m2017448414,
 	Texture2D_GetPixelBilinearImpl_Injected_m511713733,
+	Texture2D_ReadPixelsImpl_Injected_m2454631042,
 	Texture2DArray__ctor_m1759046501,
 	Texture2DArray__ctor_m2627654179,
 	Texture2DArray__ctor_m4056612996,
@@ -27865,6 +34300,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Transform_set_position_m3387557959,
 	Transform_get_localPosition_m4234289348,
 	Transform_set_localPosition_m4128471975,
+	Transform_get_eulerAngles_m2743581774,
 	Transform_get_localEulerAngles_m2136926248,
 	Transform_get_right_m2535262102,
 	Transform_get_up_m3972993886,
@@ -27898,6 +34334,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Transform_InverseTransformPoint_m1343916000,
 	Transform_get_childCount_m3145433196,
 	Transform_SetAsFirstSibling_m253439912,
+	Transform_FindRelativeTransformWithPath_m3437048164,
+	Transform_Find_m1729760951,
 	Transform_get_lossyScale_m465496651,
 	Transform_IsChildOf_m224006092,
 	Transform_get_hasChanged_m186929804,
@@ -28066,6 +34504,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Vector4_get_sqrMagnitude_m3767723558_AdjustorThunk,
 	Vector4_get_zero_m1422399515,
 	Vector4_get_one_m1616703050,
+	Vector4_op_Addition_m787366691,
 	Vector4_op_Subtraction_m1632208160,
 	Vector4_op_Multiply_m213790997,
 	Vector4_op_Multiply_m3757294449,
@@ -28149,6 +34588,97 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TextMesh_get_color_Injected_m4133393174,
 	TextMesh_set_color_Injected_m3072507631,
 	UIVertex__cctor_m1216617541,
+	AudioClipPlayable_GetHandle_m1762771314_AdjustorThunk,
+	AudioClipPlayable_Equals_m3705880618_AdjustorThunk,
+	AudioMixerPlayable_GetHandle_m57919556_AdjustorThunk,
+	AudioMixerPlayable_Equals_m1649866213_AdjustorThunk,
+	AudioClip__ctor_m1211547677,
+	AudioClip_get_ambisonic_m3815052287,
+	AudioClip_InvokePCMReaderCallback_Internal_m224395634,
+	AudioClip_InvokePCMSetPositionCallback_Internal_m3097960898,
+	PCMReaderCallback__ctor_m4269754975,
+	PCMReaderCallback_Invoke_m2948796957,
+	PCMReaderCallback_BeginInvoke_m3391809637,
+	PCMReaderCallback_EndInvoke_m3916876196,
+	PCMSetPositionCallback__ctor_m2909837933,
+	PCMSetPositionCallback_Invoke_m2167694991,
+	PCMSetPositionCallback_BeginInvoke_m2701134198,
+	PCMSetPositionCallback_EndInvoke_m1405765992,
+	AudioExtensionDefinition_GetExtensionType_m1450823952,
+	AudioExtensionManager_GetAudioListener_m817760607,
+	AudioExtensionManager_AddSpatializerExtension_m820561940,
+	AudioExtensionManager_AddAmbisonicDecoderExtension_m3197702864,
+	AudioExtensionManager_WriteExtensionProperties_m1988587615,
+	AudioExtensionManager_AddSpatializerExtension_m3915849352,
+	AudioExtensionManager_WriteExtensionProperties_m3028464154,
+	AudioExtensionManager_AddExtensionToManager_m3475649283,
+	AudioExtensionManager_RemoveExtensionFromManager_m442924172,
+	AudioExtensionManager_Update_m3269307447,
+	AudioExtensionManager_GetReadyToPlay_m1557263244,
+	AudioExtensionManager_RegisterBuiltinDefinitions_m2742744104,
+	AudioExtensionManager__cctor_m1361600190,
+	AudioListener_GetNumExtensionProperties_m3139224773,
+	AudioListener_ReadExtensionName_m929423100,
+	AudioListener_INTERNAL_CALL_ReadExtensionName_m4145804327,
+	AudioListener_ReadExtensionPropertyName_m3416271339,
+	AudioListener_INTERNAL_CALL_ReadExtensionPropertyName_m330480156,
+	AudioListener_ReadExtensionPropertyValue_m2443832840,
+	AudioListener_ClearExtensionProperties_m3849891634,
+	AudioListener_INTERNAL_CALL_ClearExtensionProperties_m2036387607,
+	AudioListener_AddExtension_m994751216,
+	AudioListenerExtension__ctor_m2046026665,
+	AudioListenerExtension_get_audioListener_m3597041395,
+	AudioListenerExtension_set_audioListener_m3412289012,
+	AudioListenerExtension_ReadExtensionProperty_m3059773029,
+	AudioListenerExtension_WriteExtensionProperty_m4064727398,
+	AudioListenerExtension_ExtensionUpdate_m1303405084,
+	AudioSettings_GetSpatializerPluginName_m1324100978,
+	AudioSettings_InvokeOnAudioConfigurationChanged_m3131294153,
+	AudioSettings_InvokeOnAudioManagerUpdate_m4044425648,
+	AudioSettings_InvokeOnAudioSourcePlay_m3298744573,
+	AudioSettings_GetAmbisonicDecoderPluginName_m19603540,
+	AudioConfigurationChangeHandler__ctor_m1059338375,
+	AudioConfigurationChangeHandler_Invoke_m1233557945,
+	AudioConfigurationChangeHandler_BeginInvoke_m4104069447,
+	AudioConfigurationChangeHandler_EndInvoke_m4175380841,
+	AudioSource_get_clip_m1234340632,
+	AudioSource_get_isPlaying_m1896551654,
+	AudioSource_get_spatializeInternal_m2117549793,
+	AudioSource_get_spatialize_m3609701298,
+	AudioSource_GetNumExtensionProperties_m1231815209,
+	AudioSource_ReadExtensionName_m725112169,
+	AudioSource_INTERNAL_CALL_ReadExtensionName_m36001502,
+	AudioSource_ReadExtensionPropertyName_m2761820692,
+	AudioSource_INTERNAL_CALL_ReadExtensionPropertyName_m3643462071,
+	AudioSource_ReadExtensionPropertyValue_m72717540,
+	AudioSource_ClearExtensionProperties_m2116074582,
+	AudioSource_INTERNAL_CALL_ClearExtensionProperties_m2159298662,
+	AudioSource_AddSpatializerExtension_m2560794359,
+	AudioSource_AddAmbisonicExtension_m304476911,
+	AudioSourceExtension__ctor_m3132593001,
+	AudioSourceExtension_get_audioSource_m1465006871,
+	AudioSourceExtension_set_audioSource_m3729768988,
+	AudioSourceExtension_ReadExtensionProperty_m2693120442,
+	AudioSourceExtension_WriteExtensionProperty_m2866033202,
+	AudioSourceExtension_Play_m420799475,
+	AudioSourceExtension_Stop_m387892536,
+	AudioSourceExtension_ExtensionUpdate_m2790353999,
+	AudioSourceExtension_OnDestroy_m345467428,
+	AudioSampleProvider_Finalize_m18935654,
+	AudioSampleProvider_Dispose_m1993565764,
+	AudioSampleProvider_get_id_m2692334523,
+	AudioSampleProvider_set_id_m4177090282,
+	AudioSampleProvider_InvokeSampleFramesAvailable_m3478252833,
+	AudioSampleProvider_InvokeSampleFramesOverflow_m2840062631,
+	AudioSampleProvider_InternalSetScriptingPtr_m3742743270,
+	ConsumeSampleFramesNativeFunction__ctor_m144532415,
+	ConsumeSampleFramesNativeFunction_Invoke_m1773312795,
+	ConsumeSampleFramesNativeFunction_BeginInvoke_m342678987,
+	ConsumeSampleFramesNativeFunction_EndInvoke_m2143737533,
+	SampleFramesHandler__ctor_m3908528909,
+	SampleFramesHandler_Invoke_m544261268,
+	SampleFramesHandler_BeginInvoke_m2992664336,
+	SampleFramesHandler_EndInvoke_m3715791887,
 	Event__ctor_m3316259149,
 	Event__ctor_m526447123,
 	Event_get_rawType_m2996166859,
@@ -28350,6 +34880,13 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	ScrollViewState__ctor_m1599613496,
 	SliderState__ctor_m3367986001,
 	TextEditor__ctor_m242049450,
+	ImageConversion_EncodeToPNG_m2292631531,
+	ImageConversion_EncodeToJPG_m2489668130,
+	ImageConversion_EncodeToJPG_m2306052013,
+	ImageConversion_EncodeToEXR_m1059583045,
+	ImageConversion_EncodeToEXR_m3885559480,
+	ImageConversion_LoadImage_m601733642,
+	ImageConversion_LoadImage_m2182108104,
 	ContactFilter2D_CheckConsistency_m222060761_AdjustorThunk,
 	ContactFilter2D_SetLayerMask_m3440334821_AdjustorThunk,
 	ContactFilter2D_SetDepth_m3691256496_AdjustorThunk,
@@ -28381,6 +34918,99 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	RaycastHit2D_get_normal_m772343376_AdjustorThunk,
 	RaycastHit2D_get_distance_m382898860_AdjustorThunk,
 	RaycastHit2D_get_collider_m1549426026_AdjustorThunk,
+	CertificateHandler_Release_m648790222,
+	CertificateHandler_Finalize_m2289088740,
+	CertificateHandler_ValidateCertificate_m937187171,
+	CertificateHandler_ValidateCertificateNative_m2315002656,
+	CertificateHandler_Dispose_m2100863831,
+	DownloadHandler__ctor_m2126376377,
+	DownloadHandler_Release_m3024555697,
+	DownloadHandler_Finalize_m3135872287,
+	DownloadHandler_Dispose_m2747726581,
+	DownloadHandler_get_data_m1669096410,
+	DownloadHandler_get_text_m2427232382,
+	DownloadHandler_GetData_m364367605,
+	DownloadHandler_GetText_m600283602,
+	DownloadHandler_GetTextEncoder_m3244408468,
+	DownloadHandler_GetContentType_m4249877960,
+	DownloadHandler_InternalGetByteArray_m4277508027,
+	DownloadHandlerBuffer__ctor_m914761499,
+	DownloadHandlerBuffer_Create_m1196797347,
+	DownloadHandlerBuffer_InternalCreateBuffer_m301356089,
+	DownloadHandlerBuffer_GetData_m752341367,
+	DownloadHandlerBuffer_InternalGetData_m3771716959,
+	UnityWebRequest__ctor_m1214915267,
+	UnityWebRequest__ctor_m3895125645,
+	UnityWebRequest_GetWebErrorString_m4076320575,
+	UnityWebRequest_get_disposeCertificateHandlerOnDispose_m4051074453,
+	UnityWebRequest_set_disposeCertificateHandlerOnDispose_m4266558538,
+	UnityWebRequest_get_disposeDownloadHandlerOnDispose_m3413606992,
+	UnityWebRequest_set_disposeDownloadHandlerOnDispose_m2026832119,
+	UnityWebRequest_get_disposeUploadHandlerOnDispose_m2375741633,
+	UnityWebRequest_set_disposeUploadHandlerOnDispose_m2753289015,
+	UnityWebRequest_Create_m1328190473,
+	UnityWebRequest_Release_m2347155176,
+	UnityWebRequest_InternalDestroy_m2954597795,
+	UnityWebRequest_InternalSetDefaults_m3669466854,
+	UnityWebRequest_Finalize_m2219008825,
+	UnityWebRequest_Dispose_m3261105905,
+	UnityWebRequest_DisposeHandlers_m3575283268,
+	UnityWebRequest_BeginWebRequest_m464964044,
+	UnityWebRequest_SendWebRequest_m489860187,
+	UnityWebRequest_Abort_m1490033122,
+	UnityWebRequest_SetMethod_m3005196532,
+	UnityWebRequest_InternalSetMethod_m287631745,
+	UnityWebRequest_SetCustomMethod_m305650395,
+	UnityWebRequest_InternalSetCustomMethod_m3670745235,
+	UnityWebRequest_set_method_m3969249710,
+	UnityWebRequest_GetError_m1229724170,
+	UnityWebRequest_get_error_m1613086199,
+	UnityWebRequest_get_url_m2568598920,
+	UnityWebRequest_set_url_m2541992937,
+	UnityWebRequest_GetUrl_m3419782119,
+	UnityWebRequest_SetUrl_m4135786364,
+	UnityWebRequest_InternalSetUrl_m1036291515,
+	UnityWebRequest_get_responseCode_m1090830473,
+	UnityWebRequest_IsExecuting_m2613121384,
+	UnityWebRequest_get_isModifiable_m4181352937,
+	UnityWebRequest_get_isDone_m1752128881,
+	UnityWebRequest_get_isNetworkError_m1231611882,
+	UnityWebRequest_get_isHttpError_m797082501,
+	UnityWebRequest_GetDownloadProgress_m576848224,
+	UnityWebRequest_get_downloadProgress_m338301737,
+	UnityWebRequest_InternalSetRequestHeader_m2218760805,
+	UnityWebRequest_SetRequestHeader_m2927335855,
+	UnityWebRequest_SetUploadHandler_m2465141380,
+	UnityWebRequest_get_uploadHandler_m3692520788,
+	UnityWebRequest_set_uploadHandler_m54574009,
+	UnityWebRequest_SetDownloadHandler_m2637095256,
+	UnityWebRequest_get_downloadHandler_m534911913,
+	UnityWebRequest_set_downloadHandler_m970510352,
+	UnityWebRequest_get_certificateHandler_m3453757623,
+	UnityWebRequest_GetTimeoutMsec_m3466682689,
+	UnityWebRequest_SetTimeoutMsec_m3688870318,
+	UnityWebRequest_get_timeout_m2314066168,
+	UnityWebRequest_set_timeout_m3621399360,
+	UnityWebRequest_Get_m996521828,
+	UnityWebRequestAsyncOperation__ctor_m1252495487,
+	UnityWebRequestAsyncOperation_set_webRequest_m3712663211,
+	UploadHandler__ctor_m1351468229,
+	UploadHandler_Release_m2289600429,
+	UploadHandler_Finalize_m3322774190,
+	UploadHandler_Dispose_m3057340132,
+	UploadHandlerRaw__ctor_m1397254157,
+	UploadHandlerRaw_Create_m2571854625,
+	WWWForm_get_DefaultEncoding_m4131957975,
+	WWWTranscoder_Hex2Byte_m4102152163,
+	WWWTranscoder_URLDecode_m3587034544,
+	WWWTranscoder_ByteSubArrayEquals_m2163464440,
+	WWWTranscoder_Decode_m157051313,
+	WWWTranscoder__cctor_m1887474915,
+	WebRequestUtils_RedirectTo_m55747000,
+	WebRequestUtils_MakeInitialUrl_m973728695,
+	WebRequestUtils_MakeUriString_m291605890,
+	WebRequestUtils_URLDecode_m2727298221,
+	WebRequestUtils__cctor_m4190982137,
 	NavMesh_Internal_CallOnNavMeshPreUpdate_m3135297503,
 	OnNavMeshPreUpdate__ctor_m2758342548,
 	OnNavMeshPreUpdate_Invoke_m2576853418,
@@ -28424,97 +35054,6 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	AnimationScriptPlayable_GetHandle_m632811930_AdjustorThunk,
 	AnimationScriptPlayable_Equals_m534223357_AdjustorThunk,
 	AnimationScriptPlayable__cctor_m1482222037,
-	AudioClipPlayable_GetHandle_m1762771314_AdjustorThunk,
-	AudioClipPlayable_Equals_m3705880618_AdjustorThunk,
-	AudioMixerPlayable_GetHandle_m57919556_AdjustorThunk,
-	AudioMixerPlayable_Equals_m1649866213_AdjustorThunk,
-	AudioClip__ctor_m1211547677,
-	AudioClip_get_ambisonic_m3815052287,
-	AudioClip_InvokePCMReaderCallback_Internal_m224395634,
-	AudioClip_InvokePCMSetPositionCallback_Internal_m3097960898,
-	PCMReaderCallback__ctor_m4269754975,
-	PCMReaderCallback_Invoke_m2948796957,
-	PCMReaderCallback_BeginInvoke_m3391809637,
-	PCMReaderCallback_EndInvoke_m3916876196,
-	PCMSetPositionCallback__ctor_m2909837933,
-	PCMSetPositionCallback_Invoke_m2167694991,
-	PCMSetPositionCallback_BeginInvoke_m2701134198,
-	PCMSetPositionCallback_EndInvoke_m1405765992,
-	AudioExtensionDefinition_GetExtensionType_m1450823952,
-	AudioExtensionManager_GetAudioListener_m817760607,
-	AudioExtensionManager_AddSpatializerExtension_m820561940,
-	AudioExtensionManager_AddAmbisonicDecoderExtension_m3197702864,
-	AudioExtensionManager_WriteExtensionProperties_m1988587615,
-	AudioExtensionManager_AddSpatializerExtension_m3915849352,
-	AudioExtensionManager_WriteExtensionProperties_m3028464154,
-	AudioExtensionManager_AddExtensionToManager_m3475649283,
-	AudioExtensionManager_RemoveExtensionFromManager_m442924172,
-	AudioExtensionManager_Update_m3269307447,
-	AudioExtensionManager_GetReadyToPlay_m1557263244,
-	AudioExtensionManager_RegisterBuiltinDefinitions_m2742744104,
-	AudioExtensionManager__cctor_m1361600190,
-	AudioListener_GetNumExtensionProperties_m3139224773,
-	AudioListener_ReadExtensionName_m929423100,
-	AudioListener_INTERNAL_CALL_ReadExtensionName_m4145804327,
-	AudioListener_ReadExtensionPropertyName_m3416271339,
-	AudioListener_INTERNAL_CALL_ReadExtensionPropertyName_m330480156,
-	AudioListener_ReadExtensionPropertyValue_m2443832840,
-	AudioListener_ClearExtensionProperties_m3849891634,
-	AudioListener_INTERNAL_CALL_ClearExtensionProperties_m2036387607,
-	AudioListener_AddExtension_m994751216,
-	AudioListenerExtension__ctor_m2046026665,
-	AudioListenerExtension_get_audioListener_m3597041395,
-	AudioListenerExtension_set_audioListener_m3412289012,
-	AudioListenerExtension_ReadExtensionProperty_m3059773029,
-	AudioListenerExtension_WriteExtensionProperty_m4064727398,
-	AudioListenerExtension_ExtensionUpdate_m1303405084,
-	AudioSettings_GetSpatializerPluginName_m1324100978,
-	AudioSettings_InvokeOnAudioConfigurationChanged_m3131294153,
-	AudioSettings_InvokeOnAudioManagerUpdate_m4044425648,
-	AudioSettings_InvokeOnAudioSourcePlay_m3298744573,
-	AudioSettings_GetAmbisonicDecoderPluginName_m19603540,
-	AudioConfigurationChangeHandler__ctor_m1059338375,
-	AudioConfigurationChangeHandler_Invoke_m1233557945,
-	AudioConfigurationChangeHandler_BeginInvoke_m4104069447,
-	AudioConfigurationChangeHandler_EndInvoke_m4175380841,
-	AudioSource_get_clip_m1234340632,
-	AudioSource_get_isPlaying_m1896551654,
-	AudioSource_get_spatializeInternal_m2117549793,
-	AudioSource_get_spatialize_m3609701298,
-	AudioSource_GetNumExtensionProperties_m1231815209,
-	AudioSource_ReadExtensionName_m725112169,
-	AudioSource_INTERNAL_CALL_ReadExtensionName_m36001502,
-	AudioSource_ReadExtensionPropertyName_m2761820692,
-	AudioSource_INTERNAL_CALL_ReadExtensionPropertyName_m3643462071,
-	AudioSource_ReadExtensionPropertyValue_m72717540,
-	AudioSource_ClearExtensionProperties_m2116074582,
-	AudioSource_INTERNAL_CALL_ClearExtensionProperties_m2159298662,
-	AudioSource_AddSpatializerExtension_m2560794359,
-	AudioSource_AddAmbisonicExtension_m304476911,
-	AudioSourceExtension__ctor_m3132593001,
-	AudioSourceExtension_get_audioSource_m1465006871,
-	AudioSourceExtension_set_audioSource_m3729768988,
-	AudioSourceExtension_ReadExtensionProperty_m2693120442,
-	AudioSourceExtension_WriteExtensionProperty_m2866033202,
-	AudioSourceExtension_Play_m420799475,
-	AudioSourceExtension_Stop_m387892536,
-	AudioSourceExtension_ExtensionUpdate_m2790353999,
-	AudioSourceExtension_OnDestroy_m345467428,
-	AudioSampleProvider_Finalize_m18935654,
-	AudioSampleProvider_Dispose_m1993565764,
-	AudioSampleProvider_get_id_m2692334523,
-	AudioSampleProvider_set_id_m4177090282,
-	AudioSampleProvider_InvokeSampleFramesAvailable_m3478252833,
-	AudioSampleProvider_InvokeSampleFramesOverflow_m2840062631,
-	AudioSampleProvider_InternalSetScriptingPtr_m3742743270,
-	ConsumeSampleFramesNativeFunction__ctor_m144532415,
-	ConsumeSampleFramesNativeFunction_Invoke_m1773312795,
-	ConsumeSampleFramesNativeFunction_BeginInvoke_m342678987,
-	ConsumeSampleFramesNativeFunction_EndInvoke_m2143737533,
-	SampleFramesHandler__ctor_m3908528909,
-	SampleFramesHandler_Invoke_m544261268,
-	SampleFramesHandler_BeginInvoke_m2992664336,
-	SampleFramesHandler_EndInvoke_m3715791887,
 	PlayableDirector_SendOnPlayableDirectorPlay_m2085616403,
 	PlayableDirector_SendOnPlayableDirectorPause_m2545407843,
 	PlayableDirector_SendOnPlayableDirectorStop_m3254359972,
@@ -28523,6 +35062,11 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	NativeInputSystem_NotifyUpdate_m517501689,
 	NativeInputSystem_NotifyDeviceDiscovered_m3978728918,
 	NativeInputSystem_set_hasDeviceDiscoveredCallback_m4093248293,
+	JsonUtility_ToJsonInternal_m1985815576,
+	JsonUtility_FromJsonInternal_m3788604114,
+	JsonUtility_ToJson_m3644929270,
+	JsonUtility_ToJson_m471732085,
+	JsonUtility_FromJson_m4191471030,
 	Diagnostics_GetFreeMemoryLPDDR_m948474765,
 	Diagnostics_GetFreeMemoryCDRAM_m914813674,
 	ParticleSystem_Emit_m2162102900,
@@ -28552,10 +35096,17 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	CharacterController_Move_Injected_m2968855874,
 	Collider_get_enabled_m3096904824,
 	Collider_get_attachedRigidbody_m135494519,
+	Collider_set_isTrigger_m1770557358,
 	Collider_ClosestPoint_m960211240,
 	Collider_get_bounds_m2952418672,
 	Collider_ClosestPoint_Injected_m2343114216,
 	Collider_get_bounds_Injected_m2832026935,
+	MeshCollider_set_sharedMesh_m1986498669,
+	MeshCollider_set_convex_m840510835,
+	MeshCollider_set_inflateMesh_m1778269099,
+	MeshCollider_get_cookingOptions_m2188498099,
+	MeshCollider_set_cookingOptions_m2964344721,
+	MeshCollider_set_skinWidth_m1782069040,
 	Physics_IgnoreCollision_m1771762600,
 	Physics_Query_RaycastTest_m3482016940,
 	Physics_Internal_RaycastTest_m1784372019,
@@ -28576,6 +35127,8 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	Physics_Raycast_m1893809531,
 	Physics_Raycast_m1743768310,
 	Physics_Raycast_m447436869,
+	Physics_Linecast_m1431720142,
+	Physics_Linecast_m916494249,
 	Physics_Internal_RaycastAll_m3145440557,
 	Physics_RaycastAll_m3084184534,
 	Physics_RaycastAll_m2709753186,
@@ -28595,6 +35148,7 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	RaycastHit_get_transform_m942054759_AdjustorThunk,
 	RaycastHit_get_rigidbody_m2320267866_AdjustorThunk,
 	Rigidbody__ctor_m1806995817,
+	Rigidbody_set_freezeRotation_m754206839,
 	SphereCollider_set_radius_m4130116958,
 	TerrainData_GetBoundaryValue_m1103633233,
 	TerrainData_GetAlphamapResolutionInternal_m1173327220,
@@ -28720,13 +35274,19 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	UISystemProfilerApi_BeginSample_m3272505833,
 	UISystemProfilerApi_EndSample_m3294865474,
 	UISystemProfilerApi_AddMarker_m495483138,
-	CertificateHandler_Release_m648790222,
-	CertificateHandler_Finalize_m2289088740,
-	CertificateHandler_ValidateCertificate_m937187171,
-	CertificateHandler_ValidateCertificateNative_m2315002656,
-	CertificateHandler_Dispose_m2100863831,
-	WebRequestUtils_RedirectTo_m55747000,
-	WebRequestUtils__cctor_m4190982137,
+	WWW__ctor_m2915079343,
+	WWW_get_bytes_m3061182897,
+	WWW_get_error_m3055313367,
+	WWW_get_isDone_m3426350689,
+	WWW_get_progress_m841454562,
+	WWW_get_text_m898164367,
+	WWW_CreateTextureFromDownloadedData_m573316725,
+	WWW_get_texture_m3513075325,
+	WWW_get_url_m3672399347,
+	WWW_get_keepWaiting_m1438015190,
+	WWW_Dispose_m2256148703,
+	WWW_WaitUntilDoneIfPossible_m2855479680,
+	WWW_GetStatusCodeName_m3580893459,
 	XRSettings_get_gameViewRenderMode_m1349500750,
 	XRSettings_set_gameViewRenderMode_m3860157632,
 	XRSettings_get_showDeviceView_m3654891897,
@@ -31480,6 +38040,347 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	TextMeshProUGUI_AdjustLineOffset_m3464716055,
 	VertexGradient__ctor_m3519855746_AdjustorThunk,
 	VertexGradient__ctor_m881992693_AdjustorThunk,
+	EdgeErrorkeyedComparer__ctor_m2039591374,
+	EdgeErrorkeyedComparer_Compare_m3657097315,
+	EdgeListExt__cctor_m2841261363,
+	BlendShape__ctor_m160810998_AdjustorThunk,
+	BlendShapeContainer__ctor_m1432732156,
+	BlendShapeContainer_MoveVertexElement_m2778993123,
+	BlendShapeContainer_InterpolateVertexAttributes_m2386260029,
+	BlendShapeContainer_Resize_m2779712424,
+	BlendShapeContainer_ToBlendShape_m1800208812,
+	BlendShapeFrame__ctor_m221238251_AdjustorThunk,
+	BlendShapeFrame__ctor_m3832290237_AdjustorThunk,
+	BlendShapeFrameContainer__ctor_m3862859636,
+	BlendShapeFrameContainer_MoveVertexElement_m373619866,
+	BlendShapeFrameContainer_InterpolateVertexAttributes_m32344298,
+	BlendShapeFrameContainer_Resize_m4226094648,
+	BlendShapeFrameContainer_ToBlendShapeFrame_m4145868179,
+	BorderVertex__ctor_m4213849781_AdjustorThunk,
+	BorderVertexComparer__ctor_m3285383653,
+	BorderVertexComparer_Compare_m521191365,
+	BorderVertexComparer__cctor_m3104683328,
+	DebugMeshPerf__ctor_m850851706,
+	DebugMeshPerf_Reset_m281372854,
+	DebugMeshPerf_get_Data_m2357917044,
+	DebugMeshPerf_ToString_m3456539566,
+	DebugMeshPerf_UpdateVertexColor_m3173752261,
+	Edge__ctor_m1816295556,
+	Edge_InitIndex_m2567368121,
+	Edge_ReplaceVertex_m1607187732,
+	Edge_CalculateKey_m4037239241,
+	Edge_ToString_m1982095919,
+	LODBackupComponent__ctor_m668782304,
+	LODBackupComponent_get_OriginalRenderers_m3285541357,
+	LODBackupComponent_set_OriginalRenderers_m1776381273,
+	LODGenerator_GenerateLODs_m235568808,
+	LODGenerator_GenerateLODs_m2321759169,
+	LODGenerator_GenerateLODs_m3688404464,
+	LODGenerator_DestroyLODs_m742119948,
+	LODGenerator_DestroyLODs_m145996813,
+	LODGenerator_GetStaticRenderers_m3847856462,
+	LODGenerator_GetSkinnedRenderers_m2624900256,
+	LODGenerator_CombineStaticMeshes_m3025999153,
+	LODGenerator_CombineSkinnedMeshes_m3730411307,
+	LODGenerator_ParentAndResetTransform_m2711387115,
+	LODGenerator_ParentAndOffsetTransform_m1680299076,
+	LODGenerator_CreateLevelRenderer_m2500596210,
+	LODGenerator_CreateSkinnedLevelRenderer_m3091056185,
+	LODGenerator_FindBestRootBone_m1244262137,
+	LODGenerator_FindBestRootBone_m326494524,
+	LODGenerator_SetupLevelRenderer_m535349332,
+	LODGenerator_GetChildRenderersForLOD_m672093309,
+	LODGenerator_CollectChildRenderersForLOD_m3988540713,
+	LODGenerator_SimplifyMesh_m1401300977,
+	LODGenerator_DestroyObject_m882203392,
+	LODGenerator_CreateBackup_m3552740549,
+	LODGenerator_RestoreBackup_m1064958370,
+	LODGenerator_DestroyLODAssets_m301254172,
+	LODGenerator_DestroyLODMaterialAsset_m2694207065,
+	LODGenerator_DestroyLODAsset_m4015388314,
+	LODGenerator_SaveLODMeshAsset_m3135921997,
+	LODGenerator_SaveAsset_m4062268824,
+	LODGenerator_CreateParentDirectory_m1468392865,
+	LODGenerator_MakePathSafe_m1610124688,
+	LODGenerator_ValidateSaveAssetsPath_m1530750245,
+	LODGenerator_DeleteEmptyDirectory_m2951585224,
+	LODGenerator_U3CGenerateLODsU3Em__0_m1355785022,
+	LODGenerator_U3CGenerateLODsU3Em__1_m2691773384,
+	LODGenerator_U3CGenerateLODsU3Em__2_m72371580,
+	LODGenerator_U3CGenerateLODsU3Em__3_m1200569251,
+	LODGenerator_U3CCombineSkinnedMeshesU3Em__4_m4243639076,
+	LODGenerator_U3CCombineSkinnedMeshesU3Em__5_m758757843,
+	LODGeneratorHelper__ctor_m1795393670,
+	LODGeneratorHelper_get_FadeMode_m3376694386,
+	LODGeneratorHelper_set_FadeMode_m63964505,
+	LODGeneratorHelper_get_AnimateCrossFading_m951132736,
+	LODGeneratorHelper_set_AnimateCrossFading_m4204911129,
+	LODGeneratorHelper_get_AutoCollectRenderers_m1051647287,
+	LODGeneratorHelper_set_AutoCollectRenderers_m629401830,
+	LODGeneratorHelper_get_SimplificationOptions_m2927596664,
+	LODGeneratorHelper_set_SimplificationOptions_m2546872998,
+	LODGeneratorHelper_get_SaveAssetsPath_m66530154,
+	LODGeneratorHelper_set_SaveAssetsPath_m1882028272,
+	LODGeneratorHelper_get_Levels_m1646956036,
+	LODGeneratorHelper_set_Levels_m2713624117,
+	LODGeneratorHelper_get_IsGenerated_m1738377919,
+	LODGeneratorHelper_Reset_m1163295111,
+	LODLevel__ctor_m3198387692_AdjustorThunk,
+	LODLevel__ctor_m3667876451_AdjustorThunk,
+	LODLevel__ctor_m2006186715_AdjustorThunk,
+	LODLevel_get_ScreenRelativeTransitionHeight_m1369118883_AdjustorThunk,
+	LODLevel_set_ScreenRelativeTransitionHeight_m3116561033_AdjustorThunk,
+	LODLevel_get_FadeTransitionWidth_m2379017509_AdjustorThunk,
+	LODLevel_set_FadeTransitionWidth_m1240950619_AdjustorThunk,
+	LODLevel_get_Quality_m2379592969_AdjustorThunk,
+	LODLevel_set_Quality_m4193822948_AdjustorThunk,
+	LODLevel_get_CombineMeshes_m3523987743_AdjustorThunk,
+	LODLevel_set_CombineMeshes_m3823260547_AdjustorThunk,
+	LODLevel_get_CombineSubMeshes_m58267187_AdjustorThunk,
+	LODLevel_set_CombineSubMeshes_m753298952_AdjustorThunk,
+	LODLevel_get_Renderers_m464161934_AdjustorThunk,
+	LODLevel_set_Renderers_m3672413270_AdjustorThunk,
+	LODLevel_get_SkinQuality_m3895560648_AdjustorThunk,
+	LODLevel_set_SkinQuality_m2806245428_AdjustorThunk,
+	LODLevel_get_ShadowCastingMode_m4156284218_AdjustorThunk,
+	LODLevel_set_ShadowCastingMode_m3881745440_AdjustorThunk,
+	LODLevel_get_ReceiveShadows_m3380875928_AdjustorThunk,
+	LODLevel_set_ReceiveShadows_m1371702447_AdjustorThunk,
+	LODLevel_get_MotionVectorGenerationMode_m1220378361_AdjustorThunk,
+	LODLevel_set_MotionVectorGenerationMode_m2780314012_AdjustorThunk,
+	LODLevel_get_SkinnedMotionVectors_m2242839237_AdjustorThunk,
+	LODLevel_set_SkinnedMotionVectors_m2926117655_AdjustorThunk,
+	LODLevel_get_LightProbeUsage_m3748808369_AdjustorThunk,
+	LODLevel_set_LightProbeUsage_m2247954427_AdjustorThunk,
+	LODLevel_get_ReflectionProbeUsage_m1593772585_AdjustorThunk,
+	LODLevel_set_ReflectionProbeUsage_m1993331321_AdjustorThunk,
+	MathHelper_Min_m702473583,
+	MathHelper_Clamp_m1807551176,
+	MathHelper_TriangleArea_m4081952214,
+	MeshCombiner_CombineMeshes_m2227043525,
+	MeshCombiner_CombineMeshes_m2778661661,
+	MeshCombiner_CombineMeshes_m814866081,
+	MeshCombiner_CombineMeshes_m3761363312,
+	MeshCombiner_GetTopLevelParent_m3375533524,
+	MeshCombiner_CopyVertexPositions_m3741375302,
+	MeshCombiner_TransformVertices_m230517699,
+	MeshCombiner_TransformNormals_m3374480504,
+	MeshCombiner_TransformTangents_m3799848991,
+	MeshCombiner_RemapBones_m31395292,
+	MeshCombiner_ScaleMatrix_m3302886893,
+	MeshSimplifier__ctor_m4148128197,
+	MeshSimplifier__ctor_m3410678258,
+	MeshSimplifier_get_PreserveBorders_m3918025841,
+	MeshSimplifier_set_PreserveBorders_m230442454,
+	MeshSimplifier_get_PreserveBorderEdges_m48362644,
+	MeshSimplifier_set_PreserveBorderEdges_m2358601671,
+	MeshSimplifier_get_PreserveSeams_m435095742,
+	MeshSimplifier_set_PreserveSeams_m303457682,
+	MeshSimplifier_get_PreserveUVSeamEdges_m3133705872,
+	MeshSimplifier_set_PreserveUVSeamEdges_m3340690559,
+	MeshSimplifier_get_PreserveFoldovers_m390097794,
+	MeshSimplifier_set_PreserveFoldovers_m1276351771,
+	MeshSimplifier_get_PreserveUVFoldoverEdges_m3566074483,
+	MeshSimplifier_set_PreserveUVFoldoverEdges_m1648844816,
+	MeshSimplifier_get_EnableSmartLink_m1635415475,
+	MeshSimplifier_set_EnableSmartLink_m3639040077,
+	MeshSimplifier_get_RecalculateNormals_m4164628260,
+	MeshSimplifier_set_RecalculateNormals_m1050338660,
+	MeshSimplifier_get_MaxIterationCount_m1471737111,
+	MeshSimplifier_set_MaxIterationCount_m4252218235,
+	MeshSimplifier_get_Aggressiveness_m1445012275,
+	MeshSimplifier_set_Aggressiveness_m3044755630,
+	MeshSimplifier_get_RegardCurvature_m573731396,
+	MeshSimplifier_set_RegardCurvature_m3979303329,
+	MeshSimplifier_get_UseSortedEdgeMethod_m3399918166,
+	MeshSimplifier_set_UseSortedEdgeMethod_m1626725903,
+	MeshSimplifier_get_Verbose_m1801216846,
+	MeshSimplifier_set_Verbose_m1527884126,
+	MeshSimplifier_get_VertexLinkDistance_m2046891038,
+	MeshSimplifier_set_VertexLinkDistance_m2150847011,
+	MeshSimplifier_get_VertexLinkDistanceSqr_m2576899821,
+	MeshSimplifier_set_VertexLinkDistanceSqr_m1833566035,
+	MeshSimplifier_get_Vertices_m3085838764,
+	MeshSimplifier_set_Vertices_m3147882711,
+	MeshSimplifier_get_SubMeshCount_m3647804822,
+	MeshSimplifier_get_BlendShapeCount_m940161621,
+	MeshSimplifier_get_Normals_m3930750971,
+	MeshSimplifier_set_Normals_m1321623239,
+	MeshSimplifier_get_Tangents_m3437458389,
+	MeshSimplifier_set_Tangents_m1042656604,
+	MeshSimplifier_get_UV1_m1425822218,
+	MeshSimplifier_set_UV1_m3631831650,
+	MeshSimplifier_get_UV2_m1425822221,
+	MeshSimplifier_set_UV2_m3299420443,
+	MeshSimplifier_get_UV3_m1425822220,
+	MeshSimplifier_set_UV3_m3158662320,
+	MeshSimplifier_get_UV4_m1425822215,
+	MeshSimplifier_set_UV4_m1067578121,
+	MeshSimplifier_get_UV5_m1425822214,
+	MeshSimplifier_set_UV5_m662750550,
+	MeshSimplifier_get_UV6_m1425822217,
+	MeshSimplifier_set_UV6_m3368881711,
+	MeshSimplifier_get_UV7_m1425822216,
+	MeshSimplifier_set_UV7_m1863877060,
+	MeshSimplifier_get_UV8_m1425822227,
+	MeshSimplifier_set_UV8_m2912273670,
+	MeshSimplifier_get_Colors_m1239889564,
+	MeshSimplifier_set_Colors_m552522389,
+	MeshSimplifier_get_BoneWeights_m1149737027,
+	MeshSimplifier_set_BoneWeights_m696459782,
+	MeshSimplifier_VertexError_m3215948139,
+	MeshSimplifier_CurvatureError_m1956071870,
+	MeshSimplifier_CalculateError_m3056386610,
+	MeshSimplifier_CalculateBarycentricCoords_m2933878360,
+	MeshSimplifier_NormalizeTangent_m2168417861,
+	MeshSimplifier_Flipped_m3693443433,
+	MeshSimplifier_UpdateTriangles_m964513011,
+	MeshSimplifier_InterpolateVertexAttributes_m3297816259,
+	MeshSimplifier_AreUVsTheSame_m2559183407,
+	MeshSimplifier_RemoveVertexPass_m1202516737,
+	MeshSimplifier_UpdateMesh_m281198535,
+	MeshSimplifier_UpdateReferences_m2502097664,
+	MeshSimplifier_CompactMesh_m2029097189,
+	MeshSimplifier_CalculateSubMeshOffsets_m2365147613,
+	MeshSimplifier_GetTrianglesContainingVertex_m1178734355,
+	MeshSimplifier_GetTrianglesContainingBothVertices_m2060200654,
+	MeshSimplifier_CalculateEdgeError_m1256537924,
+	MeshSimplifier_ValidateContractionThenUpdateTrisNormals_m629399528,
+	MeshSimplifier_CalculateEdgePenaltyMatrix_m1687683240,
+	MeshSimplifier_DistributeEdgePenaltyMatrix_m2836348538,
+	MeshSimplifier_DistributeEdgePenaltyMatrix_m1589459789,
+	MeshSimplifier_InitEdges_m518574259,
+	MeshSimplifier_RemoveEdgePass_m1929152575,
+	MeshSimplifier_SimplifyMeshByEdge_m195068134,
+	MeshSimplifier_GetAllSubMeshTriangles_m2449508547,
+	MeshSimplifier_GetSubMeshTriangles_m2484914691,
+	MeshSimplifier_ClearSubMeshes_m1599039808,
+	MeshSimplifier_AddSubMeshTriangles_m3378534796,
+	MeshSimplifier_AddSubMeshTriangles_m1893764442,
+	MeshSimplifier_GetUVs2D_m1954790533,
+	MeshSimplifier_GetUVs3D_m831700169,
+	MeshSimplifier_GetUVs4D_m2196933171,
+	MeshSimplifier_GetUVs_m3661982049,
+	MeshSimplifier_GetUVs_m3661982050,
+	MeshSimplifier_GetUVs_m3661982055,
+	MeshSimplifier_SetUVs_m2774353193,
+	MeshSimplifier_SetUVs_m45469838,
+	MeshSimplifier_SetUVs_m3580922247,
+	MeshSimplifier_SetUVs_m3286430346,
+	MeshSimplifier_SetUVs_m3286430345,
+	MeshSimplifier_SetUVs_m3286430352,
+	MeshSimplifier_SetUVsAuto_m2872883244,
+	MeshSimplifier_GetAllBlendShapes_m4182589303,
+	MeshSimplifier_GetBlendShape_m3694630012,
+	MeshSimplifier_ClearBlendShapes_m3282910101,
+	MeshSimplifier_AddBlendShape_m1334230992,
+	MeshSimplifier_AddBlendShapes_m1952402109,
+	MeshSimplifier_Initialize_m2468301691,
+	MeshSimplifier_SimplifyMesh_m1937664039,
+	MeshSimplifier_SimplifyMeshLossless_m4228780985,
+	MeshSimplifier_ToMesh_m1188656358,
+	MeshSimplifier_TriangleLiesInSphere_m2159414223,
+	MeshSimplifier_VertexLiesInSphere_m2415314065,
+	MeshSimplifier_IsTriangleInAnyToleranceSphere_m2558027648,
+	MeshSimplifier_GetTrianglesContainingVertex_m2054973444,
+	MeshSimplifier_GetTrianglesContainingBothVertices_m1836713614,
+	MeshSimplifier_TriangleContainsVertex_m3455999980,
+	MeshSimplifier_GetVertexWorldPosition_m1749240226,
+	MeshSimplifier__cctor_m3580918212,
+	MeshSimplifier_U3CInitEdgesU3Em__0_m1906311788,
+	MeshUtils_CreateMesh_m3887052921,
+	MeshUtils_CreateMesh_m899343122,
+	MeshUtils_CreateMesh_m1519210094,
+	MeshUtils_GetMeshBlendShapes_m3418211225,
+	MeshUtils_LOG_m1550002032,
+	MeshUtils_ApplyMeshBlendShapes_m3937449181,
+	MeshUtils_GetMeshUVs_m3275828738,
+	MeshUtils_GetMeshUVs_m440148000,
+	MeshUtils_GetUsedUVComponents_m1178065395,
+	MeshUtils_ConvertUVsTo2D_m4116547415,
+	MeshUtils_ConvertUVsTo3D_m427212984,
+	MeshUtils_GetSubMeshIndexMinMax_m3258175519,
+	MeshUtils_GetIndexMinMax_m2912894125,
+	Ref__ctor_m2782886859,
+	Ref_Set_m1411912456,
+	Ref_ToString_m2081405151,
+	SimplificationOptions__cctor_m1602915886,
+	SymmetricMatrix__ctor_m4177615465,
+	SymmetricMatrix__ctor_m1000036902,
+	SymmetricMatrix__ctor_m5434497,
+	SymmetricMatrix__ctor_m3432920201,
+	SymmetricMatrix_get_Item_m3589853307,
+	SymmetricMatrix_op_Addition_m3258523451,
+	SymmetricMatrix_Determinant1_m1769788320,
+	SymmetricMatrix_Determinant2_m2173072847,
+	SymmetricMatrix_Determinant3_m606988906,
+	SymmetricMatrix_Determinant4_m1366503793,
+	SymmetricMatrix_ShapeIsGood_m2659419245,
+	SymmetricMatrix_Determinant_m4072772112,
+	SymmetricMatrix_Add_m3582730656,
+	SymmetricMatrix_Add_m976005852,
+	SymmetricMatrix_Subtract_m2546361498,
+	SymmetricMatrix_Subtract_m1442014644,
+	SymmetricMatrix_Multiply_m2658029365,
+	SymmetricMatrix_Clear_m3092727200,
+	SymmetricMatrix_ToString_m1526080082,
+	ToleranceSphere__ctor_m3649920775,
+	ToleranceSphere__ctor_m785203240,
+	ToleranceSphere_set_initialEnclosedTrianglesCount_m608662280,
+	ToleranceSphere_get_initialEnclosedTrianglesCount_m619195682,
+	ToleranceSphere_set_leastTrianglesCount_m1510693668,
+	ToleranceSphere_get_leastTrianglesCount_m3642666427,
+	ToleranceSphere_SetInitialEnclosedTrianglesCount_m2061484088,
+	Triangle__ctor_m768246545,
+	Triangle_get_Item_m682153601,
+	Triangle_set_Item_m1706064738,
+	Triangle_GetAttributeIndices_m4189193085,
+	Triangle_SetAttributeIndex_m2489796813,
+	Triangle_GetAttributeIndex_m3468463477,
+	Triangle_GetErrors_m1921210127,
+	Triangle_GetHashCode_m2468551349,
+	Triangle_Equals_m4208021663,
+	Triangle_Equals_m2471061865,
+	Triangle_ToString_m2036090084,
+	Vector3d__ctor_m2200445045_AdjustorThunk,
+	Vector3d__ctor_m469451642_AdjustorThunk,
+	Vector3d__ctor_m4234793148_AdjustorThunk,
+	Vector3d_get_Magnitude_m1524246152_AdjustorThunk,
+	Vector3d_get_MagnitudeSqr_m33642168_AdjustorThunk,
+	Vector3d_get_Normalized_m3712621051_AdjustorThunk,
+	Vector3d_get_Item_m1800108872_AdjustorThunk,
+	Vector3d_set_Item_m3344246512_AdjustorThunk,
+	Vector3d_op_Addition_m3050185132,
+	Vector3d_op_Subtraction_m2355905167,
+	Vector3d_op_Multiply_m2030899402,
+	Vector3d_op_Multiply_m1886375103,
+	Vector3d_op_Division_m362615608,
+	Vector3d_op_UnaryNegation_m1799911454,
+	Vector3d_op_Equality_m3419269755,
+	Vector3d_op_Inequality_m1301791954,
+	Vector3d_op_Implicit_m3013639765,
+	Vector3d_op_Explicit_m606323217,
+	Vector3d_Set_m2187476584_AdjustorThunk,
+	Vector3d_Scale_m3132415445_AdjustorThunk,
+	Vector3d_Normalize_m3562771470_AdjustorThunk,
+	Vector3d_Clamp_m3994770166_AdjustorThunk,
+	Vector3d_GetHashCode_m2778650559_AdjustorThunk,
+	Vector3d_Equals_m3399303555_AdjustorThunk,
+	Vector3d_Equals_m1385478632_AdjustorThunk,
+	Vector3d_ToString_m3329300008_AdjustorThunk,
+	Vector3d_ToString_m2112698771_AdjustorThunk,
+	Vector3d_Dot_m98289303,
+	Vector3d_Cross_m4273055132,
+	Vector3d_Angle_m1195699414,
+	Vector3d_Lerp_m3449571620,
+	Vector3d_Scale_m1348525473,
+	Vector3d_Normalize_m2244511709,
+	Vector3d__cctor_m2017877425,
+	Vertex__ctor_m1404661152,
+	Vertex_GetHashCode_m111307803,
+	Vertex_Equals_m3519319989,
+	Vertex_Equals_m3382010627,
+	Vertex_ToString_m376178229,
 	SceneRenderPipeline__ctor_m3403658266,
 	SceneRenderPipeline_OnEnable_m2045493293,
 	SceneRenderPipeline_OnValidate_m4047451716,
@@ -32383,6 +39284,567 @@ extern const Il2CppMethodPointer g_MethodPointers[16640] =
 	PB_SaveObject_GetActivePrefabs_m2245687705,
 	AutoRotate__ctor_m2743996959,
 	AutoRotate_Update_m2274550285,
+	DataSet__ctor_m1879147193,
+	DataSet_get_CurrGroupName_m328131300,
+	DataSet_get_IsEmpty_m2995897659,
+	DataSet_GetFaceIndicesKey_m1299236802,
+	DataSet_FixMaterialName_m4105272472,
+	DataSet_AddObject_m4137082091,
+	DataSet_AddGroup_m2443320429,
+	DataSet_AddMaterialName_m2493411803,
+	DataSet_AddVertex_m4258718712,
+	DataSet_AddUV_m1236936773,
+	DataSet_AddNormal_m2896360749,
+	DataSet_AddColor_m2588791549,
+	DataSet_AddFaceIndices_m121732860,
+	DataSet_PrintSummary_m2301394793,
+	FaceGroupData__ctor_m2225826792,
+	FaceGroupData_get_IsEmpty_m1268710318,
+	ObjectData__ctor_m1841806144,
+	ImportOptions__ctor_m648762805,
+	Loader__ctor_m3255566213,
+	Loader_get_ConvertVertAxis_m1486526007,
+	Loader_set_ConvertVertAxis_m1947231605,
+	Loader_get_Scaling_m2390523726,
+	Loader_set_Scaling_m2645094036,
+	Loader_add_ModelCreated_m151964446,
+	Loader_remove_ModelCreated_m3321074965,
+	Loader_add_ModelLoaded_m518576602,
+	Loader_remove_ModelLoaded_m2323318820,
+	Loader_add_ModelError_m3244594520,
+	Loader_remove_ModelError_m4101557118,
+	Loader_GetModelByPath_m2387584809,
+	Loader_Load_m2803392965,
+	Loader_LoadFromNetwork_m284757336,
+	Loader_LoadFromNetworkWebGL_m1186824135,
+	Loader_Build_m2321866369,
+	Loader_NetworkedBuild_m914437704,
+	Loader_NetworkedBuildWebGL_m1187314043,
+	Loader_GetDirName_m478508244,
+	Loader_OnLoaded_m1574231833,
+	Loader_OnCreated_m743114028,
+	Loader_OnLoadFailed_m3150465350,
+	Loader_GetTextureUrl_m332705725,
+	Loader_LoadMaterialTexture_m952797623,
+	Loader_LoadMaterialTexture_m2387831242,
+	Loader_LoadMaterialTextureWebGL_m2119380052,
+	Loader_LoadTexture_m3310386584,
+	Loader_DownloadFile_m2412086704,
+	Loader_GetProgress_m2576694920,
+	Loader_DownloadFileWebGL_m48211649,
+	Loader_DownloadTexFileWebGL_m3638134443,
+	Loader__cctor_m245155066,
+	U3CBuildU3Ec__async3_MoveNext_m1596334786_AdjustorThunk,
+	U3CBuildU3Ec__async3_SetStateMachine_m1915896277_AdjustorThunk,
+	U3CDownloadFileU3Ec__Iterator9__ctor_m3861899008,
+	U3CDownloadFileU3Ec__Iterator9_MoveNext_m1227338279,
+	U3CDownloadFileU3Ec__Iterator9_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3373556171,
+	U3CDownloadFileU3Ec__Iterator9_System_Collections_IEnumerator_get_Current_m4148803838,
+	U3CDownloadFileU3Ec__Iterator9_Dispose_m197438926,
+	U3CDownloadFileU3Ec__Iterator9_Reset_m2805703264,
+	U3CDownloadFileWebGLU3Ec__IteratorB__ctor_m1991976062,
+	U3CDownloadFileWebGLU3Ec__IteratorB_MoveNext_m1577214733,
+	U3CDownloadFileWebGLU3Ec__IteratorB_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3203822462,
+	U3CDownloadFileWebGLU3Ec__IteratorB_System_Collections_IEnumerator_get_Current_m1296490046,
+	U3CDownloadFileWebGLU3Ec__IteratorB_Dispose_m3760168364,
+	U3CDownloadFileWebGLU3Ec__IteratorB_Reset_m4248032903,
+	U3CDownloadTexFileWebGLU3Ec__IteratorC__ctor_m2205449345,
+	U3CDownloadTexFileWebGLU3Ec__IteratorC_MoveNext_m3730234568,
+	U3CDownloadTexFileWebGLU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m753385300,
+	U3CDownloadTexFileWebGLU3Ec__IteratorC_System_Collections_IEnumerator_get_Current_m347175968,
+	U3CDownloadTexFileWebGLU3Ec__IteratorC_Dispose_m2830575213,
+	U3CDownloadTexFileWebGLU3Ec__IteratorC_Reset_m550647909,
+	U3CGetProgressU3Ec__IteratorA__ctor_m1182973465,
+	U3CGetProgressU3Ec__IteratorA_MoveNext_m1515315983,
+	U3CGetProgressU3Ec__IteratorA_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3331301368,
+	U3CGetProgressU3Ec__IteratorA_System_Collections_IEnumerator_get_Current_m1882130736,
+	U3CGetProgressU3Ec__IteratorA_Dispose_m1666873476,
+	U3CGetProgressU3Ec__IteratorA_Reset_m2009570046,
+	U3CLoadU3Ec__async0_MoveNext_m2541098102_AdjustorThunk,
+	U3CLoadU3Ec__async0_SetStateMachine_m766861374_AdjustorThunk,
+	U3CLoadFromNetworkU3Ec__async1_MoveNext_m279563611_AdjustorThunk,
+	U3CLoadFromNetworkU3Ec__async1_SetStateMachine_m2211262982_AdjustorThunk,
+	U3CLoadFromNetworkWebGLU3Ec__Iterator2__ctor_m814733634,
+	U3CLoadFromNetworkWebGLU3Ec__Iterator2_MoveNext_m1013077296,
+	U3CLoadFromNetworkWebGLU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m4029991323,
+	U3CLoadFromNetworkWebGLU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m2689149348,
+	U3CLoadFromNetworkWebGLU3Ec__Iterator2_Dispose_m897220824,
+	U3CLoadFromNetworkWebGLU3Ec__Iterator2_Reset_m400659618,
+	U3CLoadMaterialTextureU3Ec__async6_MoveNext_m2316897439_AdjustorThunk,
+	U3CLoadMaterialTextureU3Ec__async6_SetStateMachine_m3401983247_AdjustorThunk,
+	U3CLoadMaterialTextureU3Ec__async7_MoveNext_m2351460290_AdjustorThunk,
+	U3CLoadMaterialTextureU3Ec__async7_SetStateMachine_m3614152391_AdjustorThunk,
+	U3CLoadMaterialTextureU3Ec__AnonStoreyD__ctor_m177775453,
+	U3CLoadMaterialTextureU3Ec__AnonStoreyD_U3CU3Em__0_m3729981692,
+	U3CLoadMaterialTextureU3Ec__AnonStoreyD_U3CU3Em__1_m3587923512,
+	U3CLoadMaterialTextureWebGLU3Ec__Iterator8__ctor_m1445433615,
+	U3CLoadMaterialTextureWebGLU3Ec__Iterator8_MoveNext_m207740895,
+	U3CLoadMaterialTextureWebGLU3Ec__Iterator8_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1891724440,
+	U3CLoadMaterialTextureWebGLU3Ec__Iterator8_System_Collections_IEnumerator_get_Current_m4024634486,
+	U3CLoadMaterialTextureWebGLU3Ec__Iterator8_Dispose_m1228624288,
+	U3CLoadMaterialTextureWebGLU3Ec__Iterator8_Reset_m3016040287,
+	U3CLoadMaterialTextureWebGLU3Ec__AnonStoreyE__ctor_m1351105779,
+	U3CLoadMaterialTextureWebGLU3Ec__AnonStoreyE_U3CU3Em__0_m2763441875,
+	U3CLoadMaterialTextureWebGLU3Ec__AnonStoreyE_U3CU3Em__1_m480636761,
+	U3CNetworkedBuildU3Ec__async4_MoveNext_m2745632631_AdjustorThunk,
+	U3CNetworkedBuildU3Ec__async4_SetStateMachine_m1732312776_AdjustorThunk,
+	U3CNetworkedBuildWebGLU3Ec__Iterator5__ctor_m2802670173,
+	U3CNetworkedBuildWebGLU3Ec__Iterator5_MoveNext_m3386230724,
+	U3CNetworkedBuildWebGLU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m1039465446,
+	U3CNetworkedBuildWebGLU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m1020462150,
+	U3CNetworkedBuildWebGLU3Ec__Iterator5_Dispose_m3442318001,
+	U3CNetworkedBuildWebGLU3Ec__Iterator5_Reset_m125340172,
+	LoaderObj__ctor_m1932028736,
+	LoaderObj_ParseTexturePaths_m2486515998,
+	LoaderObj_LoadModelFile_m1730933747,
+	LoaderObj_LoadModelFileNetworked_m1942612841,
+	LoaderObj_LoadModelFileNetworkedWebGL_m2848548694,
+	LoaderObj_LoadMaterialLibrary_m4130749772,
+	LoaderObj_LoadMaterialLibrary_m1741815164,
+	LoaderObj_LoadMaterialLibraryWebGL_m3990218545,
+	LoaderObj_GetFaceIndicesByOneFaceLine_m715108142,
+	LoaderObj_ConvertVec3_m3689351380,
+	LoaderObj_ParseFloat_m589828340,
+	LoaderObj_ParseGeometryData_m1869140770,
+	LoaderObj_ParseMaterialLibName_m1925034140,
+	LoaderObj_get_HasMaterialLibrary_m4284689265,
+	LoaderObj_ParseMaterialData_m844815116,
+	LoaderObj_ParseMaterialData_m2732690102,
+	LoaderObj_ParseBumpParameters_m2924099076,
+	LoaderObj_StringsToColor_m1836921696,
+	LoaderObj_LoadOrDownloadText_m2001207502,
+	U3CLoadMaterialLibraryU3Ec__async3_MoveNext_m1717438858_AdjustorThunk,
+	U3CLoadMaterialLibraryU3Ec__async3_SetStateMachine_m62335106_AdjustorThunk,
+	U3CLoadMaterialLibraryU3Ec__async4_MoveNext_m3079473546_AdjustorThunk,
+	U3CLoadMaterialLibraryU3Ec__async4_SetStateMachine_m1727368952_AdjustorThunk,
+	U3CLoadMaterialLibraryU3Ec__AnonStorey9__ctor_m1997591244,
+	U3CLoadMaterialLibraryU3Ec__AnonStorey9_U3CU3Em__0_m1976284609,
+	U3CLoadMaterialLibraryU3Ec__AnonStorey9_U3CU3Em__1_m3962019889,
+	U3CLoadMaterialLibraryWebGLU3Ec__Iterator5__ctor_m1208551793,
+	U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_MoveNext_m1466589366,
+	U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m538357752,
+	U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_System_Collections_IEnumerator_get_Current_m245048138,
+	U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_Dispose_m1453339536,
+	U3CLoadMaterialLibraryWebGLU3Ec__Iterator5_Reset_m1011987206,
+	U3CLoadMaterialLibraryWebGLU3Ec__AnonStoreyA__ctor_m2420529103,
+	U3CLoadMaterialLibraryWebGLU3Ec__AnonStoreyA_U3CU3Em__0_m294648399,
+	U3CLoadMaterialLibraryWebGLU3Ec__AnonStoreyA_U3CU3Em__1_m292324850,
+	U3CLoadModelFileU3Ec__async0_MoveNext_m908795010_AdjustorThunk,
+	U3CLoadModelFileU3Ec__async0_SetStateMachine_m3770000884_AdjustorThunk,
+	U3CLoadModelFileNetworkedU3Ec__async1_MoveNext_m881524014_AdjustorThunk,
+	U3CLoadModelFileNetworkedU3Ec__async1_SetStateMachine_m731285854_AdjustorThunk,
+	U3CLoadModelFileNetworkedU3Ec__AnonStorey7__ctor_m1061913466,
+	U3CLoadModelFileNetworkedU3Ec__AnonStorey7_U3CU3Em__0_m1481445901,
+	U3CLoadModelFileNetworkedU3Ec__AnonStorey7_U3CU3Em__1_m815363926,
+	U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2__ctor_m2233634992,
+	U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_MoveNext_m3811301293,
+	U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3645041252,
+	U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_System_Collections_IEnumerator_get_Current_m4286431448,
+	U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_Dispose_m562364020,
+	U3CLoadModelFileNetworkedWebGLU3Ec__Iterator2_Reset_m42481412,
+	U3CLoadModelFileNetworkedWebGLU3Ec__AnonStorey8__ctor_m321153310,
+	U3CLoadModelFileNetworkedWebGLU3Ec__AnonStorey8_U3CU3Em__0_m1229083317,
+	U3CLoadModelFileNetworkedWebGLU3Ec__AnonStorey8_U3CU3Em__1_m1127156662,
+	U3CLoadOrDownloadTextU3Ec__Iterator6__ctor_m3117803010,
+	U3CLoadOrDownloadTextU3Ec__Iterator6_MoveNext_m3968461887,
+	U3CLoadOrDownloadTextU3Ec__Iterator6_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2762854541,
+	U3CLoadOrDownloadTextU3Ec__Iterator6_System_Collections_IEnumerator_get_Current_m1254094889,
+	U3CLoadOrDownloadTextU3Ec__Iterator6_Dispose_m3812581278,
+	U3CLoadOrDownloadTextU3Ec__Iterator6_Reset_m2379590555,
+	BumpParamDef__ctor_m2828540933,
+	LoadingProgress__ctor_m3035364448,
+	MaterialData__ctor_m2296830745,
+	MathUtility_ClampListIndex_m83957190,
+	MathUtility_IsPointInTriangle_m641739852,
+	MathUtility_IsTriangleOrientedClockwise_m1885987955,
+	MathUtility_ComputeNormal_m3970854146,
+	Triangle__ctor_m3262211906,
+	Triangulation_TriangulateConvexPolygon_m676548159,
+	Triangulation_TriangulateByEarClipping_m1047215819,
+	Triangulation_ClipTriangle_m1203665322,
+	Triangulation_ClipEar_m3407402700,
+	Triangulation_FindMaxAreaEarVertex_m2350070018,
+	Triangulation_FindEarVertices_m1045158017,
+	Triangulation_IsVertexReflex_m2860153763,
+	Triangulation_IsVertexEar_m2945400833,
+	Vertex__ctor_m3576514641,
+	Vertex_get_Position_m4022624606,
+	Vertex_set_Position_m2953251585,
+	Vertex_get_OriginalIndex_m3062019229,
+	Vertex_set_OriginalIndex_m3902073754,
+	Vertex_get_PreviousVertex_m921173586,
+	Vertex_set_PreviousVertex_m2033300065,
+	Vertex_get_NextVertex_m806144045,
+	Vertex_set_NextVertex_m2651069169,
+	Vertex_get_TriangleArea_m716965693,
+	Vertex_GetPosOnPlane_m54929610,
+	Vertex_ComputeTriangleArea_m487272102,
+	ModelImportInfo__ctor_m1106413490,
+	ModelUtil__ctor_m230479007,
+	ModelUtil_SetupMaterialWithBlendMode_m2282544682,
+	ModelUtil_ScanTransparentPixels_m1346498458,
+	ModelUtil_DetectMtlBlendFadeOrCutout_m124401552,
+	ModelUtil_HeightToNormalMap_m262338021,
+	ModelUtil_WrapInt_m3111078135,
+	MultiObjectImporter__ctor_m904579824,
+	MultiObjectImporter_get_RootPath_m1172854735,
+	MultiObjectImporter_ImportModelListAsync_m544621876,
+	MultiObjectImporter_Start_m2379031238,
+	ObjectBuilder__ctor_m2504906510,
+	ObjectBuilder_get_ImportedMaterials_m2903192349,
+	ObjectBuilder_get_NumImportedMaterials_m3842166429,
+	ObjectBuilder_InitBuildMaterials_m742564013,
+	ObjectBuilder_BuildMaterials_m3193676732,
+	ObjectBuilder_StartBuildObjectAsync_m146565480,
+	ObjectBuilder_BuildObjectAsync_m1671756887,
+	ObjectBuilder_Solve_m2922800411,
+	ObjectBuilder_BuildMeshCollider_m2074577849,
+	ObjectBuilder_BuildNextObject_m1250264897,
+	ObjectBuilder_ImportSubObject_m2724269954,
+	ObjectBuilder_BuildMaterial_m2209255087,
+	ObjectBuilder_Using32bitIndices_m2992317986,
+	ObjectBuilder__cctor_m3908875554,
+	BuildStatus__ctor_m2483677491,
+	ProgressInfo__ctor_m1065682754,
+	ObjectImporter__ctor_m633480097,
+	ObjectImporter_add_ImportingStart_m4148131912,
+	ObjectImporter_remove_ImportingStart_m702298877,
+	ObjectImporter_add_ImportingComplete_m4205383842,
+	ObjectImporter_remove_ImportingComplete_m4152696788,
+	ObjectImporter_add_CreatedModel_m3722197689,
+	ObjectImporter_remove_CreatedModel_m98571013,
+	ObjectImporter_add_ImportedModel_m2050732977,
+	ObjectImporter_remove_ImportedModel_m3891316276,
+	ObjectImporter_add_ImportError_m2853548700,
+	ObjectImporter_remove_ImportError_m500790391,
+	ObjectImporter_get_NumImportRequests_m3292880560,
+	ObjectImporter_CreateLoader_m374880695,
+	ObjectImporter_ImportModelAsync_m3700572444,
+	ObjectImporter_ImportModelFromNetwork_m561684935,
+	ObjectImporter_ImportModelFromNetworkWebGL_m4204389768,
+	ObjectImporter_UpdateStatus_m1791706885,
+	ObjectImporter_Update_m882193369,
+	ObjectImporter_OnImportingComplete_m3594805070,
+	ObjectImporter_OnModelCreated_m510257268,
+	ObjectImporter_OnImported_m1161203239,
+	ObjectImporter_OnImportError_m4026958340,
+	U3CImportModelAsyncU3Ec__async0_MoveNext_m2514199461_AdjustorThunk,
+	U3CImportModelAsyncU3Ec__async0_SetStateMachine_m206278151_AdjustorThunk,
+	U3CImportModelFromNetworkU3Ec__async1_MoveNext_m3737295256_AdjustorThunk,
+	U3CImportModelFromNetworkU3Ec__async1_SetStateMachine_m1213960117_AdjustorThunk,
+	ObjectImporterUI__ctor_m245666312,
+	ObjectImporterUI_Awake_m1509048549,
+	ObjectImporterUI_OnEnable_m2374151729,
+	ObjectImporterUI_OnDisable_m2493758448,
+	ObjectImporterUI_Update_m4272402320,
+	ObjectImporterUI_OnImportStart_m3119146751,
+	ObjectImporterUI_OnImportComplete_m1910964204,
+	PathSettings__ctor_m2311898670,
+	PathSettings_get_RootPath_m974904680,
+	PathSettings_FindPathComponent_m3172528021,
+	PathSettings_FullPath_m90131287,
+	SingleLoadingProgress__ctor_m8490512,
+	TextureLoader__ctor_m474182024,
+	TextureLoader_LoadTextureFromUrl_m2845482855,
+	TextureLoader_LoadTexture_m666676556,
+	TextureLoader_LoadTGA_m1038381800,
+	TextureLoader_LoadDDSManual_m2916855477,
+	TextureLoader_LoadTGA_m3335071566,
+	TextureLoader_LoadTgaHeader_m1712712616,
+	TgaHeader__ctor_m1243714047,
+	Triangulator_Triangulate_m4158053140,
+	Triangulator_FindPlaneNormal_m1471103245,
+	CombiningInformation__ctor_m3199113447,
+	CombiningInformation_ShouldGenerateMetallicArray_m3629331842,
+	CombiningInformation_ShouldGenerateSpecularArray_m188365225,
+	CombiningInformation_ShouldGenerateNormalArray_m2181958199,
+	CombiningInformation_ShouldGenerateHeightArray_m2537293987,
+	CombiningInformation_ShouldGenerateOcclusionArray_m2384922612,
+	CombiningInformation_ShouldGenerateEmissionArray_m3556747682,
+	CombiningInformation_ShouldGenerateDetailMaskArray_m713461264,
+	CombiningInformation_ShouldGenerateDetailAlbedoArray_m3600224334,
+	CombiningInformation_ShouldGenerateDetailNormalArray_m3577260890,
+	CombineMetaData__ctor_m3168878782,
+	MaterialEntity__ctor_m1609233209,
+	MaterialEntity_HasAnyTextures_m1127625754,
+	MaterialProperties__ctor_m2596085527,
+	MaterialProperties_IsSameAs_m3157177758,
+	MaterialProperties_NewTexture_m1146089958,
+	MaterialProperties_BurnAttrToImg_m1452824560,
+	MaterialProperties_FillPropertiesFromMaterial_m77054878,
+	MeshData__ctor_m2188737184,
+	TextureArrayGroup__ctor_m3604818987,
+	TextureArrayGroup_InitializeDefaultArraySettings_m726716088,
+	TextureArrayUserSettings__ctor_m3418096169,
+	ObjectMaterialLinks__ctor_m2282201317,
+	ObjectMaterialLinks_get_linkedMaterialEntities_m3038279497,
+	ObjectMaterialLinks_set_linkedMaterialEntities_m3705186428,
+	ObjectMaterialLinks_Start_m2759326201,
+	PolyFewHost__ctor_m1257232802,
+	PolyFewHost_Start_m4195223432,
+	RefreshEnforcer__ctor_m2577304648,
+	RefreshEnforcer_Start_m3145264688,
+	RefreshEnforcer_Update_m3635532086,
+	SystemServices_SetPatterns_m2103161686,
+	SystemServices_UnityAsyncGETRequest_m638677998,
+	SystemServices_UnityBlockingGETRequest_m1401903069,
+	SystemServices_UnityBlockingPOSTRequest_m2174057976,
+	SystemServices_UnityAsyncPOSTRequest_m1721867670,
+	SystemServices_SendHTTPRequestAsync_m2289727555,
+	SystemServices_SendHTTPRequestBlocking_m3978243419,
+	SystemServices_AsyncResourceDownload_m1209913551,
+	SystemServices_AsyncReachabilityCheck_m2090151446,
+	SystemServices_BlockingReachabilityCheck_m3081583804,
+	SystemServices_ParseResponseMessage_m611061774,
+	SystemServices_IsSuccessStatusCode_m42487414,
+	SystemServices_GetQueryStringFromKeyValues_m3236804080,
+	SystemServices_RunDelayedCommand_m1900484235,
+	SystemServices_ReadAllBytes_m778879884,
+	SystemServices_WriteTextureAsync_m1443445690,
+	SystemServices_WriteBytesAsync_m3560208797,
+	U3CAsyncReachabilityCheckU3Ec__async4_MoveNext_m2235115652_AdjustorThunk,
+	U3CAsyncReachabilityCheckU3Ec__async4_SetStateMachine_m4003437197_AdjustorThunk,
+	U3CAsyncReachabilityCheckU3Ec__AnonStoreyA__ctor_m3442815097,
+	U3CAsyncReachabilityCheckU3Ec__AnonStoreyA_U3CU3Em__0_m1288150501,
+	U3CAsyncResourceDownloadU3Ec__async3_MoveNext_m4244717550_AdjustorThunk,
+	U3CAsyncResourceDownloadU3Ec__async3_SetStateMachine_m3171235425_AdjustorThunk,
+	U3CAsyncResourceDownloadU3Ec__AnonStorey9__ctor_m1279423499,
+	U3CAsyncResourceDownloadU3Ec__AnonStorey9_U3CU3Em__0_m2590688398,
+	U3CBlockingReachabilityCheckU3Ec__AnonStoreyB__ctor_m1859331447,
+	U3CBlockingReachabilityCheckU3Ec__AnonStoreyB_U3CU3Em__0_m378677410,
+	U3CRunDelayedCommandU3Ec__async5_MoveNext_m2730369265_AdjustorThunk,
+	U3CRunDelayedCommandU3Ec__async5_SetStateMachine_m580970924_AdjustorThunk,
+	U3CSendHTTPRequestAsyncU3Ec__async2_MoveNext_m3425950550_AdjustorThunk,
+	U3CSendHTTPRequestAsyncU3Ec__async2_SetStateMachine_m3659240974_AdjustorThunk,
+	U3CSendHTTPRequestAsyncU3Ec__AnonStorey8__ctor_m3568019399,
+	U3CSendHTTPRequestAsyncU3Ec__AnonStorey8_U3CU3Em__0_m1405798426,
+	U3CSendHTTPRequestAsyncU3Ec__AnonStorey8_U3CU3Em__1_m3362113562,
+	U3CUnityAsyncGETRequestU3Ec__Iterator0__ctor_m2401293038,
+	U3CUnityAsyncGETRequestU3Ec__Iterator0_MoveNext_m4099349237,
+	U3CUnityAsyncGETRequestU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2908101688,
+	U3CUnityAsyncGETRequestU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m3533462672,
+	U3CUnityAsyncGETRequestU3Ec__Iterator0_Dispose_m3239442540,
+	U3CUnityAsyncGETRequestU3Ec__Iterator0_Reset_m2628776777,
+	U3CUnityAsyncPOSTRequestU3Ec__Iterator1__ctor_m2822182026,
+	U3CUnityAsyncPOSTRequestU3Ec__Iterator1_MoveNext_m1269536125,
+	U3CUnityAsyncPOSTRequestU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m962276233,
+	U3CUnityAsyncPOSTRequestU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m380545453,
+	U3CUnityAsyncPOSTRequestU3Ec__Iterator1_Dispose_m1320803127,
+	U3CUnityAsyncPOSTRequestU3Ec__Iterator1_Reset_m2011956378,
+	U3CWriteBytesAsyncU3Ec__async7_MoveNext_m3582831216_AdjustorThunk,
+	U3CWriteBytesAsyncU3Ec__async7_SetStateMachine_m745778231_AdjustorThunk,
+	U3CWriteTextureAsyncU3Ec__async6_MoveNext_m1992926187_AdjustorThunk,
+	U3CWriteTextureAsyncU3Ec__async6_SetStateMachine_m1439167429_AdjustorThunk,
+	HTTPMethod__ctor_m2999665024,
+	MessagePatternPair__ctor_m1362905345_AdjustorThunk,
+	MessagePatternPair_set_patternAppended_m2195588078_AdjustorThunk,
+	MessagePatternPair_get_patternAppended_m3982213604_AdjustorThunk,
+	MessagePatternPair_set_parsedMessage_m1574459211_AdjustorThunk,
+	MessagePatternPair_get_parsedMessage_m981437915_AdjustorThunk,
+	FlyCamera__ctor_m2561126652,
+	FlyCamera_Start_m3554616188,
+	FlyCamera_Update_m2318094292,
+	FlyCamera_ClampAngle_m2291207133,
+	FlyCamera__cctor_m3944373225,
+	MeshCombiner_GetStaticRenderers_m2866249887,
+	MeshCombiner_GetSkinnedRenderers_m2505072323,
+	MeshCombiner_CombineStaticMeshes_m1759974987,
+	MeshCombiner_CombineSkinnedMeshes_m2555400222,
+	MeshCombiner_CombineMeshes_m2860662349,
+	MeshCombiner_CombineMeshes_m4014511618,
+	MeshCombiner_CombineMeshes_m610032307,
+	MeshCombiner_CombineMeshes_m2002785295,
+	MeshCombiner_ParentAndResetTransform_m1992922683,
+	MeshCombiner_ParentAndOffsetTransform_m3486064337,
+	MeshCombiner_FindBestRootBone_m2015713099,
+	MeshCombiner_FindBestRootBone_m4242232012,
+	MeshCombiner_GetTopLevelParent_m481179101,
+	MeshCombiner_CopyVertexPositions_m1868952963,
+	MeshCombiner_TransformVertices_m776757645,
+	MeshCombiner_TransformNormals_m2637223116,
+	MeshCombiner_TransformTangents_m289077797,
+	MeshCombiner_RemapBones_m3597788567,
+	MeshCombiner_ScaleMatrix_m3708809078,
+	MeshCombiner_CombineMeshesUnity_m1440651638,
+	MeshCombiner__cctor_m1788199845,
+	MeshCombiner_U3CCombineStaticMeshesU3Em__0_m26387854,
+	MeshCombiner_U3CCombineStaticMeshesU3Em__1_m2803344242,
+	MeshCombiner_U3CCombineSkinnedMeshesU3Em__2_m95187428,
+	MeshCombiner_U3CCombineSkinnedMeshesU3Em__3_m4119395648,
+	BlendShape__ctor_m606669482_AdjustorThunk,
+	BlendShapeFrame__ctor_m4140605833_AdjustorThunk,
+	BlendShapeFrame__ctor_m2177934244_AdjustorThunk,
+	MeshUtils_CreateMesh_m2914690936,
+	MeshUtils_CreateMesh_m1385272390,
+	MeshUtils_CreateMesh_m2756094359,
+	MeshUtils_GetMeshBlendShapes_m1819832026,
+	MeshUtils_ApplyMeshBlendShapes_m3644144868,
+	MeshUtils_GetMeshUVs_m3307014189,
+	MeshUtils_GetMeshUVs_m540539698,
+	MeshUtils_GetUsedUVComponents_m3025434546,
+	MeshUtils_ConvertUVsTo2D_m2343556576,
+	MeshUtils_ConvertUVsTo3D_m2778901106,
+	MeshUtils_GetSubMeshIndexMinMax_m3948928112,
+	MeshUtils_GetIndexMinMax_m2475151475,
+	PolyfewRuntime__ctor_m3126978058,
+	PolyfewRuntime_SimplifyObjectDeep_m1848745566,
+	PolyfewRuntime_SimplifyObjectDeep_m2116880514,
+	PolyfewRuntime_SimplifyObjectDeep_m1848277320,
+	PolyfewRuntime_SimplifyMeshes_m2918109052,
+	PolyfewRuntime_GetObjectMeshPairs_m2383065358,
+	PolyfewRuntime_CombineMeshesInGameObject_m268484930,
+	PolyfewRuntime_CombineMeshesFromRenderers_m4013097295,
+	PolyfewRuntime_ConvertSkinnedMeshesInGameObject_m890175997,
+	PolyfewRuntime_ConvertSkinnedMeshesFromRenderers_m576780255,
+	PolyfewRuntime_ImportOBJFromFileSystem_m2818987386,
+	PolyfewRuntime_ImportOBJFromNetwork_m1707090563,
+	PolyfewRuntime_ExportGameObjectToOBJ_m576085814,
+	PolyfewRuntime_CountTriangles_m373702396,
+	PolyfewRuntime_CountTriangles_m651501482,
+	PolyfewRuntime_GetMaterialsProperties_m3660858710,
+	PolyfewRuntime_ChangeMaterialProperties_m4068497918,
+	PolyfewRuntime_SetParametersForSimplifier_m3516415438,
+	PolyfewRuntime_AreAnyFeasibleMeshes_m4273299243,
+	PolyfewRuntime_AssignReducedMesh_m2554476197,
+	PolyfewRuntime_CountTriangles_m2304131273,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__0_m2516667631,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__1_m1985619507,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__2_m1968134601,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__3_m3362742270,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__4_m3060096019,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__5_m3600257559,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__6_m3522414349,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__7_m573846474,
+	PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__8_m2926097980,
+	PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__9_m279581192,
+	PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__A_m1355805655,
+	PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__B_m602704950,
+	PolyfewRuntime_U3CCombineMeshesFromRenderersU3Em__C_m2157946003,
+	PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__D_m4211490578,
+	PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__E_m3449519289,
+	PolyfewRuntime_U3CConvertSkinnedMeshesFromRenderersU3Em__F_m321113221,
+	U3CExportGameObjectToOBJU3Ec__async2_MoveNext_m1411503174_AdjustorThunk,
+	U3CExportGameObjectToOBJU3Ec__async2_SetStateMachine_m585412331_AdjustorThunk,
+	U3CExportGameObjectToOBJU3Ec__AnonStorey12__ctor_m530512390,
+	U3CExportGameObjectToOBJU3Ec__AnonStorey12_U3CU3Em__0_m22102041,
+	U3CImportOBJFromFileSystemU3Ec__async0_MoveNext_m1058485429_AdjustorThunk,
+	U3CImportOBJFromFileSystemU3Ec__async0_SetStateMachine_m1676690121_AdjustorThunk,
+	U3CImportOBJFromFileSystemU3Ec__AnonStorey10__ctor_m3551582123,
+	U3CImportOBJFromFileSystemU3Ec__AnonStorey10_U3CU3Em__0_m1731981059,
+	U3CImportOBJFromNetworkU3Ec__async1_MoveNext_m3036872189_AdjustorThunk,
+	U3CImportOBJFromNetworkU3Ec__async1_SetStateMachine_m3285237123_AdjustorThunk,
+	U3CImportOBJFromNetworkU3Ec__AnonStorey11__ctor_m3940907362,
+	U3CImportOBJFromNetworkU3Ec__AnonStorey11_U3CU3Em__0_m3137110352,
+	U3CImportOBJFromNetworkU3Ec__AnonStorey11_U3CU3Em__1_m2154704699,
+	U3CSimplifyMeshesU3Ec__AnonStoreyC__ctor_m689722548,
+	U3CSimplifyMeshesU3Ec__AnonStoreyC_U3CU3Em__0_m1139359155,
+	U3CSimplifyMeshesU3Ec__AnonStoreyC_U3CU3Em__1_m1139359156,
+	U3CSimplifyMeshesU3Ec__AnonStoreyC_U3CU3Em__2_m1139359157,
+	U3CSimplifyMeshesU3Ec__AnonStoreyD__ctor_m689721739,
+	U3CSimplifyMeshesU3Ec__AnonStoreyE__ctor_m689720650,
+	U3CSimplifyMeshesU3Ec__AnonStoreyF__ctor_m706112009,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey3__ctor_m2431483681,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey3_U3CU3Em__0_m2064660423,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey3_U3CU3Em__1_m2064660422,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey3_U3CU3Em__2_m2064660421,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey4__ctor_m2431485018,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey5__ctor_m2431485843,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey6__ctor_m2431486932,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey6_U3CU3Em__0_m2064663392,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey6_U3CU3Em__1_m2064663393,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey7__ctor_m2431488021,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey8__ctor_m2431489390,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey9__ctor_m2431490199,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey9_U3CU3Em__0_m2064670685,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey9_U3CU3Em__1_m2064670684,
+	U3CSimplifyObjectDeepU3Ec__AnonStorey9_U3CU3Em__2_m2064670687,
+	U3CSimplifyObjectDeepU3Ec__AnonStoreyA__ctor_m2431605647,
+	U3CSimplifyObjectDeepU3Ec__AnonStoreyB__ctor_m2431606736,
+	CustomMeshActionStructure__ctor_m1771748096,
+	MaterialProperties__ctor_m2761310185,
+	MaterialProperties_BurnAttrToImg_m2414992500,
+	MeshRendererPair__ctor_m2158333609,
+	MeshRendererPair_Destruct_m538603926,
+	OBJExportOptions__ctor_m4258985630,
+	OBJImportOptions__ctor_m2386172362,
+	ObjectMeshPairs__ctor_m2006683822,
+	PreservationSphere__ctor_m109871299,
+	SimplificationOptions__ctor_m1553451226,
+	SimplificationOptions__ctor_m2395757493,
+	PolygonReduction__ctor_m1513805930,
+	PolygonReduction_Start_m2417385278,
+	PolygonReduction_Update_m352589968,
+	PolygonReduction_OnReductionChange_m2260146986,
+	PolygonReduction_SimplifyLossless_m3099538419,
+	PolygonReduction_ImportOBJ_m2466692532,
+	PolygonReduction_ImportOBJFromNetwork_m4198777591,
+	PolygonReduction_ExportGameObjectToOBJ_m2382381608,
+	PolygonReduction_OnToggleStateChanged_m2033976341,
+	PolygonReduction_OnPreservationStrengthChange_m3228707603,
+	PolygonReduction_Reset_m3080683473,
+	PolygonReduction_OnSliderSelect_m2677710804,
+	PolygonReduction_OnSliderDeselect_m1385299762,
+	PolygonReduction_IsMouseOverUI_m4216769291,
+	PolygonReduction_ShowMessage_m2115410128,
+	PolygonReduction_ResetSettings_m2032790679,
+	PolygonReduction_UpdateProgress_m310607949,
+	PolygonReduction_AssignMeshesFromPairs_m1377282920,
+	PolygonReduction_U3COnReductionChangeU3Em__0_m2719726375,
+	PolygonReduction_U3CSimplifyLosslessU3Em__1_m2119262611,
+	PolygonReduction_U3CImportOBJU3Em__2_m3277791253,
+	PolygonReduction_U3CExportGameObjectToOBJU3Em__3_m37016288,
+	U3CExportGameObjectToOBJU3Ec__AnonStorey4__ctor_m2075231653,
+	U3CExportGameObjectToOBJU3Ec__AnonStorey4_U3CU3Em__0_m2557125348,
+	U3CImportOBJU3Ec__AnonStorey2__ctor_m1387984021,
+	U3CImportOBJU3Ec__AnonStorey2_U3CU3Em__0_m3714105476,
+	U3CImportOBJFromNetworkU3Ec__AnonStorey3__ctor_m2781710176,
+	U3CImportOBJFromNetworkU3Ec__AnonStorey3_U3CU3Em__0_m2210738070,
+	U3CImportOBJFromNetworkU3Ec__AnonStorey3_U3CU3Em__1_m3909859074,
+	U3CShowMessageU3Ec__Iterator0__ctor_m727580675,
+	U3CShowMessageU3Ec__Iterator0_MoveNext_m1628859940,
+	U3CShowMessageU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m168475554,
+	U3CShowMessageU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m1302050492,
+	U3CShowMessageU3Ec__Iterator0_Dispose_m3606179102,
+	U3CShowMessageU3Ec__Iterator0_Reset_m2932271382,
+	U3CUpdateProgressU3Ec__Iterator1__ctor_m1000926561,
+	U3CUpdateProgressU3Ec__Iterator1_MoveNext_m3108092872,
+	U3CUpdateProgressU3Ec__Iterator1_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2516251807,
+	U3CUpdateProgressU3Ec__Iterator1_System_Collections_IEnumerator_get_Current_m1270164944,
+	U3CUpdateProgressU3Ec__Iterator1_Dispose_m137239620,
+	U3CUpdateProgressU3Ec__Iterator1_Reset_m3598744709,
+	UtilityServicesRuntime__ctor_m3273973878,
+	UtilityServicesRuntime_DuplicateTexture_m2355676577,
+	UtilityServicesRuntime_GetChildRenderersForCombining_m2764586950,
+	UtilityServicesRuntime_CreateStaticLevelRenderer_m556122152,
+	UtilityServicesRuntime_CreateSkinnedLevelRenderer_m2574866959,
+	UtilityServicesRuntime_CollectChildRenderersForCombining_m2748856271,
+	UtilityServicesRuntime_ParentAndResetTransform_m4232084026,
+	UtilityServicesRuntime_ParentAndOffsetTransform_m2994683679,
+	OBJExporterImporter__ctor_m521551101,
+	OBJExporterImporter_InitializeExporter_m3304155578,
+	OBJExporterImporter_InitializeExporter_m4119496054,
+	OBJExporterImporter_RotateAroundPoint_m485500929,
+	OBJExporterImporter_MultiplyVec3s_m3223022724,
+	OBJExporterImporter_ExportGameObjectToOBJ_m3323720109,
+	OBJExporterImporter_ExportMeshToOBJ_m2280150143,
+	OBJExporterImporter_TryExportTexture_m3157967826,
+	OBJExporterImporter_ExportTexture_m2197564473,
+	OBJExporterImporter_ConstructOBJString_m599715515,
+	OBJExporterImporter_MaterialToString_m1450109953,
+	OBJExporterImporter_ImportFromLocalFileSystem_m1159319730,
+	OBJExporterImporter_ImportFromNetwork_m1278998873,
+	OBJExporterImporter_ImportFromNetworkWebGL_m331212839,
+	U3CExportMeshToOBJU3Ec__async0_MoveNext_m795831665_AdjustorThunk,
+	U3CExportMeshToOBJU3Ec__async0_SetStateMachine_m2548532313_AdjustorThunk,
+	U3CImportFromLocalFileSystemU3Ec__async1_MoveNext_m862428734_AdjustorThunk,
+	U3CImportFromLocalFileSystemU3Ec__async1_SetStateMachine_m2656130170_AdjustorThunk,
+	U3CImportFromNetworkU3Ec__async2_MoveNext_m4148566053_AdjustorThunk,
+	U3CImportFromNetworkU3Ec__async2_SetStateMachine_m534562164_AdjustorThunk,
+	U3CImportFromNetworkWebGLU3Ec__async3_MoveNext_m2616382666_AdjustorThunk,
+	U3CImportFromNetworkWebGLU3Ec__async3_SetStateMachine_m362655400_AdjustorThunk,
+	U3CImportFromNetworkWebGLU3Ec__AnonStorey4__ctor_m1616623592,
+	U3CImportFromNetworkWebGLU3Ec__AnonStorey4_U3CU3Em__0_m2613898091,
+	U3CImportFromNetworkWebGLU3Ec__AnonStorey4_U3CU3Em__1_m76398191,
 	Cam__ctor_m4101269039,
 	Cam_Start_m268025477,
 	Cam_Update_m767326129,

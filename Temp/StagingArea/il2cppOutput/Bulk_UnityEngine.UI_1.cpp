@@ -723,7 +723,7 @@ extern RuntimeClass* Vector3_t3722313464_il2cpp_TypeInfo_var;
 extern RuntimeClass* VertexHelper_t2453304189_il2cpp_TypeInfo_var;
 extern RuntimeClass* WaitForEndOfFrame_t1314943911_il2cpp_TypeInfo_var;
 extern RuntimeClass* WaitForSecondsRealtime_t189548121_il2cpp_TypeInfo_var;
-extern RuntimeField* U3CPrivateImplementationDetailsU3E_t3057255363____U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0_FieldInfo_var;
+extern RuntimeField* U3CPrivateImplementationDetailsU3E_t3057255365____U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0_FieldInfo_var;
 extern String_t* _stringLiteral102249191;
 extern String_t* _stringLiteral103014355;
 extern String_t* _stringLiteral1070534145;
@@ -5202,8 +5202,8 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // WAITFORSECONDSREALTIME_T189548121_H
-#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
-#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
+#ifndef U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255365_H
+#define U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255365_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -5211,21 +5211,21 @@ public:
 #endif
 
 // <PrivateImplementationDetails>
-struct  U3CPrivateImplementationDetailsU3E_t3057255363  : public RuntimeObject
+struct  U3CPrivateImplementationDetailsU3E_t3057255365  : public RuntimeObject
 {
 public:
 
 public:
 };
 
-struct U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields
+struct U3CPrivateImplementationDetailsU3E_t3057255365_StaticFields
 {
 public:
 	// <PrivateImplementationDetails>/$ArrayType=12 <PrivateImplementationDetails>::$field-7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46
 	U24ArrayTypeU3D12_t2488454196  ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0;
 
 public:
-	inline static int32_t get_offset_of_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255363_StaticFields, ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0)); }
+	inline static int32_t get_offset_of_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255365_StaticFields, ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0)); }
 	inline U24ArrayTypeU3D12_t2488454196  get_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() const { return ___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0; }
 	inline U24ArrayTypeU3D12_t2488454196 * get_address_of_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0() { return &___U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0; }
 	inline void set_U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0(U24ArrayTypeU3D12_t2488454196  value)
@@ -5237,7 +5237,7 @@ public:
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255363_H
+#endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255365_H
 #ifndef DELEGATE_T1188392813_H
 #define DELEGATE_T1188392813_H
 #ifdef __clang__
@@ -24595,7 +24595,7 @@ extern "C" IL2CPP_METHOD_ATTR void InputField__cctor_m4008532896 (RuntimeObject 
 	{
 		CharU5BU5D_t3528271667* L_0 = (CharU5BU5D_t3528271667*)SZArrayNew(CharU5BU5D_t3528271667_il2cpp_TypeInfo_var, (uint32_t)6);
 		CharU5BU5D_t3528271667* L_1 = L_0;
-		RuntimeFieldHandle_t1871169219  L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t3057255363____U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0_FieldInfo_var) };
+		RuntimeFieldHandle_t1871169219  L_2 = { reinterpret_cast<intptr_t> (U3CPrivateImplementationDetailsU3E_t3057255365____U24fieldU2D7BBE37982E6C057ED87163CAFC7FD6E5E42EEA46_0_FieldInfo_var) };
 		RuntimeHelpers_InitializeArray_m3117905507(NULL /*static, unused*/, (RuntimeArray *)(RuntimeArray *)L_1, L_2, /*hidden argument*/NULL);
 		((InputField_t3762917431_StaticFields*)il2cpp_codegen_static_fields_for(InputField_t3762917431_il2cpp_TypeInfo_var))->set_kSeparators_19(L_1);
 		return;
