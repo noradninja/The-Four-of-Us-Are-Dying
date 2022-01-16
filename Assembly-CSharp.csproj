@@ -167,7 +167,9 @@
      <Compile Include="Assets\Script\Fadeout.cs" />
      <Compile Include="Assets\Script\FXAA3_11_ConsoleEffect.cs" />
      <Compile Include="Assets\Script\GetCollidingVerts.cs" />
+     <Compile Include="Assets\Script\GetFrameTiming.cs" />
      <Compile Include="Assets\Script\GetRenderPath.cs" />
+     <Compile Include="Assets\Script\InventoryManager.cs" />
      <Compile Include="Assets\Script\Item_Enumerator.cs" />
      <Compile Include="Assets\Script\LoadScreen.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />

@@ -354,3 +354,4 @@ c992b782e67a6345597ade87c596155c Assembly-CSharp.dll:BrainFailProductions.PolyFe
 0949cab842862001936273f7459d136f Assembly-CSharp.dll:BrainFailProductions.PolyFew.AsImpL.LoaderObj
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:BrainFailProductions.PolyFew.RefreshEnforcer
 ce1b0eb84f759ba0307038313ee70547 Assembly-CSharp.dll:BrainFailProductions.PolyFewRuntime.PolygonReduction
+351b9a7e48b701a62b8e9b9357c91dd6 Assembly-CSharp.dll:.GetFrameTiming

@@ -340,6 +340,7 @@ extern const Il2CppType Bounds_t2266837910_0_0_0;
 extern const Il2CppType Display_t1387065949_0_0_0;
 extern const Il2CppType Plane_t1000493321_0_0_0;
 extern const Il2CppType Vector2_t2156229523_0_0_0;
+extern const Il2CppType FrameTiming_t3383372899_0_0_0;
 extern const Il2CppType Material_t340375123_0_0_0;
 extern const Il2CppType Transform_t3600365921_0_0_0;
 extern const Il2CppType Renderer_t2627027031_0_0_0;
@@ -1023,7 +1024,6 @@ extern const Il2CppType U3CImportFromNetworkU3Ec__async2_t3683492419_0_0_0;
 extern const Il2CppType U3CImportFromNetworkWebGLU3Ec__async3_t1964341502_0_0_0;
 extern const Il2CppType SleekRenderPostProcess_t1198037834_0_0_0;
 extern const Il2CppType LoadScreen_t3376497162_0_0_0;
-extern const Il2CppType PlayerController_t2064355688_0_0_0;
 extern const Il2CppType SphereCollider_t2077223608_0_0_0;
 extern const Il2CppType FastSSAO_t1400243781_0_0_0;
 extern const Il2CppType Bokeh_t660694511_0_0_0;
@@ -2220,6 +2220,8 @@ static const RuntimeType* GenInst_Plane_t1000493321_0_0_0_Types[] = { (&Plane_t1
 extern const Il2CppGenericInst GenInst_Plane_t1000493321_0_0_0 = { 1, GenInst_Plane_t1000493321_0_0_0_Types };
 static const RuntimeType* GenInst_Vector2_t2156229523_0_0_0_Types[] = { (&Vector2_t2156229523_0_0_0) };
 extern const Il2CppGenericInst GenInst_Vector2_t2156229523_0_0_0 = { 1, GenInst_Vector2_t2156229523_0_0_0_Types };
+static const RuntimeType* GenInst_FrameTiming_t3383372899_0_0_0_Types[] = { (&FrameTiming_t3383372899_0_0_0) };
+extern const Il2CppGenericInst GenInst_FrameTiming_t3383372899_0_0_0 = { 1, GenInst_FrameTiming_t3383372899_0_0_0_Types };
 static const RuntimeType* GenInst_Material_t340375123_0_0_0_Types[] = { (&Material_t340375123_0_0_0) };
 extern const Il2CppGenericInst GenInst_Material_t340375123_0_0_0 = { 1, GenInst_Material_t340375123_0_0_0_Types };
 static const RuntimeType* GenInst_Transform_t3600365921_0_0_0_Types[] = { (&Transform_t3600365921_0_0_0) };
@@ -3894,8 +3896,6 @@ static const RuntimeType* GenInst_SleekRenderPostProcess_t1198037834_0_0_0_Types
 extern const Il2CppGenericInst GenInst_SleekRenderPostProcess_t1198037834_0_0_0 = { 1, GenInst_SleekRenderPostProcess_t1198037834_0_0_0_Types };
 static const RuntimeType* GenInst_LoadScreen_t3376497162_0_0_0_Types[] = { (&LoadScreen_t3376497162_0_0_0) };
 extern const Il2CppGenericInst GenInst_LoadScreen_t3376497162_0_0_0 = { 1, GenInst_LoadScreen_t3376497162_0_0_0_Types };
-static const RuntimeType* GenInst_PlayerController_t2064355688_0_0_0_Types[] = { (&PlayerController_t2064355688_0_0_0) };
-extern const Il2CppGenericInst GenInst_PlayerController_t2064355688_0_0_0 = { 1, GenInst_PlayerController_t2064355688_0_0_0_Types };
 static const RuntimeType* GenInst_SphereCollider_t2077223608_0_0_0_Types[] = { (&SphereCollider_t2077223608_0_0_0) };
 extern const Il2CppGenericInst GenInst_SphereCollider_t2077223608_0_0_0 = { 1, GenInst_SphereCollider_t2077223608_0_0_0_Types };
 static const RuntimeType* GenInst_FastSSAO_t1400243781_0_0_0_Types[] = { (&FastSSAO_t1400243781_0_0_0) };
@@ -5177,6 +5177,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1677] =
 	&GenInst_Display_t1387065949_0_0_0,
 	&GenInst_Plane_t1000493321_0_0_0,
 	&GenInst_Vector2_t2156229523_0_0_0,
+	&GenInst_FrameTiming_t3383372899_0_0_0,
 	&GenInst_Material_t340375123_0_0_0,
 	&GenInst_Transform_t3600365921_0_0_0,
 	&GenInst_Renderer_t2627027031_0_0_0,
@@ -6014,7 +6015,6 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1677] =
 	&GenInst_TaskAwaiter_1_t3908119050_0_0_0_U3CImportFromNetworkU3Ec__async2_t3683492419_0_0_0,
 	&GenInst_SleekRenderPostProcess_t1198037834_0_0_0,
 	&GenInst_LoadScreen_t3376497162_0_0_0,
-	&GenInst_PlayerController_t2064355688_0_0_0,
 	&GenInst_SphereCollider_t2077223608_0_0_0,
 	&GenInst_FastSSAO_t1400243781_0_0_0,
 	&GenInst_Bokeh_t660694511_0_0_0,

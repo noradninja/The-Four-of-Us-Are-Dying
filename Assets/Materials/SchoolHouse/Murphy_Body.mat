@@ -79,7 +79,7 @@ Material:
     - _Metallic: 1
     - _Mode: 0
     - _OcclusionStrength: 0
-    - _PainValue: 0.3
+    - _PainValue: 0.1
     - _Parallax: 0.08
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

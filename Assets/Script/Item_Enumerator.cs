@@ -14,7 +14,8 @@ public class Item_Enumerator : MonoBehaviour {
 		flashlight,
 		battery,
 		key,
-		health
+		health,
+		stims
 
 	}
 
@@ -54,13 +55,14 @@ public class Item_Enumerator : MonoBehaviour {
     {
         Physics.IgnoreCollision(thisCollider, player.GetComponent<Collider>(), true); //so the player doesn't step 'up' when walking near
 	////DICTIONARY//////////////////////////////////////////////////////////////////
-	   	itemTexts = new Dictionary<string, string>();
+	   	itemTexts = new Dictionary<string, string>(); //string itemType, string dialogText
 
 	    itemTexts.Add("flashlight", "flashlight");
         itemTexts.Add("battery", "batteries");
         itemTexts.Add("health", "antiseptic");
-        itemTexts.Add("key", "key");
+     	 itemTexts.Add("stims", "stimulants");	
 	///////////////////////////////////////////////////////////////////////////////
+	batteryText.text = string.Format("{0:D2}", InventoryManager.batteryCount);
     }
 
     // Update is called once per frame
@@ -76,18 +78,26 @@ public class Item_Enumerator : MonoBehaviour {
 
 				case pickupItem.battery :
 					print("That's a battery");
-					player.GetComponentInParent<PlayerController>().batteryCount += 1;
-					batteryText.text = ("" + player.GetComponentInParent<PlayerController>().batteryCount);
+					InventoryManager.batteryCount += 2;
+					string currentCount = string.Format("{0:D2}", InventoryManager.batteryCount);
+					batteryText.text = currentCount;
 				break;
 
 				case pickupItem.key :
 					print("That's a key");
-					//do key shit here, increase inventory of generic keys
+					//do key shit here
+					InventoryManager.keyCount += 1;
 				break;
 
 				case pickupItem.health :
 					print("That's a medkit");
-					playerObject.BroadcastMessage("healMe"); //todo- crossfade this so it looks nice (gonna need to modify the fsk!*g shader, damnit), actually implement HP
+					InventoryManager.medCount += 1;
+					//playerObject.BroadcastMessage("healMe"); //todo- crossfade this so it looks nice (gonna need to modify the fsk!*g shader, damnit), actually implement HP
+				break;
+
+				case pickupItem.stims :
+					print("That's a stimulant");
+					InventoryManager.stimCount += 1;
 				break;
 			}
 			targetObject.SetActive(false);
@@ -105,14 +115,13 @@ public class Item_Enumerator : MonoBehaviour {
 
     void OnTriggerEnter (Collider col){
 		if(col == player){
-            print(player);
+			isActiveObject = true;
             iconImage.color = iconVisible;
             OSDText.color = colorOn;
             dialogBG.color = dialogOn;
 			itemTexts.TryGetValue(thisItem.ToString(), out tempText);
             OSDText.text = ("Press X to pick up " +  tempText + ".");
-			isActiveObject = true;
-			SetPosition();
+		
 		}
 	}
 	void OnTriggerExit (Collider col){

@@ -133,6 +133,10 @@ struct Type_t;
 struct TypeU5BU5D_t3940880105;
 // System.Void
 struct Void_t1185182177;
+// TMPro.Examples.VertexShakeA
+struct VertexShakeA_t4262048139;
+// TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0
+struct U3CAnimateVertexColorsU3Ec__Iterator0_t956521787;
 // TMPro.Examples.VertexShakeB
 struct VertexShakeB_t1533164784;
 // TMPro.Examples.VertexShakeB/<AnimateVertexColors>c__Iterator0
@@ -366,6 +370,7 @@ extern RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CAnimateVertexColorsU3Ec__AnonStorey1_t446847514_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CAnimateVertexColorsU3Ec__Iterator0_t168300594_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008_il2cpp_TypeInfo_var;
+extern RuntimeClass* U3CAnimateVertexColorsU3Ec__Iterator0_t956521787_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CWarpTextU3Ec__Iterator0_t4025661343_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CdelayU3Ec__Iterator0_t2846553818_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3Cfade2U3Ec__Iterator3_t3878893353_il2cpp_TypeInfo_var;
@@ -420,6 +425,7 @@ extern const RuntimeMethod* List_1_get_Item_m718437397_RuntimeMethod_var;
 extern const RuntimeMethod* U3CAnimateVertexColorsU3Ec__AnonStorey1_U3CU3Em__0_m3589832106_RuntimeMethod_var;
 extern const RuntimeMethod* U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m1190668687_RuntimeMethod_var;
 extern const RuntimeMethod* U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m1240569973_RuntimeMethod_var;
+extern const RuntimeMethod* U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m2973507054_RuntimeMethod_var;
 extern const RuntimeMethod* U3CWarpTextU3Ec__Iterator0_Reset_m3555627670_RuntimeMethod_var;
 extern const RuntimeMethod* U3CdelayU3Ec__Iterator0_Reset_m3495327985_RuntimeMethod_var;
 extern const RuntimeMethod* U3Cfade2U3Ec__Iterator3_Reset_m228208529_RuntimeMethod_var;
@@ -432,6 +438,7 @@ extern const RuntimeMethod* UnityEvent_3_Invoke_m124298495_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_3_Invoke_m3960534760_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_3__ctor_m1785842606_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_3__ctor_m3152954793_RuntimeMethod_var;
+extern const RuntimeMethod* VertexShakeA_ON_TEXT_CHANGED_m164288395_RuntimeMethod_var;
 extern const RuntimeMethod* VertexShakeB_ON_TEXT_CHANGED_m361037674_RuntimeMethod_var;
 extern const RuntimeMethod* VertexZoom_ON_TEXT_CHANGED_m3073044939_RuntimeMethod_var;
 extern const RuntimeType* TextMeshProUGUI_t529313277_0_0_0_var;
@@ -464,8 +471,10 @@ extern const uint32_t Title_Animator_wipe_m2552417092_MetadataUsageId;
 extern const uint32_t U3CAnimateVertexColorsU3Ec__AnonStorey1_U3CU3Em__0_m3589832106_MetadataUsageId;
 extern const uint32_t U3CAnimateVertexColorsU3Ec__Iterator0_MoveNext_m2379691545_MetadataUsageId;
 extern const uint32_t U3CAnimateVertexColorsU3Ec__Iterator0_MoveNext_m2639864844_MetadataUsageId;
+extern const uint32_t U3CAnimateVertexColorsU3Ec__Iterator0_MoveNext_m3269787297_MetadataUsageId;
 extern const uint32_t U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m1190668687_MetadataUsageId;
 extern const uint32_t U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m1240569973_MetadataUsageId;
+extern const uint32_t U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m2973507054_MetadataUsageId;
 extern const uint32_t U3CWarpTextU3Ec__Iterator0_MoveNext_m859178164_MetadataUsageId;
 extern const uint32_t U3CWarpTextU3Ec__Iterator0_Reset_m3555627670_MetadataUsageId;
 extern const uint32_t U3CdelayU3Ec__Iterator0_Reset_m3495327985_MetadataUsageId;
@@ -474,6 +483,11 @@ extern const uint32_t U3Cfade3U3Ec__Iterator4_Reset_m1333964255_MetadataUsageId;
 extern const uint32_t U3CfadeU3Ec__Iterator2_Reset_m2908421060_MetadataUsageId;
 extern const uint32_t U3CwipeU3Ec__Iterator1_MoveNext_m862272809_MetadataUsageId;
 extern const uint32_t U3CwipeU3Ec__Iterator1_Reset_m1274306364_MetadataUsageId;
+extern const uint32_t VertexShakeA_AnimateVertexColors_m1885834968_MetadataUsageId;
+extern const uint32_t VertexShakeA_Awake_m3382793937_MetadataUsageId;
+extern const uint32_t VertexShakeA_ON_TEXT_CHANGED_m164288395_MetadataUsageId;
+extern const uint32_t VertexShakeA_OnDisable_m3522574011_MetadataUsageId;
+extern const uint32_t VertexShakeA_OnEnable_m2529139755_MetadataUsageId;
 extern const uint32_t VertexShakeB_AnimateVertexColors_m3313523349_MetadataUsageId;
 extern const uint32_t VertexShakeB_Awake_m2034102834_MetadataUsageId;
 extern const uint32_t VertexShakeB_ON_TEXT_CHANGED_m361037674_MetadataUsageId;
@@ -1915,6 +1929,55 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VOID_T1185182177_H
+#ifndef VERTEXANIM_T2231884842_H
+#define VERTEXANIM_T2231884842_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.VertexJitter/VertexAnim
+struct  VertexAnim_t2231884842 
+{
+public:
+	// System.Single TMPro.Examples.VertexJitter/VertexAnim::angleRange
+	float ___angleRange_0;
+	// System.Single TMPro.Examples.VertexJitter/VertexAnim::angle
+	float ___angle_1;
+	// System.Single TMPro.Examples.VertexJitter/VertexAnim::speed
+	float ___speed_2;
+
+public:
+	inline static int32_t get_offset_of_angleRange_0() { return static_cast<int32_t>(offsetof(VertexAnim_t2231884842, ___angleRange_0)); }
+	inline float get_angleRange_0() const { return ___angleRange_0; }
+	inline float* get_address_of_angleRange_0() { return &___angleRange_0; }
+	inline void set_angleRange_0(float value)
+	{
+		___angleRange_0 = value;
+	}
+
+	inline static int32_t get_offset_of_angle_1() { return static_cast<int32_t>(offsetof(VertexAnim_t2231884842, ___angle_1)); }
+	inline float get_angle_1() const { return ___angle_1; }
+	inline float* get_address_of_angle_1() { return &___angle_1; }
+	inline void set_angle_1(float value)
+	{
+		___angle_1 = value;
+	}
+
+	inline static int32_t get_offset_of_speed_2() { return static_cast<int32_t>(offsetof(VertexAnim_t2231884842, ___speed_2)); }
+	inline float get_speed_2() const { return ___speed_2; }
+	inline float* get_address_of_speed_2() { return &___speed_2; }
+	inline void set_speed_2(float value)
+	{
+		___speed_2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VERTEXANIM_T2231884842_H
 #ifndef MATERIALREFERENCE_T1952344632_H
 #define MATERIALREFERENCE_T1952344632_H
 #ifdef __clang__
@@ -3938,6 +4001,119 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMETYPEHANDLE_T3027515415_H
+#ifndef U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T956521787_H
+#define U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T956521787_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0
+struct  U3CAnimateVertexColorsU3Ec__Iterator0_t956521787  : public RuntimeObject
+{
+public:
+	// TMPro.TMP_TextInfo TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<textInfo>__0
+	TMP_TextInfo_t3598145122 * ___U3CtextInfoU3E__0_0;
+	// UnityEngine.Vector3[][] TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<copyOfVertices>__0
+	Vector3U5BU5DU5BU5D_t546443028* ___U3CcopyOfVerticesU3E__0_1;
+	// System.Int32 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<characterCount>__1
+	int32_t ___U3CcharacterCountU3E__1_2;
+	// System.Int32 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<lineCount>__1
+	int32_t ___U3ClineCountU3E__1_3;
+	// UnityEngine.Matrix4x4 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<matrix>__2
+	Matrix4x4_t1817901843  ___U3CmatrixU3E__2_4;
+	// TMPro.Examples.VertexShakeA TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$this
+	VertexShakeA_t4262048139 * ___U24this_5;
+	// System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$current
+	RuntimeObject * ___U24current_6;
+	// System.Boolean TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$disposing
+	bool ___U24disposing_7;
+	// System.Int32 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$PC
+	int32_t ___U24PC_8;
+
+public:
+	inline static int32_t get_offset_of_U3CtextInfoU3E__0_0() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CtextInfoU3E__0_0)); }
+	inline TMP_TextInfo_t3598145122 * get_U3CtextInfoU3E__0_0() const { return ___U3CtextInfoU3E__0_0; }
+	inline TMP_TextInfo_t3598145122 ** get_address_of_U3CtextInfoU3E__0_0() { return &___U3CtextInfoU3E__0_0; }
+	inline void set_U3CtextInfoU3E__0_0(TMP_TextInfo_t3598145122 * value)
+	{
+		___U3CtextInfoU3E__0_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CtextInfoU3E__0_0), value);
+	}
+
+	inline static int32_t get_offset_of_U3CcopyOfVerticesU3E__0_1() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CcopyOfVerticesU3E__0_1)); }
+	inline Vector3U5BU5DU5BU5D_t546443028* get_U3CcopyOfVerticesU3E__0_1() const { return ___U3CcopyOfVerticesU3E__0_1; }
+	inline Vector3U5BU5DU5BU5D_t546443028** get_address_of_U3CcopyOfVerticesU3E__0_1() { return &___U3CcopyOfVerticesU3E__0_1; }
+	inline void set_U3CcopyOfVerticesU3E__0_1(Vector3U5BU5DU5BU5D_t546443028* value)
+	{
+		___U3CcopyOfVerticesU3E__0_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CcopyOfVerticesU3E__0_1), value);
+	}
+
+	inline static int32_t get_offset_of_U3CcharacterCountU3E__1_2() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CcharacterCountU3E__1_2)); }
+	inline int32_t get_U3CcharacterCountU3E__1_2() const { return ___U3CcharacterCountU3E__1_2; }
+	inline int32_t* get_address_of_U3CcharacterCountU3E__1_2() { return &___U3CcharacterCountU3E__1_2; }
+	inline void set_U3CcharacterCountU3E__1_2(int32_t value)
+	{
+		___U3CcharacterCountU3E__1_2 = value;
+	}
+
+	inline static int32_t get_offset_of_U3ClineCountU3E__1_3() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3ClineCountU3E__1_3)); }
+	inline int32_t get_U3ClineCountU3E__1_3() const { return ___U3ClineCountU3E__1_3; }
+	inline int32_t* get_address_of_U3ClineCountU3E__1_3() { return &___U3ClineCountU3E__1_3; }
+	inline void set_U3ClineCountU3E__1_3(int32_t value)
+	{
+		___U3ClineCountU3E__1_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CmatrixU3E__2_4() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CmatrixU3E__2_4)); }
+	inline Matrix4x4_t1817901843  get_U3CmatrixU3E__2_4() const { return ___U3CmatrixU3E__2_4; }
+	inline Matrix4x4_t1817901843 * get_address_of_U3CmatrixU3E__2_4() { return &___U3CmatrixU3E__2_4; }
+	inline void set_U3CmatrixU3E__2_4(Matrix4x4_t1817901843  value)
+	{
+		___U3CmatrixU3E__2_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_5() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24this_5)); }
+	inline VertexShakeA_t4262048139 * get_U24this_5() const { return ___U24this_5; }
+	inline VertexShakeA_t4262048139 ** get_address_of_U24this_5() { return &___U24this_5; }
+	inline void set_U24this_5(VertexShakeA_t4262048139 * value)
+	{
+		___U24this_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_6() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24current_6)); }
+	inline RuntimeObject * get_U24current_6() const { return ___U24current_6; }
+	inline RuntimeObject ** get_address_of_U24current_6() { return &___U24current_6; }
+	inline void set_U24current_6(RuntimeObject * value)
+	{
+		___U24current_6 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_6), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_7() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24disposing_7)); }
+	inline bool get_U24disposing_7() const { return ___U24disposing_7; }
+	inline bool* get_address_of_U24disposing_7() { return &___U24disposing_7; }
+	inline void set_U24disposing_7(bool value)
+	{
+		___U24disposing_7 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_8() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24PC_8)); }
+	inline int32_t get_U24PC_8() const { return ___U24PC_8; }
+	inline int32_t* get_address_of_U24PC_8() { return &___U24PC_8; }
+	inline void set_U24PC_8(int32_t value)
+	{
+		___U24PC_8 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T956521787_H
 #ifndef U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T168300594_H
 #define U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T168300594_H
 #ifdef __clang__
@@ -8484,6 +8660,86 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RECTTRANSFORM_T3704657025_H
+#ifndef VERTEXSHAKEA_T4262048139_H
+#define VERTEXSHAKEA_T4262048139_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.VertexShakeA
+struct  VertexShakeA_t4262048139  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Single TMPro.Examples.VertexShakeA::AngleMultiplier
+	float ___AngleMultiplier_4;
+	// System.Single TMPro.Examples.VertexShakeA::SpeedMultiplier
+	float ___SpeedMultiplier_5;
+	// System.Single TMPro.Examples.VertexShakeA::ScaleMultiplier
+	float ___ScaleMultiplier_6;
+	// System.Single TMPro.Examples.VertexShakeA::RotationMultiplier
+	float ___RotationMultiplier_7;
+	// TMPro.TMP_Text TMPro.Examples.VertexShakeA::m_TextComponent
+	TMP_Text_t2599618874 * ___m_TextComponent_8;
+	// System.Boolean TMPro.Examples.VertexShakeA::hasTextChanged
+	bool ___hasTextChanged_9;
+
+public:
+	inline static int32_t get_offset_of_AngleMultiplier_4() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___AngleMultiplier_4)); }
+	inline float get_AngleMultiplier_4() const { return ___AngleMultiplier_4; }
+	inline float* get_address_of_AngleMultiplier_4() { return &___AngleMultiplier_4; }
+	inline void set_AngleMultiplier_4(float value)
+	{
+		___AngleMultiplier_4 = value;
+	}
+
+	inline static int32_t get_offset_of_SpeedMultiplier_5() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___SpeedMultiplier_5)); }
+	inline float get_SpeedMultiplier_5() const { return ___SpeedMultiplier_5; }
+	inline float* get_address_of_SpeedMultiplier_5() { return &___SpeedMultiplier_5; }
+	inline void set_SpeedMultiplier_5(float value)
+	{
+		___SpeedMultiplier_5 = value;
+	}
+
+	inline static int32_t get_offset_of_ScaleMultiplier_6() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___ScaleMultiplier_6)); }
+	inline float get_ScaleMultiplier_6() const { return ___ScaleMultiplier_6; }
+	inline float* get_address_of_ScaleMultiplier_6() { return &___ScaleMultiplier_6; }
+	inline void set_ScaleMultiplier_6(float value)
+	{
+		___ScaleMultiplier_6 = value;
+	}
+
+	inline static int32_t get_offset_of_RotationMultiplier_7() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___RotationMultiplier_7)); }
+	inline float get_RotationMultiplier_7() const { return ___RotationMultiplier_7; }
+	inline float* get_address_of_RotationMultiplier_7() { return &___RotationMultiplier_7; }
+	inline void set_RotationMultiplier_7(float value)
+	{
+		___RotationMultiplier_7 = value;
+	}
+
+	inline static int32_t get_offset_of_m_TextComponent_8() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___m_TextComponent_8)); }
+	inline TMP_Text_t2599618874 * get_m_TextComponent_8() const { return ___m_TextComponent_8; }
+	inline TMP_Text_t2599618874 ** get_address_of_m_TextComponent_8() { return &___m_TextComponent_8; }
+	inline void set_m_TextComponent_8(TMP_Text_t2599618874 * value)
+	{
+		___m_TextComponent_8 = value;
+		Il2CppCodeGenWriteBarrier((&___m_TextComponent_8), value);
+	}
+
+	inline static int32_t get_offset_of_hasTextChanged_9() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___hasTextChanged_9)); }
+	inline bool get_hasTextChanged_9() const { return ___hasTextChanged_9; }
+	inline bool* get_address_of_hasTextChanged_9() { return &___hasTextChanged_9; }
+	inline void set_hasTextChanged_9(bool value)
+	{
+		___hasTextChanged_9 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VERTEXSHAKEA_T4262048139_H
 #ifndef VERTEXSHAKEB_T1533164784_H
 #define VERTEXSHAKEB_T1533164784_H
 #ifdef __clang__
@@ -12341,14 +12597,14 @@ inline void FastAction_1_Remove_m2257773717 (FastAction_1_t4292545838 * __this, 
 {
 	((  void (*) (FastAction_1_t4292545838 *, Action_1_t803475548 *, const RuntimeMethod*))FastAction_1_Remove_m866680477_gshared)(__this, p0, method);
 }
-// System.Collections.IEnumerator TMPro.Examples.VertexShakeB::AnimateVertexColors()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject* VertexShakeB_AnimateVertexColors_m3313523349 (VertexShakeB_t1533164784 * __this, const RuntimeMethod* method);
+// System.Collections.IEnumerator TMPro.Examples.VertexShakeA::AnimateVertexColors()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* VertexShakeA_AnimateVertexColors_m1885834968 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method);
 // UnityEngine.Coroutine UnityEngine.MonoBehaviour::StartCoroutine(System.Collections.IEnumerator)
 extern "C" IL2CPP_METHOD_ATTR Coroutine_t3829159415 * MonoBehaviour_StartCoroutine_m3411253000 (MonoBehaviour_t3962482529 * __this, RuntimeObject* p0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
 extern "C" IL2CPP_METHOD_ATTR bool Object_op_Implicit_m3574996620 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, const RuntimeMethod* method);
-// System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>c__Iterator0::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m2753064627 (U3CAnimateVertexColorsU3Ec__Iterator0_t168300594 * __this, const RuntimeMethod* method);
+// System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m3442072150 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method);
 // System.Void System.Object::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Object__ctor_m297566312 (RuntimeObject * __this, const RuntimeMethod* method);
 // TMPro.TMP_TextInfo TMPro.TMP_Text::get_textInfo()
@@ -12367,8 +12623,6 @@ extern "C" IL2CPP_METHOD_ATTR Quaternion_t2301928331  Quaternion_Euler_m30493094
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_op_Subtraction_m3073674971 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, Vector3_t3722313464  p1, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::get_one()
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_get_one_m1629952498 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
-// UnityEngine.Quaternion UnityEngine.Quaternion::get_identity()
-extern "C" IL2CPP_METHOD_ATTR Quaternion_t2301928331  Quaternion_get_identity_m3722672781 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Multiply(UnityEngine.Vector3,System.Single)
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_op_Multiply_m3376773913 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, float p1, const RuntimeMethod* method);
 // UnityEngine.Matrix4x4 UnityEngine.Matrix4x4::TRS(UnityEngine.Vector3,UnityEngine.Quaternion,UnityEngine.Vector3)
@@ -12379,6 +12633,12 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Matrix4x4_MultiplyPoint3x4_m4
 extern "C" IL2CPP_METHOD_ATTR void Mesh_set_vertices_m2084450642 (Mesh_t3648964284 * __this, Vector3U5BU5D_t1718750761* p0, const RuntimeMethod* method);
 // System.Void System.NotSupportedException::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m2730133172 (NotSupportedException_t1314879016 * __this, const RuntimeMethod* method);
+// System.Collections.IEnumerator TMPro.Examples.VertexShakeB::AnimateVertexColors()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* VertexShakeB_AnimateVertexColors_m3313523349 (VertexShakeB_t1533164784 * __this, const RuntimeMethod* method);
+// System.Void TMPro.Examples.VertexShakeB/<AnimateVertexColors>c__Iterator0::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m2753064627 (U3CAnimateVertexColorsU3Ec__Iterator0_t168300594 * __this, const RuntimeMethod* method);
+// UnityEngine.Quaternion UnityEngine.Quaternion::get_identity()
+extern "C" IL2CPP_METHOD_ATTR Quaternion_t2301928331  Quaternion_get_identity_m3722672781 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Collections.IEnumerator TMPro.Examples.VertexZoom::AnimateVertexColors()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* VertexZoom_AnimateVertexColors_m3033224630 (VertexZoom_t550798657 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Object::op_Equality(UnityEngine.Object,UnityEngine.Object)
@@ -12772,6 +13032,687 @@ extern "C" IL2CPP_METHOD_ATTR void Camera_set_depthTextureMode_m754977860 (Camer
 extern "C" IL2CPP_METHOD_ATTR void GL_TexCoord2_m3805673132 (RuntimeObject * __this /* static, unused */, float p0, float p1, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Material::get_passCount()
 extern "C" IL2CPP_METHOD_ATTR int32_t Material_get_passCount_m3995310840 (Material_t340375123 * __this, const RuntimeMethod* method);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TMPro.Examples.VertexShakeA::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA__ctor_m1957129449 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_AngleMultiplier_4((1.0f));
+		__this->set_SpeedMultiplier_5((1.0f));
+		__this->set_ScaleMultiplier_6((1.0f));
+		__this->set_RotationMultiplier_7((1.0f));
+		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::Awake()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_Awake_m3382793937 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_Awake_m3382793937_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		TMP_Text_t2599618874 * L_0 = Component_GetComponent_TisTMP_Text_t2599618874_m4275295679(__this, /*hidden argument*/Component_GetComponent_TisTMP_Text_t2599618874_m4275295679_RuntimeMethod_var);
+		__this->set_m_TextComponent_8(L_0);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::OnEnable()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_OnEnable_m2529139755 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_OnEnable_m2529139755_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var);
+		FastAction_1_t4292545838 * L_0 = ((TMPro_EventManager_t712497257_StaticFields*)il2cpp_codegen_static_fields_for(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var))->get_TEXT_CHANGED_EVENT_12();
+		intptr_t L_1 = (intptr_t)VertexShakeA_ON_TEXT_CHANGED_m164288395_RuntimeMethod_var;
+		Action_1_t803475548 * L_2 = (Action_1_t803475548 *)il2cpp_codegen_object_new(Action_1_t803475548_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1040786011(L_2, __this, (intptr_t)L_1, /*hidden argument*/Action_1__ctor_m1040786011_RuntimeMethod_var);
+		FastAction_1_Add_m2069965716(L_0, L_2, /*hidden argument*/FastAction_1_Add_m2069965716_RuntimeMethod_var);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::OnDisable()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_OnDisable_m3522574011 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_OnDisable_m3522574011_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var);
+		FastAction_1_t4292545838 * L_0 = ((TMPro_EventManager_t712497257_StaticFields*)il2cpp_codegen_static_fields_for(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var))->get_TEXT_CHANGED_EVENT_12();
+		intptr_t L_1 = (intptr_t)VertexShakeA_ON_TEXT_CHANGED_m164288395_RuntimeMethod_var;
+		Action_1_t803475548 * L_2 = (Action_1_t803475548 *)il2cpp_codegen_object_new(Action_1_t803475548_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1040786011(L_2, __this, (intptr_t)L_1, /*hidden argument*/Action_1__ctor_m1040786011_RuntimeMethod_var);
+		FastAction_1_Remove_m2257773717(L_0, L_2, /*hidden argument*/FastAction_1_Remove_m2257773717_RuntimeMethod_var);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::Start()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_Start_m1684282329 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject* L_0 = VertexShakeA_AnimateVertexColors_m1885834968(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::ON_TEXT_CHANGED(UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_ON_TEXT_CHANGED_m164288395 (VertexShakeA_t4262048139 * __this, Object_t631007953 * ___obj0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_ON_TEXT_CHANGED_m164288395_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		TMP_Text_t2599618874 * L_0 = __this->get_m_TextComponent_8();
+		TMP_Text_t2599618874 * L_1 = L_0;
+		___obj0 = L_1;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_2 = Object_op_Implicit_m3574996620(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		__this->set_hasTextChanged_9((bool)1);
+	}
+
+IL_001a:
+	{
+		return;
+	}
+}
+// System.Collections.IEnumerator TMPro.Examples.VertexShakeA::AnimateVertexColors()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* VertexShakeA_AnimateVertexColors_m1885834968 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_AnimateVertexColors_m1885834968_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * V_0 = NULL;
+	{
+		U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * L_0 = (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 *)il2cpp_codegen_object_new(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787_il2cpp_TypeInfo_var);
+		U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m3442072150(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * L_1 = V_0;
+		L_1->set_U24this_5(__this);
+		U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * L_2 = V_0;
+		return L_2;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m3442072150 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::MoveNext()
+extern "C" IL2CPP_METHOD_ATTR bool U3CAnimateVertexColorsU3Ec__Iterator0_MoveNext_m3269787297 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CAnimateVertexColorsU3Ec__Iterator0_MoveNext_m3269787297_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint32_t V_0 = 0;
+	int32_t V_1 = 0;
+	int32_t V_2 = 0;
+	int32_t V_3 = 0;
+	int32_t V_4 = 0;
+	int32_t V_5 = 0;
+	Vector3_t3722313464  V_6;
+	memset(&V_6, 0, sizeof(V_6));
+	Quaternion_t2301928331  V_7;
+	memset(&V_7, 0, sizeof(V_7));
+	int32_t V_8 = 0;
+	int32_t V_9 = 0;
+	int32_t V_10 = 0;
+	Vector3U5BU5D_t1718750761* V_11 = NULL;
+	float V_12 = 0.0f;
+	int32_t V_13 = 0;
+	{
+		int32_t L_0 = __this->get_U24PC_8();
+		V_0 = L_0;
+		__this->set_U24PC_8((-1));
+		uint32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_0025;
+			}
+			case 1:
+			{
+				goto IL_0136;
+			}
+			case 2:
+			{
+				goto IL_058b;
+			}
+		}
+	}
+	{
+		goto IL_0597;
+	}
+
+IL_0025:
+	{
+		VertexShakeA_t4262048139 * L_2 = __this->get_U24this_5();
+		TMP_Text_t2599618874 * L_3 = L_2->get_m_TextComponent_8();
+		VirtActionInvoker0::Invoke(99 /* System.Void TMPro.TMP_Text::ForceMeshUpdate() */, L_3);
+		VertexShakeA_t4262048139 * L_4 = __this->get_U24this_5();
+		TMP_Text_t2599618874 * L_5 = L_4->get_m_TextComponent_8();
+		TMP_TextInfo_t3598145122 * L_6 = TMP_Text_get_textInfo_m533010440(L_5, /*hidden argument*/NULL);
+		__this->set_U3CtextInfoU3E__0_0(L_6);
+		Vector3U5BU5DU5BU5D_t546443028* L_7 = (Vector3U5BU5DU5BU5D_t546443028*)SZArrayNew(Vector3U5BU5DU5BU5D_t546443028_il2cpp_TypeInfo_var, (uint32_t)0);
+		__this->set_U3CcopyOfVerticesU3E__0_1(L_7);
+		VertexShakeA_t4262048139 * L_8 = __this->get_U24this_5();
+		L_8->set_hasTextChanged_9((bool)1);
+	}
+
+IL_0063:
+	{
+		VertexShakeA_t4262048139 * L_9 = __this->get_U24this_5();
+		bool L_10 = L_9->get_hasTextChanged_9();
+		if (!L_10)
+		{
+			goto IL_00f6;
+		}
+	}
+	{
+		Vector3U5BU5DU5BU5D_t546443028* L_11 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		TMP_TextInfo_t3598145122 * L_12 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_13 = L_12->get_meshInfo_16();
+		if ((((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_11)->max_length))))) >= ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_13)->max_length)))))))
+		{
+			goto IL_00a5;
+		}
+	}
+	{
+		TMP_TextInfo_t3598145122 * L_14 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_15 = L_14->get_meshInfo_16();
+		Vector3U5BU5DU5BU5D_t546443028* L_16 = (Vector3U5BU5DU5BU5D_t546443028*)SZArrayNew(Vector3U5BU5DU5BU5D_t546443028_il2cpp_TypeInfo_var, (uint32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_15)->max_length)))));
+		__this->set_U3CcopyOfVerticesU3E__0_1(L_16);
+	}
+
+IL_00a5:
+	{
+		V_1 = 0;
+		goto IL_00d7;
+	}
+
+IL_00ac:
+	{
+		TMP_TextInfo_t3598145122 * L_17 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_18 = L_17->get_meshInfo_16();
+		int32_t L_19 = V_1;
+		Vector3U5BU5D_t1718750761* L_20 = ((L_18)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_19)))->get_vertices_5();
+		V_2 = (((int32_t)((int32_t)(((RuntimeArray *)L_20)->max_length))));
+		Vector3U5BU5DU5BU5D_t546443028* L_21 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_22 = V_1;
+		int32_t L_23 = V_2;
+		Vector3U5BU5D_t1718750761* L_24 = (Vector3U5BU5D_t1718750761*)SZArrayNew(Vector3U5BU5D_t1718750761_il2cpp_TypeInfo_var, (uint32_t)L_23);
+		ArrayElementTypeCheck (L_21, L_24);
+		(L_21)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_22), (Vector3U5BU5D_t1718750761*)L_24);
+		int32_t L_25 = V_1;
+		V_1 = ((int32_t)il2cpp_codegen_add((int32_t)L_25, (int32_t)1));
+	}
+
+IL_00d7:
+	{
+		int32_t L_26 = V_1;
+		TMP_TextInfo_t3598145122 * L_27 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_28 = L_27->get_meshInfo_16();
+		if ((((int32_t)L_26) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_28)->max_length)))))))
+		{
+			goto IL_00ac;
+		}
+	}
+	{
+		VertexShakeA_t4262048139 * L_29 = __this->get_U24this_5();
+		L_29->set_hasTextChanged_9((bool)0);
+	}
+
+IL_00f6:
+	{
+		TMP_TextInfo_t3598145122 * L_30 = __this->get_U3CtextInfoU3E__0_0();
+		int32_t L_31 = L_30->get_characterCount_3();
+		__this->set_U3CcharacterCountU3E__1_2(L_31);
+		int32_t L_32 = __this->get_U3CcharacterCountU3E__1_2();
+		if (L_32)
+		{
+			goto IL_013b;
+		}
+	}
+	{
+		WaitForSeconds_t1699091251 * L_33 = (WaitForSeconds_t1699091251 *)il2cpp_codegen_object_new(WaitForSeconds_t1699091251_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m2199082655(L_33, (0.25f), /*hidden argument*/NULL);
+		__this->set_U24current_6(L_33);
+		bool L_34 = __this->get_U24disposing_7();
+		if (L_34)
+		{
+			goto IL_0131;
+		}
+	}
+	{
+		__this->set_U24PC_8(1);
+	}
+
+IL_0131:
+	{
+		goto IL_0599;
+	}
+
+IL_0136:
+	{
+		goto IL_0063;
+	}
+
+IL_013b:
+	{
+		TMP_TextInfo_t3598145122 * L_35 = __this->get_U3CtextInfoU3E__0_0();
+		int32_t L_36 = L_35->get_lineCount_8();
+		__this->set_U3ClineCountU3E__1_3(L_36);
+		V_3 = 0;
+		goto IL_04eb;
+	}
+
+IL_0153:
+	{
+		TMP_TextInfo_t3598145122 * L_37 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_LineInfoU5BU5D_t4120149533* L_38 = L_37->get_lineInfo_14();
+		int32_t L_39 = V_3;
+		int32_t L_40 = ((L_38)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_39)))->get_firstCharacterIndex_5();
+		V_4 = L_40;
+		TMP_TextInfo_t3598145122 * L_41 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_LineInfoU5BU5D_t4120149533* L_42 = L_41->get_lineInfo_14();
+		int32_t L_43 = V_3;
+		int32_t L_44 = ((L_42)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_43)))->get_lastCharacterIndex_7();
+		V_5 = L_44;
+		TMP_TextInfo_t3598145122 * L_45 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_CharacterInfoU5BU5D_t1930184704* L_46 = L_45->get_characterInfo_11();
+		int32_t L_47 = V_4;
+		Vector3_t3722313464  L_48 = ((L_46)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_47)))->get_bottomLeft_19();
+		TMP_TextInfo_t3598145122 * L_49 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_CharacterInfoU5BU5D_t1930184704* L_50 = L_49->get_characterInfo_11();
+		int32_t L_51 = V_5;
+		Vector3_t3722313464  L_52 = ((L_50)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_51)))->get_topRight_20();
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
+		Vector3_t3722313464  L_53 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, L_48, L_52, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_54 = Vector3_op_Division_m510815599(NULL /*static, unused*/, L_53, (2.0f), /*hidden argument*/NULL);
+		V_6 = L_54;
+		float L_55 = Random_Range_m2202990745(NULL /*static, unused*/, (-0.25f), (0.25f), /*hidden argument*/NULL);
+		VertexShakeA_t4262048139 * L_56 = __this->get_U24this_5();
+		float L_57 = L_56->get_RotationMultiplier_7();
+		IL2CPP_RUNTIME_CLASS_INIT(Quaternion_t2301928331_il2cpp_TypeInfo_var);
+		Quaternion_t2301928331  L_58 = Quaternion_Euler_m3049309462(NULL /*static, unused*/, (0.0f), (0.0f), ((float)il2cpp_codegen_multiply((float)L_55, (float)L_57)), /*hidden argument*/NULL);
+		V_7 = L_58;
+		int32_t L_59 = V_4;
+		V_8 = L_59;
+		goto IL_04de;
+	}
+
+IL_01f7:
+	{
+		TMP_TextInfo_t3598145122 * L_60 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_CharacterInfoU5BU5D_t1930184704* L_61 = L_60->get_characterInfo_11();
+		int32_t L_62 = V_8;
+		bool L_63 = ((L_61)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_62)))->get_isVisible_34();
+		if (L_63)
+		{
+			goto IL_0218;
+		}
+	}
+	{
+		goto IL_04d8;
+	}
+
+IL_0218:
+	{
+		TMP_TextInfo_t3598145122 * L_64 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_CharacterInfoU5BU5D_t1930184704* L_65 = L_64->get_characterInfo_11();
+		int32_t L_66 = V_8;
+		int32_t L_67 = ((L_65)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_66)))->get_materialReferenceIndex_8();
+		V_9 = L_67;
+		TMP_TextInfo_t3598145122 * L_68 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_CharacterInfoU5BU5D_t1930184704* L_69 = L_68->get_characterInfo_11();
+		int32_t L_70 = V_8;
+		int32_t L_71 = ((L_69)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_70)))->get_vertexIndex_13();
+		V_10 = L_71;
+		TMP_TextInfo_t3598145122 * L_72 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_73 = L_72->get_meshInfo_16();
+		int32_t L_74 = V_9;
+		Vector3U5BU5D_t1718750761* L_75 = ((L_73)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_74)))->get_vertices_5();
+		V_11 = L_75;
+		Vector3U5BU5DU5BU5D_t546443028* L_76 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_77 = V_9;
+		int32_t L_78 = L_77;
+		Vector3U5BU5D_t1718750761* L_79 = (Vector3U5BU5D_t1718750761*)(L_76)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_78));
+		int32_t L_80 = V_10;
+		Vector3U5BU5D_t1718750761* L_81 = V_11;
+		int32_t L_82 = V_10;
+		Vector3_t3722313464  L_83 = V_6;
+		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
+		Vector3_t3722313464  L_84 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, (*(Vector3_t3722313464 *)((L_81)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_82)))), L_83, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_79)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_80))) = L_84;
+		Vector3U5BU5DU5BU5D_t546443028* L_85 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_86 = V_9;
+		int32_t L_87 = L_86;
+		Vector3U5BU5D_t1718750761* L_88 = (Vector3U5BU5D_t1718750761*)(L_85)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_87));
+		int32_t L_89 = V_10;
+		Vector3U5BU5D_t1718750761* L_90 = V_11;
+		int32_t L_91 = V_10;
+		Vector3_t3722313464  L_92 = V_6;
+		Vector3_t3722313464  L_93 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, (*(Vector3_t3722313464 *)((L_90)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_91, (int32_t)1)))))), L_92, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_88)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_89, (int32_t)1))))) = L_93;
+		Vector3U5BU5DU5BU5D_t546443028* L_94 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_95 = V_9;
+		int32_t L_96 = L_95;
+		Vector3U5BU5D_t1718750761* L_97 = (Vector3U5BU5D_t1718750761*)(L_94)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_96));
+		int32_t L_98 = V_10;
+		Vector3U5BU5D_t1718750761* L_99 = V_11;
+		int32_t L_100 = V_10;
+		Vector3_t3722313464  L_101 = V_6;
+		Vector3_t3722313464  L_102 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, (*(Vector3_t3722313464 *)((L_99)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_100, (int32_t)2)))))), L_101, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_97)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_98, (int32_t)2))))) = L_102;
+		Vector3U5BU5DU5BU5D_t546443028* L_103 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_104 = V_9;
+		int32_t L_105 = L_104;
+		Vector3U5BU5D_t1718750761* L_106 = (Vector3U5BU5D_t1718750761*)(L_103)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_105));
+		int32_t L_107 = V_10;
+		Vector3U5BU5D_t1718750761* L_108 = V_11;
+		int32_t L_109 = V_10;
+		Vector3_t3722313464  L_110 = V_6;
+		Vector3_t3722313464  L_111 = Vector3_op_Subtraction_m3073674971(NULL /*static, unused*/, (*(Vector3_t3722313464 *)((L_108)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_109, (int32_t)3)))))), L_110, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_106)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_107, (int32_t)3))))) = L_111;
+		VertexShakeA_t4262048139 * L_112 = __this->get_U24this_5();
+		float L_113 = L_112->get_ScaleMultiplier_6();
+		VertexShakeA_t4262048139 * L_114 = __this->get_U24this_5();
+		float L_115 = L_114->get_ScaleMultiplier_6();
+		float L_116 = Random_Range_m2202990745(NULL /*static, unused*/, ((float)il2cpp_codegen_subtract((float)(0.995f), (float)((float)il2cpp_codegen_multiply((float)(0.001f), (float)L_113)))), ((float)il2cpp_codegen_add((float)(1.005f), (float)((float)il2cpp_codegen_multiply((float)(0.001f), (float)L_115)))), /*hidden argument*/NULL);
+		V_12 = L_116;
+		Vector3_t3722313464  L_117 = Vector3_get_one_m1629952498(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Quaternion_t2301928331  L_118 = V_7;
+		Vector3_t3722313464  L_119 = Vector3_get_one_m1629952498(NULL /*static, unused*/, /*hidden argument*/NULL);
+		float L_120 = V_12;
+		Vector3_t3722313464  L_121 = Vector3_op_Multiply_m3376773913(NULL /*static, unused*/, L_119, L_120, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Matrix4x4_t1817901843_il2cpp_TypeInfo_var);
+		Matrix4x4_t1817901843  L_122 = Matrix4x4_TRS_m3801934620(NULL /*static, unused*/, L_117, L_118, L_121, /*hidden argument*/NULL);
+		__this->set_U3CmatrixU3E__2_4(L_122);
+		Vector3U5BU5DU5BU5D_t546443028* L_123 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_124 = V_9;
+		int32_t L_125 = L_124;
+		Vector3U5BU5D_t1718750761* L_126 = (Vector3U5BU5D_t1718750761*)(L_123)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_125));
+		int32_t L_127 = V_10;
+		Matrix4x4_t1817901843 * L_128 = __this->get_address_of_U3CmatrixU3E__2_4();
+		Vector3U5BU5DU5BU5D_t546443028* L_129 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_130 = V_9;
+		int32_t L_131 = L_130;
+		Vector3U5BU5D_t1718750761* L_132 = (Vector3U5BU5D_t1718750761*)(L_129)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_131));
+		int32_t L_133 = V_10;
+		Vector3_t3722313464  L_134 = Matrix4x4_MultiplyPoint3x4_m4145063176((Matrix4x4_t1817901843 *)L_128, (*(Vector3_t3722313464 *)((L_132)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_133)))), /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_126)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_127))) = L_134;
+		Vector3U5BU5DU5BU5D_t546443028* L_135 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_136 = V_9;
+		int32_t L_137 = L_136;
+		Vector3U5BU5D_t1718750761* L_138 = (Vector3U5BU5D_t1718750761*)(L_135)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_137));
+		int32_t L_139 = V_10;
+		Matrix4x4_t1817901843 * L_140 = __this->get_address_of_U3CmatrixU3E__2_4();
+		Vector3U5BU5DU5BU5D_t546443028* L_141 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_142 = V_9;
+		int32_t L_143 = L_142;
+		Vector3U5BU5D_t1718750761* L_144 = (Vector3U5BU5D_t1718750761*)(L_141)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_143));
+		int32_t L_145 = V_10;
+		Vector3_t3722313464  L_146 = Matrix4x4_MultiplyPoint3x4_m4145063176((Matrix4x4_t1817901843 *)L_140, (*(Vector3_t3722313464 *)((L_144)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_145, (int32_t)1)))))), /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_138)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_139, (int32_t)1))))) = L_146;
+		Vector3U5BU5DU5BU5D_t546443028* L_147 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_148 = V_9;
+		int32_t L_149 = L_148;
+		Vector3U5BU5D_t1718750761* L_150 = (Vector3U5BU5D_t1718750761*)(L_147)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_149));
+		int32_t L_151 = V_10;
+		Matrix4x4_t1817901843 * L_152 = __this->get_address_of_U3CmatrixU3E__2_4();
+		Vector3U5BU5DU5BU5D_t546443028* L_153 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_154 = V_9;
+		int32_t L_155 = L_154;
+		Vector3U5BU5D_t1718750761* L_156 = (Vector3U5BU5D_t1718750761*)(L_153)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_155));
+		int32_t L_157 = V_10;
+		Vector3_t3722313464  L_158 = Matrix4x4_MultiplyPoint3x4_m4145063176((Matrix4x4_t1817901843 *)L_152, (*(Vector3_t3722313464 *)((L_156)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_157, (int32_t)2)))))), /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_150)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_151, (int32_t)2))))) = L_158;
+		Vector3U5BU5DU5BU5D_t546443028* L_159 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_160 = V_9;
+		int32_t L_161 = L_160;
+		Vector3U5BU5D_t1718750761* L_162 = (Vector3U5BU5D_t1718750761*)(L_159)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_161));
+		int32_t L_163 = V_10;
+		Matrix4x4_t1817901843 * L_164 = __this->get_address_of_U3CmatrixU3E__2_4();
+		Vector3U5BU5DU5BU5D_t546443028* L_165 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_166 = V_9;
+		int32_t L_167 = L_166;
+		Vector3U5BU5D_t1718750761* L_168 = (Vector3U5BU5D_t1718750761*)(L_165)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_167));
+		int32_t L_169 = V_10;
+		Vector3_t3722313464  L_170 = Matrix4x4_MultiplyPoint3x4_m4145063176((Matrix4x4_t1817901843 *)L_164, (*(Vector3_t3722313464 *)((L_168)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_169, (int32_t)3)))))), /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)((L_162)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_163, (int32_t)3))))) = L_170;
+		Vector3U5BU5DU5BU5D_t546443028* L_171 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_172 = V_9;
+		int32_t L_173 = L_172;
+		Vector3U5BU5D_t1718750761* L_174 = (Vector3U5BU5D_t1718750761*)(L_171)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_173));
+		int32_t L_175 = V_10;
+		Vector3_t3722313464 * L_176 = ((L_174)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_175)));
+		Vector3_t3722313464  L_177 = V_6;
+		Vector3_t3722313464  L_178 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, (*(Vector3_t3722313464 *)L_176), L_177, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)L_176 = L_178;
+		Vector3U5BU5DU5BU5D_t546443028* L_179 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_180 = V_9;
+		int32_t L_181 = L_180;
+		Vector3U5BU5D_t1718750761* L_182 = (Vector3U5BU5D_t1718750761*)(L_179)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_181));
+		int32_t L_183 = V_10;
+		Vector3_t3722313464 * L_184 = ((L_182)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_183, (int32_t)1)))));
+		Vector3_t3722313464  L_185 = V_6;
+		Vector3_t3722313464  L_186 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, (*(Vector3_t3722313464 *)L_184), L_185, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)L_184 = L_186;
+		Vector3U5BU5DU5BU5D_t546443028* L_187 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_188 = V_9;
+		int32_t L_189 = L_188;
+		Vector3U5BU5D_t1718750761* L_190 = (Vector3U5BU5D_t1718750761*)(L_187)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_189));
+		int32_t L_191 = V_10;
+		Vector3_t3722313464 * L_192 = ((L_190)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_191, (int32_t)2)))));
+		Vector3_t3722313464  L_193 = V_6;
+		Vector3_t3722313464  L_194 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, (*(Vector3_t3722313464 *)L_192), L_193, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)L_192 = L_194;
+		Vector3U5BU5DU5BU5D_t546443028* L_195 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_196 = V_9;
+		int32_t L_197 = L_196;
+		Vector3U5BU5D_t1718750761* L_198 = (Vector3U5BU5D_t1718750761*)(L_195)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_197));
+		int32_t L_199 = V_10;
+		Vector3_t3722313464 * L_200 = ((L_198)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(((int32_t)il2cpp_codegen_add((int32_t)L_199, (int32_t)3)))));
+		Vector3_t3722313464  L_201 = V_6;
+		Vector3_t3722313464  L_202 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, (*(Vector3_t3722313464 *)L_200), L_201, /*hidden argument*/NULL);
+		*(Vector3_t3722313464 *)L_200 = L_202;
+	}
+
+IL_04d8:
+	{
+		int32_t L_203 = V_8;
+		V_8 = ((int32_t)il2cpp_codegen_add((int32_t)L_203, (int32_t)1));
+	}
+
+IL_04de:
+	{
+		int32_t L_204 = V_8;
+		int32_t L_205 = V_5;
+		if ((((int32_t)L_204) <= ((int32_t)L_205)))
+		{
+			goto IL_01f7;
+		}
+	}
+	{
+		int32_t L_206 = V_3;
+		V_3 = ((int32_t)il2cpp_codegen_add((int32_t)L_206, (int32_t)1));
+	}
+
+IL_04eb:
+	{
+		int32_t L_207 = V_3;
+		int32_t L_208 = __this->get_U3ClineCountU3E__1_3();
+		if ((((int32_t)L_207) < ((int32_t)L_208)))
+		{
+			goto IL_0153;
+		}
+	}
+	{
+		V_13 = 0;
+		goto IL_0553;
+	}
+
+IL_04ff:
+	{
+		TMP_TextInfo_t3598145122 * L_209 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_210 = L_209->get_meshInfo_16();
+		int32_t L_211 = V_13;
+		Mesh_t3648964284 * L_212 = ((L_210)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_211)))->get_mesh_3();
+		Vector3U5BU5DU5BU5D_t546443028* L_213 = __this->get_U3CcopyOfVerticesU3E__0_1();
+		int32_t L_214 = V_13;
+		int32_t L_215 = L_214;
+		Vector3U5BU5D_t1718750761* L_216 = (Vector3U5BU5D_t1718750761*)(L_213)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_215));
+		Mesh_set_vertices_m2084450642(L_212, L_216, /*hidden argument*/NULL);
+		VertexShakeA_t4262048139 * L_217 = __this->get_U24this_5();
+		TMP_Text_t2599618874 * L_218 = L_217->get_m_TextComponent_8();
+		TMP_TextInfo_t3598145122 * L_219 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_220 = L_219->get_meshInfo_16();
+		int32_t L_221 = V_13;
+		Mesh_t3648964284 * L_222 = ((L_220)->GetAddressAtUnchecked(static_cast<il2cpp_array_size_t>(L_221)))->get_mesh_3();
+		int32_t L_223 = V_13;
+		VirtActionInvoker2< Mesh_t3648964284 *, int32_t >::Invoke(101 /* System.Void TMPro.TMP_Text::UpdateGeometry(UnityEngine.Mesh,System.Int32) */, L_218, L_222, L_223);
+		int32_t L_224 = V_13;
+		V_13 = ((int32_t)il2cpp_codegen_add((int32_t)L_224, (int32_t)1));
+	}
+
+IL_0553:
+	{
+		int32_t L_225 = V_13;
+		TMP_TextInfo_t3598145122 * L_226 = __this->get_U3CtextInfoU3E__0_0();
+		TMP_MeshInfoU5BU5D_t3365986247* L_227 = L_226->get_meshInfo_16();
+		if ((((int32_t)L_225) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_227)->max_length)))))))
+		{
+			goto IL_04ff;
+		}
+	}
+	{
+		WaitForSeconds_t1699091251 * L_228 = (WaitForSeconds_t1699091251 *)il2cpp_codegen_object_new(WaitForSeconds_t1699091251_il2cpp_TypeInfo_var);
+		WaitForSeconds__ctor_m2199082655(L_228, (0.1f), /*hidden argument*/NULL);
+		__this->set_U24current_6(L_228);
+		bool L_229 = __this->get_U24disposing_7();
+		if (L_229)
+		{
+			goto IL_0586;
+		}
+	}
+	{
+		__this->set_U24PC_8(2);
+	}
+
+IL_0586:
+	{
+		goto IL_0599;
+	}
+
+IL_058b:
+	{
+		goto IL_0063;
+	}
+	// Dead block : IL_0590: ldarg.0
+
+IL_0597:
+	{
+		return (bool)0;
+	}
+
+IL_0599:
+	{
+		return (bool)1;
+	}
+}
+// System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::System.Collections.Generic.IEnumerator<object>.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3CAnimateVertexColorsU3Ec__Iterator0_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m2206226446 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_6();
+		return L_0;
+	}
+}
+// System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::System.Collections.IEnumerator.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3CAnimateVertexColorsU3Ec__Iterator0_System_Collections_IEnumerator_get_Current_m2842985298 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_6();
+		return L_0;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::Dispose()
+extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0_Dispose_m4122480575 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_U24disposing_7((bool)1);
+		__this->set_U24PC_8((-1));
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::Reset()
+extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m2973507054 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m2973507054_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotSupportedException_t1314879016 * L_0 = (NotSupportedException_t1314879016 *)il2cpp_codegen_object_new(NotSupportedException_t1314879016_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m2730133172(L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m2973507054_RuntimeMethod_var);
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

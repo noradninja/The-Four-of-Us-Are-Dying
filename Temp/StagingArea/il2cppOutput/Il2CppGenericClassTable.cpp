@@ -2926,7 +2926,7 @@ extern Il2CppGenericClass IReadOnlyList_1_t3884772969_GenericClass;
 extern Il2CppGenericClass IReadOnlyCollection_1_t3323466000_GenericClass;
 extern Il2CppGenericClass Enumerator_t2876860671_GenericClass;
 extern Il2CppGenericClass EventHandler_1_t2070362453_GenericClass;
-extern Il2CppGenericClass ICollectionDebugView_1_t962134765_GenericClass;
+extern Il2CppGenericClass ICollectionDebugView_1_t962134766_GenericClass;
 extern Il2CppGenericClass QueueDebugView_1_t3188810671_GenericClass;
 extern Il2CppGenericClass Stack_1_t3923495619_GenericClass;
 extern Il2CppGenericClass Enumerator_t1142515742_GenericClass;
@@ -2972,7 +2972,7 @@ extern Il2CppGenericClass IEnumerable_1_t3025949646_GenericClass;
 extern Il2CppGenericClass IReadOnlyList_1_t315552367_GenericClass;
 extern Il2CppGenericClass IReadOnlyCollection_1_t4049212694_GenericClass;
 extern Il2CppGenericClass Enumerator_t3350232909_GenericClass;
-extern Il2CppGenericClass ICollectionDebugView_1_t962134766_GenericClass;
+extern Il2CppGenericClass ICollectionDebugView_1_t962134765_GenericClass;
 extern Il2CppGenericClass IEnumerator_1_t4154883932_GenericClass;
 extern Il2CppGenericClass EmptyInternalEnumerator_1_t1069315979_GenericClass;
 extern Il2CppGenericClass InternalEnumerator_1_t334410285_GenericClass;
@@ -3190,6 +3190,14 @@ extern Il2CppGenericClass ICollection_1_t689414461_GenericClass;
 extern Il2CppGenericClass IEnumerable_1_t1136082412_GenericClass;
 extern Il2CppGenericClass IReadOnlyList_1_t2720652429_GenericClass;
 extern Il2CppGenericClass IReadOnlyCollection_1_t2159345460_GenericClass;
+extern Il2CppGenericClass IEnumerator_1_t3815943367_GenericClass;
+extern Il2CppGenericClass EmptyInternalEnumerator_1_t730375414_GenericClass;
+extern Il2CppGenericClass InternalEnumerator_1_t4290437016_GenericClass;
+extern Il2CppGenericClass IList_1_t903725386_GenericClass;
+extern Il2CppGenericClass ICollection_1_t1916557837_GenericClass;
+extern Il2CppGenericClass IEnumerable_1_t2363225788_GenericClass;
+extern Il2CppGenericClass IReadOnlyList_1_t3947795805_GenericClass;
+extern Il2CppGenericClass IReadOnlyCollection_1_t3386488836_GenericClass;
 extern Il2CppGenericClass IEnumerator_1_t772945591_GenericClass;
 extern Il2CppGenericClass EmptyInternalEnumerator_1_t1982344934_GenericClass;
 extern Il2CppGenericClass InternalEnumerator_1_t1247439240_GenericClass;
@@ -9929,7 +9937,7 @@ extern Il2CppGenericClass IReadOnlyDictionary_2_t339779110_GenericClass;
 
 
 
-extern Il2CppGenericClass* const s_Il2CppGenericTypes[9903] = 
+extern Il2CppGenericClass* const s_Il2CppGenericTypes[9911] = 
 {
 	&IEnumerator_1_t3512676632_GenericClass,
 	&EmptyInternalEnumerator_1_t427108679_GenericClass,
@@ -12836,7 +12844,7 @@ extern Il2CppGenericClass* const s_Il2CppGenericTypes[9903] =
 	&IReadOnlyCollection_1_t3323466000_GenericClass,
 	&Enumerator_t2876860671_GenericClass,
 	&EventHandler_1_t2070362453_GenericClass,
-	&ICollectionDebugView_1_t962134765_GenericClass,
+	&ICollectionDebugView_1_t962134766_GenericClass,
 	&QueueDebugView_1_t3188810671_GenericClass,
 	&Stack_1_t3923495619_GenericClass,
 	&Enumerator_t1142515742_GenericClass,
@@ -12882,7 +12890,7 @@ extern Il2CppGenericClass* const s_Il2CppGenericTypes[9903] =
 	&IReadOnlyList_1_t315552367_GenericClass,
 	&IReadOnlyCollection_1_t4049212694_GenericClass,
 	&Enumerator_t3350232909_GenericClass,
-	&ICollectionDebugView_1_t962134766_GenericClass,
+	&ICollectionDebugView_1_t962134765_GenericClass,
 	&IEnumerator_1_t4154883932_GenericClass,
 	&EmptyInternalEnumerator_1_t1069315979_GenericClass,
 	&InternalEnumerator_1_t334410285_GenericClass,
@@ -13100,6 +13108,14 @@ extern Il2CppGenericClass* const s_Il2CppGenericTypes[9903] =
 	&IEnumerable_1_t1136082412_GenericClass,
 	&IReadOnlyList_1_t2720652429_GenericClass,
 	&IReadOnlyCollection_1_t2159345460_GenericClass,
+	&IEnumerator_1_t3815943367_GenericClass,
+	&EmptyInternalEnumerator_1_t730375414_GenericClass,
+	&InternalEnumerator_1_t4290437016_GenericClass,
+	&IList_1_t903725386_GenericClass,
+	&ICollection_1_t1916557837_GenericClass,
+	&IEnumerable_1_t2363225788_GenericClass,
+	&IReadOnlyList_1_t3947795805_GenericClass,
+	&IReadOnlyCollection_1_t3386488836_GenericClass,
 	&IEnumerator_1_t772945591_GenericClass,
 	&EmptyInternalEnumerator_1_t1982344934_GenericClass,
 	&InternalEnumerator_1_t1247439240_GenericClass,

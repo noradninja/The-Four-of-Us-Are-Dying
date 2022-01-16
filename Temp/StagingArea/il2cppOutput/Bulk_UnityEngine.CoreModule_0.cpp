@@ -591,6 +591,8 @@ struct SupportedRenderingFeatures_t353898663;
 struct VisibleLightU5BU5D_t3751479945;
 // UnityEngine.Experimental.Rendering.VisibleReflectionProbe[]
 struct VisibleReflectionProbeU5BU5D_t1913340585;
+// UnityEngine.FrameTiming[]
+struct FrameTimingU5BU5D_t1633197746;
 // UnityEngine.GUIElement
 struct GUIElement_t3567083079;
 // UnityEngine.GUILayer
@@ -1426,6 +1428,7 @@ struct DisallowMultipleComponentU5BU5D_t3936143868;
 struct DisplayU5BU5D_t103034768;
 struct ExecuteInEditModeU5BU5D_t3239458680;
 struct PlayerLoopSystemU5BU5D_t1150299252;
+struct FrameTimingU5BU5D_t1633197746;
 struct KeyframeU5BU5D_t1068524471;
 struct LODU5BU5D_t3858365489;
 struct Matrix4x4U5BU5D_t2302988098;
@@ -3824,6 +3827,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RENDERPIPELINEMANAGER_T4036911426_H
+#ifndef FRAMETIMINGMANAGER_T827075554_H
+#define FRAMETIMINGMANAGER_T827075554_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.FrameTimingManager
+struct  FrameTimingManager_t827075554  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FRAMETIMINGMANAGER_T827075554_H
 #ifndef GL_T2454730511_H
 #define GL_T2454730511_H
 #ifdef __clang__
@@ -10107,6 +10130,95 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // U3C_CULLINGPLANESU3E__FIXEDBUFFER7_T3172482031_H
+#ifndef FRAMETIMING_T3383372899_H
+#define FRAMETIMING_T3383372899_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.FrameTiming
+struct  FrameTiming_t3383372899 
+{
+public:
+	// System.UInt64 UnityEngine.FrameTiming::cpuTimePresentCalled
+	uint64_t ___cpuTimePresentCalled_0;
+	// System.Double UnityEngine.FrameTiming::cpuFrameTime
+	double ___cpuFrameTime_1;
+	// System.UInt64 UnityEngine.FrameTiming::cpuTimeFrameComplete
+	uint64_t ___cpuTimeFrameComplete_2;
+	// System.Double UnityEngine.FrameTiming::gpuFrameTime
+	double ___gpuFrameTime_3;
+	// System.Single UnityEngine.FrameTiming::heightScale
+	float ___heightScale_4;
+	// System.Single UnityEngine.FrameTiming::widthScale
+	float ___widthScale_5;
+	// System.UInt32 UnityEngine.FrameTiming::syncInterval
+	uint32_t ___syncInterval_6;
+
+public:
+	inline static int32_t get_offset_of_cpuTimePresentCalled_0() { return static_cast<int32_t>(offsetof(FrameTiming_t3383372899, ___cpuTimePresentCalled_0)); }
+	inline uint64_t get_cpuTimePresentCalled_0() const { return ___cpuTimePresentCalled_0; }
+	inline uint64_t* get_address_of_cpuTimePresentCalled_0() { return &___cpuTimePresentCalled_0; }
+	inline void set_cpuTimePresentCalled_0(uint64_t value)
+	{
+		___cpuTimePresentCalled_0 = value;
+	}
+
+	inline static int32_t get_offset_of_cpuFrameTime_1() { return static_cast<int32_t>(offsetof(FrameTiming_t3383372899, ___cpuFrameTime_1)); }
+	inline double get_cpuFrameTime_1() const { return ___cpuFrameTime_1; }
+	inline double* get_address_of_cpuFrameTime_1() { return &___cpuFrameTime_1; }
+	inline void set_cpuFrameTime_1(double value)
+	{
+		___cpuFrameTime_1 = value;
+	}
+
+	inline static int32_t get_offset_of_cpuTimeFrameComplete_2() { return static_cast<int32_t>(offsetof(FrameTiming_t3383372899, ___cpuTimeFrameComplete_2)); }
+	inline uint64_t get_cpuTimeFrameComplete_2() const { return ___cpuTimeFrameComplete_2; }
+	inline uint64_t* get_address_of_cpuTimeFrameComplete_2() { return &___cpuTimeFrameComplete_2; }
+	inline void set_cpuTimeFrameComplete_2(uint64_t value)
+	{
+		___cpuTimeFrameComplete_2 = value;
+	}
+
+	inline static int32_t get_offset_of_gpuFrameTime_3() { return static_cast<int32_t>(offsetof(FrameTiming_t3383372899, ___gpuFrameTime_3)); }
+	inline double get_gpuFrameTime_3() const { return ___gpuFrameTime_3; }
+	inline double* get_address_of_gpuFrameTime_3() { return &___gpuFrameTime_3; }
+	inline void set_gpuFrameTime_3(double value)
+	{
+		___gpuFrameTime_3 = value;
+	}
+
+	inline static int32_t get_offset_of_heightScale_4() { return static_cast<int32_t>(offsetof(FrameTiming_t3383372899, ___heightScale_4)); }
+	inline float get_heightScale_4() const { return ___heightScale_4; }
+	inline float* get_address_of_heightScale_4() { return &___heightScale_4; }
+	inline void set_heightScale_4(float value)
+	{
+		___heightScale_4 = value;
+	}
+
+	inline static int32_t get_offset_of_widthScale_5() { return static_cast<int32_t>(offsetof(FrameTiming_t3383372899, ___widthScale_5)); }
+	inline float get_widthScale_5() const { return ___widthScale_5; }
+	inline float* get_address_of_widthScale_5() { return &___widthScale_5; }
+	inline void set_widthScale_5(float value)
+	{
+		___widthScale_5 = value;
+	}
+
+	inline static int32_t get_offset_of_syncInterval_6() { return static_cast<int32_t>(offsetof(FrameTiming_t3383372899, ___syncInterval_6)); }
+	inline uint32_t get_syncInterval_6() const { return ___syncInterval_6; }
+	inline uint32_t* get_address_of_syncInterval_6() { return &___syncInterval_6; }
+	inline void set_syncInterval_6(uint32_t value)
+	{
+		___syncInterval_6 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FRAMETIMING_T3383372899_H
 #ifndef HELPURLATTRIBUTE_T1958574548_H
 #define HELPURLATTRIBUTE_T1958574548_H
 #ifdef __clang__
@@ -18339,6 +18451,41 @@ public:
 		m_Items[index] = value;
 	}
 };
+// UnityEngine.FrameTiming[]
+struct FrameTimingU5BU5D_t1633197746  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) FrameTiming_t3383372899  m_Items[1];
+
+public:
+	inline FrameTiming_t3383372899  GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline FrameTiming_t3383372899 * GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, FrameTiming_t3383372899  value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline FrameTiming_t3383372899  GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline FrameTiming_t3383372899 * GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, FrameTiming_t3383372899  value)
+	{
+		m_Items[index] = value;
+	}
+};
 // UnityEngine.Plane[]
 struct PlaneU5BU5D_t3656189108  : public RuntimeArray
 {
@@ -19840,8 +19987,6 @@ extern "C" IL2CPP_METHOD_ATTR void GameObject_Internal_CreateGameObject_m2533291
 extern "C" IL2CPP_METHOD_ATTR Component_t1923634451 * GameObject_AddComponent_m136524825 (GameObject_t1113636619 * __this, Type_t * ___componentType0, const RuntimeMethod* method);
 // UnityEngine.Component UnityEngine.GameObject::Internal_AddComponentWithType(System.Type)
 extern "C" IL2CPP_METHOD_ATTR Component_t1923634451 * GameObject_Internal_AddComponentWithType_m3797731663 (GameObject_t1113636619 * __this, Type_t * ___componentType0, const RuntimeMethod* method);
-// System.Void UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
-extern "C" IL2CPP_METHOD_ATTR void GameObject_BroadcastMessage_m3721316603 (GameObject_t1113636619 * __this, String_t* ___methodName0, RuntimeObject * ___parameter1, int32_t ___options2, const RuntimeMethod* method);
 // System.Void UnityEngine.GeometryUtility::CalculateFrustumPlanes(UnityEngine.Camera,UnityEngine.Plane[])
 extern "C" IL2CPP_METHOD_ATTR void GeometryUtility_CalculateFrustumPlanes_m1194921787 (RuntimeObject * __this /* static, unused */, Camera_t4157153871 * ___camera0, PlaneU5BU5D_t3656189108* ___planes1, const RuntimeMethod* method);
 // UnityEngine.Matrix4x4 UnityEngine.Camera::get_projectionMatrix()
@@ -34119,6 +34264,41 @@ extern "C" void FailedToLoadScriptObject_t547604379_marshal_com_cleanup(FailedTo
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void UnityEngine.FrameTimingManager::CaptureFrameTimings()
+extern "C" IL2CPP_METHOD_ATTR void FrameTimingManager_CaptureFrameTimings_m2869465978 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	typedef void (*FrameTimingManager_CaptureFrameTimings_m2869465978_ftn) ();
+	static FrameTimingManager_CaptureFrameTimings_m2869465978_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (FrameTimingManager_CaptureFrameTimings_m2869465978_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.FrameTimingManager::CaptureFrameTimings()");
+	_il2cpp_icall_func();
+}
+// System.UInt32 UnityEngine.FrameTimingManager::GetLatestTimings(System.UInt32,UnityEngine.FrameTiming[])
+extern "C" IL2CPP_METHOD_ATTR uint32_t FrameTimingManager_GetLatestTimings_m2245788681 (RuntimeObject * __this /* static, unused */, uint32_t ___numFrames0, FrameTimingU5BU5D_t1633197746* ___timings1, const RuntimeMethod* method)
+{
+	typedef uint32_t (*FrameTimingManager_GetLatestTimings_m2245788681_ftn) (uint32_t, FrameTimingU5BU5D_t1633197746*);
+	static FrameTimingManager_GetLatestTimings_m2245788681_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (FrameTimingManager_GetLatestTimings_m2245788681_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.FrameTimingManager::GetLatestTimings(System.UInt32,UnityEngine.FrameTiming[])");
+	uint32_t retVal = _il2cpp_icall_func(___numFrames0, ___timings1);
+	return retVal;
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void UnityEngine.GL::Vertex3(System.Single,System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void GL_Vertex3_m766753641 (RuntimeObject * __this /* static, unused */, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method)
 {
@@ -34616,30 +34796,6 @@ extern "C" IL2CPP_METHOD_ATTR void GameObject_SendMessage_m3720186693 (GameObjec
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GameObject_SendMessage_m3720186693_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)");
 	_il2cpp_icall_func(__this, ___methodName0, ___value1, ___options2);
-}
-// System.Void UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
-extern "C" IL2CPP_METHOD_ATTR void GameObject_BroadcastMessage_m3721316603 (GameObject_t1113636619 * __this, String_t* ___methodName0, RuntimeObject * ___parameter1, int32_t ___options2, const RuntimeMethod* method)
-{
-	typedef void (*GameObject_BroadcastMessage_m3721316603_ftn) (GameObject_t1113636619 *, String_t*, RuntimeObject *, int32_t);
-	static GameObject_BroadcastMessage_m3721316603_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (GameObject_BroadcastMessage_m3721316603_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)");
-	_il2cpp_icall_func(__this, ___methodName0, ___parameter1, ___options2);
-}
-// System.Void UnityEngine.GameObject::BroadcastMessage(System.String)
-extern "C" IL2CPP_METHOD_ATTR void GameObject_BroadcastMessage_m217296818 (GameObject_t1113636619 * __this, String_t* ___methodName0, const RuntimeMethod* method)
-{
-	int32_t V_0 = 0;
-	RuntimeObject * V_1 = NULL;
-	{
-		V_0 = 0;
-		V_1 = NULL;
-		String_t* L_0 = ___methodName0;
-		RuntimeObject * L_1 = V_1;
-		int32_t L_2 = V_0;
-		GameObject_BroadcastMessage_m3721316603(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
 }
 // System.Void UnityEngine.GameObject::Internal_CreateGameObject(UnityEngine.GameObject,System.String)
 extern "C" IL2CPP_METHOD_ATTR void GameObject_Internal_CreateGameObject_m2533291801 (RuntimeObject * __this /* static, unused */, GameObject_t1113636619 * ___self0, String_t* ___name1, const RuntimeMethod* method)

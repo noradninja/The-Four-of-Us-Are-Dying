@@ -93,13 +93,8 @@ public class PlayerController : MonoBehaviour
         cameraRig = Camera.transform.parent.transform; //get the transform of the righ the camera is a child to
         walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
-        if (batteryCount < 10){
-            batteryText.text = (" " + batteryCount);
-        }
-        else batteryText.text = ("" + batteryCount);
-        //playerRenderer = gameObject.GetComponent<Renderer>();
-
     }
+    
     void Update()
     {   
         
@@ -142,6 +137,8 @@ public class PlayerController : MonoBehaviour
     }
     private void Keys()
     {
+
+///////////////////////////Start/Select//////////////////////////////////////
         if (Input.GetKeyDown(VITA + START)){
             if(!isPaused){
                 StartCoroutine(fade(pausePanel, 0, 1, 0.5f));
@@ -152,7 +149,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(VITA + SELECT))
         {   
-//enable/disable SSAO and UI text
+            //enable/disable SSAO and UI text
             if (SSAOScript.GetComponent<FastSSAO>().enabled){
                 SSAOScript.GetComponent<FastSSAO>().enabled = false;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
@@ -166,12 +163,30 @@ public class PlayerController : MonoBehaviour
                 enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");
             }
-//enable/disable bloom
-            // if (SSAOScript.GetComponent<FastMobileBloom>().enabled){
-            //     SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
-            // }
-            // else SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
         }
+
+///////////////////////////DPad//////////////////////////////////////
+        if (Input.GetKeyDown(VITA + UP)){
+            InventoryManager.medCount -= 1;
+            if (InventoryManager.playerHealth < 100)
+            healMe();
+        }
+
+        if (Input.GetKeyDown(VITA + DOWN)){
+            InventoryManager.stimCount -= 1;
+            //do stimulant stuff here
+        }
+
+        if (Input.GetKeyDown(VITA + LEFT)){
+
+        }
+
+        if (Input.GetKeyDown(VITA + RIGHT)){
+
+        }
+
+///////////////////////////Face Buttons//////////////////////////////////////
+
 //turn the flashlight on and off if we have it
         if (Input.GetKeyDown(VITA + TRIANGLE) && hasFlashlight && flashlightCharge > 0.05f && !Input.GetKey(VITA + LTRIG))
         {   
@@ -180,6 +195,8 @@ public class PlayerController : MonoBehaviour
             }
             else flashlightOff = true;
         }
+
+
 //if we add batteries
         if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
         {   
@@ -233,7 +250,10 @@ public class PlayerController : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown(VITA + CIRCLE)){
+
+
+        if (Input.GetKeyDown(VITA + CIRCLE))
+        {
             if(!isMap){
                 StartCoroutine(fade(mapPanel, 0, 1, 0.5f));
             }
@@ -241,6 +261,8 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(fade(mapPanel, 1, 0, 0.5f));
             }
         }
+
+
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
         if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge < 0.05f)
         {   
@@ -311,6 +333,8 @@ public class PlayerController : MonoBehaviour
         }
    
     }
+
+    ///////////////////////////Joysticks//////////////////////////////////////
     private void Rotate()
     {
         horizontalRotation = Input.GetAxis("Left Stick Horizontal"); //turn
@@ -393,6 +417,8 @@ public class PlayerController : MonoBehaviour
          
     }
 
+
+    ///////////////////////////Methods//////////////////////////////////////
     private void Run()
     {
         
@@ -426,15 +452,13 @@ public class PlayerController : MonoBehaviour
 
     public void healMe()
     {
-        float startPain = skinnedRenderer.material.GetFloat("_PainValue");
-        StartCoroutine(healLerp(startPain, 1.0f, 0.125f));
-    }
-    public void lerpMe()
-    {
-           
-       
+        float startHealth = InventoryManager.playerHealth/100;
+        float endHealth = Mathf.Clamp01 (startHealth + 0.5f);
+        StartCoroutine(healLerp(startHealth, endHealth, 0.125f));
     }
 
+
+///////////////////////////Enumerators//////////////////////////////////////
     IEnumerator healLerp (float startValue, float endValue, float duration){
         float time = 0;
         while (time <= duration){
@@ -442,7 +466,9 @@ public class PlayerController : MonoBehaviour
             skinnedRenderer.material.SetFloat("_PainValue", swap);
             time += Time.deltaTime;
             yield return null;  
-        } 
+        }
+        InventoryManager.playerHealth += 50;
+        print (InventoryManager.playerHealth); 
     }
      IEnumerator walkLerp (float startValue, float endValue, float duration){
         float time = 0;
