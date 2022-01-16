@@ -2198,3 +2198,804 @@ Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS U
 Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
   api=10 type=1 insize=1977 outsize=0 kw=UNITY_PASS_SHADOWCASTER SHADOWS_CUBE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=0
 Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 10 at (26): Program 'vert', implicit cast from 'float4' to 'float3'\nCompiling Vertex program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 1 plat 10 at (93): Program 'vert', assignment causes implicit cast from 'float' to 'half'\nCompiling Vertex program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 1 plat 10 at (94): Program 'vert', assignment causes implicit cast from 'float' to 'half'\nCompiling Vertex program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 1 plat 10 at (95): Program 'vert', assignment causes implicit cast from 'float' to 'half'\nCompiling Vertex program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 2 plat 10 at (920): Program 'vert', incompatible argument list for call to 'mul'. Found 288 possible candidates:\nfunction was called with params: (float4x4, half3) could be: fixed4x4 mul(fixed4x4, fixed4x4) or      : fixed4x3 mul(fixed4x4, fixed4x3) or      : fixed4x2 mul(fixed4x4, fixed4x2) or      : fixed4x1 mul(fixed4x4, fixed4x1) or      : fixed4x4 mul(fixed4x3, fixed3x4) or      : fixed4x3 mul(fixed4x3, fixed3x3) or      : fixed4x2 mul(fixed4x3, fixed3x2) or      : fixed4x1 mul(fixed4x3, fixed3x1) or      : fixed4x4 mul(fixed4x2, fixed2x4) or      : fixed4x3 mul(fixed4x2, fixed2x3) or      : fixed4x2 mul(fixed4x2, fixed2x2) or      : fixed4x1 mul(fixed4x2, fixed2x1) or      : fixed4x4 mul(fixed4x1, fixed1x4) or      : fixed4x3 mul(fixed4x1, fixed1x3) or      : fixed4x2 mul(fixed4x1, fixed1x2) or      : fixed4x1 mul(fixed4x1, fixed1x1) or      : fixed3x4 mul(fixed3x4, fixed4x4) or      : fixed3x3 mul(fixed3x4, fixed4x3) or      : fixed3x2 mul(fixed3x4, fixed4x2) or      : fixed3x1 mul(fixed3x4, fixed4x1) or      : fixed3x4 mul(fixed3x3, fixed3x4) or      : fixed3x3 mul(fixed3x3, fixed3x3) or      : fixed3x2 mul(fixed3x3, fixed3x2) or      : fixed3x1 mul(fixed3x3, fixed3x1) or      : fixed3x4 mul(fixed3x2, fixed2x4) or      : fixed3x3 mul(fixed3x2, fixed2x3) or      : fixed3x2 mul(fixed3x2, fixed2x2) or      : fixed3x1 mul(fixed3x2, fixed2x1) or      : fixed3x4 mul(fixed3x1, fixed1x4) or      : fixed3x3 mul(fixed3x1, fixed1x3) or      : fixed3x2 mul(fixed3x1, fixed1x2) or      : fixed3x1 mul(fixed3x1, fixed1x1) or      : fixed2x4 mul(fixed2x4, fixed4x4) or      : fixed2x3 mul(fixed2x4, fixed4x3) or      : fixed2x2 mul(fixed2x4, fixed4x2) or      : fixed2x1 mul(fixed2x4, fixed4x1) or      : fixed2x4 mul(fixed2x3, fixed3x4) or      : fixed2x3 mul(fixed2x3, fixed3x3) or      : fixed2x2 mul(fixed2x3, fixed3x2) or      : fixed2x1 mul(fixed2x3, fixed3x1) or      : fixed2x4 mul(fixed2x2, fixed2x4) or      : fixed2x3 mul(fixed2x2, fixed2x3) or      : fixed2x2 mul(fixed2x2, fixed2x2) or      : fixed2x1 mul(fixed2x2, fixed2x1) or      : fixed2x4 mul(fixed2x1, fixed1x4) or      : fixed2x3 mul(fixed2x1, fixed1x3) or      : fixed2x2 mul(fixed2x1, fixed1x2) or      : fixed2x1 mul(fixed2x1, fixed1x1) or      : fixed1x4 mul(fixed1x4, fixed4x4) or      : fixed1x3 mul(fixed1x4, fixed4x3) or      : fixed1x2 mul(fixed1x4, fixed4x2) or      : fixed1x1 mul(fixed1x4, fixed4x1) or      : fixed1x4 mul(fixed1x3, fixed3x4) or      : fixed1x3 mul(fixed1x3, fixed3x3) or      : fixed1x2 mul(fixed1x3, fixed3x2) or      : fixed1x1 mul(fixed1x3, fixed3x1) or      : fixed1x4 mul(fixed1x2, fixed2x4) or      : fixed1x3 mul(fixed1x2, fixed2x3) or      : fixed1x2 mul(fixed1x2, fixed2x2) or      : fixed1x1 mul(fixed1x2, fixed2x1) or      : fixed1x4 mul(fixed1x1, fixed1x4) or      : fixed1x3 mul(fixed1x1, fixed1x3) or      : fixed1x2 mul(fixed1x1, fixed1x2) or      : fixed1x1 mul(fixed1x1, fixed1x1) or      : half4x4 mul(half4x4, half4x4) or      : half4x3 mul(half4x4, half4x3) or      : half4x2 mul(half4x4, half4x2) or      : half4x1 mul(half4x4, half4x1) or      : half4x4 mul(half4x3, half3x4) or      : half4x3 mul(half4x3, half3x3) or      : half4x2 mul(half4x3, half3x2) or      : half4x1 mul(half4x3, half3x1) or      : half4x4 mul(half4x2, half2x4) or      : half4x3 mul(half4x2, half2x3) or      : half4x2 mul(half4x2, half2x2) or      : half4x1 mul(half4x2, half2x1) or      : half4x4 mul(half4x1, half1x4) or      : half4x3 mul(half4x1, half1x3) or      : half4x2 mul(half4x1, half1x2) or      : half4x1 mul(half4x1, half1x1) or      : half3x4 mul(half3x4, half4x4) or      : half3x3 mul(half3x4, half4x3) or      : half3x2 mul(half3x4, half4x2) or      : half3x1 mul(half3x4, half4x1) or      : half3x4 mul(half3x3, half3x4) or      : half3x3 mul(half3x3, half3x3) or      : half3x2 mul(half3x3, half3x2) or      : half3x1 mul(half3x3, half3x1) or      : half3x4 mul(half3x2, half2x4) or      : half3x3 mul(half3x2, half2x3) or      : half3x2 mul(half3x2, half2x2) or      : half3x1 mul(half3x2, half2x1) or      : half3x4 mul(half3x1, half1x4) or      : half3x3 mul(half3x1, half1x3) or      : half3x2 mul(half3x1, half1x2) or      : half3x1 mul(half3x1, half1x1) or      : half2x4 mul(half2x4, half4x4) or      : half2x3 mul(half2x4, half4x3) or      : half2x2 mul(half2x4, half4x2) or      : half2x1 mul(half2x4, half4x1) or      : half2x4 mul(half2x3, half3x4) or      : half2x3 mul(half2x3, half3x3) or      : half2x2 mul(half2x3, half3x2) or      : half2x1 mul(half2x3, half3x1) or      : half2x4 mul(half2x2, half2x4) or      : half2x3 mul(half2x2, half2x3) or      : half2x2 mul(half2x2, half2x2) or      : half2x1 mul(half2x2, half2x1) or      : half2x4 mul(half2x1, half1x4) or      : half2x3 mul(half2x1, half1x3) or      : half2x2 mul(half2x1, half1x2) or      : half2x1 mul(half2x1, half1x1) or      : half1x4 mul(half1x4, half4x4) or      : half1x3 mul(half1x4, half4x3) or      : half1x2 mul(half1x4, half4x2) or      : half1x1 mul(half1x4, half4x1) or      : half1x4 mul(half1x3, half3x4) or      : half1x3 mul(half1x3, half3x3) or      : half1x2 mul(half1x3, half3x2) or      : half1x1 mul(half1x3, half3x1) or      : half1x4 mul(half1x2, half2x4) or      : half1x3 mul(half1x2, half2x3) or      : half1x2 mul(half1x2, half2x2) or      : half1x1 mul(half1x2, half2x1) or      : half1x4 mul(half1x1, half1x4) or      : half1x3 mul(half1x1, half1x3) or      : half1x2 mul(half1x1, half1x2) or      : half1x1 mul(half1x1, half1x1) or      : float4x4 mul(float4x4, float4x4) or      : float4x3 mul(float4x4, float4x3) or      : float4x2 mul(float4x4, float4x2) or      : float4x1 mul(float4x4, float4x1) or      : float4x4 mul(float4x3, float3x4) or      : float4x3 mul(float4x3, float3x3) or      : float4x2 mul(float4x3, float3x2) or      : float4x1 mul(float4x3, float3x1) or      : float4x4 mul(float4x2, float2x4) or      : float4x3 mul(float4x2, float2x3) or      : float4x2 mul(float4x2, float2x2) or      : float4x1 mul(float4x2, float2x1) or      : float4x4 mul(float4x1, float1x4) or      : float4x3 mul(float4x1, float1x3) or      : float4x2 mul(float4x1, float1x2) or      : float4x1 mul(float4x1, float1x1) or      : float3x4 mul(float3x4, float4x4) or      : float3x3 mul(float3x4, float4x3) or      : float3x2 mul(float3x4, float4x2) or      : float3x1 mul(float3x4, float4x1) or      : float3x4 mul(float3x3, float3x4) or      : float3x3 mul(float3x3, float3x3) or      : float3x2 mul(float3x3, float3x2) or      : float3x1 mul(float3x3, float3x1) or      : float3x4 mul(float3x2, float2x4) or      : float3x3 mul(float3x2, float2x3) or      : float3x2 mul(float3x2, float2x2) or      : float3x1 mul(float3x2, float2x1) or      : float3x4 mul(float3x1, float1x4) or      : float3x3 mul(float3x1, float1x3) or      : float3x2 mul(float3x1, float1x2) or      : float3x1 mul(float3x1, float1x1) or      : float2x4 mul(float2x4, float4x4) or      : float2x3 mul(float2x4, float4x3) or      : float2x2 mul(float2x4, float4x2) or      : float2x1 mul(float2x4, float4x1) or      : float2x4 mul(float2x3, float3x4) or      : float2x3 mul(float2x3, float3x3) or      : float2x2 mul(float2x3, float3x2) or      : float2x1 mul(float2x3, float3x1) or      : float2x4 mul(float2x2, float2x4) or      : float2x3 mul(float2x2, float2x3) or      : float2x2 mul(float2x2, float2x2) or      : float2x1 mul(float2x2, float2x1) or      : float2x4 mul(float2x1, float1x4) or      : float2x3 mul(float2x1, float1x3) or      : float2x2 mul(float2x1, float1x2) or      : float2x1 mul(float2x1, float1x1) or      : float1x4 mul(float1x4, float4x4) or      : float1x3 mul(float1x4, float4x3) or      : float1x2 mul(float1x4, float4x2) or      : float1x1 mul(float1x4, float4x1) or      : float1x4 mul(float1x3, float3x4) or      : float1x3 mul(float1x3, float3x3) or      : float1x2 mul(float1x3, float3x2) or      : float1x1 mul(float1x3, float3x1) or      : float1x4 mul(float1x2, float2x4) or      : float1x3 mul(float1x2, float2x3) or      : float1x2 mul(float1x2, float2x2) or      : float1x1 mul(float1x2, float2x1) or      : float1x4 mul(float1x1, float1x4) or      : float1x3 mul(float1x1, float1x3) or      : float1x2 mul(float1x1, float1x2) or      : float1x1 mul(float1x1, float1x1) or      : fixed mul(fixed, fixed1x1) or      : fixed mul(fixed2, fixed2x1) or      : fixed mul(fixed3, fixed3x1) or      : fixed mul(fixed4, fixed4x1) or      : fixed2 mul(fixed, fixed1x2) or      : fixed2 mul(fixed2, fixed2x2) or      : fixed2 mul(fixed3, fixed3x2) or      : fixed2 mul(fixed4, fixed4x2) or      : fixed3 mul(fixed, fixed1x3) or      : fixed3 mul(fixed2, fixed2x3) or      : fixed3 mul(fixed3, fixed3x3) or      : fixed3 mul(fixed4, fixed4x3) or      : fixed4 mul(fixed, fixed1x4) or      : fixed4 mul(fixed2, fixed2x4) or      : fixed4 mul(fixed3, fixed3x4) or      : fixed4 mul(fixed4, fixed4x4) or      : half mul(half, half1x1) or      : half mul(half2, half2x1) or      : half mul(half3, half3x1) or      : half mul(half4, half4x1) or      : half2 mul(half, half1x2) or      : half2 mul(half2, half2x2) or      : half2 mul(half3, half3x2) or      : half2 mul(half4, half4x2) or      : half3 mul(half, half1x3) or      : half3 mul(half2, half2x3) or      : half3 mul(half3, half3x3) or      : half3 mul(half4, half4x3) or      : half4 mul(half, half1x4) or      : half4 mul(half2, half2x4) or      : half4 mul(half3, half3x4) or      : half4 mul(half4, half4x4) or      : float mul(float, float1x1) or      : float mul(float2, float2x1) or      : float mul(float3, float3x1) or      : float mul(float4, float4x1) or      : float2 mul(float, float1x2) or      : float2 mul(float2, float2x2) or      : float2 mul(float3, float3x2) or      : float2 mul(float4, float4x2) or      : float3 mul(float, float1x3) or      : float3 mul(float2, float2x3) or      : float3 mul(float3, float3x3) or      : float3 mul(float4, float4x3) or      : float4 mul(float, float1x4) or      : float4 mul(float2, float2x4) or      : float4 mul(float3, float3x4) or      : float4 mul(float4, float4x4) or      : fixed mul(fixed1x1, fixed) or      : fixed mul(fixed1x2, fixed2) or      : fixed mul(fixed1x3, fixed3) or      : fixed mul(fixed1x4, fixed4) or      : fixed2 mul(fixed2x1, fixed) or      : fixed2 mul(fixed2x2, fixed2) or      : fixed2 mul(fixed2x3, fixed3) or      : fixed2 mul(fixed2x4, fixed4) or      : fixed3 mul(fixed3x1, fixed) or      : fixed3 mul(fixed3x2, fixed2) or      : fixed3 mul(fixed3x3, fixed3) or      : fixed3 mul(fixed3x4, fixed4) or      : fixed4 mul(fixed4x1, fixed) or      : fixed4 mul(fixed4x2, fixed2) or      : fixed4 mul(fixed4x3, fixed3) or      : fixed4 mul(fixed4x4, fixed4) or      : half mul(half1x1, half) or      : half mul(half1x2, half2) or      : half mul(half1x3, half3) or      : half mul(half1x4, half4) or      : half2 mul(half2x1, half) or      : half2 mul(half2x2, half2) or      : half2 mul(half2x3, half3) or      : half2 mul(half2x4, half4) or      : half3 mul(half3x1, half) or      : half3 mul(half3x2, half2) or      : half3 mul(half3x3, half3) or      : half3 mul(half3x4, half4) or      : half4 mul(half4x1, half) or      : half4 mul(half4x2, half2) or      : half4 mul(half4x3, half3) or      : half4 mul(half4x4, half4) or      : float mul(float1x1, float) or      : float mul(float1x2, float2) or      : float mul(float1x3, float3) or      : float mul(float1x4, float4) or      : float2 mul(float2x1, float) or      : float2 mul(float2x2, float2) or      : float2 mul(float2x3, float3) or      : float2 mul(float2x4, float4) or      : float3 mul(float3x1, float) or      : float3 mul(float3x2, float2) or      : float3 mul(float3x3, float3) or      : float3 mul(float3x4, float4) or      : float4 mul(float4x1, float) or      : float4 mul(float4x2, float2) or      : float4 mul(float4x3, float3) or      : float4 mul(float4x4, float4)\nCompiling Vertex program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=10 type=0 insize=1977 outsize=0 kw=UNITY_PASS_SHADOWCASTER SHADOWS_CUBE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=0
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 10 at (26): Program 'frag', implicit cast from 'float4' to 'float3'\nCompiling Fragment program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE FOG_LINEAR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 1 plat 10 at (93): Program 'frag', assignment causes implicit cast from 'float' to 'half'\nCompiling Fragment program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE FOG_LINEAR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 1 plat 10 at (94): Program 'frag', assignment causes implicit cast from 'float' to 'half'\nCompiling Fragment program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE FOG_LINEAR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 1 plat 10 at (95): Program 'frag', assignment causes implicit cast from 'float' to 'half'\nCompiling Fragment program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE FOG_LINEAR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  error: 2 plat 10 at (920): Program 'frag', incompatible argument list for call to 'mul'. Found 288 possible candidates:\nfunction was called with params: (float4x4, half3) could be: fixed4x4 mul(fixed4x4, fixed4x4) or      : fixed4x3 mul(fixed4x4, fixed4x3) or      : fixed4x2 mul(fixed4x4, fixed4x2) or      : fixed4x1 mul(fixed4x4, fixed4x1) or      : fixed4x4 mul(fixed4x3, fixed3x4) or      : fixed4x3 mul(fixed4x3, fixed3x3) or      : fixed4x2 mul(fixed4x3, fixed3x2) or      : fixed4x1 mul(fixed4x3, fixed3x1) or      : fixed4x4 mul(fixed4x2, fixed2x4) or      : fixed4x3 mul(fixed4x2, fixed2x3) or      : fixed4x2 mul(fixed4x2, fixed2x2) or      : fixed4x1 mul(fixed4x2, fixed2x1) or      : fixed4x4 mul(fixed4x1, fixed1x4) or      : fixed4x3 mul(fixed4x1, fixed1x3) or      : fixed4x2 mul(fixed4x1, fixed1x2) or      : fixed4x1 mul(fixed4x1, fixed1x1) or      : fixed3x4 mul(fixed3x4, fixed4x4) or      : fixed3x3 mul(fixed3x4, fixed4x3) or      : fixed3x2 mul(fixed3x4, fixed4x2) or      : fixed3x1 mul(fixed3x4, fixed4x1) or      : fixed3x4 mul(fixed3x3, fixed3x4) or      : fixed3x3 mul(fixed3x3, fixed3x3) or      : fixed3x2 mul(fixed3x3, fixed3x2) or      : fixed3x1 mul(fixed3x3, fixed3x1) or      : fixed3x4 mul(fixed3x2, fixed2x4) or      : fixed3x3 mul(fixed3x2, fixed2x3) or      : fixed3x2 mul(fixed3x2, fixed2x2) or      : fixed3x1 mul(fixed3x2, fixed2x1) or      : fixed3x4 mul(fixed3x1, fixed1x4) or      : fixed3x3 mul(fixed3x1, fixed1x3) or      : fixed3x2 mul(fixed3x1, fixed1x2) or      : fixed3x1 mul(fixed3x1, fixed1x1) or      : fixed2x4 mul(fixed2x4, fixed4x4) or      : fixed2x3 mul(fixed2x4, fixed4x3) or      : fixed2x2 mul(fixed2x4, fixed4x2) or      : fixed2x1 mul(fixed2x4, fixed4x1) or      : fixed2x4 mul(fixed2x3, fixed3x4) or      : fixed2x3 mul(fixed2x3, fixed3x3) or      : fixed2x2 mul(fixed2x3, fixed3x2) or      : fixed2x1 mul(fixed2x3, fixed3x1) or      : fixed2x4 mul(fixed2x2, fixed2x4) or      : fixed2x3 mul(fixed2x2, fixed2x3) or      : fixed2x2 mul(fixed2x2, fixed2x2) or      : fixed2x1 mul(fixed2x2, fixed2x1) or      : fixed2x4 mul(fixed2x1, fixed1x4) or      : fixed2x3 mul(fixed2x1, fixed1x3) or      : fixed2x2 mul(fixed2x1, fixed1x2) or      : fixed2x1 mul(fixed2x1, fixed1x1) or      : fixed1x4 mul(fixed1x4, fixed4x4) or      : fixed1x3 mul(fixed1x4, fixed4x3) or      : fixed1x2 mul(fixed1x4, fixed4x2) or      : fixed1x1 mul(fixed1x4, fixed4x1) or      : fixed1x4 mul(fixed1x3, fixed3x4) or      : fixed1x3 mul(fixed1x3, fixed3x3) or      : fixed1x2 mul(fixed1x3, fixed3x2) or      : fixed1x1 mul(fixed1x3, fixed3x1) or      : fixed1x4 mul(fixed1x2, fixed2x4) or      : fixed1x3 mul(fixed1x2, fixed2x3) or      : fixed1x2 mul(fixed1x2, fixed2x2) or      : fixed1x1 mul(fixed1x2, fixed2x1) or      : fixed1x4 mul(fixed1x1, fixed1x4) or      : fixed1x3 mul(fixed1x1, fixed1x3) or      : fixed1x2 mul(fixed1x1, fixed1x2) or      : fixed1x1 mul(fixed1x1, fixed1x1) or      : half4x4 mul(half4x4, half4x4) or      : half4x3 mul(half4x4, half4x3) or      : half4x2 mul(half4x4, half4x2) or      : half4x1 mul(half4x4, half4x1) or      : half4x4 mul(half4x3, half3x4) or      : half4x3 mul(half4x3, half3x3) or      : half4x2 mul(half4x3, half3x2) or      : half4x1 mul(half4x3, half3x1) or      : half4x4 mul(half4x2, half2x4) or      : half4x3 mul(half4x2, half2x3) or      : half4x2 mul(half4x2, half2x2) or      : half4x1 mul(half4x2, half2x1) or      : half4x4 mul(half4x1, half1x4) or      : half4x3 mul(half4x1, half1x3) or      : half4x2 mul(half4x1, half1x2) or      : half4x1 mul(half4x1, half1x1) or      : half3x4 mul(half3x4, half4x4) or      : half3x3 mul(half3x4, half4x3) or      : half3x2 mul(half3x4, half4x2) or      : half3x1 mul(half3x4, half4x1) or      : half3x4 mul(half3x3, half3x4) or      : half3x3 mul(half3x3, half3x3) or      : half3x2 mul(half3x3, half3x2) or      : half3x1 mul(half3x3, half3x1) or      : half3x4 mul(half3x2, half2x4) or      : half3x3 mul(half3x2, half2x3) or      : half3x2 mul(half3x2, half2x2) or      : half3x1 mul(half3x2, half2x1) or      : half3x4 mul(half3x1, half1x4) or      : half3x3 mul(half3x1, half1x3) or      : half3x2 mul(half3x1, half1x2) or      : half3x1 mul(half3x1, half1x1) or      : half2x4 mul(half2x4, half4x4) or      : half2x3 mul(half2x4, half4x3) or      : half2x2 mul(half2x4, half4x2) or      : half2x1 mul(half2x4, half4x1) or      : half2x4 mul(half2x3, half3x4) or      : half2x3 mul(half2x3, half3x3) or      : half2x2 mul(half2x3, half3x2) or      : half2x1 mul(half2x3, half3x1) or      : half2x4 mul(half2x2, half2x4) or      : half2x3 mul(half2x2, half2x3) or      : half2x2 mul(half2x2, half2x2) or      : half2x1 mul(half2x2, half2x1) or      : half2x4 mul(half2x1, half1x4) or      : half2x3 mul(half2x1, half1x3) or      : half2x2 mul(half2x1, half1x2) or      : half2x1 mul(half2x1, half1x1) or      : half1x4 mul(half1x4, half4x4) or      : half1x3 mul(half1x4, half4x3) or      : half1x2 mul(half1x4, half4x2) or      : half1x1 mul(half1x4, half4x1) or      : half1x4 mul(half1x3, half3x4) or      : half1x3 mul(half1x3, half3x3) or      : half1x2 mul(half1x3, half3x2) or      : half1x1 mul(half1x3, half3x1) or      : half1x4 mul(half1x2, half2x4) or      : half1x3 mul(half1x2, half2x3) or      : half1x2 mul(half1x2, half2x2) or      : half1x1 mul(half1x2, half2x1) or      : half1x4 mul(half1x1, half1x4) or      : half1x3 mul(half1x1, half1x3) or      : half1x2 mul(half1x1, half1x2) or      : half1x1 mul(half1x1, half1x1) or      : float4x4 mul(float4x4, float4x4) or      : float4x3 mul(float4x4, float4x3) or      : float4x2 mul(float4x4, float4x2) or      : float4x1 mul(float4x4, float4x1) or      : float4x4 mul(float4x3, float3x4) or      : float4x3 mul(float4x3, float3x3) or      : float4x2 mul(float4x3, float3x2) or      : float4x1 mul(float4x3, float3x1) or      : float4x4 mul(float4x2, float2x4) or      : float4x3 mul(float4x2, float2x3) or      : float4x2 mul(float4x2, float2x2) or      : float4x1 mul(float4x2, float2x1) or      : float4x4 mul(float4x1, float1x4) or      : float4x3 mul(float4x1, float1x3) or      : float4x2 mul(float4x1, float1x2) or      : float4x1 mul(float4x1, float1x1) or      : float3x4 mul(float3x4, float4x4) or      : float3x3 mul(float3x4, float4x3) or      : float3x2 mul(float3x4, float4x2) or      : float3x1 mul(float3x4, float4x1) or      : float3x4 mul(float3x3, float3x4) or      : float3x3 mul(float3x3, float3x3) or      : float3x2 mul(float3x3, float3x2) or      : float3x1 mul(float3x3, float3x1) or      : float3x4 mul(float3x2, float2x4) or      : float3x3 mul(float3x2, float2x3) or      : float3x2 mul(float3x2, float2x2) or      : float3x1 mul(float3x2, float2x1) or      : float3x4 mul(float3x1, float1x4) or      : float3x3 mul(float3x1, float1x3) or      : float3x2 mul(float3x1, float1x2) or      : float3x1 mul(float3x1, float1x1) or      : float2x4 mul(float2x4, float4x4) or      : float2x3 mul(float2x4, float4x3) or      : float2x2 mul(float2x4, float4x2) or      : float2x1 mul(float2x4, float4x1) or      : float2x4 mul(float2x3, float3x4) or      : float2x3 mul(float2x3, float3x3) or      : float2x2 mul(float2x3, float3x2) or      : float2x1 mul(float2x3, float3x1) or      : float2x4 mul(float2x2, float2x4) or      : float2x3 mul(float2x2, float2x3) or      : float2x2 mul(float2x2, float2x2) or      : float2x1 mul(float2x2, float2x1) or      : float2x4 mul(float2x1, float1x4) or      : float2x3 mul(float2x1, float1x3) or      : float2x2 mul(float2x1, float1x2) or      : float2x1 mul(float2x1, float1x1) or      : float1x4 mul(float1x4, float4x4) or      : float1x3 mul(float1x4, float4x3) or      : float1x2 mul(float1x4, float4x2) or      : float1x1 mul(float1x4, float4x1) or      : float1x4 mul(float1x3, float3x4) or      : float1x3 mul(float1x3, float3x3) or      : float1x2 mul(float1x3, float3x2) or      : float1x1 mul(float1x3, float3x1) or      : float1x4 mul(float1x2, float2x4) or      : float1x3 mul(float1x2, float2x3) or      : float1x2 mul(float1x2, float2x2) or      : float1x1 mul(float1x2, float2x1) or      : float1x4 mul(float1x1, float1x4) or      : float1x3 mul(float1x1, float1x3) or      : float1x2 mul(float1x1, float1x2) or      : float1x1 mul(float1x1, float1x1) or      : fixed mul(fixed, fixed1x1) or      : fixed mul(fixed2, fixed2x1) or      : fixed mul(fixed3, fixed3x1) or      : fixed mul(fixed4, fixed4x1) or      : fixed2 mul(fixed, fixed1x2) or      : fixed2 mul(fixed2, fixed2x2) or      : fixed2 mul(fixed3, fixed3x2) or      : fixed2 mul(fixed4, fixed4x2) or      : fixed3 mul(fixed, fixed1x3) or      : fixed3 mul(fixed2, fixed2x3) or      : fixed3 mul(fixed3, fixed3x3) or      : fixed3 mul(fixed4, fixed4x3) or      : fixed4 mul(fixed, fixed1x4) or      : fixed4 mul(fixed2, fixed2x4) or      : fixed4 mul(fixed3, fixed3x4) or      : fixed4 mul(fixed4, fixed4x4) or      : half mul(half, half1x1) or      : half mul(half2, half2x1) or      : half mul(half3, half3x1) or      : half mul(half4, half4x1) or      : half2 mul(half, half1x2) or      : half2 mul(half2, half2x2) or      : half2 mul(half3, half3x2) or      : half2 mul(half4, half4x2) or      : half3 mul(half, half1x3) or      : half3 mul(half2, half2x3) or      : half3 mul(half3, half3x3) or      : half3 mul(half4, half4x3) or      : half4 mul(half, half1x4) or      : half4 mul(half2, half2x4) or      : half4 mul(half3, half3x4) or      : half4 mul(half4, half4x4) or      : float mul(float, float1x1) or      : float mul(float2, float2x1) or      : float mul(float3, float3x1) or      : float mul(float4, float4x1) or      : float2 mul(float, float1x2) or      : float2 mul(float2, float2x2) or      : float2 mul(float3, float3x2) or      : float2 mul(float4, float4x2) or      : float3 mul(float, float1x3) or      : float3 mul(float2, float2x3) or      : float3 mul(float3, float3x3) or      : float3 mul(float4, float4x3) or      : float4 mul(float, float1x4) or      : float4 mul(float2, float2x4) or      : float4 mul(float3, float3x4) or      : float4 mul(float4, float4x4) or      : fixed mul(fixed1x1, fixed) or      : fixed mul(fixed1x2, fixed2) or      : fixed mul(fixed1x3, fixed3) or      : fixed mul(fixed1x4, fixed4) or      : fixed2 mul(fixed2x1, fixed) or      : fixed2 mul(fixed2x2, fixed2) or      : fixed2 mul(fixed2x3, fixed3) or      : fixed2 mul(fixed2x4, fixed4) or      : fixed3 mul(fixed3x1, fixed) or      : fixed3 mul(fixed3x2, fixed2) or      : fixed3 mul(fixed3x3, fixed3) or      : fixed3 mul(fixed3x4, fixed4) or      : fixed4 mul(fixed4x1, fixed) or      : fixed4 mul(fixed4x2, fixed2) or      : fixed4 mul(fixed4x3, fixed3) or      : fixed4 mul(fixed4x4, fixed4) or      : half mul(half1x1, half) or      : half mul(half1x2, half2) or      : half mul(half1x3, half3) or      : half mul(half1x4, half4) or      : half2 mul(half2x1, half) or      : half2 mul(half2x2, half2) or      : half2 mul(half2x3, half3) or      : half2 mul(half2x4, half4) or      : half3 mul(half3x1, half) or      : half3 mul(half3x2, half2) or      : half3 mul(half3x3, half3) or      : half3 mul(half3x4, half4) or      : half4 mul(half4x1, half) or      : half4 mul(half4x2, half2) or      : half4 mul(half4x3, half3) or      : half4 mul(half4x4, half4) or      : float mul(float1x1, float) or      : float mul(float1x2, float2) or      : float mul(float1x3, float3) or      : float mul(float1x4, float4) or      : float2 mul(float2x1, float) or      : float2 mul(float2x2, float2) or      : float2 mul(float2x3, float3) or      : float2 mul(float2x4, float4) or      : float3 mul(float3x1, float) or      : float3 mul(float3x2, float2) or      : float3 mul(float3x3, float3) or      : float3 mul(float3x4, float4) or      : float4 mul(float4x1, float) or      : float4 mul(float4x2, float2) or      : float4 mul(float4x3, float3) or      : float4 mul(float4x4, float4)\nCompiling Fragment program with UNITY_PASS_SHADOWCASTER SHADOWS_CUBE FOG_LINEAR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=10 type=1 insize=1977 outsize=0 kw=UNITY_PASS_SHADOWCASTER SHADOWS_CUBE FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=0
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=1938 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1282 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1454 outsize=1534 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _METALLICGLOSSMAP _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1454 outsize=442 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _METALLICGLOSSMAP _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2506 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2126 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=1938 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1186 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=1906 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2050 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2526 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2402 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2506 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=1738 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=1906 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=1662 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2526 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2014 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _GLOSSYREFLECTIONS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2506 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=1874 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=1906 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=1798 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2526 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2150 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=1938 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=818 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _METALLICGLOSSMAP _VERTEXCOLOR _SPECULARHIGHLIGHTS_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=1958 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1414 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=1958 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1402 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD SPOT SHADOWS_DEPTH LIGHTMAP_SHADOW_MIXING FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2262 kw=UNITY_PASS_FORWARDADD SPOT SHADOWS_DEPTH LIGHTMAP_SHADOW_MIXING FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD SPOT SHADOWS_DEPTH LIGHTMAP_SHADOW_MIXING FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=2338 kw=UNITY_PASS_FORWARDADD SPOT SHADOWS_DEPTH LIGHTMAP_SHADOW_MIXING FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=1650 outsize=690 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1650 outsize=298 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1650 outsize=946 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1650 outsize=474 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=2138 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7200 outsize=1874 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7200 outsize=2906 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1615 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1615 outsize=2638 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=2138 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=2074 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7371 outsize=1874 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7371 outsize=3078 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=2226 kw=UNITY_PASS_FORWARDADD DIRECTIONAL SHADOWS_SCREEN FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1790 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1726 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=7371 outsize=1874 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=7371 outsize=2362 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2446 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1878 kw=UNITY_PASS_FORWARDADD DIRECTIONAL FOG_LINEAR _NORMALMAP _METALLICGLOSSMAP _ALPHATEST_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1441 outsize=646 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1441 outsize=254 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1441 outsize=902 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1441 outsize=410 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1442 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=182 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=442 kw=UNITY_PASS_FORWARDBASE pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=550 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1630 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=414 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=422 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=550 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1630 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=414 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=786 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1630 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=414 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1630 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1738 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1630 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=414 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=538 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=646 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1630 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=414 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=538 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=646 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1442 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=182 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=530 kw=UNITY_PASS_FORWARDBASE _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=638 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=1475 outsize=538 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1475 outsize=246 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _NORMALMAP _VERTEXCOLOR_OFF _GLOSSYREFLECTIONS_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2690 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _NORMALMAP _VERTEXCOLOR_OFF _GLOSSYREFLECTIONS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _NORMALMAP _VERTEXCOLOR_OFF _GLOSSYREFLECTIONS_OFF
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2374 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _NORMALMAP _VERTEXCOLOR_OFF _GLOSSYREFLECTIONS_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD POINT FOG_LINEAR _NORMALMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2750 kw=UNITY_PASS_FORWARDADD POINT FOG_LINEAR _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD POINT FOG_LINEAR _NORMALMAP
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=2026 kw=UNITY_PASS_FORWARDADD POINT FOG_LINEAR _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1078 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=526 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1078 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=526 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1630 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=414 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1078 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=526 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=422 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1078 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=870 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1078 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1714 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2526 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2494 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2506 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2218 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1073 outsize=1078 kw=UNITY_PASS_META _EMISSION _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1073 outsize=1318 kw=UNITY_PASS_META _EMISSION _METALLICGLOSSMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1454 outsize=1534 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1454 outsize=442 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2526 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2506 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2506 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2230 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1442 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=182 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=778 kw=UNITY_PASS_FORWARDBASE _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=886 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1442 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=182 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=822 kw=UNITY_PASS_FORWARDBASE _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1622 kw=UNITY_PASS_FORWARDBASE _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1438 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1730 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=1906 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2142 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=1906 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2154 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1078 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=622 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR _ALPHABLEND_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2526 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2602 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH FOG_LINEAR _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2506 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2326 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=1906 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2250 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _METALLICGLOSSMAP _VERTEXCOLOR _ALPHAPREMULTIPLY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD SPOT FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2262 kw=UNITY_PASS_FORWARDADD SPOT FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD SPOT FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1958 kw=UNITY_PASS_FORWARDADD SPOT FOG_LINEAR _METALLICGLOSSMAP _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=1453 outsize=1534 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1453 outsize=442 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1824 outsize=2594 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1824 outsize=2054 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1646 outsize=1938 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1646 outsize=1186 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1824 outsize=1994 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR_OFF _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1824 outsize=1978 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD POINT _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1646 outsize=2242 kw=UNITY_PASS_FORWARDADD POINT _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD POINT _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1646 outsize=1486 kw=UNITY_PASS_FORWARDADD POINT _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1776 outsize=1726 kw=UNITY_PASS_DEFERRED _VERTEXCOLOR_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1776 outsize=606 kw=UNITY_PASS_DEFERRED _VERTEXCOLOR_OFF _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1072 outsize=1078 kw=UNITY_PASS_META pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1072 outsize=934 kw=UNITY_PASS_META pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1824 outsize=2594 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1824 outsize=2158 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _EMISSION _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1646 outsize=1938 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1646 outsize=1186 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1824 outsize=1994 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1824 outsize=2082 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _EMISSION _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD POINT _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1646 outsize=2242 kw=UNITY_PASS_FORWARDADD POINT _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD POINT _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1646 outsize=1486 kw=UNITY_PASS_FORWARDADD POINT _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1776 outsize=1726 kw=UNITY_PASS_DEFERRED _EMISSION _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1776 outsize=606 kw=UNITY_PASS_DEFERRED _EMISSION _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1824 outsize=1994 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1824 outsize=1978 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1776 outsize=1726 kw=UNITY_PASS_DEFERRED _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1776 outsize=606 kw=UNITY_PASS_DEFERRED _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1824 outsize=2594 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1824 outsize=2054 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2594 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2130 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=1938 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1186 kw=UNITY_PASS_FORWARDADD DIRECTIONAL _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1823 outsize=2014 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1823 outsize=2330 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Vertex program with UNITY_PASS_FORWARDADD POINT FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=0 insize=1645 outsize=2262 kw=UNITY_PASS_FORWARDADD POINT FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  error: 1 plat 4 at UnityStandardCoreForwardSimple_VC.cginc(231): comma expression used where a vector constructor may have been intended\nCompiling Fragment program with UNITY_PASS_FORWARDADD POINT FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON
+Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING
+  api=4 type=1 insize=1645 outsize=1714 kw=UNITY_PASS_FORWARDADD POINT FOG_LINEAR _VERTEXCOLOR _ALPHABLEND_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1702 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=554 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=786 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=678 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1466 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=182 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=670 kw=UNITY_PASS_FORWARDBASE _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=778 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1702 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=554 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=786 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=678 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1702 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=554 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1034 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=926 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1702 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=554 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=690 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=562 kw=UNITY_PASS_FORWARDBASE _ALPHAPREMULTIPLY_ON _REQUIRE_UV2 pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=17425 outsize=1406 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=17425 outsize=698 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4286 outsize=1634 kw=UNITY_PASS_FORWARDADD POINT FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4286 outsize=1062 kw=UNITY_PASS_FORWARDADD POINT FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=3888 outsize=1226 kw=UNITY_PASS_META pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=3888 outsize=642 kw=UNITY_PASS_META pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=17425 outsize=1818 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=17425 outsize=642 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL LIGHTPROBE_SH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4286 outsize=1150 kw=UNITY_PASS_FORWARDADD DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4286 outsize=570 kw=UNITY_PASS_FORWARDADD DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1702 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=554 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1034 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=926 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _COLOROVERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1134 outsize=1702 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _REQUIRE_UV2 _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1134 outsize=554 kw=UNITY_PASS_SHADOWCASTER SHADOWS_DEPTH _ALPHABLEND_ON _REQUIRE_UV2 _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1878 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=894 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1770 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _COLORCOLOR_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1510 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _FADING_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1302 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 _FADING_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1290 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _FADING_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=810 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 _FADING_ON _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1614 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 EFFECT_BUMP _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=1046 kw=UNITY_PASS_FORWARDBASE FOG_LINEAR SOFTPARTICLES_ON _ALPHABLEND_ON _REQUIRE_UV2 EFFECT_BUMP _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1364 outsize=1038 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 EFFECT_BUMP _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1364 outsize=938 kw=UNITY_PASS_FORWARDBASE _ALPHABLEND_ON _REQUIRE_UV2 EFFECT_BUMP _COLORADDSUBDIFF_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=4 type=0 insize=5089 outsize=3410 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5089 outsize=614 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2616 outsize=1298 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2616 outsize=742 kw=FOG_LINEAR pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5089 outsize=3294 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5089 outsize=486 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1

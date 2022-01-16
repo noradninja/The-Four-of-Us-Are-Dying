@@ -98,7 +98,7 @@ public class CameraResolutionScaler : MonoBehaviour
 			decimal percentRAM = Math.Round((decimal)calcRAM ,2);
 
 			vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
-			ramText.text = ("  RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
+			ramText.text = ("RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
 			if (percentVRAM >= 75){
 				vramText.color = Color.red;
 			}

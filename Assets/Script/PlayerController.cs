@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
     }
-    
+
     void Update()
     {   
         
@@ -198,12 +198,12 @@ public class PlayerController : MonoBehaviour
 
 
 //if we add batteries
-        if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
+        if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
         {   
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
         if (flashlightCharge < 1.0f){
-            batteryCount -= 1;
+            InventoryManager.batteryCount -= 1;
         //add to charge and set progress bar based on charge amount
             flashlightCharge += 0.5f;
                 if(flashlight.intensity < 10){ //to constrain the light intensity to 10
@@ -212,10 +212,10 @@ public class PlayerController : MonoBehaviour
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
             //change text formatting based on number of characters
-                if (batteryCount < 10){
-                    batteryText.text = (" " + batteryCount);
+                if (InventoryManager.batteryCount < 10){
+                    batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
                 }
-                else batteryText.text = ("" + batteryCount);
+                else batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
             //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
@@ -225,12 +225,12 @@ public class PlayerController : MonoBehaviour
             }
         }
 //if we add battery while 'firing' flashlight
-        if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
+        if (Input.GetKeyDown(VITA + SQUARE) && hasFlashlight && InventoryManager.batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
         {   
             StopAllCoroutines();
             StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, duration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
             if (flashlightCharge < 1.0f){
-            batteryCount -= 1;
+            InventoryManager.batteryCount -= 1;
             //add to charge and set progress bar based on charge amount
             flashlightCharge += 0.5f;
                 if(flashlight.intensity < 10){
@@ -238,10 +238,10 @@ public class PlayerController : MonoBehaviour
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
             //change text formatting based on number of characters
-                if (batteryCount < 10){
-                    batteryText.text = (" " + batteryCount);
+                  if (InventoryManager.batteryCount < 10){
+                    batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
                 }
-                else batteryText.text = ("" + batteryCount);
+                else batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
             //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();

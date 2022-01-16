@@ -428,6 +428,10 @@ struct VertexJitter_t4087429332;
 struct U3CAnimateVertexColorsU3Ec__Iterator0_t225534713;
 // TMPro.Examples.VertexJitter/VertexAnim[]
 struct VertexAnimU5BU5D_t1611656175;
+// TMPro.Examples.VertexShakeA
+struct VertexShakeA_t4262048139;
+// TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0
+struct U3CAnimateVertexColorsU3Ec__Iterator0_t956521787;
 // TMPro.FaceInfo
 struct FaceInfo_t2243299176;
 // TMPro.FastAction
@@ -682,6 +686,8 @@ struct UIVertexU5BU5D_t1981460040;
 struct Vector2U5BU5D_t1457185986;
 // UnityEngine.Vector3[]
 struct Vector3U5BU5D_t1718750761;
+// UnityEngine.Vector3[][]
+struct Vector3U5BU5DU5BU5D_t546443028;
 // UnityEngine.Vector4[]
 struct Vector4U5BU5D_t934056436;
 // UnityEngine.WaitForEndOfFrame
@@ -752,6 +758,7 @@ extern RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CAnimatePropertiesU3Ec__Iterator0_t4041402054_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CAnimateVertexColorsU3Ec__Iterator0_t225534713_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CAnimateVertexColorsU3Ec__Iterator0_t897284962_il2cpp_TypeInfo_var;
+extern RuntimeClass* U3CAnimateVertexColorsU3Ec__Iterator0_t956521787_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CDisplayTextMeshFloatingTextU3Ec__Iterator1_t865582314_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CDisplayTextMeshProFloatingTextU3Ec__Iterator0_t2967292235_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CExecutePassU3Ec__Iterator0_t1039690031_il2cpp_TypeInfo_var;
@@ -1127,6 +1134,7 @@ extern const RuntimeMethod* UnityEvent_3_AddListener_m496588608_RuntimeMethod_va
 extern const RuntimeMethod* UnityEvent_3_RemoveListener_m1821594796_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_3_RemoveListener_m2313067677_RuntimeMethod_var;
 extern const RuntimeMethod* VertexJitter_ON_TEXT_CHANGED_m106761234_RuntimeMethod_var;
+extern const RuntimeMethod* VertexShakeA_ON_TEXT_CHANGED_m164288395_RuntimeMethod_var;
 extern const RuntimeType* Font_t1956802104_0_0_0_var;
 extern const RuntimeType* Texture2D_t3840446185_0_0_0_var;
 extern const uint32_t Benchmark01_Start_m4262200517_MetadataUsageId;
@@ -1376,6 +1384,11 @@ extern const uint32_t VertexJitter_Awake_m1916431873_MetadataUsageId;
 extern const uint32_t VertexJitter_ON_TEXT_CHANGED_m106761234_MetadataUsageId;
 extern const uint32_t VertexJitter_OnDisable_m3162093306_MetadataUsageId;
 extern const uint32_t VertexJitter_OnEnable_m2083685364_MetadataUsageId;
+extern const uint32_t VertexShakeA_AnimateVertexColors_m1885834968_MetadataUsageId;
+extern const uint32_t VertexShakeA_Awake_m3382793937_MetadataUsageId;
+extern const uint32_t VertexShakeA_ON_TEXT_CHANGED_m164288395_MetadataUsageId;
+extern const uint32_t VertexShakeA_OnDisable_m3522574011_MetadataUsageId;
+extern const uint32_t VertexShakeA_OnEnable_m2529139755_MetadataUsageId;
 extern const uint32_t WorkPathFoundEvent__ctor_m724692328_MetadataUsageId;
 struct Color32_t2600501292 ;
 struct Exception_t_marshaled_com;
@@ -12554,6 +12567,119 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T225534713_H
+#ifndef U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T956521787_H
+#define U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T956521787_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0
+struct  U3CAnimateVertexColorsU3Ec__Iterator0_t956521787  : public RuntimeObject
+{
+public:
+	// TMPro.TMP_TextInfo TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<textInfo>__0
+	TMP_TextInfo_t3598145122 * ___U3CtextInfoU3E__0_0;
+	// UnityEngine.Vector3[][] TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<copyOfVertices>__0
+	Vector3U5BU5DU5BU5D_t546443028* ___U3CcopyOfVerticesU3E__0_1;
+	// System.Int32 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<characterCount>__1
+	int32_t ___U3CcharacterCountU3E__1_2;
+	// System.Int32 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<lineCount>__1
+	int32_t ___U3ClineCountU3E__1_3;
+	// UnityEngine.Matrix4x4 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::<matrix>__2
+	Matrix4x4_t1817901843  ___U3CmatrixU3E__2_4;
+	// TMPro.Examples.VertexShakeA TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$this
+	VertexShakeA_t4262048139 * ___U24this_5;
+	// System.Object TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$current
+	RuntimeObject * ___U24current_6;
+	// System.Boolean TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$disposing
+	bool ___U24disposing_7;
+	// System.Int32 TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::$PC
+	int32_t ___U24PC_8;
+
+public:
+	inline static int32_t get_offset_of_U3CtextInfoU3E__0_0() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CtextInfoU3E__0_0)); }
+	inline TMP_TextInfo_t3598145122 * get_U3CtextInfoU3E__0_0() const { return ___U3CtextInfoU3E__0_0; }
+	inline TMP_TextInfo_t3598145122 ** get_address_of_U3CtextInfoU3E__0_0() { return &___U3CtextInfoU3E__0_0; }
+	inline void set_U3CtextInfoU3E__0_0(TMP_TextInfo_t3598145122 * value)
+	{
+		___U3CtextInfoU3E__0_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CtextInfoU3E__0_0), value);
+	}
+
+	inline static int32_t get_offset_of_U3CcopyOfVerticesU3E__0_1() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CcopyOfVerticesU3E__0_1)); }
+	inline Vector3U5BU5DU5BU5D_t546443028* get_U3CcopyOfVerticesU3E__0_1() const { return ___U3CcopyOfVerticesU3E__0_1; }
+	inline Vector3U5BU5DU5BU5D_t546443028** get_address_of_U3CcopyOfVerticesU3E__0_1() { return &___U3CcopyOfVerticesU3E__0_1; }
+	inline void set_U3CcopyOfVerticesU3E__0_1(Vector3U5BU5DU5BU5D_t546443028* value)
+	{
+		___U3CcopyOfVerticesU3E__0_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CcopyOfVerticesU3E__0_1), value);
+	}
+
+	inline static int32_t get_offset_of_U3CcharacterCountU3E__1_2() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CcharacterCountU3E__1_2)); }
+	inline int32_t get_U3CcharacterCountU3E__1_2() const { return ___U3CcharacterCountU3E__1_2; }
+	inline int32_t* get_address_of_U3CcharacterCountU3E__1_2() { return &___U3CcharacterCountU3E__1_2; }
+	inline void set_U3CcharacterCountU3E__1_2(int32_t value)
+	{
+		___U3CcharacterCountU3E__1_2 = value;
+	}
+
+	inline static int32_t get_offset_of_U3ClineCountU3E__1_3() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3ClineCountU3E__1_3)); }
+	inline int32_t get_U3ClineCountU3E__1_3() const { return ___U3ClineCountU3E__1_3; }
+	inline int32_t* get_address_of_U3ClineCountU3E__1_3() { return &___U3ClineCountU3E__1_3; }
+	inline void set_U3ClineCountU3E__1_3(int32_t value)
+	{
+		___U3ClineCountU3E__1_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CmatrixU3E__2_4() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U3CmatrixU3E__2_4)); }
+	inline Matrix4x4_t1817901843  get_U3CmatrixU3E__2_4() const { return ___U3CmatrixU3E__2_4; }
+	inline Matrix4x4_t1817901843 * get_address_of_U3CmatrixU3E__2_4() { return &___U3CmatrixU3E__2_4; }
+	inline void set_U3CmatrixU3E__2_4(Matrix4x4_t1817901843  value)
+	{
+		___U3CmatrixU3E__2_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_5() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24this_5)); }
+	inline VertexShakeA_t4262048139 * get_U24this_5() const { return ___U24this_5; }
+	inline VertexShakeA_t4262048139 ** get_address_of_U24this_5() { return &___U24this_5; }
+	inline void set_U24this_5(VertexShakeA_t4262048139 * value)
+	{
+		___U24this_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_6() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24current_6)); }
+	inline RuntimeObject * get_U24current_6() const { return ___U24current_6; }
+	inline RuntimeObject ** get_address_of_U24current_6() { return &___U24current_6; }
+	inline void set_U24current_6(RuntimeObject * value)
+	{
+		___U24current_6 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_6), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_7() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24disposing_7)); }
+	inline bool get_U24disposing_7() const { return ___U24disposing_7; }
+	inline bool* get_address_of_U24disposing_7() { return &___U24disposing_7; }
+	inline void set_U24disposing_7(bool value)
+	{
+		___U24disposing_7 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_8() { return static_cast<int32_t>(offsetof(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787, ___U24PC_8)); }
+	inline int32_t get_U24PC_8() const { return ___U24PC_8; }
+	inline int32_t* get_address_of_U24PC_8() { return &___U24PC_8; }
+	inline void set_U24PC_8(int32_t value)
+	{
+		___U24PC_8 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CANIMATEVERTEXCOLORSU3EC__ITERATOR0_T956521787_H
 #ifndef EXTENTS_T3837212874_H
 #define EXTENTS_T3837212874_H
 #ifdef __clang__
@@ -26623,6 +26749,86 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VERTEXJITTER_T4087429332_H
+#ifndef VERTEXSHAKEA_T4262048139_H
+#define VERTEXSHAKEA_T4262048139_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.VertexShakeA
+struct  VertexShakeA_t4262048139  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Single TMPro.Examples.VertexShakeA::AngleMultiplier
+	float ___AngleMultiplier_4;
+	// System.Single TMPro.Examples.VertexShakeA::SpeedMultiplier
+	float ___SpeedMultiplier_5;
+	// System.Single TMPro.Examples.VertexShakeA::ScaleMultiplier
+	float ___ScaleMultiplier_6;
+	// System.Single TMPro.Examples.VertexShakeA::RotationMultiplier
+	float ___RotationMultiplier_7;
+	// TMPro.TMP_Text TMPro.Examples.VertexShakeA::m_TextComponent
+	TMP_Text_t2599618874 * ___m_TextComponent_8;
+	// System.Boolean TMPro.Examples.VertexShakeA::hasTextChanged
+	bool ___hasTextChanged_9;
+
+public:
+	inline static int32_t get_offset_of_AngleMultiplier_4() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___AngleMultiplier_4)); }
+	inline float get_AngleMultiplier_4() const { return ___AngleMultiplier_4; }
+	inline float* get_address_of_AngleMultiplier_4() { return &___AngleMultiplier_4; }
+	inline void set_AngleMultiplier_4(float value)
+	{
+		___AngleMultiplier_4 = value;
+	}
+
+	inline static int32_t get_offset_of_SpeedMultiplier_5() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___SpeedMultiplier_5)); }
+	inline float get_SpeedMultiplier_5() const { return ___SpeedMultiplier_5; }
+	inline float* get_address_of_SpeedMultiplier_5() { return &___SpeedMultiplier_5; }
+	inline void set_SpeedMultiplier_5(float value)
+	{
+		___SpeedMultiplier_5 = value;
+	}
+
+	inline static int32_t get_offset_of_ScaleMultiplier_6() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___ScaleMultiplier_6)); }
+	inline float get_ScaleMultiplier_6() const { return ___ScaleMultiplier_6; }
+	inline float* get_address_of_ScaleMultiplier_6() { return &___ScaleMultiplier_6; }
+	inline void set_ScaleMultiplier_6(float value)
+	{
+		___ScaleMultiplier_6 = value;
+	}
+
+	inline static int32_t get_offset_of_RotationMultiplier_7() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___RotationMultiplier_7)); }
+	inline float get_RotationMultiplier_7() const { return ___RotationMultiplier_7; }
+	inline float* get_address_of_RotationMultiplier_7() { return &___RotationMultiplier_7; }
+	inline void set_RotationMultiplier_7(float value)
+	{
+		___RotationMultiplier_7 = value;
+	}
+
+	inline static int32_t get_offset_of_m_TextComponent_8() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___m_TextComponent_8)); }
+	inline TMP_Text_t2599618874 * get_m_TextComponent_8() const { return ___m_TextComponent_8; }
+	inline TMP_Text_t2599618874 ** get_address_of_m_TextComponent_8() { return &___m_TextComponent_8; }
+	inline void set_m_TextComponent_8(TMP_Text_t2599618874 * value)
+	{
+		___m_TextComponent_8 = value;
+		Il2CppCodeGenWriteBarrier((&___m_TextComponent_8), value);
+	}
+
+	inline static int32_t get_offset_of_hasTextChanged_9() { return static_cast<int32_t>(offsetof(VertexShakeA_t4262048139, ___hasTextChanged_9)); }
+	inline bool get_hasTextChanged_9() const { return ___hasTextChanged_9; }
+	inline bool* get_address_of_hasTextChanged_9() { return &___hasTextChanged_9; }
+	inline void set_hasTextChanged_9(bool value)
+	{
+		___hasTextChanged_9 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VERTEXSHAKEA_T4262048139_H
 #ifndef TMP_TEXTEVENTHANDLER_T1869054637_H
 #define TMP_TEXTEVENTHANDLER_T1869054637_H
 #ifdef __clang__
@@ -32395,6 +32601,10 @@ extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m
 extern "C" IL2CPP_METHOD_ATTR float Mathf_PingPong_m2878066270 (RuntimeObject * __this /* static, unused */, float p0, float p1, const RuntimeMethod* method);
 // System.Single UnityEngine.Mathf::SmoothStep(System.Single,System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR float Mathf_SmoothStep_m2878822371 (RuntimeObject * __this /* static, unused */, float p0, float p1, float p2, const RuntimeMethod* method);
+// System.Collections.IEnumerator TMPro.Examples.VertexShakeA::AnimateVertexColors()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* VertexShakeA_AnimateVertexColors_m1885834968 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method);
+// System.Void TMPro.Examples.VertexShakeA/<AnimateVertexColors>c__Iterator0::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m3442072150 (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * __this, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -41313,35 +41523,6 @@ extern "C" IL2CPP_METHOD_ATTR void PlayerController_Awake_m4099664953 (PlayerCon
 		Image_t2670269651 * L_7 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_6, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
 		float L_8 = Image_get_fillAmount_m2193224718(L_7, /*hidden argument*/NULL);
 		__this->set_flashlightCharge_33(L_8);
-		int32_t L_9 = __this->get_batteryCount_31();
-		if ((((int32_t)L_9) >= ((int32_t)((int32_t)10))))
-		{
-			goto IL_0080;
-		}
-	}
-	{
-		TextMeshProUGUI_t529313277 * L_10 = __this->get_batteryText_32();
-		int32_t L_11 = __this->get_batteryCount_31();
-		int32_t L_12 = L_11;
-		RuntimeObject * L_13 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_12);
-		String_t* L_14 = String_Concat_m904156431(NULL /*static, unused*/, _stringLiteral3452614528, L_13, /*hidden argument*/NULL);
-		TMP_Text_set_text_m1216996582(L_10, L_14, /*hidden argument*/NULL);
-		goto IL_00a0;
-	}
-
-IL_0080:
-	{
-		TextMeshProUGUI_t529313277 * L_15 = __this->get_batteryText_32();
-		String_t* L_16 = ((String_t_StaticFields*)il2cpp_codegen_static_fields_for(String_t_il2cpp_TypeInfo_var))->get_Empty_5();
-		int32_t L_17 = __this->get_batteryCount_31();
-		int32_t L_18 = L_17;
-		RuntimeObject * L_19 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_18);
-		String_t* L_20 = String_Concat_m904156431(NULL /*static, unused*/, L_16, L_19, /*hidden argument*/NULL);
-		TMP_Text_set_text_m1216996582(L_15, L_20, /*hidden argument*/NULL);
-	}
-
-IL_00a0:
-	{
 		return;
 	}
 }
@@ -58083,6 +58264,145 @@ extern "C" IL2CPP_METHOD_ATTR void U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m
 		NotSupportedException_t1314879016 * L_0 = (NotSupportedException_t1314879016 *)il2cpp_codegen_object_new(NotSupportedException_t1314879016_il2cpp_TypeInfo_var);
 		NotSupportedException__ctor_m2730133172(L_0, /*hidden argument*/NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, U3CAnimateVertexColorsU3Ec__Iterator0_Reset_m1037330916_RuntimeMethod_var);
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void TMPro.Examples.VertexShakeA::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA__ctor_m1957129449 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_AngleMultiplier_4((1.0f));
+		__this->set_SpeedMultiplier_5((1.0f));
+		__this->set_ScaleMultiplier_6((1.0f));
+		__this->set_RotationMultiplier_7((1.0f));
+		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::Awake()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_Awake_m3382793937 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_Awake_m3382793937_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		TMP_Text_t2599618874 * L_0 = Component_GetComponent_TisTMP_Text_t2599618874_m4275295679(__this, /*hidden argument*/Component_GetComponent_TisTMP_Text_t2599618874_m4275295679_RuntimeMethod_var);
+		__this->set_m_TextComponent_8(L_0);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::OnEnable()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_OnEnable_m2529139755 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_OnEnable_m2529139755_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var);
+		FastAction_1_t4292545838 * L_0 = ((TMPro_EventManager_t712497257_StaticFields*)il2cpp_codegen_static_fields_for(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var))->get_TEXT_CHANGED_EVENT_12();
+		intptr_t L_1 = (intptr_t)VertexShakeA_ON_TEXT_CHANGED_m164288395_RuntimeMethod_var;
+		Action_1_t803475548 * L_2 = (Action_1_t803475548 *)il2cpp_codegen_object_new(Action_1_t803475548_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1040786011(L_2, __this, (intptr_t)L_1, /*hidden argument*/Action_1__ctor_m1040786011_RuntimeMethod_var);
+		FastAction_1_Add_m2069965716(L_0, L_2, /*hidden argument*/FastAction_1_Add_m2069965716_RuntimeMethod_var);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::OnDisable()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_OnDisable_m3522574011 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_OnDisable_m3522574011_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var);
+		FastAction_1_t4292545838 * L_0 = ((TMPro_EventManager_t712497257_StaticFields*)il2cpp_codegen_static_fields_for(TMPro_EventManager_t712497257_il2cpp_TypeInfo_var))->get_TEXT_CHANGED_EVENT_12();
+		intptr_t L_1 = (intptr_t)VertexShakeA_ON_TEXT_CHANGED_m164288395_RuntimeMethod_var;
+		Action_1_t803475548 * L_2 = (Action_1_t803475548 *)il2cpp_codegen_object_new(Action_1_t803475548_il2cpp_TypeInfo_var);
+		Action_1__ctor_m1040786011(L_2, __this, (intptr_t)L_1, /*hidden argument*/Action_1__ctor_m1040786011_RuntimeMethod_var);
+		FastAction_1_Remove_m2257773717(L_0, L_2, /*hidden argument*/FastAction_1_Remove_m2257773717_RuntimeMethod_var);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::Start()
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_Start_m1684282329 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject* L_0 = VertexShakeA_AnimateVertexColors_m1885834968(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void TMPro.Examples.VertexShakeA::ON_TEXT_CHANGED(UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR void VertexShakeA_ON_TEXT_CHANGED_m164288395 (VertexShakeA_t4262048139 * __this, Object_t631007953 * ___obj0, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_ON_TEXT_CHANGED_m164288395_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		TMP_Text_t2599618874 * L_0 = __this->get_m_TextComponent_8();
+		TMP_Text_t2599618874 * L_1 = L_0;
+		___obj0 = L_1;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_2 = Object_op_Implicit_m3574996620(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
+		if (!L_2)
+		{
+			goto IL_001a;
+		}
+	}
+	{
+		__this->set_hasTextChanged_9((bool)1);
+	}
+
+IL_001a:
+	{
+		return;
+	}
+}
+// System.Collections.IEnumerator TMPro.Examples.VertexShakeA::AnimateVertexColors()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* VertexShakeA_AnimateVertexColors_m1885834968 (VertexShakeA_t4262048139 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (VertexShakeA_AnimateVertexColors_m1885834968_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * V_0 = NULL;
+	{
+		U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * L_0 = (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 *)il2cpp_codegen_object_new(U3CAnimateVertexColorsU3Ec__Iterator0_t956521787_il2cpp_TypeInfo_var);
+		U3CAnimateVertexColorsU3Ec__Iterator0__ctor_m3442072150(L_0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * L_1 = V_0;
+		L_1->set_U24this_5(__this);
+		U3CAnimateVertexColorsU3Ec__Iterator0_t956521787 * L_2 = V_0;
+		return L_2;
 	}
 }
 #ifdef __clang__
