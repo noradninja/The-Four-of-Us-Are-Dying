@@ -68800,6 +68800,13 @@ void* RuntimeInvoker_Boolean_t97287965_RaycastHit_t1056001966 (Il2CppMethodPoint
 	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
 }
 
+void* RuntimeInvoker_Boolean_t97287965_Touch_t1921856868 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef bool (*Func)(void* obj, Touch_t1921856868  p1, const RuntimeMethod* method);
+	bool ret = ((Func)methodPointer)(obj, *((Touch_t1921856868 *)args[0]), methodMetadata);
+	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
+}
+
 void* RuntimeInvoker_Boolean_t97287965_UICharInfo_t75501106 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
 {
 	typedef bool (*Func)(void* obj, UICharInfo_t75501106  p1, const RuntimeMethod* method);
@@ -69969,6 +69976,13 @@ void* RuntimeInvoker_Int32_t2950945753_HitInfo_t3229609740 (Il2CppMethodPointer 
 	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
 }
 
+void* RuntimeInvoker_Int32_t2950945753_Touch_t1921856868 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef int32_t (*Func)(void* obj, Touch_t1921856868  p1, const RuntimeMethod* method);
+	int32_t ret = ((Func)methodPointer)(obj, *((Touch_t1921856868 *)args[0]), methodMetadata);
+	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
+}
+
 void* RuntimeInvoker_Int32_t2950945753_ColorBlock_t2139031574 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
 {
 	typedef int32_t (*Func)(void* obj, ColorBlock_t2139031574  p1, const RuntimeMethod* method);
@@ -70718,6 +70732,13 @@ void* RuntimeInvoker_Void_t1185182177_HitInfo_t3229609740 (Il2CppMethodPointer m
 	return NULL;
 }
 
+void* RuntimeInvoker_Void_t1185182177_Touch_t1921856868 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, Touch_t1921856868  p1, const RuntimeMethod* method);
+	((Func)methodPointer)(obj, *((Touch_t1921856868 *)args[0]), methodMetadata);
+	return NULL;
+}
+
 void* RuntimeInvoker_Void_t1185182177_UICharInfo_t75501106 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
 {
 	typedef void (*Func)(void* obj, UICharInfo_t75501106  p1, const RuntimeMethod* method);
@@ -71450,6 +71471,13 @@ void* RuntimeInvoker_Void_t1185182177_Int32_t2950945753_RaycastHit_t1056001966 (
 {
 	typedef void (*Func)(void* obj, int32_t p1, RaycastHit_t1056001966  p2, const RuntimeMethod* method);
 	((Func)methodPointer)(obj, *((int32_t*)args[0]), *((RaycastHit_t1056001966 *)args[1]), methodMetadata);
+	return NULL;
+}
+
+void* RuntimeInvoker_Void_t1185182177_Int32_t2950945753_Touch_t1921856868 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef void (*Func)(void* obj, int32_t p1, Touch_t1921856868  p2, const RuntimeMethod* method);
+	((Func)methodPointer)(obj, *((int32_t*)args[0]), *((Touch_t1921856868 *)args[1]), methodMetadata);
 	return NULL;
 }
 
@@ -73592,6 +73620,13 @@ void* RuntimeInvoker_HitInfo_t3229609740 (Il2CppMethodPointer methodPointer, con
 {
 	typedef HitInfo_t3229609740  (*Func)(void* obj, const RuntimeMethod* method);
 	HitInfo_t3229609740  ret = ((Func)methodPointer)(obj, methodMetadata);
+	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
+}
+
+void* RuntimeInvoker_Touch_t1921856868 (Il2CppMethodPointer methodPointer, const RuntimeMethod* methodMetadata, void* obj, void** args)
+{
+	typedef Touch_t1921856868  (*Func)(void* obj, const RuntimeMethod* method);
+	Touch_t1921856868  ret = ((Func)methodPointer)(obj, methodMetadata);
 	return Box(il2cpp_codegen_class_from_type (il2cpp_codegen_method_return_type(methodMetadata)), &ret);
 }
 
@@ -76052,7 +76087,7 @@ void* RuntimeInvoker_RuntimeObject_FloatTween_t1274330004 (Il2CppMethodPointer m
 	return ret;
 }
 
-extern const InvokerMethod g_Il2CppInvokerPointers[3762] = 
+extern const InvokerMethod g_Il2CppInvokerPointers[3767] = 
 {
 	RuntimeInvoker_RuntimeObject_RuntimeObject,
 	RuntimeInvoker_RuntimeObject_RuntimeObject_RuntimeObject,
@@ -78780,6 +78815,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[3762] =
 	RuntimeInvoker_Boolean_t97287965_PlayableBinding_t354260709,
 	RuntimeInvoker_Boolean_t97287965_RaycastHit2D_t2279581989,
 	RuntimeInvoker_Boolean_t97287965_RaycastHit_t1056001966,
+	RuntimeInvoker_Boolean_t97287965_Touch_t1921856868,
 	RuntimeInvoker_Boolean_t97287965_UICharInfo_t75501106,
 	RuntimeInvoker_Boolean_t97287965_UILineInfo_t4195266810,
 	RuntimeInvoker_Boolean_t97287965_UIVertex_t4057497605,
@@ -78947,6 +78983,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[3762] =
 	RuntimeInvoker_Int32_t2950945753_RaycastHit_t1056001966,
 	RuntimeInvoker_Int32_t2950945753_RenderTargetIdentifier_t2079184500,
 	RuntimeInvoker_Int32_t2950945753_HitInfo_t3229609740,
+	RuntimeInvoker_Int32_t2950945753_Touch_t1921856868,
 	RuntimeInvoker_Int32_t2950945753_ColorBlock_t2139031574,
 	RuntimeInvoker_Int32_t2950945753_Navigation_t3049316579,
 	RuntimeInvoker_Int32_t2950945753_SpriteState_t1362986479,
@@ -79054,6 +79091,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[3762] =
 	RuntimeInvoker_Void_t1185182177_RaycastHit2D_t2279581989,
 	RuntimeInvoker_Void_t1185182177_RaycastHit_t1056001966,
 	RuntimeInvoker_Void_t1185182177_HitInfo_t3229609740,
+	RuntimeInvoker_Void_t1185182177_Touch_t1921856868,
 	RuntimeInvoker_Void_t1185182177_UICharInfo_t75501106,
 	RuntimeInvoker_Void_t1185182177_UILineInfo_t4195266810,
 	RuntimeInvoker_Void_t1185182177_BorderVertex_t3000372183,
@@ -79159,6 +79197,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[3762] =
 	RuntimeInvoker_Void_t1185182177_Int32_t2950945753_PlayableBinding_t354260709,
 	RuntimeInvoker_Void_t1185182177_Int32_t2950945753_RaycastHit2D_t2279581989,
 	RuntimeInvoker_Void_t1185182177_Int32_t2950945753_RaycastHit_t1056001966,
+	RuntimeInvoker_Void_t1185182177_Int32_t2950945753_Touch_t1921856868,
 	RuntimeInvoker_Void_t1185182177_Int32_t2950945753_ColorBlock_t2139031574,
 	RuntimeInvoker_Void_t1185182177_Int32_t2950945753_Navigation_t3049316579,
 	RuntimeInvoker_Void_t1185182177_Int32_t2950945753_SpriteState_t1362986479,
@@ -79465,6 +79504,7 @@ extern const InvokerMethod g_Il2CppInvokerPointers[3762] =
 	RuntimeInvoker_RenderBufferLoadAction_t2221251489,
 	RuntimeInvoker_RenderBufferStoreAction_t1747813666,
 	RuntimeInvoker_HitInfo_t3229609740,
+	RuntimeInvoker_Touch_t1921856868,
 	RuntimeInvoker_UICharInfo_t75501106,
 	RuntimeInvoker_UILineInfo_t4195266810,
 	RuntimeInvoker_UIVertex_t4057497605,

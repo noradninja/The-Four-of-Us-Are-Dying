@@ -7,7 +7,7 @@
 
 Shader "Vita/Unlit/Transparent" {
 Properties {
-    _MainTex ("Base (RGB) Trans (A)", 2D) = "white" {}
+    _MainTex ("Base (RGB)", 2D) = "white" {}
 	_Alpha("Alpha", Range(0.0, 1.0)) = 1.0
 }
 

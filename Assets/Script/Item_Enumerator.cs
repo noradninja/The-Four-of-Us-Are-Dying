@@ -115,6 +115,7 @@ public class Item_Enumerator : MonoBehaviour {
 
     void OnTriggerEnter (Collider col){
 		if(col == player){
+			SetPosition();
 			isActiveObject = true;
             iconImage.color = iconVisible;
             OSDText.color = colorOn;

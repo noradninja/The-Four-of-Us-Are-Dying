@@ -2337,7 +2337,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalScale.x
@@ -13339,7 +13339,7 @@ GameObject:
   - component: {fileID: 459606276}
   - component: {fileID: 459606277}
   m_Layer: 17
-  m_Name: Batteries_Empty
+  m_Name: Batteries (Inventory)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -21820,28 +21820,13 @@ GameObject:
   m_Component:
   - component: {fileID: 986674713}
   - component: {fileID: 986674712}
-  - component: {fileID: 986674710}
   m_Layer: 0
   m_Name: Inventory_Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &986674710
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 986674709}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cd1890cdc009848ac7d87a68ef0126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: d381d4349e5cfc24c93bb6280e373058, type: 2}
-  Sharpness: 4
-  Threshold: 0.2
+  m_IsActive: 0
 --- !u!20 &986674712
 Camera:
   m_ObjectHideFlags: 0
@@ -22865,7 +22850,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_Name
-      value: Meds (2)
+      value: Meds (Inventory)
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -23860,6 +23845,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   battText: {fileID: 1590774920}
   medText: {fileID: 477846672}
+  inventoryMat: {fileID: 2100000, guid: 303f225607a84484c862c1ed5fd71af6, type: 2}
+  inventoryCam: {fileID: 986674709}
 --- !u!1 &1204110420
 GameObject:
   m_ObjectHideFlags: 0
@@ -26460,7 +26447,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1318483819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30087,8 +30074,8 @@ Transform:
   - {fileID: 242288811}
   - {fileID: 1410589553}
   - {fileID: 255612825}
-  - {fileID: 2017770387}
   - {fileID: 1701024993}
+  - {fileID: 2017770387}
   - {fileID: 2018318782}
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -30282,7 +30269,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 67ea3e22f7af9764794d56b8997d5980, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 67ea3e22f7af9764794d56b8997d5980, type: 3}
       propertyPath: m_LocalScale.x
@@ -35221,7 +35208,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14389038
+      value: 0.1568
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_LocalPosition.z

@@ -323,6 +323,7 @@ extern const Il2CppType Camera_t4157153871_0_0_0;
 extern const Il2CppType Behaviour_t1437897464_0_0_0;
 extern const Il2CppType Component_t1923634451_0_0_0;
 extern const Il2CppType Object_t631007953_0_0_0;
+extern const Il2CppType Touch_t1921856868_0_0_0;
 extern const Il2CppType RenderTargetIdentifier_t2079184500_0_0_0;
 extern const Il2CppType RenderBufferLoadAction_t2221251489_0_0_0;
 extern const Il2CppType RenderBufferStoreAction_t1747813666_0_0_0;
@@ -2186,6 +2187,8 @@ static const RuntimeType* GenInst_Component_t1923634451_0_0_0_Types[] = { (&Comp
 extern const Il2CppGenericInst GenInst_Component_t1923634451_0_0_0 = { 1, GenInst_Component_t1923634451_0_0_0_Types };
 static const RuntimeType* GenInst_Object_t631007953_0_0_0_Types[] = { (&Object_t631007953_0_0_0) };
 extern const Il2CppGenericInst GenInst_Object_t631007953_0_0_0 = { 1, GenInst_Object_t631007953_0_0_0_Types };
+static const RuntimeType* GenInst_Touch_t1921856868_0_0_0_Types[] = { (&Touch_t1921856868_0_0_0) };
+extern const Il2CppGenericInst GenInst_Touch_t1921856868_0_0_0 = { 1, GenInst_Touch_t1921856868_0_0_0_Types };
 static const RuntimeType* GenInst_RenderTargetIdentifier_t2079184500_0_0_0_Types[] = { (&RenderTargetIdentifier_t2079184500_0_0_0) };
 extern const Il2CppGenericInst GenInst_RenderTargetIdentifier_t2079184500_0_0_0 = { 1, GenInst_RenderTargetIdentifier_t2079184500_0_0_0_Types };
 static const RuntimeType* GenInst_RenderBufferLoadAction_t2221251489_0_0_0_Types[] = { (&RenderBufferLoadAction_t2221251489_0_0_0) };
@@ -4776,7 +4779,7 @@ static const RuntimeType* GenInst_VolumeParameter_1_t4078826557_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t4078826557_0_0_0 = { 1, GenInst_VolumeParameter_1_t4078826557_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t2051106872_0_0_0_Types[] = { (&VolumeParameter_1_t2051106872_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t2051106872_0_0_0 = { 1, GenInst_VolumeParameter_1_t2051106872_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1677] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1678] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_String_t_0_0_0,
@@ -5160,6 +5163,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1677] =
 	&GenInst_Behaviour_t1437897464_0_0_0,
 	&GenInst_Component_t1923634451_0_0_0,
 	&GenInst_Object_t631007953_0_0_0,
+	&GenInst_Touch_t1921856868_0_0_0,
 	&GenInst_RenderTargetIdentifier_t2079184500_0_0_0,
 	&GenInst_RenderBufferLoadAction_t2221251489_0_0_0,
 	&GenInst_RenderBufferStoreAction_t1747813666_0_0_0,
