@@ -27806,6 +27806,16 @@ extern "C" IL2CPP_METHOD_ATTR void Debug_LogWarningFormat_m1153215311 (RuntimeOb
 		return;
 	}
 }
+// System.Boolean UnityEngine.Debug::get_isDebugBuild()
+extern "C" IL2CPP_METHOD_ATTR bool Debug_get_isDebugBuild_m1389897688 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	typedef bool (*Debug_get_isDebugBuild_m1389897688_ftn) ();
+	static Debug_get_isDebugBuild_m1389897688_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Debug_get_isDebugBuild_m1389897688_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Debug::get_isDebugBuild()");
+	bool retVal = _il2cpp_icall_func();
+	return retVal;
+}
 // System.Void UnityEngine.Debug::.cctor()
 extern "C" IL2CPP_METHOD_ATTR void Debug__cctor_m1523394265 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -36669,6 +36679,16 @@ extern "C" IL2CPP_METHOD_ATTR void LODGroup_set_animateCrossFading_m2629639020 (
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (LODGroup_set_animateCrossFading_m2629639020_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LODGroup::set_animateCrossFading(System.Boolean)");
 	_il2cpp_icall_func(__this, ___value0);
+}
+// UnityEngine.LOD[] UnityEngine.LODGroup::GetLODs()
+extern "C" IL2CPP_METHOD_ATTR LODU5BU5D_t3858365489* LODGroup_GetLODs_m1141950934 (LODGroup_t1153958876 * __this, const RuntimeMethod* method)
+{
+	typedef LODU5BU5D_t3858365489* (*LODGroup_GetLODs_m1141950934_ftn) (LODGroup_t1153958876 *);
+	static LODGroup_GetLODs_m1141950934_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (LODGroup_GetLODs_m1141950934_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.LODGroup::GetLODs()");
+	LODU5BU5D_t3858365489* retVal = _il2cpp_icall_func(__this);
+	return retVal;
 }
 // System.Void UnityEngine.LODGroup::SetLODs(UnityEngine.LOD[])
 extern "C" IL2CPP_METHOD_ATTR void LODGroup_SetLODs_m704416562 (LODGroup_t1153958876 * __this, LODU5BU5D_t3858365489* ___lods0, const RuntimeMethod* method)

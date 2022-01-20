@@ -432,6 +432,64 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RENDERTEXTUREFORMAT_T962350765_H
+#ifndef TILTSHIFTMODE_T1375727185_H
+#define TILTSHIFTMODE_T1375727185_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityStandardAssets.ImageEffects.TiltShift/TiltShiftMode
+struct  TiltShiftMode_t1375727185 
+{
+public:
+	// System.Int32 UnityStandardAssets.ImageEffects.TiltShift/TiltShiftMode::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(TiltShiftMode_t1375727185, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // TILTSHIFTMODE_T1375727185_H
+#ifndef TILTSHIFTQUALITY_T4173331534_H
+#define TILTSHIFTQUALITY_T4173331534_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityStandardAssets.ImageEffects.TiltShift/TiltShiftQuality
+struct  TiltShiftQuality_t4173331534 
+{
+public:
+	// System.Int32 UnityStandardAssets.ImageEffects.TiltShift/TiltShiftQuality::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(TiltShiftQuality_t4173331534, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // TILTSHIFTQUALITY_T4173331534_H
 #ifndef ADAPTIVETEXSIZE_T1062941056_H
 #define ADAPTIVETEXSIZE_T1062941056_H
 #ifdef __clang__
@@ -1107,8 +1165,24 @@ public:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3700 = { sizeof (Tonemapping_t2837480251), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3700[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3700 = { sizeof (TiltShiftMode_t1375727185)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3700[3] = 
+{
+	TiltShiftMode_t1375727185::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3701 = { sizeof (TiltShiftQuality_t4173331534)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3701[5] = 
+{
+	TiltShiftQuality_t4173331534::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
+	0,
+	0,
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3702 = { sizeof (Tonemapping_t2837480251), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3702[13] = 
 {
 	Tonemapping_t2837480251::get_offset_of_type_8(),
 	Tonemapping_t2837480251::get_offset_of_adaptiveTextureSize_9(),
@@ -1124,8 +1198,8 @@ extern const int32_t g_FieldOffsetTable3700[13] =
 	Tonemapping_t2837480251::get_offset_of_rt_19(),
 	Tonemapping_t2837480251::get_offset_of_rtFormat_20(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3701 = { sizeof (TonemapperType_t52991894)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3701[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3703 = { sizeof (TonemapperType_t52991894)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3703[8] = 
 {
 	TonemapperType_t52991894::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -1136,8 +1210,8 @@ extern const int32_t g_FieldOffsetTable3701[8] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3702 = { sizeof (AdaptiveTexSize_t1062941056)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3702[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3704 = { sizeof (AdaptiveTexSize_t1062941056)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3704[8] = 
 {
 	AdaptiveTexSize_t1062941056::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -1148,21 +1222,21 @@ extern const int32_t g_FieldOffsetTable3702[8] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3703 = { sizeof (Triangles_t2090031681), -1, sizeof(Triangles_t2090031681_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable3703[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3705 = { sizeof (Triangles_t2090031681), -1, sizeof(Triangles_t2090031681_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable3705[2] = 
 {
 	Triangles_t2090031681_StaticFields::get_offset_of_meshes_0(),
 	Triangles_t2090031681_StaticFields::get_offset_of_currentTris_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3704 = { sizeof (Twirl_t2760508880), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3704[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3706 = { sizeof (Twirl_t2760508880), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3706[3] = 
 {
 	Twirl_t2760508880::get_offset_of_radius_6(),
 	Twirl_t2760508880::get_offset_of_angle_7(),
 	Twirl_t2760508880::get_offset_of_center_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3705 = { sizeof (VignetteAndChromaticAberration_t3308099924), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3705[14] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3707 = { sizeof (VignetteAndChromaticAberration_t3308099924), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3707[14] = 
 {
 	VignetteAndChromaticAberration_t3308099924::get_offset_of_mode_8(),
 	VignetteAndChromaticAberration_t3308099924::get_offset_of_intensity_9(),
@@ -1179,15 +1253,15 @@ extern const int32_t g_FieldOffsetTable3705[14] =
 	VignetteAndChromaticAberration_t3308099924::get_offset_of_m_SeparableBlurMaterial_20(),
 	VignetteAndChromaticAberration_t3308099924::get_offset_of_m_ChromAberrationMaterial_21(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3706 = { sizeof (AberrationMode_t218549536)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3706[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3708 = { sizeof (AberrationMode_t218549536)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3708[3] = 
 {
 	AberrationMode_t218549536::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3707 = { sizeof (Vortex_t3420399868), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3707[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3709 = { sizeof (Vortex_t3420399868), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3709[3] = 
 {
 	Vortex_t3420399868::get_offset_of_radius_6(),
 	Vortex_t3420399868::get_offset_of_angle_7(),

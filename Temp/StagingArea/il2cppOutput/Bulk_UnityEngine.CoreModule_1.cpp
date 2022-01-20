@@ -8702,6 +8702,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // WRAPMODE_T730450702_H
+#ifndef LIGHTMAPTYPE_T2043680572_H
+#define LIGHTMAPTYPE_T2043680572_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngineInternal.LightmapType
+struct  LightmapType_t2043680572 
+{
+public:
+	// System.Int32 UnityEngineInternal.LightmapType::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(LightmapType_t2043680572, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // LIGHTMAPTYPE_T2043680572_H
 #ifndef MATHFINTERNAL_T624072491_H
 #define MATHFINTERNAL_T624072491_H
 #ifdef __clang__
@@ -11895,6 +11924,22 @@ extern "C" IL2CPP_METHOD_ATTR void RenderTextureDescriptor_set_enableRandomWrite
 extern "C" IL2CPP_METHOD_ATTR void RenderTextureDescriptor_set_bindMS_m1595810030 (RenderTextureDescriptor_t1974534975 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)
 extern "C" IL2CPP_METHOD_ATTR void Renderer_get_bounds_Injected_m3112887345 (Renderer_t2627027031 * __this, Bounds_t2266837910 * ___ret0, const RuntimeMethod* method);
+// System.Void UnityEngine.Renderer::SetStaticLightmapST_Injected(UnityEngine.Vector4&)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_Injected_m2649752629 (Renderer_t2627027031 * __this, Vector4_t3319028937 * ___st0, const RuntimeMethod* method);
+// System.Void UnityEngine.Renderer::GetLightmapST_Injected(UnityEngineInternal.LightmapType,UnityEngine.Vector4&)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_GetLightmapST_Injected_m1142860114 (Renderer_t2627027031 * __this, int32_t ___lt0, Vector4_t3319028937 * ___ret1, const RuntimeMethod* method);
+// System.Void UnityEngine.Renderer::SetLightmapST_Injected(UnityEngine.Vector4&,UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapST_Injected_m475221667 (Renderer_t2627027031 * __this, Vector4_t3319028937 * ___st0, int32_t ___lt1, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Renderer::GetLightmapIndex(UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_GetLightmapIndex_m3783203546 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method);
+// System.Void UnityEngine.Renderer::SetLightmapIndex(System.Int32,UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapIndex_m2382884887 (Renderer_t2627027031 * __this, int32_t ___index0, int32_t ___lt1, const RuntimeMethod* method);
+// UnityEngine.Vector4 UnityEngine.Renderer::GetLightmapST(UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Renderer_GetLightmapST_m647301836 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method);
+// System.Void UnityEngine.Renderer::SetStaticLightmapST(UnityEngine.Vector4)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_m611321850 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___st0, const RuntimeMethod* method);
+// System.Void UnityEngine.Renderer::SetLightmapST(UnityEngine.Vector4,UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapST_m3261548314 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___st0, int32_t ___lt1, const RuntimeMethod* method);
 // UnityEngine.Material UnityEngine.Renderer::GetMaterial()
 extern "C" IL2CPP_METHOD_ATTR Material_t340375123 * Renderer_GetMaterial_m1815496413 (Renderer_t2627027031 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Renderer::SetMaterial(UnityEngine.Material)
@@ -13893,6 +13938,15 @@ extern "C" IL2CPP_METHOD_ATTR int32_t QualitySettings_get_vSyncCount_m1170877849
 	_il2cpp_icall_func = (QualitySettings_get_vSyncCount_m1170877849_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::get_vSyncCount()");
 	int32_t retVal = _il2cpp_icall_func();
 	return retVal;
+}
+// System.Void UnityEngine.QualitySettings::set_vSyncCount(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void QualitySettings_set_vSyncCount_m3131636076 (RuntimeObject * __this /* static, unused */, int32_t ___value0, const RuntimeMethod* method)
+{
+	typedef void (*QualitySettings_set_vSyncCount_m3131636076_ftn) (int32_t);
+	static QualitySettings_set_vSyncCount_m3131636076_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (QualitySettings_set_vSyncCount_m3131636076_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::set_vSyncCount(System.Int32)");
+	_il2cpp_icall_func(___value0);
 }
 // System.Int32 UnityEngine.QualitySettings::get_antiAliasing()
 extern "C" IL2CPP_METHOD_ATTR int32_t QualitySettings_get_antiAliasing_m1365131962 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
@@ -19261,6 +19315,14 @@ extern "C" IL2CPP_METHOD_ATTR Bounds_t2266837910  Renderer_get_bounds_m180320400
 		return L_0;
 	}
 }
+// System.Void UnityEngine.Renderer::SetStaticLightmapST(UnityEngine.Vector4)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_m611321850 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___st0, const RuntimeMethod* method)
+{
+	{
+		Renderer_SetStaticLightmapST_Injected_m2649752629(__this, (Vector4_t3319028937 *)(&___st0), /*hidden argument*/NULL);
+		return;
+	}
+}
 // UnityEngine.Material UnityEngine.Renderer::GetMaterial()
 extern "C" IL2CPP_METHOD_ATTR Material_t340375123 * Renderer_GetMaterial_m1815496413 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
 {
@@ -19345,6 +19407,16 @@ extern "C" IL2CPP_METHOD_ATTR void Renderer_set_motionVectorGenerationMode_m1046
 	_il2cpp_icall_func = (Renderer_set_motionVectorGenerationMode_m1046698850_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::set_motionVectorGenerationMode(UnityEngine.MotionVectorGenerationMode)");
 	_il2cpp_icall_func(__this, ___value0);
 }
+// UnityEngine.Rendering.LightProbeUsage UnityEngine.Renderer::get_lightProbeUsage()
+extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_get_lightProbeUsage_m2052626977 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
+{
+	typedef int32_t (*Renderer_get_lightProbeUsage_m2052626977_ftn) (Renderer_t2627027031 *);
+	static Renderer_get_lightProbeUsage_m2052626977_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_get_lightProbeUsage_m2052626977_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_lightProbeUsage()");
+	int32_t retVal = _il2cpp_icall_func(__this);
+	return retVal;
+}
 // System.Void UnityEngine.Renderer::set_lightProbeUsage(UnityEngine.Rendering.LightProbeUsage)
 extern "C" IL2CPP_METHOD_ATTR void Renderer_set_lightProbeUsage_m858788046 (Renderer_t2627027031 * __this, int32_t ___value0, const RuntimeMethod* method)
 {
@@ -19410,6 +19482,148 @@ extern "C" IL2CPP_METHOD_ATTR bool Renderer_get_isPartOfStaticBatch_m384187304 (
 	_il2cpp_icall_func = (Renderer_get_isPartOfStaticBatch_m384187304_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_isPartOfStaticBatch()");
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
+}
+// System.Int32 UnityEngine.Renderer::GetLightmapIndex(UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_GetLightmapIndex_m3783203546 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method)
+{
+	typedef int32_t (*Renderer_GetLightmapIndex_m3783203546_ftn) (Renderer_t2627027031 *, int32_t);
+	static Renderer_GetLightmapIndex_m3783203546_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_GetLightmapIndex_m3783203546_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::GetLightmapIndex(UnityEngineInternal.LightmapType)");
+	int32_t retVal = _il2cpp_icall_func(__this, ___lt0);
+	return retVal;
+}
+// System.Void UnityEngine.Renderer::SetLightmapIndex(System.Int32,UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapIndex_m2382884887 (Renderer_t2627027031 * __this, int32_t ___index0, int32_t ___lt1, const RuntimeMethod* method)
+{
+	typedef void (*Renderer_SetLightmapIndex_m2382884887_ftn) (Renderer_t2627027031 *, int32_t, int32_t);
+	static Renderer_SetLightmapIndex_m2382884887_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_SetLightmapIndex_m2382884887_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::SetLightmapIndex(System.Int32,UnityEngineInternal.LightmapType)");
+	_il2cpp_icall_func(__this, ___index0, ___lt1);
+}
+// UnityEngine.Vector4 UnityEngine.Renderer::GetLightmapST(UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Renderer_GetLightmapST_m647301836 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method)
+{
+	Vector4_t3319028937  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		int32_t L_0 = ___lt0;
+		Renderer_GetLightmapST_Injected_m1142860114(__this, L_0, (Vector4_t3319028937 *)(&V_0), /*hidden argument*/NULL);
+		Vector4_t3319028937  L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Renderer::SetLightmapST(UnityEngine.Vector4,UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapST_m3261548314 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___st0, int32_t ___lt1, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___lt1;
+		Renderer_SetLightmapST_Injected_m475221667(__this, (Vector4_t3319028937 *)(&___st0), L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 UnityEngine.Renderer::get_lightmapIndex()
+extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_get_lightmapIndex_m1719636911 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = Renderer_GetLightmapIndex_m3783203546(__this, 0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Renderer::set_lightmapIndex(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_set_lightmapIndex_m3484336565 (Renderer_t2627027031 * __this, int32_t ___value0, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___value0;
+		Renderer_SetLightmapIndex_m2382884887(__this, L_0, 0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Int32 UnityEngine.Renderer::get_realtimeLightmapIndex()
+extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_get_realtimeLightmapIndex_m13850244 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = Renderer_GetLightmapIndex_m3783203546(__this, 1, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Renderer::set_realtimeLightmapIndex(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_set_realtimeLightmapIndex_m1185453725 (Renderer_t2627027031 * __this, int32_t ___value0, const RuntimeMethod* method)
+{
+	{
+		int32_t L_0 = ___value0;
+		Renderer_SetLightmapIndex_m2382884887(__this, L_0, 1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.Vector4 UnityEngine.Renderer::get_lightmapScaleOffset()
+extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Renderer_get_lightmapScaleOffset_m804150199 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
+{
+	Vector4_t3319028937  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Vector4_t3319028937  L_0 = Renderer_GetLightmapST_m647301836(__this, 0, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		Vector4_t3319028937  L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Renderer::set_lightmapScaleOffset(UnityEngine.Vector4)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_set_lightmapScaleOffset_m402428297 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___value0, const RuntimeMethod* method)
+{
+	{
+		Vector4_t3319028937  L_0 = ___value0;
+		Renderer_SetStaticLightmapST_m611321850(__this, L_0, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.Vector4 UnityEngine.Renderer::get_realtimeLightmapScaleOffset()
+extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Renderer_get_realtimeLightmapScaleOffset_m467401179 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
+{
+	Vector4_t3319028937  V_0;
+	memset(&V_0, 0, sizeof(V_0));
+	{
+		Vector4_t3319028937  L_0 = Renderer_GetLightmapST_m647301836(__this, 1, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000e;
+	}
+
+IL_000e:
+	{
+		Vector4_t3319028937  L_1 = V_0;
+		return L_1;
+	}
+}
+// System.Void UnityEngine.Renderer::set_realtimeLightmapScaleOffset(UnityEngine.Vector4)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_set_realtimeLightmapScaleOffset_m1798307214 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___value0, const RuntimeMethod* method)
+{
+	{
+		Vector4_t3319028937  L_0 = ___value0;
+		Renderer_SetLightmapST_m3261548314(__this, L_0, 1, /*hidden argument*/NULL);
+		return;
+	}
 }
 // UnityEngine.Material[] UnityEngine.Renderer::GetSharedMaterialArray()
 extern "C" IL2CPP_METHOD_ATTR MaterialU5BU5D_t561872642* Renderer_GetSharedMaterialArray_m3184378747 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
@@ -19504,6 +19718,33 @@ extern "C" IL2CPP_METHOD_ATTR void Renderer_get_bounds_Injected_m3112887345 (Ren
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Renderer_get_bounds_Injected_m3112887345_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)");
 	_il2cpp_icall_func(__this, ___ret0);
+}
+// System.Void UnityEngine.Renderer::SetStaticLightmapST_Injected(UnityEngine.Vector4&)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_Injected_m2649752629 (Renderer_t2627027031 * __this, Vector4_t3319028937 * ___st0, const RuntimeMethod* method)
+{
+	typedef void (*Renderer_SetStaticLightmapST_Injected_m2649752629_ftn) (Renderer_t2627027031 *, Vector4_t3319028937 *);
+	static Renderer_SetStaticLightmapST_Injected_m2649752629_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_SetStaticLightmapST_Injected_m2649752629_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::SetStaticLightmapST_Injected(UnityEngine.Vector4&)");
+	_il2cpp_icall_func(__this, ___st0);
+}
+// System.Void UnityEngine.Renderer::GetLightmapST_Injected(UnityEngineInternal.LightmapType,UnityEngine.Vector4&)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_GetLightmapST_Injected_m1142860114 (Renderer_t2627027031 * __this, int32_t ___lt0, Vector4_t3319028937 * ___ret1, const RuntimeMethod* method)
+{
+	typedef void (*Renderer_GetLightmapST_Injected_m1142860114_ftn) (Renderer_t2627027031 *, int32_t, Vector4_t3319028937 *);
+	static Renderer_GetLightmapST_Injected_m1142860114_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_GetLightmapST_Injected_m1142860114_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::GetLightmapST_Injected(UnityEngineInternal.LightmapType,UnityEngine.Vector4&)");
+	_il2cpp_icall_func(__this, ___lt0, ___ret1);
+}
+// System.Void UnityEngine.Renderer::SetLightmapST_Injected(UnityEngine.Vector4&,UnityEngineInternal.LightmapType)
+extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapST_Injected_m475221667 (Renderer_t2627027031 * __this, Vector4_t3319028937 * ___st0, int32_t ___lt1, const RuntimeMethod* method)
+{
+	typedef void (*Renderer_SetLightmapST_Injected_m475221667_ftn) (Renderer_t2627027031 *, Vector4_t3319028937 *, int32_t);
+	static Renderer_SetLightmapST_Injected_m475221667_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Renderer_SetLightmapST_Injected_m475221667_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::SetLightmapST_Injected(UnityEngine.Vector4&,UnityEngineInternal.LightmapType)");
+	_il2cpp_icall_func(__this, ___st0, ___lt1);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -33818,6 +34059,14 @@ extern "C" IL2CPP_METHOD_ATTR void GenericStack__ctor_m933681517 (GenericStack_t
 		return;
 	}
 }
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
