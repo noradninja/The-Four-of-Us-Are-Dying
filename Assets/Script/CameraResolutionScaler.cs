@@ -38,7 +38,7 @@ public class CameraResolutionScaler : MonoBehaviour
 
 	void Start(){
 		if(!Application.isEditor) {
-			//UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToMonoHeap();
+			UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToMonoHeap();
 		}
 	}
 	void Awake(){
@@ -124,5 +124,5 @@ public class CameraResolutionScaler : MonoBehaviour
 		// 	ramText.text = ("");
 		//}
 		
-	}
+	 }
 }

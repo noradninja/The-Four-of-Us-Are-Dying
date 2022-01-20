@@ -585,7 +585,7 @@ Material:
     - _tree_sway_speed: 0
     - _tree_sway_stutter: 0
     - _tree_sway_stutter_influence: 0
-    - _wind_size: 5
+    - _wind_size: 50
     m_Colors:
     - _Albedo: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

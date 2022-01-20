@@ -28,7 +28,7 @@
 			#pragma multi_compile_fog
 			// Compile specialized variants for when positional (point/spot) and spot lights are present
 			#pragma multi_compile __ POINT SPOT
-
+			#pragma multi_compile _ LOD_FADE_CROSSFADE
 			#include "VertexLightmapCommon.cginc"
 		
 
@@ -63,6 +63,7 @@
             #pragma fragment frag
             #pragma multi_compile_shadowcaster
 			#pragma multi_compile_fog
+			#pragma multi_compile _ LOD_FADE_CROSSFADE
             #include "UnityCG.cginc"
 			
 			struct v2f {

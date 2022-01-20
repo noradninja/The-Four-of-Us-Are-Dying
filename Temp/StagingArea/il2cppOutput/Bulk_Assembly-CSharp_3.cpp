@@ -12879,10 +12879,6 @@ inline void UnityEvent_3__ctor_m3152954793 (UnityEvent_3_t2493613095 * __this, c
 }
 // System.Collections.IEnumerator Title_Animator::delay(System.Single,System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Title_Animator_delay_m4185022362 (Title_Animator_t1706872800 * __this, float ___startValue0, float ___endValue1, float ___duration2, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Application::get_isEditor()
-extern "C" IL2CPP_METHOD_ATTR bool Application_get_isEditor_m857789090 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
-// System.Void UnityEngine.QualitySettings::set_vSyncCount(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void QualitySettings_set_vSyncCount_m3131636076 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method);
 // System.Void Title_Animator/<delay>c__Iterator0::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void U3CdelayU3Ec__Iterator0__ctor_m2575586270 (U3CdelayU3Ec__Iterator0_t2846553818 * __this, const RuntimeMethod* method);
 // System.Void Title_Animator/<wipe>c__Iterator1::.ctor()
@@ -17176,18 +17172,6 @@ extern "C" IL2CPP_METHOD_ATTR void Title_Animator_Start_m778172270 (Title_Animat
 	{
 		RuntimeObject* L_0 = Title_Animator_delay_m4185022362(__this, (1.0f), (0.0f), (3.0f), /*hidden argument*/NULL);
 		MonoBehaviour_StartCoroutine_m3411253000(__this, L_0, /*hidden argument*/NULL);
-		bool L_1 = Application_get_isEditor_m857789090(NULL /*static, unused*/, /*hidden argument*/NULL);
-		if (L_1)
-		{
-			goto IL_002c;
-		}
-	}
-	{
-		QualitySettings_set_vSyncCount_m3131636076(NULL /*static, unused*/, 2, /*hidden argument*/NULL);
-	}
-
-IL_002c:
-	{
 		return;
 	}
 }

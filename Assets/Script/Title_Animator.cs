@@ -24,9 +24,9 @@ public float fillDelay;
 	void Start () {
 		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
 		StartCoroutine(delay(1, 0, 3.0f));
-		if(!Application.isEditor){
-			QualitySettings.vSyncCount = 2;
-		}
+		// if(!Application.isEditor){
+		// 	QualitySettings.vSyncCount = 2;
+		// }
 	}
 	
 	// Update is called once per frame

@@ -30269,6 +30269,8 @@ extern "C" IL2CPP_METHOD_ATTR void Texture_set_anisoLevel_m4149907611 (Texture_t
 extern "C" IL2CPP_METHOD_ATTR void Texture_set_filterMode_m3078068058 (Texture_t3661962703 * __this, int32_t p0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Application::get_isEditor()
 extern "C" IL2CPP_METHOD_ATTR bool Application_get_isEditor_m857789090 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.Boolean UnityEngine.PSVita.PSVitaVideoPlayer::TransferMemToMonoHeap()
+extern "C" IL2CPP_METHOD_ATTR bool PSVitaVideoPlayer_TransferMemToMonoHeap_m2292888659 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<UnityEngine.Camera>()
 inline Camera_t4157153871 * Component_GetComponent_TisCamera_t4157153871_m1557787507 (Component_t1923634451 * __this, const RuntimeMethod* method)
 {
@@ -56369,11 +56371,14 @@ extern "C" IL2CPP_METHOD_ATTR void CameraResolutionScaler_Start_m1167734945 (Cam
 		bool L_0 = Application_get_isEditor_m857789090(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (L_0)
 		{
-			goto IL_000a;
+			goto IL_0010;
 		}
 	}
+	{
+		PSVitaVideoPlayer_TransferMemToMonoHeap_m2292888659(NULL /*static, unused*/, /*hidden argument*/NULL);
+	}
 
-IL_000a:
+IL_0010:
 	{
 		return;
 	}
