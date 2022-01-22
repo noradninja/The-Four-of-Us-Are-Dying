@@ -49,7 +49,7 @@ LightmapSettings:
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
-    m_IndirectOutputScale: 1
+    m_IndirectOutputScale: 1.5
     m_AlbedoBoost: 1
     m_TemporalCoherenceThreshold: 1
     m_EnvironmentLightingMode: 1
@@ -57,7 +57,7 @@ LightmapSettings:
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 10
-    m_Resolution: 0.2
+    m_Resolution: 4.3
     m_BakeResolution: 43
     m_AtlasSize: 1024
     m_AO: 0
@@ -79,12 +79,12 @@ LightmapSettings:
     m_PVRDirectSampleCount: 8
     m_PVRSampleCount: 16
     m_PVRBounces: 0
-    m_PVRFilterTypeDirect: 0
-    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeDirect: 1
+    m_PVRFilterTypeIndirect: 2
     m_PVRFilterTypeAO: 2
     m_PVRFilteringMode: 2
     m_PVRCulling: 1
-    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusDirect: 2
     m_PVRFilteringGaussRadiusIndirect: 3
     m_PVRFilteringGaussRadiusAO: 2
     m_PVRFilteringAtrousPositionSigmaDirect: 1
@@ -384,7 +384,7 @@ MeshRenderer:
   m_GameObject: {fileID: 26048718}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 28180739}
   - component: {fileID: 28180741}
   - component: {fileID: 28180740}
+  - component: {fileID: 28180742}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 1
   m_TagString: Untagged
@@ -505,8 +506,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 28180738}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -540,6 +541,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 28180738}
   m_Mesh: {fileID: 4300000, guid: af131a5ffe4a61a4f97ef8c82ec91552, type: 2}
+--- !u!114 &28180742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 28180738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &34031335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1382,6 +1394,7 @@ GameObject:
   - component: {fileID: 84544737}
   - component: {fileID: 84544739}
   - component: {fileID: 84544738}
+  - component: {fileID: 84544740}
   m_Layer: 11
   m_Name: 000_static_Leaves_1
   m_TagString: Untagged
@@ -1410,8 +1423,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84544736}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1445,6 +1458,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 84544736}
   m_Mesh: {fileID: 4300000, guid: 178cb4201fd9acb4cbcd105874441a9d, type: 2}
+--- !u!114 &84544740
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 84544736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &86193255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,6 +1479,7 @@ GameObject:
   - component: {fileID: 86193256}
   - component: {fileID: 86193258}
   - component: {fileID: 86193257}
+  - component: {fileID: 86193259}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 1
   m_TagString: Untagged
@@ -1482,8 +1507,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 86193255}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1517,6 +1542,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 86193255}
   m_Mesh: {fileID: 4300000, guid: ee09f7dcf3b6b33458ffd270c5914dee, type: 2}
+--- !u!114 &86193259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 86193255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &90942850
 Prefab:
   m_ObjectHideFlags: 0
@@ -1597,6 +1633,7 @@ GameObject:
   - component: {fileID: 91886537}
   - component: {fileID: 91886539}
   - component: {fileID: 91886538}
+  - component: {fileID: 91886540}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 5
   m_TagString: Untagged
@@ -1624,8 +1661,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 91886536}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -1659,6 +1696,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 91886536}
   m_Mesh: {fileID: 4300000, guid: d8d6725c813a00c4591bb42b7cef299c, type: 2}
+--- !u!114 &91886540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 91886536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &93965735
 GameObject:
   m_ObjectHideFlags: 0
@@ -2473,6 +2521,7 @@ GameObject:
   - component: {fileID: 124802276}
   - component: {fileID: 124802278}
   - component: {fileID: 124802277}
+  - component: {fileID: 124802279}
   m_Layer: 11
   m_Name: 000_static_Branch 1
   m_TagString: Untagged
@@ -2535,6 +2584,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 124802275}
   m_Mesh: {fileID: 4300000, guid: f98a17d7ac536bd40ae3bcb8cae4698b, type: 2}
+--- !u!114 &124802279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 124802275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &130237682
 GameObject:
   m_ObjectHideFlags: 0
@@ -2859,6 +2919,7 @@ GameObject:
   - component: {fileID: 154556058}
   - component: {fileID: 154556060}
   - component: {fileID: 154556059}
+  - component: {fileID: 154556061}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 5
   m_TagString: Untagged
@@ -2886,8 +2947,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154556057}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -2921,6 +2982,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154556057}
   m_Mesh: {fileID: 4300000, guid: c2a11533e7c390a439ec9f9ad42eefa4, type: 2}
+--- !u!114 &154556061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 154556057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &159288816
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3109,7 @@ GameObject:
   - component: {fileID: 160676829}
   - component: {fileID: 160676831}
   - component: {fileID: 160676830}
+  - component: {fileID: 160676832}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 4
   m_TagString: Untagged
@@ -3064,8 +3137,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 160676828}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -3099,6 +3172,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 160676828}
   m_Mesh: {fileID: 4300000, guid: 3e021d8062dcc2a40b6e3200836c78a9, type: 2}
+--- !u!114 &160676832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 160676828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &161767348
 GameObject:
   m_ObjectHideFlags: 0
@@ -3657,6 +3741,7 @@ GameObject:
   - component: {fileID: 195964372}
   - component: {fileID: 195964374}
   - component: {fileID: 195964373}
+  - component: {fileID: 195964375}
   m_Layer: 9
   m_Name: 000_static_Leaves_1
   m_TagString: Untagged
@@ -3684,8 +3769,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195964371}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -3719,6 +3804,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 195964371}
   m_Mesh: {fileID: 4300000, guid: 6799bf0511d2b90469208edb5817e3c8, type: 2}
+--- !u!114 &195964375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 195964371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &197802424
 GameObject:
   m_ObjectHideFlags: 0
@@ -3904,6 +4000,7 @@ GameObject:
   - component: {fileID: 215714221}
   - component: {fileID: 215714223}
   - component: {fileID: 215714222}
+  - component: {fileID: 215714224}
   m_Layer: 11
   m_Name: 000_static_Leaves_1
   m_TagString: Untagged
@@ -3931,8 +4028,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 215714220}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -3966,6 +4063,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 215714220}
   m_Mesh: {fileID: 4300000, guid: ad3be9f47c622784287464cf2acaab99, type: 2}
+--- !u!114 &215714224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 215714220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &215919100
 Mesh:
   m_ObjectHideFlags: 0
@@ -4131,6 +4239,7 @@ GameObject:
   - component: {fileID: 218064796}
   - component: {fileID: 218064798}
   - component: {fileID: 218064797}
+  - component: {fileID: 218064799}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 3
   m_TagString: Untagged
@@ -4158,8 +4267,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218064795}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -4193,6 +4302,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 218064795}
   m_Mesh: {fileID: 4300000, guid: 5591603b1eb80b94bb734163d4c5b892, type: 2}
+--- !u!114 &218064799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 218064795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &221639757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4407,6 +4527,7 @@ GameObject:
   - component: {fileID: 236133951}
   - component: {fileID: 236133953}
   - component: {fileID: 236133952}
+  - component: {fileID: 236133954}
   m_Layer: 11
   m_Name: 000_static_Leaves_2
   m_TagString: Untagged
@@ -4434,8 +4555,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 236133950}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -4469,6 +4590,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 236133950}
   m_Mesh: {fileID: 4300000, guid: cf2a4d1085dbe5a4e89dcd75c66cf08a, type: 2}
+--- !u!114 &236133954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236133950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &242288810
 GameObject:
   m_ObjectHideFlags: 0
@@ -13085,7 +13217,7 @@ MeshRenderer:
   m_GameObject: {fileID: 257196999}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -13492,6 +13624,7 @@ GameObject:
   - component: {fileID: 301081305}
   - component: {fileID: 301081307}
   - component: {fileID: 301081306}
+  - component: {fileID: 301081308}
   m_Layer: 11
   m_Name: 000_static_Leaves_2
   m_TagString: Untagged
@@ -13520,8 +13653,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 301081304}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -13555,6 +13688,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 301081304}
   m_Mesh: {fileID: 4300000, guid: 85dfd1727fcd6a4489a3581b8fe91ce4, type: 2}
+--- !u!114 &301081308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 301081304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &306363284
 GameObject:
   m_ObjectHideFlags: 0
@@ -13633,7 +13777,7 @@ MeshRenderer:
   m_GameObject: {fileID: 306936357}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -13727,6 +13871,7 @@ GameObject:
   - component: {fileID: 313504504}
   - component: {fileID: 313504506}
   - component: {fileID: 313504505}
+  - component: {fileID: 313504507}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 1
   m_TagString: Untagged
@@ -13754,8 +13899,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 313504503}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -13789,6 +13934,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 313504503}
   m_Mesh: {fileID: 4300000, guid: 9c5cfc30aa2ce474997652031c5febfd, type: 2}
+--- !u!114 &313504507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 313504503}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &315778213
 GameObject:
   m_ObjectHideFlags: 0
@@ -13863,7 +14019,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 316237101}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -15200,7 +15356,7 @@ MeshRenderer:
   m_GameObject: {fileID: 381621414}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -15394,6 +15550,7 @@ GameObject:
   - component: {fileID: 390295960}
   - component: {fileID: 390295962}
   - component: {fileID: 390295961}
+  - component: {fileID: 390295963}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 1
   m_TagString: Untagged
@@ -15421,8 +15578,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 390295959}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -15456,6 +15613,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 390295959}
   m_Mesh: {fileID: 4300000, guid: b5071053e6059b545b29285c8475ce20, type: 2}
+--- !u!114 &390295963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 390295959}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &393621537
 GameObject:
   m_ObjectHideFlags: 0
@@ -15661,6 +15829,7 @@ GameObject:
   - component: {fileID: 406205035}
   - component: {fileID: 406205037}
   - component: {fileID: 406205036}
+  - component: {fileID: 406205038}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 2
   m_TagString: Untagged
@@ -15688,8 +15857,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 406205034}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -15723,6 +15892,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 406205034}
   m_Mesh: {fileID: 4300000, guid: fa060bbee34acbd4ea3773d73a57a065, type: 2}
+--- !u!114 &406205038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406205034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &406572385
 GameObject:
   m_ObjectHideFlags: 0
@@ -16395,6 +16575,7 @@ GameObject:
   - component: {fileID: 463787014}
   - component: {fileID: 463787016}
   - component: {fileID: 463787015}
+  - component: {fileID: 463787017}
   m_Layer: 11
   m_Name: 000_static_Branch 1
   m_TagString: Untagged
@@ -16457,6 +16638,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 463787013}
   m_Mesh: {fileID: 4300000, guid: 6098f83ec1b65764e8c8c6f10073ceab, type: 2}
+--- !u!114 &463787017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 463787013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &471316423
 GameObject:
   m_ObjectHideFlags: 0
@@ -16873,7 +17065,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 489463876}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26dc97c53c1f0564b9e0d61b0eefd665, type: 3}
   m_Name: 
@@ -17011,6 +17203,7 @@ GameObject:
   - component: {fileID: 506879835}
   - component: {fileID: 506879837}
   - component: {fileID: 506879836}
+  - component: {fileID: 506879838}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 5
   m_TagString: Untagged
@@ -17038,8 +17231,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 506879834}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -17073,6 +17266,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 506879834}
   m_Mesh: {fileID: 4300000, guid: 3dc73f9d18f88db4cbfa8553410f95a3, type: 2}
+--- !u!114 &506879838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 506879834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &507599194
 GameObject:
   m_ObjectHideFlags: 0
@@ -17118,7 +17322,7 @@ MeshRenderer:
   m_GameObject: {fileID: 507599194}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -17367,7 +17571,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 520820444}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -17486,7 +17690,7 @@ MeshRenderer:
   m_GameObject: {fileID: 528050662}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -18320,6 +18524,7 @@ GameObject:
   - component: {fileID: 594270873}
   - component: {fileID: 594270875}
   - component: {fileID: 594270874}
+  - component: {fileID: 594270876}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 2
   m_TagString: Untagged
@@ -18347,8 +18552,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594270872}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -18382,6 +18587,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 594270872}
   m_Mesh: {fileID: 4300000, guid: 7d59dd12dcaf644488f41ed8f48f2ec1, type: 2}
+--- !u!114 &594270876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 594270872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &594692548
 GameObject:
   m_ObjectHideFlags: 0
@@ -18467,6 +18683,7 @@ GameObject:
   - component: {fileID: 598896776}
   - component: {fileID: 598896778}
   - component: {fileID: 598896777}
+  - component: {fileID: 598896779}
   m_Layer: 11
   m_Name: 000_static_Branch 5
   m_TagString: Untagged
@@ -18529,6 +18746,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 598896775}
   m_Mesh: {fileID: 4300000, guid: 0eabc37a4c8900c42b0d3fa664690fe0, type: 2}
+--- !u!114 &598896779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 598896775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &599889674
 GameObject:
   m_ObjectHideFlags: 0
@@ -22558,7 +22786,7 @@ MeshRenderer:
   m_GameObject: {fileID: 599919338}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -22907,7 +23135,7 @@ MeshRenderer:
   m_GameObject: {fileID: 611722931}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -23001,6 +23229,7 @@ GameObject:
   - component: {fileID: 612280271}
   - component: {fileID: 612280273}
   - component: {fileID: 612280272}
+  - component: {fileID: 612280274}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 3
   m_TagString: Untagged
@@ -23028,8 +23257,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612280270}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -23063,6 +23292,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 612280270}
   m_Mesh: {fileID: 4300000, guid: fe8f8c7aca88eb5419559dbb2b9a9613, type: 2}
+--- !u!114 &612280274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 612280270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &613628264
 GameObject:
   m_ObjectHideFlags: 0
@@ -23105,7 +23345,7 @@ MeshRenderer:
   m_GameObject: {fileID: 613628264}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -23255,7 +23495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26dc97c53c1f0564b9e0d61b0eefd665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 128
+  resolution: 64
   thisLight: {fileID: 618167703}
 --- !u!108 &618167703
 Light:
@@ -23273,7 +23513,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
-    m_Resolution: 0
+    m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.01
@@ -23532,8 +23772,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 633860009}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -24052,6 +24292,7 @@ GameObject:
   - component: {fileID: 679909832}
   - component: {fileID: 679909834}
   - component: {fileID: 679909833}
+  - component: {fileID: 679909835}
   m_Layer: 11
   m_Name: 000_static_Branch 3
   m_TagString: Untagged
@@ -24079,8 +24320,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679909831}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -24114,6 +24355,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 679909831}
   m_Mesh: {fileID: 4300000, guid: 2e4ba6880169b9b4a8d3826b0aec989d, type: 2}
+--- !u!114 &679909835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 679909831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &682419383
 Prefab:
   m_ObjectHideFlags: 0
@@ -24545,7 +24797,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715142451}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0047, y: 0, z: 0.0167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1146966568}
@@ -24562,7 +24814,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.04231692
+  m_Radius: 0.06
   m_Center: {x: -0.0025822576, y: 0.0075336145, z: 0.0397785}
 --- !u!23 &715142454
 MeshRenderer:
@@ -24572,7 +24824,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715142451}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -24621,7 +24873,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &715142457
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 715142451}
@@ -24888,6 +25140,7 @@ GameObject:
   - component: {fileID: 745778549}
   - component: {fileID: 745778551}
   - component: {fileID: 745778550}
+  - component: {fileID: 745778552}
   m_Layer: 11
   m_Name: 000_static_Branch 3
   m_TagString: Untagged
@@ -24915,8 +25168,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 745778548}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -24950,6 +25203,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 745778548}
   m_Mesh: {fileID: 4300000, guid: 5e056a357c39fe44e9c13c09eb073557, type: 2}
+--- !u!114 &745778552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 745778548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &749118865
 GameObject:
   m_ObjectHideFlags: 0
@@ -25096,7 +25360,6 @@ GameObject:
   m_Component:
   - component: {fileID: 759713689}
   - component: {fileID: 759713698}
-  - component: {fileID: 759713690}
   m_Layer: 10
   m_Name: Map Camera
   m_TagString: MainCamera
@@ -25117,20 +25380,6 @@ Transform:
   m_Father: {fileID: 1468516126}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
---- !u!114 &759713690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 759713688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cd1890cdc009848ac7d87a68ef0126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: d381d4349e5cfc24c93bb6280e373058, type: 2}
-  Sharpness: 4
-  Threshold: 0.2
 --- !u!20 &759713698
 Camera:
   m_ObjectHideFlags: 0
@@ -25140,7 +25389,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.4056604, g: 0.3203589, b: 0.25832146, a: 1}
+  m_BackGroundColor: {r: 0.5660378, g: 0.40085924, b: 0.27500895, a: 1}
   m_projectionMatrixMode: 1
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
@@ -25439,12 +25688,13 @@ MonoBehaviour:
   SSAOScript: {fileID: 121908223}
   BokehScript: {fileID: 121908223}
   enabledText: {fileID: 787333238}
-  lerpRate: 0.65
+  lerpRate: 0.55
   skinnedRenderer: {fileID: 1039149773}
   isLerping: 0
   pausePanel: {fileID: 553536174}
   mapPanel: {fileID: 1490393797}
   mapCam: {fileID: 0}
+  delayButton: 0
 --- !u!143 &787849890
 CharacterController:
   m_ObjectHideFlags: 0
@@ -25686,6 +25936,7 @@ GameObject:
   - component: {fileID: 793275344}
   - component: {fileID: 793275346}
   - component: {fileID: 793275345}
+  - component: {fileID: 793275347}
   m_Layer: 11
   m_Name: 000_static_Branch 4
   m_TagString: Untagged
@@ -25713,8 +25964,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 793275343}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -25748,6 +25999,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 793275343}
   m_Mesh: {fileID: 4300000, guid: cdadd24ec4f3f0945b7b8bd00f72b1ef, type: 2}
+--- !u!114 &793275347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 793275343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &817369360
 GameObject:
   m_ObjectHideFlags: 0
@@ -26121,6 +26383,7 @@ GameObject:
   - component: {fileID: 858466400}
   - component: {fileID: 858466402}
   - component: {fileID: 858466401}
+  - component: {fileID: 858466403}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 4
   m_TagString: Untagged
@@ -26148,8 +26411,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858466399}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -26183,6 +26446,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 858466399}
   m_Mesh: {fileID: 4300000, guid: 0bdc1a6d71f9aa54bbca28fa34bf32b8, type: 2}
+--- !u!114 &858466403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 858466399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &859027659
 GameObject:
   m_ObjectHideFlags: 0
@@ -26425,6 +26699,7 @@ GameObject:
   - component: {fileID: 876771813}
   - component: {fileID: 876771815}
   - component: {fileID: 876771814}
+  - component: {fileID: 876771816}
   m_Layer: 11
   m_Name: 000_static_Leaves_1
   m_TagString: Untagged
@@ -26453,8 +26728,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876771812}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -26488,6 +26763,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 876771812}
   m_Mesh: {fileID: 4300000, guid: cce79ffa216ac02409120e8c10f67b57, type: 2}
+--- !u!114 &876771816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 876771812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &877305391
 GameObject:
   m_ObjectHideFlags: 0
@@ -26530,7 +26816,7 @@ MeshRenderer:
   m_GameObject: {fileID: 877305391}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -26692,6 +26978,7 @@ GameObject:
   - component: {fileID: 890992237}
   - component: {fileID: 890992239}
   - component: {fileID: 890992238}
+  - component: {fileID: 890992240}
   m_Layer: 11
   m_Name: 000_static_Branch 2
   m_TagString: Untagged
@@ -26719,8 +27006,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 890992236}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -26754,6 +27041,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 890992236}
   m_Mesh: {fileID: 4300000, guid: 4e4e982b1b40bfd459aaffa520de6add, type: 2}
+--- !u!114 &890992240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 890992236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &904314625
 GameObject:
   m_ObjectHideFlags: 0
@@ -26799,6 +27097,7 @@ GameObject:
   - component: {fileID: 919646586}
   - component: {fileID: 919646588}
   - component: {fileID: 919646587}
+  - component: {fileID: 919646589}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 2
   m_TagString: Untagged
@@ -26826,8 +27125,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 919646585}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -26861,6 +27160,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 919646585}
   m_Mesh: {fileID: 4300000, guid: b84746ca7d4a3a74b8dcfc47d464317d, type: 2}
+--- !u!114 &919646589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 919646585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &921814524
 GameObject:
   m_ObjectHideFlags: 0
@@ -27366,6 +27676,7 @@ GameObject:
   - component: {fileID: 961205951}
   - component: {fileID: 961205953}
   - component: {fileID: 961205952}
+  - component: {fileID: 961205954}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 4
   m_TagString: Untagged
@@ -27393,8 +27704,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961205950}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -27428,6 +27739,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 961205950}
   m_Mesh: {fileID: 4300000, guid: 566799aa92667e34685e7dd7322ea67f, type: 2}
+--- !u!114 &961205954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 961205950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963090641
 GameObject:
   m_ObjectHideFlags: 0
@@ -28123,7 +28445,7 @@ MeshRenderer:
   m_GameObject: {fileID: 992914725}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -28757,7 +29079,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1027437881}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -29199,6 +29521,7 @@ GameObject:
   - component: {fileID: 1082230150}
   - component: {fileID: 1082230152}
   - component: {fileID: 1082230151}
+  - component: {fileID: 1082230153}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 1
   m_TagString: Untagged
@@ -29226,8 +29549,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082230149}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -29261,6 +29584,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1082230149}
   m_Mesh: {fileID: 4300000, guid: 3034074b5643a5d419bb2dc5dfcb6266, type: 2}
+--- !u!114 &1082230153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1082230149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1084861859
 GameObject:
   m_ObjectHideFlags: 0
@@ -29777,6 +30111,7 @@ GameObject:
   - component: {fileID: 1107584677}
   - component: {fileID: 1107584679}
   - component: {fileID: 1107584678}
+  - component: {fileID: 1107584680}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 1
   m_TagString: Untagged
@@ -29804,8 +30139,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107584676}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -29839,6 +30174,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107584676}
   m_Mesh: {fileID: 4300000, guid: 9ac3673adfe56644388d45b1fe3b6c75, type: 2}
+--- !u!114 &1107584680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107584676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1110259616
 GameObject:
   m_ObjectHideFlags: 0
@@ -29882,7 +30228,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1110259616}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -30161,6 +30507,7 @@ GameObject:
   - component: {fileID: 1121126348}
   - component: {fileID: 1121126350}
   - component: {fileID: 1121126349}
+  - component: {fileID: 1121126351}
   m_Layer: 11
   m_Name: 000_static_Branch 5
   m_TagString: Untagged
@@ -30223,6 +30570,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1121126347}
   m_Mesh: {fileID: 4300000, guid: 90c8606d337e36b4888eba485fc217f2, type: 2}
+--- !u!114 &1121126351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1121126347}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1130998432
 GameObject:
   m_ObjectHideFlags: 0
@@ -30570,7 +30928,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164149298}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0135, y: 0, z: 0.0043}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 445659487}
@@ -30587,7 +30945,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.045097236
+  m_Radius: 0.06
   m_Center: {x: 0.0020951938, y: -0.006813995, z: 0.044153553}
 --- !u!23 &1164149301
 MeshRenderer:
@@ -30597,7 +30955,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1164149298}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -31160,8 +31518,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1191461499}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -31687,7 +32045,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1210847139}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -32225,7 +32583,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1245275469}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -33949,6 +34307,7 @@ GameObject:
   - component: {fileID: 1276257767}
   - component: {fileID: 1276257769}
   - component: {fileID: 1276257768}
+  - component: {fileID: 1276257770}
   m_Layer: 11
   m_Name: 000_static_Branch 2
   m_TagString: Untagged
@@ -33976,8 +34335,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1276257766}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -34011,6 +34370,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1276257766}
   m_Mesh: {fileID: 4300000, guid: 28dc2d8c796f11e48aa19c586320547e, type: 2}
+--- !u!114 &1276257770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1276257766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1276636485
 GameObject:
   m_ObjectHideFlags: 0
@@ -35217,6 +35587,7 @@ GameObject:
   - component: {fileID: 1329470002}
   - component: {fileID: 1329470004}
   - component: {fileID: 1329470003}
+  - component: {fileID: 1329470005}
   m_Layer: 11
   m_Name: 000_static_Branch
   m_TagString: Untagged
@@ -35279,6 +35650,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1329470001}
   m_Mesh: {fileID: 4300000, guid: 4866fd7f3d7a20e4d962b4e2f400cdb9, type: 2}
+--- !u!114 &1329470005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1329470001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1331735466
 GameObject:
   m_ObjectHideFlags: 0
@@ -35424,6 +35806,7 @@ GameObject:
   - component: {fileID: 1341323488}
   - component: {fileID: 1341323490}
   - component: {fileID: 1341323489}
+  - component: {fileID: 1341323491}
   m_Layer: 11
   m_Name: 000_static_Leaves_2
   m_TagString: Untagged
@@ -35451,8 +35834,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341323487}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -35486,6 +35869,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341323487}
   m_Mesh: {fileID: 4300000, guid: b6ac4617d74d376458048b36bb7ecfa3, type: 2}
+--- !u!114 &1341323491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341323487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1344027075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 58ef40a2629a19741a579fc5a175ace1,
@@ -35899,6 +36293,7 @@ GameObject:
   - component: {fileID: 1370115315}
   - component: {fileID: 1370115317}
   - component: {fileID: 1370115316}
+  - component: {fileID: 1370115318}
   m_Layer: 9
   m_Name: 000_static_Leaves_1
   m_TagString: Untagged
@@ -35926,8 +36321,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1370115314}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -35961,6 +36356,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1370115314}
   m_Mesh: {fileID: 4300000, guid: 4b836184379ff1147827422c5907b1aa, type: 2}
+--- !u!114 &1370115318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1370115314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1373134650
 GameObject:
   m_ObjectHideFlags: 0
@@ -35971,6 +36377,7 @@ GameObject:
   - component: {fileID: 1373134651}
   - component: {fileID: 1373134653}
   - component: {fileID: 1373134652}
+  - component: {fileID: 1373134654}
   m_Layer: 11
   m_Name: 000_static_Leaves_2
   m_TagString: Untagged
@@ -35999,8 +36406,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1373134650}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -36034,6 +36441,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1373134650}
   m_Mesh: {fileID: 4300000, guid: df010018ebd520c4c98df5af4284e247, type: 2}
+--- !u!114 &1373134654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1373134650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1385785312
 GameObject:
   m_ObjectHideFlags: 0
@@ -36585,7 +37003,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1420756103}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -37196,7 +37614,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1441734895}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -37432,7 +37850,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1454946126}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -38366,7 +38784,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1477174504}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -38633,7 +39051,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1484992803}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -38762,7 +39180,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1485858297}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -38856,6 +39274,7 @@ GameObject:
   - component: {fileID: 1489626165}
   - component: {fileID: 1489626167}
   - component: {fileID: 1489626166}
+  - component: {fileID: 1489626168}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 3
   m_TagString: Untagged
@@ -38883,8 +39302,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1489626164}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -38918,6 +39337,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1489626164}
   m_Mesh: {fileID: 4300000, guid: 810d66df7977fff49932adfc47c84383, type: 2}
+--- !u!114 &1489626168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1489626164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1490393795
 GameObject:
   m_ObjectHideFlags: 0
@@ -39843,6 +40273,7 @@ GameObject:
   - component: {fileID: 1595558648}
   - component: {fileID: 1595558650}
   - component: {fileID: 1595558649}
+  - component: {fileID: 1595558651}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 3
   m_TagString: Untagged
@@ -39870,8 +40301,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1595558647}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -39905,6 +40336,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1595558647}
   m_Mesh: {fileID: 4300000, guid: e15423bcc38c4b546b1bdd76bd966557, type: 2}
+--- !u!114 &1595558651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1595558647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1596027019
 GameObject:
   m_ObjectHideFlags: 0
@@ -39915,6 +40357,7 @@ GameObject:
   - component: {fileID: 1596027020}
   - component: {fileID: 1596027022}
   - component: {fileID: 1596027021}
+  - component: {fileID: 1596027023}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 5
   m_TagString: Untagged
@@ -39942,8 +40385,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1596027019}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -39977,6 +40420,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1596027019}
   m_Mesh: {fileID: 4300000, guid: 6b35e23e2bf14a44c8b597ecdab3ad34, type: 2}
+--- !u!114 &1596027023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1596027019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1596919342
 GameObject:
   m_ObjectHideFlags: 0
@@ -40022,7 +40476,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1596919342}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -40275,6 +40729,7 @@ GameObject:
   - component: {fileID: 1599151564}
   - component: {fileID: 1599151566}
   - component: {fileID: 1599151565}
+  - component: {fileID: 1599151567}
   m_Layer: 11
   m_Name: 000_static_Branch
   m_TagString: Untagged
@@ -40338,6 +40793,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1599151563}
   m_Mesh: {fileID: 4300000, guid: 266c8ffb2f3722e41af00e0da41c30fb, type: 2}
+--- !u!114 &1599151567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1599151563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1599971086
 GameObject:
   m_ObjectHideFlags: 0
@@ -40665,6 +41131,7 @@ GameObject:
   - component: {fileID: 1612193908}
   - component: {fileID: 1612193911}
   - component: {fileID: 1612193910}
+  - component: {fileID: 1612193912}
   m_Layer: 11
   m_Name: Leaves_1 5
   m_TagString: Untagged
@@ -40696,7 +41163,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1612193906}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -40769,6 +41236,17 @@ LODGroup:
     renderers:
     - renderer: {fileID: 154556059}
   m_Enabled: 1
+--- !u!114 &1612193912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1612193906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1622666514
 GameObject:
   m_ObjectHideFlags: 0
@@ -40943,6 +41421,7 @@ GameObject:
   - component: {fileID: 1634052076}
   - component: {fileID: 1634052078}
   - component: {fileID: 1634052077}
+  - component: {fileID: 1634052079}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 1
   m_TagString: Untagged
@@ -40970,8 +41449,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634052075}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -41005,6 +41484,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634052075}
   m_Mesh: {fileID: 4300000, guid: af81f29314a1c1a47a0d100362deac1f, type: 2}
+--- !u!114 &1634052079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1634052075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1634077612
 GameObject:
   m_ObjectHideFlags: 0
@@ -41042,8 +41532,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1634077612}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -41237,6 +41727,7 @@ GameObject:
   - component: {fileID: 1646314202}
   - component: {fileID: 1646314204}
   - component: {fileID: 1646314203}
+  - component: {fileID: 1646314205}
   m_Layer: 11
   m_Name: 000_static_Branch 1
   m_TagString: Untagged
@@ -41299,6 +41790,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1646314201}
   m_Mesh: {fileID: 4300000, guid: 705606bf5215a05459781ba948eda922, type: 2}
+--- !u!114 &1646314205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1646314201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1662004805
 GameObject:
   m_ObjectHideFlags: 0
@@ -41685,6 +42187,7 @@ GameObject:
   - component: {fileID: 1684629576}
   - component: {fileID: 1684629578}
   - component: {fileID: 1684629577}
+  - component: {fileID: 1684629579}
   m_Layer: 11
   m_Name: 000_static_Branch 5
   m_TagString: Untagged
@@ -41747,6 +42250,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1684629575}
   m_Mesh: {fileID: 4300000, guid: 38085b650cf26b145932960455b76559, type: 2}
+--- !u!114 &1684629579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1684629575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1697858135
 GameObject:
   m_ObjectHideFlags: 0
@@ -43600,6 +44114,7 @@ GameObject:
   - component: {fileID: 1753914672}
   - component: {fileID: 1753914674}
   - component: {fileID: 1753914673}
+  - component: {fileID: 1753914675}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 5
   m_TagString: Untagged
@@ -43627,8 +44142,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1753914671}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -43662,6 +44177,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1753914671}
   m_Mesh: {fileID: 4300000, guid: e11eaf44cc19c4f4b855fa8f75ac21d6, type: 2}
+--- !u!114 &1753914675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1753914671}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1754829746
 GameObject:
   m_ObjectHideFlags: 0
@@ -43937,6 +44463,7 @@ GameObject:
   - component: {fileID: 1781829436}
   - component: {fileID: 1781829438}
   - component: {fileID: 1781829437}
+  - component: {fileID: 1781829439}
   m_Layer: 11
   m_Name: 000_static_Branch 1
   m_TagString: Untagged
@@ -43999,6 +44526,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1781829435}
   m_Mesh: {fileID: 4300000, guid: 400fe9242895f80429cd232bbdc9a08e, type: 2}
+--- !u!114 &1781829439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1781829435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1783132975
 GameObject:
   m_ObjectHideFlags: 0
@@ -44126,7 +44664,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1794307332}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -44449,6 +44987,7 @@ GameObject:
   - component: {fileID: 1810825278}
   - component: {fileID: 1810825280}
   - component: {fileID: 1810825279}
+  - component: {fileID: 1810825281}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 1
   m_TagString: Untagged
@@ -44476,8 +45015,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1810825277}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -44511,6 +45050,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1810825277}
   m_Mesh: {fileID: 4300000, guid: 5351f0f31808f114b823ed29f1c10d72, type: 2}
+--- !u!114 &1810825281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1810825277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815412828
 GameObject:
   m_ObjectHideFlags: 0
@@ -44525,6 +45075,7 @@ GameObject:
   - component: {fileID: 1815412830}
   - component: {fileID: 1815412834}
   - component: {fileID: 1815412833}
+  - component: {fileID: 1815412835}
   m_Layer: 11
   m_Name: Branch 4
   m_TagString: Untagged
@@ -44540,7 +45091,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815412828}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.0079, y: 0, z: 0.0153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1066617099}
@@ -44557,7 +45108,7 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.040999163
+  m_Radius: 0.06
   m_Center: {x: 0.0039035685, y: -0.0069289985, z: 0.04175731}
 --- !u!23 &1815412831
 MeshRenderer:
@@ -44567,7 +45118,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815412828}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -44641,6 +45192,17 @@ LODGroup:
     renderers:
     - renderer: {fileID: 793275345}
   m_Enabled: 1
+--- !u!114 &1815412835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1815412828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1819685676
 GameObject:
   m_ObjectHideFlags: 0
@@ -45430,7 +45992,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1861538831}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -45700,6 +46262,7 @@ GameObject:
   - component: {fileID: 1883767325}
   - component: {fileID: 1883767327}
   - component: {fileID: 1883767326}
+  - component: {fileID: 1883767328}
   m_Layer: 11
   m_Name: 000_static_Branch
   m_TagString: Untagged
@@ -45762,6 +46325,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1883767324}
   m_Mesh: {fileID: 4300000, guid: cf9c62a42ca7d5742a72bf7cf2d5acde, type: 2}
+--- !u!114 &1883767328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883767324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1884470736
 GameObject:
   m_ObjectHideFlags: 0
@@ -47179,6 +47753,7 @@ GameObject:
   - component: {fileID: 1975723538}
   - component: {fileID: 1975723540}
   - component: {fileID: 1975723539}
+  - component: {fileID: 1975723541}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 4
   m_TagString: Untagged
@@ -47206,8 +47781,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1975723537}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -47241,6 +47816,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1975723537}
   m_Mesh: {fileID: 4300000, guid: 47afa52e61aee8b47a3d7768d4f32445, type: 2}
+--- !u!114 &1975723541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1975723537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1976837599
 GameObject:
   m_ObjectHideFlags: 0
@@ -47325,7 +47911,7 @@ MeshRenderer:
   m_GameObject: {fileID: 1989074624}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -47647,7 +48233,7 @@ MeshRenderer:
   m_GameObject: {fileID: 2010239017}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 0
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -49365,6 +49951,7 @@ GameObject:
   - component: {fileID: 2062323574}
   - component: {fileID: 2062323576}
   - component: {fileID: 2062323575}
+  - component: {fileID: 2062323577}
   m_Layer: 11
   m_Name: 000_static_Leaves_1
   m_TagString: Untagged
@@ -49392,8 +49979,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062323573}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -49427,6 +50014,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2062323573}
   m_Mesh: {fileID: 4300000, guid: 681719bed9bf0d84d9b89aaf24b531d3, type: 2}
+--- !u!114 &2062323577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2062323573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2062900756
 GameObject:
   m_ObjectHideFlags: 0
@@ -49859,6 +50457,7 @@ GameObject:
   - component: {fileID: 2104011181}
   - component: {fileID: 2104011183}
   - component: {fileID: 2104011182}
+  - component: {fileID: 2104011184}
   m_Layer: 11
   m_Name: 000_static_Leaves_2 2
   m_TagString: Untagged
@@ -49886,8 +50485,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104011180}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -49921,6 +50520,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2104011180}
   m_Mesh: {fileID: 4300000, guid: 9384360f23b52964db2d5ea28fbe70d7, type: 2}
+--- !u!114 &2104011184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2104011180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2109160766
 GameObject:
   m_ObjectHideFlags: 0
@@ -50260,7 +50870,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126123555}
   m_Enabled: 1
-  m_CastShadows: 0
+  m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
@@ -50619,6 +51229,7 @@ GameObject:
   - component: {fileID: 2140264988}
   - component: {fileID: 2140264990}
   - component: {fileID: 2140264989}
+  - component: {fileID: 2140264991}
   m_Layer: 11
   m_Name: 000_static_Leaves_1 5
   m_TagString: Untagged
@@ -50646,8 +51257,8 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2140264987}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
   m_DynamicOccludee: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -50681,6 +51292,17 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2140264987}
   m_Mesh: {fileID: 4300000, guid: 7461ec361faad9442be56e5f315be224, type: 2}
+--- !u!114 &2140264991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2140264987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2141309921
 GameObject:
   m_ObjectHideFlags: 0
