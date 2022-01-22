@@ -172,7 +172,6 @@
      <Compile Include="Assets\Script\Inventory_Screen_Manager.cs" />
      <Compile Include="Assets\Script\InventoryManager.cs" />
      <Compile Include="Assets\Script\Item_Enumerator.cs" />
-     <Compile Include="Assets\Script\LightmappedLOD.cs" />
      <Compile Include="Assets\Script\LoadScreen.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
      <Compile Include="Assets\Script\Rotate_Object.cs" />
@@ -217,7 +216,7 @@
      <None Include="Assets\Kino\Bokeh\Shader\DiskKernel.cginc" />
      <None Include="Assets\Addons\FastMobileBloom\readme.txt" />
      <None Include="Assets\Addons\SSMS\Resources\Shaders\SSMSGlobalFog.shader" />
-     <None Include="Assets\Shader\Vertex\Vertex Color.shader" />
+     <None Include="Assets\Shader\Foliage\Vertex Color.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardMeta_VC.cginc" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForwardSimple_VC.cginc" />
      <None Include="Assets\Addons\Shaders\trail.shader" />
@@ -232,6 +231,7 @@
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCore_VC.cginc" />
      <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardUtils.cginc" />
      <None Include="Assets\Kino\Bokeh\Shader\Debug.cginc" />
+     <None Include="Assets\Shader\Foliage\VertexLightmap.shader" />
      <None Include="Assets\___www.unityassetcollection.com___.txt" />
      <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
@@ -266,6 +266,7 @@
      <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardShadow.cginc" />
      <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardInput.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForward.cginc" />
+     <None Include="Assets\Shader\Foliage\VertexLightmapCommon.cginc" />
      <None Include="Assets\Addons\Shaders\zako.shader" />
      <None Include="Assets\Addons\Shaders\debris.shader" />
      <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Soft.shader" />
@@ -291,6 +292,7 @@
      <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\CalculateProbeSpacing.compute" />
      <None Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Resources\Shaders\DownsampleBrightpass.shader" />
      <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\RecalculateVolumeFilling.compute" />
+     <None Include="Assets\Shader\Foliage\Diffuse_Additive_Color.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
      <None Include="Assets\Shader\Dither\Dither.shader" />
      <None Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Example Scene\Floating Island\Shaders\Colored Unlit Particle.shader" />
@@ -336,6 +338,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForward.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCore.cginc" />
+     <None Include="Assets\Shader\Vertex\Diffuse_Additive_Color.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
      <None Include="Assets\Shader\Standard Mobile Lerp\Standard_VC_Lerp.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />

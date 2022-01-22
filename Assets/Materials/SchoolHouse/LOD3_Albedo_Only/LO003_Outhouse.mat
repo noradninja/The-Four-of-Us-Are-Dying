@@ -46,6 +46,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Illum:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Layer0FlowMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -107,6 +111,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Layer3Tex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LightMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -177,6 +185,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaMapType: 999
+    - _AmbientOn: 0
     - _Blend: 0
     - _Bump2Scale: 1
     - _BumpScale: 2
@@ -188,7 +197,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailFade: 1
     - _DetailMask: 1
-    - _DetailNormalMapScale: 1
+    - _DetailNormalMapScale: 0
     - _DiffuseMultiply: 16
     - _DistortCircularCenterU: 0.5
     - _DistortCircularCenterV: 0.5
@@ -207,6 +216,7 @@ Material:
     - _DistortVertWave: 0
     - _DstBlend: 0
     - _DstBlendAddPass: 1
+    - _Emission: 3.37
     - _EmissionAffectObject: 1
     - _EmissionFold: 0
     - _EmissionToggle: 0
@@ -398,6 +408,7 @@ Material:
     - _ScanlineWidthVert: 0.5
     - _ScrollU: 0
     - _ScrollV: 0
+    - _Shininess: 0.01
     - _Smoothness0: 1
     - _Smoothness1: 1
     - _Smoothness2: 1
@@ -426,6 +437,7 @@ Material:
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBack: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _IntersectColor: {r: 1, g: 1, b: 1, a: 1}
     - _Layer0Color: {r: 1, g: 1, b: 1, a: 1}
@@ -451,5 +463,5 @@ Material:
     - _MoveDirection: {r: 2, g: 0, b: 2, a: 0}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimOptions: {r: 0.1, g: 0.5, b: 1, a: 0}
-    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 0.47472408, g: 0.6429334, b: 0.7924528, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}

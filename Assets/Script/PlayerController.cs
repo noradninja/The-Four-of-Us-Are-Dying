@@ -89,6 +89,7 @@ public class PlayerController : MonoBehaviour
     
       private void Awake()
     {
+        //LODGroup.crossFadeAnimationDuration = 0.25f;
         animator.SetBool("isGrab", false);
         cameraRig = Camera.transform.parent.transform; //get the transform of the righ the camera is a child to
         walkSpeed = speed;
@@ -166,13 +167,13 @@ public class PlayerController : MonoBehaviour
         }
 
 ///////////////////////////DPad//////////////////////////////////////
-        if (Input.GetKeyDown(VITA + UP)){
+        if (Input.GetKeyDown(VITA + UP) && InventoryManager.medCount > 0){
             InventoryManager.medCount -= 1;
             if (InventoryManager.playerHealth < 100)
             healMe();
         }
 
-        if (Input.GetKeyDown(VITA + DOWN)){
+        if (Input.GetKeyDown(VITA + DOWN) && InventoryManager.stimCount > 0){
             InventoryManager.stimCount -= 1;
             //do stimulant stuff here
         }
