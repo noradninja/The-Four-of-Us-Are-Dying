@@ -81,10 +81,11 @@ public class PlayerController : MonoBehaviour
     private float walkStart;
    public bool isLerping;
    private bool isPaused;
-     private bool isMap;
+    public static bool isMap;
    public RawImage pausePanel;
    public RawImage mapPanel;
    public Camera mapCam;
+   public GameObject mapIndicator;
 
 public bool delayButton = false;
 
@@ -368,6 +369,7 @@ public bool delayButton = false;
         verticalCamRotation = Input.GetAxis("Right Stick Vertical"); //flashlight/look u/d
     }
         transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
+        mapIndicator.transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
         Camera.Rotate(verticalCamRotation*lookSensitivity/2,horizontalCamRotation*lookSensitivity/2,0);
         lightRig.transform.Rotate(0,-horizontalCamRotation*(lookSensitivity*2),verticalCamRotation*lookSensitivity);
 
