@@ -45,7 +45,7 @@ public class Item_Enumerator : MonoBehaviour {
 	
 	//private vars
 	private const string joystick1 = "joystick button ";
-	private const int CROSS = 0;
+	private int CROSS = 0;
 	private Vector3 screenPosition;
 	private Vector3 targetPos;
 	private string tempText;
@@ -53,6 +53,9 @@ public class Item_Enumerator : MonoBehaviour {
 	// Use this for initialization
 	void Start ()
     {
+		if (Application.isEditor){
+			CROSS = 2;
+		}
         Physics.IgnoreCollision(thisCollider, player.GetComponent<Collider>(), true); //so the player doesn't step 'up' when walking near
 	////DICTIONARY//////////////////////////////////////////////////////////////////
 	   	itemTexts = new Dictionary<string, string>(); //string itemType, string dialogText

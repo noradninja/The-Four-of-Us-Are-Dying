@@ -9,7 +9,7 @@ public class MapController : MonoBehaviour {
 	public float maxZoom;
 	public  Vector3 pos;
 	public GameObject mapArrow;
-	public GameObject mapCompass;
+	public GameObject mapContainer;
 	private Vector2 previousDistance = new Vector2(0,0);
     private Vector2 currentDistance = new Vector2(0,0);
     private Vector2 midPoint = new Vector2(0,0);
@@ -40,27 +40,28 @@ public class MapController : MonoBehaviour {
 		// 													mapCamera.transform.position.y, 
 		// 													mapArrow.transform.position.z );
 		// }  
-		
+
 		//map zoom with arrow keys for testing
-		// if (Input.GetKey(KeyCode.LeftArrow)){
-		// 	if(mapCamera.orthographicSize <= maxZoom){
-		// 		mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
-		// 		mapCompass.transform.localScale = Vector3.Lerp(mapCompass.transform.localScale,
-		// 											new Vector3(1070, 1 ,1070), 0.125f);
-		// 		mapCompass.transform.localPosition = Vector3.Lerp(mapCompass.transform.localPosition,
-		// 											new Vector3(-28.33f, 17 , -57f), 0.125f);
-		// 		}
-		// }
-		// if (Input.GetKey(KeyCode.RightArrow)){
-		// 	if(mapCamera.orthographicSize >= minZoom){
-		// 		mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
-		// 		mapCompass.transform.localScale = Vector3.Lerp(mapCompass.transform.localScale,
-		// 											new Vector3(420, 1 ,420), 0.125f);	
-		// 		mapCompass.transform.localPosition = Vector3.Lerp(mapCompass.transform.localPosition,
-		// 											new Vector3(-11.1f, 17 ,-22.19f), 0.125f);
-		// 	}
-		// }
-		//map zoom
+		if (Input.GetKey(KeyCode.LeftArrow)){
+			if(mapCamera.orthographicSize < maxZoom){
+				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
+				//keep apparent scale and position the same
+				mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
+													new Vector3(5.81875f, 5.81875f, 5.81875f), 0.125f);
+				
+			}
+		}
+		if (Input.GetKey(KeyCode.RightArrow)){
+			if(mapCamera.orthographicSize > minZoom){
+			mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
+			//keep apparent scale and position the same
+			mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
+												new Vector3(2.27f, 2.27f ,2.27f), 0.125f);
+			
+			}
+		}
+
+		//map zoom with touchscreen
 		if (Input.touchCount==2 && Input.GetTouch(0).phase == TouchPhase.Moved && Input.GetTouch(1).phase == TouchPhase.Moved){
 			midPoint = new Vector2(((Input.GetTouch(0).position.x + Input.GetTouch(1).position.x)/2), 
 									((Input.GetTouch(0).position.y + Input.GetTouch(1).position.y)/2));
@@ -70,15 +71,16 @@ public class MapController : MonoBehaviour {
 			previousDistance = ((Input.GetTouch(0).position - Input.GetTouch(0).deltaPosition) - 
 								(Input.GetTouch(1).position - Input.GetTouch(1).deltaPosition)); //difference in previous locations using delta positions
 			float touchDelta = currentDistance.magnitude - previousDistance.magnitude;
+			
 			// Zoom out
 			if(touchDelta<0)
 			{
 				if(mapCamera.orthographicSize <= maxZoom){
 				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
-				mapCompass.transform.localScale = Vector3.Lerp(mapCompass.transform.localScale,
-													new Vector3(1070, 1 ,1070), 0.125f);
-				mapCompass.transform.localPosition = Vector3.Lerp(mapCompass.transform.localPosition,
-													new Vector3(-28.33f, 17 , -57f), 0.125f);
+				//keep apparent scale and position the same
+				mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
+													new Vector3(5.9125f, 5.9125f, 5.9125f), 0.125f);
+											
 				}
 			}
 			//Zoom in
@@ -86,10 +88,10 @@ public class MapController : MonoBehaviour {
 			{
 				if(mapCamera.orthographicSize >= minZoom){
 				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
-				mapCompass.transform.localScale = Vector3.Lerp(mapCompass.transform.localScale,
-														new Vector3(420, 1 ,420), 0.125f);	
-					mapCompass.transform.localPosition = Vector3.Lerp(mapCompass.transform.localPosition,
-														new Vector3(-11.1f, 17 ,-22.19f), 0.125f);
+				//keep apparent scale and position the same
+				mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
+													new Vector3(2.27f, 2.27f ,2.27f), 0.125f);
+				
 				}
 			}
 		}

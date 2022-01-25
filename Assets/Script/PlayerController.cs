@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public static bool hasFlashlight = false;
     public static bool flashlightOff = true;
     public float speed = 3;
+    public float stamina = 100f;
+    public float rechargeDelay;
     private float walkSpeed;
     public Animator animator;
     
@@ -44,7 +46,6 @@ public class PlayerController : MonoBehaviour
     public float lookSensitivity = 5f;
     public float upLimit = -50;
     public float downLimit = 50;
-    public int batteryCount = 5;
     public TextMeshProUGUI batteryText;
     public float flashlightCharge = 1.0f;
     public bool flashlightDisabled;
@@ -57,19 +58,20 @@ public class PlayerController : MonoBehaviour
     // gravity
     private float gravity = 9.87f;
     private float verticalSpeed = 0;
-    private const string VITA = "joystick button ";
-	private const int LTRIG = 4;
-    private const int RTRIG = 5;
-    	private const int CROSS = 0;
-	private const int CIRCLE = 1;
-	private const int SQUARE = 2;
-	private const int TRIANGLE = 3;
-	private const int SELECT = 6;
-	private const int START = 7;
-	private const int UP = 8;
-	private const int RIGHT = 9;
-	private const int DOWN = 10;
-	private const int LEFT = 11;
+    private  string VITA = "joystick button ";
+	
+    private  int CROSS = 0;
+	private  int CIRCLE = 1;
+	private  int SQUARE = 2;
+	private  int TRIANGLE = 3;
+	private  int LTRIG = 4;
+    private  int RTRIG = 5;
+    private  int SELECT = 6;
+	private  int START = 7;
+	private  float UP = 8;
+	private  float RIGHT = 9;
+	private  float DOWN = 10;
+	private  float LEFT = 11;
    private float verticalMove;
     private float horizontalRotation;
     private float horizontalCamRotation;
@@ -92,6 +94,23 @@ public bool delayButton = false;
     
       private void Awake()
     {
+        if (Application.isEditor){
+        //because the DS3 registers the buttons differently in Windows
+            TRIANGLE = 0;
+            CIRCLE = 1;
+            CROSS = 2;
+            SQUARE = 3;
+            int L2TRIG = 4;
+            int R2TRIG = 5;
+            LTRIG = 6;
+            RTRIG = 7;
+            START = 8;
+            SELECT = 9;
+            //these are mapped to L3/R3 because the fucking dpad is a set of axes in Windows ఠ ͟ಠ
+            UP = 10;
+            DOWN = 11;
+        }
+
         //LODGroup.crossFadeAnimationDuration = 0.25f;
         animator.SetBool("isGrab", false);
         cameraRig = Camera.transform.parent.transform; //get the transform of the righ the camera is a child to
@@ -218,7 +237,7 @@ public bool delayButton = false;
             InventoryManager.batteryCount -= 1;
         //add to charge and set progress bar based on charge amount
             flashlightCharge += 0.5f;
-                if(flashlight.intensity < 10){ //to constrain the light intensity to 10
+                if(flashlight.intensity < 10){ //to rain the light intensity to 10
                     float currentEmpty = (10 - flashlight.intensity);
                     flashlight.intensity += currentEmpty - 5.0f;
                 }
@@ -282,28 +301,44 @@ public bool delayButton = false;
             }
         }
 
+//quick turnaround- when we hit Cross and down on the left stick at the same time   
+        if (Input.GetKeyDown(VITA + CROSS) && verticalMove > 0 && !delayButton){ 
+            delayButton = true;
+            Vector3 playerRotation =  transform.eulerAngles; //store our rotation
+            Vector3 neededRotation = new Vector3 (  transform.eulerAngles.x,
+                                                    (transform.eulerAngles.y + 180f),
+                                                    transform.eulerAngles.z); //calc new rotation
+            StartCoroutine(quickTurn(playerRotation, neededRotation, 0.5f));
+            StartCoroutine(buttonDelayTimer(0.675f));
+        }
+
 
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
         if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge < 0.05f)
         {   
                 flashlightCharge = 0;
-                StartCoroutine(FadeLightStaticInput(colorTransparent, colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f)); //fade in quick
+                StartCoroutine(FadeLightStaticInput(colorTransparent, colorStart, 0.25f, 0, 
+                                                    5, 40, 40, 0.08f, 0.08f)); //fade in quick
                 StopAllCoroutines();
-                StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
+                StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
+                                                    5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
                 flashlightDisabled = true;
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
 //if battery is not dead, and we hit the L trigger
-        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled && !flashlightOff)
+        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f 
+            && !flashlightDisabled && !flashlightOff)
         {   
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
             StopAllCoroutines();
-            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, duration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
+            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, duration, 
+                                                flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
 //change FOV while we hold the L trigger
-        if (Input.GetKey(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f && !flashlightDisabled && !flashlightOff)
+        if (Input.GetKey(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f 
+        && !flashlightDisabled && !flashlightOff)
         {
             Focus();
             if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
@@ -316,19 +351,43 @@ public bool delayButton = false;
             float currentAngle = flashlight.spotAngle;
             float currentSize = lightShaft.transform.localScale.x;
             Color currentColor = lightBeam.material.color;
-            StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, currentAngle, 40, currentSize, 0.08f));
+            StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
+                                                currentAngle, 40, currentSize, 0.08f));
             StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
     
-        
      
         if (Input.GetKey(VITA + RTRIG))
         {
-           Run(); //RUN, FORREST, RUN
-           if (camObject.fieldOfView > 50) camObject.fieldOfView = 50; //limit fov change
+           if (stamina > 0f){ 
+                Run(); //RUN, FORREST, RUN
+           }
+           if (stamina <= 30f && verticalMove != 0){
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", true);
+                animator.SetBool("isIdle", false);
+            }
+            if (stamina == 0f){
+                speed = walkSpeed;
+            }
+
+            if (verticalMove != 0 && stamina > 0f){
+                stamina -= 0.25f; //full is 100
+                if (speed > walkSpeed){ //speed starts at 5
+                    speed -= (speed / (8 * stamina)); //speed loss falls off as you lose stamina and slow down  
+                }
+            }
+            if (stamina < 0){
+                stamina = 0;
+                speed = walkSpeed;
+            }
+
+            if (camObject.fieldOfView > 50) camObject.fieldOfView = 50; //limit fov change  
         }
         if (Input.GetKeyDown(VITA + RTRIG))
-        {
+        {   
+            StopAllCoroutines();
+            speed = 5f;
             savedPosition = lightRig.transform.localPosition;
             savedRotation = lightRig.transform.localRotation;
             lightRig.transform.parent = handRig; 
@@ -336,6 +395,8 @@ public bool delayButton = false;
         }
         if (Input.GetKeyUp(VITA + RTRIG))
         {   
+            speed = walkSpeed;
+            StartCoroutine(rechargeStamina(rechargeDelay, stamina));
             animator.SetBool("isRunning", false);
             lightRig.transform.parent = bodyRig;
             lightRig.transform.localRotation = savedRotation;
@@ -345,7 +406,6 @@ public bool delayButton = false;
         {
             if (camObject.fieldOfView > 40 && camObject.fieldOfView != 40){
                 camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
-                speed = walkSpeed;
             }
             if (camObject.fieldOfView < 40 && camObject.fieldOfView != 40){
                 camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32;
@@ -378,14 +438,14 @@ public bool delayButton = false;
 
         if (currentRotation.x > 180) currentRotation.x -= 360;
         if (currentRotation.y > 180) currentRotation.y -= 360;
-        currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit); //constrain camera up/down
-        currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //constrain camera left/right
+        currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit); //rain camera up/down
+        currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //rain camera left/right
         currentRotation.z = 0;
 
         if (currentLightRotation.y > 180) currentLightRotation.y -= 360;
         currentLightRotation.x = 0;
-        currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 40, 120); //constrain light left/right
-        currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //constrain light up/down
+        currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 40, 120); //rain light left/right
+        currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //rain light up/down
 
     //apply the rotations
         Camera.localRotation = Quaternion.Euler(currentRotation);
@@ -447,17 +507,18 @@ public bool delayButton = false;
     ///////////////////////////Methods//////////////////////////////////////
     private void Run()
     {
-        
-        Debug.Log("You're holding down run!");
-        speed = 5f;
-        camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
-        if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
-            animator.SetBool("isRunning", true);
-            animator.SetBool("isWalking", false);  
-            lerpRate = 0.275f;     
-            StartCoroutine(walkLerp(0, 1, lerpRate));  
+        if (stamina > 0f){ 
+            Debug.Log("You're holding down run!");
+            camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
+            if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
+                animator.SetBool("isRunning", true);
+                animator.SetBool("isWalking", false);  
+                lerpRate = 0.275f;     
+                StartCoroutine(walkLerp(0, 1, lerpRate));
+            }
         }
-        else  if (verticalMove == 0 && horizontalRotation == 0){
+
+        if (verticalMove == 0 && horizontalRotation == 0){
             animator.SetBool("isRunning", false);
             animator.SetBool("isWalking", false);
             animator.SetBool("isIdle", true);
@@ -620,8 +681,36 @@ public bool delayButton = false;
         }
 	}
 
-    IEnumerator buttonDelayTimer(float delay){
+ 
+
+    IEnumerator rechargeStamina(float duration, float currentStamina){
+        float time = 0.0f;
+        yield return new WaitForSeconds(2f); //delay before charge happens
+        if(!Input.GetKey(VITA + RTRIG)){    //just to make sure we arent trying to charge and drain at the same time
+            while (time < duration){
+                currentStamina = Mathf.Lerp (currentStamina, 100f, time/duration);
+                time += Time.deltaTime;
+                stamina = currentStamina;
+                yield return null;
+            }
+            stamina = 100f;
+        }
+    }
+   IEnumerator buttonDelayTimer(float delay){
         yield return new WaitForSeconds(delay);
         delayButton = false;
+    }
+
+    IEnumerator quickTurn(Vector3 playerRotation, Vector3 fullTurn, float duration){
+        float time = 0.0f;
+            while (time < duration){
+                playerRotation = Vector3.Lerp (playerRotation, fullTurn, time/duration);
+                transform.eulerAngles = playerRotation;
+                time += Time.deltaTime;
+                yield return null;
+            }
+            transform.eulerAngles = new Vector3 (   fullTurn.x,
+                                                    fullTurn.y,
+                                                    fullTurn.z); //finalize rotation
     }
 }
