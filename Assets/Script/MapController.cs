@@ -79,7 +79,7 @@ public class MapController : MonoBehaviour {
 				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
 				//keep apparent scale and position the same
 				mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-													new Vector3(5.9125f, 5.9125f, 5.9125f), 0.125f);
+													new Vector3(5.81875f, 5.81875f, 5.81875f), 0.125f);
 											
 				}
 			}

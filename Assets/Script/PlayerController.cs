@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 3;
     public float stamina = 100f;
     public float rechargeDelay;
+    public float stimCooldown = 0f;
     private float walkSpeed;
     public Animator animator;
     
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
     public Color colorStart;
     public Color colorEnd;
     public Color colorTransparent;
-    public float duration = 1.0f;
+    public float lightDuration = 1.0f;
     public float lookSensitivity = 5f;
     public float upLimit = -50;
     public float downLimit = 50;
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
 	private  float RIGHT = 9;
 	private  float DOWN = 10;
 	private  float LEFT = 11;
-   private float verticalMove;
+    private float verticalMove;
     private float horizontalRotation;
     private float horizontalCamRotation;
     private float verticalCamRotation;
@@ -81,15 +82,16 @@ public class PlayerController : MonoBehaviour
     private bool fire;
     public SkinnedMeshRenderer skinnedRenderer;
     private float walkStart;
-   public bool isLerping;
-   private bool isPaused;
+    public bool isLerping;
+    private bool isPaused;
     public static bool isMap;
-   public RawImage pausePanel;
-   public RawImage mapPanel;
-   public Camera mapCam;
-   public GameObject mapIndicator;
-
-public bool delayButton = false;
+    public RawImage pausePanel;
+    public RawImage mapPanel;
+    public Camera mapCam;
+    public GameObject mapIndicator;
+    public bool isStimulant = false;
+    public float cooldownValue;
+    public bool delayButton = false;
 
     
       private void Awake()
@@ -116,24 +118,24 @@ public bool delayButton = false;
         cameraRig = Camera.transform.parent.transform; //get the transform of the righ the camera is a child to
         walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
+        cooldownValue = stimCooldown;
     }
 
     void Update()
     {   
-        
-        Flashlight();
-        Move();
-        Rotate();
-        Keys();
+       //if(!isMap || !isPaused){      
+            Move();
+            Rotate();
+        //}   
+       Flashlight();
+       Keys();
     
         if (verticalMove != 0 || horizontalRotation !=0){
         walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
             if (walkStart == 0f){   
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
             }    
-        
         }
-        
     }
     private void Flashlight()
     {
@@ -199,11 +201,17 @@ public bool delayButton = false;
             StartCoroutine(buttonDelayTimer(0.25f));
         }
 
-        if (Input.GetKeyDown(VITA + DOWN)  && !delayButton && InventoryManager.stimCount > 0){
+        if (Input.GetKeyDown(VITA + DOWN)  && !delayButton && InventoryManager.stimCount > 0 && !isStimulant){
             InventoryManager.stimCount -= 1;
-            //do stimulant stuff here
+            isStimulant = true;
             delayButton = true;
             StartCoroutine(buttonDelayTimer(0.25f));
+             //start stim cooldown timer
+            if (animator.GetBool("isRunning")){
+                speed = 5f;
+                stamina = 100f;
+            }
+            StartCoroutine(countdownStimulant(10, 0, stimCooldown));
         }
 
         if (Input.GetKeyDown(VITA + LEFT) && !delayButton){
@@ -256,12 +264,15 @@ public bool delayButton = false;
             }
              delayButton = true;
             StartCoroutine(buttonDelayTimer(0.25f));
+            if (isStimulant && cooldownValue < stimCooldown){
+                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+            }
         }
 //if we add battery while 'firing' flashlight
         if (Input.GetKeyDown(VITA + SQUARE)  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
         {   
             StopAllCoroutines();
-            StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, duration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
+            StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, lightDuration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
             if (flashlightCharge < 1.0f){
             InventoryManager.batteryCount -= 1;
             //add to charge and set progress bar based on charge amount
@@ -284,6 +295,9 @@ public bool delayButton = false;
             }
             delayButton = true;
             StartCoroutine(buttonDelayTimer(0.25f));
+            if (isStimulant && cooldownValue < stimCooldown){
+                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+            }
         }
 
 
@@ -316,14 +330,17 @@ public bool delayButton = false;
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
         if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge < 0.05f)
         {   
-                flashlightCharge = 0;
-                StartCoroutine(FadeLightStaticInput(colorTransparent, colorStart, 0.25f, 0, 
-                                                    5, 40, 40, 0.08f, 0.08f)); //fade in quick
-                StopAllCoroutines();
-                StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
-                                                    5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
-                flashlightDisabled = true;
-                StartCoroutine(walkLerp(0, 1,  lerpRate));
+            flashlightCharge = 0;
+            StartCoroutine(FadeLightStaticInput(colorTransparent, colorStart, 0.25f, 0, 
+                                                5, 40, 40, 0.08f, 0.08f)); //fade in quick
+            StopAllCoroutines();
+            StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
+                                                5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
+            flashlightDisabled = true;
+            StartCoroutine(walkLerp(0, 1,  lerpRate));
+            if (isStimulant && cooldownValue < stimCooldown){
+                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+            }   
         }
 //if battery is not dead, and we hit the L trigger
         if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f 
@@ -332,7 +349,10 @@ public bool delayButton = false;
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
             StopAllCoroutines();
-            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, duration, 
+            if (isStimulant && cooldownValue < stimCooldown){
+                    StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+            }
+            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
                                                 flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
@@ -347,6 +367,9 @@ public bool delayButton = false;
         if (Input.GetKeyUp(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f)
         {   
             StopAllCoroutines();
+            if (isStimulant && cooldownValue < stimCooldown){
+                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+            }
             float currentIntensity = flashlight.intensity;
             float currentAngle = flashlight.spotAngle;
             float currentSize = lightShaft.transform.localScale.x;
@@ -370,8 +393,7 @@ public bool delayButton = false;
             if (stamina == 0f){
                 speed = walkSpeed;
             }
-
-            if (verticalMove != 0 && stamina > 0f){
+            if (verticalMove != 0 && stamina > 0f && !isStimulant){
                 stamina -= 0.25f; //full is 100
                 if (speed > walkSpeed){ //speed starts at 5
                     speed -= (speed / (8 * stamina)); //speed loss falls off as you lose stamina and slow down  
@@ -386,7 +408,7 @@ public bool delayButton = false;
         }
         if (Input.GetKeyDown(VITA + RTRIG))
         {   
-            StopAllCoroutines();
+            //StopAllCoroutines();
             speed = 5f;
             savedPosition = lightRig.transform.localPosition;
             savedRotation = lightRig.transform.localRotation;
@@ -464,8 +486,9 @@ public bool delayButton = false;
 
     private void Move()
     {
+    
         verticalMove = Input.GetAxis("Left Stick Vertical"); //player walk fwd/bkwd
-       
+
         if (((verticalMove != 0 && (horizontalCamRotation == 0 && verticalCamRotation == 0))) 
         && ((Camera.localEulerAngles.y >= 90.05f || Camera.localEulerAngles.y <= 89.95f) 
         || (Camera.localEulerAngles.x <= 9.95f || Camera.localEulerAngles.x >= 10.05f)))
@@ -538,7 +561,6 @@ public bool delayButton = false;
         // animator.SetBool("isWalking", true); 
 
     }
-
     public void healMe()
     {
         float startHealth = InventoryManager.playerHealth/100;
@@ -682,13 +704,27 @@ public bool delayButton = false;
 	}
 
  
-
+ IEnumerator countdownStimulant(float startVal, float endVal, float duration){
+        if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.115f){
+            StartCoroutine(lerpFocalLength (0.115f, 0.140f, 0.5f));
+        }
+        float time = 0.0f;
+            while (time < duration){
+                cooldownValue = Mathf.Lerp (startVal, endVal, time/duration);
+                time += Time.deltaTime;
+                yield return null;
+            }
+            cooldownValue = 0;
+            isStimulant = false;
+            cooldownValue = stimCooldown;
+            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f));
+    }
     IEnumerator rechargeStamina(float duration, float currentStamina){
         float time = 0.0f;
         yield return new WaitForSeconds(2f); //delay before charge happens
         if(!Input.GetKey(VITA + RTRIG)){    //just to make sure we arent trying to charge and drain at the same time
             while (time < duration){
-                currentStamina = Mathf.Lerp (currentStamina, 100f, time/duration);
+                currentStamina = Mathf.Lerp (currentStamina, 100f, time / (duration * 100f) );
                 time += Time.deltaTime;
                 stamina = currentStamina;
                 yield return null;
@@ -712,5 +748,16 @@ public bool delayButton = false;
             transform.eulerAngles = new Vector3 (   fullTurn.x,
                                                     fullTurn.y,
                                                     fullTurn.z); //finalize rotation
+    }
+
+    IEnumerator lerpFocalLength (float startValue, float endValue, float duration){
+       float time = 0.0f;
+            while (time < duration){
+                float currentValue = Mathf.Lerp (startValue, endValue, time/duration);
+                Camera.GetComponent<Kino.Bokeh>().focalLength = currentValue;
+                time += Time.deltaTime;
+                yield return null;
+            }
+        Camera.GetComponent<Kino.Bokeh>().focalLength = endValue;
     }
 }
