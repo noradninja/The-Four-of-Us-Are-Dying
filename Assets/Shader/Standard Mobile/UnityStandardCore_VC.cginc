@@ -297,7 +297,7 @@ inline UnityGI FragmentGI (FragmentCommonData s, half occlusion, half4 i_ambient
         Unity_GlossyEnvironmentData g = UnityGlossyEnvironmentSetup(s.smoothness, -s.eyeVec, s.normalWorld, s.specColor);
         // Replace the reflUVW if it has been compute in Vertex shader. Note: the compiler will optimize the calcul in UnityGlossyEnvironmentSetup itself
        
-           // g.reflUVW = s.reflUVW;
+//            g.reflUVW = s.reflUVW;
       
 
         return UnityGlobalIllumination (d, occlusion, s.normalWorld, g);
@@ -553,7 +553,7 @@ VertexOutputForwardAdd vertForwardAdd (VertexInput_VC v)
     #endif
 
 	//#if defined(_VERTEXCOLOR) || defined(_VERTEXCOLOR_LERP)
-		o.color = lerp(fixed4(1, 1, 1, 1), fixed4(1, 1, 1, 1) * v.color, _IntensityVC);
+		//o.color = lerp(fixed4(1, 1, 1, 1), fixed4(1, 1, 1, 1) * v.color, _IntensityVC);
 	//#endif
 
     UNITY_TRANSFER_FOG_COMBINED_WITH_EYE_VEC(o,o.pos);

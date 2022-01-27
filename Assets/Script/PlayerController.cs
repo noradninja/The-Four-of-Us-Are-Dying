@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
     public float stamina = 100f;
     public float rechargeDelay;
     public float stimCooldown = 0f;
+    public GameObject staminaObject;
     private float walkSpeed;
     public Animator animator;
     
@@ -122,13 +123,13 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
-    {   
-       //if(!isMap || !isPaused){      
-            Move();
-            Rotate();
-        //}   
-       Flashlight();
-       Keys();
+    {  
+
+
+        Move();
+        Rotate();
+        Flashlight();
+        Keys();
     
         if (verticalMove != 0 || horizontalRotation !=0){
         walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
@@ -136,6 +137,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
             }    
         }
+        
     }
     private void Flashlight()
     {
@@ -180,6 +182,8 @@ public class PlayerController : MonoBehaviour
             if (SSAOScript.GetComponent<FastSSAO>().enabled){
                 SSAOScript.GetComponent<FastSSAO>().enabled = false;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
+                SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
+                SSAOScript.GetComponent<FXAA>().enabled = false;
                 enabledText.GetComponent<Text>().color = Color.red;
                 enabledText.GetComponent<Text>().text = ("Disabled");
 
@@ -187,6 +191,8 @@ public class PlayerController : MonoBehaviour
             else {
                 SSAOScript.GetComponent<FastSSAO>().enabled = true;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
+                SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
+                SSAOScript.GetComponent<FXAA>().enabled = true;
                 enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");
             }
@@ -205,11 +211,11 @@ public class PlayerController : MonoBehaviour
             InventoryManager.stimCount -= 1;
             isStimulant = true;
             delayButton = true;
+            stamina = 100f;
             StartCoroutine(buttonDelayTimer(0.25f));
              //start stim cooldown timer
             if (animator.GetBool("isRunning")){
                 speed = 5f;
-                stamina = 100f;
             }
             StartCoroutine(countdownStimulant(10, 0, stimCooldown));
         }
@@ -382,22 +388,20 @@ public class PlayerController : MonoBehaviour
      
         if (Input.GetKey(VITA + RTRIG))
         {
-           if (stamina > 0f){ 
-                Run(); //RUN, FORREST, RUN
-           }
-           if (stamina <= 30f && verticalMove != 0){
-                animator.SetBool("isRunning", false);
-                animator.SetBool("isWalking", true);
-                animator.SetBool("isIdle", false);
+            if (stamina > 0f){ 
+                    Run(); //RUN, FORREST, RUN
             }
+          
             if (stamina == 0f){
                 speed = walkSpeed;
             }
             if (verticalMove != 0 && stamina > 0f && !isStimulant){
+                float oldStamina = stamina;
                 stamina -= 0.25f; //full is 100
                 if (speed > walkSpeed){ //speed starts at 5
                     speed -= (speed / (8 * stamina)); //speed loss falls off as you lose stamina and slow down  
                 }
+                staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp((oldStamina/100), (stamina/100), 0.1f);
             }
             if (stamina < 0){
                 stamina = 0;
@@ -408,7 +412,10 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(VITA + RTRIG))
         {   
-            //StopAllCoroutines();
+            StopAllCoroutines();
+            if (isStimulant && cooldownValue < stimCooldown){
+                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+            }
             speed = 5f;
             savedPosition = lightRig.transform.localPosition;
             savedRotation = lightRig.transform.localRotation;
@@ -530,7 +537,7 @@ public class PlayerController : MonoBehaviour
     ///////////////////////////Methods//////////////////////////////////////
     private void Run()
     {
-        if (stamina > 0f){ 
+        if (stamina > 30f){ 
             Debug.Log("You're holding down run!");
             camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
             if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
@@ -540,6 +547,20 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(walkLerp(0, 1, lerpRate));
             }
         }
+        if (stamina <= 30f){ 
+            Debug.Log("You're very tired!");
+            camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
+            if (animator.GetBool("isRunning") == true  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
+                animator.SetBool("isRunning", false);
+                animator.SetBool("isWalking", true);  
+                walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+                lerpRate = 0.55f;
+                if (walkStart == 0f){
+                    StartCoroutine(walkLerp(0, 1,  lerpRate));
+                }
+            }
+        }
+
 
         if (verticalMove == 0 && horizontalRotation == 0){
             animator.SetBool("isRunning", false);
@@ -641,6 +662,16 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // IEnumerator lerpStaminaMeter(float startValue, float endValue, float duration){
+    //     float time = 0f;
+    //     while (time < duration){
+    //         staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp(startValue, endValue, time/(duration));
+    //         time += Time.deltaTime;
+    //         yield return null;
+    //     }
+    //     staminaObject.GetComponent<Image>().fillAmount = endValue;
+        
+    // }
     IEnumerator lerpCam(float duration){
         float time = 0;
         float newY = 0;
@@ -706,7 +737,7 @@ public class PlayerController : MonoBehaviour
  
  IEnumerator countdownStimulant(float startVal, float endVal, float duration){
         if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.115f){
-            StartCoroutine(lerpFocalLength (0.115f, 0.140f, 0.5f));
+            StartCoroutine(lerpFocalLength (0.115f, 0.140f, 4.0f,0.5f));
         }
         float time = 0.0f;
             while (time < duration){
@@ -717,20 +748,27 @@ public class PlayerController : MonoBehaviour
             cooldownValue = 0;
             isStimulant = false;
             cooldownValue = stimCooldown;
-            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f));
+            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f, 0.5f));
+            float time2 = 0.0f;
+            while (time2 < 0.5f){
+                stamina = Mathf.Lerp (stamina, 0, time2/0.5f);
+                staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp((stamina/100), 0, time2 / 0.5f);
+                time2 += Time.deltaTime;
+                yield return null;
+            }
+            StartCoroutine(rechargeStamina(rechargeDelay, 0));
     }
     IEnumerator rechargeStamina(float duration, float currentStamina){
         float time = 0.0f;
         yield return new WaitForSeconds(2f); //delay before charge happens
-        if(!Input.GetKey(VITA + RTRIG)){    //just to make sure we arent trying to charge and drain at the same time
-            while (time < duration){
-                currentStamina = Mathf.Lerp (currentStamina, 100f, time / (duration * 100f) );
-                time += Time.deltaTime;
-                stamina = currentStamina;
-                yield return null;
-            }
-            stamina = 100f;
+        while (time < duration){
+            currentStamina = Mathf.Lerp (currentStamina, 100f, time / (duration * 100f) );
+            staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp((currentStamina/100), 100, time / (duration * 100f));
+            time += Time.deltaTime;
+            stamina = currentStamina;
+            yield return null;
         }
+        stamina = 100f;
     }
    IEnumerator buttonDelayTimer(float delay){
         yield return new WaitForSeconds(delay);
@@ -750,11 +788,14 @@ public class PlayerController : MonoBehaviour
                                                     fullTurn.z); //finalize rotation
     }
 
-    IEnumerator lerpFocalLength (float startValue, float endValue, float duration){
+    IEnumerator lerpFocalLength (float startValue, float endValue, float endBloom, float duration){
        float time = 0.0f;
             while (time < duration){
+                float currentBloom = Camera.GetComponent<FastMobileBloom>().intensity;
                 float currentValue = Mathf.Lerp (startValue, endValue, time/duration);
+                float bloomVal = Mathf.Lerp (currentBloom, endBloom, time/duration);
                 Camera.GetComponent<Kino.Bokeh>().focalLength = currentValue;
+                Camera.GetComponent<FastMobileBloom>().intensity = bloomVal;
                 time += Time.deltaTime;
                 yield return null;
             }

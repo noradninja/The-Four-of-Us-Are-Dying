@@ -213,7 +213,7 @@ Material:
     - _FogOffset: 0
     - _FogToggle: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.125
+    - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _IntensityVC: 0
     - _IntersectFold: 0

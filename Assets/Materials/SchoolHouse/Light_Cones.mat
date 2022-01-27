@@ -43,7 +43,7 @@ Material:
     - _FadeLength: 0.15
     - _InvFade: 3
     - _SoftEdge: 3.5
-    - _Tweak: -0.03
+    - _Tweak: -0.25
     - _Width: 133.89
     m_Colors:
     - _Color: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.32941177}

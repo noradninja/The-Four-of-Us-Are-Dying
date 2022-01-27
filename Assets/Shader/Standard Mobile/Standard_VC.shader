@@ -53,6 +53,7 @@ Shader "Vita/Standard Mobile"
     CGINCLUDE
         #define UNITY_SETUP_BRDF_INPUT MetallicSetup
         #define UNITY_NO_FULL_STANDARD_SHADER
+        #define UNITY_BRDF_GGX 1
         //#define DYNAMICLIGHTMAP_ON
         // #define SHADOWS_NATIVE
         //#define SHADOWS_SCREEN
@@ -95,6 +96,7 @@ Shader "Vita/Standard Mobile"
             #pragma multi_compile_instancing
             // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
             #pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
 
             #pragma vertex vertBase
             #pragma fragment fragBase
@@ -132,6 +134,7 @@ Shader "Vita/Standard Mobile"
             #pragma multi_compile_fog
             // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
             #pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
 
             #pragma vertex vertAdd
             #pragma fragment fragAdd
@@ -161,6 +164,7 @@ Shader "Vita/Standard Mobile"
             #pragma multi_compile_instancing
             // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
             #pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
 
             #pragma vertex vertShadowCaster
             #pragma fragment fragShadowCaster

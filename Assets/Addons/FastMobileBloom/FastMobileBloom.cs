@@ -48,6 +48,7 @@ public class FastMobileBloom : MonoBehaviour
 			Graphics.Blit(rt, rt2, fastBloomMaterial, 2);
 			RenderTexture.ReleaseTemporary(rt);
 			rt = rt2;
+			RenderTexture.ReleaseTemporary(rt2);
 		}
 
 		fastBloomMaterial.SetFloat("_BloomIntensity", intensity);

@@ -40,7 +40,7 @@ Shader "Hidden/Kino/Bokeh"
             #pragma vertex vert
             #pragma fragment frag_Prefilter
             #pragma multi_compile _ UNITY_COLORSPACE_GAMMA
-            #define PREFILTER_LUMA_WEIGHT
+            //#define PREFILTER_LUMA_WEIGHT
             #include "Prefilter.cginc"
             ENDCG
         }
