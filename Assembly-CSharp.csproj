@@ -165,6 +165,7 @@
      <Compile Include="Assets\Script\FadeIn.cs" />
      <Compile Include="Assets\Script\FadeInWithCross.cs" />
      <Compile Include="Assets\Script\Fadeout.cs" />
+     <Compile Include="Assets\Script\FPS_Counter.cs" />
      <Compile Include="Assets\Script\FXAA3_11_ConsoleEffect.cs" />
      <Compile Include="Assets\Script\GetCollidingVerts.cs" />
      <Compile Include="Assets\Script\GetFrameTiming.cs" />

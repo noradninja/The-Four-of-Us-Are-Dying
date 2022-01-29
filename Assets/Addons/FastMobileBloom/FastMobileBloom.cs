@@ -27,17 +27,17 @@ public class FastMobileBloom : MonoBehaviour
 		Graphics.Blit(source, rt, fastBloomMaterial, 0);
 
 
-		//downscale
-		for(int i = 0; i < blurIterations - 1; i++)
-		{
-			RenderTexture rt2 = RenderTexture.GetTemporary(128, 73, 0, source.format);
-			rt2.DiscardContents();
+		// //downscale
+		// for(int i = 0; i < blurIterations - 1; i++)
+		// {
+		// 	RenderTexture rt2 = RenderTexture.GetTemporary(128, 73, 0, source.format);
+		// 	rt2.DiscardContents();
 
-			fastBloomMaterial.SetFloat("_Spread", blurSize);
-			Graphics.Blit(rt, rt2, fastBloomMaterial, 1);
-			RenderTexture.ReleaseTemporary(rt);
-			rt = rt2;
-		}
+		// 	fastBloomMaterial.SetFloat("_Spread", blurSize);
+		// 	Graphics.Blit(rt, rt2, fastBloomMaterial, 1);
+		// 	RenderTexture.ReleaseTemporary(rt);
+		// 	rt = rt2;
+		// }
 		//upscale
 		for(int i = 0; i < blurIterations - 1; i++)
 		{

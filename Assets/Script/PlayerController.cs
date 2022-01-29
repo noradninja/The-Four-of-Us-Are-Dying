@@ -186,6 +186,7 @@ public class PlayerController : MonoBehaviour
                 SSAOScript.GetComponent<FXAA>().enabled = false;
                 enabledText.GetComponent<Text>().color = Color.red;
                 enabledText.GetComponent<Text>().text = ("Disabled");
+                if (!Application.isEditor) QualitySettings.vSyncCount = 1;
 
             }
             else {
@@ -195,6 +196,7 @@ public class PlayerController : MonoBehaviour
                 SSAOScript.GetComponent<FXAA>().enabled = true;
                 enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");
+                if (!Application.isEditor) QualitySettings.vSyncCount = 2;
             }
         }
 
@@ -211,7 +213,9 @@ public class PlayerController : MonoBehaviour
             InventoryManager.stimCount -= 1;
             isStimulant = true;
             delayButton = true;
+            float oldStamina = stamina;
             stamina = 100f;
+            staminaObject.GetComponent<Image>().fillAmount = 1.0f;
             StartCoroutine(buttonDelayTimer(0.25f));
              //start stim cooldown timer
             if (animator.GetBool("isRunning")){
@@ -737,7 +741,7 @@ public class PlayerController : MonoBehaviour
  
  IEnumerator countdownStimulant(float startVal, float endVal, float duration){
         if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.115f){
-            StartCoroutine(lerpFocalLength (0.115f, 0.140f, 4.0f,0.5f));
+            StartCoroutine(lerpFocalLength (0.115f, 0.140f, 1.0f, 0.15f, 2.0f));
         }
         float time = 0.0f;
             while (time < duration){
@@ -748,7 +752,7 @@ public class PlayerController : MonoBehaviour
             cooldownValue = 0;
             isStimulant = false;
             cooldownValue = stimCooldown;
-            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f, 0.5f));
+            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f, 0.25f, 2.0f));
             float time2 = 0.0f;
             while (time2 < 0.5f){
                 stamina = Mathf.Lerp (stamina, 0, time2/0.5f);
@@ -788,14 +792,17 @@ public class PlayerController : MonoBehaviour
                                                     fullTurn.z); //finalize rotation
     }
 
-    IEnumerator lerpFocalLength (float startValue, float endValue, float endBloom, float duration){
+    IEnumerator lerpFocalLength (float startValue, float endValue, float endBloom, float endThreshold, float duration){
        float time = 0.0f;
             while (time < duration){
                 float currentBloom = Camera.GetComponent<FastMobileBloom>().intensity;
-                float currentValue = Mathf.Lerp (startValue, endValue, time/duration);
-                float bloomVal = Mathf.Lerp (currentBloom, endBloom, time/duration);
+                float currentThreshold = Camera.GetComponent<FastMobileBloom>().threshold;
+                float currentValue = Mathf.Lerp (startValue, endValue, time/(duration/4));
+                float bloomIntensity = Mathf.Lerp (currentBloom, endBloom, time/(duration/2));
+                float bloomThreshold = Mathf.Lerp (currentThreshold, endThreshold, time/duration);
                 Camera.GetComponent<Kino.Bokeh>().focalLength = currentValue;
-                Camera.GetComponent<FastMobileBloom>().intensity = bloomVal;
+                Camera.GetComponent<FastMobileBloom>().intensity = bloomIntensity;
+                Camera.GetComponent<FastMobileBloom>().threshold = bloomThreshold;
                 time += Time.deltaTime;
                 yield return null;
             }
