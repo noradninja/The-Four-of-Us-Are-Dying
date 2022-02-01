@@ -30,6 +30,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 cafe34666744094f2aef4f686779b868 Assembly-CSharp.dll:.FXAA
 51c7f2da0e648ac14d16777ffbf26e8e Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ImageEffectBase
+7f55af042adac04742e306fcf252134e Assembly-CSharp.dll:.FPS_Counter
 d4bb4b82edd6583fb3ed02ce19889d5f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BlurOptimized
 a1745a63aaebc245b5d095f3d84b9534 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Bloom
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
@@ -358,4 +359,3 @@ f59ca19b2477a0f8545617e6a1dec4b4 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 eb565135f5b2f106ea4734c3cad2730e Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerHBox
 e958cc1ee46a616a6e0cde964bfe9918 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 aae9893fc05b6c8cba8317ed327be0c4 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
-7f55af042adac04742e306fcf252134e Assembly-CSharp.dll:.FPS_Counter

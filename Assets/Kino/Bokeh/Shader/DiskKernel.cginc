@@ -35,12 +35,12 @@ static const float2 kDiskKernel[1] = { float2(0, 0) };
 
 // rings = 1
 // points per ring = 3
-static const int kSampleCount = 4;
+static const int kSampleCount = 1;
 static const float2 kDiskKernel[kSampleCount] = {
     float2(0,0),
-    float2(0.54545456,0),
-    float2(0.16855472,0.5187581),
-    float2(-0.44128203,0.3206101),
+    // float2(0.54545456,0),
+    // float2(0.16855472,0.5187581),
+    // float2(-0.44128203,0.3206101),
 };
 
 #endif
