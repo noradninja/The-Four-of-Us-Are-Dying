@@ -35,7 +35,7 @@ public class FastSSAO : MonoBehaviour
         // cam = GetComponent<Camera>();
         cam.depthTextureMode = DepthTextureMode.Depth;
     }
-
+  [ImageEffectOpaque]
     private void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         material.SetFloat(instensityString, Intensity);

@@ -59,11 +59,11 @@ public class Item_Enumerator : MonoBehaviour {
         Physics.IgnoreCollision(thisCollider, player.GetComponent<Collider>(), true); //so the player doesn't step 'up' when walking near
 	////DICTIONARY//////////////////////////////////////////////////////////////////
 	   	itemTexts = new Dictionary<string, string>(); //string itemType, string dialogText
-
+		//TODO: change this so we are parsing a CSV file for the dictionary entries to make changes much easier
 	    itemTexts.Add("flashlight", "flashlight");
         itemTexts.Add("battery", "batteries");
         itemTexts.Add("health", "antiseptic");
-     	 itemTexts.Add("stims", "stimulants");	
+     	itemTexts.Add("stims", "stimulants");	
 	///////////////////////////////////////////////////////////////////////////////
 	batteryText.text = string.Format("{0:D2}", InventoryManager.batteryCount);
     }
@@ -77,6 +77,7 @@ public class Item_Enumerator : MonoBehaviour {
 				case pickupItem.flashlight :
 					PlayerController.hasFlashlight = true;
 					PlayerController.flashlightOff = false;
+					targetObject.SetActive(false);
 				break;
 
 				case pickupItem.battery :
@@ -84,26 +85,28 @@ public class Item_Enumerator : MonoBehaviour {
 					InventoryManager.batteryCount += 2;
 					string currentCount = string.Format("{0:D2}", InventoryManager.batteryCount);
 					batteryText.text = currentCount;
+					targetObject.transform.parent.gameObject.SetActive(false); //this is because the parent doesn't contain the collider
 				break;
 
 				case pickupItem.key :
 					print("That's a key");
 					//do key shit here
 					InventoryManager.keyCount += 1;
+					targetObject.SetActive(false);
 				break;
 
 				case pickupItem.health :
 					print("That's a medkit");
 					InventoryManager.medCount += 1;
-					//playerObject.BroadcastMessage("healMe"); //todo- crossfade this so it looks nice (gonna need to modify the fsk!*g shader, damnit), actually implement HP
+					targetObject.SetActive(false);
 				break;
 
 				case pickupItem.stims :
 					print("That's a stimulant");
 					InventoryManager.stimCount += 1;
+					targetObject.SetActive(false);
 				break;
 			}
-			targetObject.SetActive(false);
 			ClearOSD();
 		}
 		
@@ -147,8 +150,7 @@ public class Item_Enumerator : MonoBehaviour {
     {
         targetPos = targetObject.transform.position; //get target's position in the world
         screenPosition = mainCamera.WorldToScreenPoint(targetPos); //convert target position to screen space coordinates
-        hilightIcon.transform.position = screenPosition; //set the icon position to the converted screen position of the object this script is on    
-    }
-
+        hilightIcon.transform.position = screenPosition; //set the icon position to the converted screen position of the object
+	}
 
 }

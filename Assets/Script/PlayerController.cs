@@ -229,8 +229,11 @@ public class PlayerController : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(VITA + RIGHT) && !delayButton){
-
+        if (Input.GetKeyDown(VITA + RIGHT)){//} && !delayButton){
+            if (camObject.renderingPath == RenderingPath.DeferredShading){
+                camObject.renderingPath = RenderingPath.Forward;
+            }
+            else camObject.renderingPath = RenderingPath.DeferredShading;
         }
 
 ///////////////////////////Face Buttons//////////////////////////////////////
@@ -789,7 +792,7 @@ public class PlayerController : MonoBehaviour
             }
             cooldownValue = 0;
             cooldownValue = stimCooldown;
-            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f, 0.25f, 2.0f));
+            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f, 0.20f, 2.0f));
             if (!Input.GetKey(VITA + RTRIG)){
                 StartCoroutine(rechargeStamina(rechargeDelay, stamina));
             }

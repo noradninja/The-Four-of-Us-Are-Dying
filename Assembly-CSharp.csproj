@@ -176,6 +176,7 @@
      <Compile Include="Assets\Script\LoadScreen.cs" />
      <Compile Include="Assets\Script\MapController.cs" />
      <Compile Include="Assets\Script\PlayerController.cs" />
+     <Compile Include="Assets\Script\PostProcessingManager.cs" />
      <Compile Include="Assets\Script\Rotate_Object.cs" />
      <Compile Include="Assets\Script\SetShadowResolution.cs" />
      <Compile Include="Assets\Script\Title_Animator.cs" />

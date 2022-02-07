@@ -12,7 +12,7 @@ public class FXAA : MonoBehaviour
 
     static readonly int sharpnessString = Shader.PropertyToID("_Sharpness");
     static readonly int thresholdString = Shader.PropertyToID("_Threshold");
-
+  [ImageEffectOpaque]
     public void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         material.SetFloat(sharpnessString, Sharpness);

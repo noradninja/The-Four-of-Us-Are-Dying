@@ -12,7 +12,7 @@ public class FastMobileBloom : MonoBehaviour
 	[Range(1, 4)] public int blurIterations = 2;
 
 	public Material fastBloomMaterial = null;
-
+	
 	void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		int rtW = 128;
@@ -53,8 +53,7 @@ public class FastMobileBloom : MonoBehaviour
 
 		fastBloomMaterial.SetFloat("_BloomIntensity", intensity);
 		fastBloomMaterial.SetTexture("_BloomTex", rt);
-		Graphics.Blit(source, destination, fastBloomMaterial, 3);
-
+		Graphics.Blit(source, destination, fastBloomMaterial, 1);
 		RenderTexture.ReleaseTemporary(rt);
 	}
 }

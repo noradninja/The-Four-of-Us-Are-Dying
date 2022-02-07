@@ -75,7 +75,7 @@ half4 frag_Blur(v2f i) : SV_Target
     bgAcc.a = smoothstep(_MainTex_TexelSize.y, _MainTex_TexelSize.y * 2, samp0.a);
 
     // FG: Normalize the total of the weights.
-    fgAcc.a *= UNITY_PI / kSampleCount;
+    fgAcc.a *= 3.14159f / kSampleCount;
 
     // Alpha premultiplying
     half3 rgb = 0;
