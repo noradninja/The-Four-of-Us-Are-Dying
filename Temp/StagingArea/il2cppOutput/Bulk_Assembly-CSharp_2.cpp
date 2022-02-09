@@ -63,6 +63,10 @@ struct VirtActionInvoker0
 	}
 };
 
+// DecalSystem.Decal
+struct Decal_t1804074568;
+// DecalSystem.Decal[]
+struct DecalU5BU5D_t1049630617;
 // DisplayFPS
 struct DisplayFPS_t925768123;
 // DitherEffect
@@ -267,10 +271,14 @@ struct Dictionary_2_t3765528460;
 struct Dictionary_2_t132545152;
 // System.Collections.Generic.Dictionary`2<System.String,System.String>
 struct Dictionary_2_t1632706988;
+// System.Collections.Generic.IEnumerable`1<DecalSystem.Decal>
+struct IEnumerable_1_t783927457;
 // System.Collections.Generic.IEnumerable`1<MagicLightProbes.MLPPointData>
 struct IEnumerable_1_t804405680;
 // System.Collections.Generic.IEnumerable`1<System.Object>
 struct IEnumerable_1_t2059959053;
+// System.Collections.Generic.IEnumerable`1<UnityEngine.Mesh>
+struct IEnumerable_1_t2628817173;
 // System.Collections.Generic.IEnumerable`1<UnityEngine.Vector3>
 struct IEnumerable_1_t2702166353;
 // System.Collections.Generic.IEqualityComparer`1<System.String>
@@ -333,6 +341,10 @@ struct DelegateData_t1677132599;
 struct DelegateU5BU5D_t1703627840;
 // System.Diagnostics.StackTrace[]
 struct StackTraceU5BU5D_t1169129676;
+// System.Func`2<DecalSystem.Decal,UnityEngine.Mesh>
+struct Func_2_t1221679786;
+// System.Func`2<System.Object,System.Object>
+struct Func_2_t2447130374;
 // System.Func`2<TMPro.TMP_Glyph,System.Int32>
 struct Func_2_t3920652434;
 // System.IAsyncResult
@@ -680,12 +692,14 @@ extern RuntimeClass* ColorU5BU5D_t941916413_il2cpp_TypeInfo_var;
 extern RuntimeClass* CombineInstanceU5BU5D_t4267154537_il2cpp_TypeInfo_var;
 extern RuntimeClass* ComputeBuffer_t1033194329_il2cpp_TypeInfo_var;
 extern RuntimeClass* Debug_t3317548046_il2cpp_TypeInfo_var;
+extern RuntimeClass* Decal_t1804074568_il2cpp_TypeInfo_var;
 extern RuntimeClass* Dictionary_2_t1632706988_il2cpp_TypeInfo_var;
 extern RuntimeClass* Ext_t158046715_il2cpp_TypeInfo_var;
 extern RuntimeClass* FXAA_t264094441_il2cpp_TypeInfo_var;
 extern RuntimeClass* FastSSAO_t1400243781_il2cpp_TypeInfo_var;
 extern RuntimeClass* Font_t1956802104_il2cpp_TypeInfo_var;
 extern RuntimeClass* FrameTimingU5BU5D_t1633197746_il2cpp_TypeInfo_var;
+extern RuntimeClass* Func_2_t1221679786_il2cpp_TypeInfo_var;
 extern RuntimeClass* GameObject_t1113636619_il2cpp_TypeInfo_var;
 extern RuntimeClass* Graphic_t1660335611_il2cpp_TypeInfo_var;
 extern RuntimeClass* Graphics_t783367614_il2cpp_TypeInfo_var;
@@ -733,6 +747,7 @@ extern RuntimeClass* String_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* TMP_TextUtilities_t2105690005_il2cpp_TypeInfo_var;
 extern RuntimeClass* TMPro_EventManager_t712497257_il2cpp_TypeInfo_var;
 extern RuntimeClass* Texture2D_t3840446185_il2cpp_TypeInfo_var;
+extern RuntimeClass* TypeU5BU5D_t3940880105_il2cpp_TypeInfo_var;
 extern RuntimeClass* Type_t_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CAnimatePropertiesU3Ec__Iterator0_t4041402054_il2cpp_TypeInfo_var;
 extern RuntimeClass* U3CExecutePassU3Ec__Iterator0_t1039690031_il2cpp_TypeInfo_var;
@@ -888,6 +903,7 @@ extern String_t* _stringLiteral3094543760;
 extern String_t* _stringLiteral3094985726;
 extern String_t* _stringLiteral3110761919;
 extern String_t* _stringLiteral3111676743;
+extern String_t* _stringLiteral3113260201;
 extern String_t* _stringLiteral3149049649;
 extern String_t* _stringLiteral3184621405;
 extern String_t* _stringLiteral3191725359;
@@ -994,9 +1010,11 @@ extern const RuntimeMethod* Component_GetComponent_TisRenderer_t2627027031_m8236
 extern const RuntimeMethod* Component_GetComponent_TisTMP_Text_t2599618874_m4275295679_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponent_TisTextMeshProUGUI_t529313277_m1758674281_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponent_TisTextMeshPro_t2393593166_m150638835_RuntimeMethod_var;
+extern const RuntimeMethod* Decal_U3CAwakeU3Em__0_m3141267301_RuntimeMethod_var;
 extern const RuntimeMethod* Dictionary_2_Add_m3045345476_RuntimeMethod_var;
 extern const RuntimeMethod* Dictionary_2_TryGetValue_m2620390247_RuntimeMethod_var;
 extern const RuntimeMethod* Dictionary_2__ctor_m444307833_RuntimeMethod_var;
+extern const RuntimeMethod* Enumerable_Select_TisDecal_t1804074568_TisMesh_t3648964284_m1162006180_RuntimeMethod_var;
 extern const RuntimeMethod* Enumerator_Dispose_m292658209_RuntimeMethod_var;
 extern const RuntimeMethod* Enumerator_Dispose_m3792921495_RuntimeMethod_var;
 extern const RuntimeMethod* Enumerator_MoveNext_m189886599_RuntimeMethod_var;
@@ -1005,7 +1023,10 @@ extern const RuntimeMethod* Enumerator_get_Current_m1701438219_RuntimeMethod_var
 extern const RuntimeMethod* Enumerator_get_Current_m3813249110_RuntimeMethod_var;
 extern const RuntimeMethod* FastAction_1_Add_m2069965716_RuntimeMethod_var;
 extern const RuntimeMethod* FastAction_1_Remove_m2257773717_RuntimeMethod_var;
+extern const RuntimeMethod* Func_2__ctor_m631723549_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_AddComponent_TisCanvas_t3310196443_m284883347_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_AddComponent_TisMeshFilter_t3523625662_m469034426_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_AddComponent_TisMeshRenderer_t587009260_m2704270113_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_AddComponent_TisSphereCollider_t2077223608_m3039509121_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_AddComponent_TisTextMeshProFloatingText_t845872552_m219880381_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_AddComponent_TisTextMeshProUGUI_t529313277_m4215791345_RuntimeMethod_var;
@@ -1019,6 +1040,7 @@ extern const RuntimeMethod* GameObject_GetComponent_TisFastMobileBloom_t27926780
 extern const RuntimeMethod* GameObject_GetComponent_TisFastSSAO_t1400243781_m1663729539_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisLoadScreen_t3376497162_m3281812688_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisMeshFilter_t3523625662_m3371331191_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisMeshRenderer_t587009260_m3071765421_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisTMP_Text_t2599618874_m2307270757_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisTextMeshProUGUI_t529313277_m1096520719_RuntimeMethod_var;
@@ -1061,6 +1083,7 @@ extern const RuntimeMethod* List_1_get_Item_m3607863435_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_get_Item_m391846392_RuntimeMethod_var;
 extern const RuntimeMethod* List_1_set_Item_m250671809_RuntimeMethod_var;
 extern const RuntimeMethod* Object_FindObjectOfType_TisSleekRenderPostProcess_t1198037834_m3796367337_RuntimeMethod_var;
+extern const RuntimeMethod* Object_FindObjectsOfType_TisDecal_t1804074568_m2758586226_RuntimeMethod_var;
 extern const RuntimeMethod* Object_Instantiate_TisRectTransform_t3704657025_m4036030666_RuntimeMethod_var;
 extern const RuntimeMethod* Resources_Load_TisFont_t1956802104_m3393314922_RuntimeMethod_var;
 extern const RuntimeMethod* Resources_Load_TisMaterial_t340375123_m3599956774_RuntimeMethod_var;
@@ -1111,7 +1134,10 @@ extern const RuntimeMethod* UnityEvent_3_AddListener_m1220582042_RuntimeMethod_v
 extern const RuntimeMethod* UnityEvent_3_AddListener_m496588608_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_3_RemoveListener_m1821594796_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_3_RemoveListener_m2313067677_RuntimeMethod_var;
+extern const RuntimeType* Decal_t1804074568_0_0_0_var;
 extern const RuntimeType* Font_t1956802104_0_0_0_var;
+extern const RuntimeType* MeshFilter_t3523625662_0_0_0_var;
+extern const RuntimeType* MeshRenderer_t587009260_0_0_0_var;
 extern const RuntimeType* Texture2D_t3840446185_0_0_0_var;
 extern const uint32_t Benchmark01_Start_m4262200517_MetadataUsageId;
 extern const uint32_t Benchmark01_UGUI_Start_m2637386037_MetadataUsageId;
@@ -1149,6 +1175,11 @@ extern const uint32_t CameraController_LateUpdate_m1250077820_MetadataUsageId;
 extern const uint32_t CameraController_Start_m396748286_MetadataUsageId;
 extern const uint32_t CameraController__ctor_m3156887436_MetadataUsageId;
 extern const uint32_t CheckForLightLeakAreas_ExecutePass_m1605308941_MetadataUsageId;
+extern const uint32_t Decal_Awake_m809091930_MetadataUsageId;
+extern const uint32_t Decal_Create_m4032415659_MetadataUsageId;
+extern const uint32_t Decal_OnValidate_m916604512_MetadataUsageId;
+extern const uint32_t Decal_get_MeshFilter_m1968174321_MetadataUsageId;
+extern const uint32_t Decal_get_MeshRenderer_m1649069678_MetadataUsageId;
 extern const uint32_t DisplayFPS_Start_m7765586_MetadataUsageId;
 extern const uint32_t DisplayFPS_Update_m973555522_MetadataUsageId;
 extern const uint32_t DitherEffect_OnRenderImage_m231058717_MetadataUsageId;
@@ -1357,9 +1388,11 @@ struct Vector2_t2156229523 ;
 struct Vector3_t3722313464 ;
 struct Vector4_t3319028937 ;
 
+struct DecalU5BU5D_t1049630617;
 struct Int32U5BU5D_t385246372;
 struct ObjectU5BU5D_t2843939325;
 struct StringU5BU5D_t1281789340;
+struct TypeU5BU5D_t3940880105;
 struct TMP_CharacterInfoU5BU5D_t1930184704;
 struct TMP_LinkInfoU5BU5D_t3558768157;
 struct TMP_MeshInfoU5BU5D_t3365986247;
@@ -16332,6 +16365,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SHADER_T4151988712_H
+#ifndef SPRITE_T280657092_H
+#define SPRITE_T280657092_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Sprite
+struct  Sprite_t280657092  : public Object_t631007953
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SPRITE_T280657092_H
 #ifndef TEXTURE_T3661962703_H
 #define TEXTURE_T3661962703_H
 #ifdef __clang__
@@ -16839,6 +16892,26 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // ACTION_1_T803475548_H
+#ifndef FUNC_2_T1221679786_H
+#define FUNC_2_T1221679786_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Func`2<DecalSystem.Decal,UnityEngine.Mesh>
+struct  Func_2_t1221679786  : public MulticastDelegate_t
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // FUNC_2_T1221679786_H
 #ifndef TMP_ASSET_T2469957285_H
 #define TMP_ASSET_T2469957285_H
 #ifdef __clang__
@@ -18360,6 +18433,104 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // SPHERECOLLIDER_T2077223608_H
+#ifndef DECAL_T1804074568_H
+#define DECAL_T1804074568_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// DecalSystem.Decal
+struct  Decal_t1804074568  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material DecalSystem.Decal::Material
+	Material_t340375123 * ___Material_4;
+	// UnityEngine.Sprite DecalSystem.Decal::Sprite
+	Sprite_t280657092 * ___Sprite_5;
+	// UnityEngine.LayerMask DecalSystem.Decal::LayerMask
+	LayerMask_t3493934918  ___LayerMask_6;
+	// System.Single DecalSystem.Decal::MaxAngle
+	float ___MaxAngle_7;
+	// System.Single DecalSystem.Decal::Offset
+	float ___Offset_8;
+	// UnityEngine.Vector3 DecalSystem.Decal::oldScale
+	Vector3_t3722313464  ___oldScale_9;
+
+public:
+	inline static int32_t get_offset_of_Material_4() { return static_cast<int32_t>(offsetof(Decal_t1804074568, ___Material_4)); }
+	inline Material_t340375123 * get_Material_4() const { return ___Material_4; }
+	inline Material_t340375123 ** get_address_of_Material_4() { return &___Material_4; }
+	inline void set_Material_4(Material_t340375123 * value)
+	{
+		___Material_4 = value;
+		Il2CppCodeGenWriteBarrier((&___Material_4), value);
+	}
+
+	inline static int32_t get_offset_of_Sprite_5() { return static_cast<int32_t>(offsetof(Decal_t1804074568, ___Sprite_5)); }
+	inline Sprite_t280657092 * get_Sprite_5() const { return ___Sprite_5; }
+	inline Sprite_t280657092 ** get_address_of_Sprite_5() { return &___Sprite_5; }
+	inline void set_Sprite_5(Sprite_t280657092 * value)
+	{
+		___Sprite_5 = value;
+		Il2CppCodeGenWriteBarrier((&___Sprite_5), value);
+	}
+
+	inline static int32_t get_offset_of_LayerMask_6() { return static_cast<int32_t>(offsetof(Decal_t1804074568, ___LayerMask_6)); }
+	inline LayerMask_t3493934918  get_LayerMask_6() const { return ___LayerMask_6; }
+	inline LayerMask_t3493934918 * get_address_of_LayerMask_6() { return &___LayerMask_6; }
+	inline void set_LayerMask_6(LayerMask_t3493934918  value)
+	{
+		___LayerMask_6 = value;
+	}
+
+	inline static int32_t get_offset_of_MaxAngle_7() { return static_cast<int32_t>(offsetof(Decal_t1804074568, ___MaxAngle_7)); }
+	inline float get_MaxAngle_7() const { return ___MaxAngle_7; }
+	inline float* get_address_of_MaxAngle_7() { return &___MaxAngle_7; }
+	inline void set_MaxAngle_7(float value)
+	{
+		___MaxAngle_7 = value;
+	}
+
+	inline static int32_t get_offset_of_Offset_8() { return static_cast<int32_t>(offsetof(Decal_t1804074568, ___Offset_8)); }
+	inline float get_Offset_8() const { return ___Offset_8; }
+	inline float* get_address_of_Offset_8() { return &___Offset_8; }
+	inline void set_Offset_8(float value)
+	{
+		___Offset_8 = value;
+	}
+
+	inline static int32_t get_offset_of_oldScale_9() { return static_cast<int32_t>(offsetof(Decal_t1804074568, ___oldScale_9)); }
+	inline Vector3_t3722313464  get_oldScale_9() const { return ___oldScale_9; }
+	inline Vector3_t3722313464 * get_address_of_oldScale_9() { return &___oldScale_9; }
+	inline void set_oldScale_9(Vector3_t3722313464  value)
+	{
+		___oldScale_9 = value;
+	}
+};
+
+struct Decal_t1804074568_StaticFields
+{
+public:
+	// System.Func`2<DecalSystem.Decal,UnityEngine.Mesh> DecalSystem.Decal::<>f__am$cache0
+	Func_2_t1221679786 * ___U3CU3Ef__amU24cache0_10;
+
+public:
+	inline static int32_t get_offset_of_U3CU3Ef__amU24cache0_10() { return static_cast<int32_t>(offsetof(Decal_t1804074568_StaticFields, ___U3CU3Ef__amU24cache0_10)); }
+	inline Func_2_t1221679786 * get_U3CU3Ef__amU24cache0_10() const { return ___U3CU3Ef__amU24cache0_10; }
+	inline Func_2_t1221679786 ** get_address_of_U3CU3Ef__amU24cache0_10() { return &___U3CU3Ef__amU24cache0_10; }
+	inline void set_U3CU3Ef__amU24cache0_10(Func_2_t1221679786 * value)
+	{
+		___U3CU3Ef__amU24cache0_10 = value;
+		Il2CppCodeGenWriteBarrier((&___U3CU3Ef__amU24cache0_10), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // DECAL_T1804074568_H
 #ifndef DISPLAYFPS_T925768123_H
 #define DISPLAYFPS_T925768123_H
 #ifdef __clang__
@@ -30039,6 +30210,80 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TEXTMESHPROUGUI_T529313277_H
+// System.Type[]
+struct TypeU5BU5D_t3940880105  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) Type_t * m_Items[1];
+
+public:
+	inline Type_t * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Type_t ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Type_t * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline Type_t * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Type_t ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Type_t * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
+// DecalSystem.Decal[]
+struct DecalU5BU5D_t1049630617  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) Decal_t1804074568 * m_Items[1];
+
+public:
+	inline Decal_t1804074568 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Decal_t1804074568 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Decal_t1804074568 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline Decal_t1804074568 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Decal_t1804074568 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Decal_t1804074568 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
 // System.String[]
 struct StringU5BU5D_t1281789340  : public RuntimeArray
 {
@@ -30677,12 +30922,20 @@ public:
 };
 
 
+// !!0 UnityEngine.GameObject::GetComponent<System.Object>()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+// !!0 UnityEngine.GameObject::AddComponent<System.Object>()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * GameObject_AddComponent_TisRuntimeObject_m3469369570_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
+// !!0[] UnityEngine.Object::FindObjectsOfType<System.Object>()
+extern "C" IL2CPP_METHOD_ATTR ObjectU5BU5D_t2843939325* Object_FindObjectsOfType_TisRuntimeObject_m2776316817_gshared (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.Void System.Func`2<System.Object,System.Object>::.ctor(System.Object,System.IntPtr)
+extern "C" IL2CPP_METHOD_ATTR void Func_2__ctor_m3860723828_gshared (Func_2_t2447130374 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method);
+// System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<System.Object,System.Object>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m3082230130_gshared (RuntimeObject * __this /* static, unused */, RuntimeObject* p0, Func_2_t2447130374 * p1, const RuntimeMethod* method);
 // !!0 UnityEngine.Object::FindObjectOfType<System.Object>()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Object_FindObjectOfType_TisRuntimeObject_m3912393515_gshared (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // !!0 UnityEngine.Component::GetComponent<System.Object>()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Component_GetComponent_TisRuntimeObject_m2906321015_gshared (Component_t1923634451 * __this, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::GetComponent<System.Object>()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject * GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<UnityEngine.Color>::get_Item(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  List_1_get_Item_m2928327241_gshared (List_1_t4027761066 * __this, int32_t p0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.Color>::set_Item(System.Int32,!0)
@@ -30697,8 +30950,6 @@ extern "C" IL2CPP_METHOD_ATTR bool Dictionary_2_TryGetValue_m1996088172_gshared 
 extern "C" IL2CPP_METHOD_ATTR int32_t List_1_get_Count_m2934127733_gshared (List_1_t257213610 * __this, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<System.Object>::get_Item(System.Int32)
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * List_1_get_Item_m1328026504_gshared (List_1_t257213610 * __this, int32_t p0, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::AddComponent<System.Object>()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject * GameObject_AddComponent_TisRuntimeObject_m3469369570_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void List_1__ctor_m2321703786_gshared (List_1_t257213610 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Object>::AddRange(System.Collections.Generic.IEnumerable`1<!0>)
@@ -30776,8 +31027,79 @@ extern "C" IL2CPP_METHOD_ATTR void FastAction_1_Add_m262640612_gshared (FastActi
 // System.Void TMPro.FastAction`1<System.Object>::Remove(System.Action`1<!0>)
 extern "C" IL2CPP_METHOD_ATTR void FastAction_1_Remove_m866680477_gshared (FastAction_1_t2446676753 * __this, Action_1_t3252573759 * p0, const RuntimeMethod* method);
 
+// UnityEngine.LayerMask UnityEngine.LayerMask::op_Implicit(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR LayerMask_t3493934918  LayerMask_op_Implicit_m90232283 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method);
 // System.Void UnityEngine.MonoBehaviour::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void MonoBehaviour__ctor_m1579109191 (MonoBehaviour_t3962482529 * __this, const RuntimeMethod* method);
+// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
+extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Component_get_gameObject_m442555142 (Component_t1923634451 * __this, const RuntimeMethod* method);
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.MeshFilter>()
+inline MeshFilter_t3523625662 * GameObject_GetComponent_TisMeshFilter_t3523625662_m3371331191 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  MeshFilter_t3523625662 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// !!0 UnityEngine.GameObject::AddComponent<UnityEngine.MeshFilter>()
+inline MeshFilter_t3523625662 * GameObject_AddComponent_TisMeshFilter_t3523625662_m469034426 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  MeshFilter_t3523625662 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m3469369570_gshared)(__this, method);
+}
+// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.MeshRenderer>()
+inline MeshRenderer_t587009260 * GameObject_GetComponent_TisMeshRenderer_t587009260_m3071765421 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  MeshRenderer_t587009260 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
+// !!0 UnityEngine.GameObject::AddComponent<UnityEngine.MeshRenderer>()
+inline MeshRenderer_t587009260 * GameObject_AddComponent_TisMeshRenderer_t587009260_m2704270113 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  MeshRenderer_t587009260 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_AddComponent_TisRuntimeObject_m3469369570_gshared)(__this, method);
+}
+// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
+extern "C" IL2CPP_METHOD_ATTR Type_t * Type_GetTypeFromHandle_m1620074514 (RuntimeObject * __this /* static, unused */, RuntimeTypeHandle_t3027515415  p0, const RuntimeMethod* method);
+// System.Void UnityEngine.GameObject::.ctor(System.String,System.Type[])
+extern "C" IL2CPP_METHOD_ATTR void GameObject__ctor_m1350607670 (GameObject_t1113636619 * __this, String_t* p0, TypeU5BU5D_t3940880105* p1, const RuntimeMethod* method);
+// System.Void UnityEngine.GameObject::set_isStatic(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_set_isStatic_m2301607277 (GameObject_t1113636619 * __this, bool p0, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR bool Object_op_Implicit_m3574996620 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, const RuntimeMethod* method);
+// UnityEngine.Texture UnityEngine.Material::get_mainTexture()
+extern "C" IL2CPP_METHOD_ATTR Texture_t3661962703 * Material_get_mainTexture_m692510677 (Material_t340375123 * __this, const RuntimeMethod* method);
+// UnityEngine.Texture2D UnityEngine.Sprite::get_texture()
+extern "C" IL2CPP_METHOD_ATTR Texture2D_t3840446185 * Sprite_get_texture_m3976398399 (Sprite_t280657092 * __this, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
+extern "C" IL2CPP_METHOD_ATTR bool Object_op_Inequality_m4071470834 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, Object_t631007953 * p1, const RuntimeMethod* method);
+// System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
+extern "C" IL2CPP_METHOD_ATTR float Mathf_Clamp_m3350697880 (RuntimeObject * __this /* static, unused */, float p0, float p1, float p2, const RuntimeMethod* method);
+// UnityEngine.MeshFilter DecalSystem.Decal::get_MeshFilter()
+extern "C" IL2CPP_METHOD_ATTR MeshFilter_t3523625662 * Decal_get_MeshFilter_m1968174321 (Decal_t1804074568 * __this, const RuntimeMethod* method);
+// UnityEngine.Mesh UnityEngine.MeshFilter::get_sharedMesh()
+extern "C" IL2CPP_METHOD_ATTR Mesh_t3648964284 * MeshFilter_get_sharedMesh_m1726897210 (MeshFilter_t3523625662 * __this, const RuntimeMethod* method);
+// !!0[] UnityEngine.Object::FindObjectsOfType<DecalSystem.Decal>()
+inline DecalU5BU5D_t1049630617* Object_FindObjectsOfType_TisDecal_t1804074568_m2758586226 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	return ((  DecalU5BU5D_t1049630617* (*) (RuntimeObject * /* static, unused */, const RuntimeMethod*))Object_FindObjectsOfType_TisRuntimeObject_m2776316817_gshared)(__this /* static, unused */, method);
+}
+// System.Void System.Func`2<DecalSystem.Decal,UnityEngine.Mesh>::.ctor(System.Object,System.IntPtr)
+inline void Func_2__ctor_m631723549 (Func_2_t1221679786 * __this, RuntimeObject * p0, intptr_t p1, const RuntimeMethod* method)
+{
+	((  void (*) (Func_2_t1221679786 *, RuntimeObject *, intptr_t, const RuntimeMethod*))Func_2__ctor_m3860723828_gshared)(__this, p0, p1, method);
+}
+// System.Collections.Generic.IEnumerable`1<!!1> System.Linq.Enumerable::Select<DecalSystem.Decal,UnityEngine.Mesh>(System.Collections.Generic.IEnumerable`1<!!0>,System.Func`2<!!0,!!1>)
+inline RuntimeObject* Enumerable_Select_TisDecal_t1804074568_TisMesh_t3648964284_m1162006180 (RuntimeObject * __this /* static, unused */, RuntimeObject* p0, Func_2_t1221679786 * p1, const RuntimeMethod* method)
+{
+	return ((  RuntimeObject* (*) (RuntimeObject * /* static, unused */, RuntimeObject*, Func_2_t1221679786 *, const RuntimeMethod*))Enumerable_Select_TisRuntimeObject_TisRuntimeObject_m3082230130_gshared)(__this /* static, unused */, p0, p1, method);
+}
+// System.Boolean UnityEngine.Application::get_isPlaying()
+extern "C" IL2CPP_METHOD_ATTR bool Application_get_isPlaying_m100394690 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.Void UnityEngine.Behaviour::set_enabled(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Behaviour_set_enabled_m20417929 (Behaviour_t1437897464 * __this, bool p0, const RuntimeMethod* method);
+// UnityEngine.Transform UnityEngine.Component::get_transform()
+extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Component_get_transform_m3162698980 (Component_t1923634451 * __this, const RuntimeMethod* method);
+// System.Boolean UnityEngine.Transform::get_hasChanged()
+extern "C" IL2CPP_METHOD_ATTR bool Transform_get_hasChanged_m186929804 (Transform_t3600365921 * __this, const RuntimeMethod* method);
+// System.Void UnityEngine.Transform::set_hasChanged(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Transform_set_hasChanged_m4213723989 (Transform_t3600365921 * __this, bool p0, const RuntimeMethod* method);
+// System.Void DecalSystem.Decal::BuildAndSetDirty()
+extern "C" IL2CPP_METHOD_ATTR void Decal_BuildAndSetDirty_m3115330077 (Decal_t1804074568 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.Object::FindObjectOfType<SleekRender.SleekRenderPostProcess>()
 inline SleekRenderPostProcess_t1198037834 * Object_FindObjectOfType_TisSleekRenderPostProcess_t1198037834_m3796367337 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -30793,8 +31115,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m1874334613 (RuntimeObjec
 extern "C" IL2CPP_METHOD_ATTR int32_t Mathf_Min_m18103608 (RuntimeObject * __this /* static, unused */, int32_t p0, int32_t p1, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Mathf::Max(System.Int32,System.Int32)
 extern "C" IL2CPP_METHOD_ATTR int32_t Mathf_Max_m3673002171 (RuntimeObject * __this /* static, unused */, int32_t p0, int32_t p1, const RuntimeMethod* method);
-// System.Void UnityEngine.Behaviour::set_enabled(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void Behaviour_set_enabled_m20417929 (Behaviour_t1437897464 * __this, bool p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Material::SetFloat(System.String,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Material_SetFloat_m3226510453 (Material_t340375123 * __this, String_t* p0, float p1, const RuntimeMethod* method);
 // System.Void UnityEngine.Material::SetInt(System.String,System.Int32)
@@ -30849,8 +31169,6 @@ extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  Color_get_red_m3227813939 (Runt
 extern "C" IL2CPP_METHOD_ATTR void Material_SetFloat_m1688718093 (Material_t340375123 * __this, int32_t p0, float p1, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Shader::PropertyToID(System.String)
 extern "C" IL2CPP_METHOD_ATTR int32_t Shader_PropertyToID_m1030499873 (RuntimeObject * __this /* static, unused */, String_t* p0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Object::op_Inequality(UnityEngine.Object,UnityEngine.Object)
-extern "C" IL2CPP_METHOD_ATTR bool Object_op_Inequality_m4071470834 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, Object_t631007953 * p1, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Shader::get_isSupported()
 extern "C" IL2CPP_METHOD_ATTR bool Shader_get_isSupported_m755080316 (Shader_t4151988712 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Material::.ctor(UnityEngine.Shader)
@@ -30894,8 +31212,6 @@ extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  Color_op_Implicit_m2665280078 (
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* Fadeout_fade_m84499357 (Fadeout_t2017630435 * __this, Color_t2555686324  ___startValue0, Color_t2555686324  ___endValue1, float ___duration2, const RuntimeMethod* method);
 // System.Void Fadeout/<fade>c__Iterator0::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void U3CfadeU3Ec__Iterator0__ctor_m1755202935 (U3CfadeU3Ec__Iterator0_t2368515847 * __this, const RuntimeMethod* method);
-// UnityEngine.GameObject UnityEngine.Component::get_gameObject()
-extern "C" IL2CPP_METHOD_ATTR GameObject_t1113636619 * Component_get_gameObject_m442555142 (Component_t1923634451 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.GameObject::SetActive(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void GameObject_SetActive_m796801857 (GameObject_t1113636619 * __this, bool p0, const RuntimeMethod* method);
 // UnityEngine.RenderTextureFormat UnityEngine.RenderTexture::get_format()
@@ -30926,8 +31242,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Screen_get_width_m345039817 (RuntimeObject
 extern "C" IL2CPP_METHOD_ATTR int32_t Screen_get_height_m1623532518 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void UnityEngine.Material::SetTexture(System.Int32,UnityEngine.Texture)
 extern "C" IL2CPP_METHOD_ATTR void Material_SetTexture_m3009528825 (Material_t340375123 * __this, int32_t p0, Texture_t3661962703 * p1, const RuntimeMethod* method);
-// UnityEngine.Mesh UnityEngine.MeshFilter::get_sharedMesh()
-extern "C" IL2CPP_METHOD_ATTR Mesh_t3648964284 * MeshFilter_get_sharedMesh_m1726897210 (MeshFilter_t3523625662 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3[] UnityEngine.Mesh::get_vertices()
 extern "C" IL2CPP_METHOD_ATTR Vector3U5BU5D_t1718750761* Mesh_get_vertices_m3585684815 (Mesh_t3648964284 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Mesh::GetColors(System.Collections.Generic.List`1<UnityEngine.Color>)
@@ -31036,8 +31350,6 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Camera_WorldToScreenPoint_m37
 extern "C" IL2CPP_METHOD_ATTR void Transform_set_position_m3387557959 (Transform_t3600365921 * __this, Vector3_t3722313464  p0, const RuntimeMethod* method);
 // UnityEngine.Camera Kino.Bokeh::get_TargetCamera()
 extern "C" IL2CPP_METHOD_ATTR Camera_t4157153871 * Bokeh_get_TargetCamera_m2257698314 (Bokeh_t660694511 * __this, const RuntimeMethod* method);
-// UnityEngine.Transform UnityEngine.Component::get_transform()
-extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Component_get_transform_m3162698980 (Component_t1923634451 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::op_Subtraction(UnityEngine.Vector3,UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_op_Subtraction_m3073674971 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, Vector3_t3722313464  p1, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Transform::get_forward()
@@ -31064,8 +31376,6 @@ extern "C" IL2CPP_METHOD_ATTR bool SystemInfo_SupportsRenderTextureFormat_m16634
 extern "C" IL2CPP_METHOD_ATTR void Object_set_hideFlags_m1648752846 (Object_t631007953 * __this, int32_t p0, const RuntimeMethod* method);
 // UnityEngine.DepthTextureMode UnityEngine.Camera::get_depthTextureMode()
 extern "C" IL2CPP_METHOD_ATTR int32_t Camera_get_depthTextureMode_m871144641 (Camera_t4157153871 * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Application::get_isPlaying()
-extern "C" IL2CPP_METHOD_ATTR bool Application_get_isPlaying_m100394690 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::Destroy(UnityEngine.Object)
 extern "C" IL2CPP_METHOD_ATTR void Object_Destroy_m565254235 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::DestroyImmediate(UnityEngine.Object)
@@ -31288,11 +31598,6 @@ inline MLPPointData_t1824552791 * Enumerator_get_Current_m1701438219 (Enumerator
 }
 // System.Void MagicLightProbes.MLPPointData::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void MLPPointData__ctor_m661443681 (MLPPointData_t1824552791 * __this, const RuntimeMethod* method);
-// !!0 UnityEngine.GameObject::GetComponent<UnityEngine.MeshRenderer>()
-inline MeshRenderer_t587009260 * GameObject_GetComponent_TisMeshRenderer_t587009260_m3071765421 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
-{
-	return ((  MeshRenderer_t587009260 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
-}
 // UnityEngine.Bounds UnityEngine.Renderer::get_bounds()
 extern "C" IL2CPP_METHOD_ATTR Bounds_t2266837910  Renderer_get_bounds_m1803204000 (Renderer_t2627027031 * __this, const RuntimeMethod* method);
 // System.Boolean System.Collections.Generic.List`1/Enumerator<MagicLightProbes.MLPPointData>::MoveNext()
@@ -31393,8 +31698,6 @@ inline void List_1__ctor_m706204246 (List_1_t3319525431 * __this, const RuntimeM
 {
 	((  void (*) (List_1_t3319525431 *, const RuntimeMethod*))List_1__ctor_m2321703786_gshared)(__this, method);
 }
-// UnityEngine.LayerMask UnityEngine.LayerMask::op_Implicit(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR LayerMask_t3493934918  LayerMask_op_Implicit_m90232283 (RuntimeObject * __this /* static, unused */, int32_t p0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<UnityEngine.Collider>::.ctor()
 inline void List_1__ctor_m2039263175 (List_1_t3245421752 * __this, const RuntimeMethod* method)
 {
@@ -31618,8 +31921,6 @@ extern "C" IL2CPP_METHOD_ATTR float Input_GetAxis_m4009438427 (RuntimeObject * _
 extern "C" IL2CPP_METHOD_ATTR void Transform_Rotate_m3172098886 (Transform_t3600365921 * __this, float p0, float p1, float p2, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Transform::get_localEulerAngles()
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Transform_get_localEulerAngles_m2136926248 (Transform_t3600365921 * __this, const RuntimeMethod* method);
-// System.Single UnityEngine.Mathf::Clamp(System.Single,System.Single,System.Single)
-extern "C" IL2CPP_METHOD_ATTR float Mathf_Clamp_m3350697880 (RuntimeObject * __this /* static, unused */, float p0, float p1, float p2, const RuntimeMethod* method);
 // UnityEngine.Quaternion UnityEngine.Quaternion::Euler(UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR Quaternion_t2301928331  Quaternion_Euler_m1803555822 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, const RuntimeMethod* method);
 // System.Collections.IEnumerator PlayerController::lerpCam(System.Single)
@@ -31814,12 +32115,8 @@ extern "C" IL2CPP_METHOD_ATTR float SSMS_get_thresholdGamma_m2286162015 (SSMS_t2
 extern "C" IL2CPP_METHOD_ATTR float SSMS_GammaToLinear_m987030606 (SSMS_t2798367938 * __this, float ___x0, const RuntimeMethod* method);
 // System.Single SSMS.SSMS::LinearToGamma(System.Single)
 extern "C" IL2CPP_METHOD_ATTR float SSMS_LinearToGamma_m2391068426 (SSMS_t2798367938 * __this, float ___x0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Object::op_Implicit(UnityEngine.Object)
-extern "C" IL2CPP_METHOD_ATTR bool Object_op_Implicit_m3574996620 (RuntimeObject * __this /* static, unused */, Object_t631007953 * p0, const RuntimeMethod* method);
 // UnityEngine.Texture2D SSMS.SSMS::get_fadeRamp()
 extern "C" IL2CPP_METHOD_ATTR Texture2D_t3840446185 * SSMS_get_fadeRamp_m3925677967 (SSMS_t2798367938 * __this, const RuntimeMethod* method);
-// System.Type System.Type::GetTypeFromHandle(System.RuntimeTypeHandle)
-extern "C" IL2CPP_METHOD_ATTR Type_t * Type_GetTypeFromHandle_m1620074514 (RuntimeObject * __this /* static, unused */, RuntimeTypeHandle_t3027515415  p0, const RuntimeMethod* method);
 // UnityEngine.Object UnityEngine.Resources::Load(System.String,System.Type)
 extern "C" IL2CPP_METHOD_ATTR Object_t631007953 * Resources_Load_m3480190876 (RuntimeObject * __this /* static, unused */, String_t* p0, Type_t * p1, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Application::get_isMobilePlatform()
@@ -32302,6 +32599,293 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_op_Division_m51081559
 extern "C" IL2CPP_METHOD_ATTR void TMP_MeshInfo_SwapVertexData_m267931478 (TMP_MeshInfo_t2771747634 * __this, int32_t p0, int32_t p1, const RuntimeMethod* method);
 // UnityEngine.Color32 TMPro.TMPro_ExtensionMethods::Tint(UnityEngine.Color32,System.Single)
 extern "C" IL2CPP_METHOD_ATTR Color32_t2600501292  TMPro_ExtensionMethods_Tint_m2720930742 (RuntimeObject * __this /* static, unused */, Color32_t2600501292  p0, float p1, const RuntimeMethod* method);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void DecalSystem.Decal::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void Decal__ctor_m4056478394 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	{
+		LayerMask_t3493934918  L_0 = LayerMask_op_Implicit_m90232283(NULL /*static, unused*/, (-1), /*hidden argument*/NULL);
+		__this->set_LayerMask_6(L_0);
+		__this->set_MaxAngle_7((90.0f));
+		__this->set_Offset_8((0.009f));
+		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// UnityEngine.MeshFilter DecalSystem.Decal::get_MeshFilter()
+extern "C" IL2CPP_METHOD_ATTR MeshFilter_t3523625662 * Decal_get_MeshFilter_m1968174321 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Decal_get_MeshFilter_m1968174321_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	MeshFilter_t3523625662 * G_B2_0 = NULL;
+	MeshFilter_t3523625662 * G_B1_0 = NULL;
+	{
+		GameObject_t1113636619 * L_0 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		MeshFilter_t3523625662 * L_1 = GameObject_GetComponent_TisMeshFilter_t3523625662_m3371331191(L_0, /*hidden argument*/GameObject_GetComponent_TisMeshFilter_t3523625662_m3371331191_RuntimeMethod_var);
+		MeshFilter_t3523625662 * L_2 = L_1;
+		G_B1_0 = L_2;
+		if (L_2)
+		{
+			G_B2_0 = L_2;
+			goto IL_001d;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_3 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		MeshFilter_t3523625662 * L_4 = GameObject_AddComponent_TisMeshFilter_t3523625662_m469034426(L_3, /*hidden argument*/GameObject_AddComponent_TisMeshFilter_t3523625662_m469034426_RuntimeMethod_var);
+		G_B2_0 = L_4;
+	}
+
+IL_001d:
+	{
+		return G_B2_0;
+	}
+}
+// UnityEngine.MeshRenderer DecalSystem.Decal::get_MeshRenderer()
+extern "C" IL2CPP_METHOD_ATTR MeshRenderer_t587009260 * Decal_get_MeshRenderer_m1649069678 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Decal_get_MeshRenderer_m1649069678_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	MeshRenderer_t587009260 * G_B2_0 = NULL;
+	MeshRenderer_t587009260 * G_B1_0 = NULL;
+	{
+		GameObject_t1113636619 * L_0 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		MeshRenderer_t587009260 * L_1 = GameObject_GetComponent_TisMeshRenderer_t587009260_m3071765421(L_0, /*hidden argument*/GameObject_GetComponent_TisMeshRenderer_t587009260_m3071765421_RuntimeMethod_var);
+		MeshRenderer_t587009260 * L_2 = L_1;
+		G_B1_0 = L_2;
+		if (L_2)
+		{
+			G_B2_0 = L_2;
+			goto IL_001d;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_3 = Component_get_gameObject_m442555142(__this, /*hidden argument*/NULL);
+		MeshRenderer_t587009260 * L_4 = GameObject_AddComponent_TisMeshRenderer_t587009260_m2704270113(L_3, /*hidden argument*/GameObject_AddComponent_TisMeshRenderer_t587009260_m2704270113_RuntimeMethod_var);
+		G_B2_0 = L_4;
+	}
+
+IL_001d:
+	{
+		return G_B2_0;
+	}
+}
+// System.Void DecalSystem.Decal::Create()
+extern "C" IL2CPP_METHOD_ATTR void Decal_Create_m4032415659 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Decal_Create_m4032415659_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		TypeU5BU5D_t3940880105* L_0 = (TypeU5BU5D_t3940880105*)SZArrayNew(TypeU5BU5D_t3940880105_il2cpp_TypeInfo_var, (uint32_t)3);
+		TypeU5BU5D_t3940880105* L_1 = L_0;
+		RuntimeTypeHandle_t3027515415  L_2 = { reinterpret_cast<intptr_t> (Decal_t1804074568_0_0_0_var) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_3 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		ArrayElementTypeCheck (L_1, L_3);
+		(L_1)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(0), (Type_t *)L_3);
+		TypeU5BU5D_t3940880105* L_4 = L_1;
+		RuntimeTypeHandle_t3027515415  L_5 = { reinterpret_cast<intptr_t> (MeshFilter_t3523625662_0_0_0_var) };
+		Type_t * L_6 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_5, /*hidden argument*/NULL);
+		ArrayElementTypeCheck (L_4, L_6);
+		(L_4)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(1), (Type_t *)L_6);
+		TypeU5BU5D_t3940880105* L_7 = L_4;
+		RuntimeTypeHandle_t3027515415  L_8 = { reinterpret_cast<intptr_t> (MeshRenderer_t587009260_0_0_0_var) };
+		Type_t * L_9 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, L_8, /*hidden argument*/NULL);
+		ArrayElementTypeCheck (L_7, L_9);
+		(L_7)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(2), (Type_t *)L_9);
+		GameObject_t1113636619 * L_10 = (GameObject_t1113636619 *)il2cpp_codegen_object_new(GameObject_t1113636619_il2cpp_TypeInfo_var);
+		GameObject__ctor_m1350607670(L_10, _stringLiteral3113260201, L_7, /*hidden argument*/NULL);
+		GameObject_set_isStatic_m2301607277(L_10, (bool)1, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void DecalSystem.Decal::OnValidate()
+extern "C" IL2CPP_METHOD_ATTR void Decal_OnValidate_m916604512 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Decal_OnValidate_m916604512_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Material_t340375123 * L_0 = __this->get_Material_4();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_1 = Object_op_Implicit_m3574996620(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
+		if (L_1)
+		{
+			goto IL_0017;
+		}
+	}
+	{
+		__this->set_Sprite_5((Sprite_t280657092 *)NULL);
+	}
+
+IL_0017:
+	{
+		Sprite_t280657092 * L_2 = __this->get_Sprite_5();
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_3 = Object_op_Implicit_m3574996620(NULL /*static, unused*/, L_2, /*hidden argument*/NULL);
+		if (!L_3)
+		{
+			goto IL_004e;
+		}
+	}
+	{
+		Material_t340375123 * L_4 = __this->get_Material_4();
+		Texture_t3661962703 * L_5 = Material_get_mainTexture_m692510677(L_4, /*hidden argument*/NULL);
+		Sprite_t280657092 * L_6 = __this->get_Sprite_5();
+		Texture2D_t3840446185 * L_7 = Sprite_get_texture_m3976398399(L_6, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		bool L_8 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_5, L_7, /*hidden argument*/NULL);
+		if (!L_8)
+		{
+			goto IL_004e;
+		}
+	}
+	{
+		__this->set_Sprite_5((Sprite_t280657092 *)NULL);
+	}
+
+IL_004e:
+	{
+		float L_9 = __this->get_MaxAngle_7();
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
+		float L_10 = Mathf_Clamp_m3350697880(NULL /*static, unused*/, L_9, (1.0f), (180.0f), /*hidden argument*/NULL);
+		__this->set_MaxAngle_7(L_10);
+		float L_11 = __this->get_Offset_8();
+		float L_12 = Mathf_Clamp_m3350697880(NULL /*static, unused*/, L_11, (0.005f), (0.05f), /*hidden argument*/NULL);
+		__this->set_Offset_8(L_12);
+		return;
+	}
+}
+// System.Void DecalSystem.Decal::Awake()
+extern "C" IL2CPP_METHOD_ATTR void Decal_Awake_m809091930 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Decal_Awake_m809091930_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	Mesh_t3648964284 * V_0 = NULL;
+	RuntimeObject* V_1 = NULL;
+	DecalU5BU5D_t1049630617* G_B2_0 = NULL;
+	DecalU5BU5D_t1049630617* G_B1_0 = NULL;
+	{
+		MeshFilter_t3523625662 * L_0 = Decal_get_MeshFilter_m1968174321(__this, /*hidden argument*/NULL);
+		Mesh_t3648964284 * L_1 = MeshFilter_get_sharedMesh_m1726897210(L_0, /*hidden argument*/NULL);
+		V_0 = L_1;
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		DecalU5BU5D_t1049630617* L_2 = Object_FindObjectsOfType_TisDecal_t1804074568_m2758586226(NULL /*static, unused*/, /*hidden argument*/Object_FindObjectsOfType_TisDecal_t1804074568_m2758586226_RuntimeMethod_var);
+		Func_2_t1221679786 * L_3 = ((Decal_t1804074568_StaticFields*)il2cpp_codegen_static_fields_for(Decal_t1804074568_il2cpp_TypeInfo_var))->get_U3CU3Ef__amU24cache0_10();
+		G_B1_0 = L_2;
+		if (L_3)
+		{
+			G_B2_0 = L_2;
+			goto IL_0029;
+		}
+	}
+	{
+		intptr_t L_4 = (intptr_t)Decal_U3CAwakeU3Em__0_m3141267301_RuntimeMethod_var;
+		Func_2_t1221679786 * L_5 = (Func_2_t1221679786 *)il2cpp_codegen_object_new(Func_2_t1221679786_il2cpp_TypeInfo_var);
+		Func_2__ctor_m631723549(L_5, NULL, (intptr_t)L_4, /*hidden argument*/Func_2__ctor_m631723549_RuntimeMethod_var);
+		((Decal_t1804074568_StaticFields*)il2cpp_codegen_static_fields_for(Decal_t1804074568_il2cpp_TypeInfo_var))->set_U3CU3Ef__amU24cache0_10(L_5);
+		G_B2_0 = G_B1_0;
+	}
+
+IL_0029:
+	{
+		Func_2_t1221679786 * L_6 = ((Decal_t1804074568_StaticFields*)il2cpp_codegen_static_fields_for(Decal_t1804074568_il2cpp_TypeInfo_var))->get_U3CU3Ef__amU24cache0_10();
+		RuntimeObject* L_7 = Enumerable_Select_TisDecal_t1804074568_TisMesh_t3648964284_m1162006180(NULL /*static, unused*/, (RuntimeObject*)(RuntimeObject*)G_B2_0, L_6, /*hidden argument*/Enumerable_Select_TisDecal_t1804074568_TisMesh_t3648964284_m1162006180_RuntimeMethod_var);
+		V_1 = L_7;
+		return;
+	}
+}
+// System.Void DecalSystem.Decal::OnEnable()
+extern "C" IL2CPP_METHOD_ATTR void Decal_OnEnable_m839903130 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	{
+		bool L_0 = Application_get_isPlaying_m100394690(NULL /*static, unused*/, /*hidden argument*/NULL);
+		if (!L_0)
+		{
+			goto IL_0011;
+		}
+	}
+	{
+		Behaviour_set_enabled_m20417929(__this, (bool)0, /*hidden argument*/NULL);
+	}
+
+IL_0011:
+	{
+		return;
+	}
+}
+// System.Void DecalSystem.Decal::Update()
+extern "C" IL2CPP_METHOD_ATTR void Decal_Update_m3549690412 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	{
+		Transform_t3600365921 * L_0 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		bool L_1 = Transform_get_hasChanged_m186929804(L_0, /*hidden argument*/NULL);
+		if (!L_1)
+		{
+			goto IL_0022;
+		}
+	}
+	{
+		Transform_t3600365921 * L_2 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		Transform_set_hasChanged_m4213723989(L_2, (bool)0, /*hidden argument*/NULL);
+		Decal_BuildAndSetDirty_m3115330077(__this, /*hidden argument*/NULL);
+	}
+
+IL_0022:
+	{
+		return;
+	}
+}
+// System.Void DecalSystem.Decal::OnDrawGizmosSelected()
+extern "C" IL2CPP_METHOD_ATTR void Decal_OnDrawGizmosSelected_m2129930091 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	{
+		return;
+	}
+}
+// System.Void DecalSystem.Decal::BuildAndSetDirty()
+extern "C" IL2CPP_METHOD_ATTR void Decal_BuildAndSetDirty_m3115330077 (Decal_t1804074568 * __this, const RuntimeMethod* method)
+{
+	{
+		return;
+	}
+}
+// UnityEngine.Mesh DecalSystem.Decal::<Awake>m__0(DecalSystem.Decal)
+extern "C" IL2CPP_METHOD_ATTR Mesh_t3648964284 * Decal_U3CAwakeU3Em__0_m3141267301 (RuntimeObject * __this /* static, unused */, Decal_t1804074568 * ___i0, const RuntimeMethod* method)
+{
+	{
+		Decal_t1804074568 * L_0 = ___i0;
+		MeshFilter_t3523625662 * L_1 = Decal_get_MeshFilter_m1968174321(L_0, /*hidden argument*/NULL);
+		Mesh_t3648964284 * L_2 = MeshFilter_get_sharedMesh_m1726897210(L_1, /*hidden argument*/NULL);
+		return L_2;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

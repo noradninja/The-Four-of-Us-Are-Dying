@@ -53,6 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Editor\DecalEditor.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Editor\Helpers\GUIUtils.cs" />
      <Compile Include="Assets\Addons\Editor\Object2Terrain.cs" />
      <Compile Include="Assets\Addons\KinoFog\Editor\PackageTool.cs" />
      <Compile Include="Assets\Addons\KinoFog\Kino\Fog\Editor\FogEditor.cs" />

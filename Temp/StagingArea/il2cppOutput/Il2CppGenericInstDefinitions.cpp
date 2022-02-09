@@ -843,6 +843,7 @@ extern const Il2CppType VolumeParameter_1_t4262671671_0_0_0;
 extern const Il2CppType VolumeParameter_1_t367161176_0_0_0;
 extern const Il2CppType VolumeParameter_1_t1533788316_0_0_0;
 extern const Il2CppType VolumeParameter_1_t1130503789_0_0_0;
+extern const Il2CppType Decal_t1804074568_0_0_0;
 extern const Il2CppType MLPLight_t665220267_0_0_0;
 extern const Il2CppType MLPPointData_t1824552791_0_0_0;
 extern const Il2CppType IEnumerator_t1853284238_0_0_0;
@@ -1324,6 +1325,7 @@ extern const Il2CppType Mesh_GetListForChannel_m3682684413_gp_0_0_0_0;
 extern const Il2CppType Mesh_GetListForChannel_m39569243_gp_0_0_0_0;
 extern const Il2CppType Mesh_SetUvsImpl_m3478311143_gp_0_0_0_0;
 extern const Il2CppType Mesh_GetUVsImpl_m3839642542_gp_0_0_0_0;
+extern const Il2CppType Object_FindObjectsOfType_m329972044_gp_0_0_0_0;
 extern const Il2CppType InvokableCall_1_t3865199217_gp_0_0_0_0;
 extern const Il2CppType UnityAction_1_t802700511_0_0_0;
 extern const Il2CppType InvokableCall_2_t3865133681_gp_0_0_0_0;
@@ -3411,6 +3413,14 @@ static const RuntimeType* GenInst_VolumeParameter_1_t1533788316_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t1533788316_0_0_0 = { 1, GenInst_VolumeParameter_1_t1533788316_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t1130503789_0_0_0_Types[] = { (&VolumeParameter_1_t1130503789_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t1130503789_0_0_0 = { 1, GenInst_VolumeParameter_1_t1130503789_0_0_0_Types };
+static const RuntimeType* GenInst_Decal_t1804074568_0_0_0_Mesh_t3648964284_0_0_0_Types[] = { (&Decal_t1804074568_0_0_0), (&Mesh_t3648964284_0_0_0) };
+extern const Il2CppGenericInst GenInst_Decal_t1804074568_0_0_0_Mesh_t3648964284_0_0_0 = { 2, GenInst_Decal_t1804074568_0_0_0_Mesh_t3648964284_0_0_0_Types };
+static const RuntimeType* GenInst_Decal_t1804074568_0_0_0_Types[] = { (&Decal_t1804074568_0_0_0) };
+extern const Il2CppGenericInst GenInst_Decal_t1804074568_0_0_0 = { 1, GenInst_Decal_t1804074568_0_0_0_Types };
+static const RuntimeType* GenInst_Mesh_t3648964284_0_0_0_Boolean_t97287965_0_0_0_Types[] = { (&Mesh_t3648964284_0_0_0), (&Boolean_t97287965_0_0_0) };
+extern const Il2CppGenericInst GenInst_Mesh_t3648964284_0_0_0_Boolean_t97287965_0_0_0 = { 2, GenInst_Mesh_t3648964284_0_0_0_Boolean_t97287965_0_0_0_Types };
+static const RuntimeType* GenInst_Decal_t1804074568_0_0_0_Boolean_t97287965_0_0_0_Types[] = { (&Decal_t1804074568_0_0_0), (&Boolean_t97287965_0_0_0) };
+extern const Il2CppGenericInst GenInst_Decal_t1804074568_0_0_0_Boolean_t97287965_0_0_0 = { 2, GenInst_Decal_t1804074568_0_0_0_Boolean_t97287965_0_0_0_Types };
 static const RuntimeType* GenInst_MLPLight_t665220267_0_0_0_Types[] = { (&MLPLight_t665220267_0_0_0) };
 extern const Il2CppGenericInst GenInst_MLPLight_t665220267_0_0_0 = { 1, GenInst_MLPLight_t665220267_0_0_0_Types };
 static const RuntimeType* GenInst_MLPPointData_t1824552791_0_0_0_Types[] = { (&MLPPointData_t1824552791_0_0_0) };
@@ -4595,6 +4605,8 @@ static const RuntimeType* GenInst_Mesh_SetUvsImpl_m3478311143_gp_0_0_0_0_Types[]
 extern const Il2CppGenericInst GenInst_Mesh_SetUvsImpl_m3478311143_gp_0_0_0_0 = { 1, GenInst_Mesh_SetUvsImpl_m3478311143_gp_0_0_0_0_Types };
 static const RuntimeType* GenInst_Mesh_GetUVsImpl_m3839642542_gp_0_0_0_0_Types[] = { (&Mesh_GetUVsImpl_m3839642542_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_Mesh_GetUVsImpl_m3839642542_gp_0_0_0_0 = { 1, GenInst_Mesh_GetUVsImpl_m3839642542_gp_0_0_0_0_Types };
+static const RuntimeType* GenInst_Object_FindObjectsOfType_m329972044_gp_0_0_0_0_Types[] = { (&Object_FindObjectsOfType_m329972044_gp_0_0_0_0) };
+extern const Il2CppGenericInst GenInst_Object_FindObjectsOfType_m329972044_gp_0_0_0_0 = { 1, GenInst_Object_FindObjectsOfType_m329972044_gp_0_0_0_0_Types };
 static const RuntimeType* GenInst_InvokableCall_1_t3865199217_gp_0_0_0_0_Types[] = { (&InvokableCall_1_t3865199217_gp_0_0_0_0) };
 extern const Il2CppGenericInst GenInst_InvokableCall_1_t3865199217_gp_0_0_0_0 = { 1, GenInst_InvokableCall_1_t3865199217_gp_0_0_0_0_Types };
 static const RuntimeType* GenInst_UnityAction_1_t802700511_0_0_0_Types[] = { (&UnityAction_1_t802700511_0_0_0) };
@@ -4785,7 +4797,7 @@ static const RuntimeType* GenInst_VolumeParameter_1_t4078826557_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t4078826557_0_0_0 = { 1, GenInst_VolumeParameter_1_t4078826557_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t2051106872_0_0_0_Types[] = { (&VolumeParameter_1_t2051106872_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t2051106872_0_0_0 = { 1, GenInst_VolumeParameter_1_t2051106872_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1680] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1685] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_String_t_0_0_0,
@@ -5780,6 +5792,10 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1680] =
 	&GenInst_VolumeParameter_1_t367161176_0_0_0,
 	&GenInst_VolumeParameter_1_t1533788316_0_0_0,
 	&GenInst_VolumeParameter_1_t1130503789_0_0_0,
+	&GenInst_Decal_t1804074568_0_0_0_Mesh_t3648964284_0_0_0,
+	&GenInst_Decal_t1804074568_0_0_0,
+	&GenInst_Mesh_t3648964284_0_0_0_Boolean_t97287965_0_0_0,
+	&GenInst_Decal_t1804074568_0_0_0_Boolean_t97287965_0_0_0,
 	&GenInst_MLPLight_t665220267_0_0_0,
 	&GenInst_MLPPointData_t1824552791_0_0_0,
 	&GenInst_IEnumerator_t1853284238_0_0_0,
@@ -6372,6 +6388,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1680] =
 	&GenInst_Mesh_GetListForChannel_m39569243_gp_0_0_0_0,
 	&GenInst_Mesh_SetUvsImpl_m3478311143_gp_0_0_0_0,
 	&GenInst_Mesh_GetUVsImpl_m3839642542_gp_0_0_0_0,
+	&GenInst_Object_FindObjectsOfType_m329972044_gp_0_0_0_0,
 	&GenInst_InvokableCall_1_t3865199217_gp_0_0_0_0,
 	&GenInst_UnityAction_1_t802700511_0_0_0,
 	&GenInst_InvokableCall_2_t3865133681_gp_0_0_0_0_InvokableCall_2_t3865133681_gp_1_0_0_0,

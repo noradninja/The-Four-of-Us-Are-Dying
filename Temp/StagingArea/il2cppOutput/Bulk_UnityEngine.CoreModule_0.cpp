@@ -34872,6 +34872,15 @@ extern "C" IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m2006396688 
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
+// System.Void UnityEngine.GameObject::set_isStatic(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_set_isStatic_m2301607277 (GameObject_t1113636619 * __this, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*GameObject_set_isStatic_m2301607277_ftn) (GameObject_t1113636619 *, bool);
+	static GameObject_set_isStatic_m2301607277_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_set_isStatic_m2301607277_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::set_isStatic(System.Boolean)");
+	_il2cpp_icall_func(__this, ___value0);
+}
 // System.Void UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
 extern "C" IL2CPP_METHOD_ATTR void GameObject_SendMessage_m3720186693 (GameObject_t1113636619 * __this, String_t* ___methodName0, RuntimeObject * ___value1, int32_t ___options2, const RuntimeMethod* method)
 {

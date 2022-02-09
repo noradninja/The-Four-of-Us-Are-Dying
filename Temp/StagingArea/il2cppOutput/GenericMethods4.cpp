@@ -321,6 +321,8 @@ struct MeshRenderer_t587009260;
 struct MeshRendererU5BU5D_t2132764133;
 // UnityEngine.Object
 struct Object_t631007953;
+// UnityEngine.Object[]
+struct ObjectU5BU5D_t1417781964;
 // UnityEngine.RectTransform
 struct RectTransform_t3704657025;
 // UnityEngine.RequireComponent[]
@@ -438,6 +440,7 @@ extern const uint32_t LazyInitializer_EnsureInitializedCore_TisRuntimeObject_m32
 extern const uint32_t Marshal_PtrToStructure_TisRuntimeObject_m1794837406_MetadataUsageId;
 extern const uint32_t Marshal_PtrToStructure_TisWin32_FIXED_INFO_t1299345856_m4277728215_MetadataUsageId;
 extern const uint32_t Object_FindObjectOfType_TisRuntimeObject_m3912393515_MetadataUsageId;
+extern const uint32_t Object_FindObjectsOfType_TisRuntimeObject_m2776316817_MetadataUsageId;
 extern const uint32_t Object_Instantiate_TisRuntimeObject_m1132598872_MetadataUsageId;
 extern const uint32_t Object_Instantiate_TisRuntimeObject_m2446893047_MetadataUsageId;
 extern const uint32_t Resources_GetBuiltinResource_TisRuntimeObject_m3352626831_MetadataUsageId;
@@ -458,6 +461,7 @@ struct CustomAttributeNamedArgumentU5BU5D_t3710464795;
 struct CustomAttributeTypedArgumentU5BU5D_t1465843424;
 struct Color32U5BU5D_t3850468773;
 struct ColorU5BU5D_t941916413;
+struct ObjectU5BU5D_t1417781964;
 struct WorkRequestU5BU5D_t3723878365;
 struct Vector2U5BU5D_t1457185986;
 struct Vector3U5BU5D_t1718750761;
@@ -7285,6 +7289,43 @@ public:
 		m_Items[index] = value;
 	}
 };
+// UnityEngine.Object[]
+struct ObjectU5BU5D_t1417781964  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) Object_t631007953 * m_Items[1];
+
+public:
+	inline Object_t631007953 * GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Object_t631007953 ** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Object_t631007953 * value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+	inline Object_t631007953 * GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Object_t631007953 ** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Object_t631007953 * value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier(m_Items + index, value);
+	}
+};
 
 
 // TResult System.Runtime.CompilerServices.TaskAwaiter`1<System.Int32>::GetResult()
@@ -7410,6 +7451,8 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeArray * Mesh_GetAllocArrayFromChannelImpl_m
 extern "C" IL2CPP_METHOD_ATTR void Mesh_PrintErrorCantAccessChannel_m2109128075 (Mesh_t3648964284 * __this, int32_t ___ch0, const RuntimeMethod* method);
 // System.Array UnityEngine.NoAllocHelpers::ExtractArrayFromList(System.Object)
 extern "C" IL2CPP_METHOD_ATTR RuntimeArray * NoAllocHelpers_ExtractArrayFromList_m2239661248 (RuntimeObject * __this /* static, unused */, RuntimeObject * ___list0, const RuntimeMethod* method);
+// UnityEngine.Object[] UnityEngine.Object::FindObjectsOfType(System.Type)
+extern "C" IL2CPP_METHOD_ATTR ObjectU5BU5D_t1417781964* Object_FindObjectsOfType_m2295101757 (RuntimeObject * __this /* static, unused */, Type_t * ___type0, const RuntimeMethod* method);
 // System.Void UnityEngine.EventSystems.ExecuteEvents::GetEventChain(UnityEngine.GameObject,System.Collections.Generic.IList`1<UnityEngine.Transform>)
 extern "C" IL2CPP_METHOD_ATTR void ExecuteEvents_GetEventChain_m2404658789 (RuntimeObject * __this /* static, unused */, GameObject_t1113636619 * ___root0, RuntimeObject* ___eventChain1, const RuntimeMethod* method);
 // !0 System.Collections.Generic.List`1<UnityEngine.Transform>::get_Item(System.Int32)
@@ -10034,6 +10077,94 @@ IL_0012:
 	{
 		ObjectU5BU5D_t2843939325* L_2 = V_0;
 		return L_2;
+	}
+}
+// T[] UnityEngine.Object::FindObjectsOfType<System.Object>()
+extern "C" IL2CPP_METHOD_ATTR ObjectU5BU5D_t2843939325* Object_FindObjectsOfType_TisRuntimeObject_m2776316817_gshared (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Object_FindObjectsOfType_TisRuntimeObject_m2776316817_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	ObjectU5BU5D_t2843939325* V_0 = NULL;
+	{
+		RuntimeTypeHandle_t3027515415  L_0 = { reinterpret_cast<intptr_t> (IL2CPP_RGCTX_TYPE(method->rgctx_data, 0)) };
+		IL2CPP_RUNTIME_CLASS_INIT(Type_t_il2cpp_TypeInfo_var);
+		Type_t * L_1 = Type_GetTypeFromHandle_m1620074514(NULL /*static, unused*/, (RuntimeTypeHandle_t3027515415 )L_0, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
+		ObjectU5BU5D_t1417781964* L_2 = Object_FindObjectsOfType_m2295101757(NULL /*static, unused*/, (Type_t *)L_1, /*hidden argument*/NULL);
+		ObjectU5BU5D_t2843939325* L_3 = ((  ObjectU5BU5D_t2843939325* (*) (RuntimeObject * /* static, unused */, ObjectU5BU5D_t1417781964*, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1)->methodPointer)(NULL /*static, unused*/, (ObjectU5BU5D_t1417781964*)L_2, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->rgctx_data, 1));
+		V_0 = (ObjectU5BU5D_t2843939325*)L_3;
+		goto IL_001b;
+	}
+
+IL_001b:
+	{
+		ObjectU5BU5D_t2843939325* L_4 = V_0;
+		return L_4;
+	}
+}
+// T[] UnityEngine.Resources::ConvertObjects<System.Object>(UnityEngine.Object[])
+extern "C" IL2CPP_METHOD_ATTR ObjectU5BU5D_t2843939325* Resources_ConvertObjects_TisRuntimeObject_m1486780300_gshared (RuntimeObject * __this /* static, unused */, ObjectU5BU5D_t1417781964* ___rawObjects0, const RuntimeMethod* method)
+{
+	ObjectU5BU5D_t2843939325* V_0 = NULL;
+	ObjectU5BU5D_t2843939325* V_1 = NULL;
+	int32_t V_2 = 0;
+	{
+		ObjectU5BU5D_t1417781964* L_0 = ___rawObjects0;
+		if (L_0)
+		{
+			goto IL_000e;
+		}
+	}
+	{
+		V_0 = (ObjectU5BU5D_t2843939325*)NULL;
+		goto IL_0041;
+	}
+
+IL_000e:
+	{
+		ObjectU5BU5D_t1417781964* L_1 = ___rawObjects0;
+		ObjectU5BU5D_t2843939325* L_2 = (ObjectU5BU5D_t2843939325*)SZArrayNew(IL2CPP_RGCTX_DATA(method->rgctx_data, 0), (uint32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_1)->max_length)))));
+		V_1 = (ObjectU5BU5D_t2843939325*)L_2;
+		V_2 = (int32_t)0;
+		goto IL_0031;
+	}
+
+IL_001e:
+	{
+		ObjectU5BU5D_t2843939325* L_3 = V_1;
+		int32_t L_4 = V_2;
+		ObjectU5BU5D_t1417781964* L_5 = ___rawObjects0;
+		int32_t L_6 = V_2;
+		int32_t L_7 = L_6;
+		Object_t631007953 * L_8 = (L_5)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_7));
+		(L_3)->SetAtUnchecked(static_cast<il2cpp_array_size_t>(L_4), (RuntimeObject *)((RuntimeObject *)Castclass((RuntimeObject*)L_8, IL2CPP_RGCTX_DATA(method->rgctx_data, 1))));
+		int32_t L_9 = V_2;
+		V_2 = (int32_t)((int32_t)il2cpp_codegen_add((int32_t)L_9, (int32_t)1));
+	}
+
+IL_0031:
+	{
+		int32_t L_10 = V_2;
+		ObjectU5BU5D_t2843939325* L_11 = V_1;
+		if ((((int32_t)L_10) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_11)->max_length)))))))
+		{
+			goto IL_001e;
+		}
+	}
+	{
+		ObjectU5BU5D_t2843939325* L_12 = V_1;
+		V_0 = (ObjectU5BU5D_t2843939325*)L_12;
+		goto IL_0041;
+	}
+
+IL_0041:
+	{
+		ObjectU5BU5D_t2843939325* L_13 = V_0;
+		return L_13;
 	}
 }
 // T[] UnityMeshSimplifier.MeshCombiner::MergeArrays<System.Int32>(T[],T[])

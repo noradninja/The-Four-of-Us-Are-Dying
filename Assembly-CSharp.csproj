@@ -58,6 +58,13 @@
      <Compile Include="Assets\Addons\Bloom\Scripts\BloomQuad.cs" />
      <Compile Include="Assets\Addons\Bloom\Scripts\RenderTextureExtensions.cs" />
      <Compile Include="Assets\Addons\Bloom\Scripts\RenderTextureUtils.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Decal.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\DecalBuilder.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\DecalUtils.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\MeshBuilder.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\MeshUtils.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\PolygonUtils.cs" />
+     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\TerrainUtils.cs" />
      <Compile Include="Assets\Addons\FastMobileBloom\FastMobileBloom.cs" />
      <Compile Include="Assets\Addons\FastSSAO\FastSSAO.cs" />
      <Compile Include="Assets\Addons\KinoFog\Kino\Fog\Fog.cs" />
@@ -316,6 +323,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\Shader\Light &amp; Shadow\Lightbeam Inside.shader" />
+     <None Include="Assets\Addons\DecalSystem\README.txt" />
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardMeta_VC.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicInput.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />

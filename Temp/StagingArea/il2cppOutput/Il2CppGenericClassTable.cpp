@@ -8484,6 +8484,28 @@ extern Il2CppGenericClass Predicate_1_t2934181557_GenericClass;
 extern Il2CppGenericClass Action_1_t2281355028_GenericClass;
 extern Il2CppGenericClass Enumerator_t1175238756_GenericClass;
 extern Il2CppGenericClass Comparison_1_t1883818612_GenericClass;
+extern Il2CppGenericClass Func_2_t1221679786_GenericClass;
+extern Il2CppGenericClass IEnumerator_1_t2236645036_GenericClass;
+extern Il2CppGenericClass EmptyInternalEnumerator_1_t3446044379_GenericClass;
+extern Il2CppGenericClass InternalEnumerator_1_t2711138685_GenericClass;
+extern Il2CppGenericClass IList_1_t3619394351_GenericClass;
+extern Il2CppGenericClass ICollection_1_t337259506_GenericClass;
+extern Il2CppGenericClass IEnumerable_1_t783927457_GenericClass;
+extern Il2CppGenericClass IReadOnlyList_1_t2368497474_GenericClass;
+extern Il2CppGenericClass IReadOnlyCollection_1_t1807190505_GenericClass;
+extern Il2CppGenericClass WhereSelectArrayIterator_2_t130382215_GenericClass;
+extern Il2CppGenericClass Iterator_1_t2603324621_GenericClass;
+extern Il2CppGenericClass Func_2_t593360455_GenericClass;
+extern Il2CppGenericClass Func_2_t1964970763_GenericClass;
+extern Il2CppGenericClass WhereSelectListIterator_2_t1435658435_GenericClass;
+extern Il2CppGenericClass List_1_t3276149310_GenericClass;
+extern Il2CppGenericClass ReadOnlyCollection_1_t3016650855_GenericClass;
+extern Il2CppGenericClass IComparer_1_t3058340047_GenericClass;
+extern Il2CppGenericClass Predicate_1_t2629368692_GenericClass;
+extern Il2CppGenericClass Action_1_t1976542163_GenericClass;
+extern Il2CppGenericClass Enumerator_t870425891_GenericClass;
+extern Il2CppGenericClass Comparison_1_t1579005747_GenericClass;
+extern Il2CppGenericClass WhereSelectEnumerableIterator_2_t328171717_GenericClass;
 extern Il2CppGenericClass List_1_t2137295009_GenericClass;
 extern Il2CppGenericClass IEnumerator_1_t1097790735_GenericClass;
 extern Il2CppGenericClass EmptyInternalEnumerator_1_t2307190078_GenericClass;
@@ -9945,7 +9967,7 @@ extern Il2CppGenericClass IReadOnlyDictionary_2_t339779110_GenericClass;
 
 
 
-extern Il2CppGenericClass* const s_Il2CppGenericTypes[9919] = 
+extern Il2CppGenericClass* const s_Il2CppGenericTypes[9941] = 
 {
 	&IEnumerator_1_t3512676632_GenericClass,
 	&EmptyInternalEnumerator_1_t427108679_GenericClass,
@@ -18410,6 +18432,28 @@ extern Il2CppGenericClass* const s_Il2CppGenericTypes[9919] =
 	&Action_1_t2281355028_GenericClass,
 	&Enumerator_t1175238756_GenericClass,
 	&Comparison_1_t1883818612_GenericClass,
+	&Func_2_t1221679786_GenericClass,
+	&IEnumerator_1_t2236645036_GenericClass,
+	&EmptyInternalEnumerator_1_t3446044379_GenericClass,
+	&InternalEnumerator_1_t2711138685_GenericClass,
+	&IList_1_t3619394351_GenericClass,
+	&ICollection_1_t337259506_GenericClass,
+	&IEnumerable_1_t783927457_GenericClass,
+	&IReadOnlyList_1_t2368497474_GenericClass,
+	&IReadOnlyCollection_1_t1807190505_GenericClass,
+	&WhereSelectArrayIterator_2_t130382215_GenericClass,
+	&Iterator_1_t2603324621_GenericClass,
+	&Func_2_t593360455_GenericClass,
+	&Func_2_t1964970763_GenericClass,
+	&WhereSelectListIterator_2_t1435658435_GenericClass,
+	&List_1_t3276149310_GenericClass,
+	&ReadOnlyCollection_1_t3016650855_GenericClass,
+	&IComparer_1_t3058340047_GenericClass,
+	&Predicate_1_t2629368692_GenericClass,
+	&Action_1_t1976542163_GenericClass,
+	&Enumerator_t870425891_GenericClass,
+	&Comparison_1_t1579005747_GenericClass,
+	&WhereSelectEnumerableIterator_2_t328171717_GenericClass,
 	&List_1_t2137295009_GenericClass,
 	&IEnumerator_1_t1097790735_GenericClass,
 	&EmptyInternalEnumerator_1_t2307190078_GenericClass,
