@@ -44,7 +44,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 2}
+        m_Scale: {x: 1, y: 4}
         m_Offset: {x: 0, y: 0}
     - _Layer0FlowMap:
         m_Texture: {fileID: 0}
@@ -116,7 +116,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: ac4c6f8bb6f43f948a25964f69a22147, type: 3}
-        m_Scale: {x: 1, y: 2}
+        m_Scale: {x: 1, y: 4}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 14ac2ab5860d3a1499905b59df3c3fca, type: 3}
@@ -179,7 +179,7 @@ Material:
     - _AlphaMapType: 999
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 2
+    - _BumpScale: 1
     - _ColorAmplify: 1
     - _ControlScriptFlag: 0
     - _CrossFade: 0

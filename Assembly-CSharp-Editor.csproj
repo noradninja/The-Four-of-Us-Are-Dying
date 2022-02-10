@@ -78,6 +78,8 @@
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Editor\FxStyles.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Editor\SleekRenderCostCalculator.cs" />
      <Compile Include="Assets\Addons\Sleek_Renderer\Plugins\Sleek Render\Editor\SleekRenderSettingsInspector.cs" />
+     <Compile Include="Assets\Addons\Sprite2DBakedLighting\Assets\LightingUtilities\Editor\BakedLigthingSpriteDataEditor.cs" />
+     <Compile Include="Assets\Addons\Sprite2DBakedLighting\Assets\LightingUtilities\Editor\BakeSpritesLigthingUtility.cs" />
      <Compile Include="Assets\Kino\Bokeh\Editor\BokehEditor.cs" />
      <Compile Include="Assets\PolyFew\BatchFewShader\Editor\BatchFewShaderGUI.cs" />
      <Compile Include="Assets\PolyFew\Scripts\Editor\DecoratorEditor.cs" />

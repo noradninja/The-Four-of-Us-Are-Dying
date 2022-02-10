@@ -90,7 +90,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Power: 5
+    - _Power: 2.5
     - _Richness: 1
     - _Scale: 1
     - _SmoothnessTextureChannel: 0
