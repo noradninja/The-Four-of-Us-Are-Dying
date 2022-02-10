@@ -90,9 +90,9 @@ namespace DecalSystem {
 
 
         public void BuildAndSetDirty() {
-            if (Sprite) DecalUtils.FixRatio( this, ref oldScale );
-            DecalBuilder.Build( this );
-            DecalUtils.SetDirty( this );
+        //     if (Sprite) DecalUtils.FixRatio( this, ref oldScale );
+        //     DecalBuilder.Build( this );
+        //     DecalUtils.SetDirty( this );
         }
 
 

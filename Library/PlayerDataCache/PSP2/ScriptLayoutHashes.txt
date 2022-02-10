@@ -84,6 +84,8 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 50b0b141074b216c8b53b1bd467f73c9 Unity.TextMeshPro.dll:TMPro.TMP_InputField
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.MLPForceSaveProbes
 c967bfb6872c3624056b6afa3345c6c6 Assembly-CSharp.dll:.EmptyGraphic
+2dd52263fb48b05c3c240ccfee10bdfd Assembly-CSharp.dll:.BakeSpritesEditorDataHolder
+fd35a84130603d79461127c4aac95edc Assembly-CSharp.dll:.BakedLigthingSpriteData
 514dce1cfd3dced5b695c86b2004b640 Assembly-CSharp.dll:MagicLightProbes.MLPVolume
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:BrainFailProductions.PolyFew.AsImpL.TextureLoader
 53cefe5d98cadefbab750835e70b89c0 UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -289,6 +291,7 @@ ed66f271def58ab7e2c2f6552bc1c36a Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 bf9092984e391e854436c93547ae117f Assembly-CSharp.dll:BrainFailProductions.PolyFew.UtilityServices
 7f6fc417a53e608e411cb1091d92debe Unity.RenderPipelines.Lightweight.Runtime.dll:.LightweightPipelineEditorResources
 4ff0bb9a305567221c5f93759417ee3d Assembly-CSharp.dll:TMPro.Examples.TMP_TextInfoDebugTool
+eab2de5e72ab1b9ef1628a5a9a291100 Assembly-CSharp.dll:DecalSystem.Decal
 9ecabe4a6b0b699f4890bde3b3e4b3b9 Assembly-CSharp.dll:TMPro.Examples.TMP_FrameRateCounter
 d17b1f1790ce13ac5f0fa6c48f4d0684 Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_B
 d75dc834c5dec688db75a55a1724c90f UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
@@ -358,6 +361,6 @@ fd6eb0ca6b6e50d318246ec5c83d034b Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 f59ca19b2477a0f8545617e6a1dec4b4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Tonemapping
 744eec58ec982fb4eba9cbe4c3a6b5a8 Assembly-CSharp.dll:ArchieAndrews.PrefabBrush.PB_SaveObject
 eb565135f5b2f106ea4734c3cad2730e Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerHBox
+c5b2305067c88751c1d30fe01877eafd Assembly-CSharp.dll:.BakeSpritesMeshExporter
 e958cc1ee46a616a6e0cde964bfe9918 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 aae9893fc05b6c8cba8317ed327be0c4 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
-eab2de5e72ab1b9ef1628a5a9a291100 Assembly-CSharp.dll:DecalSystem.Decal

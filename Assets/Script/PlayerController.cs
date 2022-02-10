@@ -120,6 +120,15 @@ public class PlayerController : MonoBehaviour
         walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
         cooldownValue = stimCooldown;
+         if (SSAOScript.GetComponent<FastSSAO>().enabled == false){      
+            SSAOScript.GetComponent<FastSSAO>().enabled = true;
+            BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
+            SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
+            SSAOScript.GetComponent<FXAA>().enabled = true;
+            enabledText.GetComponent<Text>().color = Color.green;
+            enabledText.GetComponent<Text>().text = ("Enabled");
+            if (!Application.isEditor) QualitySettings.vSyncCount = 1;
+         }
     }
 
     void Update()
@@ -207,9 +216,10 @@ public class PlayerController : MonoBehaviour
 
 //Meds
         if (Input.GetKeyDown(VITA + UP) && InventoryManager.medCount > 0){  
-            InventoryManager.medCount -= 1;
-            if (InventoryManager.playerHealth < 100)
-            healMe();
+            if (InventoryManager.playerHealth < 100){
+                InventoryManager.medCount -= 1;
+                healMe();
+            }
         }
 //Stimutacs
         if (Input.GetKeyDown(VITA + DOWN) && InventoryManager.stimCount > 0 && !isStimulant){
