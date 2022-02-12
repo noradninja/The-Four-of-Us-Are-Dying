@@ -15,8 +15,8 @@ public class FastMobileBloom : MonoBehaviour
 	
 	void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
-		int rtW = 128;
-		int rtH = 73;
+		int rtW = 120;
+		int rtH = 68;
 		
 		//initial downsample
 		RenderTexture rt = RenderTexture.GetTemporary(rtW, rtH, 0, source.format);

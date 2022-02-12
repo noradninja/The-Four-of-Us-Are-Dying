@@ -219,12 +219,12 @@ namespace Kino
             #endif
 
             // Pass #1 - Downsampling, prefiltering and CoC calculation
-            var rt1 = RenderTexture.GetTemporary(width / 4, height / 4, 0, format);
+            var rt1 = RenderTexture.GetTemporary(120, 68, 0, format);
             source.filterMode = FilterMode.Bilinear;
             Graphics.Blit(source, rt1, _material, 0);
 
             // Pass #2 - Bokeh simulation
-            var rt2 = RenderTexture.GetTemporary(width / 4, height / 4, 0, format);
+            var rt2 = RenderTexture.GetTemporary(120, 68, 0, format);
             rt1.filterMode = FilterMode.Bilinear;
             Graphics.Blit(rt1, rt2, _material, 1 + (int)_kernelSize);
 

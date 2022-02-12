@@ -1,1 +1,1 @@
-{"IP":"192.168.2.129","File_Name":"Build","UseUSB":true,"storageIndex":1,"storageType":"sd2vita","startOnBuildEnd":true,"CustomUploaderFolder":false,"UploaderFolder":"","KeepFolderAfterBuild":true,"ExtractOnPC":true,"useUDCD":false,"udcdPath":"ur0:tai/udcd_uvc.skprx"}
+{"IP":"192.168.2.129","File_Name":"Build","UseUSB":true,"storageIndex":1,"storageType":"sd2vita","startOnBuildEnd":true,"CustomUploaderFolder":false,"UploaderFolder":"","KeepFolderAfterBuild":true,"ExtractOnPC":true,"useUDCD":true,"udcdPath":"ur0:tai/udcd_uvc.skprx"}
