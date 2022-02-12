@@ -350,8 +350,6 @@ struct Thread_t2300836069;
 struct Type_t;
 // System.Type[]
 struct TypeU5BU5D_t3940880105;
-// System.UInt16[]
-struct UInt16U5BU5D_t3326319531;
 // System.Void
 struct Void_t1185182177;
 // UnityEngine.AsyncOperation
@@ -464,8 +462,6 @@ struct SkinnedMeshRenderer_t245602842;
 struct SpaceAttribute_t3956583069;
 // UnityEngine.Sprite
 struct Sprite_t280657092;
-// UnityEngine.SpriteRenderer
-struct SpriteRenderer_t3235626157;
 // UnityEngine.TextAreaAttribute
 struct TextAreaAttribute_t3326046611;
 // UnityEngine.TextAsset
@@ -504,8 +500,6 @@ struct UnityLogWriter_t1374348020;
 struct UnitySynchronizationContext_t1887453786;
 // UnityEngine.UnitySynchronizationContext/WorkRequest[]
 struct WorkRequestU5BU5D_t3723878365;
-// UnityEngine.Vector2[]
-struct Vector2U5BU5D_t1457185986;
 // UnityEngine.Vector3[]
 struct Vector3U5BU5D_t1718750761;
 // UnityEngine.WaitForEndOfFrame
@@ -973,7 +967,6 @@ struct ParameterInfoU5BU5D_t390618515;
 struct ParameterModifierU5BU5D_t2943407543;
 struct SingleU5BU5D_t1444911251;
 struct StringU5BU5D_t1281789340;
-struct UInt16U5BU5D_t3326319531;
 struct CameraU5BU5D_t1709987734;
 struct Color32U5BU5D_t3850468773;
 struct ColorU5BU5D_t941916413;
@@ -984,7 +977,6 @@ struct RenderBufferStoreActionU5BU5D_t2825152535;
 struct RenderTargetIdentifierU5BU5D_t2742279485;
 struct HitInfoU5BU5D_t1685002053;
 struct TransformU5BU5D_t807237628;
-struct Vector2U5BU5D_t1457185986;
 struct Vector3U5BU5D_t1718750761;
 
 
@@ -2466,26 +2458,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // STRINGBUILDER_T_H
-#ifndef SYNCHRONIZATIONCONTEXT_T2326897723_H
-#define SYNCHRONIZATIONCONTEXT_T2326897723_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Threading.SynchronizationContext
-struct  SynchronizationContext_t2326897723  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // SYNCHRONIZATIONCONTEXT_T2326897723_H
 #ifndef VALUETYPE_T3640485471_H
 #define VALUETYPE_T3640485471_H
 #ifdef __clang__
@@ -3428,6 +3400,8 @@ public:
 	RuntimeObject * ____rngAccess_12;
 	// System.Security.Cryptography.RandomNumberGenerator System.Guid::_rng
 	RandomNumberGenerator_t386037858 * ____rng_13;
+	// System.Security.Cryptography.RandomNumberGenerator System.Guid::_fastRng
+	RandomNumberGenerator_t386037858 * ____fastRng_14;
 
 public:
 	inline static int32_t get_offset_of_Empty_0() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ___Empty_0)); }
@@ -3454,6 +3428,15 @@ public:
 	{
 		____rng_13 = value;
 		Il2CppCodeGenWriteBarrier((&____rng_13), value);
+	}
+
+	inline static int32_t get_offset_of__fastRng_14() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ____fastRng_14)); }
+	inline RandomNumberGenerator_t386037858 * get__fastRng_14() const { return ____fastRng_14; }
+	inline RandomNumberGenerator_t386037858 ** get_address_of__fastRng_14() { return &____fastRng_14; }
+	inline void set__fastRng_14(RandomNumberGenerator_t386037858 * value)
+	{
+		____fastRng_14 = value;
+		Il2CppCodeGenWriteBarrier((&____fastRng_14), value);
 	}
 };
 
@@ -4002,35 +3985,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // THREAD_T2300836069_H
-#ifndef UINT16_T2177724958_H
-#define UINT16_T2177724958_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.UInt16
-struct  UInt16_t2177724958 
-{
-public:
-	// System.UInt16 System.UInt16::m_value
-	uint16_t ___m_value_0;
-
-public:
-	inline static int32_t get_offset_of_m_value_0() { return static_cast<int32_t>(offsetof(UInt16_t2177724958, ___m_value_0)); }
-	inline uint16_t get_m_value_0() const { return ___m_value_0; }
-	inline uint16_t* get_address_of_m_value_0() { return &___m_value_0; }
-	inline void set_m_value_0(uint16_t value)
-	{
-		___m_value_0 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // UINT16_T2177724958_H
 #ifndef UINT32_T2560061978_H
 #define UINT32_T2560061978_H
 #ifdef __clang__
@@ -5079,46 +5033,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UNITYEXCEPTION_T3598173660_H
-#ifndef UNITYSYNCHRONIZATIONCONTEXT_T1887453786_H
-#define UNITYSYNCHRONIZATIONCONTEXT_T1887453786_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.UnitySynchronizationContext
-struct  UnitySynchronizationContext_t1887453786  : public SynchronizationContext_t2326897723
-{
-public:
-	// System.Collections.Generic.Queue`1<UnityEngine.UnitySynchronizationContext/WorkRequest> UnityEngine.UnitySynchronizationContext::m_AsyncWorkQueue
-	Queue_1_t1200778106 * ___m_AsyncWorkQueue_0;
-	// System.Int32 UnityEngine.UnitySynchronizationContext::m_MainThreadID
-	int32_t ___m_MainThreadID_1;
-
-public:
-	inline static int32_t get_offset_of_m_AsyncWorkQueue_0() { return static_cast<int32_t>(offsetof(UnitySynchronizationContext_t1887453786, ___m_AsyncWorkQueue_0)); }
-	inline Queue_1_t1200778106 * get_m_AsyncWorkQueue_0() const { return ___m_AsyncWorkQueue_0; }
-	inline Queue_1_t1200778106 ** get_address_of_m_AsyncWorkQueue_0() { return &___m_AsyncWorkQueue_0; }
-	inline void set_m_AsyncWorkQueue_0(Queue_1_t1200778106 * value)
-	{
-		___m_AsyncWorkQueue_0 = value;
-		Il2CppCodeGenWriteBarrier((&___m_AsyncWorkQueue_0), value);
-	}
-
-	inline static int32_t get_offset_of_m_MainThreadID_1() { return static_cast<int32_t>(offsetof(UnitySynchronizationContext_t1887453786, ___m_MainThreadID_1)); }
-	inline int32_t get_m_MainThreadID_1() const { return ___m_MainThreadID_1; }
-	inline int32_t* get_address_of_m_MainThreadID_1() { return &___m_MainThreadID_1; }
-	inline void set_m_MainThreadID_1(int32_t value)
-	{
-		___m_MainThreadID_1 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // UNITYSYNCHRONIZATIONCONTEXT_T1887453786_H
 #ifndef WORKREQUEST_T1354518612_H
 #define WORKREQUEST_T1354518612_H
 #ifdef __clang__
@@ -6357,6 +6271,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMETYPEHANDLE_T3027515415_H
+#ifndef SYNCHRONIZATIONCONTEXTPROPERTIES_T2926535923_H
+#define SYNCHRONIZATIONCONTEXTPROPERTIES_T2926535923_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Threading.SynchronizationContextProperties
+struct  SynchronizationContextProperties_t2926535923 
+{
+public:
+	// System.Int32 System.Threading.SynchronizationContextProperties::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(SynchronizationContextProperties_t2926535923, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SYNCHRONIZATIONCONTEXTPROPERTIES_T2926535923_H
 #ifndef WAITHANDLE_T1743403487_H
 #define WAITHANDLE_T1743403487_H
 #ifdef __clang__
@@ -8820,35 +8763,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // WRAPMODE_T730450702_H
-#ifndef LIGHTMAPTYPE_T2043680572_H
-#define LIGHTMAPTYPE_T2043680572_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngineInternal.LightmapType
-struct  LightmapType_t2043680572 
-{
-public:
-	// System.Int32 UnityEngineInternal.LightmapType::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(LightmapType_t2043680572, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // LIGHTMAPTYPE_T2043680572_H
 #ifndef MATHFINTERNAL_T624072491_H
 #define MATHFINTERNAL_T624072491_H
 #ifdef __clang__
@@ -9189,6 +9103,96 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EVENTWAITHANDLE_T777845177_H
+#ifndef SYNCHRONIZATIONCONTEXT_T2326897723_H
+#define SYNCHRONIZATIONCONTEXT_T2326897723_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Threading.SynchronizationContext
+struct  SynchronizationContext_t2326897723  : public RuntimeObject
+{
+public:
+	// System.Threading.SynchronizationContextProperties System.Threading.SynchronizationContext::_props
+	int32_t ____props_0;
+
+public:
+	inline static int32_t get_offset_of__props_0() { return static_cast<int32_t>(offsetof(SynchronizationContext_t2326897723, ____props_0)); }
+	inline int32_t get__props_0() const { return ____props_0; }
+	inline int32_t* get_address_of__props_0() { return &____props_0; }
+	inline void set__props_0(int32_t value)
+	{
+		____props_0 = value;
+	}
+};
+
+struct SynchronizationContext_t2326897723_StaticFields
+{
+public:
+	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType1
+	Type_t * ___s_cachedPreparedType1_1;
+	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType2
+	Type_t * ___s_cachedPreparedType2_2;
+	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType3
+	Type_t * ___s_cachedPreparedType3_3;
+	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType4
+	Type_t * ___s_cachedPreparedType4_4;
+	// System.Type System.Threading.SynchronizationContext::s_cachedPreparedType5
+	Type_t * ___s_cachedPreparedType5_5;
+
+public:
+	inline static int32_t get_offset_of_s_cachedPreparedType1_1() { return static_cast<int32_t>(offsetof(SynchronizationContext_t2326897723_StaticFields, ___s_cachedPreparedType1_1)); }
+	inline Type_t * get_s_cachedPreparedType1_1() const { return ___s_cachedPreparedType1_1; }
+	inline Type_t ** get_address_of_s_cachedPreparedType1_1() { return &___s_cachedPreparedType1_1; }
+	inline void set_s_cachedPreparedType1_1(Type_t * value)
+	{
+		___s_cachedPreparedType1_1 = value;
+		Il2CppCodeGenWriteBarrier((&___s_cachedPreparedType1_1), value);
+	}
+
+	inline static int32_t get_offset_of_s_cachedPreparedType2_2() { return static_cast<int32_t>(offsetof(SynchronizationContext_t2326897723_StaticFields, ___s_cachedPreparedType2_2)); }
+	inline Type_t * get_s_cachedPreparedType2_2() const { return ___s_cachedPreparedType2_2; }
+	inline Type_t ** get_address_of_s_cachedPreparedType2_2() { return &___s_cachedPreparedType2_2; }
+	inline void set_s_cachedPreparedType2_2(Type_t * value)
+	{
+		___s_cachedPreparedType2_2 = value;
+		Il2CppCodeGenWriteBarrier((&___s_cachedPreparedType2_2), value);
+	}
+
+	inline static int32_t get_offset_of_s_cachedPreparedType3_3() { return static_cast<int32_t>(offsetof(SynchronizationContext_t2326897723_StaticFields, ___s_cachedPreparedType3_3)); }
+	inline Type_t * get_s_cachedPreparedType3_3() const { return ___s_cachedPreparedType3_3; }
+	inline Type_t ** get_address_of_s_cachedPreparedType3_3() { return &___s_cachedPreparedType3_3; }
+	inline void set_s_cachedPreparedType3_3(Type_t * value)
+	{
+		___s_cachedPreparedType3_3 = value;
+		Il2CppCodeGenWriteBarrier((&___s_cachedPreparedType3_3), value);
+	}
+
+	inline static int32_t get_offset_of_s_cachedPreparedType4_4() { return static_cast<int32_t>(offsetof(SynchronizationContext_t2326897723_StaticFields, ___s_cachedPreparedType4_4)); }
+	inline Type_t * get_s_cachedPreparedType4_4() const { return ___s_cachedPreparedType4_4; }
+	inline Type_t ** get_address_of_s_cachedPreparedType4_4() { return &___s_cachedPreparedType4_4; }
+	inline void set_s_cachedPreparedType4_4(Type_t * value)
+	{
+		___s_cachedPreparedType4_4 = value;
+		Il2CppCodeGenWriteBarrier((&___s_cachedPreparedType4_4), value);
+	}
+
+	inline static int32_t get_offset_of_s_cachedPreparedType5_5() { return static_cast<int32_t>(offsetof(SynchronizationContext_t2326897723_StaticFields, ___s_cachedPreparedType5_5)); }
+	inline Type_t * get_s_cachedPreparedType5_5() const { return ___s_cachedPreparedType5_5; }
+	inline Type_t ** get_address_of_s_cachedPreparedType5_5() { return &___s_cachedPreparedType5_5; }
+	inline void set_s_cachedPreparedType5_5(Type_t * value)
+	{
+		___s_cachedPreparedType5_5 = value;
+		Il2CppCodeGenWriteBarrier((&___s_cachedPreparedType5_5), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SYNCHRONIZATIONCONTEXT_T2326897723_H
 #ifndef TYPE_T_H
 #define TYPE_T_H
 #ifdef __clang__
@@ -10625,6 +10629,46 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // REQUESTATLASCALLBACK_T3100554279_H
+#ifndef UNITYSYNCHRONIZATIONCONTEXT_T1887453786_H
+#define UNITYSYNCHRONIZATIONCONTEXT_T1887453786_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.UnitySynchronizationContext
+struct  UnitySynchronizationContext_t1887453786  : public SynchronizationContext_t2326897723
+{
+public:
+	// System.Collections.Generic.Queue`1<UnityEngine.UnitySynchronizationContext/WorkRequest> UnityEngine.UnitySynchronizationContext::m_AsyncWorkQueue
+	Queue_1_t1200778106 * ___m_AsyncWorkQueue_6;
+	// System.Int32 UnityEngine.UnitySynchronizationContext::m_MainThreadID
+	int32_t ___m_MainThreadID_7;
+
+public:
+	inline static int32_t get_offset_of_m_AsyncWorkQueue_6() { return static_cast<int32_t>(offsetof(UnitySynchronizationContext_t1887453786, ___m_AsyncWorkQueue_6)); }
+	inline Queue_1_t1200778106 * get_m_AsyncWorkQueue_6() const { return ___m_AsyncWorkQueue_6; }
+	inline Queue_1_t1200778106 ** get_address_of_m_AsyncWorkQueue_6() { return &___m_AsyncWorkQueue_6; }
+	inline void set_m_AsyncWorkQueue_6(Queue_1_t1200778106 * value)
+	{
+		___m_AsyncWorkQueue_6 = value;
+		Il2CppCodeGenWriteBarrier((&___m_AsyncWorkQueue_6), value);
+	}
+
+	inline static int32_t get_offset_of_m_MainThreadID_7() { return static_cast<int32_t>(offsetof(UnitySynchronizationContext_t1887453786, ___m_MainThreadID_7)); }
+	inline int32_t get_m_MainThreadID_7() const { return ___m_MainThreadID_7; }
+	inline int32_t* get_address_of_m_MainThreadID_7() { return &___m_MainThreadID_7; }
+	inline void set_m_MainThreadID_7(int32_t value)
+	{
+		___m_MainThreadID_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // UNITYSYNCHRONIZATIONCONTEXT_T1887453786_H
 #ifndef CAMERA_T4157153871_H
 #define CAMERA_T4157153871_H
 #ifdef __clang__
@@ -11423,76 +11467,6 @@ public:
 		Il2CppCodeGenWriteBarrier(m_Items + index, value);
 	}
 };
-// UnityEngine.Vector2[]
-struct Vector2U5BU5D_t1457185986  : public RuntimeArray
-{
-public:
-	ALIGN_FIELD (8) Vector2_t2156229523  m_Items[1];
-
-public:
-	inline Vector2_t2156229523  GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline Vector2_t2156229523 * GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, Vector2_t2156229523  value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-	}
-	inline Vector2_t2156229523  GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline Vector2_t2156229523 * GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, Vector2_t2156229523  value)
-	{
-		m_Items[index] = value;
-	}
-};
-// System.UInt16[]
-struct UInt16U5BU5D_t3326319531  : public RuntimeArray
-{
-public:
-	ALIGN_FIELD (8) uint16_t m_Items[1];
-
-public:
-	inline uint16_t GetAt(il2cpp_array_size_t index) const
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items[index];
-	}
-	inline uint16_t* GetAddressAt(il2cpp_array_size_t index)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		return m_Items + index;
-	}
-	inline void SetAt(il2cpp_array_size_t index, uint16_t value)
-	{
-		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
-		m_Items[index] = value;
-	}
-	inline uint16_t GetAtUnchecked(il2cpp_array_size_t index) const
-	{
-		return m_Items[index];
-	}
-	inline uint16_t* GetAddressAtUnchecked(il2cpp_array_size_t index)
-	{
-		return m_Items + index;
-	}
-	inline void SetAtUnchecked(il2cpp_array_size_t index, uint16_t value)
-	{
-		m_Items[index] = value;
-	}
-};
 // System.Char[]
 struct CharU5BU5D_t3528271667  : public RuntimeArray
 {
@@ -12016,8 +11990,6 @@ inline void Action_1_Invoke_m1813602315 (Action_1_t2144852004 * __this, Cubemap_
 }
 // System.Void UnityEngine.RenderSettings::get_fogColor_Injected(UnityEngine.Color&)
 extern "C" IL2CPP_METHOD_ATTR void RenderSettings_get_fogColor_Injected_m508162699 (RuntimeObject * __this /* static, unused */, Color_t2555686324 * ___ret0, const RuntimeMethod* method);
-// System.Void UnityEngine.RenderSettings::set_fogColor_Injected(UnityEngine.Color&)
-extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogColor_Injected_m966802080 (RuntimeObject * __this /* static, unused */, Color_t2555686324 * ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Texture::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Texture__ctor_m3554519797 (Texture_t3661962703 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.RenderTexture::ValidateRenderTextureDesc(UnityEngine.RenderTextureDescriptor)
@@ -12128,20 +12100,6 @@ extern "C" IL2CPP_METHOD_ATTR void RenderTextureDescriptor_set_enableRandomWrite
 extern "C" IL2CPP_METHOD_ATTR void RenderTextureDescriptor_set_bindMS_m1595810030 (RenderTextureDescriptor_t1974534975 * __this, bool ___value0, const RuntimeMethod* method);
 // System.Void UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)
 extern "C" IL2CPP_METHOD_ATTR void Renderer_get_bounds_Injected_m3112887345 (Renderer_t2627027031 * __this, Bounds_t2266837910 * ___ret0, const RuntimeMethod* method);
-// System.Void UnityEngine.Renderer::SetStaticLightmapST_Injected(UnityEngine.Vector4&)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_Injected_m2649752629 (Renderer_t2627027031 * __this, Vector4_t3319028937 * ___st0, const RuntimeMethod* method);
-// System.Void UnityEngine.Renderer::Internal_SetPropertyBlock(UnityEngine.MaterialPropertyBlock)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_Internal_SetPropertyBlock_m1919983474 (Renderer_t2627027031 * __this, MaterialPropertyBlock_t3213117958 * ___properties0, const RuntimeMethod* method);
-// System.Void UnityEngine.Renderer::GetLightmapST_Injected(UnityEngineInternal.LightmapType,UnityEngine.Vector4&)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_GetLightmapST_Injected_m1142860114 (Renderer_t2627027031 * __this, int32_t ___lt0, Vector4_t3319028937 * ___ret1, const RuntimeMethod* method);
-// System.Int32 UnityEngine.Renderer::GetLightmapIndex(UnityEngineInternal.LightmapType)
-extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_GetLightmapIndex_m3783203546 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method);
-// System.Void UnityEngine.Renderer::SetLightmapIndex(System.Int32,UnityEngineInternal.LightmapType)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapIndex_m2382884887 (Renderer_t2627027031 * __this, int32_t ___index0, int32_t ___lt1, const RuntimeMethod* method);
-// UnityEngine.Vector4 UnityEngine.Renderer::GetLightmapST(UnityEngineInternal.LightmapType)
-extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Renderer_GetLightmapST_m647301836 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method);
-// System.Void UnityEngine.Renderer::SetStaticLightmapST(UnityEngine.Vector4)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_m611321850 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___st0, const RuntimeMethod* method);
 // UnityEngine.Material UnityEngine.Renderer::GetMaterial()
 extern "C" IL2CPP_METHOD_ATTR Material_t340375123 * Renderer_GetMaterial_m1815496413 (Renderer_t2627027031 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Renderer::SetMaterial(UnityEngine.Material)
@@ -12386,8 +12344,6 @@ extern "C" IL2CPP_METHOD_ATTR void GameObject_SendMessage_m3720186693 (GameObjec
 extern "C" IL2CPP_METHOD_ATTR void* IntPtr_op_Explicit_m2520637223 (RuntimeObject * __this /* static, unused */, intptr_t p0, const RuntimeMethod* method);
 // System.Type System.Object::GetType()
 extern "C" IL2CPP_METHOD_ATTR Type_t * Object_GetType_m88164663 (RuntimeObject * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Shader::SetGlobalTextureImpl(System.Int32,UnityEngine.Texture)
-extern "C" IL2CPP_METHOD_ATTR void Shader_SetGlobalTextureImpl_m1248900127 (RuntimeObject * __this /* static, unused */, int32_t ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method);
 // System.Void UnityEngine.Sprite::GetTextureRect_Injected(UnityEngine.Rect&)
 extern "C" IL2CPP_METHOD_ATTR void Sprite_GetTextureRect_Injected_m333481368 (Sprite_t280657092 * __this, Rect_t2360479859 * ___ret0, const RuntimeMethod* method);
 // System.Void UnityEngine.Sprite::GetInnerUVs_Injected(UnityEngine.Vector4&)
@@ -12412,8 +12368,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Sprite_get_packingMode_m2493123120 (Sprite
 extern "C" IL2CPP_METHOD_ATTR Rect_t2360479859  Rect_get_zero_m4034156123 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // UnityEngine.Rect UnityEngine.Sprite::GetTextureRect()
 extern "C" IL2CPP_METHOD_ATTR Rect_t2360479859  Sprite_GetTextureRect_m3372967885 (Sprite_t280657092 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.SpriteRenderer::get_color_Injected(UnityEngine.Color&)
-extern "C" IL2CPP_METHOD_ATTR void SpriteRenderer_get_color_Injected_m204751054 (SpriteRenderer_t3235626157 * __this, Color_t2555686324 * ___ret0, const RuntimeMethod* method);
 // UnityEngine.Vector4 UnityEngine.Sprite::GetInnerUVs()
 extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Sprite_GetInnerUVs_m3161811504 (Sprite_t280657092 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector4 UnityEngine.Sprite::GetOuterUVs()
@@ -12480,10 +12434,10 @@ extern "C" IL2CPP_METHOD_ATTR String_t* Int32_ToString_m141394615 (int32_t* __th
 extern "C" IL2CPP_METHOD_ATTR String_t* SystemInfo_GetOperatingSystem_m2857477099 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // UnityEngine.OperatingSystemFamily UnityEngine.SystemInfo::GetOperatingSystemFamily()
 extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_GetOperatingSystemFamily_m1440411909 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.String UnityEngine.SystemInfo::GetDeviceModel()
+extern "C" IL2CPP_METHOD_ATTR String_t* SystemInfo_GetDeviceModel_m957963979 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // UnityEngine.DeviceType UnityEngine.SystemInfo::GetDeviceType()
 extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_GetDeviceType_m803381061 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
-// System.String UnityEngine.SystemInfo::GetGraphicsDeviceName()
-extern "C" IL2CPP_METHOD_ATTR String_t* SystemInfo_GetGraphicsDeviceName_m1994395820 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // UnityEngine.Rendering.GraphicsDeviceType UnityEngine.SystemInfo::GetGraphicsDeviceType()
 extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_GetGraphicsDeviceType_m2860401330 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Int32 UnityEngine.SystemInfo::GetGraphicsShaderLevel()
@@ -12900,8 +12854,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Vector3Int_GetHashCode_m59183038 (Vector3I
 extern "C" IL2CPP_METHOD_ATTR String_t* Vector3Int_ToString_m3033835977 (Vector3Int_t741115188 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Vector4::.ctor(System.Single,System.Single,System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Vector4__ctor_m2498754347 (Vector4_t3319028937 * __this, float ___x0, float ___y1, float ___z2, float ___w3, const RuntimeMethod* method);
-// System.Void UnityEngine.Vector4::.ctor(System.Single,System.Single,System.Single)
-extern "C" IL2CPP_METHOD_ATTR void Vector4__ctor_m432325927 (Vector4_t3319028937 * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method);
 // System.Void UnityEngine.Vector4::.ctor(System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Vector4__ctor_m3795604412 (Vector4_t3319028937 * __this, float ___x0, float ___y1, const RuntimeMethod* method);
 // System.Single UnityEngine.Vector4::get_Item(System.Int32)
@@ -14374,25 +14326,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t QualitySettings_get_vSyncCount_m1170877849
 	static QualitySettings_get_vSyncCount_m1170877849_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (QualitySettings_get_vSyncCount_m1170877849_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::get_vSyncCount()");
-	int32_t retVal = _il2cpp_icall_func();
-	return retVal;
-}
-// System.Void UnityEngine.QualitySettings::set_vSyncCount(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void QualitySettings_set_vSyncCount_m3131636076 (RuntimeObject * __this /* static, unused */, int32_t ___value0, const RuntimeMethod* method)
-{
-	typedef void (*QualitySettings_set_vSyncCount_m3131636076_ftn) (int32_t);
-	static QualitySettings_set_vSyncCount_m3131636076_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (QualitySettings_set_vSyncCount_m3131636076_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::set_vSyncCount(System.Int32)");
-	_il2cpp_icall_func(___value0);
-}
-// System.Int32 UnityEngine.QualitySettings::get_antiAliasing()
-extern "C" IL2CPP_METHOD_ATTR int32_t QualitySettings_get_antiAliasing_m1365131962 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	typedef int32_t (*QualitySettings_get_antiAliasing_m1365131962_ftn) ();
-	static QualitySettings_get_antiAliasing_m1365131962_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (QualitySettings_get_antiAliasing_m1365131962_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::get_antiAliasing()");
 	int32_t retVal = _il2cpp_icall_func();
 	return retVal;
 }
@@ -18157,15 +18090,6 @@ extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogStartDistance_m3205984
 	float retVal = _il2cpp_icall_func();
 	return retVal;
 }
-// System.Void UnityEngine.RenderSettings::set_fogStartDistance(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogStartDistance_m3924853072 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method)
-{
-	typedef void (*RenderSettings_set_fogStartDistance_m3924853072_ftn) (float);
-	static RenderSettings_set_fogStartDistance_m3924853072_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RenderSettings_set_fogStartDistance_m3924853072_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogStartDistance(System.Single)");
-	_il2cpp_icall_func(___value0);
-}
 // System.Single UnityEngine.RenderSettings::get_fogEndDistance()
 extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogEndDistance_m3431247078 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -18176,15 +18100,6 @@ extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogEndDistance_m343124707
 	float retVal = _il2cpp_icall_func();
 	return retVal;
 }
-// System.Void UnityEngine.RenderSettings::set_fogEndDistance(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogEndDistance_m2317515257 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method)
-{
-	typedef void (*RenderSettings_set_fogEndDistance_m2317515257_ftn) (float);
-	static RenderSettings_set_fogEndDistance_m2317515257_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RenderSettings_set_fogEndDistance_m2317515257_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogEndDistance(System.Single)");
-	_il2cpp_icall_func(___value0);
-}
 // UnityEngine.FogMode UnityEngine.RenderSettings::get_fogMode()
 extern "C" IL2CPP_METHOD_ATTR int32_t RenderSettings_get_fogMode_m3629449155 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -18194,15 +18109,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t RenderSettings_get_fogMode_m3629449155 (Ru
 	_il2cpp_icall_func = (RenderSettings_get_fogMode_m3629449155_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::get_fogMode()");
 	int32_t retVal = _il2cpp_icall_func();
 	return retVal;
-}
-// System.Void UnityEngine.RenderSettings::set_fogMode(UnityEngine.FogMode)
-extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogMode_m2821553345 (RuntimeObject * __this /* static, unused */, int32_t ___value0, const RuntimeMethod* method)
-{
-	typedef void (*RenderSettings_set_fogMode_m2821553345_ftn) (int32_t);
-	static RenderSettings_set_fogMode_m2821553345_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RenderSettings_set_fogMode_m2821553345_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogMode(UnityEngine.FogMode)");
-	_il2cpp_icall_func(___value0);
 }
 // UnityEngine.Color UnityEngine.RenderSettings::get_fogColor()
 extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  RenderSettings_get_fogColor_m1270918470 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
@@ -18215,14 +18121,6 @@ extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  RenderSettings_get_fogColor_m12
 		return L_0;
 	}
 }
-// System.Void UnityEngine.RenderSettings::set_fogColor(UnityEngine.Color)
-extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogColor_m1943396926 (RuntimeObject * __this /* static, unused */, Color_t2555686324  ___value0, const RuntimeMethod* method)
-{
-	{
-		RenderSettings_set_fogColor_Injected_m966802080(NULL /*static, unused*/, (Color_t2555686324 *)(&___value0), /*hidden argument*/NULL);
-		return;
-	}
-}
 // System.Single UnityEngine.RenderSettings::get_fogDensity()
 extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogDensity_m616878862 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -18232,15 +18130,6 @@ extern "C" IL2CPP_METHOD_ATTR float RenderSettings_get_fogDensity_m616878862 (Ru
 	_il2cpp_icall_func = (RenderSettings_get_fogDensity_m616878862_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::get_fogDensity()");
 	float retVal = _il2cpp_icall_func();
 	return retVal;
-}
-// System.Void UnityEngine.RenderSettings::set_fogDensity(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogDensity_m593006159 (RuntimeObject * __this /* static, unused */, float ___value0, const RuntimeMethod* method)
-{
-	typedef void (*RenderSettings_set_fogDensity_m593006159_ftn) (float);
-	static RenderSettings_set_fogDensity_m593006159_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RenderSettings_set_fogDensity_m593006159_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogDensity(System.Single)");
-	_il2cpp_icall_func(___value0);
 }
 // UnityEngine.Material UnityEngine.RenderSettings::get_skybox()
 extern "C" IL2CPP_METHOD_ATTR Material_t340375123 * RenderSettings_get_skybox_m1418963821 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
@@ -18260,15 +18149,6 @@ extern "C" IL2CPP_METHOD_ATTR void RenderSettings_get_fogColor_Injected_m5081626
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (RenderSettings_get_fogColor_Injected_m508162699_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::get_fogColor_Injected(UnityEngine.Color&)");
 	_il2cpp_icall_func(___ret0);
-}
-// System.Void UnityEngine.RenderSettings::set_fogColor_Injected(UnityEngine.Color&)
-extern "C" IL2CPP_METHOD_ATTR void RenderSettings_set_fogColor_Injected_m966802080 (RuntimeObject * __this /* static, unused */, Color_t2555686324 * ___value0, const RuntimeMethod* method)
-{
-	typedef void (*RenderSettings_set_fogColor_Injected_m966802080_ftn) (Color_t2555686324 *);
-	static RenderSettings_set_fogColor_Injected_m966802080_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (RenderSettings_set_fogColor_Injected_m966802080_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.RenderSettings::set_fogColor_Injected(UnityEngine.Color&)");
-	_il2cpp_icall_func(___value0);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -19753,14 +19633,6 @@ extern "C" IL2CPP_METHOD_ATTR Bounds_t2266837910  Renderer_get_bounds_m180320400
 		return L_0;
 	}
 }
-// System.Void UnityEngine.Renderer::SetStaticLightmapST(UnityEngine.Vector4)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_m611321850 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___st0, const RuntimeMethod* method)
-{
-	{
-		Renderer_SetStaticLightmapST_Injected_m2649752629(__this, (Vector4_t3319028937 *)(&___st0), /*hidden argument*/NULL);
-		return;
-	}
-}
 // UnityEngine.Material UnityEngine.Renderer::GetMaterial()
 extern "C" IL2CPP_METHOD_ATTR Material_t340375123 * Renderer_GetMaterial_m1815496413 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
 {
@@ -19798,24 +19670,6 @@ extern "C" IL2CPP_METHOD_ATTR void Renderer_SetMaterialArray_m1096125577 (Render
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Renderer_SetMaterialArray_m1096125577_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::SetMaterialArray(UnityEngine.Material[])");
 	_il2cpp_icall_func(__this, ___m0);
-}
-// System.Void UnityEngine.Renderer::Internal_SetPropertyBlock(UnityEngine.MaterialPropertyBlock)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_Internal_SetPropertyBlock_m1919983474 (Renderer_t2627027031 * __this, MaterialPropertyBlock_t3213117958 * ___properties0, const RuntimeMethod* method)
-{
-	typedef void (*Renderer_Internal_SetPropertyBlock_m1919983474_ftn) (Renderer_t2627027031 *, MaterialPropertyBlock_t3213117958 *);
-	static Renderer_Internal_SetPropertyBlock_m1919983474_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_Internal_SetPropertyBlock_m1919983474_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::Internal_SetPropertyBlock(UnityEngine.MaterialPropertyBlock)");
-	_il2cpp_icall_func(__this, ___properties0);
-}
-// System.Void UnityEngine.Renderer::SetPropertyBlock(UnityEngine.MaterialPropertyBlock)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_SetPropertyBlock_m2471545580 (Renderer_t2627027031 * __this, MaterialPropertyBlock_t3213117958 * ___properties0, const RuntimeMethod* method)
-{
-	{
-		MaterialPropertyBlock_t3213117958 * L_0 = ___properties0;
-		Renderer_Internal_SetPropertyBlock_m1919983474(__this, L_0, /*hidden argument*/NULL);
-		return;
-	}
 }
 // System.Boolean UnityEngine.Renderer::get_enabled()
 extern "C" IL2CPP_METHOD_ATTR bool Renderer_get_enabled_m3482452518 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
@@ -19929,88 +19783,6 @@ extern "C" IL2CPP_METHOD_ATTR bool Renderer_get_isPartOfStaticBatch_m384187304 (
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
-// System.Int32 UnityEngine.Renderer::GetLightmapIndex(UnityEngineInternal.LightmapType)
-extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_GetLightmapIndex_m3783203546 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method)
-{
-	typedef int32_t (*Renderer_GetLightmapIndex_m3783203546_ftn) (Renderer_t2627027031 *, int32_t);
-	static Renderer_GetLightmapIndex_m3783203546_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_GetLightmapIndex_m3783203546_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::GetLightmapIndex(UnityEngineInternal.LightmapType)");
-	int32_t retVal = _il2cpp_icall_func(__this, ___lt0);
-	return retVal;
-}
-// System.Void UnityEngine.Renderer::SetLightmapIndex(System.Int32,UnityEngineInternal.LightmapType)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_SetLightmapIndex_m2382884887 (Renderer_t2627027031 * __this, int32_t ___index0, int32_t ___lt1, const RuntimeMethod* method)
-{
-	typedef void (*Renderer_SetLightmapIndex_m2382884887_ftn) (Renderer_t2627027031 *, int32_t, int32_t);
-	static Renderer_SetLightmapIndex_m2382884887_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_SetLightmapIndex_m2382884887_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::SetLightmapIndex(System.Int32,UnityEngineInternal.LightmapType)");
-	_il2cpp_icall_func(__this, ___index0, ___lt1);
-}
-// UnityEngine.Vector4 UnityEngine.Renderer::GetLightmapST(UnityEngineInternal.LightmapType)
-extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Renderer_GetLightmapST_m647301836 (Renderer_t2627027031 * __this, int32_t ___lt0, const RuntimeMethod* method)
-{
-	Vector4_t3319028937  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		int32_t L_0 = ___lt0;
-		Renderer_GetLightmapST_Injected_m1142860114(__this, L_0, (Vector4_t3319028937 *)(&V_0), /*hidden argument*/NULL);
-		Vector4_t3319028937  L_1 = V_0;
-		return L_1;
-	}
-}
-// System.Int32 UnityEngine.Renderer::get_lightmapIndex()
-extern "C" IL2CPP_METHOD_ATTR int32_t Renderer_get_lightmapIndex_m1719636911 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
-{
-	int32_t V_0 = 0;
-	{
-		int32_t L_0 = Renderer_GetLightmapIndex_m3783203546(__this, 0, /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		int32_t L_1 = V_0;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.Renderer::set_lightmapIndex(System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_set_lightmapIndex_m3484336565 (Renderer_t2627027031 * __this, int32_t ___value0, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = ___value0;
-		Renderer_SetLightmapIndex_m2382884887(__this, L_0, 0, /*hidden argument*/NULL);
-		return;
-	}
-}
-// UnityEngine.Vector4 UnityEngine.Renderer::get_lightmapScaleOffset()
-extern "C" IL2CPP_METHOD_ATTR Vector4_t3319028937  Renderer_get_lightmapScaleOffset_m804150199 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
-{
-	Vector4_t3319028937  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		Vector4_t3319028937  L_0 = Renderer_GetLightmapST_m647301836(__this, 0, /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		Vector4_t3319028937  L_1 = V_0;
-		return L_1;
-	}
-}
-// System.Void UnityEngine.Renderer::set_lightmapScaleOffset(UnityEngine.Vector4)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_set_lightmapScaleOffset_m402428297 (Renderer_t2627027031 * __this, Vector4_t3319028937  ___value0, const RuntimeMethod* method)
-{
-	{
-		Vector4_t3319028937  L_0 = ___value0;
-		Renderer_SetStaticLightmapST_m611321850(__this, L_0, /*hidden argument*/NULL);
-		return;
-	}
-}
 // UnityEngine.Material[] UnityEngine.Renderer::GetSharedMaterialArray()
 extern "C" IL2CPP_METHOD_ATTR MaterialU5BU5D_t561872642* Renderer_GetSharedMaterialArray_m3184378747 (Renderer_t2627027031 * __this, const RuntimeMethod* method)
 {
@@ -20104,24 +19876,6 @@ extern "C" IL2CPP_METHOD_ATTR void Renderer_get_bounds_Injected_m3112887345 (Ren
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (Renderer_get_bounds_Injected_m3112887345_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::get_bounds_Injected(UnityEngine.Bounds&)");
 	_il2cpp_icall_func(__this, ___ret0);
-}
-// System.Void UnityEngine.Renderer::SetStaticLightmapST_Injected(UnityEngine.Vector4&)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_SetStaticLightmapST_Injected_m2649752629 (Renderer_t2627027031 * __this, Vector4_t3319028937 * ___st0, const RuntimeMethod* method)
-{
-	typedef void (*Renderer_SetStaticLightmapST_Injected_m2649752629_ftn) (Renderer_t2627027031 *, Vector4_t3319028937 *);
-	static Renderer_SetStaticLightmapST_Injected_m2649752629_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_SetStaticLightmapST_Injected_m2649752629_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::SetStaticLightmapST_Injected(UnityEngine.Vector4&)");
-	_il2cpp_icall_func(__this, ___st0);
-}
-// System.Void UnityEngine.Renderer::GetLightmapST_Injected(UnityEngineInternal.LightmapType,UnityEngine.Vector4&)
-extern "C" IL2CPP_METHOD_ATTR void Renderer_GetLightmapST_Injected_m1142860114 (Renderer_t2627027031 * __this, int32_t ___lt0, Vector4_t3319028937 * ___ret1, const RuntimeMethod* method)
-{
-	typedef void (*Renderer_GetLightmapST_Injected_m1142860114_ftn) (Renderer_t2627027031 *, int32_t, Vector4_t3319028937 *);
-	static Renderer_GetLightmapST_Injected_m1142860114_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Renderer_GetLightmapST_Injected_m1142860114_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Renderer::GetLightmapST_Injected(UnityEngineInternal.LightmapType,UnityEngine.Vector4&)");
-	_il2cpp_icall_func(__this, ___lt0, ___ret1);
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
@@ -23903,26 +23657,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t Shader_PropertyToID_m1030499873 (RuntimeOb
 	int32_t retVal = _il2cpp_icall_func(___name0);
 	return retVal;
 }
-// System.Void UnityEngine.Shader::SetGlobalTextureImpl(System.Int32,UnityEngine.Texture)
-extern "C" IL2CPP_METHOD_ATTR void Shader_SetGlobalTextureImpl_m1248900127 (RuntimeObject * __this /* static, unused */, int32_t ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method)
-{
-	typedef void (*Shader_SetGlobalTextureImpl_m1248900127_ftn) (int32_t, Texture_t3661962703 *);
-	static Shader_SetGlobalTextureImpl_m1248900127_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Shader_SetGlobalTextureImpl_m1248900127_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Shader::SetGlobalTextureImpl(System.Int32,UnityEngine.Texture)");
-	_il2cpp_icall_func(___name0, ___value1);
-}
-// System.Void UnityEngine.Shader::SetGlobalTexture(System.String,UnityEngine.Texture)
-extern "C" IL2CPP_METHOD_ATTR void Shader_SetGlobalTexture_m3892103344 (RuntimeObject * __this /* static, unused */, String_t* ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method)
-{
-	{
-		String_t* L_0 = ___name0;
-		int32_t L_1 = Shader_PropertyToID_m1030499873(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		Texture_t3661962703 * L_2 = ___value1;
-		Shader_SetGlobalTextureImpl_m1248900127(NULL /*static, unused*/, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -24285,36 +24019,6 @@ IL_002f:
 		return L_4;
 	}
 }
-// UnityEngine.Vector2[] UnityEngine.Sprite::get_vertices()
-extern "C" IL2CPP_METHOD_ATTR Vector2U5BU5D_t1457185986* Sprite_get_vertices_m2523126183 (Sprite_t280657092 * __this, const RuntimeMethod* method)
-{
-	typedef Vector2U5BU5D_t1457185986* (*Sprite_get_vertices_m2523126183_ftn) (Sprite_t280657092 *);
-	static Sprite_get_vertices_m2523126183_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Sprite_get_vertices_m2523126183_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Sprite::get_vertices()");
-	Vector2U5BU5D_t1457185986* retVal = _il2cpp_icall_func(__this);
-	return retVal;
-}
-// System.UInt16[] UnityEngine.Sprite::get_triangles()
-extern "C" IL2CPP_METHOD_ATTR UInt16U5BU5D_t3326319531* Sprite_get_triangles_m3772217029 (Sprite_t280657092 * __this, const RuntimeMethod* method)
-{
-	typedef UInt16U5BU5D_t3326319531* (*Sprite_get_triangles_m3772217029_ftn) (Sprite_t280657092 *);
-	static Sprite_get_triangles_m3772217029_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Sprite_get_triangles_m3772217029_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Sprite::get_triangles()");
-	UInt16U5BU5D_t3326319531* retVal = _il2cpp_icall_func(__this);
-	return retVal;
-}
-// UnityEngine.Vector2[] UnityEngine.Sprite::get_uv()
-extern "C" IL2CPP_METHOD_ATTR Vector2U5BU5D_t1457185986* Sprite_get_uv_m2963075876 (Sprite_t280657092 * __this, const RuntimeMethod* method)
-{
-	typedef Vector2U5BU5D_t1457185986* (*Sprite_get_uv_m2963075876_ftn) (Sprite_t280657092 *);
-	static Sprite_get_uv_m2963075876_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Sprite_get_uv_m2963075876_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Sprite::get_uv()");
-	Vector2U5BU5D_t1457185986* retVal = _il2cpp_icall_func(__this);
-	return retVal;
-}
 // System.Void UnityEngine.Sprite::GetTextureRect_Injected(UnityEngine.Rect&)
 extern "C" IL2CPP_METHOD_ATTR void Sprite_GetTextureRect_Injected_m333481368 (Sprite_t280657092 * __this, Rect_t2360479859 * ___ret0, const RuntimeMethod* method)
 {
@@ -24385,36 +24089,6 @@ extern "C" IL2CPP_METHOD_ATTR void Sprite_get_border_Injected_m3046818791 (Sprit
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// UnityEngine.Sprite UnityEngine.SpriteRenderer::get_sprite()
-extern "C" IL2CPP_METHOD_ATTR Sprite_t280657092 * SpriteRenderer_get_sprite_m663386871 (SpriteRenderer_t3235626157 * __this, const RuntimeMethod* method)
-{
-	typedef Sprite_t280657092 * (*SpriteRenderer_get_sprite_m663386871_ftn) (SpriteRenderer_t3235626157 *);
-	static SpriteRenderer_get_sprite_m663386871_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (SpriteRenderer_get_sprite_m663386871_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SpriteRenderer::get_sprite()");
-	Sprite_t280657092 * retVal = _il2cpp_icall_func(__this);
-	return retVal;
-}
-// UnityEngine.Color UnityEngine.SpriteRenderer::get_color()
-extern "C" IL2CPP_METHOD_ATTR Color_t2555686324  SpriteRenderer_get_color_m904197748 (SpriteRenderer_t3235626157 * __this, const RuntimeMethod* method)
-{
-	Color_t2555686324  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	{
-		SpriteRenderer_get_color_Injected_m204751054(__this, (Color_t2555686324 *)(&V_0), /*hidden argument*/NULL);
-		Color_t2555686324  L_0 = V_0;
-		return L_0;
-	}
-}
-// System.Void UnityEngine.SpriteRenderer::get_color_Injected(UnityEngine.Color&)
-extern "C" IL2CPP_METHOD_ATTR void SpriteRenderer_get_color_Injected_m204751054 (SpriteRenderer_t3235626157 * __this, Color_t2555686324 * ___ret0, const RuntimeMethod* method)
-{
-	typedef void (*SpriteRenderer_get_color_Injected_m204751054_ftn) (SpriteRenderer_t3235626157 *, Color_t2555686324 *);
-	static SpriteRenderer_get_color_Injected_m204751054_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (SpriteRenderer_get_color_Injected_m204751054_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SpriteRenderer::get_color_Injected(UnityEngine.Color&)");
-	_il2cpp_icall_func(__this, ___ret0);
-}
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
@@ -25741,6 +25415,22 @@ IL_000c:
 		return L_1;
 	}
 }
+// System.String UnityEngine.SystemInfo::get_deviceModel()
+extern "C" IL2CPP_METHOD_ATTR String_t* SystemInfo_get_deviceModel_m4078951941 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	String_t* V_0 = NULL;
+	{
+		String_t* L_0 = SystemInfo_GetDeviceModel_m957963979(NULL /*static, unused*/, /*hidden argument*/NULL);
+		V_0 = L_0;
+		goto IL_000c;
+	}
+
+IL_000c:
+	{
+		String_t* L_1 = V_0;
+		return L_1;
+	}
+}
 // UnityEngine.DeviceType UnityEngine.SystemInfo::get_deviceType()
 extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_get_deviceType_m3742504744 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -25754,22 +25444,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_get_deviceType_m3742504744 (Run
 IL_000c:
 	{
 		int32_t L_1 = V_0;
-		return L_1;
-	}
-}
-// System.String UnityEngine.SystemInfo::get_graphicsDeviceName()
-extern "C" IL2CPP_METHOD_ATTR String_t* SystemInfo_get_graphicsDeviceName_m3658997806 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	String_t* V_0 = NULL;
-	{
-		String_t* L_0 = SystemInfo_GetGraphicsDeviceName_m1994395820(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_0 = L_0;
-		goto IL_000c;
-	}
-
-IL_000c:
-	{
-		String_t* L_1 = V_0;
 		return L_1;
 	}
 }
@@ -26070,6 +25744,16 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_GetOperatingSystemFamily_m14404
 	int32_t retVal = _il2cpp_icall_func();
 	return retVal;
 }
+// System.String UnityEngine.SystemInfo::GetDeviceModel()
+extern "C" IL2CPP_METHOD_ATTR String_t* SystemInfo_GetDeviceModel_m957963979 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	typedef String_t* (*SystemInfo_GetDeviceModel_m957963979_ftn) ();
+	static SystemInfo_GetDeviceModel_m957963979_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (SystemInfo_GetDeviceModel_m957963979_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SystemInfo::GetDeviceModel()");
+	String_t* retVal = _il2cpp_icall_func();
+	return retVal;
+}
 // UnityEngine.DeviceType UnityEngine.SystemInfo::GetDeviceType()
 extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_GetDeviceType_m803381061 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
 {
@@ -26078,16 +25762,6 @@ extern "C" IL2CPP_METHOD_ATTR int32_t SystemInfo_GetDeviceType_m803381061 (Runti
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (SystemInfo_GetDeviceType_m803381061_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SystemInfo::GetDeviceType()");
 	int32_t retVal = _il2cpp_icall_func();
-	return retVal;
-}
-// System.String UnityEngine.SystemInfo::GetGraphicsDeviceName()
-extern "C" IL2CPP_METHOD_ATTR String_t* SystemInfo_GetGraphicsDeviceName_m1994395820 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	typedef String_t* (*SystemInfo_GetGraphicsDeviceName_m1994395820_ftn) ();
-	static SystemInfo_GetGraphicsDeviceName_m1994395820_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (SystemInfo_GetGraphicsDeviceName_m1994395820_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.SystemInfo::GetGraphicsDeviceName()");
-	String_t* retVal = _il2cpp_icall_func();
 	return retVal;
 }
 // UnityEngine.Rendering.GraphicsDeviceType UnityEngine.SystemInfo::GetGraphicsDeviceType()
@@ -29945,9 +29619,9 @@ extern "C" IL2CPP_METHOD_ATTR void UnitySynchronizationContext__ctor_m472294170 
 		SynchronizationContext__ctor_m2514243817(__this, /*hidden argument*/NULL);
 		Queue_1_t1200778106 * L_0 = (Queue_1_t1200778106 *)il2cpp_codegen_object_new(Queue_1_t1200778106_il2cpp_TypeInfo_var);
 		Queue_1__ctor_m1971992302(L_0, ((int32_t)20), /*hidden argument*/Queue_1__ctor_m1971992302_RuntimeMethod_var);
-		__this->set_m_AsyncWorkQueue_0(L_0);
+		__this->set_m_AsyncWorkQueue_6(L_0);
 		int32_t L_1 = ___mainThreadID0;
-		__this->set_m_MainThreadID_1(L_1);
+		__this->set_m_MainThreadID_7(L_1);
 		return;
 	}
 }
@@ -29957,9 +29631,9 @@ extern "C" IL2CPP_METHOD_ATTR void UnitySynchronizationContext__ctor_m4224782883
 	{
 		SynchronizationContext__ctor_m2514243817(__this, /*hidden argument*/NULL);
 		Queue_1_t1200778106 * L_0 = ___queue0;
-		__this->set_m_AsyncWorkQueue_0(L_0);
+		__this->set_m_AsyncWorkQueue_6(L_0);
 		int32_t L_1 = ___mainThreadID1;
-		__this->set_m_MainThreadID_1(L_1);
+		__this->set_m_MainThreadID_7(L_1);
 		return;
 	}
 }
@@ -29981,7 +29655,7 @@ extern "C" IL2CPP_METHOD_ATTR void UnitySynchronizationContext_Send_m1576085179 
 	int32_t __leave_target = -1;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		int32_t L_0 = __this->get_m_MainThreadID_1();
+		int32_t L_0 = __this->get_m_MainThreadID_7();
 		Thread_t2300836069 * L_1 = Thread_get_CurrentThread_m4142136012(NULL /*static, unused*/, /*hidden argument*/NULL);
 		int32_t L_2 = Thread_get_ManagedThreadId_m1068113671(L_1, /*hidden argument*/NULL);
 		if ((!(((uint32_t)L_0) == ((uint32_t)L_2))))
@@ -30007,7 +29681,7 @@ IL_002c:
 	try
 	{ // begin try (depth: 1)
 		{
-			Queue_1_t1200778106 * L_6 = __this->get_m_AsyncWorkQueue_0();
+			Queue_1_t1200778106 * L_6 = __this->get_m_AsyncWorkQueue_6();
 			V_1 = L_6;
 			RuntimeObject * L_7 = V_1;
 			Monitor_Enter_m2249409497(NULL /*static, unused*/, L_7, /*hidden argument*/NULL);
@@ -30016,7 +29690,7 @@ IL_002c:
 IL_003a:
 		try
 		{ // begin try (depth: 2)
-			Queue_1_t1200778106 * L_8 = __this->get_m_AsyncWorkQueue_0();
+			Queue_1_t1200778106 * L_8 = __this->get_m_AsyncWorkQueue_6();
 			SendOrPostCallback_t2750080073 * L_9 = ___callback0;
 			RuntimeObject * L_10 = ___state1;
 			ManualResetEvent_t451242010 * L_11 = V_0;
@@ -30110,7 +29784,7 @@ extern "C" IL2CPP_METHOD_ATTR void UnitySynchronizationContext_Post_m3076014349 
 	int32_t __leave_target = -1;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		Queue_1_t1200778106 * L_0 = __this->get_m_AsyncWorkQueue_0();
+		Queue_1_t1200778106 * L_0 = __this->get_m_AsyncWorkQueue_6();
 		V_0 = L_0;
 		RuntimeObject * L_1 = V_0;
 		Monitor_Enter_m2249409497(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
@@ -30119,7 +29793,7 @@ extern "C" IL2CPP_METHOD_ATTR void UnitySynchronizationContext_Post_m3076014349 
 IL_000e:
 	try
 	{ // begin try (depth: 1)
-		Queue_1_t1200778106 * L_2 = __this->get_m_AsyncWorkQueue_0();
+		Queue_1_t1200778106 * L_2 = __this->get_m_AsyncWorkQueue_6();
 		SendOrPostCallback_t2750080073 * L_3 = ___callback0;
 		RuntimeObject * L_4 = ___state1;
 		WorkRequest_t1354518612  L_5;
@@ -30162,8 +29836,8 @@ extern "C" IL2CPP_METHOD_ATTR SynchronizationContext_t2326897723 * UnitySynchron
 	}
 	SynchronizationContext_t2326897723 * V_0 = NULL;
 	{
-		Queue_1_t1200778106 * L_0 = __this->get_m_AsyncWorkQueue_0();
-		int32_t L_1 = __this->get_m_MainThreadID_1();
+		Queue_1_t1200778106 * L_0 = __this->get_m_AsyncWorkQueue_6();
+		int32_t L_1 = __this->get_m_MainThreadID_7();
 		UnitySynchronizationContext_t1887453786 * L_2 = (UnitySynchronizationContext_t1887453786 *)il2cpp_codegen_object_new(UnitySynchronizationContext_t1887453786_il2cpp_TypeInfo_var);
 		UnitySynchronizationContext__ctor_m4224782883(L_2, L_0, L_1, /*hidden argument*/NULL);
 		V_0 = L_2;
@@ -30197,7 +29871,7 @@ extern "C" IL2CPP_METHOD_ATTR void UnitySynchronizationContext_Exec_m3359802660 
 	int32_t __leave_target = -1;
 	NO_UNUSED_WARNING (__leave_target);
 	{
-		Queue_1_t1200778106 * L_0 = __this->get_m_AsyncWorkQueue_0();
+		Queue_1_t1200778106 * L_0 = __this->get_m_AsyncWorkQueue_6();
 		V_0 = L_0;
 		RuntimeObject * L_1 = V_0;
 		Monitor_Enter_m2249409497(NULL /*static, unused*/, L_1, /*hidden argument*/NULL);
@@ -30207,7 +29881,7 @@ IL_000e:
 	try
 	{ // begin try (depth: 1)
 		{
-			Queue_1_t1200778106 * L_2 = __this->get_m_AsyncWorkQueue_0();
+			Queue_1_t1200778106 * L_2 = __this->get_m_AsyncWorkQueue_6();
 			int32_t L_3 = Queue_1_get_Count_m3368911732(L_2, /*hidden argument*/Queue_1_get_Count_m3368911732_RuntimeMethod_var);
 			V_1 = L_3;
 			V_2 = 0;
@@ -30216,7 +29890,7 @@ IL_000e:
 
 IL_0022:
 		{
-			Queue_1_t1200778106 * L_4 = __this->get_m_AsyncWorkQueue_0();
+			Queue_1_t1200778106 * L_4 = __this->get_m_AsyncWorkQueue_6();
 			WorkRequest_t1354518612  L_5 = Queue_1_Dequeue_m979967976(L_4, /*hidden argument*/Queue_1_Dequeue_m979967976_RuntimeMethod_var);
 			V_3 = L_5;
 			WorkRequest_Invoke_m3488164927((WorkRequest_t1354518612 *)(&V_3), /*hidden argument*/NULL);
@@ -33445,25 +33119,6 @@ extern "C"  void Vector4__ctor_m2498754347_AdjustorThunk (RuntimeObject * __this
 	Vector4_t3319028937 * _thisAdjusted = reinterpret_cast<Vector4_t3319028937 *>(__this + 1);
 	Vector4__ctor_m2498754347(_thisAdjusted, ___x0, ___y1, ___z2, ___w3, method);
 }
-// System.Void UnityEngine.Vector4::.ctor(System.Single,System.Single,System.Single)
-extern "C" IL2CPP_METHOD_ATTR void Vector4__ctor_m432325927 (Vector4_t3319028937 * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method)
-{
-	{
-		float L_0 = ___x0;
-		__this->set_x_1(L_0);
-		float L_1 = ___y1;
-		__this->set_y_2(L_1);
-		float L_2 = ___z2;
-		__this->set_z_3(L_2);
-		__this->set_w_4((0.0f));
-		return;
-	}
-}
-extern "C"  void Vector4__ctor_m432325927_AdjustorThunk (RuntimeObject * __this, float ___x0, float ___y1, float ___z2, const RuntimeMethod* method)
-{
-	Vector4_t3319028937 * _thisAdjusted = reinterpret_cast<Vector4_t3319028937 *>(__this + 1);
-	Vector4__ctor_m432325927(_thisAdjusted, ___x0, ___y1, ___z2, method);
-}
 // System.Void UnityEngine.Vector4::.ctor(System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Vector4__ctor_m3795604412 (Vector4_t3319028937 * __this, float ___x0, float ___y1, const RuntimeMethod* method)
 {
@@ -34523,14 +34178,6 @@ extern "C" IL2CPP_METHOD_ATTR void GenericStack__ctor_m933681517 (GenericStack_t
 		return;
 	}
 }
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

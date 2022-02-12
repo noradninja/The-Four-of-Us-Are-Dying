@@ -11,11 +11,18 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	public GameObject inventoryCam;
 	public static bool inventoryOn = false;
 	public bool delayButton = false;
+	private  string VITA = "joystick button ";
+    private  int SELECT = 6;
+
 	// Use this for initialization
 	void Start () {
 		inventoryOn = false;
 		inventoryMat.SetFloat("_Alpha", 0f);
 		inventoryCam.SetActive(false);
+		if (Application.isEditor){
+			//because the DS3 registers the buttons differently in Windows 
+			SELECT = 9;
+        }
 	}
 	
 	// Update is called once per frame
@@ -38,6 +45,22 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 				}
 			}
 		}
+		//this is for PSTV	
+		if (Input.GetKeyDown(VITA + SELECT) && !delayButton && !PlayerController.isMap){
+			if (!inventoryOn){
+				StartCoroutine(crossFade(0, 1, 0.5f));
+				inventoryOn = true;
+				delayButton = true;
+				StartCoroutine(buttonDelayTimer(0.5f));
+			}
+			else if (inventoryOn && !delayButton && !PlayerController.isMap){
+				StartCoroutine(crossFade(1, 0, 0.5f));
+				inventoryOn = false;
+				delayButton = true;
+				StartCoroutine(buttonDelayTimer(0.5f));
+			}
+		}
+		
 
 		//get touch input, and enable/disable the inventory screen
 		foreach (Touch touch in Input.touches) {

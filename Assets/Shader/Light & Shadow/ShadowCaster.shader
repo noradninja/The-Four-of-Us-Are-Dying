@@ -35,7 +35,7 @@ Shader "Vita/Shadow Only"
         #pragma multi_compile_shadowcaster
         #include "UnityCG.cginc"
 
-        sampler2D _MainTex;
+        sampler2D_half _MainTex;
 		//variables for wind movement- remove if you take out the vertex deformation below
 		half4 _wind_dir;
 		half _wind_size;

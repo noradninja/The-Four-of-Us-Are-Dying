@@ -188,7 +188,7 @@ Material:
     - _Cutoff: 0.5
     - _DetailFade: 1
     - _DetailMask: 1
-    - _DetailNormalMapScale: 1
+    - _DetailNormalMapScale: 0
     - _DiffuseMultiply: 16
     - _DistortCircularCenterU: 0.5
     - _DistortCircularCenterV: 0.5
@@ -418,7 +418,7 @@ Material:
     - _TranslucentScale: 0.5
     - _TranslucentThickness: 1
     - _TranslucentToggle: 0
-    - _UVSec: 0
+    - _UVSec: 1
     - _VertexColorMode: 0
     - _WorkflowMode: 1
     - _WrapAmount: 0

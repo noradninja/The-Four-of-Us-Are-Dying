@@ -27,12 +27,12 @@
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
 
-		sampler2D _MainTex;
-		sampler2D _BumpMap;
-		sampler2D _MetallicGlossMap;
+		sampler2D_half _MainTex;
+		sampler2D_half _BumpMap;
+		sampler2D_half _MetallicGlossMap;
 
 		struct Input {
-			float2 uv_MainTex;
+			half2 uv_MainTex;
 		};
 
 		half _Glossiness;
@@ -44,16 +44,16 @@
 		half _Clip;
 
 		#include "UnityPBSLighting.cginc"
-		inline fixed4 LightingSSSTranslucent(SurfaceOutputStandard s, float3 viewDir, UnityGI gi)
+		inline fixed4 LightingSSSTranslucent(SurfaceOutputStandard s, half3 viewDir, UnityGI gi)
 		{
 			// original color 
 			fixed4 c = LightingStandard(s, viewDir, gi);
 
-			float3 lightDir = gi.light.dir;
-			float3 normal = s.Normal;
+			half3 lightDir = gi.light.dir;
+			half3 normal = s.Normal;
 
-			float3 H = lightDir + _Distortion * normal;
-			float VdotH = pow(saturate(dot(viewDir, -H)), _Power) * _Scale;
+			half3 H = lightDir + _Distortion * normal;
+			half VdotH = pow(saturate(dot(viewDir, -H)), _Power) * _Scale;
  
 			c.rgb += gi.light.color * VdotH;
 			return c;

@@ -14,10 +14,14 @@ public class MapController : MonoBehaviour {
     private Vector2 midPoint = new Vector2(0,0);
 	private Vector2 ScreenSize;
     private Vector3 originalPos;
+	
+    private  string VITA = "joystick button ";
+	private  float RIGHT = 9;
+	private  float LEFT = 11;
 
 	// Use this for initialization
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
@@ -41,7 +45,7 @@ public class MapController : MonoBehaviour {
 		// }  
 
 		//map zoom with arrow keys for testing
-		if (Input.GetKey(KeyCode.LeftArrow)){
+		if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(VITA + LEFT)){
 			if(mapCamera.orthographicSize < maxZoom){
 				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
 				//keep apparent scale and position the same
@@ -50,7 +54,7 @@ public class MapController : MonoBehaviour {
 				
 			}
 		}
-		if (Input.GetKey(KeyCode.RightArrow)){
+		if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(VITA + RIGHT)){
 			if(mapCamera.orthographicSize > minZoom){
 			mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
 			//keep apparent scale and position the same

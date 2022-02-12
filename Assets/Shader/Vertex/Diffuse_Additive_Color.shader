@@ -18,7 +18,7 @@ struct Input {
   float2 uv_MainTex;
   float2 uv2;
 };
-sampler2D _MainTex;
+sampler2D_half _MainTex;
 // half4 unity_LightmapST;
 fixed4 _Color;
 void surf (Input IN, inout SurfaceOutput o)

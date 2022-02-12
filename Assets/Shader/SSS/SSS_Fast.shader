@@ -20,8 +20,8 @@
 		// Use shader model 3.0 target, to get nicer looking lighting
 		#pragma target 3.0
 
-		sampler2D _MainTex;
-		sampler2D _BumpMap;
+		sampler2D_half _MainTex;
+		sampler2D_half _BumpMap;
 
 		struct Input {
 			float2 uv_MainTex;

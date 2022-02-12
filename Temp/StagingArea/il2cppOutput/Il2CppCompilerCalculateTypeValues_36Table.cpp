@@ -20,8 +20,18 @@
 #include "il2cpp-object-internals.h"
 
 
+// EnvMapAnimator
+struct EnvMapAnimator_t1140999784;
+// Inventory_Screen_Manager
+struct Inventory_Screen_Manager_t2612322343;
+// LoadScreen
+struct LoadScreen_t3376497162;
+// PlayerController
+struct PlayerController_t2064355688;
 // System.Char[]
 struct CharU5BU5D_t3528271667;
+// System.Collections.Generic.Dictionary`2<System.String,System.String>
+struct Dictionary_2_t1632706988;
 // System.Collections.Generic.List`1<System.Int32>
 struct List_1_t128053199;
 // System.Collections.Generic.List`1<System.Single>
@@ -34,6 +44,10 @@ struct ObjectU5BU5D_t2843939325;
 struct String_t;
 // System.Void
 struct Void_t1185182177;
+// TMPro.Examples.Benchmark01
+struct Benchmark01_t1571072624;
+// TMPro.Examples.Benchmark01_UGUI
+struct Benchmark01_UGUI_t3264177817;
 // TMPro.Examples.ShaderPropAnimator
 struct ShaderPropAnimator_t3617420994;
 // TMPro.Examples.SkewTextExample
@@ -62,6 +76,10 @@ struct U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008;
 struct U3CAnimateVertexColorsU3Ec__AnonStorey1_t446847514;
 // TMPro.Examples.WarpTextExample
 struct WarpTextExample_t3821118074;
+// TMPro.TMP_FontAsset
+struct TMP_FontAsset_t364381626;
+// TMPro.TMP_InputField
+struct TMP_InputField_t1099764886;
 // TMPro.TMP_MeshInfo[]
 struct TMP_MeshInfoU5BU5D_t3365986247;
 // TMPro.TMP_Text
@@ -86,16 +104,26 @@ struct TextContainer_t97923372;
 struct TextMeshPro_t2393593166;
 // TMPro.TextMeshProUGUI
 struct TextMeshProUGUI_t529313277;
+// Title_Animator
+struct Title_Animator_t1706872800;
 // UnityEngine.AnimationCurve
 struct AnimationCurve_t3046754366;
+// UnityEngine.Animator
+struct Animator_t434523843;
+// UnityEngine.AsyncOperation
+struct AsyncOperation_t1445031843;
 // UnityEngine.Camera
 struct Camera_t4157153871;
 // UnityEngine.Canvas
 struct Canvas_t3310196443;
+// UnityEngine.CanvasGroup
+struct CanvasGroup_t4083511760;
+// UnityEngine.CharacterController
+struct CharacterController_t1138636865;
+// UnityEngine.Collider
+struct Collider_t1773347010;
 // UnityEngine.Color32[]
 struct Color32U5BU5D_t3850468773;
-// UnityEngine.ComputeBuffer
-struct ComputeBuffer_t1033194329;
 // UnityEngine.Events.InvokableCallList
 struct InvokableCallList_t2498835369;
 // UnityEngine.Events.PersistentCallGroup
@@ -104,30 +132,34 @@ struct PersistentCallGroup_t3050769227;
 struct Font_t1956802104;
 // UnityEngine.GameObject
 struct GameObject_t1113636619;
+// UnityEngine.Light
+struct Light_t3756812086;
 // UnityEngine.Material
 struct Material_t340375123;
-// UnityEngine.Matrix4x4[]
-struct Matrix4x4U5BU5D_t2302988098;
 // UnityEngine.RectTransform
 struct RectTransform_t3704657025;
-// UnityEngine.RenderTexture
-struct RenderTexture_t2108887433;
-// UnityEngine.RenderTexture[]
-struct RenderTextureU5BU5D_t4111643188;
 // UnityEngine.Renderer
 struct Renderer_t2627027031;
 // UnityEngine.Shader
 struct Shader_t4151988712;
+// UnityEngine.SkinnedMeshRenderer
+struct SkinnedMeshRenderer_t245602842;
 // UnityEngine.TextMesh
 struct TextMesh_t1536577757;
 // UnityEngine.Texture
 struct Texture_t3661962703;
 // UnityEngine.Texture2D
 struct Texture2D_t3840446185;
-// UnityEngine.Texture3D
-struct Texture3D_t1884131049;
 // UnityEngine.Transform
 struct Transform_t3600365921;
+// UnityEngine.UI.Image
+struct Image_t2670269651;
+// UnityEngine.UI.RawImage
+struct RawImage_t3182918964;
+// UnityEngine.UI.Scrollbar
+struct Scrollbar_t1494447233;
+// UnityEngine.UI.Text
+struct Text_t1901882714;
 // UnityEngine.Vector3[]
 struct Vector3U5BU5D_t1718750761;
 // UnityEngine.Vector3[][]
@@ -170,6 +202,1113 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RUNTIMEOBJECT_H
+#ifndef INVENTORYMANAGER_T1225487224_H
+#define INVENTORYMANAGER_T1225487224_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// InventoryManager
+struct  InventoryManager_t1225487224  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+struct InventoryManager_t1225487224_StaticFields
+{
+public:
+	// System.Single InventoryManager::playerHealth
+	float ___playerHealth_0;
+	// System.Int32 InventoryManager::batteryCount
+	int32_t ___batteryCount_1;
+	// System.Int32 InventoryManager::medCount
+	int32_t ___medCount_2;
+	// System.Int32 InventoryManager::keyCount
+	int32_t ___keyCount_3;
+	// System.Int32 InventoryManager::stimCount
+	int32_t ___stimCount_4;
+
+public:
+	inline static int32_t get_offset_of_playerHealth_0() { return static_cast<int32_t>(offsetof(InventoryManager_t1225487224_StaticFields, ___playerHealth_0)); }
+	inline float get_playerHealth_0() const { return ___playerHealth_0; }
+	inline float* get_address_of_playerHealth_0() { return &___playerHealth_0; }
+	inline void set_playerHealth_0(float value)
+	{
+		___playerHealth_0 = value;
+	}
+
+	inline static int32_t get_offset_of_batteryCount_1() { return static_cast<int32_t>(offsetof(InventoryManager_t1225487224_StaticFields, ___batteryCount_1)); }
+	inline int32_t get_batteryCount_1() const { return ___batteryCount_1; }
+	inline int32_t* get_address_of_batteryCount_1() { return &___batteryCount_1; }
+	inline void set_batteryCount_1(int32_t value)
+	{
+		___batteryCount_1 = value;
+	}
+
+	inline static int32_t get_offset_of_medCount_2() { return static_cast<int32_t>(offsetof(InventoryManager_t1225487224_StaticFields, ___medCount_2)); }
+	inline int32_t get_medCount_2() const { return ___medCount_2; }
+	inline int32_t* get_address_of_medCount_2() { return &___medCount_2; }
+	inline void set_medCount_2(int32_t value)
+	{
+		___medCount_2 = value;
+	}
+
+	inline static int32_t get_offset_of_keyCount_3() { return static_cast<int32_t>(offsetof(InventoryManager_t1225487224_StaticFields, ___keyCount_3)); }
+	inline int32_t get_keyCount_3() const { return ___keyCount_3; }
+	inline int32_t* get_address_of_keyCount_3() { return &___keyCount_3; }
+	inline void set_keyCount_3(int32_t value)
+	{
+		___keyCount_3 = value;
+	}
+
+	inline static int32_t get_offset_of_stimCount_4() { return static_cast<int32_t>(offsetof(InventoryManager_t1225487224_StaticFields, ___stimCount_4)); }
+	inline int32_t get_stimCount_4() const { return ___stimCount_4; }
+	inline int32_t* get_address_of_stimCount_4() { return &___stimCount_4; }
+	inline void set_stimCount_4(int32_t value)
+	{
+		___stimCount_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // INVENTORYMANAGER_T1225487224_H
+#ifndef U3CBUTTONDELAYTIMERU3EC__ITERATOR1_T1661179953_H
+#define U3CBUTTONDELAYTIMERU3EC__ITERATOR1_T1661179953_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Inventory_Screen_Manager/<buttonDelayTimer>c__Iterator1
+struct  U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953  : public RuntimeObject
+{
+public:
+	// System.Single Inventory_Screen_Manager/<buttonDelayTimer>c__Iterator1::delay
+	float ___delay_0;
+	// Inventory_Screen_Manager Inventory_Screen_Manager/<buttonDelayTimer>c__Iterator1::$this
+	Inventory_Screen_Manager_t2612322343 * ___U24this_1;
+	// System.Object Inventory_Screen_Manager/<buttonDelayTimer>c__Iterator1::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean Inventory_Screen_Manager/<buttonDelayTimer>c__Iterator1::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 Inventory_Screen_Manager/<buttonDelayTimer>c__Iterator1::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_delay_0() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953, ___delay_0)); }
+	inline float get_delay_0() const { return ___delay_0; }
+	inline float* get_address_of_delay_0() { return &___delay_0; }
+	inline void set_delay_0(float value)
+	{
+		___delay_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953, ___U24this_1)); }
+	inline Inventory_Screen_Manager_t2612322343 * get_U24this_1() const { return ___U24this_1; }
+	inline Inventory_Screen_Manager_t2612322343 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(Inventory_Screen_Manager_t2612322343 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CBUTTONDELAYTIMERU3EC__ITERATOR1_T1661179953_H
+#ifndef U3CFADELOADINGSCREENU3EC__ITERATOR1_T1230497635_H
+#define U3CFADELOADINGSCREENU3EC__ITERATOR1_T1230497635_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// LoadScreen/<FadeLoadingScreen>c__Iterator1
+struct  U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635  : public RuntimeObject
+{
+public:
+	// System.Single LoadScreen/<FadeLoadingScreen>c__Iterator1::<startValue>__0
+	float ___U3CstartValueU3E__0_0;
+	// System.Single LoadScreen/<FadeLoadingScreen>c__Iterator1::<time>__0
+	float ___U3CtimeU3E__0_1;
+	// System.Single LoadScreen/<FadeLoadingScreen>c__Iterator1::duration
+	float ___duration_2;
+	// System.Single LoadScreen/<FadeLoadingScreen>c__Iterator1::targetValue
+	float ___targetValue_3;
+	// LoadScreen LoadScreen/<FadeLoadingScreen>c__Iterator1::$this
+	LoadScreen_t3376497162 * ___U24this_4;
+	// System.Object LoadScreen/<FadeLoadingScreen>c__Iterator1::$current
+	RuntimeObject * ___U24current_5;
+	// System.Boolean LoadScreen/<FadeLoadingScreen>c__Iterator1::$disposing
+	bool ___U24disposing_6;
+	// System.Int32 LoadScreen/<FadeLoadingScreen>c__Iterator1::$PC
+	int32_t ___U24PC_7;
+
+public:
+	inline static int32_t get_offset_of_U3CstartValueU3E__0_0() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___U3CstartValueU3E__0_0)); }
+	inline float get_U3CstartValueU3E__0_0() const { return ___U3CstartValueU3E__0_0; }
+	inline float* get_address_of_U3CstartValueU3E__0_0() { return &___U3CstartValueU3E__0_0; }
+	inline void set_U3CstartValueU3E__0_0(float value)
+	{
+		___U3CstartValueU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CtimeU3E__0_1() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___U3CtimeU3E__0_1)); }
+	inline float get_U3CtimeU3E__0_1() const { return ___U3CtimeU3E__0_1; }
+	inline float* get_address_of_U3CtimeU3E__0_1() { return &___U3CtimeU3E__0_1; }
+	inline void set_U3CtimeU3E__0_1(float value)
+	{
+		___U3CtimeU3E__0_1 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_2() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___duration_2)); }
+	inline float get_duration_2() const { return ___duration_2; }
+	inline float* get_address_of_duration_2() { return &___duration_2; }
+	inline void set_duration_2(float value)
+	{
+		___duration_2 = value;
+	}
+
+	inline static int32_t get_offset_of_targetValue_3() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___targetValue_3)); }
+	inline float get_targetValue_3() const { return ___targetValue_3; }
+	inline float* get_address_of_targetValue_3() { return &___targetValue_3; }
+	inline void set_targetValue_3(float value)
+	{
+		___targetValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_4() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___U24this_4)); }
+	inline LoadScreen_t3376497162 * get_U24this_4() const { return ___U24this_4; }
+	inline LoadScreen_t3376497162 ** get_address_of_U24this_4() { return &___U24this_4; }
+	inline void set_U24this_4(LoadScreen_t3376497162 * value)
+	{
+		___U24this_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_5() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___U24current_5)); }
+	inline RuntimeObject * get_U24current_5() const { return ___U24current_5; }
+	inline RuntimeObject ** get_address_of_U24current_5() { return &___U24current_5; }
+	inline void set_U24current_5(RuntimeObject * value)
+	{
+		___U24current_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_6() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___U24disposing_6)); }
+	inline bool get_U24disposing_6() const { return ___U24disposing_6; }
+	inline bool* get_address_of_U24disposing_6() { return &___U24disposing_6; }
+	inline void set_U24disposing_6(bool value)
+	{
+		___U24disposing_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_7() { return static_cast<int32_t>(offsetof(U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635, ___U24PC_7)); }
+	inline int32_t get_U24PC_7() const { return ___U24PC_7; }
+	inline int32_t* get_address_of_U24PC_7() { return &___U24PC_7; }
+	inline void set_U24PC_7(int32_t value)
+	{
+		___U24PC_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CFADELOADINGSCREENU3EC__ITERATOR1_T1230497635_H
+#ifndef U3CSTARTLOADU3EC__ITERATOR0_T2551077925_H
+#define U3CSTARTLOADU3EC__ITERATOR0_T2551077925_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// LoadScreen/<StartLoad>c__Iterator0
+struct  U3CStartLoadU3Ec__Iterator0_t2551077925  : public RuntimeObject
+{
+public:
+	// LoadScreen LoadScreen/<StartLoad>c__Iterator0::$this
+	LoadScreen_t3376497162 * ___U24this_0;
+	// System.Object LoadScreen/<StartLoad>c__Iterator0::$current
+	RuntimeObject * ___U24current_1;
+	// System.Boolean LoadScreen/<StartLoad>c__Iterator0::$disposing
+	bool ___U24disposing_2;
+	// System.Int32 LoadScreen/<StartLoad>c__Iterator0::$PC
+	int32_t ___U24PC_3;
+
+public:
+	inline static int32_t get_offset_of_U24this_0() { return static_cast<int32_t>(offsetof(U3CStartLoadU3Ec__Iterator0_t2551077925, ___U24this_0)); }
+	inline LoadScreen_t3376497162 * get_U24this_0() const { return ___U24this_0; }
+	inline LoadScreen_t3376497162 ** get_address_of_U24this_0() { return &___U24this_0; }
+	inline void set_U24this_0(LoadScreen_t3376497162 * value)
+	{
+		___U24this_0 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_0), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_1() { return static_cast<int32_t>(offsetof(U3CStartLoadU3Ec__Iterator0_t2551077925, ___U24current_1)); }
+	inline RuntimeObject * get_U24current_1() const { return ___U24current_1; }
+	inline RuntimeObject ** get_address_of_U24current_1() { return &___U24current_1; }
+	inline void set_U24current_1(RuntimeObject * value)
+	{
+		___U24current_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_2() { return static_cast<int32_t>(offsetof(U3CStartLoadU3Ec__Iterator0_t2551077925, ___U24disposing_2)); }
+	inline bool get_U24disposing_2() const { return ___U24disposing_2; }
+	inline bool* get_address_of_U24disposing_2() { return &___U24disposing_2; }
+	inline void set_U24disposing_2(bool value)
+	{
+		___U24disposing_2 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_3() { return static_cast<int32_t>(offsetof(U3CStartLoadU3Ec__Iterator0_t2551077925, ___U24PC_3)); }
+	inline int32_t get_U24PC_3() const { return ___U24PC_3; }
+	inline int32_t* get_address_of_U24PC_3() { return &___U24PC_3; }
+	inline void set_U24PC_3(int32_t value)
+	{
+		___U24PC_3 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CSTARTLOADU3EC__ITERATOR0_T2551077925_H
+#ifndef U3CBUTTONDELAYTIMERU3EC__ITERATOR8_T648961344_H
+#define U3CBUTTONDELAYTIMERU3EC__ITERATOR8_T648961344_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<buttonDelayTimer>c__Iterator8
+struct  U3CbuttonDelayTimerU3Ec__Iterator8_t648961344  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<buttonDelayTimer>c__Iterator8::delay
+	float ___delay_0;
+	// PlayerController PlayerController/<buttonDelayTimer>c__Iterator8::$this
+	PlayerController_t2064355688 * ___U24this_1;
+	// System.Object PlayerController/<buttonDelayTimer>c__Iterator8::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean PlayerController/<buttonDelayTimer>c__Iterator8::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 PlayerController/<buttonDelayTimer>c__Iterator8::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_delay_0() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator8_t648961344, ___delay_0)); }
+	inline float get_delay_0() const { return ___delay_0; }
+	inline float* get_address_of_delay_0() { return &___delay_0; }
+	inline void set_delay_0(float value)
+	{
+		___delay_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator8_t648961344, ___U24this_1)); }
+	inline PlayerController_t2064355688 * get_U24this_1() const { return ___U24this_1; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(PlayerController_t2064355688 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator8_t648961344, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator8_t648961344, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CbuttonDelayTimerU3Ec__Iterator8_t648961344, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CBUTTONDELAYTIMERU3EC__ITERATOR8_T648961344_H
+#ifndef U3CCOUNTDOWNSTIMULANTU3EC__ITERATOR6_T151569653_H
+#define U3CCOUNTDOWNSTIMULANTU3EC__ITERATOR6_T151569653_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<countdownStimulant>c__Iterator6
+struct  U3CcountdownStimulantU3Ec__Iterator6_t151569653  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<countdownStimulant>c__Iterator6::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<countdownStimulant>c__Iterator6::duration
+	float ___duration_1;
+	// System.Single PlayerController/<countdownStimulant>c__Iterator6::startVal
+	float ___startVal_2;
+	// System.Single PlayerController/<countdownStimulant>c__Iterator6::endVal
+	float ___endVal_3;
+	// PlayerController PlayerController/<countdownStimulant>c__Iterator6::$this
+	PlayerController_t2064355688 * ___U24this_4;
+	// System.Object PlayerController/<countdownStimulant>c__Iterator6::$current
+	RuntimeObject * ___U24current_5;
+	// System.Boolean PlayerController/<countdownStimulant>c__Iterator6::$disposing
+	bool ___U24disposing_6;
+	// System.Int32 PlayerController/<countdownStimulant>c__Iterator6::$PC
+	int32_t ___U24PC_7;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startVal_2() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___startVal_2)); }
+	inline float get_startVal_2() const { return ___startVal_2; }
+	inline float* get_address_of_startVal_2() { return &___startVal_2; }
+	inline void set_startVal_2(float value)
+	{
+		___startVal_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endVal_3() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___endVal_3)); }
+	inline float get_endVal_3() const { return ___endVal_3; }
+	inline float* get_address_of_endVal_3() { return &___endVal_3; }
+	inline void set_endVal_3(float value)
+	{
+		___endVal_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_4() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___U24this_4)); }
+	inline PlayerController_t2064355688 * get_U24this_4() const { return ___U24this_4; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_4() { return &___U24this_4; }
+	inline void set_U24this_4(PlayerController_t2064355688 * value)
+	{
+		___U24this_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_5() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___U24current_5)); }
+	inline RuntimeObject * get_U24current_5() const { return ___U24current_5; }
+	inline RuntimeObject ** get_address_of_U24current_5() { return &___U24current_5; }
+	inline void set_U24current_5(RuntimeObject * value)
+	{
+		___U24current_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_6() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___U24disposing_6)); }
+	inline bool get_U24disposing_6() const { return ___U24disposing_6; }
+	inline bool* get_address_of_U24disposing_6() { return &___U24disposing_6; }
+	inline void set_U24disposing_6(bool value)
+	{
+		___U24disposing_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_7() { return static_cast<int32_t>(offsetof(U3CcountdownStimulantU3Ec__Iterator6_t151569653, ___U24PC_7)); }
+	inline int32_t get_U24PC_7() const { return ___U24PC_7; }
+	inline int32_t* get_address_of_U24PC_7() { return &___U24PC_7; }
+	inline void set_U24PC_7(int32_t value)
+	{
+		___U24PC_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CCOUNTDOWNSTIMULANTU3EC__ITERATOR6_T151569653_H
+#ifndef U3CFADEU3EC__ITERATOR5_T2959184718_H
+#define U3CFADEU3EC__ITERATOR5_T2959184718_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<fade>c__Iterator5
+struct  U3CfadeU3Ec__Iterator5_t2959184718  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<fade>c__Iterator5::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<fade>c__Iterator5::duration
+	float ___duration_1;
+	// System.Single PlayerController/<fade>c__Iterator5::startValue
+	float ___startValue_2;
+	// System.Single PlayerController/<fade>c__Iterator5::endValue
+	float ___endValue_3;
+	// UnityEngine.UI.RawImage PlayerController/<fade>c__Iterator5::fadeObject
+	RawImage_t3182918964 * ___fadeObject_4;
+	// PlayerController PlayerController/<fade>c__Iterator5::$this
+	PlayerController_t2064355688 * ___U24this_5;
+	// System.Object PlayerController/<fade>c__Iterator5::$current
+	RuntimeObject * ___U24current_6;
+	// System.Boolean PlayerController/<fade>c__Iterator5::$disposing
+	bool ___U24disposing_7;
+	// System.Int32 PlayerController/<fade>c__Iterator5::$PC
+	int32_t ___U24PC_8;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___startValue_2)); }
+	inline float get_startValue_2() const { return ___startValue_2; }
+	inline float* get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(float value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___endValue_3)); }
+	inline float get_endValue_3() const { return ___endValue_3; }
+	inline float* get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(float value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_fadeObject_4() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___fadeObject_4)); }
+	inline RawImage_t3182918964 * get_fadeObject_4() const { return ___fadeObject_4; }
+	inline RawImage_t3182918964 ** get_address_of_fadeObject_4() { return &___fadeObject_4; }
+	inline void set_fadeObject_4(RawImage_t3182918964 * value)
+	{
+		___fadeObject_4 = value;
+		Il2CppCodeGenWriteBarrier((&___fadeObject_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24this_5() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___U24this_5)); }
+	inline PlayerController_t2064355688 * get_U24this_5() const { return ___U24this_5; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_5() { return &___U24this_5; }
+	inline void set_U24this_5(PlayerController_t2064355688 * value)
+	{
+		___U24this_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_6() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___U24current_6)); }
+	inline RuntimeObject * get_U24current_6() const { return ___U24current_6; }
+	inline RuntimeObject ** get_address_of_U24current_6() { return &___U24current_6; }
+	inline void set_U24current_6(RuntimeObject * value)
+	{
+		___U24current_6 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_6), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_7() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___U24disposing_7)); }
+	inline bool get_U24disposing_7() const { return ___U24disposing_7; }
+	inline bool* get_address_of_U24disposing_7() { return &___U24disposing_7; }
+	inline void set_U24disposing_7(bool value)
+	{
+		___U24disposing_7 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_8() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator5_t2959184718, ___U24PC_8)); }
+	inline int32_t get_U24PC_8() const { return ___U24PC_8; }
+	inline int32_t* get_address_of_U24PC_8() { return &___U24PC_8; }
+	inline void set_U24PC_8(int32_t value)
+	{
+		___U24PC_8 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CFADEU3EC__ITERATOR5_T2959184718_H
+#ifndef U3CHEALLERPU3EC__ITERATOR0_T3646218115_H
+#define U3CHEALLERPU3EC__ITERATOR0_T3646218115_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<healLerp>c__Iterator0
+struct  U3ChealLerpU3Ec__Iterator0_t3646218115  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<healLerp>c__Iterator0::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<healLerp>c__Iterator0::duration
+	float ___duration_1;
+	// System.Single PlayerController/<healLerp>c__Iterator0::startValue
+	float ___startValue_2;
+	// System.Single PlayerController/<healLerp>c__Iterator0::endValue
+	float ___endValue_3;
+	// System.Single PlayerController/<healLerp>c__Iterator0::<swap>__1
+	float ___U3CswapU3E__1_4;
+	// PlayerController PlayerController/<healLerp>c__Iterator0::$this
+	PlayerController_t2064355688 * ___U24this_5;
+	// System.Object PlayerController/<healLerp>c__Iterator0::$current
+	RuntimeObject * ___U24current_6;
+	// System.Boolean PlayerController/<healLerp>c__Iterator0::$disposing
+	bool ___U24disposing_7;
+	// System.Int32 PlayerController/<healLerp>c__Iterator0::$PC
+	int32_t ___U24PC_8;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___startValue_2)); }
+	inline float get_startValue_2() const { return ___startValue_2; }
+	inline float* get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(float value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___endValue_3)); }
+	inline float get_endValue_3() const { return ___endValue_3; }
+	inline float* get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(float value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CswapU3E__1_4() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___U3CswapU3E__1_4)); }
+	inline float get_U3CswapU3E__1_4() const { return ___U3CswapU3E__1_4; }
+	inline float* get_address_of_U3CswapU3E__1_4() { return &___U3CswapU3E__1_4; }
+	inline void set_U3CswapU3E__1_4(float value)
+	{
+		___U3CswapU3E__1_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_5() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___U24this_5)); }
+	inline PlayerController_t2064355688 * get_U24this_5() const { return ___U24this_5; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_5() { return &___U24this_5; }
+	inline void set_U24this_5(PlayerController_t2064355688 * value)
+	{
+		___U24this_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_6() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___U24current_6)); }
+	inline RuntimeObject * get_U24current_6() const { return ___U24current_6; }
+	inline RuntimeObject ** get_address_of_U24current_6() { return &___U24current_6; }
+	inline void set_U24current_6(RuntimeObject * value)
+	{
+		___U24current_6 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_6), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_7() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___U24disposing_7)); }
+	inline bool get_U24disposing_7() const { return ___U24disposing_7; }
+	inline bool* get_address_of_U24disposing_7() { return &___U24disposing_7; }
+	inline void set_U24disposing_7(bool value)
+	{
+		___U24disposing_7 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_8() { return static_cast<int32_t>(offsetof(U3ChealLerpU3Ec__Iterator0_t3646218115, ___U24PC_8)); }
+	inline int32_t get_U24PC_8() const { return ___U24PC_8; }
+	inline int32_t* get_address_of_U24PC_8() { return &___U24PC_8; }
+	inline void set_U24PC_8(int32_t value)
+	{
+		___U24PC_8 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CHEALLERPU3EC__ITERATOR0_T3646218115_H
+#ifndef U3CLERPFOCALLENGTHU3EC__ITERATORA_T1187709451_H
+#define U3CLERPFOCALLENGTHU3EC__ITERATORA_T1187709451_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<lerpFocalLength>c__IteratorA
+struct  U3ClerpFocalLengthU3Ec__IteratorA_t1187709451  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::duration
+	float ___duration_1;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::<currentBloom>__1
+	float ___U3CcurrentBloomU3E__1_2;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::<currentThreshold>__1
+	float ___U3CcurrentThresholdU3E__1_3;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::startValue
+	float ___startValue_4;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::endValue
+	float ___endValue_5;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::<currentValue>__1
+	float ___U3CcurrentValueU3E__1_6;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::endBloom
+	float ___endBloom_7;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::<bloomIntensity>__1
+	float ___U3CbloomIntensityU3E__1_8;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::endThreshold
+	float ___endThreshold_9;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorA::<bloomThreshold>__1
+	float ___U3CbloomThresholdU3E__1_10;
+	// PlayerController PlayerController/<lerpFocalLength>c__IteratorA::$this
+	PlayerController_t2064355688 * ___U24this_11;
+	// System.Object PlayerController/<lerpFocalLength>c__IteratorA::$current
+	RuntimeObject * ___U24current_12;
+	// System.Boolean PlayerController/<lerpFocalLength>c__IteratorA::$disposing
+	bool ___U24disposing_13;
+	// System.Int32 PlayerController/<lerpFocalLength>c__IteratorA::$PC
+	int32_t ___U24PC_14;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CcurrentBloomU3E__1_2() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U3CcurrentBloomU3E__1_2)); }
+	inline float get_U3CcurrentBloomU3E__1_2() const { return ___U3CcurrentBloomU3E__1_2; }
+	inline float* get_address_of_U3CcurrentBloomU3E__1_2() { return &___U3CcurrentBloomU3E__1_2; }
+	inline void set_U3CcurrentBloomU3E__1_2(float value)
+	{
+		___U3CcurrentBloomU3E__1_2 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CcurrentThresholdU3E__1_3() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U3CcurrentThresholdU3E__1_3)); }
+	inline float get_U3CcurrentThresholdU3E__1_3() const { return ___U3CcurrentThresholdU3E__1_3; }
+	inline float* get_address_of_U3CcurrentThresholdU3E__1_3() { return &___U3CcurrentThresholdU3E__1_3; }
+	inline void set_U3CcurrentThresholdU3E__1_3(float value)
+	{
+		___U3CcurrentThresholdU3E__1_3 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_4() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___startValue_4)); }
+	inline float get_startValue_4() const { return ___startValue_4; }
+	inline float* get_address_of_startValue_4() { return &___startValue_4; }
+	inline void set_startValue_4(float value)
+	{
+		___startValue_4 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_5() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___endValue_5)); }
+	inline float get_endValue_5() const { return ___endValue_5; }
+	inline float* get_address_of_endValue_5() { return &___endValue_5; }
+	inline void set_endValue_5(float value)
+	{
+		___endValue_5 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CcurrentValueU3E__1_6() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U3CcurrentValueU3E__1_6)); }
+	inline float get_U3CcurrentValueU3E__1_6() const { return ___U3CcurrentValueU3E__1_6; }
+	inline float* get_address_of_U3CcurrentValueU3E__1_6() { return &___U3CcurrentValueU3E__1_6; }
+	inline void set_U3CcurrentValueU3E__1_6(float value)
+	{
+		___U3CcurrentValueU3E__1_6 = value;
+	}
+
+	inline static int32_t get_offset_of_endBloom_7() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___endBloom_7)); }
+	inline float get_endBloom_7() const { return ___endBloom_7; }
+	inline float* get_address_of_endBloom_7() { return &___endBloom_7; }
+	inline void set_endBloom_7(float value)
+	{
+		___endBloom_7 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CbloomIntensityU3E__1_8() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U3CbloomIntensityU3E__1_8)); }
+	inline float get_U3CbloomIntensityU3E__1_8() const { return ___U3CbloomIntensityU3E__1_8; }
+	inline float* get_address_of_U3CbloomIntensityU3E__1_8() { return &___U3CbloomIntensityU3E__1_8; }
+	inline void set_U3CbloomIntensityU3E__1_8(float value)
+	{
+		___U3CbloomIntensityU3E__1_8 = value;
+	}
+
+	inline static int32_t get_offset_of_endThreshold_9() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___endThreshold_9)); }
+	inline float get_endThreshold_9() const { return ___endThreshold_9; }
+	inline float* get_address_of_endThreshold_9() { return &___endThreshold_9; }
+	inline void set_endThreshold_9(float value)
+	{
+		___endThreshold_9 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CbloomThresholdU3E__1_10() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U3CbloomThresholdU3E__1_10)); }
+	inline float get_U3CbloomThresholdU3E__1_10() const { return ___U3CbloomThresholdU3E__1_10; }
+	inline float* get_address_of_U3CbloomThresholdU3E__1_10() { return &___U3CbloomThresholdU3E__1_10; }
+	inline void set_U3CbloomThresholdU3E__1_10(float value)
+	{
+		___U3CbloomThresholdU3E__1_10 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_11() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U24this_11)); }
+	inline PlayerController_t2064355688 * get_U24this_11() const { return ___U24this_11; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_11() { return &___U24this_11; }
+	inline void set_U24this_11(PlayerController_t2064355688 * value)
+	{
+		___U24this_11 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_11), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_12() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U24current_12)); }
+	inline RuntimeObject * get_U24current_12() const { return ___U24current_12; }
+	inline RuntimeObject ** get_address_of_U24current_12() { return &___U24current_12; }
+	inline void set_U24current_12(RuntimeObject * value)
+	{
+		___U24current_12 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_12), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_13() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U24disposing_13)); }
+	inline bool get_U24disposing_13() const { return ___U24disposing_13; }
+	inline bool* get_address_of_U24disposing_13() { return &___U24disposing_13; }
+	inline void set_U24disposing_13(bool value)
+	{
+		___U24disposing_13 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_14() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorA_t1187709451, ___U24PC_14)); }
+	inline int32_t get_U24PC_14() const { return ___U24PC_14; }
+	inline int32_t* get_address_of_U24PC_14() { return &___U24PC_14; }
+	inline void set_U24PC_14(int32_t value)
+	{
+		___U24PC_14 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CLERPFOCALLENGTHU3EC__ITERATORA_T1187709451_H
+#ifndef U3CRECHARGESTAMINAU3EC__ITERATOR7_T122917907_H
+#define U3CRECHARGESTAMINAU3EC__ITERATOR7_T122917907_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<rechargeStamina>c__Iterator7
+struct  U3CrechargeStaminaU3Ec__Iterator7_t122917907  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<rechargeStamina>c__Iterator7::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<rechargeStamina>c__Iterator7::duration
+	float ___duration_1;
+	// System.Single PlayerController/<rechargeStamina>c__Iterator7::currentStamina
+	float ___currentStamina_2;
+	// PlayerController PlayerController/<rechargeStamina>c__Iterator7::$this
+	PlayerController_t2064355688 * ___U24this_3;
+	// System.Object PlayerController/<rechargeStamina>c__Iterator7::$current
+	RuntimeObject * ___U24current_4;
+	// System.Boolean PlayerController/<rechargeStamina>c__Iterator7::$disposing
+	bool ___U24disposing_5;
+	// System.Int32 PlayerController/<rechargeStamina>c__Iterator7::$PC
+	int32_t ___U24PC_6;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CrechargeStaminaU3Ec__Iterator7_t122917907, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CrechargeStaminaU3Ec__Iterator7_t122917907, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_currentStamina_2() { return static_cast<int32_t>(offsetof(U3CrechargeStaminaU3Ec__Iterator7_t122917907, ___currentStamina_2)); }
+	inline float get_currentStamina_2() const { return ___currentStamina_2; }
+	inline float* get_address_of_currentStamina_2() { return &___currentStamina_2; }
+	inline void set_currentStamina_2(float value)
+	{
+		___currentStamina_2 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_3() { return static_cast<int32_t>(offsetof(U3CrechargeStaminaU3Ec__Iterator7_t122917907, ___U24this_3)); }
+	inline PlayerController_t2064355688 * get_U24this_3() const { return ___U24this_3; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_3() { return &___U24this_3; }
+	inline void set_U24this_3(PlayerController_t2064355688 * value)
+	{
+		___U24this_3 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_3), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_4() { return static_cast<int32_t>(offsetof(U3CrechargeStaminaU3Ec__Iterator7_t122917907, ___U24current_4)); }
+	inline RuntimeObject * get_U24current_4() const { return ___U24current_4; }
+	inline RuntimeObject ** get_address_of_U24current_4() { return &___U24current_4; }
+	inline void set_U24current_4(RuntimeObject * value)
+	{
+		___U24current_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_5() { return static_cast<int32_t>(offsetof(U3CrechargeStaminaU3Ec__Iterator7_t122917907, ___U24disposing_5)); }
+	inline bool get_U24disposing_5() const { return ___U24disposing_5; }
+	inline bool* get_address_of_U24disposing_5() { return &___U24disposing_5; }
+	inline void set_U24disposing_5(bool value)
+	{
+		___U24disposing_5 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_6() { return static_cast<int32_t>(offsetof(U3CrechargeStaminaU3Ec__Iterator7_t122917907, ___U24PC_6)); }
+	inline int32_t get_U24PC_6() const { return ___U24PC_6; }
+	inline int32_t* get_address_of_U24PC_6() { return &___U24PC_6; }
+	inline void set_U24PC_6(int32_t value)
+	{
+		___U24PC_6 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CRECHARGESTAMINAU3EC__ITERATOR7_T122917907_H
+#ifndef U3CWALKLERPU3EC__ITERATOR1_T691473893_H
+#define U3CWALKLERPU3EC__ITERATOR1_T691473893_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<walkLerp>c__Iterator1
+struct  U3CwalkLerpU3Ec__Iterator1_t691473893  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<walkLerp>c__Iterator1::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<walkLerp>c__Iterator1::duration
+	float ___duration_1;
+	// System.Single PlayerController/<walkLerp>c__Iterator1::startValue
+	float ___startValue_2;
+	// System.Single PlayerController/<walkLerp>c__Iterator1::endValue
+	float ___endValue_3;
+	// System.Single PlayerController/<walkLerp>c__Iterator1::<swap>__1
+	float ___U3CswapU3E__1_4;
+	// System.Single PlayerController/<walkLerp>c__Iterator1::<swap>__2
+	float ___U3CswapU3E__2_5;
+	// PlayerController PlayerController/<walkLerp>c__Iterator1::$this
+	PlayerController_t2064355688 * ___U24this_6;
+	// System.Object PlayerController/<walkLerp>c__Iterator1::$current
+	RuntimeObject * ___U24current_7;
+	// System.Boolean PlayerController/<walkLerp>c__Iterator1::$disposing
+	bool ___U24disposing_8;
+	// System.Int32 PlayerController/<walkLerp>c__Iterator1::$PC
+	int32_t ___U24PC_9;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___startValue_2)); }
+	inline float get_startValue_2() const { return ___startValue_2; }
+	inline float* get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(float value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___endValue_3)); }
+	inline float get_endValue_3() const { return ___endValue_3; }
+	inline float* get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(float value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CswapU3E__1_4() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___U3CswapU3E__1_4)); }
+	inline float get_U3CswapU3E__1_4() const { return ___U3CswapU3E__1_4; }
+	inline float* get_address_of_U3CswapU3E__1_4() { return &___U3CswapU3E__1_4; }
+	inline void set_U3CswapU3E__1_4(float value)
+	{
+		___U3CswapU3E__1_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CswapU3E__2_5() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___U3CswapU3E__2_5)); }
+	inline float get_U3CswapU3E__2_5() const { return ___U3CswapU3E__2_5; }
+	inline float* get_address_of_U3CswapU3E__2_5() { return &___U3CswapU3E__2_5; }
+	inline void set_U3CswapU3E__2_5(float value)
+	{
+		___U3CswapU3E__2_5 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_6() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___U24this_6)); }
+	inline PlayerController_t2064355688 * get_U24this_6() const { return ___U24this_6; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_6() { return &___U24this_6; }
+	inline void set_U24this_6(PlayerController_t2064355688 * value)
+	{
+		___U24this_6 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_6), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_7() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___U24current_7)); }
+	inline RuntimeObject * get_U24current_7() const { return ___U24current_7; }
+	inline RuntimeObject ** get_address_of_U24current_7() { return &___U24current_7; }
+	inline void set_U24current_7(RuntimeObject * value)
+	{
+		___U24current_7 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_7), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_8() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___U24disposing_8)); }
+	inline bool get_U24disposing_8() const { return ___U24disposing_8; }
+	inline bool* get_address_of_U24disposing_8() { return &___U24disposing_8; }
+	inline void set_U24disposing_8(bool value)
+	{
+		___U24disposing_8 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_9() { return static_cast<int32_t>(offsetof(U3CwalkLerpU3Ec__Iterator1_t691473893, ___U24PC_9)); }
+	inline int32_t get_U24PC_9() const { return ___U24PC_9; }
+	inline int32_t* get_address_of_U24PC_9() { return &___U24PC_9; }
+	inline void set_U24PC_9(int32_t value)
+	{
+		___U24PC_9 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CWALKLERPU3EC__ITERATOR1_T691473893_H
+#ifndef COMMAND_T2676217732_H
+#define COMMAND_T2676217732_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/Command
+struct  Command_t2676217732  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // COMMAND_T2676217732_H
 #ifndef VALUETYPE_T3640485471_H
 #define VALUETYPE_T3640485471_H
 #ifdef __clang__
@@ -198,6 +1337,148 @@ struct ValueType_t3640485471_marshaled_com
 {
 };
 #endif // VALUETYPE_T3640485471_H
+#ifndef U3CSTARTU3EC__ITERATOR0_T2216151886_H
+#define U3CSTARTU3EC__ITERATOR0_T2216151886_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.Benchmark01/<Start>c__Iterator0
+struct  U3CStartU3Ec__Iterator0_t2216151886  : public RuntimeObject
+{
+public:
+	// System.Int32 TMPro.Examples.Benchmark01/<Start>c__Iterator0::<i>__1
+	int32_t ___U3CiU3E__1_0;
+	// TMPro.Examples.Benchmark01 TMPro.Examples.Benchmark01/<Start>c__Iterator0::$this
+	Benchmark01_t1571072624 * ___U24this_1;
+	// System.Object TMPro.Examples.Benchmark01/<Start>c__Iterator0::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean TMPro.Examples.Benchmark01/<Start>c__Iterator0::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 TMPro.Examples.Benchmark01/<Start>c__Iterator0::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_U3CiU3E__1_0() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2216151886, ___U3CiU3E__1_0)); }
+	inline int32_t get_U3CiU3E__1_0() const { return ___U3CiU3E__1_0; }
+	inline int32_t* get_address_of_U3CiU3E__1_0() { return &___U3CiU3E__1_0; }
+	inline void set_U3CiU3E__1_0(int32_t value)
+	{
+		___U3CiU3E__1_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2216151886, ___U24this_1)); }
+	inline Benchmark01_t1571072624 * get_U24this_1() const { return ___U24this_1; }
+	inline Benchmark01_t1571072624 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(Benchmark01_t1571072624 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2216151886, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2216151886, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2216151886, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CSTARTU3EC__ITERATOR0_T2216151886_H
+#ifndef U3CSTARTU3EC__ITERATOR0_T2622988697_H
+#define U3CSTARTU3EC__ITERATOR0_T2622988697_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.Benchmark01_UGUI/<Start>c__Iterator0
+struct  U3CStartU3Ec__Iterator0_t2622988697  : public RuntimeObject
+{
+public:
+	// System.Int32 TMPro.Examples.Benchmark01_UGUI/<Start>c__Iterator0::<i>__1
+	int32_t ___U3CiU3E__1_0;
+	// TMPro.Examples.Benchmark01_UGUI TMPro.Examples.Benchmark01_UGUI/<Start>c__Iterator0::$this
+	Benchmark01_UGUI_t3264177817 * ___U24this_1;
+	// System.Object TMPro.Examples.Benchmark01_UGUI/<Start>c__Iterator0::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean TMPro.Examples.Benchmark01_UGUI/<Start>c__Iterator0::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 TMPro.Examples.Benchmark01_UGUI/<Start>c__Iterator0::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_U3CiU3E__1_0() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2622988697, ___U3CiU3E__1_0)); }
+	inline int32_t get_U3CiU3E__1_0() const { return ___U3CiU3E__1_0; }
+	inline int32_t* get_address_of_U3CiU3E__1_0() { return &___U3CiU3E__1_0; }
+	inline void set_U3CiU3E__1_0(int32_t value)
+	{
+		___U3CiU3E__1_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2622988697, ___U24this_1)); }
+	inline Benchmark01_UGUI_t3264177817 * get_U24this_1() const { return ___U24this_1; }
+	inline Benchmark01_UGUI_t3264177817 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(Benchmark01_UGUI_t3264177817 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2622988697, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2622988697, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t2622988697, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CSTARTU3EC__ITERATOR0_T2622988697_H
 #ifndef U3CANIMATEPROPERTIESU3EC__ITERATOR0_T4041402054_H
 #define U3CANIMATEPROPERTIESU3EC__ITERATOR0_T4041402054_H
 #ifdef __clang__
@@ -615,6 +1896,188 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // U3CANIMATEVERTEXCOLORSU3EC__ANONSTOREY1_T446847514_H
+#ifndef U3CDELAYU3EC__ITERATOR0_T2846553818_H
+#define U3CDELAYU3EC__ITERATOR0_T2846553818_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Title_Animator/<delay>c__Iterator0
+struct  U3CdelayU3Ec__Iterator0_t2846553818  : public RuntimeObject
+{
+public:
+	// System.Single Title_Animator/<delay>c__Iterator0::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single Title_Animator/<delay>c__Iterator0::duration
+	float ___duration_1;
+	// Title_Animator Title_Animator/<delay>c__Iterator0::$this
+	Title_Animator_t1706872800 * ___U24this_2;
+	// System.Object Title_Animator/<delay>c__Iterator0::$current
+	RuntimeObject * ___U24current_3;
+	// System.Boolean Title_Animator/<delay>c__Iterator0::$disposing
+	bool ___U24disposing_4;
+	// System.Int32 Title_Animator/<delay>c__Iterator0::$PC
+	int32_t ___U24PC_5;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CdelayU3Ec__Iterator0_t2846553818, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CdelayU3Ec__Iterator0_t2846553818, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_2() { return static_cast<int32_t>(offsetof(U3CdelayU3Ec__Iterator0_t2846553818, ___U24this_2)); }
+	inline Title_Animator_t1706872800 * get_U24this_2() const { return ___U24this_2; }
+	inline Title_Animator_t1706872800 ** get_address_of_U24this_2() { return &___U24this_2; }
+	inline void set_U24this_2(Title_Animator_t1706872800 * value)
+	{
+		___U24this_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_3() { return static_cast<int32_t>(offsetof(U3CdelayU3Ec__Iterator0_t2846553818, ___U24current_3)); }
+	inline RuntimeObject * get_U24current_3() const { return ___U24current_3; }
+	inline RuntimeObject ** get_address_of_U24current_3() { return &___U24current_3; }
+	inline void set_U24current_3(RuntimeObject * value)
+	{
+		___U24current_3 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_3), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_4() { return static_cast<int32_t>(offsetof(U3CdelayU3Ec__Iterator0_t2846553818, ___U24disposing_4)); }
+	inline bool get_U24disposing_4() const { return ___U24disposing_4; }
+	inline bool* get_address_of_U24disposing_4() { return &___U24disposing_4; }
+	inline void set_U24disposing_4(bool value)
+	{
+		___U24disposing_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_5() { return static_cast<int32_t>(offsetof(U3CdelayU3Ec__Iterator0_t2846553818, ___U24PC_5)); }
+	inline int32_t get_U24PC_5() const { return ___U24PC_5; }
+	inline int32_t* get_address_of_U24PC_5() { return &___U24PC_5; }
+	inline void set_U24PC_5(int32_t value)
+	{
+		___U24PC_5 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CDELAYU3EC__ITERATOR0_T2846553818_H
+#ifndef U3CWIPEU3EC__ITERATOR1_T1508146836_H
+#define U3CWIPEU3EC__ITERATOR1_T1508146836_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Title_Animator/<wipe>c__Iterator1
+struct  U3CwipeU3Ec__Iterator1_t1508146836  : public RuntimeObject
+{
+public:
+	// System.Single Title_Animator/<wipe>c__Iterator1::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single Title_Animator/<wipe>c__Iterator1::duration
+	float ___duration_1;
+	// System.Single Title_Animator/<wipe>c__Iterator1::startValue
+	float ___startValue_2;
+	// System.Single Title_Animator/<wipe>c__Iterator1::endValue
+	float ___endValue_3;
+	// Title_Animator Title_Animator/<wipe>c__Iterator1::$this
+	Title_Animator_t1706872800 * ___U24this_4;
+	// System.Object Title_Animator/<wipe>c__Iterator1::$current
+	RuntimeObject * ___U24current_5;
+	// System.Boolean Title_Animator/<wipe>c__Iterator1::$disposing
+	bool ___U24disposing_6;
+	// System.Int32 Title_Animator/<wipe>c__Iterator1::$PC
+	int32_t ___U24PC_7;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___startValue_2)); }
+	inline float get_startValue_2() const { return ___startValue_2; }
+	inline float* get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(float value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___endValue_3)); }
+	inline float get_endValue_3() const { return ___endValue_3; }
+	inline float* get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(float value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_4() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___U24this_4)); }
+	inline Title_Animator_t1706872800 * get_U24this_4() const { return ___U24this_4; }
+	inline Title_Animator_t1706872800 ** get_address_of_U24this_4() { return &___U24this_4; }
+	inline void set_U24this_4(Title_Animator_t1706872800 * value)
+	{
+		___U24this_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_5() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___U24current_5)); }
+	inline RuntimeObject * get_U24current_5() const { return ___U24current_5; }
+	inline RuntimeObject ** get_address_of_U24current_5() { return &___U24current_5; }
+	inline void set_U24current_5(RuntimeObject * value)
+	{
+		___U24current_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_6() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___U24disposing_6)); }
+	inline bool get_U24disposing_6() const { return ___U24disposing_6; }
+	inline bool* get_address_of_U24disposing_6() { return &___U24disposing_6; }
+	inline void set_U24disposing_6(bool value)
+	{
+		___U24disposing_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_7() { return static_cast<int32_t>(offsetof(U3CwipeU3Ec__Iterator1_t1508146836, ___U24PC_7)); }
+	inline int32_t get_U24PC_7() const { return ___U24PC_7; }
+	inline int32_t* get_address_of_U24PC_7() { return &___U24PC_7; }
+	inline void set_U24PC_7(int32_t value)
+	{
+		___U24PC_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CWIPEU3EC__ITERATOR1_T1508146836_H
 #ifndef UNITYEVENTBASE_T3960448221_H
 #define UNITYEVENTBASE_T3960448221_H
 #ifdef __clang__
@@ -677,26 +2140,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UNITYEVENTBASE_T3960448221_H
-#ifndef IMAGEEFFECTS_T1214077586_H
-#define IMAGEEFFECTS_T1214077586_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ImageEffects
-struct  ImageEffects_t1214077586  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // IMAGEEFFECTS_T1214077586_H
 #ifndef U24ARRAYTYPEU3D24_T2467506694_H
 #define U24ARRAYTYPEU3D24_T2467506694_H
 #ifdef __clang__
@@ -1137,35 +2580,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // UNITYEVENT_3_T2493613095_H
-#ifndef LAYERMASK_T3493934918_H
-#define LAYERMASK_T3493934918_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.LayerMask
-struct  LayerMask_t3493934918 
-{
-public:
-	// System.Int32 UnityEngine.LayerMask::m_Mask
-	int32_t ___m_Mask_0;
-
-public:
-	inline static int32_t get_offset_of_m_Mask_0() { return static_cast<int32_t>(offsetof(LayerMask_t3493934918, ___m_Mask_0)); }
-	inline int32_t get_m_Mask_0() const { return ___m_Mask_0; }
-	inline int32_t* get_address_of_m_Mask_0() { return &___m_Mask_0; }
-	inline void set_m_Mask_0(int32_t value)
-	{
-		___m_Mask_0 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // LAYERMASK_T3493934918_H
 #ifndef MATRIX4X4_T1817901843_H
 #define MATRIX4X4_T1817901843_H
 #ifdef __clang__
@@ -1446,6 +2860,131 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // QUATERNION_T2301928331_H
+#ifndef VECTOR2_T2156229523_H
+#define VECTOR2_T2156229523_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Vector2
+struct  Vector2_t2156229523 
+{
+public:
+	// System.Single UnityEngine.Vector2::x
+	float ___x_0;
+	// System.Single UnityEngine.Vector2::y
+	float ___y_1;
+
+public:
+	inline static int32_t get_offset_of_x_0() { return static_cast<int32_t>(offsetof(Vector2_t2156229523, ___x_0)); }
+	inline float get_x_0() const { return ___x_0; }
+	inline float* get_address_of_x_0() { return &___x_0; }
+	inline void set_x_0(float value)
+	{
+		___x_0 = value;
+	}
+
+	inline static int32_t get_offset_of_y_1() { return static_cast<int32_t>(offsetof(Vector2_t2156229523, ___y_1)); }
+	inline float get_y_1() const { return ___y_1; }
+	inline float* get_address_of_y_1() { return &___y_1; }
+	inline void set_y_1(float value)
+	{
+		___y_1 = value;
+	}
+};
+
+struct Vector2_t2156229523_StaticFields
+{
+public:
+	// UnityEngine.Vector2 UnityEngine.Vector2::zeroVector
+	Vector2_t2156229523  ___zeroVector_2;
+	// UnityEngine.Vector2 UnityEngine.Vector2::oneVector
+	Vector2_t2156229523  ___oneVector_3;
+	// UnityEngine.Vector2 UnityEngine.Vector2::upVector
+	Vector2_t2156229523  ___upVector_4;
+	// UnityEngine.Vector2 UnityEngine.Vector2::downVector
+	Vector2_t2156229523  ___downVector_5;
+	// UnityEngine.Vector2 UnityEngine.Vector2::leftVector
+	Vector2_t2156229523  ___leftVector_6;
+	// UnityEngine.Vector2 UnityEngine.Vector2::rightVector
+	Vector2_t2156229523  ___rightVector_7;
+	// UnityEngine.Vector2 UnityEngine.Vector2::positiveInfinityVector
+	Vector2_t2156229523  ___positiveInfinityVector_8;
+	// UnityEngine.Vector2 UnityEngine.Vector2::negativeInfinityVector
+	Vector2_t2156229523  ___negativeInfinityVector_9;
+
+public:
+	inline static int32_t get_offset_of_zeroVector_2() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___zeroVector_2)); }
+	inline Vector2_t2156229523  get_zeroVector_2() const { return ___zeroVector_2; }
+	inline Vector2_t2156229523 * get_address_of_zeroVector_2() { return &___zeroVector_2; }
+	inline void set_zeroVector_2(Vector2_t2156229523  value)
+	{
+		___zeroVector_2 = value;
+	}
+
+	inline static int32_t get_offset_of_oneVector_3() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___oneVector_3)); }
+	inline Vector2_t2156229523  get_oneVector_3() const { return ___oneVector_3; }
+	inline Vector2_t2156229523 * get_address_of_oneVector_3() { return &___oneVector_3; }
+	inline void set_oneVector_3(Vector2_t2156229523  value)
+	{
+		___oneVector_3 = value;
+	}
+
+	inline static int32_t get_offset_of_upVector_4() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___upVector_4)); }
+	inline Vector2_t2156229523  get_upVector_4() const { return ___upVector_4; }
+	inline Vector2_t2156229523 * get_address_of_upVector_4() { return &___upVector_4; }
+	inline void set_upVector_4(Vector2_t2156229523  value)
+	{
+		___upVector_4 = value;
+	}
+
+	inline static int32_t get_offset_of_downVector_5() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___downVector_5)); }
+	inline Vector2_t2156229523  get_downVector_5() const { return ___downVector_5; }
+	inline Vector2_t2156229523 * get_address_of_downVector_5() { return &___downVector_5; }
+	inline void set_downVector_5(Vector2_t2156229523  value)
+	{
+		___downVector_5 = value;
+	}
+
+	inline static int32_t get_offset_of_leftVector_6() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___leftVector_6)); }
+	inline Vector2_t2156229523  get_leftVector_6() const { return ___leftVector_6; }
+	inline Vector2_t2156229523 * get_address_of_leftVector_6() { return &___leftVector_6; }
+	inline void set_leftVector_6(Vector2_t2156229523  value)
+	{
+		___leftVector_6 = value;
+	}
+
+	inline static int32_t get_offset_of_rightVector_7() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___rightVector_7)); }
+	inline Vector2_t2156229523  get_rightVector_7() const { return ___rightVector_7; }
+	inline Vector2_t2156229523 * get_address_of_rightVector_7() { return &___rightVector_7; }
+	inline void set_rightVector_7(Vector2_t2156229523  value)
+	{
+		___rightVector_7 = value;
+	}
+
+	inline static int32_t get_offset_of_positiveInfinityVector_8() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___positiveInfinityVector_8)); }
+	inline Vector2_t2156229523  get_positiveInfinityVector_8() const { return ___positiveInfinityVector_8; }
+	inline Vector2_t2156229523 * get_address_of_positiveInfinityVector_8() { return &___positiveInfinityVector_8; }
+	inline void set_positiveInfinityVector_8(Vector2_t2156229523  value)
+	{
+		___positiveInfinityVector_8 = value;
+	}
+
+	inline static int32_t get_offset_of_negativeInfinityVector_9() { return static_cast<int32_t>(offsetof(Vector2_t2156229523_StaticFields, ___negativeInfinityVector_9)); }
+	inline Vector2_t2156229523  get_negativeInfinityVector_9() const { return ___negativeInfinityVector_9; }
+	inline Vector2_t2156229523 * get_address_of_negativeInfinityVector_9() { return &___negativeInfinityVector_9; }
+	inline void set_negativeInfinityVector_9(Vector2_t2156229523  value)
+	{
+		___negativeInfinityVector_9 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // VECTOR2_T2156229523_H
 #ifndef VECTOR3_T3722313464_H
 #define VECTOR3_T3722313464_H
 #ifdef __clang__
@@ -1622,8 +3161,6 @@ struct U3CPrivateImplementationDetailsU3E_t3057255369_StaticFields
 public:
 	// <PrivateImplementationDetails>/$ArrayType=24 <PrivateImplementationDetails>::$field-89A0099374A5746F12D728CDE3233EB874AA88EE
 	U24ArrayTypeU3D24_t2467506694  ___U24fieldU2D89A0099374A5746F12D728CDE3233EB874AA88EE_0;
-	// <PrivateImplementationDetails>/$ArrayType=24 <PrivateImplementationDetails>::$field-23447D2BC3FF6984AB09F575BC63CFE460337394
-	U24ArrayTypeU3D24_t2467506694  ___U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1;
 
 public:
 	inline static int32_t get_offset_of_U24fieldU2D89A0099374A5746F12D728CDE3233EB874AA88EE_0() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255369_StaticFields, ___U24fieldU2D89A0099374A5746F12D728CDE3233EB874AA88EE_0)); }
@@ -1633,20 +3170,785 @@ public:
 	{
 		___U24fieldU2D89A0099374A5746F12D728CDE3233EB874AA88EE_0 = value;
 	}
-
-	inline static int32_t get_offset_of_U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1() { return static_cast<int32_t>(offsetof(U3CPrivateImplementationDetailsU3E_t3057255369_StaticFields, ___U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1)); }
-	inline U24ArrayTypeU3D24_t2467506694  get_U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1() const { return ___U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1; }
-	inline U24ArrayTypeU3D24_t2467506694 * get_address_of_U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1() { return &___U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1; }
-	inline void set_U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1(U24ArrayTypeU3D24_t2467506694  value)
-	{
-		___U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1 = value;
-	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
 #endif // U3CPRIVATEIMPLEMENTATIONDETAILSU3E_T3057255369_H
+#ifndef U3CSTARTU3EC__ITERATOR0_T1520811813_H
+#define U3CSTARTU3EC__ITERATOR0_T1520811813_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// EnvMapAnimator/<Start>c__Iterator0
+struct  U3CStartU3Ec__Iterator0_t1520811813  : public RuntimeObject
+{
+public:
+	// UnityEngine.Matrix4x4 EnvMapAnimator/<Start>c__Iterator0::<matrix>__0
+	Matrix4x4_t1817901843  ___U3CmatrixU3E__0_0;
+	// EnvMapAnimator EnvMapAnimator/<Start>c__Iterator0::$this
+	EnvMapAnimator_t1140999784 * ___U24this_1;
+	// System.Object EnvMapAnimator/<Start>c__Iterator0::$current
+	RuntimeObject * ___U24current_2;
+	// System.Boolean EnvMapAnimator/<Start>c__Iterator0::$disposing
+	bool ___U24disposing_3;
+	// System.Int32 EnvMapAnimator/<Start>c__Iterator0::$PC
+	int32_t ___U24PC_4;
+
+public:
+	inline static int32_t get_offset_of_U3CmatrixU3E__0_0() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t1520811813, ___U3CmatrixU3E__0_0)); }
+	inline Matrix4x4_t1817901843  get_U3CmatrixU3E__0_0() const { return ___U3CmatrixU3E__0_0; }
+	inline Matrix4x4_t1817901843 * get_address_of_U3CmatrixU3E__0_0() { return &___U3CmatrixU3E__0_0; }
+	inline void set_U3CmatrixU3E__0_0(Matrix4x4_t1817901843  value)
+	{
+		___U3CmatrixU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_1() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t1520811813, ___U24this_1)); }
+	inline EnvMapAnimator_t1140999784 * get_U24this_1() const { return ___U24this_1; }
+	inline EnvMapAnimator_t1140999784 ** get_address_of_U24this_1() { return &___U24this_1; }
+	inline void set_U24this_1(EnvMapAnimator_t1140999784 * value)
+	{
+		___U24this_1 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_1), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_2() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t1520811813, ___U24current_2)); }
+	inline RuntimeObject * get_U24current_2() const { return ___U24current_2; }
+	inline RuntimeObject ** get_address_of_U24current_2() { return &___U24current_2; }
+	inline void set_U24current_2(RuntimeObject * value)
+	{
+		___U24current_2 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_2), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_3() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t1520811813, ___U24disposing_3)); }
+	inline bool get_U24disposing_3() const { return ___U24disposing_3; }
+	inline bool* get_address_of_U24disposing_3() { return &___U24disposing_3; }
+	inline void set_U24disposing_3(bool value)
+	{
+		___U24disposing_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_4() { return static_cast<int32_t>(offsetof(U3CStartU3Ec__Iterator0_t1520811813, ___U24PC_4)); }
+	inline int32_t get_U24PC_4() const { return ___U24PC_4; }
+	inline int32_t* get_address_of_U24PC_4() { return &___U24PC_4; }
+	inline void set_U24PC_4(int32_t value)
+	{
+		___U24PC_4 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CSTARTU3EC__ITERATOR0_T1520811813_H
+#ifndef PICKUPITEM_T2990193834_H
+#define PICKUPITEM_T2990193834_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Item_Enumerator/pickupItem
+struct  pickupItem_t2990193834 
+{
+public:
+	// System.Int32 Item_Enumerator/pickupItem::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(pickupItem_t2990193834, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // PICKUPITEM_T2990193834_H
+#ifndef U3CFADELIGHTDYNAMICINPUTU3EC__ITERATOR2_T2548910918_H
+#define U3CFADELIGHTDYNAMICINPUTU3EC__ITERATOR2_T2548910918_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<FadeLightDynamicInput>c__Iterator2
+struct  U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// UnityEngine.Vector3 PlayerController/<FadeLightDynamicInput>c__Iterator2::<coneScale>__0
+	Vector3_t3722313464  ___U3CconeScaleU3E__0_1;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::duration
+	float ___duration_2;
+	// UnityEngine.Color PlayerController/<FadeLightDynamicInput>c__Iterator2::startColor
+	Color_t2555686324  ___startColor_3;
+	// UnityEngine.Color PlayerController/<FadeLightDynamicInput>c__Iterator2::endColor
+	Color_t2555686324  ___endColor_4;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::startIntensity
+	float ___startIntensity_5;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::endIntensity
+	float ___endIntensity_6;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::startAngle
+	float ___startAngle_7;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::endAngle
+	float ___endAngle_8;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::startSize
+	float ___startSize_9;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::endSize
+	float ___endSize_10;
+	// System.Single PlayerController/<FadeLightDynamicInput>c__Iterator2::<scalar>__1
+	float ___U3CscalarU3E__1_11;
+	// PlayerController PlayerController/<FadeLightDynamicInput>c__Iterator2::$this
+	PlayerController_t2064355688 * ___U24this_12;
+	// System.Object PlayerController/<FadeLightDynamicInput>c__Iterator2::$current
+	RuntimeObject * ___U24current_13;
+	// System.Boolean PlayerController/<FadeLightDynamicInput>c__Iterator2::$disposing
+	bool ___U24disposing_14;
+	// System.Int32 PlayerController/<FadeLightDynamicInput>c__Iterator2::$PC
+	int32_t ___U24PC_15;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CconeScaleU3E__0_1() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___U3CconeScaleU3E__0_1)); }
+	inline Vector3_t3722313464  get_U3CconeScaleU3E__0_1() const { return ___U3CconeScaleU3E__0_1; }
+	inline Vector3_t3722313464 * get_address_of_U3CconeScaleU3E__0_1() { return &___U3CconeScaleU3E__0_1; }
+	inline void set_U3CconeScaleU3E__0_1(Vector3_t3722313464  value)
+	{
+		___U3CconeScaleU3E__0_1 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_2() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___duration_2)); }
+	inline float get_duration_2() const { return ___duration_2; }
+	inline float* get_address_of_duration_2() { return &___duration_2; }
+	inline void set_duration_2(float value)
+	{
+		___duration_2 = value;
+	}
+
+	inline static int32_t get_offset_of_startColor_3() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___startColor_3)); }
+	inline Color_t2555686324  get_startColor_3() const { return ___startColor_3; }
+	inline Color_t2555686324 * get_address_of_startColor_3() { return &___startColor_3; }
+	inline void set_startColor_3(Color_t2555686324  value)
+	{
+		___startColor_3 = value;
+	}
+
+	inline static int32_t get_offset_of_endColor_4() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___endColor_4)); }
+	inline Color_t2555686324  get_endColor_4() const { return ___endColor_4; }
+	inline Color_t2555686324 * get_address_of_endColor_4() { return &___endColor_4; }
+	inline void set_endColor_4(Color_t2555686324  value)
+	{
+		___endColor_4 = value;
+	}
+
+	inline static int32_t get_offset_of_startIntensity_5() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___startIntensity_5)); }
+	inline float get_startIntensity_5() const { return ___startIntensity_5; }
+	inline float* get_address_of_startIntensity_5() { return &___startIntensity_5; }
+	inline void set_startIntensity_5(float value)
+	{
+		___startIntensity_5 = value;
+	}
+
+	inline static int32_t get_offset_of_endIntensity_6() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___endIntensity_6)); }
+	inline float get_endIntensity_6() const { return ___endIntensity_6; }
+	inline float* get_address_of_endIntensity_6() { return &___endIntensity_6; }
+	inline void set_endIntensity_6(float value)
+	{
+		___endIntensity_6 = value;
+	}
+
+	inline static int32_t get_offset_of_startAngle_7() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___startAngle_7)); }
+	inline float get_startAngle_7() const { return ___startAngle_7; }
+	inline float* get_address_of_startAngle_7() { return &___startAngle_7; }
+	inline void set_startAngle_7(float value)
+	{
+		___startAngle_7 = value;
+	}
+
+	inline static int32_t get_offset_of_endAngle_8() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___endAngle_8)); }
+	inline float get_endAngle_8() const { return ___endAngle_8; }
+	inline float* get_address_of_endAngle_8() { return &___endAngle_8; }
+	inline void set_endAngle_8(float value)
+	{
+		___endAngle_8 = value;
+	}
+
+	inline static int32_t get_offset_of_startSize_9() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___startSize_9)); }
+	inline float get_startSize_9() const { return ___startSize_9; }
+	inline float* get_address_of_startSize_9() { return &___startSize_9; }
+	inline void set_startSize_9(float value)
+	{
+		___startSize_9 = value;
+	}
+
+	inline static int32_t get_offset_of_endSize_10() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___endSize_10)); }
+	inline float get_endSize_10() const { return ___endSize_10; }
+	inline float* get_address_of_endSize_10() { return &___endSize_10; }
+	inline void set_endSize_10(float value)
+	{
+		___endSize_10 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CscalarU3E__1_11() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___U3CscalarU3E__1_11)); }
+	inline float get_U3CscalarU3E__1_11() const { return ___U3CscalarU3E__1_11; }
+	inline float* get_address_of_U3CscalarU3E__1_11() { return &___U3CscalarU3E__1_11; }
+	inline void set_U3CscalarU3E__1_11(float value)
+	{
+		___U3CscalarU3E__1_11 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_12() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___U24this_12)); }
+	inline PlayerController_t2064355688 * get_U24this_12() const { return ___U24this_12; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_12() { return &___U24this_12; }
+	inline void set_U24this_12(PlayerController_t2064355688 * value)
+	{
+		___U24this_12 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_12), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_13() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___U24current_13)); }
+	inline RuntimeObject * get_U24current_13() const { return ___U24current_13; }
+	inline RuntimeObject ** get_address_of_U24current_13() { return &___U24current_13; }
+	inline void set_U24current_13(RuntimeObject * value)
+	{
+		___U24current_13 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_13), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_14() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___U24disposing_14)); }
+	inline bool get_U24disposing_14() const { return ___U24disposing_14; }
+	inline bool* get_address_of_U24disposing_14() { return &___U24disposing_14; }
+	inline void set_U24disposing_14(bool value)
+	{
+		___U24disposing_14 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_15() { return static_cast<int32_t>(offsetof(U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918, ___U24PC_15)); }
+	inline int32_t get_U24PC_15() const { return ___U24PC_15; }
+	inline int32_t* get_address_of_U24PC_15() { return &___U24PC_15; }
+	inline void set_U24PC_15(int32_t value)
+	{
+		___U24PC_15 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CFADELIGHTDYNAMICINPUTU3EC__ITERATOR2_T2548910918_H
+#ifndef U3CFADELIGHTSTATICINPUTU3EC__ITERATOR3_T1429986291_H
+#define U3CFADELIGHTSTATICINPUTU3EC__ITERATOR3_T1429986291_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<FadeLightStaticInput>c__Iterator3
+struct  U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// UnityEngine.Vector3 PlayerController/<FadeLightStaticInput>c__Iterator3::<coneScale>__0
+	Vector3_t3722313464  ___U3CconeScaleU3E__0_1;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::duration
+	float ___duration_2;
+	// UnityEngine.Color PlayerController/<FadeLightStaticInput>c__Iterator3::startColor
+	Color_t2555686324  ___startColor_3;
+	// UnityEngine.Color PlayerController/<FadeLightStaticInput>c__Iterator3::endColor
+	Color_t2555686324  ___endColor_4;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::startIntensity
+	float ___startIntensity_5;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::endIntensity
+	float ___endIntensity_6;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::startAngle
+	float ___startAngle_7;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::endAngle
+	float ___endAngle_8;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::startSize
+	float ___startSize_9;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::endSize
+	float ___endSize_10;
+	// System.Single PlayerController/<FadeLightStaticInput>c__Iterator3::<scalar>__1
+	float ___U3CscalarU3E__1_11;
+	// PlayerController PlayerController/<FadeLightStaticInput>c__Iterator3::$this
+	PlayerController_t2064355688 * ___U24this_12;
+	// System.Object PlayerController/<FadeLightStaticInput>c__Iterator3::$current
+	RuntimeObject * ___U24current_13;
+	// System.Boolean PlayerController/<FadeLightStaticInput>c__Iterator3::$disposing
+	bool ___U24disposing_14;
+	// System.Int32 PlayerController/<FadeLightStaticInput>c__Iterator3::$PC
+	int32_t ___U24PC_15;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CconeScaleU3E__0_1() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___U3CconeScaleU3E__0_1)); }
+	inline Vector3_t3722313464  get_U3CconeScaleU3E__0_1() const { return ___U3CconeScaleU3E__0_1; }
+	inline Vector3_t3722313464 * get_address_of_U3CconeScaleU3E__0_1() { return &___U3CconeScaleU3E__0_1; }
+	inline void set_U3CconeScaleU3E__0_1(Vector3_t3722313464  value)
+	{
+		___U3CconeScaleU3E__0_1 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_2() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___duration_2)); }
+	inline float get_duration_2() const { return ___duration_2; }
+	inline float* get_address_of_duration_2() { return &___duration_2; }
+	inline void set_duration_2(float value)
+	{
+		___duration_2 = value;
+	}
+
+	inline static int32_t get_offset_of_startColor_3() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___startColor_3)); }
+	inline Color_t2555686324  get_startColor_3() const { return ___startColor_3; }
+	inline Color_t2555686324 * get_address_of_startColor_3() { return &___startColor_3; }
+	inline void set_startColor_3(Color_t2555686324  value)
+	{
+		___startColor_3 = value;
+	}
+
+	inline static int32_t get_offset_of_endColor_4() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___endColor_4)); }
+	inline Color_t2555686324  get_endColor_4() const { return ___endColor_4; }
+	inline Color_t2555686324 * get_address_of_endColor_4() { return &___endColor_4; }
+	inline void set_endColor_4(Color_t2555686324  value)
+	{
+		___endColor_4 = value;
+	}
+
+	inline static int32_t get_offset_of_startIntensity_5() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___startIntensity_5)); }
+	inline float get_startIntensity_5() const { return ___startIntensity_5; }
+	inline float* get_address_of_startIntensity_5() { return &___startIntensity_5; }
+	inline void set_startIntensity_5(float value)
+	{
+		___startIntensity_5 = value;
+	}
+
+	inline static int32_t get_offset_of_endIntensity_6() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___endIntensity_6)); }
+	inline float get_endIntensity_6() const { return ___endIntensity_6; }
+	inline float* get_address_of_endIntensity_6() { return &___endIntensity_6; }
+	inline void set_endIntensity_6(float value)
+	{
+		___endIntensity_6 = value;
+	}
+
+	inline static int32_t get_offset_of_startAngle_7() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___startAngle_7)); }
+	inline float get_startAngle_7() const { return ___startAngle_7; }
+	inline float* get_address_of_startAngle_7() { return &___startAngle_7; }
+	inline void set_startAngle_7(float value)
+	{
+		___startAngle_7 = value;
+	}
+
+	inline static int32_t get_offset_of_endAngle_8() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___endAngle_8)); }
+	inline float get_endAngle_8() const { return ___endAngle_8; }
+	inline float* get_address_of_endAngle_8() { return &___endAngle_8; }
+	inline void set_endAngle_8(float value)
+	{
+		___endAngle_8 = value;
+	}
+
+	inline static int32_t get_offset_of_startSize_9() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___startSize_9)); }
+	inline float get_startSize_9() const { return ___startSize_9; }
+	inline float* get_address_of_startSize_9() { return &___startSize_9; }
+	inline void set_startSize_9(float value)
+	{
+		___startSize_9 = value;
+	}
+
+	inline static int32_t get_offset_of_endSize_10() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___endSize_10)); }
+	inline float get_endSize_10() const { return ___endSize_10; }
+	inline float* get_address_of_endSize_10() { return &___endSize_10; }
+	inline void set_endSize_10(float value)
+	{
+		___endSize_10 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CscalarU3E__1_11() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___U3CscalarU3E__1_11)); }
+	inline float get_U3CscalarU3E__1_11() const { return ___U3CscalarU3E__1_11; }
+	inline float* get_address_of_U3CscalarU3E__1_11() { return &___U3CscalarU3E__1_11; }
+	inline void set_U3CscalarU3E__1_11(float value)
+	{
+		___U3CscalarU3E__1_11 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_12() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___U24this_12)); }
+	inline PlayerController_t2064355688 * get_U24this_12() const { return ___U24this_12; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_12() { return &___U24this_12; }
+	inline void set_U24this_12(PlayerController_t2064355688 * value)
+	{
+		___U24this_12 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_12), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_13() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___U24current_13)); }
+	inline RuntimeObject * get_U24current_13() const { return ___U24current_13; }
+	inline RuntimeObject ** get_address_of_U24current_13() { return &___U24current_13; }
+	inline void set_U24current_13(RuntimeObject * value)
+	{
+		___U24current_13 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_13), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_14() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___U24disposing_14)); }
+	inline bool get_U24disposing_14() const { return ___U24disposing_14; }
+	inline bool* get_address_of_U24disposing_14() { return &___U24disposing_14; }
+	inline void set_U24disposing_14(bool value)
+	{
+		___U24disposing_14 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_15() { return static_cast<int32_t>(offsetof(U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291, ___U24PC_15)); }
+	inline int32_t get_U24PC_15() const { return ___U24PC_15; }
+	inline int32_t* get_address_of_U24PC_15() { return &___U24PC_15; }
+	inline void set_U24PC_15(int32_t value)
+	{
+		___U24PC_15 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CFADELIGHTSTATICINPUTU3EC__ITERATOR3_T1429986291_H
+#ifndef U3CLERPCAMU3EC__ITERATOR4_T592038622_H
+#define U3CLERPCAMU3EC__ITERATOR4_T592038622_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<lerpCam>c__Iterator4
+struct  U3ClerpCamU3Ec__Iterator4_t592038622  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<newY>__0
+	float ___U3CnewYU3E__0_1;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<newX>__0
+	float ___U3CnewXU3E__0_2;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<newZL>__0
+	float ___U3CnewZLU3E__0_3;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<newYL>__0
+	float ___U3CnewYLU3E__0_4;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<currentY>__0
+	float ___U3CcurrentYU3E__0_5;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<currentX>__0
+	float ___U3CcurrentXU3E__0_6;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<lightCurrentZ>__0
+	float ___U3ClightCurrentZU3E__0_7;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::<lightCurrentY>__0
+	float ___U3ClightCurrentYU3E__0_8;
+	// System.Single PlayerController/<lerpCam>c__Iterator4::duration
+	float ___duration_9;
+	// UnityEngine.Vector3 PlayerController/<lerpCam>c__Iterator4::<newRotation>__1
+	Vector3_t3722313464  ___U3CnewRotationU3E__1_10;
+	// UnityEngine.Vector3 PlayerController/<lerpCam>c__Iterator4::<newLightRotation>__1
+	Vector3_t3722313464  ___U3CnewLightRotationU3E__1_11;
+	// PlayerController PlayerController/<lerpCam>c__Iterator4::$this
+	PlayerController_t2064355688 * ___U24this_12;
+	// System.Object PlayerController/<lerpCam>c__Iterator4::$current
+	RuntimeObject * ___U24current_13;
+	// System.Boolean PlayerController/<lerpCam>c__Iterator4::$disposing
+	bool ___U24disposing_14;
+	// System.Int32 PlayerController/<lerpCam>c__Iterator4::$PC
+	int32_t ___U24PC_15;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CnewYU3E__0_1() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CnewYU3E__0_1)); }
+	inline float get_U3CnewYU3E__0_1() const { return ___U3CnewYU3E__0_1; }
+	inline float* get_address_of_U3CnewYU3E__0_1() { return &___U3CnewYU3E__0_1; }
+	inline void set_U3CnewYU3E__0_1(float value)
+	{
+		___U3CnewYU3E__0_1 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CnewXU3E__0_2() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CnewXU3E__0_2)); }
+	inline float get_U3CnewXU3E__0_2() const { return ___U3CnewXU3E__0_2; }
+	inline float* get_address_of_U3CnewXU3E__0_2() { return &___U3CnewXU3E__0_2; }
+	inline void set_U3CnewXU3E__0_2(float value)
+	{
+		___U3CnewXU3E__0_2 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CnewZLU3E__0_3() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CnewZLU3E__0_3)); }
+	inline float get_U3CnewZLU3E__0_3() const { return ___U3CnewZLU3E__0_3; }
+	inline float* get_address_of_U3CnewZLU3E__0_3() { return &___U3CnewZLU3E__0_3; }
+	inline void set_U3CnewZLU3E__0_3(float value)
+	{
+		___U3CnewZLU3E__0_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CnewYLU3E__0_4() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CnewYLU3E__0_4)); }
+	inline float get_U3CnewYLU3E__0_4() const { return ___U3CnewYLU3E__0_4; }
+	inline float* get_address_of_U3CnewYLU3E__0_4() { return &___U3CnewYLU3E__0_4; }
+	inline void set_U3CnewYLU3E__0_4(float value)
+	{
+		___U3CnewYLU3E__0_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CcurrentYU3E__0_5() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CcurrentYU3E__0_5)); }
+	inline float get_U3CcurrentYU3E__0_5() const { return ___U3CcurrentYU3E__0_5; }
+	inline float* get_address_of_U3CcurrentYU3E__0_5() { return &___U3CcurrentYU3E__0_5; }
+	inline void set_U3CcurrentYU3E__0_5(float value)
+	{
+		___U3CcurrentYU3E__0_5 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CcurrentXU3E__0_6() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CcurrentXU3E__0_6)); }
+	inline float get_U3CcurrentXU3E__0_6() const { return ___U3CcurrentXU3E__0_6; }
+	inline float* get_address_of_U3CcurrentXU3E__0_6() { return &___U3CcurrentXU3E__0_6; }
+	inline void set_U3CcurrentXU3E__0_6(float value)
+	{
+		___U3CcurrentXU3E__0_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U3ClightCurrentZU3E__0_7() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3ClightCurrentZU3E__0_7)); }
+	inline float get_U3ClightCurrentZU3E__0_7() const { return ___U3ClightCurrentZU3E__0_7; }
+	inline float* get_address_of_U3ClightCurrentZU3E__0_7() { return &___U3ClightCurrentZU3E__0_7; }
+	inline void set_U3ClightCurrentZU3E__0_7(float value)
+	{
+		___U3ClightCurrentZU3E__0_7 = value;
+	}
+
+	inline static int32_t get_offset_of_U3ClightCurrentYU3E__0_8() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3ClightCurrentYU3E__0_8)); }
+	inline float get_U3ClightCurrentYU3E__0_8() const { return ___U3ClightCurrentYU3E__0_8; }
+	inline float* get_address_of_U3ClightCurrentYU3E__0_8() { return &___U3ClightCurrentYU3E__0_8; }
+	inline void set_U3ClightCurrentYU3E__0_8(float value)
+	{
+		___U3ClightCurrentYU3E__0_8 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_9() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___duration_9)); }
+	inline float get_duration_9() const { return ___duration_9; }
+	inline float* get_address_of_duration_9() { return &___duration_9; }
+	inline void set_duration_9(float value)
+	{
+		___duration_9 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CnewRotationU3E__1_10() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CnewRotationU3E__1_10)); }
+	inline Vector3_t3722313464  get_U3CnewRotationU3E__1_10() const { return ___U3CnewRotationU3E__1_10; }
+	inline Vector3_t3722313464 * get_address_of_U3CnewRotationU3E__1_10() { return &___U3CnewRotationU3E__1_10; }
+	inline void set_U3CnewRotationU3E__1_10(Vector3_t3722313464  value)
+	{
+		___U3CnewRotationU3E__1_10 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CnewLightRotationU3E__1_11() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U3CnewLightRotationU3E__1_11)); }
+	inline Vector3_t3722313464  get_U3CnewLightRotationU3E__1_11() const { return ___U3CnewLightRotationU3E__1_11; }
+	inline Vector3_t3722313464 * get_address_of_U3CnewLightRotationU3E__1_11() { return &___U3CnewLightRotationU3E__1_11; }
+	inline void set_U3CnewLightRotationU3E__1_11(Vector3_t3722313464  value)
+	{
+		___U3CnewLightRotationU3E__1_11 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_12() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U24this_12)); }
+	inline PlayerController_t2064355688 * get_U24this_12() const { return ___U24this_12; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_12() { return &___U24this_12; }
+	inline void set_U24this_12(PlayerController_t2064355688 * value)
+	{
+		___U24this_12 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_12), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_13() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U24current_13)); }
+	inline RuntimeObject * get_U24current_13() const { return ___U24current_13; }
+	inline RuntimeObject ** get_address_of_U24current_13() { return &___U24current_13; }
+	inline void set_U24current_13(RuntimeObject * value)
+	{
+		___U24current_13 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_13), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_14() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U24disposing_14)); }
+	inline bool get_U24disposing_14() const { return ___U24disposing_14; }
+	inline bool* get_address_of_U24disposing_14() { return &___U24disposing_14; }
+	inline void set_U24disposing_14(bool value)
+	{
+		___U24disposing_14 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_15() { return static_cast<int32_t>(offsetof(U3ClerpCamU3Ec__Iterator4_t592038622, ___U24PC_15)); }
+	inline int32_t get_U24PC_15() const { return ___U24PC_15; }
+	inline int32_t* get_address_of_U24PC_15() { return &___U24PC_15; }
+	inline void set_U24PC_15(int32_t value)
+	{
+		___U24PC_15 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CLERPCAMU3EC__ITERATOR4_T592038622_H
+#ifndef U3CQUICKTURNU3EC__ITERATOR9_T1863234760_H
+#define U3CQUICKTURNU3EC__ITERATOR9_T1863234760_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<quickTurn>c__Iterator9
+struct  U3CquickTurnU3Ec__Iterator9_t1863234760  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<quickTurn>c__Iterator9::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<quickTurn>c__Iterator9::duration
+	float ___duration_1;
+	// UnityEngine.Vector3 PlayerController/<quickTurn>c__Iterator9::playerRotation
+	Vector3_t3722313464  ___playerRotation_2;
+	// UnityEngine.Vector3 PlayerController/<quickTurn>c__Iterator9::fullTurn
+	Vector3_t3722313464  ___fullTurn_3;
+	// PlayerController PlayerController/<quickTurn>c__Iterator9::$this
+	PlayerController_t2064355688 * ___U24this_4;
+	// System.Object PlayerController/<quickTurn>c__Iterator9::$current
+	RuntimeObject * ___U24current_5;
+	// System.Boolean PlayerController/<quickTurn>c__Iterator9::$disposing
+	bool ___U24disposing_6;
+	// System.Int32 PlayerController/<quickTurn>c__Iterator9::$PC
+	int32_t ___U24PC_7;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_playerRotation_2() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___playerRotation_2)); }
+	inline Vector3_t3722313464  get_playerRotation_2() const { return ___playerRotation_2; }
+	inline Vector3_t3722313464 * get_address_of_playerRotation_2() { return &___playerRotation_2; }
+	inline void set_playerRotation_2(Vector3_t3722313464  value)
+	{
+		___playerRotation_2 = value;
+	}
+
+	inline static int32_t get_offset_of_fullTurn_3() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___fullTurn_3)); }
+	inline Vector3_t3722313464  get_fullTurn_3() const { return ___fullTurn_3; }
+	inline Vector3_t3722313464 * get_address_of_fullTurn_3() { return &___fullTurn_3; }
+	inline void set_fullTurn_3(Vector3_t3722313464  value)
+	{
+		___fullTurn_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_4() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___U24this_4)); }
+	inline PlayerController_t2064355688 * get_U24this_4() const { return ___U24this_4; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_4() { return &___U24this_4; }
+	inline void set_U24this_4(PlayerController_t2064355688 * value)
+	{
+		___U24this_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_5() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___U24current_5)); }
+	inline RuntimeObject * get_U24current_5() const { return ___U24current_5; }
+	inline RuntimeObject ** get_address_of_U24current_5() { return &___U24current_5; }
+	inline void set_U24current_5(RuntimeObject * value)
+	{
+		___U24current_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_6() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___U24disposing_6)); }
+	inline bool get_U24disposing_6() const { return ___U24disposing_6; }
+	inline bool* get_address_of_U24disposing_6() { return &___U24disposing_6; }
+	inline void set_U24disposing_6(bool value)
+	{
+		___U24disposing_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_7() { return static_cast<int32_t>(offsetof(U3CquickTurnU3Ec__Iterator9_t1863234760, ___U24PC_7)); }
+	inline int32_t get_U24PC_7() const { return ___U24PC_7; }
+	inline int32_t* get_address_of_U24PC_7() { return &___U24PC_7; }
+	inline void set_U24PC_7(int32_t value)
+	{
+		___U24PC_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CQUICKTURNU3EC__ITERATOR9_T1863234760_H
+#ifndef CAMERAMODES_T3200559075_H
+#define CAMERAMODES_T3200559075_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.CameraController/CameraModes
+struct  CameraModes_t3200559075 
+{
+public:
+	// System.Int32 TMPro.Examples.CameraController/CameraModes::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(CameraModes_t3200559075, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CAMERAMODES_T3200559075_H
 #ifndef MOTIONTYPE_T1905163921_H
 #define MOTIONTYPE_T1905163921_H
 #ifdef __clang__
@@ -3080,35 +5382,309 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // WORDSELECTIONEVENT_T1841909953_H
-#ifndef FILTERMODE_T3761284007_H
-#define FILTERMODE_T3761284007_H
+#ifndef U3CFADE2U3EC__ITERATOR3_T3878893353_H
+#define U3CFADE2U3EC__ITERATOR3_T3878893353_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityEngine.FilterMode
-struct  FilterMode_t3761284007 
+// Title_Animator/<fade2>c__Iterator3
+struct  U3Cfade2U3Ec__Iterator3_t3878893353  : public RuntimeObject
 {
 public:
-	// System.Int32 UnityEngine.FilterMode::value__
-	int32_t ___value___2;
+	// System.Single Title_Animator/<fade2>c__Iterator3::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single Title_Animator/<fade2>c__Iterator3::duration
+	float ___duration_1;
+	// UnityEngine.Color Title_Animator/<fade2>c__Iterator3::startValue
+	Color_t2555686324  ___startValue_2;
+	// UnityEngine.Color Title_Animator/<fade2>c__Iterator3::endValue
+	Color_t2555686324  ___endValue_3;
+	// Title_Animator Title_Animator/<fade2>c__Iterator3::$this
+	Title_Animator_t1706872800 * ___U24this_4;
+	// System.Object Title_Animator/<fade2>c__Iterator3::$current
+	RuntimeObject * ___U24current_5;
+	// System.Boolean Title_Animator/<fade2>c__Iterator3::$disposing
+	bool ___U24disposing_6;
+	// System.Int32 Title_Animator/<fade2>c__Iterator3::$PC
+	int32_t ___U24PC_7;
 
 public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(FilterMode_t3761284007, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
 	{
-		___value___2 = value;
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___startValue_2)); }
+	inline Color_t2555686324  get_startValue_2() const { return ___startValue_2; }
+	inline Color_t2555686324 * get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(Color_t2555686324  value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___endValue_3)); }
+	inline Color_t2555686324  get_endValue_3() const { return ___endValue_3; }
+	inline Color_t2555686324 * get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(Color_t2555686324  value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_4() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___U24this_4)); }
+	inline Title_Animator_t1706872800 * get_U24this_4() const { return ___U24this_4; }
+	inline Title_Animator_t1706872800 ** get_address_of_U24this_4() { return &___U24this_4; }
+	inline void set_U24this_4(Title_Animator_t1706872800 * value)
+	{
+		___U24this_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_5() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___U24current_5)); }
+	inline RuntimeObject * get_U24current_5() const { return ___U24current_5; }
+	inline RuntimeObject ** get_address_of_U24current_5() { return &___U24current_5; }
+	inline void set_U24current_5(RuntimeObject * value)
+	{
+		___U24current_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_6() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___U24disposing_6)); }
+	inline bool get_U24disposing_6() const { return ___U24disposing_6; }
+	inline bool* get_address_of_U24disposing_6() { return &___U24disposing_6; }
+	inline void set_U24disposing_6(bool value)
+	{
+		___U24disposing_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_7() { return static_cast<int32_t>(offsetof(U3Cfade2U3Ec__Iterator3_t3878893353, ___U24PC_7)); }
+	inline int32_t get_U24PC_7() const { return ___U24PC_7; }
+	inline int32_t* get_address_of_U24PC_7() { return &___U24PC_7; }
+	inline void set_U24PC_7(int32_t value)
+	{
+		___U24PC_7 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // FILTERMODE_T3761284007_H
+#endif // U3CFADE2U3EC__ITERATOR3_T3878893353_H
+#ifndef U3CFADE3U3EC__ITERATOR4_T3879123528_H
+#define U3CFADE3U3EC__ITERATOR4_T3879123528_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Title_Animator/<fade3>c__Iterator4
+struct  U3Cfade3U3Ec__Iterator4_t3879123528  : public RuntimeObject
+{
+public:
+	// System.Single Title_Animator/<fade3>c__Iterator4::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single Title_Animator/<fade3>c__Iterator4::duration
+	float ___duration_1;
+	// UnityEngine.Color Title_Animator/<fade3>c__Iterator4::startValue
+	Color_t2555686324  ___startValue_2;
+	// UnityEngine.Color Title_Animator/<fade3>c__Iterator4::endValue
+	Color_t2555686324  ___endValue_3;
+	// Title_Animator Title_Animator/<fade3>c__Iterator4::$this
+	Title_Animator_t1706872800 * ___U24this_4;
+	// System.Object Title_Animator/<fade3>c__Iterator4::$current
+	RuntimeObject * ___U24current_5;
+	// System.Boolean Title_Animator/<fade3>c__Iterator4::$disposing
+	bool ___U24disposing_6;
+	// System.Int32 Title_Animator/<fade3>c__Iterator4::$PC
+	int32_t ___U24PC_7;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___startValue_2)); }
+	inline Color_t2555686324  get_startValue_2() const { return ___startValue_2; }
+	inline Color_t2555686324 * get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(Color_t2555686324  value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___endValue_3)); }
+	inline Color_t2555686324  get_endValue_3() const { return ___endValue_3; }
+	inline Color_t2555686324 * get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(Color_t2555686324  value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_4() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___U24this_4)); }
+	inline Title_Animator_t1706872800 * get_U24this_4() const { return ___U24this_4; }
+	inline Title_Animator_t1706872800 ** get_address_of_U24this_4() { return &___U24this_4; }
+	inline void set_U24this_4(Title_Animator_t1706872800 * value)
+	{
+		___U24this_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_5() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___U24current_5)); }
+	inline RuntimeObject * get_U24current_5() const { return ___U24current_5; }
+	inline RuntimeObject ** get_address_of_U24current_5() { return &___U24current_5; }
+	inline void set_U24current_5(RuntimeObject * value)
+	{
+		___U24current_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_6() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___U24disposing_6)); }
+	inline bool get_U24disposing_6() const { return ___U24disposing_6; }
+	inline bool* get_address_of_U24disposing_6() { return &___U24disposing_6; }
+	inline void set_U24disposing_6(bool value)
+	{
+		___U24disposing_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_7() { return static_cast<int32_t>(offsetof(U3Cfade3U3Ec__Iterator4_t3879123528, ___U24PC_7)); }
+	inline int32_t get_U24PC_7() const { return ___U24PC_7; }
+	inline int32_t* get_address_of_U24PC_7() { return &___U24PC_7; }
+	inline void set_U24PC_7(int32_t value)
+	{
+		___U24PC_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CFADE3U3EC__ITERATOR4_T3879123528_H
+#ifndef U3CFADEU3EC__ITERATOR2_T2392621686_H
+#define U3CFADEU3EC__ITERATOR2_T2392621686_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Title_Animator/<fade>c__Iterator2
+struct  U3CfadeU3Ec__Iterator2_t2392621686  : public RuntimeObject
+{
+public:
+	// System.Single Title_Animator/<fade>c__Iterator2::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single Title_Animator/<fade>c__Iterator2::duration
+	float ___duration_1;
+	// UnityEngine.Color Title_Animator/<fade>c__Iterator2::startValue
+	Color_t2555686324  ___startValue_2;
+	// UnityEngine.Color Title_Animator/<fade>c__Iterator2::endValue
+	Color_t2555686324  ___endValue_3;
+	// Title_Animator Title_Animator/<fade>c__Iterator2::$this
+	Title_Animator_t1706872800 * ___U24this_4;
+	// System.Object Title_Animator/<fade>c__Iterator2::$current
+	RuntimeObject * ___U24current_5;
+	// System.Boolean Title_Animator/<fade>c__Iterator2::$disposing
+	bool ___U24disposing_6;
+	// System.Int32 Title_Animator/<fade>c__Iterator2::$PC
+	int32_t ___U24PC_7;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___startValue_2)); }
+	inline Color_t2555686324  get_startValue_2() const { return ___startValue_2; }
+	inline Color_t2555686324 * get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(Color_t2555686324  value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___endValue_3)); }
+	inline Color_t2555686324  get_endValue_3() const { return ___endValue_3; }
+	inline Color_t2555686324 * get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(Color_t2555686324  value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_4() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___U24this_4)); }
+	inline Title_Animator_t1706872800 * get_U24this_4() const { return ___U24this_4; }
+	inline Title_Animator_t1706872800 ** get_address_of_U24this_4() { return &___U24this_4; }
+	inline void set_U24this_4(Title_Animator_t1706872800 * value)
+	{
+		___U24this_4 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_4), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_5() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___U24current_5)); }
+	inline RuntimeObject * get_U24current_5() const { return ___U24current_5; }
+	inline RuntimeObject ** get_address_of_U24current_5() { return &___U24current_5; }
+	inline void set_U24current_5(RuntimeObject * value)
+	{
+		___U24current_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_6() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___U24disposing_6)); }
+	inline bool get_U24disposing_6() const { return ___U24disposing_6; }
+	inline bool* get_address_of_U24disposing_6() { return &___U24disposing_6; }
+	inline void set_U24disposing_6(bool value)
+	{
+		___U24disposing_6 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_7() { return static_cast<int32_t>(offsetof(U3CfadeU3Ec__Iterator2_t2392621686, ___U24PC_7)); }
+	inline int32_t get_U24PC_7() const { return ___U24PC_7; }
+	inline int32_t* get_address_of_U24PC_7() { return &___U24PC_7; }
+	inline void set_U24PC_7(int32_t value)
+	{
+		___U24PC_7 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CFADEU3EC__ITERATOR2_T2392621686_H
 #ifndef OBJECT_T631007953_H
 #define OBJECT_T631007953_H
 #ifdef __clang__
@@ -3338,470 +5914,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TWEAKMODE_T747557136_H
-#ifndef BLURTYPE_T2416258039_H
-#define BLURTYPE_T2416258039_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.BloomOptimized/BlurType
-struct  BlurType_t2416258039 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.BloomOptimized/BlurType::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(BlurType_t2416258039, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLURTYPE_T2416258039_H
-#ifndef RESOLUTION_T1804605042_H
-#define RESOLUTION_T1804605042_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.BloomOptimized/Resolution
-struct  Resolution_t1804605042 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.BloomOptimized/Resolution::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(Resolution_t1804605042, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // RESOLUTION_T1804605042_H
-#ifndef BLOOMSCREENBLENDMODE_T19712272_H
-#define BLOOMSCREENBLENDMODE_T19712272_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.BloomScreenBlendMode
-struct  BloomScreenBlendMode_t19712272 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.BloomScreenBlendMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(BloomScreenBlendMode_t19712272, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOOMSCREENBLENDMODE_T19712272_H
-#ifndef BLURTYPE_T1046251128_H
-#define BLURTYPE_T1046251128_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.BlurOptimized/BlurType
-struct  BlurType_t1046251128 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.BlurOptimized/BlurType::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(BlurType_t1046251128, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLURTYPE_T1046251128_H
-#ifndef MOTIONBLURFILTER_T520253047_H
-#define MOTIONBLURFILTER_T520253047_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.CameraMotionBlur/MotionBlurFilter
-struct  MotionBlurFilter_t520253047 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.CameraMotionBlur/MotionBlurFilter::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(MotionBlurFilter_t520253047, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // MOTIONBLURFILTER_T520253047_H
-#ifndef COLORCORRECTIONMODE_T1416458051_H
-#define COLORCORRECTIONMODE_T1416458051_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ColorCorrectionCurves/ColorCorrectionMode
-struct  ColorCorrectionMode_t1416458051 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.ColorCorrectionCurves/ColorCorrectionMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(ColorCorrectionMode_t1416458051, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COLORCORRECTIONMODE_T1416458051_H
-#ifndef BLURSAMPLECOUNT_T3210294001_H
-#define BLURSAMPLECOUNT_T3210294001_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfField/BlurSampleCount
-struct  BlurSampleCount_t3210294001 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfField/BlurSampleCount::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(BlurSampleCount_t3210294001, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLURSAMPLECOUNT_T3210294001_H
-#ifndef BLURTYPE_T3871645803_H
-#define BLURTYPE_T3871645803_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfField/BlurType
-struct  BlurType_t3871645803 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfField/BlurType::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(BlurType_t3871645803, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLURTYPE_T3871645803_H
-#ifndef BOKEHDESTINATION_T1233703462_H
-#define BOKEHDESTINATION_T1233703462_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/BokehDestination
-struct  BokehDestination_t1233703462 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/BokehDestination::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(BokehDestination_t1233703462, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BOKEHDESTINATION_T1233703462_H
-#ifndef DOF34QUALITYSETTING_T3636551379_H
-#define DOF34QUALITYSETTING_T3636551379_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/Dof34QualitySetting
-struct  Dof34QualitySetting_t3636551379 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/Dof34QualitySetting::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(Dof34QualitySetting_t3636551379, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DOF34QUALITYSETTING_T3636551379_H
-#ifndef DOFBLURRINESS_T473098480_H
-#define DOFBLURRINESS_T473098480_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/DofBlurriness
-struct  DofBlurriness_t473098480 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/DofBlurriness::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(DofBlurriness_t473098480, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DOFBLURRINESS_T473098480_H
-#ifndef DOFRESOLUTION_T1566655669_H
-#define DOFRESOLUTION_T1566655669_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/DofResolution
-struct  DofResolution_t1566655669 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/DofResolution::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(DofResolution_t1566655669, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DOFRESOLUTION_T1566655669_H
-#ifndef EDGEDETECTMODE_T1984240676_H
-#define EDGEDETECTMODE_T1984240676_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.EdgeDetection/EdgeDetectMode
-struct  EdgeDetectMode_t1984240676 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.EdgeDetection/EdgeDetectMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(EdgeDetectMode_t1984240676, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EDGEDETECTMODE_T1984240676_H
-#ifndef HDRBLOOMMODE_T4271191419_H
-#define HDRBLOOMMODE_T4271191419_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.HDRBloomMode
-struct  HDRBloomMode_t4271191419 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.HDRBloomMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(HDRBloomMode_t4271191419, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // HDRBLOOMMODE_T4271191419_H
-#ifndef LENSFLARESTYLE34_T4260782719_H
-#define LENSFLARESTYLE34_T4260782719_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.LensflareStyle34
-struct  LensflareStyle34_t4260782719 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.LensflareStyle34::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(LensflareStyle34_t4260782719, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // LENSFLARESTYLE34_T4260782719_H
-#ifndef TWEAKMODE34_T984135990_H
-#define TWEAKMODE34_T984135990_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.TweakMode34
-struct  TweakMode34_t984135990 
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.TweakMode34::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(TweakMode34_t984135990, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // TWEAKMODE34_T984135990_H
 #ifndef COMPONENT_T1923634451_H
 #define COMPONENT_T1923634451_H
 #ifdef __clang__
@@ -3950,6 +6062,2688 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // MONOBEHAVIOUR_T3962482529_H
+#ifndef CHATCONTROLLER_T3486202795_H
+#define CHATCONTROLLER_T3486202795_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// ChatController
+struct  ChatController_t3486202795  : public MonoBehaviour_t3962482529
+{
+public:
+	// TMPro.TMP_InputField ChatController::TMP_ChatInput
+	TMP_InputField_t1099764886 * ___TMP_ChatInput_4;
+	// TMPro.TMP_Text ChatController::TMP_ChatOutput
+	TMP_Text_t2599618874 * ___TMP_ChatOutput_5;
+	// UnityEngine.UI.Scrollbar ChatController::ChatScrollbar
+	Scrollbar_t1494447233 * ___ChatScrollbar_6;
+
+public:
+	inline static int32_t get_offset_of_TMP_ChatInput_4() { return static_cast<int32_t>(offsetof(ChatController_t3486202795, ___TMP_ChatInput_4)); }
+	inline TMP_InputField_t1099764886 * get_TMP_ChatInput_4() const { return ___TMP_ChatInput_4; }
+	inline TMP_InputField_t1099764886 ** get_address_of_TMP_ChatInput_4() { return &___TMP_ChatInput_4; }
+	inline void set_TMP_ChatInput_4(TMP_InputField_t1099764886 * value)
+	{
+		___TMP_ChatInput_4 = value;
+		Il2CppCodeGenWriteBarrier((&___TMP_ChatInput_4), value);
+	}
+
+	inline static int32_t get_offset_of_TMP_ChatOutput_5() { return static_cast<int32_t>(offsetof(ChatController_t3486202795, ___TMP_ChatOutput_5)); }
+	inline TMP_Text_t2599618874 * get_TMP_ChatOutput_5() const { return ___TMP_ChatOutput_5; }
+	inline TMP_Text_t2599618874 ** get_address_of_TMP_ChatOutput_5() { return &___TMP_ChatOutput_5; }
+	inline void set_TMP_ChatOutput_5(TMP_Text_t2599618874 * value)
+	{
+		___TMP_ChatOutput_5 = value;
+		Il2CppCodeGenWriteBarrier((&___TMP_ChatOutput_5), value);
+	}
+
+	inline static int32_t get_offset_of_ChatScrollbar_6() { return static_cast<int32_t>(offsetof(ChatController_t3486202795, ___ChatScrollbar_6)); }
+	inline Scrollbar_t1494447233 * get_ChatScrollbar_6() const { return ___ChatScrollbar_6; }
+	inline Scrollbar_t1494447233 ** get_address_of_ChatScrollbar_6() { return &___ChatScrollbar_6; }
+	inline void set_ChatScrollbar_6(Scrollbar_t1494447233 * value)
+	{
+		___ChatScrollbar_6 = value;
+		Il2CppCodeGenWriteBarrier((&___ChatScrollbar_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CHATCONTROLLER_T3486202795_H
+#ifndef DITHEREFFECT_T3436925083_H
+#define DITHEREFFECT_T3436925083_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// DitherEffect
+struct  DitherEffect_t3436925083  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material DitherEffect::ditherMat
+	Material_t340375123 * ___ditherMat_4;
+	// System.Single DitherEffect::ditherStrength
+	float ___ditherStrength_5;
+	// System.Int32 DitherEffect::colourDepth
+	int32_t ___colourDepth_6;
+
+public:
+	inline static int32_t get_offset_of_ditherMat_4() { return static_cast<int32_t>(offsetof(DitherEffect_t3436925083, ___ditherMat_4)); }
+	inline Material_t340375123 * get_ditherMat_4() const { return ___ditherMat_4; }
+	inline Material_t340375123 ** get_address_of_ditherMat_4() { return &___ditherMat_4; }
+	inline void set_ditherMat_4(Material_t340375123 * value)
+	{
+		___ditherMat_4 = value;
+		Il2CppCodeGenWriteBarrier((&___ditherMat_4), value);
+	}
+
+	inline static int32_t get_offset_of_ditherStrength_5() { return static_cast<int32_t>(offsetof(DitherEffect_t3436925083, ___ditherStrength_5)); }
+	inline float get_ditherStrength_5() const { return ___ditherStrength_5; }
+	inline float* get_address_of_ditherStrength_5() { return &___ditherStrength_5; }
+	inline void set_ditherStrength_5(float value)
+	{
+		___ditherStrength_5 = value;
+	}
+
+	inline static int32_t get_offset_of_colourDepth_6() { return static_cast<int32_t>(offsetof(DitherEffect_t3436925083, ___colourDepth_6)); }
+	inline int32_t get_colourDepth_6() const { return ___colourDepth_6; }
+	inline int32_t* get_address_of_colourDepth_6() { return &___colourDepth_6; }
+	inline void set_colourDepth_6(int32_t value)
+	{
+		___colourDepth_6 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // DITHEREFFECT_T3436925083_H
+#ifndef ENVMAPANIMATOR_T1140999784_H
+#define ENVMAPANIMATOR_T1140999784_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// EnvMapAnimator
+struct  EnvMapAnimator_t1140999784  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Vector3 EnvMapAnimator::RotationSpeeds
+	Vector3_t3722313464  ___RotationSpeeds_4;
+	// TMPro.TMP_Text EnvMapAnimator::m_textMeshPro
+	TMP_Text_t2599618874 * ___m_textMeshPro_5;
+	// UnityEngine.Material EnvMapAnimator::m_material
+	Material_t340375123 * ___m_material_6;
+
+public:
+	inline static int32_t get_offset_of_RotationSpeeds_4() { return static_cast<int32_t>(offsetof(EnvMapAnimator_t1140999784, ___RotationSpeeds_4)); }
+	inline Vector3_t3722313464  get_RotationSpeeds_4() const { return ___RotationSpeeds_4; }
+	inline Vector3_t3722313464 * get_address_of_RotationSpeeds_4() { return &___RotationSpeeds_4; }
+	inline void set_RotationSpeeds_4(Vector3_t3722313464  value)
+	{
+		___RotationSpeeds_4 = value;
+	}
+
+	inline static int32_t get_offset_of_m_textMeshPro_5() { return static_cast<int32_t>(offsetof(EnvMapAnimator_t1140999784, ___m_textMeshPro_5)); }
+	inline TMP_Text_t2599618874 * get_m_textMeshPro_5() const { return ___m_textMeshPro_5; }
+	inline TMP_Text_t2599618874 ** get_address_of_m_textMeshPro_5() { return &___m_textMeshPro_5; }
+	inline void set_m_textMeshPro_5(TMP_Text_t2599618874 * value)
+	{
+		___m_textMeshPro_5 = value;
+		Il2CppCodeGenWriteBarrier((&___m_textMeshPro_5), value);
+	}
+
+	inline static int32_t get_offset_of_m_material_6() { return static_cast<int32_t>(offsetof(EnvMapAnimator_t1140999784, ___m_material_6)); }
+	inline Material_t340375123 * get_m_material_6() const { return ___m_material_6; }
+	inline Material_t340375123 ** get_address_of_m_material_6() { return &___m_material_6; }
+	inline void set_m_material_6(Material_t340375123 * value)
+	{
+		___m_material_6 = value;
+		Il2CppCodeGenWriteBarrier((&___m_material_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ENVMAPANIMATOR_T1140999784_H
+#ifndef ITEM_ENUMERATOR_T3915226614_H
+#define ITEM_ENUMERATOR_T3915226614_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Item_Enumerator
+struct  Item_Enumerator_t3915226614  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Boolean Item_Enumerator::isActiveObject
+	bool ___isActiveObject_4;
+	// Item_Enumerator/pickupItem Item_Enumerator::thisItem
+	int32_t ___thisItem_5;
+	// System.Int32 Item_Enumerator::itemValue
+	int32_t ___itemValue_6;
+	// UnityEngine.Collider Item_Enumerator::player
+	Collider_t1773347010 * ___player_7;
+	// UnityEngine.Animator Item_Enumerator::animator
+	Animator_t434523843 * ___animator_8;
+	// UnityEngine.GameObject Item_Enumerator::playerObject
+	GameObject_t1113636619 * ___playerObject_9;
+	// UnityEngine.Material Item_Enumerator::playerBody
+	Material_t340375123 * ___playerBody_10;
+	// UnityEngine.Collider Item_Enumerator::thisCollider
+	Collider_t1773347010 * ___thisCollider_11;
+	// UnityEngine.GameObject Item_Enumerator::targetObject
+	GameObject_t1113636619 * ___targetObject_12;
+	// UnityEngine.Camera Item_Enumerator::mainCamera
+	Camera_t4157153871 * ___mainCamera_13;
+	// UnityEngine.GameObject Item_Enumerator::pickupTextObject
+	GameObject_t1113636619 * ___pickupTextObject_14;
+	// UnityEngine.GameObject Item_Enumerator::hilightIcon
+	GameObject_t1113636619 * ___hilightIcon_15;
+	// UnityEngine.UI.RawImage Item_Enumerator::iconImage
+	RawImage_t3182918964 * ___iconImage_16;
+	// UnityEngine.UI.RawImage Item_Enumerator::dialogBG
+	RawImage_t3182918964 * ___dialogBG_17;
+	// UnityEngine.Color Item_Enumerator::iconVisible
+	Color_t2555686324  ___iconVisible_18;
+	// UnityEngine.Color Item_Enumerator::colorOff
+	Color_t2555686324  ___colorOff_19;
+	// UnityEngine.Color Item_Enumerator::colorOn
+	Color_t2555686324  ___colorOn_20;
+	// UnityEngine.Color Item_Enumerator::dialogOn
+	Color_t2555686324  ___dialogOn_21;
+	// TMPro.TextMeshProUGUI Item_Enumerator::OSDText
+	TextMeshProUGUI_t529313277 * ___OSDText_22;
+	// TMPro.TextMeshProUGUI Item_Enumerator::batteryText
+	TextMeshProUGUI_t529313277 * ___batteryText_23;
+	// UnityEngine.Texture Item_Enumerator::healedTexture
+	Texture_t3661962703 * ___healedTexture_24;
+	// System.Int32 Item_Enumerator::CROSS
+	int32_t ___CROSS_26;
+	// UnityEngine.Vector3 Item_Enumerator::screenPosition
+	Vector3_t3722313464  ___screenPosition_27;
+	// UnityEngine.Vector3 Item_Enumerator::targetPos
+	Vector3_t3722313464  ___targetPos_28;
+	// System.String Item_Enumerator::tempText
+	String_t* ___tempText_29;
+	// System.Collections.Generic.Dictionary`2<System.String,System.String> Item_Enumerator::itemTexts
+	Dictionary_2_t1632706988 * ___itemTexts_30;
+
+public:
+	inline static int32_t get_offset_of_isActiveObject_4() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___isActiveObject_4)); }
+	inline bool get_isActiveObject_4() const { return ___isActiveObject_4; }
+	inline bool* get_address_of_isActiveObject_4() { return &___isActiveObject_4; }
+	inline void set_isActiveObject_4(bool value)
+	{
+		___isActiveObject_4 = value;
+	}
+
+	inline static int32_t get_offset_of_thisItem_5() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___thisItem_5)); }
+	inline int32_t get_thisItem_5() const { return ___thisItem_5; }
+	inline int32_t* get_address_of_thisItem_5() { return &___thisItem_5; }
+	inline void set_thisItem_5(int32_t value)
+	{
+		___thisItem_5 = value;
+	}
+
+	inline static int32_t get_offset_of_itemValue_6() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___itemValue_6)); }
+	inline int32_t get_itemValue_6() const { return ___itemValue_6; }
+	inline int32_t* get_address_of_itemValue_6() { return &___itemValue_6; }
+	inline void set_itemValue_6(int32_t value)
+	{
+		___itemValue_6 = value;
+	}
+
+	inline static int32_t get_offset_of_player_7() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___player_7)); }
+	inline Collider_t1773347010 * get_player_7() const { return ___player_7; }
+	inline Collider_t1773347010 ** get_address_of_player_7() { return &___player_7; }
+	inline void set_player_7(Collider_t1773347010 * value)
+	{
+		___player_7 = value;
+		Il2CppCodeGenWriteBarrier((&___player_7), value);
+	}
+
+	inline static int32_t get_offset_of_animator_8() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___animator_8)); }
+	inline Animator_t434523843 * get_animator_8() const { return ___animator_8; }
+	inline Animator_t434523843 ** get_address_of_animator_8() { return &___animator_8; }
+	inline void set_animator_8(Animator_t434523843 * value)
+	{
+		___animator_8 = value;
+		Il2CppCodeGenWriteBarrier((&___animator_8), value);
+	}
+
+	inline static int32_t get_offset_of_playerObject_9() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___playerObject_9)); }
+	inline GameObject_t1113636619 * get_playerObject_9() const { return ___playerObject_9; }
+	inline GameObject_t1113636619 ** get_address_of_playerObject_9() { return &___playerObject_9; }
+	inline void set_playerObject_9(GameObject_t1113636619 * value)
+	{
+		___playerObject_9 = value;
+		Il2CppCodeGenWriteBarrier((&___playerObject_9), value);
+	}
+
+	inline static int32_t get_offset_of_playerBody_10() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___playerBody_10)); }
+	inline Material_t340375123 * get_playerBody_10() const { return ___playerBody_10; }
+	inline Material_t340375123 ** get_address_of_playerBody_10() { return &___playerBody_10; }
+	inline void set_playerBody_10(Material_t340375123 * value)
+	{
+		___playerBody_10 = value;
+		Il2CppCodeGenWriteBarrier((&___playerBody_10), value);
+	}
+
+	inline static int32_t get_offset_of_thisCollider_11() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___thisCollider_11)); }
+	inline Collider_t1773347010 * get_thisCollider_11() const { return ___thisCollider_11; }
+	inline Collider_t1773347010 ** get_address_of_thisCollider_11() { return &___thisCollider_11; }
+	inline void set_thisCollider_11(Collider_t1773347010 * value)
+	{
+		___thisCollider_11 = value;
+		Il2CppCodeGenWriteBarrier((&___thisCollider_11), value);
+	}
+
+	inline static int32_t get_offset_of_targetObject_12() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___targetObject_12)); }
+	inline GameObject_t1113636619 * get_targetObject_12() const { return ___targetObject_12; }
+	inline GameObject_t1113636619 ** get_address_of_targetObject_12() { return &___targetObject_12; }
+	inline void set_targetObject_12(GameObject_t1113636619 * value)
+	{
+		___targetObject_12 = value;
+		Il2CppCodeGenWriteBarrier((&___targetObject_12), value);
+	}
+
+	inline static int32_t get_offset_of_mainCamera_13() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___mainCamera_13)); }
+	inline Camera_t4157153871 * get_mainCamera_13() const { return ___mainCamera_13; }
+	inline Camera_t4157153871 ** get_address_of_mainCamera_13() { return &___mainCamera_13; }
+	inline void set_mainCamera_13(Camera_t4157153871 * value)
+	{
+		___mainCamera_13 = value;
+		Il2CppCodeGenWriteBarrier((&___mainCamera_13), value);
+	}
+
+	inline static int32_t get_offset_of_pickupTextObject_14() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___pickupTextObject_14)); }
+	inline GameObject_t1113636619 * get_pickupTextObject_14() const { return ___pickupTextObject_14; }
+	inline GameObject_t1113636619 ** get_address_of_pickupTextObject_14() { return &___pickupTextObject_14; }
+	inline void set_pickupTextObject_14(GameObject_t1113636619 * value)
+	{
+		___pickupTextObject_14 = value;
+		Il2CppCodeGenWriteBarrier((&___pickupTextObject_14), value);
+	}
+
+	inline static int32_t get_offset_of_hilightIcon_15() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___hilightIcon_15)); }
+	inline GameObject_t1113636619 * get_hilightIcon_15() const { return ___hilightIcon_15; }
+	inline GameObject_t1113636619 ** get_address_of_hilightIcon_15() { return &___hilightIcon_15; }
+	inline void set_hilightIcon_15(GameObject_t1113636619 * value)
+	{
+		___hilightIcon_15 = value;
+		Il2CppCodeGenWriteBarrier((&___hilightIcon_15), value);
+	}
+
+	inline static int32_t get_offset_of_iconImage_16() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___iconImage_16)); }
+	inline RawImage_t3182918964 * get_iconImage_16() const { return ___iconImage_16; }
+	inline RawImage_t3182918964 ** get_address_of_iconImage_16() { return &___iconImage_16; }
+	inline void set_iconImage_16(RawImage_t3182918964 * value)
+	{
+		___iconImage_16 = value;
+		Il2CppCodeGenWriteBarrier((&___iconImage_16), value);
+	}
+
+	inline static int32_t get_offset_of_dialogBG_17() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___dialogBG_17)); }
+	inline RawImage_t3182918964 * get_dialogBG_17() const { return ___dialogBG_17; }
+	inline RawImage_t3182918964 ** get_address_of_dialogBG_17() { return &___dialogBG_17; }
+	inline void set_dialogBG_17(RawImage_t3182918964 * value)
+	{
+		___dialogBG_17 = value;
+		Il2CppCodeGenWriteBarrier((&___dialogBG_17), value);
+	}
+
+	inline static int32_t get_offset_of_iconVisible_18() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___iconVisible_18)); }
+	inline Color_t2555686324  get_iconVisible_18() const { return ___iconVisible_18; }
+	inline Color_t2555686324 * get_address_of_iconVisible_18() { return &___iconVisible_18; }
+	inline void set_iconVisible_18(Color_t2555686324  value)
+	{
+		___iconVisible_18 = value;
+	}
+
+	inline static int32_t get_offset_of_colorOff_19() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___colorOff_19)); }
+	inline Color_t2555686324  get_colorOff_19() const { return ___colorOff_19; }
+	inline Color_t2555686324 * get_address_of_colorOff_19() { return &___colorOff_19; }
+	inline void set_colorOff_19(Color_t2555686324  value)
+	{
+		___colorOff_19 = value;
+	}
+
+	inline static int32_t get_offset_of_colorOn_20() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___colorOn_20)); }
+	inline Color_t2555686324  get_colorOn_20() const { return ___colorOn_20; }
+	inline Color_t2555686324 * get_address_of_colorOn_20() { return &___colorOn_20; }
+	inline void set_colorOn_20(Color_t2555686324  value)
+	{
+		___colorOn_20 = value;
+	}
+
+	inline static int32_t get_offset_of_dialogOn_21() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___dialogOn_21)); }
+	inline Color_t2555686324  get_dialogOn_21() const { return ___dialogOn_21; }
+	inline Color_t2555686324 * get_address_of_dialogOn_21() { return &___dialogOn_21; }
+	inline void set_dialogOn_21(Color_t2555686324  value)
+	{
+		___dialogOn_21 = value;
+	}
+
+	inline static int32_t get_offset_of_OSDText_22() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___OSDText_22)); }
+	inline TextMeshProUGUI_t529313277 * get_OSDText_22() const { return ___OSDText_22; }
+	inline TextMeshProUGUI_t529313277 ** get_address_of_OSDText_22() { return &___OSDText_22; }
+	inline void set_OSDText_22(TextMeshProUGUI_t529313277 * value)
+	{
+		___OSDText_22 = value;
+		Il2CppCodeGenWriteBarrier((&___OSDText_22), value);
+	}
+
+	inline static int32_t get_offset_of_batteryText_23() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___batteryText_23)); }
+	inline TextMeshProUGUI_t529313277 * get_batteryText_23() const { return ___batteryText_23; }
+	inline TextMeshProUGUI_t529313277 ** get_address_of_batteryText_23() { return &___batteryText_23; }
+	inline void set_batteryText_23(TextMeshProUGUI_t529313277 * value)
+	{
+		___batteryText_23 = value;
+		Il2CppCodeGenWriteBarrier((&___batteryText_23), value);
+	}
+
+	inline static int32_t get_offset_of_healedTexture_24() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___healedTexture_24)); }
+	inline Texture_t3661962703 * get_healedTexture_24() const { return ___healedTexture_24; }
+	inline Texture_t3661962703 ** get_address_of_healedTexture_24() { return &___healedTexture_24; }
+	inline void set_healedTexture_24(Texture_t3661962703 * value)
+	{
+		___healedTexture_24 = value;
+		Il2CppCodeGenWriteBarrier((&___healedTexture_24), value);
+	}
+
+	inline static int32_t get_offset_of_CROSS_26() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___CROSS_26)); }
+	inline int32_t get_CROSS_26() const { return ___CROSS_26; }
+	inline int32_t* get_address_of_CROSS_26() { return &___CROSS_26; }
+	inline void set_CROSS_26(int32_t value)
+	{
+		___CROSS_26 = value;
+	}
+
+	inline static int32_t get_offset_of_screenPosition_27() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___screenPosition_27)); }
+	inline Vector3_t3722313464  get_screenPosition_27() const { return ___screenPosition_27; }
+	inline Vector3_t3722313464 * get_address_of_screenPosition_27() { return &___screenPosition_27; }
+	inline void set_screenPosition_27(Vector3_t3722313464  value)
+	{
+		___screenPosition_27 = value;
+	}
+
+	inline static int32_t get_offset_of_targetPos_28() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___targetPos_28)); }
+	inline Vector3_t3722313464  get_targetPos_28() const { return ___targetPos_28; }
+	inline Vector3_t3722313464 * get_address_of_targetPos_28() { return &___targetPos_28; }
+	inline void set_targetPos_28(Vector3_t3722313464  value)
+	{
+		___targetPos_28 = value;
+	}
+
+	inline static int32_t get_offset_of_tempText_29() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___tempText_29)); }
+	inline String_t* get_tempText_29() const { return ___tempText_29; }
+	inline String_t** get_address_of_tempText_29() { return &___tempText_29; }
+	inline void set_tempText_29(String_t* value)
+	{
+		___tempText_29 = value;
+		Il2CppCodeGenWriteBarrier((&___tempText_29), value);
+	}
+
+	inline static int32_t get_offset_of_itemTexts_30() { return static_cast<int32_t>(offsetof(Item_Enumerator_t3915226614, ___itemTexts_30)); }
+	inline Dictionary_2_t1632706988 * get_itemTexts_30() const { return ___itemTexts_30; }
+	inline Dictionary_2_t1632706988 ** get_address_of_itemTexts_30() { return &___itemTexts_30; }
+	inline void set_itemTexts_30(Dictionary_2_t1632706988 * value)
+	{
+		___itemTexts_30 = value;
+		Il2CppCodeGenWriteBarrier((&___itemTexts_30), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ITEM_ENUMERATOR_T3915226614_H
+#ifndef LOADSCREEN_T3376497162_H
+#define LOADSCREEN_T3376497162_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// LoadScreen
+struct  LoadScreen_t3376497162  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.AsyncOperation LoadScreen::loadingOperation
+	AsyncOperation_t1445031843 * ___loadingOperation_4;
+	// System.Boolean LoadScreen::loading
+	bool ___loading_5;
+	// UnityEngine.CanvasGroup LoadScreen::canvasGroup
+	CanvasGroup_t4083511760 * ___canvasGroup_6;
+	// UnityEngine.UI.Image LoadScreen::progressCounterLeft
+	Image_t2670269651 * ___progressCounterLeft_7;
+	// UnityEngine.UI.Image LoadScreen::progressCounterRight
+	Image_t2670269651 * ___progressCounterRight_8;
+	// TMPro.TextMeshProUGUI LoadScreen::loaderHint
+	TextMeshProUGUI_t529313277 * ___loaderHint_9;
+	// System.Single LoadScreen::fadeDuration
+	float ___fadeDuration_10;
+	// System.Single LoadScreen::originalValue
+	float ___originalValue_11;
+	// System.Single LoadScreen::loadProgress
+	float ___loadProgress_12;
+	// System.Single LoadScreen::fadeValue
+	float ___fadeValue_13;
+	// System.Boolean LoadScreen::loadAtStart
+	bool ___loadAtStart_14;
+	// System.Boolean LoadScreen::canLoad
+	bool ___canLoad_15;
+
+public:
+	inline static int32_t get_offset_of_loadingOperation_4() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___loadingOperation_4)); }
+	inline AsyncOperation_t1445031843 * get_loadingOperation_4() const { return ___loadingOperation_4; }
+	inline AsyncOperation_t1445031843 ** get_address_of_loadingOperation_4() { return &___loadingOperation_4; }
+	inline void set_loadingOperation_4(AsyncOperation_t1445031843 * value)
+	{
+		___loadingOperation_4 = value;
+		Il2CppCodeGenWriteBarrier((&___loadingOperation_4), value);
+	}
+
+	inline static int32_t get_offset_of_loading_5() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___loading_5)); }
+	inline bool get_loading_5() const { return ___loading_5; }
+	inline bool* get_address_of_loading_5() { return &___loading_5; }
+	inline void set_loading_5(bool value)
+	{
+		___loading_5 = value;
+	}
+
+	inline static int32_t get_offset_of_canvasGroup_6() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___canvasGroup_6)); }
+	inline CanvasGroup_t4083511760 * get_canvasGroup_6() const { return ___canvasGroup_6; }
+	inline CanvasGroup_t4083511760 ** get_address_of_canvasGroup_6() { return &___canvasGroup_6; }
+	inline void set_canvasGroup_6(CanvasGroup_t4083511760 * value)
+	{
+		___canvasGroup_6 = value;
+		Il2CppCodeGenWriteBarrier((&___canvasGroup_6), value);
+	}
+
+	inline static int32_t get_offset_of_progressCounterLeft_7() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___progressCounterLeft_7)); }
+	inline Image_t2670269651 * get_progressCounterLeft_7() const { return ___progressCounterLeft_7; }
+	inline Image_t2670269651 ** get_address_of_progressCounterLeft_7() { return &___progressCounterLeft_7; }
+	inline void set_progressCounterLeft_7(Image_t2670269651 * value)
+	{
+		___progressCounterLeft_7 = value;
+		Il2CppCodeGenWriteBarrier((&___progressCounterLeft_7), value);
+	}
+
+	inline static int32_t get_offset_of_progressCounterRight_8() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___progressCounterRight_8)); }
+	inline Image_t2670269651 * get_progressCounterRight_8() const { return ___progressCounterRight_8; }
+	inline Image_t2670269651 ** get_address_of_progressCounterRight_8() { return &___progressCounterRight_8; }
+	inline void set_progressCounterRight_8(Image_t2670269651 * value)
+	{
+		___progressCounterRight_8 = value;
+		Il2CppCodeGenWriteBarrier((&___progressCounterRight_8), value);
+	}
+
+	inline static int32_t get_offset_of_loaderHint_9() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___loaderHint_9)); }
+	inline TextMeshProUGUI_t529313277 * get_loaderHint_9() const { return ___loaderHint_9; }
+	inline TextMeshProUGUI_t529313277 ** get_address_of_loaderHint_9() { return &___loaderHint_9; }
+	inline void set_loaderHint_9(TextMeshProUGUI_t529313277 * value)
+	{
+		___loaderHint_9 = value;
+		Il2CppCodeGenWriteBarrier((&___loaderHint_9), value);
+	}
+
+	inline static int32_t get_offset_of_fadeDuration_10() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___fadeDuration_10)); }
+	inline float get_fadeDuration_10() const { return ___fadeDuration_10; }
+	inline float* get_address_of_fadeDuration_10() { return &___fadeDuration_10; }
+	inline void set_fadeDuration_10(float value)
+	{
+		___fadeDuration_10 = value;
+	}
+
+	inline static int32_t get_offset_of_originalValue_11() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___originalValue_11)); }
+	inline float get_originalValue_11() const { return ___originalValue_11; }
+	inline float* get_address_of_originalValue_11() { return &___originalValue_11; }
+	inline void set_originalValue_11(float value)
+	{
+		___originalValue_11 = value;
+	}
+
+	inline static int32_t get_offset_of_loadProgress_12() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___loadProgress_12)); }
+	inline float get_loadProgress_12() const { return ___loadProgress_12; }
+	inline float* get_address_of_loadProgress_12() { return &___loadProgress_12; }
+	inline void set_loadProgress_12(float value)
+	{
+		___loadProgress_12 = value;
+	}
+
+	inline static int32_t get_offset_of_fadeValue_13() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___fadeValue_13)); }
+	inline float get_fadeValue_13() const { return ___fadeValue_13; }
+	inline float* get_address_of_fadeValue_13() { return &___fadeValue_13; }
+	inline void set_fadeValue_13(float value)
+	{
+		___fadeValue_13 = value;
+	}
+
+	inline static int32_t get_offset_of_loadAtStart_14() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___loadAtStart_14)); }
+	inline bool get_loadAtStart_14() const { return ___loadAtStart_14; }
+	inline bool* get_address_of_loadAtStart_14() { return &___loadAtStart_14; }
+	inline void set_loadAtStart_14(bool value)
+	{
+		___loadAtStart_14 = value;
+	}
+
+	inline static int32_t get_offset_of_canLoad_15() { return static_cast<int32_t>(offsetof(LoadScreen_t3376497162, ___canLoad_15)); }
+	inline bool get_canLoad_15() const { return ___canLoad_15; }
+	inline bool* get_address_of_canLoad_15() { return &___canLoad_15; }
+	inline void set_canLoad_15(bool value)
+	{
+		___canLoad_15 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // LOADSCREEN_T3376497162_H
+#ifndef MAPCONTROLLER_T3762646607_H
+#define MAPCONTROLLER_T3762646607_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// MapController
+struct  MapController_t3762646607  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Camera MapController::mapCamera
+	Camera_t4157153871 * ___mapCamera_4;
+	// System.Single MapController::minZoom
+	float ___minZoom_5;
+	// System.Single MapController::maxZoom
+	float ___maxZoom_6;
+	// UnityEngine.Vector3 MapController::pos
+	Vector3_t3722313464  ___pos_7;
+	// UnityEngine.GameObject MapController::mapArrow
+	GameObject_t1113636619 * ___mapArrow_8;
+	// UnityEngine.GameObject MapController::mapContainer
+	GameObject_t1113636619 * ___mapContainer_9;
+	// UnityEngine.Vector2 MapController::previousDistance
+	Vector2_t2156229523  ___previousDistance_10;
+	// UnityEngine.Vector2 MapController::currentDistance
+	Vector2_t2156229523  ___currentDistance_11;
+	// UnityEngine.Vector2 MapController::midPoint
+	Vector2_t2156229523  ___midPoint_12;
+	// UnityEngine.Vector2 MapController::ScreenSize
+	Vector2_t2156229523  ___ScreenSize_13;
+	// UnityEngine.Vector3 MapController::originalPos
+	Vector3_t3722313464  ___originalPos_14;
+	// System.String MapController::VITA
+	String_t* ___VITA_15;
+	// System.Single MapController::RIGHT
+	float ___RIGHT_16;
+	// System.Single MapController::LEFT
+	float ___LEFT_17;
+
+public:
+	inline static int32_t get_offset_of_mapCamera_4() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___mapCamera_4)); }
+	inline Camera_t4157153871 * get_mapCamera_4() const { return ___mapCamera_4; }
+	inline Camera_t4157153871 ** get_address_of_mapCamera_4() { return &___mapCamera_4; }
+	inline void set_mapCamera_4(Camera_t4157153871 * value)
+	{
+		___mapCamera_4 = value;
+		Il2CppCodeGenWriteBarrier((&___mapCamera_4), value);
+	}
+
+	inline static int32_t get_offset_of_minZoom_5() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___minZoom_5)); }
+	inline float get_minZoom_5() const { return ___minZoom_5; }
+	inline float* get_address_of_minZoom_5() { return &___minZoom_5; }
+	inline void set_minZoom_5(float value)
+	{
+		___minZoom_5 = value;
+	}
+
+	inline static int32_t get_offset_of_maxZoom_6() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___maxZoom_6)); }
+	inline float get_maxZoom_6() const { return ___maxZoom_6; }
+	inline float* get_address_of_maxZoom_6() { return &___maxZoom_6; }
+	inline void set_maxZoom_6(float value)
+	{
+		___maxZoom_6 = value;
+	}
+
+	inline static int32_t get_offset_of_pos_7() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___pos_7)); }
+	inline Vector3_t3722313464  get_pos_7() const { return ___pos_7; }
+	inline Vector3_t3722313464 * get_address_of_pos_7() { return &___pos_7; }
+	inline void set_pos_7(Vector3_t3722313464  value)
+	{
+		___pos_7 = value;
+	}
+
+	inline static int32_t get_offset_of_mapArrow_8() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___mapArrow_8)); }
+	inline GameObject_t1113636619 * get_mapArrow_8() const { return ___mapArrow_8; }
+	inline GameObject_t1113636619 ** get_address_of_mapArrow_8() { return &___mapArrow_8; }
+	inline void set_mapArrow_8(GameObject_t1113636619 * value)
+	{
+		___mapArrow_8 = value;
+		Il2CppCodeGenWriteBarrier((&___mapArrow_8), value);
+	}
+
+	inline static int32_t get_offset_of_mapContainer_9() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___mapContainer_9)); }
+	inline GameObject_t1113636619 * get_mapContainer_9() const { return ___mapContainer_9; }
+	inline GameObject_t1113636619 ** get_address_of_mapContainer_9() { return &___mapContainer_9; }
+	inline void set_mapContainer_9(GameObject_t1113636619 * value)
+	{
+		___mapContainer_9 = value;
+		Il2CppCodeGenWriteBarrier((&___mapContainer_9), value);
+	}
+
+	inline static int32_t get_offset_of_previousDistance_10() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___previousDistance_10)); }
+	inline Vector2_t2156229523  get_previousDistance_10() const { return ___previousDistance_10; }
+	inline Vector2_t2156229523 * get_address_of_previousDistance_10() { return &___previousDistance_10; }
+	inline void set_previousDistance_10(Vector2_t2156229523  value)
+	{
+		___previousDistance_10 = value;
+	}
+
+	inline static int32_t get_offset_of_currentDistance_11() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___currentDistance_11)); }
+	inline Vector2_t2156229523  get_currentDistance_11() const { return ___currentDistance_11; }
+	inline Vector2_t2156229523 * get_address_of_currentDistance_11() { return &___currentDistance_11; }
+	inline void set_currentDistance_11(Vector2_t2156229523  value)
+	{
+		___currentDistance_11 = value;
+	}
+
+	inline static int32_t get_offset_of_midPoint_12() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___midPoint_12)); }
+	inline Vector2_t2156229523  get_midPoint_12() const { return ___midPoint_12; }
+	inline Vector2_t2156229523 * get_address_of_midPoint_12() { return &___midPoint_12; }
+	inline void set_midPoint_12(Vector2_t2156229523  value)
+	{
+		___midPoint_12 = value;
+	}
+
+	inline static int32_t get_offset_of_ScreenSize_13() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___ScreenSize_13)); }
+	inline Vector2_t2156229523  get_ScreenSize_13() const { return ___ScreenSize_13; }
+	inline Vector2_t2156229523 * get_address_of_ScreenSize_13() { return &___ScreenSize_13; }
+	inline void set_ScreenSize_13(Vector2_t2156229523  value)
+	{
+		___ScreenSize_13 = value;
+	}
+
+	inline static int32_t get_offset_of_originalPos_14() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___originalPos_14)); }
+	inline Vector3_t3722313464  get_originalPos_14() const { return ___originalPos_14; }
+	inline Vector3_t3722313464 * get_address_of_originalPos_14() { return &___originalPos_14; }
+	inline void set_originalPos_14(Vector3_t3722313464  value)
+	{
+		___originalPos_14 = value;
+	}
+
+	inline static int32_t get_offset_of_VITA_15() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___VITA_15)); }
+	inline String_t* get_VITA_15() const { return ___VITA_15; }
+	inline String_t** get_address_of_VITA_15() { return &___VITA_15; }
+	inline void set_VITA_15(String_t* value)
+	{
+		___VITA_15 = value;
+		Il2CppCodeGenWriteBarrier((&___VITA_15), value);
+	}
+
+	inline static int32_t get_offset_of_RIGHT_16() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___RIGHT_16)); }
+	inline float get_RIGHT_16() const { return ___RIGHT_16; }
+	inline float* get_address_of_RIGHT_16() { return &___RIGHT_16; }
+	inline void set_RIGHT_16(float value)
+	{
+		___RIGHT_16 = value;
+	}
+
+	inline static int32_t get_offset_of_LEFT_17() { return static_cast<int32_t>(offsetof(MapController_t3762646607, ___LEFT_17)); }
+	inline float get_LEFT_17() const { return ___LEFT_17; }
+	inline float* get_address_of_LEFT_17() { return &___LEFT_17; }
+	inline void set_LEFT_17(float value)
+	{
+		___LEFT_17 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // MAPCONTROLLER_T3762646607_H
+#ifndef PLAYERCONTROLLER_T2064355688_H
+#define PLAYERCONTROLLER_T2064355688_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController
+struct  PlayerController_t2064355688  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.CharacterController PlayerController::characterController
+	CharacterController_t1138636865 * ___characterController_4;
+	// System.Single PlayerController::speed
+	float ___speed_7;
+	// System.Single PlayerController::stamina
+	float ___stamina_8;
+	// System.Single PlayerController::rechargeDelay
+	float ___rechargeDelay_9;
+	// System.Single PlayerController::stimCooldown
+	float ___stimCooldown_10;
+	// UnityEngine.GameObject PlayerController::staminaObject
+	GameObject_t1113636619 * ___staminaObject_11;
+	// System.Single PlayerController::walkSpeed
+	float ___walkSpeed_12;
+	// UnityEngine.Animator PlayerController::animator
+	Animator_t434523843 * ___animator_13;
+	// UnityEngine.Transform PlayerController::cameraRig
+	Transform_t3600365921 * ___cameraRig_14;
+	// UnityEngine.Transform PlayerController::Camera
+	Transform_t3600365921 * ___Camera_15;
+	// UnityEngine.Camera PlayerController::camObject
+	Camera_t4157153871 * ___camObject_16;
+	// UnityEngine.Light PlayerController::flashlight
+	Light_t3756812086 * ___flashlight_17;
+	// UnityEngine.Light PlayerController::vertlight
+	Light_t3756812086 * ___vertlight_18;
+	// UnityEngine.GameObject PlayerController::lightRig
+	GameObject_t1113636619 * ___lightRig_19;
+	// UnityEngine.GameObject PlayerController::lightObject
+	GameObject_t1113636619 * ___lightObject_20;
+	// UnityEngine.GameObject PlayerController::lightShaft
+	GameObject_t1113636619 * ___lightShaft_21;
+	// UnityEngine.Transform PlayerController::handRig
+	Transform_t3600365921 * ___handRig_22;
+	// UnityEngine.Transform PlayerController::bodyRig
+	Transform_t3600365921 * ___bodyRig_23;
+	// UnityEngine.Renderer PlayerController::lightBeam
+	Renderer_t2627027031 * ___lightBeam_24;
+	// UnityEngine.Renderer PlayerController::lightHaze
+	Renderer_t2627027031 * ___lightHaze_25;
+	// UnityEngine.GameObject PlayerController::lightChargeObject
+	GameObject_t1113636619 * ___lightChargeObject_26;
+	// System.Single PlayerController::lightCharge
+	float ___lightCharge_27;
+	// UnityEngine.Color PlayerController::colorStart
+	Color_t2555686324  ___colorStart_28;
+	// UnityEngine.Color PlayerController::colorEnd
+	Color_t2555686324  ___colorEnd_29;
+	// UnityEngine.Color PlayerController::colorTransparent
+	Color_t2555686324  ___colorTransparent_30;
+	// System.Single PlayerController::lightDuration
+	float ___lightDuration_31;
+	// System.Single PlayerController::lookSensitivity
+	float ___lookSensitivity_32;
+	// System.Single PlayerController::upLimit
+	float ___upLimit_33;
+	// System.Single PlayerController::downLimit
+	float ___downLimit_34;
+	// TMPro.TextMeshProUGUI PlayerController::batteryText
+	TextMeshProUGUI_t529313277 * ___batteryText_35;
+	// System.Single PlayerController::flashlightCharge
+	float ___flashlightCharge_36;
+	// System.Boolean PlayerController::flashlightDisabled
+	bool ___flashlightDisabled_37;
+	// UnityEngine.GameObject PlayerController::SSAOScript
+	GameObject_t1113636619 * ___SSAOScript_38;
+	// UnityEngine.GameObject PlayerController::BokehScript
+	GameObject_t1113636619 * ___BokehScript_39;
+	// UnityEngine.GameObject PlayerController::enabledText
+	GameObject_t1113636619 * ___enabledText_40;
+	// System.Single PlayerController::lerpRate
+	float ___lerpRate_41;
+	// System.Single PlayerController::gravity
+	float ___gravity_42;
+	// System.Single PlayerController::verticalSpeed
+	float ___verticalSpeed_43;
+	// System.String PlayerController::VITA
+	String_t* ___VITA_44;
+	// System.Int32 PlayerController::CROSS
+	int32_t ___CROSS_45;
+	// System.Int32 PlayerController::CIRCLE
+	int32_t ___CIRCLE_46;
+	// System.Int32 PlayerController::SQUARE
+	int32_t ___SQUARE_47;
+	// System.Int32 PlayerController::TRIANGLE
+	int32_t ___TRIANGLE_48;
+	// System.Int32 PlayerController::LTRIG
+	int32_t ___LTRIG_49;
+	// System.Int32 PlayerController::RTRIG
+	int32_t ___RTRIG_50;
+	// System.Int32 PlayerController::SELECT
+	int32_t ___SELECT_51;
+	// System.Int32 PlayerController::START
+	int32_t ___START_52;
+	// System.Single PlayerController::UP
+	float ___UP_53;
+	// System.Single PlayerController::RIGHT
+	float ___RIGHT_54;
+	// System.Single PlayerController::DOWN
+	float ___DOWN_55;
+	// System.Single PlayerController::LEFT
+	float ___LEFT_56;
+	// System.Single PlayerController::verticalMove
+	float ___verticalMove_57;
+	// System.Single PlayerController::horizontalRotation
+	float ___horizontalRotation_58;
+	// System.Single PlayerController::horizontalCamRotation
+	float ___horizontalCamRotation_59;
+	// System.Single PlayerController::verticalCamRotation
+	float ___verticalCamRotation_60;
+	// UnityEngine.Quaternion PlayerController::savedRotation
+	Quaternion_t2301928331  ___savedRotation_61;
+	// UnityEngine.Vector3 PlayerController::savedPosition
+	Vector3_t3722313464  ___savedPosition_62;
+	// System.Boolean PlayerController::fire
+	bool ___fire_63;
+	// UnityEngine.SkinnedMeshRenderer PlayerController::skinnedRenderer
+	SkinnedMeshRenderer_t245602842 * ___skinnedRenderer_64;
+	// System.Single PlayerController::walkStart
+	float ___walkStart_65;
+	// System.Boolean PlayerController::isLerping
+	bool ___isLerping_66;
+	// System.Boolean PlayerController::isPaused
+	bool ___isPaused_67;
+	// UnityEngine.UI.RawImage PlayerController::pausePanel
+	RawImage_t3182918964 * ___pausePanel_69;
+	// UnityEngine.UI.RawImage PlayerController::mapPanel
+	RawImage_t3182918964 * ___mapPanel_70;
+	// UnityEngine.Camera PlayerController::mapCam
+	Camera_t4157153871 * ___mapCam_71;
+	// UnityEngine.GameObject PlayerController::mapIndicator
+	GameObject_t1113636619 * ___mapIndicator_72;
+	// System.Boolean PlayerController::isStimulant
+	bool ___isStimulant_73;
+	// System.Single PlayerController::cooldownValue
+	float ___cooldownValue_74;
+	// System.Boolean PlayerController::delayButton
+	bool ___delayButton_75;
+
+public:
+	inline static int32_t get_offset_of_characterController_4() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___characterController_4)); }
+	inline CharacterController_t1138636865 * get_characterController_4() const { return ___characterController_4; }
+	inline CharacterController_t1138636865 ** get_address_of_characterController_4() { return &___characterController_4; }
+	inline void set_characterController_4(CharacterController_t1138636865 * value)
+	{
+		___characterController_4 = value;
+		Il2CppCodeGenWriteBarrier((&___characterController_4), value);
+	}
+
+	inline static int32_t get_offset_of_speed_7() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___speed_7)); }
+	inline float get_speed_7() const { return ___speed_7; }
+	inline float* get_address_of_speed_7() { return &___speed_7; }
+	inline void set_speed_7(float value)
+	{
+		___speed_7 = value;
+	}
+
+	inline static int32_t get_offset_of_stamina_8() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___stamina_8)); }
+	inline float get_stamina_8() const { return ___stamina_8; }
+	inline float* get_address_of_stamina_8() { return &___stamina_8; }
+	inline void set_stamina_8(float value)
+	{
+		___stamina_8 = value;
+	}
+
+	inline static int32_t get_offset_of_rechargeDelay_9() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___rechargeDelay_9)); }
+	inline float get_rechargeDelay_9() const { return ___rechargeDelay_9; }
+	inline float* get_address_of_rechargeDelay_9() { return &___rechargeDelay_9; }
+	inline void set_rechargeDelay_9(float value)
+	{
+		___rechargeDelay_9 = value;
+	}
+
+	inline static int32_t get_offset_of_stimCooldown_10() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___stimCooldown_10)); }
+	inline float get_stimCooldown_10() const { return ___stimCooldown_10; }
+	inline float* get_address_of_stimCooldown_10() { return &___stimCooldown_10; }
+	inline void set_stimCooldown_10(float value)
+	{
+		___stimCooldown_10 = value;
+	}
+
+	inline static int32_t get_offset_of_staminaObject_11() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___staminaObject_11)); }
+	inline GameObject_t1113636619 * get_staminaObject_11() const { return ___staminaObject_11; }
+	inline GameObject_t1113636619 ** get_address_of_staminaObject_11() { return &___staminaObject_11; }
+	inline void set_staminaObject_11(GameObject_t1113636619 * value)
+	{
+		___staminaObject_11 = value;
+		Il2CppCodeGenWriteBarrier((&___staminaObject_11), value);
+	}
+
+	inline static int32_t get_offset_of_walkSpeed_12() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___walkSpeed_12)); }
+	inline float get_walkSpeed_12() const { return ___walkSpeed_12; }
+	inline float* get_address_of_walkSpeed_12() { return &___walkSpeed_12; }
+	inline void set_walkSpeed_12(float value)
+	{
+		___walkSpeed_12 = value;
+	}
+
+	inline static int32_t get_offset_of_animator_13() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___animator_13)); }
+	inline Animator_t434523843 * get_animator_13() const { return ___animator_13; }
+	inline Animator_t434523843 ** get_address_of_animator_13() { return &___animator_13; }
+	inline void set_animator_13(Animator_t434523843 * value)
+	{
+		___animator_13 = value;
+		Il2CppCodeGenWriteBarrier((&___animator_13), value);
+	}
+
+	inline static int32_t get_offset_of_cameraRig_14() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___cameraRig_14)); }
+	inline Transform_t3600365921 * get_cameraRig_14() const { return ___cameraRig_14; }
+	inline Transform_t3600365921 ** get_address_of_cameraRig_14() { return &___cameraRig_14; }
+	inline void set_cameraRig_14(Transform_t3600365921 * value)
+	{
+		___cameraRig_14 = value;
+		Il2CppCodeGenWriteBarrier((&___cameraRig_14), value);
+	}
+
+	inline static int32_t get_offset_of_Camera_15() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___Camera_15)); }
+	inline Transform_t3600365921 * get_Camera_15() const { return ___Camera_15; }
+	inline Transform_t3600365921 ** get_address_of_Camera_15() { return &___Camera_15; }
+	inline void set_Camera_15(Transform_t3600365921 * value)
+	{
+		___Camera_15 = value;
+		Il2CppCodeGenWriteBarrier((&___Camera_15), value);
+	}
+
+	inline static int32_t get_offset_of_camObject_16() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___camObject_16)); }
+	inline Camera_t4157153871 * get_camObject_16() const { return ___camObject_16; }
+	inline Camera_t4157153871 ** get_address_of_camObject_16() { return &___camObject_16; }
+	inline void set_camObject_16(Camera_t4157153871 * value)
+	{
+		___camObject_16 = value;
+		Il2CppCodeGenWriteBarrier((&___camObject_16), value);
+	}
+
+	inline static int32_t get_offset_of_flashlight_17() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___flashlight_17)); }
+	inline Light_t3756812086 * get_flashlight_17() const { return ___flashlight_17; }
+	inline Light_t3756812086 ** get_address_of_flashlight_17() { return &___flashlight_17; }
+	inline void set_flashlight_17(Light_t3756812086 * value)
+	{
+		___flashlight_17 = value;
+		Il2CppCodeGenWriteBarrier((&___flashlight_17), value);
+	}
+
+	inline static int32_t get_offset_of_vertlight_18() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___vertlight_18)); }
+	inline Light_t3756812086 * get_vertlight_18() const { return ___vertlight_18; }
+	inline Light_t3756812086 ** get_address_of_vertlight_18() { return &___vertlight_18; }
+	inline void set_vertlight_18(Light_t3756812086 * value)
+	{
+		___vertlight_18 = value;
+		Il2CppCodeGenWriteBarrier((&___vertlight_18), value);
+	}
+
+	inline static int32_t get_offset_of_lightRig_19() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightRig_19)); }
+	inline GameObject_t1113636619 * get_lightRig_19() const { return ___lightRig_19; }
+	inline GameObject_t1113636619 ** get_address_of_lightRig_19() { return &___lightRig_19; }
+	inline void set_lightRig_19(GameObject_t1113636619 * value)
+	{
+		___lightRig_19 = value;
+		Il2CppCodeGenWriteBarrier((&___lightRig_19), value);
+	}
+
+	inline static int32_t get_offset_of_lightObject_20() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightObject_20)); }
+	inline GameObject_t1113636619 * get_lightObject_20() const { return ___lightObject_20; }
+	inline GameObject_t1113636619 ** get_address_of_lightObject_20() { return &___lightObject_20; }
+	inline void set_lightObject_20(GameObject_t1113636619 * value)
+	{
+		___lightObject_20 = value;
+		Il2CppCodeGenWriteBarrier((&___lightObject_20), value);
+	}
+
+	inline static int32_t get_offset_of_lightShaft_21() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightShaft_21)); }
+	inline GameObject_t1113636619 * get_lightShaft_21() const { return ___lightShaft_21; }
+	inline GameObject_t1113636619 ** get_address_of_lightShaft_21() { return &___lightShaft_21; }
+	inline void set_lightShaft_21(GameObject_t1113636619 * value)
+	{
+		___lightShaft_21 = value;
+		Il2CppCodeGenWriteBarrier((&___lightShaft_21), value);
+	}
+
+	inline static int32_t get_offset_of_handRig_22() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___handRig_22)); }
+	inline Transform_t3600365921 * get_handRig_22() const { return ___handRig_22; }
+	inline Transform_t3600365921 ** get_address_of_handRig_22() { return &___handRig_22; }
+	inline void set_handRig_22(Transform_t3600365921 * value)
+	{
+		___handRig_22 = value;
+		Il2CppCodeGenWriteBarrier((&___handRig_22), value);
+	}
+
+	inline static int32_t get_offset_of_bodyRig_23() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___bodyRig_23)); }
+	inline Transform_t3600365921 * get_bodyRig_23() const { return ___bodyRig_23; }
+	inline Transform_t3600365921 ** get_address_of_bodyRig_23() { return &___bodyRig_23; }
+	inline void set_bodyRig_23(Transform_t3600365921 * value)
+	{
+		___bodyRig_23 = value;
+		Il2CppCodeGenWriteBarrier((&___bodyRig_23), value);
+	}
+
+	inline static int32_t get_offset_of_lightBeam_24() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightBeam_24)); }
+	inline Renderer_t2627027031 * get_lightBeam_24() const { return ___lightBeam_24; }
+	inline Renderer_t2627027031 ** get_address_of_lightBeam_24() { return &___lightBeam_24; }
+	inline void set_lightBeam_24(Renderer_t2627027031 * value)
+	{
+		___lightBeam_24 = value;
+		Il2CppCodeGenWriteBarrier((&___lightBeam_24), value);
+	}
+
+	inline static int32_t get_offset_of_lightHaze_25() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightHaze_25)); }
+	inline Renderer_t2627027031 * get_lightHaze_25() const { return ___lightHaze_25; }
+	inline Renderer_t2627027031 ** get_address_of_lightHaze_25() { return &___lightHaze_25; }
+	inline void set_lightHaze_25(Renderer_t2627027031 * value)
+	{
+		___lightHaze_25 = value;
+		Il2CppCodeGenWriteBarrier((&___lightHaze_25), value);
+	}
+
+	inline static int32_t get_offset_of_lightChargeObject_26() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightChargeObject_26)); }
+	inline GameObject_t1113636619 * get_lightChargeObject_26() const { return ___lightChargeObject_26; }
+	inline GameObject_t1113636619 ** get_address_of_lightChargeObject_26() { return &___lightChargeObject_26; }
+	inline void set_lightChargeObject_26(GameObject_t1113636619 * value)
+	{
+		___lightChargeObject_26 = value;
+		Il2CppCodeGenWriteBarrier((&___lightChargeObject_26), value);
+	}
+
+	inline static int32_t get_offset_of_lightCharge_27() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightCharge_27)); }
+	inline float get_lightCharge_27() const { return ___lightCharge_27; }
+	inline float* get_address_of_lightCharge_27() { return &___lightCharge_27; }
+	inline void set_lightCharge_27(float value)
+	{
+		___lightCharge_27 = value;
+	}
+
+	inline static int32_t get_offset_of_colorStart_28() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___colorStart_28)); }
+	inline Color_t2555686324  get_colorStart_28() const { return ___colorStart_28; }
+	inline Color_t2555686324 * get_address_of_colorStart_28() { return &___colorStart_28; }
+	inline void set_colorStart_28(Color_t2555686324  value)
+	{
+		___colorStart_28 = value;
+	}
+
+	inline static int32_t get_offset_of_colorEnd_29() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___colorEnd_29)); }
+	inline Color_t2555686324  get_colorEnd_29() const { return ___colorEnd_29; }
+	inline Color_t2555686324 * get_address_of_colorEnd_29() { return &___colorEnd_29; }
+	inline void set_colorEnd_29(Color_t2555686324  value)
+	{
+		___colorEnd_29 = value;
+	}
+
+	inline static int32_t get_offset_of_colorTransparent_30() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___colorTransparent_30)); }
+	inline Color_t2555686324  get_colorTransparent_30() const { return ___colorTransparent_30; }
+	inline Color_t2555686324 * get_address_of_colorTransparent_30() { return &___colorTransparent_30; }
+	inline void set_colorTransparent_30(Color_t2555686324  value)
+	{
+		___colorTransparent_30 = value;
+	}
+
+	inline static int32_t get_offset_of_lightDuration_31() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lightDuration_31)); }
+	inline float get_lightDuration_31() const { return ___lightDuration_31; }
+	inline float* get_address_of_lightDuration_31() { return &___lightDuration_31; }
+	inline void set_lightDuration_31(float value)
+	{
+		___lightDuration_31 = value;
+	}
+
+	inline static int32_t get_offset_of_lookSensitivity_32() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lookSensitivity_32)); }
+	inline float get_lookSensitivity_32() const { return ___lookSensitivity_32; }
+	inline float* get_address_of_lookSensitivity_32() { return &___lookSensitivity_32; }
+	inline void set_lookSensitivity_32(float value)
+	{
+		___lookSensitivity_32 = value;
+	}
+
+	inline static int32_t get_offset_of_upLimit_33() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___upLimit_33)); }
+	inline float get_upLimit_33() const { return ___upLimit_33; }
+	inline float* get_address_of_upLimit_33() { return &___upLimit_33; }
+	inline void set_upLimit_33(float value)
+	{
+		___upLimit_33 = value;
+	}
+
+	inline static int32_t get_offset_of_downLimit_34() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___downLimit_34)); }
+	inline float get_downLimit_34() const { return ___downLimit_34; }
+	inline float* get_address_of_downLimit_34() { return &___downLimit_34; }
+	inline void set_downLimit_34(float value)
+	{
+		___downLimit_34 = value;
+	}
+
+	inline static int32_t get_offset_of_batteryText_35() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___batteryText_35)); }
+	inline TextMeshProUGUI_t529313277 * get_batteryText_35() const { return ___batteryText_35; }
+	inline TextMeshProUGUI_t529313277 ** get_address_of_batteryText_35() { return &___batteryText_35; }
+	inline void set_batteryText_35(TextMeshProUGUI_t529313277 * value)
+	{
+		___batteryText_35 = value;
+		Il2CppCodeGenWriteBarrier((&___batteryText_35), value);
+	}
+
+	inline static int32_t get_offset_of_flashlightCharge_36() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___flashlightCharge_36)); }
+	inline float get_flashlightCharge_36() const { return ___flashlightCharge_36; }
+	inline float* get_address_of_flashlightCharge_36() { return &___flashlightCharge_36; }
+	inline void set_flashlightCharge_36(float value)
+	{
+		___flashlightCharge_36 = value;
+	}
+
+	inline static int32_t get_offset_of_flashlightDisabled_37() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___flashlightDisabled_37)); }
+	inline bool get_flashlightDisabled_37() const { return ___flashlightDisabled_37; }
+	inline bool* get_address_of_flashlightDisabled_37() { return &___flashlightDisabled_37; }
+	inline void set_flashlightDisabled_37(bool value)
+	{
+		___flashlightDisabled_37 = value;
+	}
+
+	inline static int32_t get_offset_of_SSAOScript_38() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___SSAOScript_38)); }
+	inline GameObject_t1113636619 * get_SSAOScript_38() const { return ___SSAOScript_38; }
+	inline GameObject_t1113636619 ** get_address_of_SSAOScript_38() { return &___SSAOScript_38; }
+	inline void set_SSAOScript_38(GameObject_t1113636619 * value)
+	{
+		___SSAOScript_38 = value;
+		Il2CppCodeGenWriteBarrier((&___SSAOScript_38), value);
+	}
+
+	inline static int32_t get_offset_of_BokehScript_39() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___BokehScript_39)); }
+	inline GameObject_t1113636619 * get_BokehScript_39() const { return ___BokehScript_39; }
+	inline GameObject_t1113636619 ** get_address_of_BokehScript_39() { return &___BokehScript_39; }
+	inline void set_BokehScript_39(GameObject_t1113636619 * value)
+	{
+		___BokehScript_39 = value;
+		Il2CppCodeGenWriteBarrier((&___BokehScript_39), value);
+	}
+
+	inline static int32_t get_offset_of_enabledText_40() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___enabledText_40)); }
+	inline GameObject_t1113636619 * get_enabledText_40() const { return ___enabledText_40; }
+	inline GameObject_t1113636619 ** get_address_of_enabledText_40() { return &___enabledText_40; }
+	inline void set_enabledText_40(GameObject_t1113636619 * value)
+	{
+		___enabledText_40 = value;
+		Il2CppCodeGenWriteBarrier((&___enabledText_40), value);
+	}
+
+	inline static int32_t get_offset_of_lerpRate_41() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___lerpRate_41)); }
+	inline float get_lerpRate_41() const { return ___lerpRate_41; }
+	inline float* get_address_of_lerpRate_41() { return &___lerpRate_41; }
+	inline void set_lerpRate_41(float value)
+	{
+		___lerpRate_41 = value;
+	}
+
+	inline static int32_t get_offset_of_gravity_42() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___gravity_42)); }
+	inline float get_gravity_42() const { return ___gravity_42; }
+	inline float* get_address_of_gravity_42() { return &___gravity_42; }
+	inline void set_gravity_42(float value)
+	{
+		___gravity_42 = value;
+	}
+
+	inline static int32_t get_offset_of_verticalSpeed_43() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___verticalSpeed_43)); }
+	inline float get_verticalSpeed_43() const { return ___verticalSpeed_43; }
+	inline float* get_address_of_verticalSpeed_43() { return &___verticalSpeed_43; }
+	inline void set_verticalSpeed_43(float value)
+	{
+		___verticalSpeed_43 = value;
+	}
+
+	inline static int32_t get_offset_of_VITA_44() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___VITA_44)); }
+	inline String_t* get_VITA_44() const { return ___VITA_44; }
+	inline String_t** get_address_of_VITA_44() { return &___VITA_44; }
+	inline void set_VITA_44(String_t* value)
+	{
+		___VITA_44 = value;
+		Il2CppCodeGenWriteBarrier((&___VITA_44), value);
+	}
+
+	inline static int32_t get_offset_of_CROSS_45() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___CROSS_45)); }
+	inline int32_t get_CROSS_45() const { return ___CROSS_45; }
+	inline int32_t* get_address_of_CROSS_45() { return &___CROSS_45; }
+	inline void set_CROSS_45(int32_t value)
+	{
+		___CROSS_45 = value;
+	}
+
+	inline static int32_t get_offset_of_CIRCLE_46() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___CIRCLE_46)); }
+	inline int32_t get_CIRCLE_46() const { return ___CIRCLE_46; }
+	inline int32_t* get_address_of_CIRCLE_46() { return &___CIRCLE_46; }
+	inline void set_CIRCLE_46(int32_t value)
+	{
+		___CIRCLE_46 = value;
+	}
+
+	inline static int32_t get_offset_of_SQUARE_47() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___SQUARE_47)); }
+	inline int32_t get_SQUARE_47() const { return ___SQUARE_47; }
+	inline int32_t* get_address_of_SQUARE_47() { return &___SQUARE_47; }
+	inline void set_SQUARE_47(int32_t value)
+	{
+		___SQUARE_47 = value;
+	}
+
+	inline static int32_t get_offset_of_TRIANGLE_48() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___TRIANGLE_48)); }
+	inline int32_t get_TRIANGLE_48() const { return ___TRIANGLE_48; }
+	inline int32_t* get_address_of_TRIANGLE_48() { return &___TRIANGLE_48; }
+	inline void set_TRIANGLE_48(int32_t value)
+	{
+		___TRIANGLE_48 = value;
+	}
+
+	inline static int32_t get_offset_of_LTRIG_49() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___LTRIG_49)); }
+	inline int32_t get_LTRIG_49() const { return ___LTRIG_49; }
+	inline int32_t* get_address_of_LTRIG_49() { return &___LTRIG_49; }
+	inline void set_LTRIG_49(int32_t value)
+	{
+		___LTRIG_49 = value;
+	}
+
+	inline static int32_t get_offset_of_RTRIG_50() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___RTRIG_50)); }
+	inline int32_t get_RTRIG_50() const { return ___RTRIG_50; }
+	inline int32_t* get_address_of_RTRIG_50() { return &___RTRIG_50; }
+	inline void set_RTRIG_50(int32_t value)
+	{
+		___RTRIG_50 = value;
+	}
+
+	inline static int32_t get_offset_of_SELECT_51() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___SELECT_51)); }
+	inline int32_t get_SELECT_51() const { return ___SELECT_51; }
+	inline int32_t* get_address_of_SELECT_51() { return &___SELECT_51; }
+	inline void set_SELECT_51(int32_t value)
+	{
+		___SELECT_51 = value;
+	}
+
+	inline static int32_t get_offset_of_START_52() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___START_52)); }
+	inline int32_t get_START_52() const { return ___START_52; }
+	inline int32_t* get_address_of_START_52() { return &___START_52; }
+	inline void set_START_52(int32_t value)
+	{
+		___START_52 = value;
+	}
+
+	inline static int32_t get_offset_of_UP_53() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___UP_53)); }
+	inline float get_UP_53() const { return ___UP_53; }
+	inline float* get_address_of_UP_53() { return &___UP_53; }
+	inline void set_UP_53(float value)
+	{
+		___UP_53 = value;
+	}
+
+	inline static int32_t get_offset_of_RIGHT_54() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___RIGHT_54)); }
+	inline float get_RIGHT_54() const { return ___RIGHT_54; }
+	inline float* get_address_of_RIGHT_54() { return &___RIGHT_54; }
+	inline void set_RIGHT_54(float value)
+	{
+		___RIGHT_54 = value;
+	}
+
+	inline static int32_t get_offset_of_DOWN_55() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___DOWN_55)); }
+	inline float get_DOWN_55() const { return ___DOWN_55; }
+	inline float* get_address_of_DOWN_55() { return &___DOWN_55; }
+	inline void set_DOWN_55(float value)
+	{
+		___DOWN_55 = value;
+	}
+
+	inline static int32_t get_offset_of_LEFT_56() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___LEFT_56)); }
+	inline float get_LEFT_56() const { return ___LEFT_56; }
+	inline float* get_address_of_LEFT_56() { return &___LEFT_56; }
+	inline void set_LEFT_56(float value)
+	{
+		___LEFT_56 = value;
+	}
+
+	inline static int32_t get_offset_of_verticalMove_57() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___verticalMove_57)); }
+	inline float get_verticalMove_57() const { return ___verticalMove_57; }
+	inline float* get_address_of_verticalMove_57() { return &___verticalMove_57; }
+	inline void set_verticalMove_57(float value)
+	{
+		___verticalMove_57 = value;
+	}
+
+	inline static int32_t get_offset_of_horizontalRotation_58() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___horizontalRotation_58)); }
+	inline float get_horizontalRotation_58() const { return ___horizontalRotation_58; }
+	inline float* get_address_of_horizontalRotation_58() { return &___horizontalRotation_58; }
+	inline void set_horizontalRotation_58(float value)
+	{
+		___horizontalRotation_58 = value;
+	}
+
+	inline static int32_t get_offset_of_horizontalCamRotation_59() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___horizontalCamRotation_59)); }
+	inline float get_horizontalCamRotation_59() const { return ___horizontalCamRotation_59; }
+	inline float* get_address_of_horizontalCamRotation_59() { return &___horizontalCamRotation_59; }
+	inline void set_horizontalCamRotation_59(float value)
+	{
+		___horizontalCamRotation_59 = value;
+	}
+
+	inline static int32_t get_offset_of_verticalCamRotation_60() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___verticalCamRotation_60)); }
+	inline float get_verticalCamRotation_60() const { return ___verticalCamRotation_60; }
+	inline float* get_address_of_verticalCamRotation_60() { return &___verticalCamRotation_60; }
+	inline void set_verticalCamRotation_60(float value)
+	{
+		___verticalCamRotation_60 = value;
+	}
+
+	inline static int32_t get_offset_of_savedRotation_61() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___savedRotation_61)); }
+	inline Quaternion_t2301928331  get_savedRotation_61() const { return ___savedRotation_61; }
+	inline Quaternion_t2301928331 * get_address_of_savedRotation_61() { return &___savedRotation_61; }
+	inline void set_savedRotation_61(Quaternion_t2301928331  value)
+	{
+		___savedRotation_61 = value;
+	}
+
+	inline static int32_t get_offset_of_savedPosition_62() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___savedPosition_62)); }
+	inline Vector3_t3722313464  get_savedPosition_62() const { return ___savedPosition_62; }
+	inline Vector3_t3722313464 * get_address_of_savedPosition_62() { return &___savedPosition_62; }
+	inline void set_savedPosition_62(Vector3_t3722313464  value)
+	{
+		___savedPosition_62 = value;
+	}
+
+	inline static int32_t get_offset_of_fire_63() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___fire_63)); }
+	inline bool get_fire_63() const { return ___fire_63; }
+	inline bool* get_address_of_fire_63() { return &___fire_63; }
+	inline void set_fire_63(bool value)
+	{
+		___fire_63 = value;
+	}
+
+	inline static int32_t get_offset_of_skinnedRenderer_64() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___skinnedRenderer_64)); }
+	inline SkinnedMeshRenderer_t245602842 * get_skinnedRenderer_64() const { return ___skinnedRenderer_64; }
+	inline SkinnedMeshRenderer_t245602842 ** get_address_of_skinnedRenderer_64() { return &___skinnedRenderer_64; }
+	inline void set_skinnedRenderer_64(SkinnedMeshRenderer_t245602842 * value)
+	{
+		___skinnedRenderer_64 = value;
+		Il2CppCodeGenWriteBarrier((&___skinnedRenderer_64), value);
+	}
+
+	inline static int32_t get_offset_of_walkStart_65() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___walkStart_65)); }
+	inline float get_walkStart_65() const { return ___walkStart_65; }
+	inline float* get_address_of_walkStart_65() { return &___walkStart_65; }
+	inline void set_walkStart_65(float value)
+	{
+		___walkStart_65 = value;
+	}
+
+	inline static int32_t get_offset_of_isLerping_66() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___isLerping_66)); }
+	inline bool get_isLerping_66() const { return ___isLerping_66; }
+	inline bool* get_address_of_isLerping_66() { return &___isLerping_66; }
+	inline void set_isLerping_66(bool value)
+	{
+		___isLerping_66 = value;
+	}
+
+	inline static int32_t get_offset_of_isPaused_67() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___isPaused_67)); }
+	inline bool get_isPaused_67() const { return ___isPaused_67; }
+	inline bool* get_address_of_isPaused_67() { return &___isPaused_67; }
+	inline void set_isPaused_67(bool value)
+	{
+		___isPaused_67 = value;
+	}
+
+	inline static int32_t get_offset_of_pausePanel_69() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___pausePanel_69)); }
+	inline RawImage_t3182918964 * get_pausePanel_69() const { return ___pausePanel_69; }
+	inline RawImage_t3182918964 ** get_address_of_pausePanel_69() { return &___pausePanel_69; }
+	inline void set_pausePanel_69(RawImage_t3182918964 * value)
+	{
+		___pausePanel_69 = value;
+		Il2CppCodeGenWriteBarrier((&___pausePanel_69), value);
+	}
+
+	inline static int32_t get_offset_of_mapPanel_70() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___mapPanel_70)); }
+	inline RawImage_t3182918964 * get_mapPanel_70() const { return ___mapPanel_70; }
+	inline RawImage_t3182918964 ** get_address_of_mapPanel_70() { return &___mapPanel_70; }
+	inline void set_mapPanel_70(RawImage_t3182918964 * value)
+	{
+		___mapPanel_70 = value;
+		Il2CppCodeGenWriteBarrier((&___mapPanel_70), value);
+	}
+
+	inline static int32_t get_offset_of_mapCam_71() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___mapCam_71)); }
+	inline Camera_t4157153871 * get_mapCam_71() const { return ___mapCam_71; }
+	inline Camera_t4157153871 ** get_address_of_mapCam_71() { return &___mapCam_71; }
+	inline void set_mapCam_71(Camera_t4157153871 * value)
+	{
+		___mapCam_71 = value;
+		Il2CppCodeGenWriteBarrier((&___mapCam_71), value);
+	}
+
+	inline static int32_t get_offset_of_mapIndicator_72() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___mapIndicator_72)); }
+	inline GameObject_t1113636619 * get_mapIndicator_72() const { return ___mapIndicator_72; }
+	inline GameObject_t1113636619 ** get_address_of_mapIndicator_72() { return &___mapIndicator_72; }
+	inline void set_mapIndicator_72(GameObject_t1113636619 * value)
+	{
+		___mapIndicator_72 = value;
+		Il2CppCodeGenWriteBarrier((&___mapIndicator_72), value);
+	}
+
+	inline static int32_t get_offset_of_isStimulant_73() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___isStimulant_73)); }
+	inline bool get_isStimulant_73() const { return ___isStimulant_73; }
+	inline bool* get_address_of_isStimulant_73() { return &___isStimulant_73; }
+	inline void set_isStimulant_73(bool value)
+	{
+		___isStimulant_73 = value;
+	}
+
+	inline static int32_t get_offset_of_cooldownValue_74() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___cooldownValue_74)); }
+	inline float get_cooldownValue_74() const { return ___cooldownValue_74; }
+	inline float* get_address_of_cooldownValue_74() { return &___cooldownValue_74; }
+	inline void set_cooldownValue_74(float value)
+	{
+		___cooldownValue_74 = value;
+	}
+
+	inline static int32_t get_offset_of_delayButton_75() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___delayButton_75)); }
+	inline bool get_delayButton_75() const { return ___delayButton_75; }
+	inline bool* get_address_of_delayButton_75() { return &___delayButton_75; }
+	inline void set_delayButton_75(bool value)
+	{
+		___delayButton_75 = value;
+	}
+};
+
+struct PlayerController_t2064355688_StaticFields
+{
+public:
+	// System.Boolean PlayerController::hasFlashlight
+	bool ___hasFlashlight_5;
+	// System.Boolean PlayerController::flashlightOff
+	bool ___flashlightOff_6;
+	// System.Boolean PlayerController::isMap
+	bool ___isMap_68;
+
+public:
+	inline static int32_t get_offset_of_hasFlashlight_5() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688_StaticFields, ___hasFlashlight_5)); }
+	inline bool get_hasFlashlight_5() const { return ___hasFlashlight_5; }
+	inline bool* get_address_of_hasFlashlight_5() { return &___hasFlashlight_5; }
+	inline void set_hasFlashlight_5(bool value)
+	{
+		___hasFlashlight_5 = value;
+	}
+
+	inline static int32_t get_offset_of_flashlightOff_6() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688_StaticFields, ___flashlightOff_6)); }
+	inline bool get_flashlightOff_6() const { return ___flashlightOff_6; }
+	inline bool* get_address_of_flashlightOff_6() { return &___flashlightOff_6; }
+	inline void set_flashlightOff_6(bool value)
+	{
+		___flashlightOff_6 = value;
+	}
+
+	inline static int32_t get_offset_of_isMap_68() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688_StaticFields, ___isMap_68)); }
+	inline bool get_isMap_68() const { return ___isMap_68; }
+	inline bool* get_address_of_isMap_68() { return &___isMap_68; }
+	inline void set_isMap_68(bool value)
+	{
+		___isMap_68 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // PLAYERCONTROLLER_T2064355688_H
+#ifndef POSTPROCESSINGMANAGER_T277976412_H
+#define POSTPROCESSINGMANAGER_T277976412_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PostProcessingManager
+struct  PostProcessingManager_t277976412  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material PostProcessingManager::fxaaMaterial
+	Material_t340375123 * ___fxaaMaterial_4;
+	// System.Single PostProcessingManager::Sharpness
+	float ___Sharpness_5;
+	// System.Single PostProcessingManager::Threshold
+	float ___Threshold_6;
+	// System.Single PostProcessingManager::_startDistance
+	float ____startDistance_9;
+	// System.Boolean PostProcessingManager::_useRadialDistance
+	bool ____useRadialDistance_10;
+	// System.Boolean PostProcessingManager::_fadeToSkybox
+	bool ____fadeToSkybox_11;
+	// UnityEngine.Shader PostProcessingManager::fogShader
+	Shader_t4151988712 * ___fogShader_12;
+	// UnityEngine.Material PostProcessingManager::fogMaterial
+	Material_t340375123 * ___fogMaterial_13;
+	// System.Single PostProcessingManager::Intensity
+	float ___Intensity_14;
+	// System.Single PostProcessingManager::BlurAmount
+	float ___BlurAmount_15;
+	// System.Single PostProcessingManager::Radius
+	float ___Radius_16;
+	// System.Single PostProcessingManager::Area
+	float ___Area_17;
+	// System.Boolean PostProcessingManager::FastMode
+	bool ___FastMode_18;
+	// UnityEngine.Material PostProcessingManager::ssaoMaterial
+	Material_t340375123 * ___ssaoMaterial_19;
+	// UnityEngine.Camera PostProcessingManager::cam
+	Camera_t4157153871 * ___cam_20;
+	// System.Single PostProcessingManager::threshold
+	float ___threshold_27;
+	// System.Single PostProcessingManager::intensity
+	float ___intensity_28;
+	// System.Single PostProcessingManager::blurSize
+	float ___blurSize_29;
+	// System.Int32 PostProcessingManager::blurIterations
+	int32_t ___blurIterations_30;
+	// UnityEngine.Material PostProcessingManager::fastBloomMaterial
+	Material_t340375123 * ___fastBloomMaterial_31;
+
+public:
+	inline static int32_t get_offset_of_fxaaMaterial_4() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___fxaaMaterial_4)); }
+	inline Material_t340375123 * get_fxaaMaterial_4() const { return ___fxaaMaterial_4; }
+	inline Material_t340375123 ** get_address_of_fxaaMaterial_4() { return &___fxaaMaterial_4; }
+	inline void set_fxaaMaterial_4(Material_t340375123 * value)
+	{
+		___fxaaMaterial_4 = value;
+		Il2CppCodeGenWriteBarrier((&___fxaaMaterial_4), value);
+	}
+
+	inline static int32_t get_offset_of_Sharpness_5() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___Sharpness_5)); }
+	inline float get_Sharpness_5() const { return ___Sharpness_5; }
+	inline float* get_address_of_Sharpness_5() { return &___Sharpness_5; }
+	inline void set_Sharpness_5(float value)
+	{
+		___Sharpness_5 = value;
+	}
+
+	inline static int32_t get_offset_of_Threshold_6() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___Threshold_6)); }
+	inline float get_Threshold_6() const { return ___Threshold_6; }
+	inline float* get_address_of_Threshold_6() { return &___Threshold_6; }
+	inline void set_Threshold_6(float value)
+	{
+		___Threshold_6 = value;
+	}
+
+	inline static int32_t get_offset_of__startDistance_9() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ____startDistance_9)); }
+	inline float get__startDistance_9() const { return ____startDistance_9; }
+	inline float* get_address_of__startDistance_9() { return &____startDistance_9; }
+	inline void set__startDistance_9(float value)
+	{
+		____startDistance_9 = value;
+	}
+
+	inline static int32_t get_offset_of__useRadialDistance_10() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ____useRadialDistance_10)); }
+	inline bool get__useRadialDistance_10() const { return ____useRadialDistance_10; }
+	inline bool* get_address_of__useRadialDistance_10() { return &____useRadialDistance_10; }
+	inline void set__useRadialDistance_10(bool value)
+	{
+		____useRadialDistance_10 = value;
+	}
+
+	inline static int32_t get_offset_of__fadeToSkybox_11() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ____fadeToSkybox_11)); }
+	inline bool get__fadeToSkybox_11() const { return ____fadeToSkybox_11; }
+	inline bool* get_address_of__fadeToSkybox_11() { return &____fadeToSkybox_11; }
+	inline void set__fadeToSkybox_11(bool value)
+	{
+		____fadeToSkybox_11 = value;
+	}
+
+	inline static int32_t get_offset_of_fogShader_12() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___fogShader_12)); }
+	inline Shader_t4151988712 * get_fogShader_12() const { return ___fogShader_12; }
+	inline Shader_t4151988712 ** get_address_of_fogShader_12() { return &___fogShader_12; }
+	inline void set_fogShader_12(Shader_t4151988712 * value)
+	{
+		___fogShader_12 = value;
+		Il2CppCodeGenWriteBarrier((&___fogShader_12), value);
+	}
+
+	inline static int32_t get_offset_of_fogMaterial_13() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___fogMaterial_13)); }
+	inline Material_t340375123 * get_fogMaterial_13() const { return ___fogMaterial_13; }
+	inline Material_t340375123 ** get_address_of_fogMaterial_13() { return &___fogMaterial_13; }
+	inline void set_fogMaterial_13(Material_t340375123 * value)
+	{
+		___fogMaterial_13 = value;
+		Il2CppCodeGenWriteBarrier((&___fogMaterial_13), value);
+	}
+
+	inline static int32_t get_offset_of_Intensity_14() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___Intensity_14)); }
+	inline float get_Intensity_14() const { return ___Intensity_14; }
+	inline float* get_address_of_Intensity_14() { return &___Intensity_14; }
+	inline void set_Intensity_14(float value)
+	{
+		___Intensity_14 = value;
+	}
+
+	inline static int32_t get_offset_of_BlurAmount_15() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___BlurAmount_15)); }
+	inline float get_BlurAmount_15() const { return ___BlurAmount_15; }
+	inline float* get_address_of_BlurAmount_15() { return &___BlurAmount_15; }
+	inline void set_BlurAmount_15(float value)
+	{
+		___BlurAmount_15 = value;
+	}
+
+	inline static int32_t get_offset_of_Radius_16() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___Radius_16)); }
+	inline float get_Radius_16() const { return ___Radius_16; }
+	inline float* get_address_of_Radius_16() { return &___Radius_16; }
+	inline void set_Radius_16(float value)
+	{
+		___Radius_16 = value;
+	}
+
+	inline static int32_t get_offset_of_Area_17() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___Area_17)); }
+	inline float get_Area_17() const { return ___Area_17; }
+	inline float* get_address_of_Area_17() { return &___Area_17; }
+	inline void set_Area_17(float value)
+	{
+		___Area_17 = value;
+	}
+
+	inline static int32_t get_offset_of_FastMode_18() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___FastMode_18)); }
+	inline bool get_FastMode_18() const { return ___FastMode_18; }
+	inline bool* get_address_of_FastMode_18() { return &___FastMode_18; }
+	inline void set_FastMode_18(bool value)
+	{
+		___FastMode_18 = value;
+	}
+
+	inline static int32_t get_offset_of_ssaoMaterial_19() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___ssaoMaterial_19)); }
+	inline Material_t340375123 * get_ssaoMaterial_19() const { return ___ssaoMaterial_19; }
+	inline Material_t340375123 ** get_address_of_ssaoMaterial_19() { return &___ssaoMaterial_19; }
+	inline void set_ssaoMaterial_19(Material_t340375123 * value)
+	{
+		___ssaoMaterial_19 = value;
+		Il2CppCodeGenWriteBarrier((&___ssaoMaterial_19), value);
+	}
+
+	inline static int32_t get_offset_of_cam_20() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___cam_20)); }
+	inline Camera_t4157153871 * get_cam_20() const { return ___cam_20; }
+	inline Camera_t4157153871 ** get_address_of_cam_20() { return &___cam_20; }
+	inline void set_cam_20(Camera_t4157153871 * value)
+	{
+		___cam_20 = value;
+		Il2CppCodeGenWriteBarrier((&___cam_20), value);
+	}
+
+	inline static int32_t get_offset_of_threshold_27() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___threshold_27)); }
+	inline float get_threshold_27() const { return ___threshold_27; }
+	inline float* get_address_of_threshold_27() { return &___threshold_27; }
+	inline void set_threshold_27(float value)
+	{
+		___threshold_27 = value;
+	}
+
+	inline static int32_t get_offset_of_intensity_28() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___intensity_28)); }
+	inline float get_intensity_28() const { return ___intensity_28; }
+	inline float* get_address_of_intensity_28() { return &___intensity_28; }
+	inline void set_intensity_28(float value)
+	{
+		___intensity_28 = value;
+	}
+
+	inline static int32_t get_offset_of_blurSize_29() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___blurSize_29)); }
+	inline float get_blurSize_29() const { return ___blurSize_29; }
+	inline float* get_address_of_blurSize_29() { return &___blurSize_29; }
+	inline void set_blurSize_29(float value)
+	{
+		___blurSize_29 = value;
+	}
+
+	inline static int32_t get_offset_of_blurIterations_30() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___blurIterations_30)); }
+	inline int32_t get_blurIterations_30() const { return ___blurIterations_30; }
+	inline int32_t* get_address_of_blurIterations_30() { return &___blurIterations_30; }
+	inline void set_blurIterations_30(int32_t value)
+	{
+		___blurIterations_30 = value;
+	}
+
+	inline static int32_t get_offset_of_fastBloomMaterial_31() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412, ___fastBloomMaterial_31)); }
+	inline Material_t340375123 * get_fastBloomMaterial_31() const { return ___fastBloomMaterial_31; }
+	inline Material_t340375123 ** get_address_of_fastBloomMaterial_31() { return &___fastBloomMaterial_31; }
+	inline void set_fastBloomMaterial_31(Material_t340375123 * value)
+	{
+		___fastBloomMaterial_31 = value;
+		Il2CppCodeGenWriteBarrier((&___fastBloomMaterial_31), value);
+	}
+};
+
+struct PostProcessingManager_t277976412_StaticFields
+{
+public:
+	// System.Int32 PostProcessingManager::sharpnessString
+	int32_t ___sharpnessString_7;
+	// System.Int32 PostProcessingManager::thresholdString
+	int32_t ___thresholdString_8;
+	// System.Int32 PostProcessingManager::blurTexString
+	int32_t ___blurTexString_21;
+	// System.Int32 PostProcessingManager::instensityString
+	int32_t ___instensityString_22;
+	// System.Int32 PostProcessingManager::blurAmountString
+	int32_t ___blurAmountString_23;
+	// System.Int32 PostProcessingManager::radiusString
+	int32_t ___radiusString_24;
+	// System.Int32 PostProcessingManager::areaString
+	int32_t ___areaString_25;
+	// System.String PostProcessingManager::fastKeyword
+	String_t* ___fastKeyword_26;
+
+public:
+	inline static int32_t get_offset_of_sharpnessString_7() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___sharpnessString_7)); }
+	inline int32_t get_sharpnessString_7() const { return ___sharpnessString_7; }
+	inline int32_t* get_address_of_sharpnessString_7() { return &___sharpnessString_7; }
+	inline void set_sharpnessString_7(int32_t value)
+	{
+		___sharpnessString_7 = value;
+	}
+
+	inline static int32_t get_offset_of_thresholdString_8() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___thresholdString_8)); }
+	inline int32_t get_thresholdString_8() const { return ___thresholdString_8; }
+	inline int32_t* get_address_of_thresholdString_8() { return &___thresholdString_8; }
+	inline void set_thresholdString_8(int32_t value)
+	{
+		___thresholdString_8 = value;
+	}
+
+	inline static int32_t get_offset_of_blurTexString_21() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___blurTexString_21)); }
+	inline int32_t get_blurTexString_21() const { return ___blurTexString_21; }
+	inline int32_t* get_address_of_blurTexString_21() { return &___blurTexString_21; }
+	inline void set_blurTexString_21(int32_t value)
+	{
+		___blurTexString_21 = value;
+	}
+
+	inline static int32_t get_offset_of_instensityString_22() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___instensityString_22)); }
+	inline int32_t get_instensityString_22() const { return ___instensityString_22; }
+	inline int32_t* get_address_of_instensityString_22() { return &___instensityString_22; }
+	inline void set_instensityString_22(int32_t value)
+	{
+		___instensityString_22 = value;
+	}
+
+	inline static int32_t get_offset_of_blurAmountString_23() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___blurAmountString_23)); }
+	inline int32_t get_blurAmountString_23() const { return ___blurAmountString_23; }
+	inline int32_t* get_address_of_blurAmountString_23() { return &___blurAmountString_23; }
+	inline void set_blurAmountString_23(int32_t value)
+	{
+		___blurAmountString_23 = value;
+	}
+
+	inline static int32_t get_offset_of_radiusString_24() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___radiusString_24)); }
+	inline int32_t get_radiusString_24() const { return ___radiusString_24; }
+	inline int32_t* get_address_of_radiusString_24() { return &___radiusString_24; }
+	inline void set_radiusString_24(int32_t value)
+	{
+		___radiusString_24 = value;
+	}
+
+	inline static int32_t get_offset_of_areaString_25() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___areaString_25)); }
+	inline int32_t get_areaString_25() const { return ___areaString_25; }
+	inline int32_t* get_address_of_areaString_25() { return &___areaString_25; }
+	inline void set_areaString_25(int32_t value)
+	{
+		___areaString_25 = value;
+	}
+
+	inline static int32_t get_offset_of_fastKeyword_26() { return static_cast<int32_t>(offsetof(PostProcessingManager_t277976412_StaticFields, ___fastKeyword_26)); }
+	inline String_t* get_fastKeyword_26() const { return ___fastKeyword_26; }
+	inline String_t** get_address_of_fastKeyword_26() { return &___fastKeyword_26; }
+	inline void set_fastKeyword_26(String_t* value)
+	{
+		___fastKeyword_26 = value;
+		Il2CppCodeGenWriteBarrier((&___fastKeyword_26), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // POSTPROCESSINGMANAGER_T277976412_H
+#ifndef ROTATE_OBJECT_T1600444778_H
+#define ROTATE_OBJECT_T1600444778_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Rotate_Object
+struct  Rotate_Object_t1600444778  : public MonoBehaviour_t3962482529
+{
+public:
+
+public:
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // ROTATE_OBJECT_T1600444778_H
+#ifndef SCREENSPACECOLOREDFOG_T377796908_H
+#define SCREENSPACECOLOREDFOG_T377796908_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// ScreenSpaceColoredFog
+struct  ScreenSpaceColoredFog_t377796908  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material ScreenSpaceColoredFog::mat
+	Material_t340375123 * ___mat_4;
+
+public:
+	inline static int32_t get_offset_of_mat_4() { return static_cast<int32_t>(offsetof(ScreenSpaceColoredFog_t377796908, ___mat_4)); }
+	inline Material_t340375123 * get_mat_4() const { return ___mat_4; }
+	inline Material_t340375123 ** get_address_of_mat_4() { return &___mat_4; }
+	inline void set_mat_4(Material_t340375123 * value)
+	{
+		___mat_4 = value;
+		Il2CppCodeGenWriteBarrier((&___mat_4), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SCREENSPACECOLOREDFOG_T377796908_H
+#ifndef SETSHADOWRESOLUTION_T116945529_H
+#define SETSHADOWRESOLUTION_T116945529_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// SetShadowResolution
+struct  SetShadowResolution_t116945529  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Int32 SetShadowResolution::resolution
+	int32_t ___resolution_4;
+	// UnityEngine.Light SetShadowResolution::thisLight
+	Light_t3756812086 * ___thisLight_5;
+
+public:
+	inline static int32_t get_offset_of_resolution_4() { return static_cast<int32_t>(offsetof(SetShadowResolution_t116945529, ___resolution_4)); }
+	inline int32_t get_resolution_4() const { return ___resolution_4; }
+	inline int32_t* get_address_of_resolution_4() { return &___resolution_4; }
+	inline void set_resolution_4(int32_t value)
+	{
+		___resolution_4 = value;
+	}
+
+	inline static int32_t get_offset_of_thisLight_5() { return static_cast<int32_t>(offsetof(SetShadowResolution_t116945529, ___thisLight_5)); }
+	inline Light_t3756812086 * get_thisLight_5() const { return ___thisLight_5; }
+	inline Light_t3756812086 ** get_address_of_thisLight_5() { return &___thisLight_5; }
+	inline void set_thisLight_5(Light_t3756812086 * value)
+	{
+		___thisLight_5 = value;
+		Il2CppCodeGenWriteBarrier((&___thisLight_5), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // SETSHADOWRESOLUTION_T116945529_H
+#ifndef BENCHMARK01_T1571072624_H
+#define BENCHMARK01_T1571072624_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.Benchmark01
+struct  Benchmark01_t1571072624  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Int32 TMPro.Examples.Benchmark01::BenchmarkType
+	int32_t ___BenchmarkType_4;
+	// TMPro.TMP_FontAsset TMPro.Examples.Benchmark01::TMProFont
+	TMP_FontAsset_t364381626 * ___TMProFont_5;
+	// UnityEngine.Font TMPro.Examples.Benchmark01::TextMeshFont
+	Font_t1956802104 * ___TextMeshFont_6;
+	// TMPro.TextMeshPro TMPro.Examples.Benchmark01::m_textMeshPro
+	TextMeshPro_t2393593166 * ___m_textMeshPro_7;
+	// TMPro.TextContainer TMPro.Examples.Benchmark01::m_textContainer
+	TextContainer_t97923372 * ___m_textContainer_8;
+	// UnityEngine.TextMesh TMPro.Examples.Benchmark01::m_textMesh
+	TextMesh_t1536577757 * ___m_textMesh_9;
+	// UnityEngine.Material TMPro.Examples.Benchmark01::m_material01
+	Material_t340375123 * ___m_material01_12;
+	// UnityEngine.Material TMPro.Examples.Benchmark01::m_material02
+	Material_t340375123 * ___m_material02_13;
+
+public:
+	inline static int32_t get_offset_of_BenchmarkType_4() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___BenchmarkType_4)); }
+	inline int32_t get_BenchmarkType_4() const { return ___BenchmarkType_4; }
+	inline int32_t* get_address_of_BenchmarkType_4() { return &___BenchmarkType_4; }
+	inline void set_BenchmarkType_4(int32_t value)
+	{
+		___BenchmarkType_4 = value;
+	}
+
+	inline static int32_t get_offset_of_TMProFont_5() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___TMProFont_5)); }
+	inline TMP_FontAsset_t364381626 * get_TMProFont_5() const { return ___TMProFont_5; }
+	inline TMP_FontAsset_t364381626 ** get_address_of_TMProFont_5() { return &___TMProFont_5; }
+	inline void set_TMProFont_5(TMP_FontAsset_t364381626 * value)
+	{
+		___TMProFont_5 = value;
+		Il2CppCodeGenWriteBarrier((&___TMProFont_5), value);
+	}
+
+	inline static int32_t get_offset_of_TextMeshFont_6() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___TextMeshFont_6)); }
+	inline Font_t1956802104 * get_TextMeshFont_6() const { return ___TextMeshFont_6; }
+	inline Font_t1956802104 ** get_address_of_TextMeshFont_6() { return &___TextMeshFont_6; }
+	inline void set_TextMeshFont_6(Font_t1956802104 * value)
+	{
+		___TextMeshFont_6 = value;
+		Il2CppCodeGenWriteBarrier((&___TextMeshFont_6), value);
+	}
+
+	inline static int32_t get_offset_of_m_textMeshPro_7() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___m_textMeshPro_7)); }
+	inline TextMeshPro_t2393593166 * get_m_textMeshPro_7() const { return ___m_textMeshPro_7; }
+	inline TextMeshPro_t2393593166 ** get_address_of_m_textMeshPro_7() { return &___m_textMeshPro_7; }
+	inline void set_m_textMeshPro_7(TextMeshPro_t2393593166 * value)
+	{
+		___m_textMeshPro_7 = value;
+		Il2CppCodeGenWriteBarrier((&___m_textMeshPro_7), value);
+	}
+
+	inline static int32_t get_offset_of_m_textContainer_8() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___m_textContainer_8)); }
+	inline TextContainer_t97923372 * get_m_textContainer_8() const { return ___m_textContainer_8; }
+	inline TextContainer_t97923372 ** get_address_of_m_textContainer_8() { return &___m_textContainer_8; }
+	inline void set_m_textContainer_8(TextContainer_t97923372 * value)
+	{
+		___m_textContainer_8 = value;
+		Il2CppCodeGenWriteBarrier((&___m_textContainer_8), value);
+	}
+
+	inline static int32_t get_offset_of_m_textMesh_9() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___m_textMesh_9)); }
+	inline TextMesh_t1536577757 * get_m_textMesh_9() const { return ___m_textMesh_9; }
+	inline TextMesh_t1536577757 ** get_address_of_m_textMesh_9() { return &___m_textMesh_9; }
+	inline void set_m_textMesh_9(TextMesh_t1536577757 * value)
+	{
+		___m_textMesh_9 = value;
+		Il2CppCodeGenWriteBarrier((&___m_textMesh_9), value);
+	}
+
+	inline static int32_t get_offset_of_m_material01_12() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___m_material01_12)); }
+	inline Material_t340375123 * get_m_material01_12() const { return ___m_material01_12; }
+	inline Material_t340375123 ** get_address_of_m_material01_12() { return &___m_material01_12; }
+	inline void set_m_material01_12(Material_t340375123 * value)
+	{
+		___m_material01_12 = value;
+		Il2CppCodeGenWriteBarrier((&___m_material01_12), value);
+	}
+
+	inline static int32_t get_offset_of_m_material02_13() { return static_cast<int32_t>(offsetof(Benchmark01_t1571072624, ___m_material02_13)); }
+	inline Material_t340375123 * get_m_material02_13() const { return ___m_material02_13; }
+	inline Material_t340375123 ** get_address_of_m_material02_13() { return &___m_material02_13; }
+	inline void set_m_material02_13(Material_t340375123 * value)
+	{
+		___m_material02_13 = value;
+		Il2CppCodeGenWriteBarrier((&___m_material02_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BENCHMARK01_T1571072624_H
+#ifndef BENCHMARK01_UGUI_T3264177817_H
+#define BENCHMARK01_UGUI_T3264177817_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.Benchmark01_UGUI
+struct  Benchmark01_UGUI_t3264177817  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Int32 TMPro.Examples.Benchmark01_UGUI::BenchmarkType
+	int32_t ___BenchmarkType_4;
+	// UnityEngine.Canvas TMPro.Examples.Benchmark01_UGUI::canvas
+	Canvas_t3310196443 * ___canvas_5;
+	// TMPro.TMP_FontAsset TMPro.Examples.Benchmark01_UGUI::TMProFont
+	TMP_FontAsset_t364381626 * ___TMProFont_6;
+	// UnityEngine.Font TMPro.Examples.Benchmark01_UGUI::TextMeshFont
+	Font_t1956802104 * ___TextMeshFont_7;
+	// TMPro.TextMeshProUGUI TMPro.Examples.Benchmark01_UGUI::m_textMeshPro
+	TextMeshProUGUI_t529313277 * ___m_textMeshPro_8;
+	// UnityEngine.UI.Text TMPro.Examples.Benchmark01_UGUI::m_textMesh
+	Text_t1901882714 * ___m_textMesh_9;
+	// UnityEngine.Material TMPro.Examples.Benchmark01_UGUI::m_material01
+	Material_t340375123 * ___m_material01_12;
+	// UnityEngine.Material TMPro.Examples.Benchmark01_UGUI::m_material02
+	Material_t340375123 * ___m_material02_13;
+
+public:
+	inline static int32_t get_offset_of_BenchmarkType_4() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___BenchmarkType_4)); }
+	inline int32_t get_BenchmarkType_4() const { return ___BenchmarkType_4; }
+	inline int32_t* get_address_of_BenchmarkType_4() { return &___BenchmarkType_4; }
+	inline void set_BenchmarkType_4(int32_t value)
+	{
+		___BenchmarkType_4 = value;
+	}
+
+	inline static int32_t get_offset_of_canvas_5() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___canvas_5)); }
+	inline Canvas_t3310196443 * get_canvas_5() const { return ___canvas_5; }
+	inline Canvas_t3310196443 ** get_address_of_canvas_5() { return &___canvas_5; }
+	inline void set_canvas_5(Canvas_t3310196443 * value)
+	{
+		___canvas_5 = value;
+		Il2CppCodeGenWriteBarrier((&___canvas_5), value);
+	}
+
+	inline static int32_t get_offset_of_TMProFont_6() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___TMProFont_6)); }
+	inline TMP_FontAsset_t364381626 * get_TMProFont_6() const { return ___TMProFont_6; }
+	inline TMP_FontAsset_t364381626 ** get_address_of_TMProFont_6() { return &___TMProFont_6; }
+	inline void set_TMProFont_6(TMP_FontAsset_t364381626 * value)
+	{
+		___TMProFont_6 = value;
+		Il2CppCodeGenWriteBarrier((&___TMProFont_6), value);
+	}
+
+	inline static int32_t get_offset_of_TextMeshFont_7() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___TextMeshFont_7)); }
+	inline Font_t1956802104 * get_TextMeshFont_7() const { return ___TextMeshFont_7; }
+	inline Font_t1956802104 ** get_address_of_TextMeshFont_7() { return &___TextMeshFont_7; }
+	inline void set_TextMeshFont_7(Font_t1956802104 * value)
+	{
+		___TextMeshFont_7 = value;
+		Il2CppCodeGenWriteBarrier((&___TextMeshFont_7), value);
+	}
+
+	inline static int32_t get_offset_of_m_textMeshPro_8() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___m_textMeshPro_8)); }
+	inline TextMeshProUGUI_t529313277 * get_m_textMeshPro_8() const { return ___m_textMeshPro_8; }
+	inline TextMeshProUGUI_t529313277 ** get_address_of_m_textMeshPro_8() { return &___m_textMeshPro_8; }
+	inline void set_m_textMeshPro_8(TextMeshProUGUI_t529313277 * value)
+	{
+		___m_textMeshPro_8 = value;
+		Il2CppCodeGenWriteBarrier((&___m_textMeshPro_8), value);
+	}
+
+	inline static int32_t get_offset_of_m_textMesh_9() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___m_textMesh_9)); }
+	inline Text_t1901882714 * get_m_textMesh_9() const { return ___m_textMesh_9; }
+	inline Text_t1901882714 ** get_address_of_m_textMesh_9() { return &___m_textMesh_9; }
+	inline void set_m_textMesh_9(Text_t1901882714 * value)
+	{
+		___m_textMesh_9 = value;
+		Il2CppCodeGenWriteBarrier((&___m_textMesh_9), value);
+	}
+
+	inline static int32_t get_offset_of_m_material01_12() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___m_material01_12)); }
+	inline Material_t340375123 * get_m_material01_12() const { return ___m_material01_12; }
+	inline Material_t340375123 ** get_address_of_m_material01_12() { return &___m_material01_12; }
+	inline void set_m_material01_12(Material_t340375123 * value)
+	{
+		___m_material01_12 = value;
+		Il2CppCodeGenWriteBarrier((&___m_material01_12), value);
+	}
+
+	inline static int32_t get_offset_of_m_material02_13() { return static_cast<int32_t>(offsetof(Benchmark01_UGUI_t3264177817, ___m_material02_13)); }
+	inline Material_t340375123 * get_m_material02_13() const { return ___m_material02_13; }
+	inline Material_t340375123 ** get_address_of_m_material02_13() { return &___m_material02_13; }
+	inline void set_m_material02_13(Material_t340375123 * value)
+	{
+		___m_material02_13 = value;
+		Il2CppCodeGenWriteBarrier((&___m_material02_13), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BENCHMARK01_UGUI_T3264177817_H
+#ifndef BENCHMARK02_T1571269232_H
+#define BENCHMARK02_T1571269232_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.Benchmark02
+struct  Benchmark02_t1571269232  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Int32 TMPro.Examples.Benchmark02::SpawnType
+	int32_t ___SpawnType_4;
+	// System.Int32 TMPro.Examples.Benchmark02::NumberOfNPC
+	int32_t ___NumberOfNPC_5;
+	// TMPro.Examples.TextMeshProFloatingText TMPro.Examples.Benchmark02::floatingText_Script
+	TextMeshProFloatingText_t845872552 * ___floatingText_Script_6;
+
+public:
+	inline static int32_t get_offset_of_SpawnType_4() { return static_cast<int32_t>(offsetof(Benchmark02_t1571269232, ___SpawnType_4)); }
+	inline int32_t get_SpawnType_4() const { return ___SpawnType_4; }
+	inline int32_t* get_address_of_SpawnType_4() { return &___SpawnType_4; }
+	inline void set_SpawnType_4(int32_t value)
+	{
+		___SpawnType_4 = value;
+	}
+
+	inline static int32_t get_offset_of_NumberOfNPC_5() { return static_cast<int32_t>(offsetof(Benchmark02_t1571269232, ___NumberOfNPC_5)); }
+	inline int32_t get_NumberOfNPC_5() const { return ___NumberOfNPC_5; }
+	inline int32_t* get_address_of_NumberOfNPC_5() { return &___NumberOfNPC_5; }
+	inline void set_NumberOfNPC_5(int32_t value)
+	{
+		___NumberOfNPC_5 = value;
+	}
+
+	inline static int32_t get_offset_of_floatingText_Script_6() { return static_cast<int32_t>(offsetof(Benchmark02_t1571269232, ___floatingText_Script_6)); }
+	inline TextMeshProFloatingText_t845872552 * get_floatingText_Script_6() const { return ___floatingText_Script_6; }
+	inline TextMeshProFloatingText_t845872552 ** get_address_of_floatingText_Script_6() { return &___floatingText_Script_6; }
+	inline void set_floatingText_Script_6(TextMeshProFloatingText_t845872552 * value)
+	{
+		___floatingText_Script_6 = value;
+		Il2CppCodeGenWriteBarrier((&___floatingText_Script_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BENCHMARK02_T1571269232_H
+#ifndef BENCHMARK03_T1571203696_H
+#define BENCHMARK03_T1571203696_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.Benchmark03
+struct  Benchmark03_t1571203696  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Int32 TMPro.Examples.Benchmark03::SpawnType
+	int32_t ___SpawnType_4;
+	// System.Int32 TMPro.Examples.Benchmark03::NumberOfNPC
+	int32_t ___NumberOfNPC_5;
+	// UnityEngine.Font TMPro.Examples.Benchmark03::TheFont
+	Font_t1956802104 * ___TheFont_6;
+
+public:
+	inline static int32_t get_offset_of_SpawnType_4() { return static_cast<int32_t>(offsetof(Benchmark03_t1571203696, ___SpawnType_4)); }
+	inline int32_t get_SpawnType_4() const { return ___SpawnType_4; }
+	inline int32_t* get_address_of_SpawnType_4() { return &___SpawnType_4; }
+	inline void set_SpawnType_4(int32_t value)
+	{
+		___SpawnType_4 = value;
+	}
+
+	inline static int32_t get_offset_of_NumberOfNPC_5() { return static_cast<int32_t>(offsetof(Benchmark03_t1571203696, ___NumberOfNPC_5)); }
+	inline int32_t get_NumberOfNPC_5() const { return ___NumberOfNPC_5; }
+	inline int32_t* get_address_of_NumberOfNPC_5() { return &___NumberOfNPC_5; }
+	inline void set_NumberOfNPC_5(int32_t value)
+	{
+		___NumberOfNPC_5 = value;
+	}
+
+	inline static int32_t get_offset_of_TheFont_6() { return static_cast<int32_t>(offsetof(Benchmark03_t1571203696, ___TheFont_6)); }
+	inline Font_t1956802104 * get_TheFont_6() const { return ___TheFont_6; }
+	inline Font_t1956802104 ** get_address_of_TheFont_6() { return &___TheFont_6; }
+	inline void set_TheFont_6(Font_t1956802104 * value)
+	{
+		___TheFont_6 = value;
+		Il2CppCodeGenWriteBarrier((&___TheFont_6), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BENCHMARK03_T1571203696_H
+#ifndef BENCHMARK04_T1570876016_H
+#define BENCHMARK04_T1570876016_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.Benchmark04
+struct  Benchmark04_t1570876016  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Int32 TMPro.Examples.Benchmark04::SpawnType
+	int32_t ___SpawnType_4;
+	// System.Int32 TMPro.Examples.Benchmark04::MinPointSize
+	int32_t ___MinPointSize_5;
+	// System.Int32 TMPro.Examples.Benchmark04::MaxPointSize
+	int32_t ___MaxPointSize_6;
+	// System.Int32 TMPro.Examples.Benchmark04::Steps
+	int32_t ___Steps_7;
+	// UnityEngine.Transform TMPro.Examples.Benchmark04::m_Transform
+	Transform_t3600365921 * ___m_Transform_8;
+
+public:
+	inline static int32_t get_offset_of_SpawnType_4() { return static_cast<int32_t>(offsetof(Benchmark04_t1570876016, ___SpawnType_4)); }
+	inline int32_t get_SpawnType_4() const { return ___SpawnType_4; }
+	inline int32_t* get_address_of_SpawnType_4() { return &___SpawnType_4; }
+	inline void set_SpawnType_4(int32_t value)
+	{
+		___SpawnType_4 = value;
+	}
+
+	inline static int32_t get_offset_of_MinPointSize_5() { return static_cast<int32_t>(offsetof(Benchmark04_t1570876016, ___MinPointSize_5)); }
+	inline int32_t get_MinPointSize_5() const { return ___MinPointSize_5; }
+	inline int32_t* get_address_of_MinPointSize_5() { return &___MinPointSize_5; }
+	inline void set_MinPointSize_5(int32_t value)
+	{
+		___MinPointSize_5 = value;
+	}
+
+	inline static int32_t get_offset_of_MaxPointSize_6() { return static_cast<int32_t>(offsetof(Benchmark04_t1570876016, ___MaxPointSize_6)); }
+	inline int32_t get_MaxPointSize_6() const { return ___MaxPointSize_6; }
+	inline int32_t* get_address_of_MaxPointSize_6() { return &___MaxPointSize_6; }
+	inline void set_MaxPointSize_6(int32_t value)
+	{
+		___MaxPointSize_6 = value;
+	}
+
+	inline static int32_t get_offset_of_Steps_7() { return static_cast<int32_t>(offsetof(Benchmark04_t1570876016, ___Steps_7)); }
+	inline int32_t get_Steps_7() const { return ___Steps_7; }
+	inline int32_t* get_address_of_Steps_7() { return &___Steps_7; }
+	inline void set_Steps_7(int32_t value)
+	{
+		___Steps_7 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Transform_8() { return static_cast<int32_t>(offsetof(Benchmark04_t1570876016, ___m_Transform_8)); }
+	inline Transform_t3600365921 * get_m_Transform_8() const { return ___m_Transform_8; }
+	inline Transform_t3600365921 ** get_address_of_m_Transform_8() { return &___m_Transform_8; }
+	inline void set_m_Transform_8(Transform_t3600365921 * value)
+	{
+		___m_Transform_8 = value;
+		Il2CppCodeGenWriteBarrier((&___m_Transform_8), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BENCHMARK04_T1570876016_H
+#ifndef CAMERACONTROLLER_T2264742161_H
+#define CAMERACONTROLLER_T2264742161_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.CameraController
+struct  CameraController_t2264742161  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Transform TMPro.Examples.CameraController::cameraTransform
+	Transform_t3600365921 * ___cameraTransform_4;
+	// UnityEngine.Transform TMPro.Examples.CameraController::dummyTarget
+	Transform_t3600365921 * ___dummyTarget_5;
+	// UnityEngine.Transform TMPro.Examples.CameraController::CameraTarget
+	Transform_t3600365921 * ___CameraTarget_6;
+	// System.Single TMPro.Examples.CameraController::FollowDistance
+	float ___FollowDistance_7;
+	// System.Single TMPro.Examples.CameraController::MaxFollowDistance
+	float ___MaxFollowDistance_8;
+	// System.Single TMPro.Examples.CameraController::MinFollowDistance
+	float ___MinFollowDistance_9;
+	// System.Single TMPro.Examples.CameraController::ElevationAngle
+	float ___ElevationAngle_10;
+	// System.Single TMPro.Examples.CameraController::MaxElevationAngle
+	float ___MaxElevationAngle_11;
+	// System.Single TMPro.Examples.CameraController::MinElevationAngle
+	float ___MinElevationAngle_12;
+	// System.Single TMPro.Examples.CameraController::OrbitalAngle
+	float ___OrbitalAngle_13;
+	// TMPro.Examples.CameraController/CameraModes TMPro.Examples.CameraController::CameraMode
+	int32_t ___CameraMode_14;
+	// System.Boolean TMPro.Examples.CameraController::MovementSmoothing
+	bool ___MovementSmoothing_15;
+	// System.Boolean TMPro.Examples.CameraController::RotationSmoothing
+	bool ___RotationSmoothing_16;
+	// System.Boolean TMPro.Examples.CameraController::previousSmoothing
+	bool ___previousSmoothing_17;
+	// System.Single TMPro.Examples.CameraController::MovementSmoothingValue
+	float ___MovementSmoothingValue_18;
+	// System.Single TMPro.Examples.CameraController::RotationSmoothingValue
+	float ___RotationSmoothingValue_19;
+	// System.Single TMPro.Examples.CameraController::MoveSensitivity
+	float ___MoveSensitivity_20;
+	// UnityEngine.Vector3 TMPro.Examples.CameraController::currentVelocity
+	Vector3_t3722313464  ___currentVelocity_21;
+	// UnityEngine.Vector3 TMPro.Examples.CameraController::desiredPosition
+	Vector3_t3722313464  ___desiredPosition_22;
+	// System.Single TMPro.Examples.CameraController::mouseX
+	float ___mouseX_23;
+	// System.Single TMPro.Examples.CameraController::mouseY
+	float ___mouseY_24;
+	// UnityEngine.Vector3 TMPro.Examples.CameraController::moveVector
+	Vector3_t3722313464  ___moveVector_25;
+	// System.Single TMPro.Examples.CameraController::mouseWheel
+	float ___mouseWheel_26;
+
+public:
+	inline static int32_t get_offset_of_cameraTransform_4() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___cameraTransform_4)); }
+	inline Transform_t3600365921 * get_cameraTransform_4() const { return ___cameraTransform_4; }
+	inline Transform_t3600365921 ** get_address_of_cameraTransform_4() { return &___cameraTransform_4; }
+	inline void set_cameraTransform_4(Transform_t3600365921 * value)
+	{
+		___cameraTransform_4 = value;
+		Il2CppCodeGenWriteBarrier((&___cameraTransform_4), value);
+	}
+
+	inline static int32_t get_offset_of_dummyTarget_5() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___dummyTarget_5)); }
+	inline Transform_t3600365921 * get_dummyTarget_5() const { return ___dummyTarget_5; }
+	inline Transform_t3600365921 ** get_address_of_dummyTarget_5() { return &___dummyTarget_5; }
+	inline void set_dummyTarget_5(Transform_t3600365921 * value)
+	{
+		___dummyTarget_5 = value;
+		Il2CppCodeGenWriteBarrier((&___dummyTarget_5), value);
+	}
+
+	inline static int32_t get_offset_of_CameraTarget_6() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___CameraTarget_6)); }
+	inline Transform_t3600365921 * get_CameraTarget_6() const { return ___CameraTarget_6; }
+	inline Transform_t3600365921 ** get_address_of_CameraTarget_6() { return &___CameraTarget_6; }
+	inline void set_CameraTarget_6(Transform_t3600365921 * value)
+	{
+		___CameraTarget_6 = value;
+		Il2CppCodeGenWriteBarrier((&___CameraTarget_6), value);
+	}
+
+	inline static int32_t get_offset_of_FollowDistance_7() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___FollowDistance_7)); }
+	inline float get_FollowDistance_7() const { return ___FollowDistance_7; }
+	inline float* get_address_of_FollowDistance_7() { return &___FollowDistance_7; }
+	inline void set_FollowDistance_7(float value)
+	{
+		___FollowDistance_7 = value;
+	}
+
+	inline static int32_t get_offset_of_MaxFollowDistance_8() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___MaxFollowDistance_8)); }
+	inline float get_MaxFollowDistance_8() const { return ___MaxFollowDistance_8; }
+	inline float* get_address_of_MaxFollowDistance_8() { return &___MaxFollowDistance_8; }
+	inline void set_MaxFollowDistance_8(float value)
+	{
+		___MaxFollowDistance_8 = value;
+	}
+
+	inline static int32_t get_offset_of_MinFollowDistance_9() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___MinFollowDistance_9)); }
+	inline float get_MinFollowDistance_9() const { return ___MinFollowDistance_9; }
+	inline float* get_address_of_MinFollowDistance_9() { return &___MinFollowDistance_9; }
+	inline void set_MinFollowDistance_9(float value)
+	{
+		___MinFollowDistance_9 = value;
+	}
+
+	inline static int32_t get_offset_of_ElevationAngle_10() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___ElevationAngle_10)); }
+	inline float get_ElevationAngle_10() const { return ___ElevationAngle_10; }
+	inline float* get_address_of_ElevationAngle_10() { return &___ElevationAngle_10; }
+	inline void set_ElevationAngle_10(float value)
+	{
+		___ElevationAngle_10 = value;
+	}
+
+	inline static int32_t get_offset_of_MaxElevationAngle_11() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___MaxElevationAngle_11)); }
+	inline float get_MaxElevationAngle_11() const { return ___MaxElevationAngle_11; }
+	inline float* get_address_of_MaxElevationAngle_11() { return &___MaxElevationAngle_11; }
+	inline void set_MaxElevationAngle_11(float value)
+	{
+		___MaxElevationAngle_11 = value;
+	}
+
+	inline static int32_t get_offset_of_MinElevationAngle_12() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___MinElevationAngle_12)); }
+	inline float get_MinElevationAngle_12() const { return ___MinElevationAngle_12; }
+	inline float* get_address_of_MinElevationAngle_12() { return &___MinElevationAngle_12; }
+	inline void set_MinElevationAngle_12(float value)
+	{
+		___MinElevationAngle_12 = value;
+	}
+
+	inline static int32_t get_offset_of_OrbitalAngle_13() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___OrbitalAngle_13)); }
+	inline float get_OrbitalAngle_13() const { return ___OrbitalAngle_13; }
+	inline float* get_address_of_OrbitalAngle_13() { return &___OrbitalAngle_13; }
+	inline void set_OrbitalAngle_13(float value)
+	{
+		___OrbitalAngle_13 = value;
+	}
+
+	inline static int32_t get_offset_of_CameraMode_14() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___CameraMode_14)); }
+	inline int32_t get_CameraMode_14() const { return ___CameraMode_14; }
+	inline int32_t* get_address_of_CameraMode_14() { return &___CameraMode_14; }
+	inline void set_CameraMode_14(int32_t value)
+	{
+		___CameraMode_14 = value;
+	}
+
+	inline static int32_t get_offset_of_MovementSmoothing_15() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___MovementSmoothing_15)); }
+	inline bool get_MovementSmoothing_15() const { return ___MovementSmoothing_15; }
+	inline bool* get_address_of_MovementSmoothing_15() { return &___MovementSmoothing_15; }
+	inline void set_MovementSmoothing_15(bool value)
+	{
+		___MovementSmoothing_15 = value;
+	}
+
+	inline static int32_t get_offset_of_RotationSmoothing_16() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___RotationSmoothing_16)); }
+	inline bool get_RotationSmoothing_16() const { return ___RotationSmoothing_16; }
+	inline bool* get_address_of_RotationSmoothing_16() { return &___RotationSmoothing_16; }
+	inline void set_RotationSmoothing_16(bool value)
+	{
+		___RotationSmoothing_16 = value;
+	}
+
+	inline static int32_t get_offset_of_previousSmoothing_17() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___previousSmoothing_17)); }
+	inline bool get_previousSmoothing_17() const { return ___previousSmoothing_17; }
+	inline bool* get_address_of_previousSmoothing_17() { return &___previousSmoothing_17; }
+	inline void set_previousSmoothing_17(bool value)
+	{
+		___previousSmoothing_17 = value;
+	}
+
+	inline static int32_t get_offset_of_MovementSmoothingValue_18() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___MovementSmoothingValue_18)); }
+	inline float get_MovementSmoothingValue_18() const { return ___MovementSmoothingValue_18; }
+	inline float* get_address_of_MovementSmoothingValue_18() { return &___MovementSmoothingValue_18; }
+	inline void set_MovementSmoothingValue_18(float value)
+	{
+		___MovementSmoothingValue_18 = value;
+	}
+
+	inline static int32_t get_offset_of_RotationSmoothingValue_19() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___RotationSmoothingValue_19)); }
+	inline float get_RotationSmoothingValue_19() const { return ___RotationSmoothingValue_19; }
+	inline float* get_address_of_RotationSmoothingValue_19() { return &___RotationSmoothingValue_19; }
+	inline void set_RotationSmoothingValue_19(float value)
+	{
+		___RotationSmoothingValue_19 = value;
+	}
+
+	inline static int32_t get_offset_of_MoveSensitivity_20() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___MoveSensitivity_20)); }
+	inline float get_MoveSensitivity_20() const { return ___MoveSensitivity_20; }
+	inline float* get_address_of_MoveSensitivity_20() { return &___MoveSensitivity_20; }
+	inline void set_MoveSensitivity_20(float value)
+	{
+		___MoveSensitivity_20 = value;
+	}
+
+	inline static int32_t get_offset_of_currentVelocity_21() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___currentVelocity_21)); }
+	inline Vector3_t3722313464  get_currentVelocity_21() const { return ___currentVelocity_21; }
+	inline Vector3_t3722313464 * get_address_of_currentVelocity_21() { return &___currentVelocity_21; }
+	inline void set_currentVelocity_21(Vector3_t3722313464  value)
+	{
+		___currentVelocity_21 = value;
+	}
+
+	inline static int32_t get_offset_of_desiredPosition_22() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___desiredPosition_22)); }
+	inline Vector3_t3722313464  get_desiredPosition_22() const { return ___desiredPosition_22; }
+	inline Vector3_t3722313464 * get_address_of_desiredPosition_22() { return &___desiredPosition_22; }
+	inline void set_desiredPosition_22(Vector3_t3722313464  value)
+	{
+		___desiredPosition_22 = value;
+	}
+
+	inline static int32_t get_offset_of_mouseX_23() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___mouseX_23)); }
+	inline float get_mouseX_23() const { return ___mouseX_23; }
+	inline float* get_address_of_mouseX_23() { return &___mouseX_23; }
+	inline void set_mouseX_23(float value)
+	{
+		___mouseX_23 = value;
+	}
+
+	inline static int32_t get_offset_of_mouseY_24() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___mouseY_24)); }
+	inline float get_mouseY_24() const { return ___mouseY_24; }
+	inline float* get_address_of_mouseY_24() { return &___mouseY_24; }
+	inline void set_mouseY_24(float value)
+	{
+		___mouseY_24 = value;
+	}
+
+	inline static int32_t get_offset_of_moveVector_25() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___moveVector_25)); }
+	inline Vector3_t3722313464  get_moveVector_25() const { return ___moveVector_25; }
+	inline Vector3_t3722313464 * get_address_of_moveVector_25() { return &___moveVector_25; }
+	inline void set_moveVector_25(Vector3_t3722313464  value)
+	{
+		___moveVector_25 = value;
+	}
+
+	inline static int32_t get_offset_of_mouseWheel_26() { return static_cast<int32_t>(offsetof(CameraController_t2264742161, ___mouseWheel_26)); }
+	inline float get_mouseWheel_26() const { return ___mouseWheel_26; }
+	inline float* get_address_of_mouseWheel_26() { return &___mouseWheel_26; }
+	inline void set_mouseWheel_26(float value)
+	{
+		___mouseWheel_26 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CAMERACONTROLLER_T2264742161_H
+#ifndef OBJECTSPIN_T341713598_H
+#define OBJECTSPIN_T341713598_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// TMPro.Examples.ObjectSpin
+struct  ObjectSpin_t341713598  : public MonoBehaviour_t3962482529
+{
+public:
+	// System.Single TMPro.Examples.ObjectSpin::SpinSpeed
+	float ___SpinSpeed_4;
+	// System.Int32 TMPro.Examples.ObjectSpin::RotationRange
+	int32_t ___RotationRange_5;
+	// UnityEngine.Transform TMPro.Examples.ObjectSpin::m_transform
+	Transform_t3600365921 * ___m_transform_6;
+	// System.Single TMPro.Examples.ObjectSpin::m_time
+	float ___m_time_7;
+	// UnityEngine.Vector3 TMPro.Examples.ObjectSpin::m_prevPOS
+	Vector3_t3722313464  ___m_prevPOS_8;
+	// UnityEngine.Vector3 TMPro.Examples.ObjectSpin::m_initial_Rotation
+	Vector3_t3722313464  ___m_initial_Rotation_9;
+	// UnityEngine.Vector3 TMPro.Examples.ObjectSpin::m_initial_Position
+	Vector3_t3722313464  ___m_initial_Position_10;
+	// UnityEngine.Color32 TMPro.Examples.ObjectSpin::m_lightColor
+	Color32_t2600501292  ___m_lightColor_11;
+	// System.Int32 TMPro.Examples.ObjectSpin::frames
+	int32_t ___frames_12;
+	// TMPro.Examples.ObjectSpin/MotionType TMPro.Examples.ObjectSpin::Motion
+	int32_t ___Motion_13;
+
+public:
+	inline static int32_t get_offset_of_SpinSpeed_4() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___SpinSpeed_4)); }
+	inline float get_SpinSpeed_4() const { return ___SpinSpeed_4; }
+	inline float* get_address_of_SpinSpeed_4() { return &___SpinSpeed_4; }
+	inline void set_SpinSpeed_4(float value)
+	{
+		___SpinSpeed_4 = value;
+	}
+
+	inline static int32_t get_offset_of_RotationRange_5() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___RotationRange_5)); }
+	inline int32_t get_RotationRange_5() const { return ___RotationRange_5; }
+	inline int32_t* get_address_of_RotationRange_5() { return &___RotationRange_5; }
+	inline void set_RotationRange_5(int32_t value)
+	{
+		___RotationRange_5 = value;
+	}
+
+	inline static int32_t get_offset_of_m_transform_6() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___m_transform_6)); }
+	inline Transform_t3600365921 * get_m_transform_6() const { return ___m_transform_6; }
+	inline Transform_t3600365921 ** get_address_of_m_transform_6() { return &___m_transform_6; }
+	inline void set_m_transform_6(Transform_t3600365921 * value)
+	{
+		___m_transform_6 = value;
+		Il2CppCodeGenWriteBarrier((&___m_transform_6), value);
+	}
+
+	inline static int32_t get_offset_of_m_time_7() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___m_time_7)); }
+	inline float get_m_time_7() const { return ___m_time_7; }
+	inline float* get_address_of_m_time_7() { return &___m_time_7; }
+	inline void set_m_time_7(float value)
+	{
+		___m_time_7 = value;
+	}
+
+	inline static int32_t get_offset_of_m_prevPOS_8() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___m_prevPOS_8)); }
+	inline Vector3_t3722313464  get_m_prevPOS_8() const { return ___m_prevPOS_8; }
+	inline Vector3_t3722313464 * get_address_of_m_prevPOS_8() { return &___m_prevPOS_8; }
+	inline void set_m_prevPOS_8(Vector3_t3722313464  value)
+	{
+		___m_prevPOS_8 = value;
+	}
+
+	inline static int32_t get_offset_of_m_initial_Rotation_9() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___m_initial_Rotation_9)); }
+	inline Vector3_t3722313464  get_m_initial_Rotation_9() const { return ___m_initial_Rotation_9; }
+	inline Vector3_t3722313464 * get_address_of_m_initial_Rotation_9() { return &___m_initial_Rotation_9; }
+	inline void set_m_initial_Rotation_9(Vector3_t3722313464  value)
+	{
+		___m_initial_Rotation_9 = value;
+	}
+
+	inline static int32_t get_offset_of_m_initial_Position_10() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___m_initial_Position_10)); }
+	inline Vector3_t3722313464  get_m_initial_Position_10() const { return ___m_initial_Position_10; }
+	inline Vector3_t3722313464 * get_address_of_m_initial_Position_10() { return &___m_initial_Position_10; }
+	inline void set_m_initial_Position_10(Vector3_t3722313464  value)
+	{
+		___m_initial_Position_10 = value;
+	}
+
+	inline static int32_t get_offset_of_m_lightColor_11() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___m_lightColor_11)); }
+	inline Color32_t2600501292  get_m_lightColor_11() const { return ___m_lightColor_11; }
+	inline Color32_t2600501292 * get_address_of_m_lightColor_11() { return &___m_lightColor_11; }
+	inline void set_m_lightColor_11(Color32_t2600501292  value)
+	{
+		___m_lightColor_11 = value;
+	}
+
+	inline static int32_t get_offset_of_frames_12() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___frames_12)); }
+	inline int32_t get_frames_12() const { return ___frames_12; }
+	inline int32_t* get_address_of_frames_12() { return &___frames_12; }
+	inline void set_frames_12(int32_t value)
+	{
+		___frames_12 = value;
+	}
+
+	inline static int32_t get_offset_of_Motion_13() { return static_cast<int32_t>(offsetof(ObjectSpin_t341713598, ___Motion_13)); }
+	inline int32_t get_Motion_13() const { return ___Motion_13; }
+	inline int32_t* get_address_of_Motion_13() { return &___Motion_13; }
+	inline void set_Motion_13(int32_t value)
+	{
+		___Motion_13 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // OBJECTSPIN_T341713598_H
 #ifndef SHADERPROPANIMATOR_T3617420994_H
 #define SHADERPROPANIMATOR_T3617420994_H
 #ifdef __clang__
@@ -5647,477 +10441,159 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // TMP_TEXTEVENTHANDLER_T1869054637_H
-#ifndef BLUR_T1038294851_H
-#define BLUR_T1038294851_H
+#ifndef TITLE_ANIMATOR_T1706872800_H
+#define TITLE_ANIMATOR_T1706872800_H
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
 
-// UnityStandardAssets.ImageEffects.Blur
-struct  Blur_t1038294851  : public MonoBehaviour_t3962482529
+// Title_Animator
+struct  Title_Animator_t1706872800  : public MonoBehaviour_t3962482529
 {
 public:
-	// System.Int32 UnityStandardAssets.ImageEffects.Blur::iterations
-	int32_t ___iterations_4;
-	// System.Single UnityStandardAssets.ImageEffects.Blur::blurSpread
-	float ___blurSpread_5;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.Blur::blurShader
-	Shader_t4151988712 * ___blurShader_6;
+	// System.Boolean Title_Animator::isEnabled
+	bool ___isEnabled_4;
+	// UnityEngine.UI.RawImage Title_Animator::fadeImage
+	RawImage_t3182918964 * ___fadeImage_5;
+	// System.Single Title_Animator::fadeAmount
+	float ___fadeAmount_6;
+	// System.Single Title_Animator::fadeDelay
+	float ___fadeDelay_7;
+	// UnityEngine.UI.RawImage Title_Animator::fadeImage2
+	RawImage_t3182918964 * ___fadeImage2_8;
+	// System.Single Title_Animator::fadeAmount2
+	float ___fadeAmount2_9;
+	// System.Single Title_Animator::fadeDelay2
+	float ___fadeDelay2_10;
+	// UnityEngine.UI.RawImage Title_Animator::fadeImage3
+	RawImage_t3182918964 * ___fadeImage3_11;
+	// System.Single Title_Animator::fadeAmount3
+	float ___fadeAmount3_12;
+	// System.Single Title_Animator::fadeDelay3
+	float ___fadeDelay3_13;
+	// UnityEngine.UI.Image Title_Animator::fillImage
+	Image_t2670269651 * ___fillImage_14;
+	// System.Single Title_Animator::fillAmount
+	float ___fillAmount_15;
+	// System.Single Title_Animator::fillDelay
+	float ___fillDelay_16;
 
 public:
-	inline static int32_t get_offset_of_iterations_4() { return static_cast<int32_t>(offsetof(Blur_t1038294851, ___iterations_4)); }
-	inline int32_t get_iterations_4() const { return ___iterations_4; }
-	inline int32_t* get_address_of_iterations_4() { return &___iterations_4; }
-	inline void set_iterations_4(int32_t value)
+	inline static int32_t get_offset_of_isEnabled_4() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___isEnabled_4)); }
+	inline bool get_isEnabled_4() const { return ___isEnabled_4; }
+	inline bool* get_address_of_isEnabled_4() { return &___isEnabled_4; }
+	inline void set_isEnabled_4(bool value)
 	{
-		___iterations_4 = value;
+		___isEnabled_4 = value;
 	}
 
-	inline static int32_t get_offset_of_blurSpread_5() { return static_cast<int32_t>(offsetof(Blur_t1038294851, ___blurSpread_5)); }
-	inline float get_blurSpread_5() const { return ___blurSpread_5; }
-	inline float* get_address_of_blurSpread_5() { return &___blurSpread_5; }
-	inline void set_blurSpread_5(float value)
+	inline static int32_t get_offset_of_fadeImage_5() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeImage_5)); }
+	inline RawImage_t3182918964 * get_fadeImage_5() const { return ___fadeImage_5; }
+	inline RawImage_t3182918964 ** get_address_of_fadeImage_5() { return &___fadeImage_5; }
+	inline void set_fadeImage_5(RawImage_t3182918964 * value)
 	{
-		___blurSpread_5 = value;
+		___fadeImage_5 = value;
+		Il2CppCodeGenWriteBarrier((&___fadeImage_5), value);
 	}
 
-	inline static int32_t get_offset_of_blurShader_6() { return static_cast<int32_t>(offsetof(Blur_t1038294851, ___blurShader_6)); }
-	inline Shader_t4151988712 * get_blurShader_6() const { return ___blurShader_6; }
-	inline Shader_t4151988712 ** get_address_of_blurShader_6() { return &___blurShader_6; }
-	inline void set_blurShader_6(Shader_t4151988712 * value)
+	inline static int32_t get_offset_of_fadeAmount_6() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeAmount_6)); }
+	inline float get_fadeAmount_6() const { return ___fadeAmount_6; }
+	inline float* get_address_of_fadeAmount_6() { return &___fadeAmount_6; }
+	inline void set_fadeAmount_6(float value)
 	{
-		___blurShader_6 = value;
-		Il2CppCodeGenWriteBarrier((&___blurShader_6), value);
-	}
-};
-
-struct Blur_t1038294851_StaticFields
-{
-public:
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.Blur::m_Material
-	Material_t340375123 * ___m_Material_7;
-
-public:
-	inline static int32_t get_offset_of_m_Material_7() { return static_cast<int32_t>(offsetof(Blur_t1038294851_StaticFields, ___m_Material_7)); }
-	inline Material_t340375123 * get_m_Material_7() const { return ___m_Material_7; }
-	inline Material_t340375123 ** get_address_of_m_Material_7() { return &___m_Material_7; }
-	inline void set_m_Material_7(Material_t340375123 * value)
-	{
-		___m_Material_7 = value;
-		Il2CppCodeGenWriteBarrier((&___m_Material_7), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUR_T1038294851_H
-#ifndef CONTRASTSTRETCH_T3424449263_H
-#define CONTRASTSTRETCH_T3424449263_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ContrastStretch
-struct  ContrastStretch_t3424449263  : public MonoBehaviour_t3962482529
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.ContrastStretch::adaptationSpeed
-	float ___adaptationSpeed_4;
-	// System.Single UnityStandardAssets.ImageEffects.ContrastStretch::limitMinimum
-	float ___limitMinimum_5;
-	// System.Single UnityStandardAssets.ImageEffects.ContrastStretch::limitMaximum
-	float ___limitMaximum_6;
-	// UnityEngine.RenderTexture[] UnityStandardAssets.ImageEffects.ContrastStretch::adaptRenderTex
-	RenderTextureU5BU5D_t4111643188* ___adaptRenderTex_7;
-	// System.Int32 UnityStandardAssets.ImageEffects.ContrastStretch::curAdaptIndex
-	int32_t ___curAdaptIndex_8;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ContrastStretch::shaderLum
-	Shader_t4151988712 * ___shaderLum_9;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ContrastStretch::m_materialLum
-	Material_t340375123 * ___m_materialLum_10;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ContrastStretch::shaderReduce
-	Shader_t4151988712 * ___shaderReduce_11;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ContrastStretch::m_materialReduce
-	Material_t340375123 * ___m_materialReduce_12;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ContrastStretch::shaderAdapt
-	Shader_t4151988712 * ___shaderAdapt_13;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ContrastStretch::m_materialAdapt
-	Material_t340375123 * ___m_materialAdapt_14;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ContrastStretch::shaderApply
-	Shader_t4151988712 * ___shaderApply_15;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ContrastStretch::m_materialApply
-	Material_t340375123 * ___m_materialApply_16;
-
-public:
-	inline static int32_t get_offset_of_adaptationSpeed_4() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___adaptationSpeed_4)); }
-	inline float get_adaptationSpeed_4() const { return ___adaptationSpeed_4; }
-	inline float* get_address_of_adaptationSpeed_4() { return &___adaptationSpeed_4; }
-	inline void set_adaptationSpeed_4(float value)
-	{
-		___adaptationSpeed_4 = value;
+		___fadeAmount_6 = value;
 	}
 
-	inline static int32_t get_offset_of_limitMinimum_5() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___limitMinimum_5)); }
-	inline float get_limitMinimum_5() const { return ___limitMinimum_5; }
-	inline float* get_address_of_limitMinimum_5() { return &___limitMinimum_5; }
-	inline void set_limitMinimum_5(float value)
+	inline static int32_t get_offset_of_fadeDelay_7() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeDelay_7)); }
+	inline float get_fadeDelay_7() const { return ___fadeDelay_7; }
+	inline float* get_address_of_fadeDelay_7() { return &___fadeDelay_7; }
+	inline void set_fadeDelay_7(float value)
 	{
-		___limitMinimum_5 = value;
+		___fadeDelay_7 = value;
 	}
 
-	inline static int32_t get_offset_of_limitMaximum_6() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___limitMaximum_6)); }
-	inline float get_limitMaximum_6() const { return ___limitMaximum_6; }
-	inline float* get_address_of_limitMaximum_6() { return &___limitMaximum_6; }
-	inline void set_limitMaximum_6(float value)
+	inline static int32_t get_offset_of_fadeImage2_8() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeImage2_8)); }
+	inline RawImage_t3182918964 * get_fadeImage2_8() const { return ___fadeImage2_8; }
+	inline RawImage_t3182918964 ** get_address_of_fadeImage2_8() { return &___fadeImage2_8; }
+	inline void set_fadeImage2_8(RawImage_t3182918964 * value)
 	{
-		___limitMaximum_6 = value;
+		___fadeImage2_8 = value;
+		Il2CppCodeGenWriteBarrier((&___fadeImage2_8), value);
 	}
 
-	inline static int32_t get_offset_of_adaptRenderTex_7() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___adaptRenderTex_7)); }
-	inline RenderTextureU5BU5D_t4111643188* get_adaptRenderTex_7() const { return ___adaptRenderTex_7; }
-	inline RenderTextureU5BU5D_t4111643188** get_address_of_adaptRenderTex_7() { return &___adaptRenderTex_7; }
-	inline void set_adaptRenderTex_7(RenderTextureU5BU5D_t4111643188* value)
+	inline static int32_t get_offset_of_fadeAmount2_9() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeAmount2_9)); }
+	inline float get_fadeAmount2_9() const { return ___fadeAmount2_9; }
+	inline float* get_address_of_fadeAmount2_9() { return &___fadeAmount2_9; }
+	inline void set_fadeAmount2_9(float value)
 	{
-		___adaptRenderTex_7 = value;
-		Il2CppCodeGenWriteBarrier((&___adaptRenderTex_7), value);
+		___fadeAmount2_9 = value;
 	}
 
-	inline static int32_t get_offset_of_curAdaptIndex_8() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___curAdaptIndex_8)); }
-	inline int32_t get_curAdaptIndex_8() const { return ___curAdaptIndex_8; }
-	inline int32_t* get_address_of_curAdaptIndex_8() { return &___curAdaptIndex_8; }
-	inline void set_curAdaptIndex_8(int32_t value)
+	inline static int32_t get_offset_of_fadeDelay2_10() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeDelay2_10)); }
+	inline float get_fadeDelay2_10() const { return ___fadeDelay2_10; }
+	inline float* get_address_of_fadeDelay2_10() { return &___fadeDelay2_10; }
+	inline void set_fadeDelay2_10(float value)
 	{
-		___curAdaptIndex_8 = value;
+		___fadeDelay2_10 = value;
 	}
 
-	inline static int32_t get_offset_of_shaderLum_9() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___shaderLum_9)); }
-	inline Shader_t4151988712 * get_shaderLum_9() const { return ___shaderLum_9; }
-	inline Shader_t4151988712 ** get_address_of_shaderLum_9() { return &___shaderLum_9; }
-	inline void set_shaderLum_9(Shader_t4151988712 * value)
+	inline static int32_t get_offset_of_fadeImage3_11() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeImage3_11)); }
+	inline RawImage_t3182918964 * get_fadeImage3_11() const { return ___fadeImage3_11; }
+	inline RawImage_t3182918964 ** get_address_of_fadeImage3_11() { return &___fadeImage3_11; }
+	inline void set_fadeImage3_11(RawImage_t3182918964 * value)
 	{
-		___shaderLum_9 = value;
-		Il2CppCodeGenWriteBarrier((&___shaderLum_9), value);
+		___fadeImage3_11 = value;
+		Il2CppCodeGenWriteBarrier((&___fadeImage3_11), value);
 	}
 
-	inline static int32_t get_offset_of_m_materialLum_10() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___m_materialLum_10)); }
-	inline Material_t340375123 * get_m_materialLum_10() const { return ___m_materialLum_10; }
-	inline Material_t340375123 ** get_address_of_m_materialLum_10() { return &___m_materialLum_10; }
-	inline void set_m_materialLum_10(Material_t340375123 * value)
+	inline static int32_t get_offset_of_fadeAmount3_12() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeAmount3_12)); }
+	inline float get_fadeAmount3_12() const { return ___fadeAmount3_12; }
+	inline float* get_address_of_fadeAmount3_12() { return &___fadeAmount3_12; }
+	inline void set_fadeAmount3_12(float value)
 	{
-		___m_materialLum_10 = value;
-		Il2CppCodeGenWriteBarrier((&___m_materialLum_10), value);
+		___fadeAmount3_12 = value;
 	}
 
-	inline static int32_t get_offset_of_shaderReduce_11() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___shaderReduce_11)); }
-	inline Shader_t4151988712 * get_shaderReduce_11() const { return ___shaderReduce_11; }
-	inline Shader_t4151988712 ** get_address_of_shaderReduce_11() { return &___shaderReduce_11; }
-	inline void set_shaderReduce_11(Shader_t4151988712 * value)
+	inline static int32_t get_offset_of_fadeDelay3_13() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fadeDelay3_13)); }
+	inline float get_fadeDelay3_13() const { return ___fadeDelay3_13; }
+	inline float* get_address_of_fadeDelay3_13() { return &___fadeDelay3_13; }
+	inline void set_fadeDelay3_13(float value)
 	{
-		___shaderReduce_11 = value;
-		Il2CppCodeGenWriteBarrier((&___shaderReduce_11), value);
+		___fadeDelay3_13 = value;
 	}
 
-	inline static int32_t get_offset_of_m_materialReduce_12() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___m_materialReduce_12)); }
-	inline Material_t340375123 * get_m_materialReduce_12() const { return ___m_materialReduce_12; }
-	inline Material_t340375123 ** get_address_of_m_materialReduce_12() { return &___m_materialReduce_12; }
-	inline void set_m_materialReduce_12(Material_t340375123 * value)
+	inline static int32_t get_offset_of_fillImage_14() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fillImage_14)); }
+	inline Image_t2670269651 * get_fillImage_14() const { return ___fillImage_14; }
+	inline Image_t2670269651 ** get_address_of_fillImage_14() { return &___fillImage_14; }
+	inline void set_fillImage_14(Image_t2670269651 * value)
 	{
-		___m_materialReduce_12 = value;
-		Il2CppCodeGenWriteBarrier((&___m_materialReduce_12), value);
+		___fillImage_14 = value;
+		Il2CppCodeGenWriteBarrier((&___fillImage_14), value);
 	}
 
-	inline static int32_t get_offset_of_shaderAdapt_13() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___shaderAdapt_13)); }
-	inline Shader_t4151988712 * get_shaderAdapt_13() const { return ___shaderAdapt_13; }
-	inline Shader_t4151988712 ** get_address_of_shaderAdapt_13() { return &___shaderAdapt_13; }
-	inline void set_shaderAdapt_13(Shader_t4151988712 * value)
+	inline static int32_t get_offset_of_fillAmount_15() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fillAmount_15)); }
+	inline float get_fillAmount_15() const { return ___fillAmount_15; }
+	inline float* get_address_of_fillAmount_15() { return &___fillAmount_15; }
+	inline void set_fillAmount_15(float value)
 	{
-		___shaderAdapt_13 = value;
-		Il2CppCodeGenWriteBarrier((&___shaderAdapt_13), value);
+		___fillAmount_15 = value;
 	}
 
-	inline static int32_t get_offset_of_m_materialAdapt_14() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___m_materialAdapt_14)); }
-	inline Material_t340375123 * get_m_materialAdapt_14() const { return ___m_materialAdapt_14; }
-	inline Material_t340375123 ** get_address_of_m_materialAdapt_14() { return &___m_materialAdapt_14; }
-	inline void set_m_materialAdapt_14(Material_t340375123 * value)
+	inline static int32_t get_offset_of_fillDelay_16() { return static_cast<int32_t>(offsetof(Title_Animator_t1706872800, ___fillDelay_16)); }
+	inline float get_fillDelay_16() const { return ___fillDelay_16; }
+	inline float* get_address_of_fillDelay_16() { return &___fillDelay_16; }
+	inline void set_fillDelay_16(float value)
 	{
-		___m_materialAdapt_14 = value;
-		Il2CppCodeGenWriteBarrier((&___m_materialAdapt_14), value);
-	}
-
-	inline static int32_t get_offset_of_shaderApply_15() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___shaderApply_15)); }
-	inline Shader_t4151988712 * get_shaderApply_15() const { return ___shaderApply_15; }
-	inline Shader_t4151988712 ** get_address_of_shaderApply_15() { return &___shaderApply_15; }
-	inline void set_shaderApply_15(Shader_t4151988712 * value)
-	{
-		___shaderApply_15 = value;
-		Il2CppCodeGenWriteBarrier((&___shaderApply_15), value);
-	}
-
-	inline static int32_t get_offset_of_m_materialApply_16() { return static_cast<int32_t>(offsetof(ContrastStretch_t3424449263, ___m_materialApply_16)); }
-	inline Material_t340375123 * get_m_materialApply_16() const { return ___m_materialApply_16; }
-	inline Material_t340375123 ** get_address_of_m_materialApply_16() { return &___m_materialApply_16; }
-	inline void set_m_materialApply_16(Material_t340375123 * value)
-	{
-		___m_materialApply_16 = value;
-		Il2CppCodeGenWriteBarrier((&___m_materialApply_16), value);
+		___fillDelay_16 = value;
 	}
 };
 
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif
-#endif // CONTRASTSTRETCH_T3424449263_H
-#ifndef IMAGEEFFECTBASE_T2026006575_H
-#define IMAGEEFFECTBASE_T2026006575_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ImageEffectBase
-struct  ImageEffectBase_t2026006575  : public MonoBehaviour_t3962482529
-{
-public:
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ImageEffectBase::shader
-	Shader_t4151988712 * ___shader_4;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ImageEffectBase::m_Material
-	Material_t340375123 * ___m_Material_5;
-
-public:
-	inline static int32_t get_offset_of_shader_4() { return static_cast<int32_t>(offsetof(ImageEffectBase_t2026006575, ___shader_4)); }
-	inline Shader_t4151988712 * get_shader_4() const { return ___shader_4; }
-	inline Shader_t4151988712 ** get_address_of_shader_4() { return &___shader_4; }
-	inline void set_shader_4(Shader_t4151988712 * value)
-	{
-		___shader_4 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_4), value);
-	}
-
-	inline static int32_t get_offset_of_m_Material_5() { return static_cast<int32_t>(offsetof(ImageEffectBase_t2026006575, ___m_Material_5)); }
-	inline Material_t340375123 * get_m_Material_5() const { return ___m_Material_5; }
-	inline Material_t340375123 ** get_address_of_m_Material_5() { return &___m_Material_5; }
-	inline void set_m_Material_5(Material_t340375123 * value)
-	{
-		___m_Material_5 = value;
-		Il2CppCodeGenWriteBarrier((&___m_Material_5), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // IMAGEEFFECTBASE_T2026006575_H
-#ifndef NOISEANDSCRATCHES_T1457296845_H
-#define NOISEANDSCRATCHES_T1457296845_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.NoiseAndScratches
-struct  NoiseAndScratches_t1457296845  : public MonoBehaviour_t3962482529
-{
-public:
-	// System.Boolean UnityStandardAssets.ImageEffects.NoiseAndScratches::monochrome
-	bool ___monochrome_4;
-	// System.Boolean UnityStandardAssets.ImageEffects.NoiseAndScratches::rgbFallback
-	bool ___rgbFallback_5;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::grainIntensityMin
-	float ___grainIntensityMin_6;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::grainIntensityMax
-	float ___grainIntensityMax_7;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::grainSize
-	float ___grainSize_8;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchIntensityMin
-	float ___scratchIntensityMin_9;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchIntensityMax
-	float ___scratchIntensityMax_10;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchFPS
-	float ___scratchFPS_11;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchJitter
-	float ___scratchJitter_12;
-	// UnityEngine.Texture UnityStandardAssets.ImageEffects.NoiseAndScratches::grainTexture
-	Texture_t3661962703 * ___grainTexture_13;
-	// UnityEngine.Texture UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchTexture
-	Texture_t3661962703 * ___scratchTexture_14;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.NoiseAndScratches::shaderRGB
-	Shader_t4151988712 * ___shaderRGB_15;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.NoiseAndScratches::shaderYUV
-	Shader_t4151988712 * ___shaderYUV_16;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.NoiseAndScratches::m_MaterialRGB
-	Material_t340375123 * ___m_MaterialRGB_17;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.NoiseAndScratches::m_MaterialYUV
-	Material_t340375123 * ___m_MaterialYUV_18;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchTimeLeft
-	float ___scratchTimeLeft_19;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchX
-	float ___scratchX_20;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndScratches::scratchY
-	float ___scratchY_21;
-
-public:
-	inline static int32_t get_offset_of_monochrome_4() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___monochrome_4)); }
-	inline bool get_monochrome_4() const { return ___monochrome_4; }
-	inline bool* get_address_of_monochrome_4() { return &___monochrome_4; }
-	inline void set_monochrome_4(bool value)
-	{
-		___monochrome_4 = value;
-	}
-
-	inline static int32_t get_offset_of_rgbFallback_5() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___rgbFallback_5)); }
-	inline bool get_rgbFallback_5() const { return ___rgbFallback_5; }
-	inline bool* get_address_of_rgbFallback_5() { return &___rgbFallback_5; }
-	inline void set_rgbFallback_5(bool value)
-	{
-		___rgbFallback_5 = value;
-	}
-
-	inline static int32_t get_offset_of_grainIntensityMin_6() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___grainIntensityMin_6)); }
-	inline float get_grainIntensityMin_6() const { return ___grainIntensityMin_6; }
-	inline float* get_address_of_grainIntensityMin_6() { return &___grainIntensityMin_6; }
-	inline void set_grainIntensityMin_6(float value)
-	{
-		___grainIntensityMin_6 = value;
-	}
-
-	inline static int32_t get_offset_of_grainIntensityMax_7() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___grainIntensityMax_7)); }
-	inline float get_grainIntensityMax_7() const { return ___grainIntensityMax_7; }
-	inline float* get_address_of_grainIntensityMax_7() { return &___grainIntensityMax_7; }
-	inline void set_grainIntensityMax_7(float value)
-	{
-		___grainIntensityMax_7 = value;
-	}
-
-	inline static int32_t get_offset_of_grainSize_8() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___grainSize_8)); }
-	inline float get_grainSize_8() const { return ___grainSize_8; }
-	inline float* get_address_of_grainSize_8() { return &___grainSize_8; }
-	inline void set_grainSize_8(float value)
-	{
-		___grainSize_8 = value;
-	}
-
-	inline static int32_t get_offset_of_scratchIntensityMin_9() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchIntensityMin_9)); }
-	inline float get_scratchIntensityMin_9() const { return ___scratchIntensityMin_9; }
-	inline float* get_address_of_scratchIntensityMin_9() { return &___scratchIntensityMin_9; }
-	inline void set_scratchIntensityMin_9(float value)
-	{
-		___scratchIntensityMin_9 = value;
-	}
-
-	inline static int32_t get_offset_of_scratchIntensityMax_10() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchIntensityMax_10)); }
-	inline float get_scratchIntensityMax_10() const { return ___scratchIntensityMax_10; }
-	inline float* get_address_of_scratchIntensityMax_10() { return &___scratchIntensityMax_10; }
-	inline void set_scratchIntensityMax_10(float value)
-	{
-		___scratchIntensityMax_10 = value;
-	}
-
-	inline static int32_t get_offset_of_scratchFPS_11() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchFPS_11)); }
-	inline float get_scratchFPS_11() const { return ___scratchFPS_11; }
-	inline float* get_address_of_scratchFPS_11() { return &___scratchFPS_11; }
-	inline void set_scratchFPS_11(float value)
-	{
-		___scratchFPS_11 = value;
-	}
-
-	inline static int32_t get_offset_of_scratchJitter_12() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchJitter_12)); }
-	inline float get_scratchJitter_12() const { return ___scratchJitter_12; }
-	inline float* get_address_of_scratchJitter_12() { return &___scratchJitter_12; }
-	inline void set_scratchJitter_12(float value)
-	{
-		___scratchJitter_12 = value;
-	}
-
-	inline static int32_t get_offset_of_grainTexture_13() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___grainTexture_13)); }
-	inline Texture_t3661962703 * get_grainTexture_13() const { return ___grainTexture_13; }
-	inline Texture_t3661962703 ** get_address_of_grainTexture_13() { return &___grainTexture_13; }
-	inline void set_grainTexture_13(Texture_t3661962703 * value)
-	{
-		___grainTexture_13 = value;
-		Il2CppCodeGenWriteBarrier((&___grainTexture_13), value);
-	}
-
-	inline static int32_t get_offset_of_scratchTexture_14() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchTexture_14)); }
-	inline Texture_t3661962703 * get_scratchTexture_14() const { return ___scratchTexture_14; }
-	inline Texture_t3661962703 ** get_address_of_scratchTexture_14() { return &___scratchTexture_14; }
-	inline void set_scratchTexture_14(Texture_t3661962703 * value)
-	{
-		___scratchTexture_14 = value;
-		Il2CppCodeGenWriteBarrier((&___scratchTexture_14), value);
-	}
-
-	inline static int32_t get_offset_of_shaderRGB_15() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___shaderRGB_15)); }
-	inline Shader_t4151988712 * get_shaderRGB_15() const { return ___shaderRGB_15; }
-	inline Shader_t4151988712 ** get_address_of_shaderRGB_15() { return &___shaderRGB_15; }
-	inline void set_shaderRGB_15(Shader_t4151988712 * value)
-	{
-		___shaderRGB_15 = value;
-		Il2CppCodeGenWriteBarrier((&___shaderRGB_15), value);
-	}
-
-	inline static int32_t get_offset_of_shaderYUV_16() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___shaderYUV_16)); }
-	inline Shader_t4151988712 * get_shaderYUV_16() const { return ___shaderYUV_16; }
-	inline Shader_t4151988712 ** get_address_of_shaderYUV_16() { return &___shaderYUV_16; }
-	inline void set_shaderYUV_16(Shader_t4151988712 * value)
-	{
-		___shaderYUV_16 = value;
-		Il2CppCodeGenWriteBarrier((&___shaderYUV_16), value);
-	}
-
-	inline static int32_t get_offset_of_m_MaterialRGB_17() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___m_MaterialRGB_17)); }
-	inline Material_t340375123 * get_m_MaterialRGB_17() const { return ___m_MaterialRGB_17; }
-	inline Material_t340375123 ** get_address_of_m_MaterialRGB_17() { return &___m_MaterialRGB_17; }
-	inline void set_m_MaterialRGB_17(Material_t340375123 * value)
-	{
-		___m_MaterialRGB_17 = value;
-		Il2CppCodeGenWriteBarrier((&___m_MaterialRGB_17), value);
-	}
-
-	inline static int32_t get_offset_of_m_MaterialYUV_18() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___m_MaterialYUV_18)); }
-	inline Material_t340375123 * get_m_MaterialYUV_18() const { return ___m_MaterialYUV_18; }
-	inline Material_t340375123 ** get_address_of_m_MaterialYUV_18() { return &___m_MaterialYUV_18; }
-	inline void set_m_MaterialYUV_18(Material_t340375123 * value)
-	{
-		___m_MaterialYUV_18 = value;
-		Il2CppCodeGenWriteBarrier((&___m_MaterialYUV_18), value);
-	}
-
-	inline static int32_t get_offset_of_scratchTimeLeft_19() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchTimeLeft_19)); }
-	inline float get_scratchTimeLeft_19() const { return ___scratchTimeLeft_19; }
-	inline float* get_address_of_scratchTimeLeft_19() { return &___scratchTimeLeft_19; }
-	inline void set_scratchTimeLeft_19(float value)
-	{
-		___scratchTimeLeft_19 = value;
-	}
-
-	inline static int32_t get_offset_of_scratchX_20() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchX_20)); }
-	inline float get_scratchX_20() const { return ___scratchX_20; }
-	inline float* get_address_of_scratchX_20() { return &___scratchX_20; }
-	inline void set_scratchX_20(float value)
-	{
-		___scratchX_20 = value;
-	}
-
-	inline static int32_t get_offset_of_scratchY_21() { return static_cast<int32_t>(offsetof(NoiseAndScratches_t1457296845, ___scratchY_21)); }
-	inline float get_scratchY_21() const { return ___scratchY_21; }
-	inline float* get_address_of_scratchY_21() { return &___scratchY_21; }
-	inline void set_scratchY_21(float value)
-	{
-		___scratchY_21 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NOISEANDSCRATCHES_T1457296845_H
+#endif // TITLE_ANIMATOR_T1706872800_H
 #ifndef POSTEFFECTSBASE_T2404315740_H
 #define POSTEFFECTSBASE_T2404315740_H
 #ifdef __clang__
@@ -6178,26 +10654,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // POSTEFFECTSBASE_T2404315740_H
-#ifndef POSTEFFECTSHELPER_T675066462_H
-#define POSTEFFECTSHELPER_T675066462_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.PostEffectsHelper
-struct  PostEffectsHelper_t675066462  : public MonoBehaviour_t3962482529
-{
-public:
-
-public:
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // POSTEFFECTSHELPER_T675066462_H
 #ifndef ANTIALIASING_T1691315015_H
 #define ANTIALIASING_T1691315015_H
 #ifdef __clang__
@@ -6779,2844 +11235,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // BLOOM_T1125654350_H
-#ifndef BLOOMANDFLARES_T2848767628_H
-#define BLOOMANDFLARES_T2848767628_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.BloomAndFlares
-struct  BloomAndFlares_t2848767628  : public PostEffectsBase_t2404315740
-{
-public:
-	// UnityStandardAssets.ImageEffects.TweakMode34 UnityStandardAssets.ImageEffects.BloomAndFlares::tweakMode
-	int32_t ___tweakMode_8;
-	// UnityStandardAssets.ImageEffects.BloomScreenBlendMode UnityStandardAssets.ImageEffects.BloomAndFlares::screenBlendMode
-	int32_t ___screenBlendMode_9;
-	// UnityStandardAssets.ImageEffects.HDRBloomMode UnityStandardAssets.ImageEffects.BloomAndFlares::hdr
-	int32_t ___hdr_10;
-	// System.Boolean UnityStandardAssets.ImageEffects.BloomAndFlares::doHdr
-	bool ___doHdr_11;
-	// System.Single UnityStandardAssets.ImageEffects.BloomAndFlares::sepBlurSpread
-	float ___sepBlurSpread_12;
-	// System.Single UnityStandardAssets.ImageEffects.BloomAndFlares::useSrcAlphaAsMask
-	float ___useSrcAlphaAsMask_13;
-	// System.Single UnityStandardAssets.ImageEffects.BloomAndFlares::bloomIntensity
-	float ___bloomIntensity_14;
-	// System.Single UnityStandardAssets.ImageEffects.BloomAndFlares::bloomThreshold
-	float ___bloomThreshold_15;
-	// System.Int32 UnityStandardAssets.ImageEffects.BloomAndFlares::bloomBlurIterations
-	int32_t ___bloomBlurIterations_16;
-	// System.Boolean UnityStandardAssets.ImageEffects.BloomAndFlares::lensflares
-	bool ___lensflares_17;
-	// System.Int32 UnityStandardAssets.ImageEffects.BloomAndFlares::hollywoodFlareBlurIterations
-	int32_t ___hollywoodFlareBlurIterations_18;
-	// UnityStandardAssets.ImageEffects.LensflareStyle34 UnityStandardAssets.ImageEffects.BloomAndFlares::lensflareMode
-	int32_t ___lensflareMode_19;
-	// System.Single UnityStandardAssets.ImageEffects.BloomAndFlares::hollyStretchWidth
-	float ___hollyStretchWidth_20;
-	// System.Single UnityStandardAssets.ImageEffects.BloomAndFlares::lensflareIntensity
-	float ___lensflareIntensity_21;
-	// System.Single UnityStandardAssets.ImageEffects.BloomAndFlares::lensflareThreshold
-	float ___lensflareThreshold_22;
-	// UnityEngine.Color UnityStandardAssets.ImageEffects.BloomAndFlares::flareColorA
-	Color_t2555686324  ___flareColorA_23;
-	// UnityEngine.Color UnityStandardAssets.ImageEffects.BloomAndFlares::flareColorB
-	Color_t2555686324  ___flareColorB_24;
-	// UnityEngine.Color UnityStandardAssets.ImageEffects.BloomAndFlares::flareColorC
-	Color_t2555686324  ___flareColorC_25;
-	// UnityEngine.Color UnityStandardAssets.ImageEffects.BloomAndFlares::flareColorD
-	Color_t2555686324  ___flareColorD_26;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.BloomAndFlares::lensFlareVignetteMask
-	Texture2D_t3840446185 * ___lensFlareVignetteMask_27;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomAndFlares::lensFlareShader
-	Shader_t4151988712 * ___lensFlareShader_28;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomAndFlares::lensFlareMaterial
-	Material_t340375123 * ___lensFlareMaterial_29;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomAndFlares::vignetteShader
-	Shader_t4151988712 * ___vignetteShader_30;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomAndFlares::vignetteMaterial
-	Material_t340375123 * ___vignetteMaterial_31;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomAndFlares::separableBlurShader
-	Shader_t4151988712 * ___separableBlurShader_32;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomAndFlares::separableBlurMaterial
-	Material_t340375123 * ___separableBlurMaterial_33;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomAndFlares::addBrightStuffOneOneShader
-	Shader_t4151988712 * ___addBrightStuffOneOneShader_34;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomAndFlares::addBrightStuffBlendOneOneMaterial
-	Material_t340375123 * ___addBrightStuffBlendOneOneMaterial_35;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomAndFlares::screenBlendShader
-	Shader_t4151988712 * ___screenBlendShader_36;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomAndFlares::screenBlend
-	Material_t340375123 * ___screenBlend_37;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomAndFlares::hollywoodFlaresShader
-	Shader_t4151988712 * ___hollywoodFlaresShader_38;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomAndFlares::hollywoodFlaresMaterial
-	Material_t340375123 * ___hollywoodFlaresMaterial_39;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomAndFlares::brightPassFilterShader
-	Shader_t4151988712 * ___brightPassFilterShader_40;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomAndFlares::brightPassFilterMaterial
-	Material_t340375123 * ___brightPassFilterMaterial_41;
-
-public:
-	inline static int32_t get_offset_of_tweakMode_8() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___tweakMode_8)); }
-	inline int32_t get_tweakMode_8() const { return ___tweakMode_8; }
-	inline int32_t* get_address_of_tweakMode_8() { return &___tweakMode_8; }
-	inline void set_tweakMode_8(int32_t value)
-	{
-		___tweakMode_8 = value;
-	}
-
-	inline static int32_t get_offset_of_screenBlendMode_9() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___screenBlendMode_9)); }
-	inline int32_t get_screenBlendMode_9() const { return ___screenBlendMode_9; }
-	inline int32_t* get_address_of_screenBlendMode_9() { return &___screenBlendMode_9; }
-	inline void set_screenBlendMode_9(int32_t value)
-	{
-		___screenBlendMode_9 = value;
-	}
-
-	inline static int32_t get_offset_of_hdr_10() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___hdr_10)); }
-	inline int32_t get_hdr_10() const { return ___hdr_10; }
-	inline int32_t* get_address_of_hdr_10() { return &___hdr_10; }
-	inline void set_hdr_10(int32_t value)
-	{
-		___hdr_10 = value;
-	}
-
-	inline static int32_t get_offset_of_doHdr_11() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___doHdr_11)); }
-	inline bool get_doHdr_11() const { return ___doHdr_11; }
-	inline bool* get_address_of_doHdr_11() { return &___doHdr_11; }
-	inline void set_doHdr_11(bool value)
-	{
-		___doHdr_11 = value;
-	}
-
-	inline static int32_t get_offset_of_sepBlurSpread_12() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___sepBlurSpread_12)); }
-	inline float get_sepBlurSpread_12() const { return ___sepBlurSpread_12; }
-	inline float* get_address_of_sepBlurSpread_12() { return &___sepBlurSpread_12; }
-	inline void set_sepBlurSpread_12(float value)
-	{
-		___sepBlurSpread_12 = value;
-	}
-
-	inline static int32_t get_offset_of_useSrcAlphaAsMask_13() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___useSrcAlphaAsMask_13)); }
-	inline float get_useSrcAlphaAsMask_13() const { return ___useSrcAlphaAsMask_13; }
-	inline float* get_address_of_useSrcAlphaAsMask_13() { return &___useSrcAlphaAsMask_13; }
-	inline void set_useSrcAlphaAsMask_13(float value)
-	{
-		___useSrcAlphaAsMask_13 = value;
-	}
-
-	inline static int32_t get_offset_of_bloomIntensity_14() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___bloomIntensity_14)); }
-	inline float get_bloomIntensity_14() const { return ___bloomIntensity_14; }
-	inline float* get_address_of_bloomIntensity_14() { return &___bloomIntensity_14; }
-	inline void set_bloomIntensity_14(float value)
-	{
-		___bloomIntensity_14 = value;
-	}
-
-	inline static int32_t get_offset_of_bloomThreshold_15() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___bloomThreshold_15)); }
-	inline float get_bloomThreshold_15() const { return ___bloomThreshold_15; }
-	inline float* get_address_of_bloomThreshold_15() { return &___bloomThreshold_15; }
-	inline void set_bloomThreshold_15(float value)
-	{
-		___bloomThreshold_15 = value;
-	}
-
-	inline static int32_t get_offset_of_bloomBlurIterations_16() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___bloomBlurIterations_16)); }
-	inline int32_t get_bloomBlurIterations_16() const { return ___bloomBlurIterations_16; }
-	inline int32_t* get_address_of_bloomBlurIterations_16() { return &___bloomBlurIterations_16; }
-	inline void set_bloomBlurIterations_16(int32_t value)
-	{
-		___bloomBlurIterations_16 = value;
-	}
-
-	inline static int32_t get_offset_of_lensflares_17() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___lensflares_17)); }
-	inline bool get_lensflares_17() const { return ___lensflares_17; }
-	inline bool* get_address_of_lensflares_17() { return &___lensflares_17; }
-	inline void set_lensflares_17(bool value)
-	{
-		___lensflares_17 = value;
-	}
-
-	inline static int32_t get_offset_of_hollywoodFlareBlurIterations_18() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___hollywoodFlareBlurIterations_18)); }
-	inline int32_t get_hollywoodFlareBlurIterations_18() const { return ___hollywoodFlareBlurIterations_18; }
-	inline int32_t* get_address_of_hollywoodFlareBlurIterations_18() { return &___hollywoodFlareBlurIterations_18; }
-	inline void set_hollywoodFlareBlurIterations_18(int32_t value)
-	{
-		___hollywoodFlareBlurIterations_18 = value;
-	}
-
-	inline static int32_t get_offset_of_lensflareMode_19() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___lensflareMode_19)); }
-	inline int32_t get_lensflareMode_19() const { return ___lensflareMode_19; }
-	inline int32_t* get_address_of_lensflareMode_19() { return &___lensflareMode_19; }
-	inline void set_lensflareMode_19(int32_t value)
-	{
-		___lensflareMode_19 = value;
-	}
-
-	inline static int32_t get_offset_of_hollyStretchWidth_20() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___hollyStretchWidth_20)); }
-	inline float get_hollyStretchWidth_20() const { return ___hollyStretchWidth_20; }
-	inline float* get_address_of_hollyStretchWidth_20() { return &___hollyStretchWidth_20; }
-	inline void set_hollyStretchWidth_20(float value)
-	{
-		___hollyStretchWidth_20 = value;
-	}
-
-	inline static int32_t get_offset_of_lensflareIntensity_21() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___lensflareIntensity_21)); }
-	inline float get_lensflareIntensity_21() const { return ___lensflareIntensity_21; }
-	inline float* get_address_of_lensflareIntensity_21() { return &___lensflareIntensity_21; }
-	inline void set_lensflareIntensity_21(float value)
-	{
-		___lensflareIntensity_21 = value;
-	}
-
-	inline static int32_t get_offset_of_lensflareThreshold_22() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___lensflareThreshold_22)); }
-	inline float get_lensflareThreshold_22() const { return ___lensflareThreshold_22; }
-	inline float* get_address_of_lensflareThreshold_22() { return &___lensflareThreshold_22; }
-	inline void set_lensflareThreshold_22(float value)
-	{
-		___lensflareThreshold_22 = value;
-	}
-
-	inline static int32_t get_offset_of_flareColorA_23() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___flareColorA_23)); }
-	inline Color_t2555686324  get_flareColorA_23() const { return ___flareColorA_23; }
-	inline Color_t2555686324 * get_address_of_flareColorA_23() { return &___flareColorA_23; }
-	inline void set_flareColorA_23(Color_t2555686324  value)
-	{
-		___flareColorA_23 = value;
-	}
-
-	inline static int32_t get_offset_of_flareColorB_24() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___flareColorB_24)); }
-	inline Color_t2555686324  get_flareColorB_24() const { return ___flareColorB_24; }
-	inline Color_t2555686324 * get_address_of_flareColorB_24() { return &___flareColorB_24; }
-	inline void set_flareColorB_24(Color_t2555686324  value)
-	{
-		___flareColorB_24 = value;
-	}
-
-	inline static int32_t get_offset_of_flareColorC_25() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___flareColorC_25)); }
-	inline Color_t2555686324  get_flareColorC_25() const { return ___flareColorC_25; }
-	inline Color_t2555686324 * get_address_of_flareColorC_25() { return &___flareColorC_25; }
-	inline void set_flareColorC_25(Color_t2555686324  value)
-	{
-		___flareColorC_25 = value;
-	}
-
-	inline static int32_t get_offset_of_flareColorD_26() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___flareColorD_26)); }
-	inline Color_t2555686324  get_flareColorD_26() const { return ___flareColorD_26; }
-	inline Color_t2555686324 * get_address_of_flareColorD_26() { return &___flareColorD_26; }
-	inline void set_flareColorD_26(Color_t2555686324  value)
-	{
-		___flareColorD_26 = value;
-	}
-
-	inline static int32_t get_offset_of_lensFlareVignetteMask_27() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___lensFlareVignetteMask_27)); }
-	inline Texture2D_t3840446185 * get_lensFlareVignetteMask_27() const { return ___lensFlareVignetteMask_27; }
-	inline Texture2D_t3840446185 ** get_address_of_lensFlareVignetteMask_27() { return &___lensFlareVignetteMask_27; }
-	inline void set_lensFlareVignetteMask_27(Texture2D_t3840446185 * value)
-	{
-		___lensFlareVignetteMask_27 = value;
-		Il2CppCodeGenWriteBarrier((&___lensFlareVignetteMask_27), value);
-	}
-
-	inline static int32_t get_offset_of_lensFlareShader_28() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___lensFlareShader_28)); }
-	inline Shader_t4151988712 * get_lensFlareShader_28() const { return ___lensFlareShader_28; }
-	inline Shader_t4151988712 ** get_address_of_lensFlareShader_28() { return &___lensFlareShader_28; }
-	inline void set_lensFlareShader_28(Shader_t4151988712 * value)
-	{
-		___lensFlareShader_28 = value;
-		Il2CppCodeGenWriteBarrier((&___lensFlareShader_28), value);
-	}
-
-	inline static int32_t get_offset_of_lensFlareMaterial_29() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___lensFlareMaterial_29)); }
-	inline Material_t340375123 * get_lensFlareMaterial_29() const { return ___lensFlareMaterial_29; }
-	inline Material_t340375123 ** get_address_of_lensFlareMaterial_29() { return &___lensFlareMaterial_29; }
-	inline void set_lensFlareMaterial_29(Material_t340375123 * value)
-	{
-		___lensFlareMaterial_29 = value;
-		Il2CppCodeGenWriteBarrier((&___lensFlareMaterial_29), value);
-	}
-
-	inline static int32_t get_offset_of_vignetteShader_30() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___vignetteShader_30)); }
-	inline Shader_t4151988712 * get_vignetteShader_30() const { return ___vignetteShader_30; }
-	inline Shader_t4151988712 ** get_address_of_vignetteShader_30() { return &___vignetteShader_30; }
-	inline void set_vignetteShader_30(Shader_t4151988712 * value)
-	{
-		___vignetteShader_30 = value;
-		Il2CppCodeGenWriteBarrier((&___vignetteShader_30), value);
-	}
-
-	inline static int32_t get_offset_of_vignetteMaterial_31() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___vignetteMaterial_31)); }
-	inline Material_t340375123 * get_vignetteMaterial_31() const { return ___vignetteMaterial_31; }
-	inline Material_t340375123 ** get_address_of_vignetteMaterial_31() { return &___vignetteMaterial_31; }
-	inline void set_vignetteMaterial_31(Material_t340375123 * value)
-	{
-		___vignetteMaterial_31 = value;
-		Il2CppCodeGenWriteBarrier((&___vignetteMaterial_31), value);
-	}
-
-	inline static int32_t get_offset_of_separableBlurShader_32() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___separableBlurShader_32)); }
-	inline Shader_t4151988712 * get_separableBlurShader_32() const { return ___separableBlurShader_32; }
-	inline Shader_t4151988712 ** get_address_of_separableBlurShader_32() { return &___separableBlurShader_32; }
-	inline void set_separableBlurShader_32(Shader_t4151988712 * value)
-	{
-		___separableBlurShader_32 = value;
-		Il2CppCodeGenWriteBarrier((&___separableBlurShader_32), value);
-	}
-
-	inline static int32_t get_offset_of_separableBlurMaterial_33() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___separableBlurMaterial_33)); }
-	inline Material_t340375123 * get_separableBlurMaterial_33() const { return ___separableBlurMaterial_33; }
-	inline Material_t340375123 ** get_address_of_separableBlurMaterial_33() { return &___separableBlurMaterial_33; }
-	inline void set_separableBlurMaterial_33(Material_t340375123 * value)
-	{
-		___separableBlurMaterial_33 = value;
-		Il2CppCodeGenWriteBarrier((&___separableBlurMaterial_33), value);
-	}
-
-	inline static int32_t get_offset_of_addBrightStuffOneOneShader_34() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___addBrightStuffOneOneShader_34)); }
-	inline Shader_t4151988712 * get_addBrightStuffOneOneShader_34() const { return ___addBrightStuffOneOneShader_34; }
-	inline Shader_t4151988712 ** get_address_of_addBrightStuffOneOneShader_34() { return &___addBrightStuffOneOneShader_34; }
-	inline void set_addBrightStuffOneOneShader_34(Shader_t4151988712 * value)
-	{
-		___addBrightStuffOneOneShader_34 = value;
-		Il2CppCodeGenWriteBarrier((&___addBrightStuffOneOneShader_34), value);
-	}
-
-	inline static int32_t get_offset_of_addBrightStuffBlendOneOneMaterial_35() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___addBrightStuffBlendOneOneMaterial_35)); }
-	inline Material_t340375123 * get_addBrightStuffBlendOneOneMaterial_35() const { return ___addBrightStuffBlendOneOneMaterial_35; }
-	inline Material_t340375123 ** get_address_of_addBrightStuffBlendOneOneMaterial_35() { return &___addBrightStuffBlendOneOneMaterial_35; }
-	inline void set_addBrightStuffBlendOneOneMaterial_35(Material_t340375123 * value)
-	{
-		___addBrightStuffBlendOneOneMaterial_35 = value;
-		Il2CppCodeGenWriteBarrier((&___addBrightStuffBlendOneOneMaterial_35), value);
-	}
-
-	inline static int32_t get_offset_of_screenBlendShader_36() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___screenBlendShader_36)); }
-	inline Shader_t4151988712 * get_screenBlendShader_36() const { return ___screenBlendShader_36; }
-	inline Shader_t4151988712 ** get_address_of_screenBlendShader_36() { return &___screenBlendShader_36; }
-	inline void set_screenBlendShader_36(Shader_t4151988712 * value)
-	{
-		___screenBlendShader_36 = value;
-		Il2CppCodeGenWriteBarrier((&___screenBlendShader_36), value);
-	}
-
-	inline static int32_t get_offset_of_screenBlend_37() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___screenBlend_37)); }
-	inline Material_t340375123 * get_screenBlend_37() const { return ___screenBlend_37; }
-	inline Material_t340375123 ** get_address_of_screenBlend_37() { return &___screenBlend_37; }
-	inline void set_screenBlend_37(Material_t340375123 * value)
-	{
-		___screenBlend_37 = value;
-		Il2CppCodeGenWriteBarrier((&___screenBlend_37), value);
-	}
-
-	inline static int32_t get_offset_of_hollywoodFlaresShader_38() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___hollywoodFlaresShader_38)); }
-	inline Shader_t4151988712 * get_hollywoodFlaresShader_38() const { return ___hollywoodFlaresShader_38; }
-	inline Shader_t4151988712 ** get_address_of_hollywoodFlaresShader_38() { return &___hollywoodFlaresShader_38; }
-	inline void set_hollywoodFlaresShader_38(Shader_t4151988712 * value)
-	{
-		___hollywoodFlaresShader_38 = value;
-		Il2CppCodeGenWriteBarrier((&___hollywoodFlaresShader_38), value);
-	}
-
-	inline static int32_t get_offset_of_hollywoodFlaresMaterial_39() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___hollywoodFlaresMaterial_39)); }
-	inline Material_t340375123 * get_hollywoodFlaresMaterial_39() const { return ___hollywoodFlaresMaterial_39; }
-	inline Material_t340375123 ** get_address_of_hollywoodFlaresMaterial_39() { return &___hollywoodFlaresMaterial_39; }
-	inline void set_hollywoodFlaresMaterial_39(Material_t340375123 * value)
-	{
-		___hollywoodFlaresMaterial_39 = value;
-		Il2CppCodeGenWriteBarrier((&___hollywoodFlaresMaterial_39), value);
-	}
-
-	inline static int32_t get_offset_of_brightPassFilterShader_40() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___brightPassFilterShader_40)); }
-	inline Shader_t4151988712 * get_brightPassFilterShader_40() const { return ___brightPassFilterShader_40; }
-	inline Shader_t4151988712 ** get_address_of_brightPassFilterShader_40() { return &___brightPassFilterShader_40; }
-	inline void set_brightPassFilterShader_40(Shader_t4151988712 * value)
-	{
-		___brightPassFilterShader_40 = value;
-		Il2CppCodeGenWriteBarrier((&___brightPassFilterShader_40), value);
-	}
-
-	inline static int32_t get_offset_of_brightPassFilterMaterial_41() { return static_cast<int32_t>(offsetof(BloomAndFlares_t2848767628, ___brightPassFilterMaterial_41)); }
-	inline Material_t340375123 * get_brightPassFilterMaterial_41() const { return ___brightPassFilterMaterial_41; }
-	inline Material_t340375123 ** get_address_of_brightPassFilterMaterial_41() { return &___brightPassFilterMaterial_41; }
-	inline void set_brightPassFilterMaterial_41(Material_t340375123 * value)
-	{
-		___brightPassFilterMaterial_41 = value;
-		Il2CppCodeGenWriteBarrier((&___brightPassFilterMaterial_41), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOOMANDFLARES_T2848767628_H
-#ifndef BLOOMOPTIMIZED_T2685819829_H
-#define BLOOMOPTIMIZED_T2685819829_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.BloomOptimized
-struct  BloomOptimized_t2685819829  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.BloomOptimized::threshold
-	float ___threshold_8;
-	// System.Single UnityStandardAssets.ImageEffects.BloomOptimized::intensity
-	float ___intensity_9;
-	// System.Single UnityStandardAssets.ImageEffects.BloomOptimized::blurSize
-	float ___blurSize_10;
-	// UnityStandardAssets.ImageEffects.BloomOptimized/Resolution UnityStandardAssets.ImageEffects.BloomOptimized::resolution
-	int32_t ___resolution_11;
-	// System.Int32 UnityStandardAssets.ImageEffects.BloomOptimized::blurIterations
-	int32_t ___blurIterations_12;
-	// UnityStandardAssets.ImageEffects.BloomOptimized/BlurType UnityStandardAssets.ImageEffects.BloomOptimized::blurType
-	int32_t ___blurType_13;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BloomOptimized::fastBloomShader
-	Shader_t4151988712 * ___fastBloomShader_14;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BloomOptimized::fastBloomMaterial
-	Material_t340375123 * ___fastBloomMaterial_15;
-
-public:
-	inline static int32_t get_offset_of_threshold_8() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___threshold_8)); }
-	inline float get_threshold_8() const { return ___threshold_8; }
-	inline float* get_address_of_threshold_8() { return &___threshold_8; }
-	inline void set_threshold_8(float value)
-	{
-		___threshold_8 = value;
-	}
-
-	inline static int32_t get_offset_of_intensity_9() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___intensity_9)); }
-	inline float get_intensity_9() const { return ___intensity_9; }
-	inline float* get_address_of_intensity_9() { return &___intensity_9; }
-	inline void set_intensity_9(float value)
-	{
-		___intensity_9 = value;
-	}
-
-	inline static int32_t get_offset_of_blurSize_10() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___blurSize_10)); }
-	inline float get_blurSize_10() const { return ___blurSize_10; }
-	inline float* get_address_of_blurSize_10() { return &___blurSize_10; }
-	inline void set_blurSize_10(float value)
-	{
-		___blurSize_10 = value;
-	}
-
-	inline static int32_t get_offset_of_resolution_11() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___resolution_11)); }
-	inline int32_t get_resolution_11() const { return ___resolution_11; }
-	inline int32_t* get_address_of_resolution_11() { return &___resolution_11; }
-	inline void set_resolution_11(int32_t value)
-	{
-		___resolution_11 = value;
-	}
-
-	inline static int32_t get_offset_of_blurIterations_12() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___blurIterations_12)); }
-	inline int32_t get_blurIterations_12() const { return ___blurIterations_12; }
-	inline int32_t* get_address_of_blurIterations_12() { return &___blurIterations_12; }
-	inline void set_blurIterations_12(int32_t value)
-	{
-		___blurIterations_12 = value;
-	}
-
-	inline static int32_t get_offset_of_blurType_13() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___blurType_13)); }
-	inline int32_t get_blurType_13() const { return ___blurType_13; }
-	inline int32_t* get_address_of_blurType_13() { return &___blurType_13; }
-	inline void set_blurType_13(int32_t value)
-	{
-		___blurType_13 = value;
-	}
-
-	inline static int32_t get_offset_of_fastBloomShader_14() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___fastBloomShader_14)); }
-	inline Shader_t4151988712 * get_fastBloomShader_14() const { return ___fastBloomShader_14; }
-	inline Shader_t4151988712 ** get_address_of_fastBloomShader_14() { return &___fastBloomShader_14; }
-	inline void set_fastBloomShader_14(Shader_t4151988712 * value)
-	{
-		___fastBloomShader_14 = value;
-		Il2CppCodeGenWriteBarrier((&___fastBloomShader_14), value);
-	}
-
-	inline static int32_t get_offset_of_fastBloomMaterial_15() { return static_cast<int32_t>(offsetof(BloomOptimized_t2685819829, ___fastBloomMaterial_15)); }
-	inline Material_t340375123 * get_fastBloomMaterial_15() const { return ___fastBloomMaterial_15; }
-	inline Material_t340375123 ** get_address_of_fastBloomMaterial_15() { return &___fastBloomMaterial_15; }
-	inline void set_fastBloomMaterial_15(Material_t340375123 * value)
-	{
-		___fastBloomMaterial_15 = value;
-		Il2CppCodeGenWriteBarrier((&___fastBloomMaterial_15), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLOOMOPTIMIZED_T2685819829_H
-#ifndef BLUROPTIMIZED_T3334654964_H
-#define BLUROPTIMIZED_T3334654964_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.BlurOptimized
-struct  BlurOptimized_t3334654964  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.BlurOptimized::downsample
-	int32_t ___downsample_8;
-	// System.Single UnityStandardAssets.ImageEffects.BlurOptimized::blurSize
-	float ___blurSize_9;
-	// System.Int32 UnityStandardAssets.ImageEffects.BlurOptimized::blurIterations
-	int32_t ___blurIterations_10;
-	// UnityStandardAssets.ImageEffects.BlurOptimized/BlurType UnityStandardAssets.ImageEffects.BlurOptimized::blurType
-	int32_t ___blurType_11;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.BlurOptimized::blurShader
-	Shader_t4151988712 * ___blurShader_12;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.BlurOptimized::blurMaterial
-	Material_t340375123 * ___blurMaterial_13;
-
-public:
-	inline static int32_t get_offset_of_downsample_8() { return static_cast<int32_t>(offsetof(BlurOptimized_t3334654964, ___downsample_8)); }
-	inline int32_t get_downsample_8() const { return ___downsample_8; }
-	inline int32_t* get_address_of_downsample_8() { return &___downsample_8; }
-	inline void set_downsample_8(int32_t value)
-	{
-		___downsample_8 = value;
-	}
-
-	inline static int32_t get_offset_of_blurSize_9() { return static_cast<int32_t>(offsetof(BlurOptimized_t3334654964, ___blurSize_9)); }
-	inline float get_blurSize_9() const { return ___blurSize_9; }
-	inline float* get_address_of_blurSize_9() { return &___blurSize_9; }
-	inline void set_blurSize_9(float value)
-	{
-		___blurSize_9 = value;
-	}
-
-	inline static int32_t get_offset_of_blurIterations_10() { return static_cast<int32_t>(offsetof(BlurOptimized_t3334654964, ___blurIterations_10)); }
-	inline int32_t get_blurIterations_10() const { return ___blurIterations_10; }
-	inline int32_t* get_address_of_blurIterations_10() { return &___blurIterations_10; }
-	inline void set_blurIterations_10(int32_t value)
-	{
-		___blurIterations_10 = value;
-	}
-
-	inline static int32_t get_offset_of_blurType_11() { return static_cast<int32_t>(offsetof(BlurOptimized_t3334654964, ___blurType_11)); }
-	inline int32_t get_blurType_11() const { return ___blurType_11; }
-	inline int32_t* get_address_of_blurType_11() { return &___blurType_11; }
-	inline void set_blurType_11(int32_t value)
-	{
-		___blurType_11 = value;
-	}
-
-	inline static int32_t get_offset_of_blurShader_12() { return static_cast<int32_t>(offsetof(BlurOptimized_t3334654964, ___blurShader_12)); }
-	inline Shader_t4151988712 * get_blurShader_12() const { return ___blurShader_12; }
-	inline Shader_t4151988712 ** get_address_of_blurShader_12() { return &___blurShader_12; }
-	inline void set_blurShader_12(Shader_t4151988712 * value)
-	{
-		___blurShader_12 = value;
-		Il2CppCodeGenWriteBarrier((&___blurShader_12), value);
-	}
-
-	inline static int32_t get_offset_of_blurMaterial_13() { return static_cast<int32_t>(offsetof(BlurOptimized_t3334654964, ___blurMaterial_13)); }
-	inline Material_t340375123 * get_blurMaterial_13() const { return ___blurMaterial_13; }
-	inline Material_t340375123 ** get_address_of_blurMaterial_13() { return &___blurMaterial_13; }
-	inline void set_blurMaterial_13(Material_t340375123 * value)
-	{
-		___blurMaterial_13 = value;
-		Il2CppCodeGenWriteBarrier((&___blurMaterial_13), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // BLUROPTIMIZED_T3334654964_H
-#ifndef CAMERAMOTIONBLUR_T2812046500_H
-#define CAMERAMOTIONBLUR_T2812046500_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.CameraMotionBlur
-struct  CameraMotionBlur_t2812046500  : public PostEffectsBase_t2404315740
-{
-public:
-	// UnityStandardAssets.ImageEffects.CameraMotionBlur/MotionBlurFilter UnityStandardAssets.ImageEffects.CameraMotionBlur::filterType
-	int32_t ___filterType_9;
-	// System.Boolean UnityStandardAssets.ImageEffects.CameraMotionBlur::preview
-	bool ___preview_10;
-	// UnityEngine.Vector3 UnityStandardAssets.ImageEffects.CameraMotionBlur::previewScale
-	Vector3_t3722313464  ___previewScale_11;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::movementScale
-	float ___movementScale_12;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::rotationScale
-	float ___rotationScale_13;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::maxVelocity
-	float ___maxVelocity_14;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::minVelocity
-	float ___minVelocity_15;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::velocityScale
-	float ___velocityScale_16;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::softZDistance
-	float ___softZDistance_17;
-	// System.Int32 UnityStandardAssets.ImageEffects.CameraMotionBlur::velocityDownsample
-	int32_t ___velocityDownsample_18;
-	// UnityEngine.LayerMask UnityStandardAssets.ImageEffects.CameraMotionBlur::excludeLayers
-	LayerMask_t3493934918  ___excludeLayers_19;
-	// UnityEngine.GameObject UnityStandardAssets.ImageEffects.CameraMotionBlur::tmpCam
-	GameObject_t1113636619 * ___tmpCam_20;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.CameraMotionBlur::shader
-	Shader_t4151988712 * ___shader_21;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.CameraMotionBlur::dx11MotionBlurShader
-	Shader_t4151988712 * ___dx11MotionBlurShader_22;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.CameraMotionBlur::replacementClear
-	Shader_t4151988712 * ___replacementClear_23;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.CameraMotionBlur::motionBlurMaterial
-	Material_t340375123 * ___motionBlurMaterial_24;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.CameraMotionBlur::dx11MotionBlurMaterial
-	Material_t340375123 * ___dx11MotionBlurMaterial_25;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.CameraMotionBlur::noiseTexture
-	Texture2D_t3840446185 * ___noiseTexture_26;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::jitter
-	float ___jitter_27;
-	// System.Boolean UnityStandardAssets.ImageEffects.CameraMotionBlur::showVelocity
-	bool ___showVelocity_28;
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::showVelocityScale
-	float ___showVelocityScale_29;
-	// UnityEngine.Matrix4x4 UnityStandardAssets.ImageEffects.CameraMotionBlur::currentViewProjMat
-	Matrix4x4_t1817901843  ___currentViewProjMat_30;
-	// UnityEngine.Matrix4x4[] UnityStandardAssets.ImageEffects.CameraMotionBlur::currentStereoViewProjMat
-	Matrix4x4U5BU5D_t2302988098* ___currentStereoViewProjMat_31;
-	// UnityEngine.Matrix4x4 UnityStandardAssets.ImageEffects.CameraMotionBlur::prevViewProjMat
-	Matrix4x4_t1817901843  ___prevViewProjMat_32;
-	// UnityEngine.Matrix4x4[] UnityStandardAssets.ImageEffects.CameraMotionBlur::prevStereoViewProjMat
-	Matrix4x4U5BU5D_t2302988098* ___prevStereoViewProjMat_33;
-	// System.Int32 UnityStandardAssets.ImageEffects.CameraMotionBlur::prevFrameCount
-	int32_t ___prevFrameCount_34;
-	// System.Boolean UnityStandardAssets.ImageEffects.CameraMotionBlur::wasActive
-	bool ___wasActive_35;
-	// UnityEngine.Vector3 UnityStandardAssets.ImageEffects.CameraMotionBlur::prevFrameForward
-	Vector3_t3722313464  ___prevFrameForward_36;
-	// UnityEngine.Vector3 UnityStandardAssets.ImageEffects.CameraMotionBlur::prevFrameUp
-	Vector3_t3722313464  ___prevFrameUp_37;
-	// UnityEngine.Vector3 UnityStandardAssets.ImageEffects.CameraMotionBlur::prevFramePos
-	Vector3_t3722313464  ___prevFramePos_38;
-	// UnityEngine.Camera UnityStandardAssets.ImageEffects.CameraMotionBlur::_camera
-	Camera_t4157153871 * ____camera_39;
-
-public:
-	inline static int32_t get_offset_of_filterType_9() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___filterType_9)); }
-	inline int32_t get_filterType_9() const { return ___filterType_9; }
-	inline int32_t* get_address_of_filterType_9() { return &___filterType_9; }
-	inline void set_filterType_9(int32_t value)
-	{
-		___filterType_9 = value;
-	}
-
-	inline static int32_t get_offset_of_preview_10() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___preview_10)); }
-	inline bool get_preview_10() const { return ___preview_10; }
-	inline bool* get_address_of_preview_10() { return &___preview_10; }
-	inline void set_preview_10(bool value)
-	{
-		___preview_10 = value;
-	}
-
-	inline static int32_t get_offset_of_previewScale_11() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___previewScale_11)); }
-	inline Vector3_t3722313464  get_previewScale_11() const { return ___previewScale_11; }
-	inline Vector3_t3722313464 * get_address_of_previewScale_11() { return &___previewScale_11; }
-	inline void set_previewScale_11(Vector3_t3722313464  value)
-	{
-		___previewScale_11 = value;
-	}
-
-	inline static int32_t get_offset_of_movementScale_12() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___movementScale_12)); }
-	inline float get_movementScale_12() const { return ___movementScale_12; }
-	inline float* get_address_of_movementScale_12() { return &___movementScale_12; }
-	inline void set_movementScale_12(float value)
-	{
-		___movementScale_12 = value;
-	}
-
-	inline static int32_t get_offset_of_rotationScale_13() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___rotationScale_13)); }
-	inline float get_rotationScale_13() const { return ___rotationScale_13; }
-	inline float* get_address_of_rotationScale_13() { return &___rotationScale_13; }
-	inline void set_rotationScale_13(float value)
-	{
-		___rotationScale_13 = value;
-	}
-
-	inline static int32_t get_offset_of_maxVelocity_14() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___maxVelocity_14)); }
-	inline float get_maxVelocity_14() const { return ___maxVelocity_14; }
-	inline float* get_address_of_maxVelocity_14() { return &___maxVelocity_14; }
-	inline void set_maxVelocity_14(float value)
-	{
-		___maxVelocity_14 = value;
-	}
-
-	inline static int32_t get_offset_of_minVelocity_15() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___minVelocity_15)); }
-	inline float get_minVelocity_15() const { return ___minVelocity_15; }
-	inline float* get_address_of_minVelocity_15() { return &___minVelocity_15; }
-	inline void set_minVelocity_15(float value)
-	{
-		___minVelocity_15 = value;
-	}
-
-	inline static int32_t get_offset_of_velocityScale_16() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___velocityScale_16)); }
-	inline float get_velocityScale_16() const { return ___velocityScale_16; }
-	inline float* get_address_of_velocityScale_16() { return &___velocityScale_16; }
-	inline void set_velocityScale_16(float value)
-	{
-		___velocityScale_16 = value;
-	}
-
-	inline static int32_t get_offset_of_softZDistance_17() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___softZDistance_17)); }
-	inline float get_softZDistance_17() const { return ___softZDistance_17; }
-	inline float* get_address_of_softZDistance_17() { return &___softZDistance_17; }
-	inline void set_softZDistance_17(float value)
-	{
-		___softZDistance_17 = value;
-	}
-
-	inline static int32_t get_offset_of_velocityDownsample_18() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___velocityDownsample_18)); }
-	inline int32_t get_velocityDownsample_18() const { return ___velocityDownsample_18; }
-	inline int32_t* get_address_of_velocityDownsample_18() { return &___velocityDownsample_18; }
-	inline void set_velocityDownsample_18(int32_t value)
-	{
-		___velocityDownsample_18 = value;
-	}
-
-	inline static int32_t get_offset_of_excludeLayers_19() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___excludeLayers_19)); }
-	inline LayerMask_t3493934918  get_excludeLayers_19() const { return ___excludeLayers_19; }
-	inline LayerMask_t3493934918 * get_address_of_excludeLayers_19() { return &___excludeLayers_19; }
-	inline void set_excludeLayers_19(LayerMask_t3493934918  value)
-	{
-		___excludeLayers_19 = value;
-	}
-
-	inline static int32_t get_offset_of_tmpCam_20() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___tmpCam_20)); }
-	inline GameObject_t1113636619 * get_tmpCam_20() const { return ___tmpCam_20; }
-	inline GameObject_t1113636619 ** get_address_of_tmpCam_20() { return &___tmpCam_20; }
-	inline void set_tmpCam_20(GameObject_t1113636619 * value)
-	{
-		___tmpCam_20 = value;
-		Il2CppCodeGenWriteBarrier((&___tmpCam_20), value);
-	}
-
-	inline static int32_t get_offset_of_shader_21() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___shader_21)); }
-	inline Shader_t4151988712 * get_shader_21() const { return ___shader_21; }
-	inline Shader_t4151988712 ** get_address_of_shader_21() { return &___shader_21; }
-	inline void set_shader_21(Shader_t4151988712 * value)
-	{
-		___shader_21 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_21), value);
-	}
-
-	inline static int32_t get_offset_of_dx11MotionBlurShader_22() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___dx11MotionBlurShader_22)); }
-	inline Shader_t4151988712 * get_dx11MotionBlurShader_22() const { return ___dx11MotionBlurShader_22; }
-	inline Shader_t4151988712 ** get_address_of_dx11MotionBlurShader_22() { return &___dx11MotionBlurShader_22; }
-	inline void set_dx11MotionBlurShader_22(Shader_t4151988712 * value)
-	{
-		___dx11MotionBlurShader_22 = value;
-		Il2CppCodeGenWriteBarrier((&___dx11MotionBlurShader_22), value);
-	}
-
-	inline static int32_t get_offset_of_replacementClear_23() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___replacementClear_23)); }
-	inline Shader_t4151988712 * get_replacementClear_23() const { return ___replacementClear_23; }
-	inline Shader_t4151988712 ** get_address_of_replacementClear_23() { return &___replacementClear_23; }
-	inline void set_replacementClear_23(Shader_t4151988712 * value)
-	{
-		___replacementClear_23 = value;
-		Il2CppCodeGenWriteBarrier((&___replacementClear_23), value);
-	}
-
-	inline static int32_t get_offset_of_motionBlurMaterial_24() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___motionBlurMaterial_24)); }
-	inline Material_t340375123 * get_motionBlurMaterial_24() const { return ___motionBlurMaterial_24; }
-	inline Material_t340375123 ** get_address_of_motionBlurMaterial_24() { return &___motionBlurMaterial_24; }
-	inline void set_motionBlurMaterial_24(Material_t340375123 * value)
-	{
-		___motionBlurMaterial_24 = value;
-		Il2CppCodeGenWriteBarrier((&___motionBlurMaterial_24), value);
-	}
-
-	inline static int32_t get_offset_of_dx11MotionBlurMaterial_25() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___dx11MotionBlurMaterial_25)); }
-	inline Material_t340375123 * get_dx11MotionBlurMaterial_25() const { return ___dx11MotionBlurMaterial_25; }
-	inline Material_t340375123 ** get_address_of_dx11MotionBlurMaterial_25() { return &___dx11MotionBlurMaterial_25; }
-	inline void set_dx11MotionBlurMaterial_25(Material_t340375123 * value)
-	{
-		___dx11MotionBlurMaterial_25 = value;
-		Il2CppCodeGenWriteBarrier((&___dx11MotionBlurMaterial_25), value);
-	}
-
-	inline static int32_t get_offset_of_noiseTexture_26() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___noiseTexture_26)); }
-	inline Texture2D_t3840446185 * get_noiseTexture_26() const { return ___noiseTexture_26; }
-	inline Texture2D_t3840446185 ** get_address_of_noiseTexture_26() { return &___noiseTexture_26; }
-	inline void set_noiseTexture_26(Texture2D_t3840446185 * value)
-	{
-		___noiseTexture_26 = value;
-		Il2CppCodeGenWriteBarrier((&___noiseTexture_26), value);
-	}
-
-	inline static int32_t get_offset_of_jitter_27() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___jitter_27)); }
-	inline float get_jitter_27() const { return ___jitter_27; }
-	inline float* get_address_of_jitter_27() { return &___jitter_27; }
-	inline void set_jitter_27(float value)
-	{
-		___jitter_27 = value;
-	}
-
-	inline static int32_t get_offset_of_showVelocity_28() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___showVelocity_28)); }
-	inline bool get_showVelocity_28() const { return ___showVelocity_28; }
-	inline bool* get_address_of_showVelocity_28() { return &___showVelocity_28; }
-	inline void set_showVelocity_28(bool value)
-	{
-		___showVelocity_28 = value;
-	}
-
-	inline static int32_t get_offset_of_showVelocityScale_29() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___showVelocityScale_29)); }
-	inline float get_showVelocityScale_29() const { return ___showVelocityScale_29; }
-	inline float* get_address_of_showVelocityScale_29() { return &___showVelocityScale_29; }
-	inline void set_showVelocityScale_29(float value)
-	{
-		___showVelocityScale_29 = value;
-	}
-
-	inline static int32_t get_offset_of_currentViewProjMat_30() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___currentViewProjMat_30)); }
-	inline Matrix4x4_t1817901843  get_currentViewProjMat_30() const { return ___currentViewProjMat_30; }
-	inline Matrix4x4_t1817901843 * get_address_of_currentViewProjMat_30() { return &___currentViewProjMat_30; }
-	inline void set_currentViewProjMat_30(Matrix4x4_t1817901843  value)
-	{
-		___currentViewProjMat_30 = value;
-	}
-
-	inline static int32_t get_offset_of_currentStereoViewProjMat_31() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___currentStereoViewProjMat_31)); }
-	inline Matrix4x4U5BU5D_t2302988098* get_currentStereoViewProjMat_31() const { return ___currentStereoViewProjMat_31; }
-	inline Matrix4x4U5BU5D_t2302988098** get_address_of_currentStereoViewProjMat_31() { return &___currentStereoViewProjMat_31; }
-	inline void set_currentStereoViewProjMat_31(Matrix4x4U5BU5D_t2302988098* value)
-	{
-		___currentStereoViewProjMat_31 = value;
-		Il2CppCodeGenWriteBarrier((&___currentStereoViewProjMat_31), value);
-	}
-
-	inline static int32_t get_offset_of_prevViewProjMat_32() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___prevViewProjMat_32)); }
-	inline Matrix4x4_t1817901843  get_prevViewProjMat_32() const { return ___prevViewProjMat_32; }
-	inline Matrix4x4_t1817901843 * get_address_of_prevViewProjMat_32() { return &___prevViewProjMat_32; }
-	inline void set_prevViewProjMat_32(Matrix4x4_t1817901843  value)
-	{
-		___prevViewProjMat_32 = value;
-	}
-
-	inline static int32_t get_offset_of_prevStereoViewProjMat_33() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___prevStereoViewProjMat_33)); }
-	inline Matrix4x4U5BU5D_t2302988098* get_prevStereoViewProjMat_33() const { return ___prevStereoViewProjMat_33; }
-	inline Matrix4x4U5BU5D_t2302988098** get_address_of_prevStereoViewProjMat_33() { return &___prevStereoViewProjMat_33; }
-	inline void set_prevStereoViewProjMat_33(Matrix4x4U5BU5D_t2302988098* value)
-	{
-		___prevStereoViewProjMat_33 = value;
-		Il2CppCodeGenWriteBarrier((&___prevStereoViewProjMat_33), value);
-	}
-
-	inline static int32_t get_offset_of_prevFrameCount_34() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___prevFrameCount_34)); }
-	inline int32_t get_prevFrameCount_34() const { return ___prevFrameCount_34; }
-	inline int32_t* get_address_of_prevFrameCount_34() { return &___prevFrameCount_34; }
-	inline void set_prevFrameCount_34(int32_t value)
-	{
-		___prevFrameCount_34 = value;
-	}
-
-	inline static int32_t get_offset_of_wasActive_35() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___wasActive_35)); }
-	inline bool get_wasActive_35() const { return ___wasActive_35; }
-	inline bool* get_address_of_wasActive_35() { return &___wasActive_35; }
-	inline void set_wasActive_35(bool value)
-	{
-		___wasActive_35 = value;
-	}
-
-	inline static int32_t get_offset_of_prevFrameForward_36() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___prevFrameForward_36)); }
-	inline Vector3_t3722313464  get_prevFrameForward_36() const { return ___prevFrameForward_36; }
-	inline Vector3_t3722313464 * get_address_of_prevFrameForward_36() { return &___prevFrameForward_36; }
-	inline void set_prevFrameForward_36(Vector3_t3722313464  value)
-	{
-		___prevFrameForward_36 = value;
-	}
-
-	inline static int32_t get_offset_of_prevFrameUp_37() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___prevFrameUp_37)); }
-	inline Vector3_t3722313464  get_prevFrameUp_37() const { return ___prevFrameUp_37; }
-	inline Vector3_t3722313464 * get_address_of_prevFrameUp_37() { return &___prevFrameUp_37; }
-	inline void set_prevFrameUp_37(Vector3_t3722313464  value)
-	{
-		___prevFrameUp_37 = value;
-	}
-
-	inline static int32_t get_offset_of_prevFramePos_38() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ___prevFramePos_38)); }
-	inline Vector3_t3722313464  get_prevFramePos_38() const { return ___prevFramePos_38; }
-	inline Vector3_t3722313464 * get_address_of_prevFramePos_38() { return &___prevFramePos_38; }
-	inline void set_prevFramePos_38(Vector3_t3722313464  value)
-	{
-		___prevFramePos_38 = value;
-	}
-
-	inline static int32_t get_offset_of__camera_39() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500, ____camera_39)); }
-	inline Camera_t4157153871 * get__camera_39() const { return ____camera_39; }
-	inline Camera_t4157153871 ** get_address_of__camera_39() { return &____camera_39; }
-	inline void set__camera_39(Camera_t4157153871 * value)
-	{
-		____camera_39 = value;
-		Il2CppCodeGenWriteBarrier((&____camera_39), value);
-	}
-};
-
-struct CameraMotionBlur_t2812046500_StaticFields
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.CameraMotionBlur::MAX_RADIUS
-	float ___MAX_RADIUS_8;
-
-public:
-	inline static int32_t get_offset_of_MAX_RADIUS_8() { return static_cast<int32_t>(offsetof(CameraMotionBlur_t2812046500_StaticFields, ___MAX_RADIUS_8)); }
-	inline float get_MAX_RADIUS_8() const { return ___MAX_RADIUS_8; }
-	inline float* get_address_of_MAX_RADIUS_8() { return &___MAX_RADIUS_8; }
-	inline void set_MAX_RADIUS_8(float value)
-	{
-		___MAX_RADIUS_8 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // CAMERAMOTIONBLUR_T2812046500_H
-#ifndef COLORCORRECTIONCURVES_T3742166504_H
-#define COLORCORRECTIONCURVES_T3742166504_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ColorCorrectionCurves
-struct  ColorCorrectionCurves_t3742166504  : public PostEffectsBase_t2404315740
-{
-public:
-	// UnityEngine.AnimationCurve UnityStandardAssets.ImageEffects.ColorCorrectionCurves::redChannel
-	AnimationCurve_t3046754366 * ___redChannel_8;
-	// UnityEngine.AnimationCurve UnityStandardAssets.ImageEffects.ColorCorrectionCurves::greenChannel
-	AnimationCurve_t3046754366 * ___greenChannel_9;
-	// UnityEngine.AnimationCurve UnityStandardAssets.ImageEffects.ColorCorrectionCurves::blueChannel
-	AnimationCurve_t3046754366 * ___blueChannel_10;
-	// System.Boolean UnityStandardAssets.ImageEffects.ColorCorrectionCurves::useDepthCorrection
-	bool ___useDepthCorrection_11;
-	// UnityEngine.AnimationCurve UnityStandardAssets.ImageEffects.ColorCorrectionCurves::zCurve
-	AnimationCurve_t3046754366 * ___zCurve_12;
-	// UnityEngine.AnimationCurve UnityStandardAssets.ImageEffects.ColorCorrectionCurves::depthRedChannel
-	AnimationCurve_t3046754366 * ___depthRedChannel_13;
-	// UnityEngine.AnimationCurve UnityStandardAssets.ImageEffects.ColorCorrectionCurves::depthGreenChannel
-	AnimationCurve_t3046754366 * ___depthGreenChannel_14;
-	// UnityEngine.AnimationCurve UnityStandardAssets.ImageEffects.ColorCorrectionCurves::depthBlueChannel
-	AnimationCurve_t3046754366 * ___depthBlueChannel_15;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ColorCorrectionCurves::ccMaterial
-	Material_t340375123 * ___ccMaterial_16;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ColorCorrectionCurves::ccDepthMaterial
-	Material_t340375123 * ___ccDepthMaterial_17;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ColorCorrectionCurves::selectiveCcMaterial
-	Material_t340375123 * ___selectiveCcMaterial_18;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.ColorCorrectionCurves::rgbChannelTex
-	Texture2D_t3840446185 * ___rgbChannelTex_19;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.ColorCorrectionCurves::rgbDepthChannelTex
-	Texture2D_t3840446185 * ___rgbDepthChannelTex_20;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.ColorCorrectionCurves::zCurveTex
-	Texture2D_t3840446185 * ___zCurveTex_21;
-	// System.Single UnityStandardAssets.ImageEffects.ColorCorrectionCurves::saturation
-	float ___saturation_22;
-	// System.Boolean UnityStandardAssets.ImageEffects.ColorCorrectionCurves::selectiveCc
-	bool ___selectiveCc_23;
-	// UnityEngine.Color UnityStandardAssets.ImageEffects.ColorCorrectionCurves::selectiveFromColor
-	Color_t2555686324  ___selectiveFromColor_24;
-	// UnityEngine.Color UnityStandardAssets.ImageEffects.ColorCorrectionCurves::selectiveToColor
-	Color_t2555686324  ___selectiveToColor_25;
-	// UnityStandardAssets.ImageEffects.ColorCorrectionCurves/ColorCorrectionMode UnityStandardAssets.ImageEffects.ColorCorrectionCurves::mode
-	int32_t ___mode_26;
-	// System.Boolean UnityStandardAssets.ImageEffects.ColorCorrectionCurves::updateTextures
-	bool ___updateTextures_27;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ColorCorrectionCurves::colorCorrectionCurvesShader
-	Shader_t4151988712 * ___colorCorrectionCurvesShader_28;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ColorCorrectionCurves::simpleColorCorrectionCurvesShader
-	Shader_t4151988712 * ___simpleColorCorrectionCurvesShader_29;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ColorCorrectionCurves::colorCorrectionSelectiveShader
-	Shader_t4151988712 * ___colorCorrectionSelectiveShader_30;
-	// System.Boolean UnityStandardAssets.ImageEffects.ColorCorrectionCurves::updateTexturesOnStartup
-	bool ___updateTexturesOnStartup_31;
-
-public:
-	inline static int32_t get_offset_of_redChannel_8() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___redChannel_8)); }
-	inline AnimationCurve_t3046754366 * get_redChannel_8() const { return ___redChannel_8; }
-	inline AnimationCurve_t3046754366 ** get_address_of_redChannel_8() { return &___redChannel_8; }
-	inline void set_redChannel_8(AnimationCurve_t3046754366 * value)
-	{
-		___redChannel_8 = value;
-		Il2CppCodeGenWriteBarrier((&___redChannel_8), value);
-	}
-
-	inline static int32_t get_offset_of_greenChannel_9() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___greenChannel_9)); }
-	inline AnimationCurve_t3046754366 * get_greenChannel_9() const { return ___greenChannel_9; }
-	inline AnimationCurve_t3046754366 ** get_address_of_greenChannel_9() { return &___greenChannel_9; }
-	inline void set_greenChannel_9(AnimationCurve_t3046754366 * value)
-	{
-		___greenChannel_9 = value;
-		Il2CppCodeGenWriteBarrier((&___greenChannel_9), value);
-	}
-
-	inline static int32_t get_offset_of_blueChannel_10() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___blueChannel_10)); }
-	inline AnimationCurve_t3046754366 * get_blueChannel_10() const { return ___blueChannel_10; }
-	inline AnimationCurve_t3046754366 ** get_address_of_blueChannel_10() { return &___blueChannel_10; }
-	inline void set_blueChannel_10(AnimationCurve_t3046754366 * value)
-	{
-		___blueChannel_10 = value;
-		Il2CppCodeGenWriteBarrier((&___blueChannel_10), value);
-	}
-
-	inline static int32_t get_offset_of_useDepthCorrection_11() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___useDepthCorrection_11)); }
-	inline bool get_useDepthCorrection_11() const { return ___useDepthCorrection_11; }
-	inline bool* get_address_of_useDepthCorrection_11() { return &___useDepthCorrection_11; }
-	inline void set_useDepthCorrection_11(bool value)
-	{
-		___useDepthCorrection_11 = value;
-	}
-
-	inline static int32_t get_offset_of_zCurve_12() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___zCurve_12)); }
-	inline AnimationCurve_t3046754366 * get_zCurve_12() const { return ___zCurve_12; }
-	inline AnimationCurve_t3046754366 ** get_address_of_zCurve_12() { return &___zCurve_12; }
-	inline void set_zCurve_12(AnimationCurve_t3046754366 * value)
-	{
-		___zCurve_12 = value;
-		Il2CppCodeGenWriteBarrier((&___zCurve_12), value);
-	}
-
-	inline static int32_t get_offset_of_depthRedChannel_13() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___depthRedChannel_13)); }
-	inline AnimationCurve_t3046754366 * get_depthRedChannel_13() const { return ___depthRedChannel_13; }
-	inline AnimationCurve_t3046754366 ** get_address_of_depthRedChannel_13() { return &___depthRedChannel_13; }
-	inline void set_depthRedChannel_13(AnimationCurve_t3046754366 * value)
-	{
-		___depthRedChannel_13 = value;
-		Il2CppCodeGenWriteBarrier((&___depthRedChannel_13), value);
-	}
-
-	inline static int32_t get_offset_of_depthGreenChannel_14() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___depthGreenChannel_14)); }
-	inline AnimationCurve_t3046754366 * get_depthGreenChannel_14() const { return ___depthGreenChannel_14; }
-	inline AnimationCurve_t3046754366 ** get_address_of_depthGreenChannel_14() { return &___depthGreenChannel_14; }
-	inline void set_depthGreenChannel_14(AnimationCurve_t3046754366 * value)
-	{
-		___depthGreenChannel_14 = value;
-		Il2CppCodeGenWriteBarrier((&___depthGreenChannel_14), value);
-	}
-
-	inline static int32_t get_offset_of_depthBlueChannel_15() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___depthBlueChannel_15)); }
-	inline AnimationCurve_t3046754366 * get_depthBlueChannel_15() const { return ___depthBlueChannel_15; }
-	inline AnimationCurve_t3046754366 ** get_address_of_depthBlueChannel_15() { return &___depthBlueChannel_15; }
-	inline void set_depthBlueChannel_15(AnimationCurve_t3046754366 * value)
-	{
-		___depthBlueChannel_15 = value;
-		Il2CppCodeGenWriteBarrier((&___depthBlueChannel_15), value);
-	}
-
-	inline static int32_t get_offset_of_ccMaterial_16() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___ccMaterial_16)); }
-	inline Material_t340375123 * get_ccMaterial_16() const { return ___ccMaterial_16; }
-	inline Material_t340375123 ** get_address_of_ccMaterial_16() { return &___ccMaterial_16; }
-	inline void set_ccMaterial_16(Material_t340375123 * value)
-	{
-		___ccMaterial_16 = value;
-		Il2CppCodeGenWriteBarrier((&___ccMaterial_16), value);
-	}
-
-	inline static int32_t get_offset_of_ccDepthMaterial_17() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___ccDepthMaterial_17)); }
-	inline Material_t340375123 * get_ccDepthMaterial_17() const { return ___ccDepthMaterial_17; }
-	inline Material_t340375123 ** get_address_of_ccDepthMaterial_17() { return &___ccDepthMaterial_17; }
-	inline void set_ccDepthMaterial_17(Material_t340375123 * value)
-	{
-		___ccDepthMaterial_17 = value;
-		Il2CppCodeGenWriteBarrier((&___ccDepthMaterial_17), value);
-	}
-
-	inline static int32_t get_offset_of_selectiveCcMaterial_18() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___selectiveCcMaterial_18)); }
-	inline Material_t340375123 * get_selectiveCcMaterial_18() const { return ___selectiveCcMaterial_18; }
-	inline Material_t340375123 ** get_address_of_selectiveCcMaterial_18() { return &___selectiveCcMaterial_18; }
-	inline void set_selectiveCcMaterial_18(Material_t340375123 * value)
-	{
-		___selectiveCcMaterial_18 = value;
-		Il2CppCodeGenWriteBarrier((&___selectiveCcMaterial_18), value);
-	}
-
-	inline static int32_t get_offset_of_rgbChannelTex_19() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___rgbChannelTex_19)); }
-	inline Texture2D_t3840446185 * get_rgbChannelTex_19() const { return ___rgbChannelTex_19; }
-	inline Texture2D_t3840446185 ** get_address_of_rgbChannelTex_19() { return &___rgbChannelTex_19; }
-	inline void set_rgbChannelTex_19(Texture2D_t3840446185 * value)
-	{
-		___rgbChannelTex_19 = value;
-		Il2CppCodeGenWriteBarrier((&___rgbChannelTex_19), value);
-	}
-
-	inline static int32_t get_offset_of_rgbDepthChannelTex_20() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___rgbDepthChannelTex_20)); }
-	inline Texture2D_t3840446185 * get_rgbDepthChannelTex_20() const { return ___rgbDepthChannelTex_20; }
-	inline Texture2D_t3840446185 ** get_address_of_rgbDepthChannelTex_20() { return &___rgbDepthChannelTex_20; }
-	inline void set_rgbDepthChannelTex_20(Texture2D_t3840446185 * value)
-	{
-		___rgbDepthChannelTex_20 = value;
-		Il2CppCodeGenWriteBarrier((&___rgbDepthChannelTex_20), value);
-	}
-
-	inline static int32_t get_offset_of_zCurveTex_21() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___zCurveTex_21)); }
-	inline Texture2D_t3840446185 * get_zCurveTex_21() const { return ___zCurveTex_21; }
-	inline Texture2D_t3840446185 ** get_address_of_zCurveTex_21() { return &___zCurveTex_21; }
-	inline void set_zCurveTex_21(Texture2D_t3840446185 * value)
-	{
-		___zCurveTex_21 = value;
-		Il2CppCodeGenWriteBarrier((&___zCurveTex_21), value);
-	}
-
-	inline static int32_t get_offset_of_saturation_22() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___saturation_22)); }
-	inline float get_saturation_22() const { return ___saturation_22; }
-	inline float* get_address_of_saturation_22() { return &___saturation_22; }
-	inline void set_saturation_22(float value)
-	{
-		___saturation_22 = value;
-	}
-
-	inline static int32_t get_offset_of_selectiveCc_23() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___selectiveCc_23)); }
-	inline bool get_selectiveCc_23() const { return ___selectiveCc_23; }
-	inline bool* get_address_of_selectiveCc_23() { return &___selectiveCc_23; }
-	inline void set_selectiveCc_23(bool value)
-	{
-		___selectiveCc_23 = value;
-	}
-
-	inline static int32_t get_offset_of_selectiveFromColor_24() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___selectiveFromColor_24)); }
-	inline Color_t2555686324  get_selectiveFromColor_24() const { return ___selectiveFromColor_24; }
-	inline Color_t2555686324 * get_address_of_selectiveFromColor_24() { return &___selectiveFromColor_24; }
-	inline void set_selectiveFromColor_24(Color_t2555686324  value)
-	{
-		___selectiveFromColor_24 = value;
-	}
-
-	inline static int32_t get_offset_of_selectiveToColor_25() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___selectiveToColor_25)); }
-	inline Color_t2555686324  get_selectiveToColor_25() const { return ___selectiveToColor_25; }
-	inline Color_t2555686324 * get_address_of_selectiveToColor_25() { return &___selectiveToColor_25; }
-	inline void set_selectiveToColor_25(Color_t2555686324  value)
-	{
-		___selectiveToColor_25 = value;
-	}
-
-	inline static int32_t get_offset_of_mode_26() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___mode_26)); }
-	inline int32_t get_mode_26() const { return ___mode_26; }
-	inline int32_t* get_address_of_mode_26() { return &___mode_26; }
-	inline void set_mode_26(int32_t value)
-	{
-		___mode_26 = value;
-	}
-
-	inline static int32_t get_offset_of_updateTextures_27() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___updateTextures_27)); }
-	inline bool get_updateTextures_27() const { return ___updateTextures_27; }
-	inline bool* get_address_of_updateTextures_27() { return &___updateTextures_27; }
-	inline void set_updateTextures_27(bool value)
-	{
-		___updateTextures_27 = value;
-	}
-
-	inline static int32_t get_offset_of_colorCorrectionCurvesShader_28() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___colorCorrectionCurvesShader_28)); }
-	inline Shader_t4151988712 * get_colorCorrectionCurvesShader_28() const { return ___colorCorrectionCurvesShader_28; }
-	inline Shader_t4151988712 ** get_address_of_colorCorrectionCurvesShader_28() { return &___colorCorrectionCurvesShader_28; }
-	inline void set_colorCorrectionCurvesShader_28(Shader_t4151988712 * value)
-	{
-		___colorCorrectionCurvesShader_28 = value;
-		Il2CppCodeGenWriteBarrier((&___colorCorrectionCurvesShader_28), value);
-	}
-
-	inline static int32_t get_offset_of_simpleColorCorrectionCurvesShader_29() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___simpleColorCorrectionCurvesShader_29)); }
-	inline Shader_t4151988712 * get_simpleColorCorrectionCurvesShader_29() const { return ___simpleColorCorrectionCurvesShader_29; }
-	inline Shader_t4151988712 ** get_address_of_simpleColorCorrectionCurvesShader_29() { return &___simpleColorCorrectionCurvesShader_29; }
-	inline void set_simpleColorCorrectionCurvesShader_29(Shader_t4151988712 * value)
-	{
-		___simpleColorCorrectionCurvesShader_29 = value;
-		Il2CppCodeGenWriteBarrier((&___simpleColorCorrectionCurvesShader_29), value);
-	}
-
-	inline static int32_t get_offset_of_colorCorrectionSelectiveShader_30() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___colorCorrectionSelectiveShader_30)); }
-	inline Shader_t4151988712 * get_colorCorrectionSelectiveShader_30() const { return ___colorCorrectionSelectiveShader_30; }
-	inline Shader_t4151988712 ** get_address_of_colorCorrectionSelectiveShader_30() { return &___colorCorrectionSelectiveShader_30; }
-	inline void set_colorCorrectionSelectiveShader_30(Shader_t4151988712 * value)
-	{
-		___colorCorrectionSelectiveShader_30 = value;
-		Il2CppCodeGenWriteBarrier((&___colorCorrectionSelectiveShader_30), value);
-	}
-
-	inline static int32_t get_offset_of_updateTexturesOnStartup_31() { return static_cast<int32_t>(offsetof(ColorCorrectionCurves_t3742166504, ___updateTexturesOnStartup_31)); }
-	inline bool get_updateTexturesOnStartup_31() const { return ___updateTexturesOnStartup_31; }
-	inline bool* get_address_of_updateTexturesOnStartup_31() { return &___updateTexturesOnStartup_31; }
-	inline void set_updateTexturesOnStartup_31(bool value)
-	{
-		___updateTexturesOnStartup_31 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COLORCORRECTIONCURVES_T3742166504_H
-#ifndef COLORCORRECTIONLOOKUP_T1159177774_H
-#define COLORCORRECTIONLOOKUP_T1159177774_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ColorCorrectionLookup
-struct  ColorCorrectionLookup_t1159177774  : public PostEffectsBase_t2404315740
-{
-public:
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ColorCorrectionLookup::shader
-	Shader_t4151988712 * ___shader_8;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ColorCorrectionLookup::material
-	Material_t340375123 * ___material_9;
-	// UnityEngine.Texture3D UnityStandardAssets.ImageEffects.ColorCorrectionLookup::converted3DLut
-	Texture3D_t1884131049 * ___converted3DLut_10;
-	// System.String UnityStandardAssets.ImageEffects.ColorCorrectionLookup::basedOnTempTex
-	String_t* ___basedOnTempTex_11;
-
-public:
-	inline static int32_t get_offset_of_shader_8() { return static_cast<int32_t>(offsetof(ColorCorrectionLookup_t1159177774, ___shader_8)); }
-	inline Shader_t4151988712 * get_shader_8() const { return ___shader_8; }
-	inline Shader_t4151988712 ** get_address_of_shader_8() { return &___shader_8; }
-	inline void set_shader_8(Shader_t4151988712 * value)
-	{
-		___shader_8 = value;
-		Il2CppCodeGenWriteBarrier((&___shader_8), value);
-	}
-
-	inline static int32_t get_offset_of_material_9() { return static_cast<int32_t>(offsetof(ColorCorrectionLookup_t1159177774, ___material_9)); }
-	inline Material_t340375123 * get_material_9() const { return ___material_9; }
-	inline Material_t340375123 ** get_address_of_material_9() { return &___material_9; }
-	inline void set_material_9(Material_t340375123 * value)
-	{
-		___material_9 = value;
-		Il2CppCodeGenWriteBarrier((&___material_9), value);
-	}
-
-	inline static int32_t get_offset_of_converted3DLut_10() { return static_cast<int32_t>(offsetof(ColorCorrectionLookup_t1159177774, ___converted3DLut_10)); }
-	inline Texture3D_t1884131049 * get_converted3DLut_10() const { return ___converted3DLut_10; }
-	inline Texture3D_t1884131049 ** get_address_of_converted3DLut_10() { return &___converted3DLut_10; }
-	inline void set_converted3DLut_10(Texture3D_t1884131049 * value)
-	{
-		___converted3DLut_10 = value;
-		Il2CppCodeGenWriteBarrier((&___converted3DLut_10), value);
-	}
-
-	inline static int32_t get_offset_of_basedOnTempTex_11() { return static_cast<int32_t>(offsetof(ColorCorrectionLookup_t1159177774, ___basedOnTempTex_11)); }
-	inline String_t* get_basedOnTempTex_11() const { return ___basedOnTempTex_11; }
-	inline String_t** get_address_of_basedOnTempTex_11() { return &___basedOnTempTex_11; }
-	inline void set_basedOnTempTex_11(String_t* value)
-	{
-		___basedOnTempTex_11 = value;
-		Il2CppCodeGenWriteBarrier((&___basedOnTempTex_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COLORCORRECTIONLOOKUP_T1159177774_H
-#ifndef COLORCORRECTIONRAMP_T3562116199_H
-#define COLORCORRECTIONRAMP_T3562116199_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ColorCorrectionRamp
-struct  ColorCorrectionRamp_t3562116199  : public ImageEffectBase_t2026006575
-{
-public:
-	// UnityEngine.Texture UnityStandardAssets.ImageEffects.ColorCorrectionRamp::textureRamp
-	Texture_t3661962703 * ___textureRamp_6;
-
-public:
-	inline static int32_t get_offset_of_textureRamp_6() { return static_cast<int32_t>(offsetof(ColorCorrectionRamp_t3562116199, ___textureRamp_6)); }
-	inline Texture_t3661962703 * get_textureRamp_6() const { return ___textureRamp_6; }
-	inline Texture_t3661962703 ** get_address_of_textureRamp_6() { return &___textureRamp_6; }
-	inline void set_textureRamp_6(Texture_t3661962703 * value)
-	{
-		___textureRamp_6 = value;
-		Il2CppCodeGenWriteBarrier((&___textureRamp_6), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // COLORCORRECTIONRAMP_T3562116199_H
-#ifndef CONTRASTENHANCE_T640919481_H
-#define CONTRASTENHANCE_T640919481_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.ContrastEnhance
-struct  ContrastEnhance_t640919481  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.ContrastEnhance::intensity
-	float ___intensity_8;
-	// System.Single UnityStandardAssets.ImageEffects.ContrastEnhance::threshold
-	float ___threshold_9;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ContrastEnhance::separableBlurMaterial
-	Material_t340375123 * ___separableBlurMaterial_10;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.ContrastEnhance::contrastCompositeMaterial
-	Material_t340375123 * ___contrastCompositeMaterial_11;
-	// System.Single UnityStandardAssets.ImageEffects.ContrastEnhance::blurSpread
-	float ___blurSpread_12;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ContrastEnhance::separableBlurShader
-	Shader_t4151988712 * ___separableBlurShader_13;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.ContrastEnhance::contrastCompositeShader
-	Shader_t4151988712 * ___contrastCompositeShader_14;
-
-public:
-	inline static int32_t get_offset_of_intensity_8() { return static_cast<int32_t>(offsetof(ContrastEnhance_t640919481, ___intensity_8)); }
-	inline float get_intensity_8() const { return ___intensity_8; }
-	inline float* get_address_of_intensity_8() { return &___intensity_8; }
-	inline void set_intensity_8(float value)
-	{
-		___intensity_8 = value;
-	}
-
-	inline static int32_t get_offset_of_threshold_9() { return static_cast<int32_t>(offsetof(ContrastEnhance_t640919481, ___threshold_9)); }
-	inline float get_threshold_9() const { return ___threshold_9; }
-	inline float* get_address_of_threshold_9() { return &___threshold_9; }
-	inline void set_threshold_9(float value)
-	{
-		___threshold_9 = value;
-	}
-
-	inline static int32_t get_offset_of_separableBlurMaterial_10() { return static_cast<int32_t>(offsetof(ContrastEnhance_t640919481, ___separableBlurMaterial_10)); }
-	inline Material_t340375123 * get_separableBlurMaterial_10() const { return ___separableBlurMaterial_10; }
-	inline Material_t340375123 ** get_address_of_separableBlurMaterial_10() { return &___separableBlurMaterial_10; }
-	inline void set_separableBlurMaterial_10(Material_t340375123 * value)
-	{
-		___separableBlurMaterial_10 = value;
-		Il2CppCodeGenWriteBarrier((&___separableBlurMaterial_10), value);
-	}
-
-	inline static int32_t get_offset_of_contrastCompositeMaterial_11() { return static_cast<int32_t>(offsetof(ContrastEnhance_t640919481, ___contrastCompositeMaterial_11)); }
-	inline Material_t340375123 * get_contrastCompositeMaterial_11() const { return ___contrastCompositeMaterial_11; }
-	inline Material_t340375123 ** get_address_of_contrastCompositeMaterial_11() { return &___contrastCompositeMaterial_11; }
-	inline void set_contrastCompositeMaterial_11(Material_t340375123 * value)
-	{
-		___contrastCompositeMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___contrastCompositeMaterial_11), value);
-	}
-
-	inline static int32_t get_offset_of_blurSpread_12() { return static_cast<int32_t>(offsetof(ContrastEnhance_t640919481, ___blurSpread_12)); }
-	inline float get_blurSpread_12() const { return ___blurSpread_12; }
-	inline float* get_address_of_blurSpread_12() { return &___blurSpread_12; }
-	inline void set_blurSpread_12(float value)
-	{
-		___blurSpread_12 = value;
-	}
-
-	inline static int32_t get_offset_of_separableBlurShader_13() { return static_cast<int32_t>(offsetof(ContrastEnhance_t640919481, ___separableBlurShader_13)); }
-	inline Shader_t4151988712 * get_separableBlurShader_13() const { return ___separableBlurShader_13; }
-	inline Shader_t4151988712 ** get_address_of_separableBlurShader_13() { return &___separableBlurShader_13; }
-	inline void set_separableBlurShader_13(Shader_t4151988712 * value)
-	{
-		___separableBlurShader_13 = value;
-		Il2CppCodeGenWriteBarrier((&___separableBlurShader_13), value);
-	}
-
-	inline static int32_t get_offset_of_contrastCompositeShader_14() { return static_cast<int32_t>(offsetof(ContrastEnhance_t640919481, ___contrastCompositeShader_14)); }
-	inline Shader_t4151988712 * get_contrastCompositeShader_14() const { return ___contrastCompositeShader_14; }
-	inline Shader_t4151988712 ** get_address_of_contrastCompositeShader_14() { return &___contrastCompositeShader_14; }
-	inline void set_contrastCompositeShader_14(Shader_t4151988712 * value)
-	{
-		___contrastCompositeShader_14 = value;
-		Il2CppCodeGenWriteBarrier((&___contrastCompositeShader_14), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // CONTRASTENHANCE_T640919481_H
-#ifndef CREASESHADING_T1200394124_H
-#define CREASESHADING_T1200394124_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.CreaseShading
-struct  CreaseShading_t1200394124  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.CreaseShading::intensity
-	float ___intensity_8;
-	// System.Int32 UnityStandardAssets.ImageEffects.CreaseShading::softness
-	int32_t ___softness_9;
-	// System.Single UnityStandardAssets.ImageEffects.CreaseShading::spread
-	float ___spread_10;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.CreaseShading::blurShader
-	Shader_t4151988712 * ___blurShader_11;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.CreaseShading::blurMaterial
-	Material_t340375123 * ___blurMaterial_12;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.CreaseShading::depthFetchShader
-	Shader_t4151988712 * ___depthFetchShader_13;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.CreaseShading::depthFetchMaterial
-	Material_t340375123 * ___depthFetchMaterial_14;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.CreaseShading::creaseApplyShader
-	Shader_t4151988712 * ___creaseApplyShader_15;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.CreaseShading::creaseApplyMaterial
-	Material_t340375123 * ___creaseApplyMaterial_16;
-
-public:
-	inline static int32_t get_offset_of_intensity_8() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___intensity_8)); }
-	inline float get_intensity_8() const { return ___intensity_8; }
-	inline float* get_address_of_intensity_8() { return &___intensity_8; }
-	inline void set_intensity_8(float value)
-	{
-		___intensity_8 = value;
-	}
-
-	inline static int32_t get_offset_of_softness_9() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___softness_9)); }
-	inline int32_t get_softness_9() const { return ___softness_9; }
-	inline int32_t* get_address_of_softness_9() { return &___softness_9; }
-	inline void set_softness_9(int32_t value)
-	{
-		___softness_9 = value;
-	}
-
-	inline static int32_t get_offset_of_spread_10() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___spread_10)); }
-	inline float get_spread_10() const { return ___spread_10; }
-	inline float* get_address_of_spread_10() { return &___spread_10; }
-	inline void set_spread_10(float value)
-	{
-		___spread_10 = value;
-	}
-
-	inline static int32_t get_offset_of_blurShader_11() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___blurShader_11)); }
-	inline Shader_t4151988712 * get_blurShader_11() const { return ___blurShader_11; }
-	inline Shader_t4151988712 ** get_address_of_blurShader_11() { return &___blurShader_11; }
-	inline void set_blurShader_11(Shader_t4151988712 * value)
-	{
-		___blurShader_11 = value;
-		Il2CppCodeGenWriteBarrier((&___blurShader_11), value);
-	}
-
-	inline static int32_t get_offset_of_blurMaterial_12() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___blurMaterial_12)); }
-	inline Material_t340375123 * get_blurMaterial_12() const { return ___blurMaterial_12; }
-	inline Material_t340375123 ** get_address_of_blurMaterial_12() { return &___blurMaterial_12; }
-	inline void set_blurMaterial_12(Material_t340375123 * value)
-	{
-		___blurMaterial_12 = value;
-		Il2CppCodeGenWriteBarrier((&___blurMaterial_12), value);
-	}
-
-	inline static int32_t get_offset_of_depthFetchShader_13() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___depthFetchShader_13)); }
-	inline Shader_t4151988712 * get_depthFetchShader_13() const { return ___depthFetchShader_13; }
-	inline Shader_t4151988712 ** get_address_of_depthFetchShader_13() { return &___depthFetchShader_13; }
-	inline void set_depthFetchShader_13(Shader_t4151988712 * value)
-	{
-		___depthFetchShader_13 = value;
-		Il2CppCodeGenWriteBarrier((&___depthFetchShader_13), value);
-	}
-
-	inline static int32_t get_offset_of_depthFetchMaterial_14() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___depthFetchMaterial_14)); }
-	inline Material_t340375123 * get_depthFetchMaterial_14() const { return ___depthFetchMaterial_14; }
-	inline Material_t340375123 ** get_address_of_depthFetchMaterial_14() { return &___depthFetchMaterial_14; }
-	inline void set_depthFetchMaterial_14(Material_t340375123 * value)
-	{
-		___depthFetchMaterial_14 = value;
-		Il2CppCodeGenWriteBarrier((&___depthFetchMaterial_14), value);
-	}
-
-	inline static int32_t get_offset_of_creaseApplyShader_15() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___creaseApplyShader_15)); }
-	inline Shader_t4151988712 * get_creaseApplyShader_15() const { return ___creaseApplyShader_15; }
-	inline Shader_t4151988712 ** get_address_of_creaseApplyShader_15() { return &___creaseApplyShader_15; }
-	inline void set_creaseApplyShader_15(Shader_t4151988712 * value)
-	{
-		___creaseApplyShader_15 = value;
-		Il2CppCodeGenWriteBarrier((&___creaseApplyShader_15), value);
-	}
-
-	inline static int32_t get_offset_of_creaseApplyMaterial_16() { return static_cast<int32_t>(offsetof(CreaseShading_t1200394124, ___creaseApplyMaterial_16)); }
-	inline Material_t340375123 * get_creaseApplyMaterial_16() const { return ___creaseApplyMaterial_16; }
-	inline Material_t340375123 ** get_address_of_creaseApplyMaterial_16() { return &___creaseApplyMaterial_16; }
-	inline void set_creaseApplyMaterial_16(Material_t340375123 * value)
-	{
-		___creaseApplyMaterial_16 = value;
-		Il2CppCodeGenWriteBarrier((&___creaseApplyMaterial_16), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // CREASESHADING_T1200394124_H
-#ifndef DEPTHOFFIELD_T1116783936_H
-#define DEPTHOFFIELD_T1116783936_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfField
-struct  DepthOfField_t1116783936  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Boolean UnityStandardAssets.ImageEffects.DepthOfField::visualizeFocus
-	bool ___visualizeFocus_8;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::focalLength
-	float ___focalLength_9;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::focalSize
-	float ___focalSize_10;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::aperture
-	float ___aperture_11;
-	// UnityEngine.Transform UnityStandardAssets.ImageEffects.DepthOfField::focalTransform
-	Transform_t3600365921 * ___focalTransform_12;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::maxBlurSize
-	float ___maxBlurSize_13;
-	// System.Boolean UnityStandardAssets.ImageEffects.DepthOfField::highResolution
-	bool ___highResolution_14;
-	// UnityStandardAssets.ImageEffects.DepthOfField/BlurType UnityStandardAssets.ImageEffects.DepthOfField::blurType
-	int32_t ___blurType_15;
-	// UnityStandardAssets.ImageEffects.DepthOfField/BlurSampleCount UnityStandardAssets.ImageEffects.DepthOfField::blurSampleCount
-	int32_t ___blurSampleCount_16;
-	// System.Boolean UnityStandardAssets.ImageEffects.DepthOfField::nearBlur
-	bool ___nearBlur_17;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::foregroundOverlap
-	float ___foregroundOverlap_18;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.DepthOfField::dofHdrShader
-	Shader_t4151988712 * ___dofHdrShader_19;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.DepthOfField::dofHdrMaterial
-	Material_t340375123 * ___dofHdrMaterial_20;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.DepthOfField::dx11BokehShader
-	Shader_t4151988712 * ___dx11BokehShader_21;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.DepthOfField::dx11bokehMaterial
-	Material_t340375123 * ___dx11bokehMaterial_22;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::dx11BokehThreshold
-	float ___dx11BokehThreshold_23;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::dx11SpawnHeuristic
-	float ___dx11SpawnHeuristic_24;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.DepthOfField::dx11BokehTexture
-	Texture2D_t3840446185 * ___dx11BokehTexture_25;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::dx11BokehScale
-	float ___dx11BokehScale_26;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::dx11BokehIntensity
-	float ___dx11BokehIntensity_27;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::focalDistance01
-	float ___focalDistance01_28;
-	// UnityEngine.ComputeBuffer UnityStandardAssets.ImageEffects.DepthOfField::cbDrawArgs
-	ComputeBuffer_t1033194329 * ___cbDrawArgs_29;
-	// UnityEngine.ComputeBuffer UnityStandardAssets.ImageEffects.DepthOfField::cbPoints
-	ComputeBuffer_t1033194329 * ___cbPoints_30;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfField::internalBlurWidth
-	float ___internalBlurWidth_31;
-	// UnityEngine.Camera UnityStandardAssets.ImageEffects.DepthOfField::cachedCamera
-	Camera_t4157153871 * ___cachedCamera_32;
-
-public:
-	inline static int32_t get_offset_of_visualizeFocus_8() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___visualizeFocus_8)); }
-	inline bool get_visualizeFocus_8() const { return ___visualizeFocus_8; }
-	inline bool* get_address_of_visualizeFocus_8() { return &___visualizeFocus_8; }
-	inline void set_visualizeFocus_8(bool value)
-	{
-		___visualizeFocus_8 = value;
-	}
-
-	inline static int32_t get_offset_of_focalLength_9() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___focalLength_9)); }
-	inline float get_focalLength_9() const { return ___focalLength_9; }
-	inline float* get_address_of_focalLength_9() { return &___focalLength_9; }
-	inline void set_focalLength_9(float value)
-	{
-		___focalLength_9 = value;
-	}
-
-	inline static int32_t get_offset_of_focalSize_10() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___focalSize_10)); }
-	inline float get_focalSize_10() const { return ___focalSize_10; }
-	inline float* get_address_of_focalSize_10() { return &___focalSize_10; }
-	inline void set_focalSize_10(float value)
-	{
-		___focalSize_10 = value;
-	}
-
-	inline static int32_t get_offset_of_aperture_11() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___aperture_11)); }
-	inline float get_aperture_11() const { return ___aperture_11; }
-	inline float* get_address_of_aperture_11() { return &___aperture_11; }
-	inline void set_aperture_11(float value)
-	{
-		___aperture_11 = value;
-	}
-
-	inline static int32_t get_offset_of_focalTransform_12() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___focalTransform_12)); }
-	inline Transform_t3600365921 * get_focalTransform_12() const { return ___focalTransform_12; }
-	inline Transform_t3600365921 ** get_address_of_focalTransform_12() { return &___focalTransform_12; }
-	inline void set_focalTransform_12(Transform_t3600365921 * value)
-	{
-		___focalTransform_12 = value;
-		Il2CppCodeGenWriteBarrier((&___focalTransform_12), value);
-	}
-
-	inline static int32_t get_offset_of_maxBlurSize_13() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___maxBlurSize_13)); }
-	inline float get_maxBlurSize_13() const { return ___maxBlurSize_13; }
-	inline float* get_address_of_maxBlurSize_13() { return &___maxBlurSize_13; }
-	inline void set_maxBlurSize_13(float value)
-	{
-		___maxBlurSize_13 = value;
-	}
-
-	inline static int32_t get_offset_of_highResolution_14() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___highResolution_14)); }
-	inline bool get_highResolution_14() const { return ___highResolution_14; }
-	inline bool* get_address_of_highResolution_14() { return &___highResolution_14; }
-	inline void set_highResolution_14(bool value)
-	{
-		___highResolution_14 = value;
-	}
-
-	inline static int32_t get_offset_of_blurType_15() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___blurType_15)); }
-	inline int32_t get_blurType_15() const { return ___blurType_15; }
-	inline int32_t* get_address_of_blurType_15() { return &___blurType_15; }
-	inline void set_blurType_15(int32_t value)
-	{
-		___blurType_15 = value;
-	}
-
-	inline static int32_t get_offset_of_blurSampleCount_16() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___blurSampleCount_16)); }
-	inline int32_t get_blurSampleCount_16() const { return ___blurSampleCount_16; }
-	inline int32_t* get_address_of_blurSampleCount_16() { return &___blurSampleCount_16; }
-	inline void set_blurSampleCount_16(int32_t value)
-	{
-		___blurSampleCount_16 = value;
-	}
-
-	inline static int32_t get_offset_of_nearBlur_17() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___nearBlur_17)); }
-	inline bool get_nearBlur_17() const { return ___nearBlur_17; }
-	inline bool* get_address_of_nearBlur_17() { return &___nearBlur_17; }
-	inline void set_nearBlur_17(bool value)
-	{
-		___nearBlur_17 = value;
-	}
-
-	inline static int32_t get_offset_of_foregroundOverlap_18() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___foregroundOverlap_18)); }
-	inline float get_foregroundOverlap_18() const { return ___foregroundOverlap_18; }
-	inline float* get_address_of_foregroundOverlap_18() { return &___foregroundOverlap_18; }
-	inline void set_foregroundOverlap_18(float value)
-	{
-		___foregroundOverlap_18 = value;
-	}
-
-	inline static int32_t get_offset_of_dofHdrShader_19() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dofHdrShader_19)); }
-	inline Shader_t4151988712 * get_dofHdrShader_19() const { return ___dofHdrShader_19; }
-	inline Shader_t4151988712 ** get_address_of_dofHdrShader_19() { return &___dofHdrShader_19; }
-	inline void set_dofHdrShader_19(Shader_t4151988712 * value)
-	{
-		___dofHdrShader_19 = value;
-		Il2CppCodeGenWriteBarrier((&___dofHdrShader_19), value);
-	}
-
-	inline static int32_t get_offset_of_dofHdrMaterial_20() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dofHdrMaterial_20)); }
-	inline Material_t340375123 * get_dofHdrMaterial_20() const { return ___dofHdrMaterial_20; }
-	inline Material_t340375123 ** get_address_of_dofHdrMaterial_20() { return &___dofHdrMaterial_20; }
-	inline void set_dofHdrMaterial_20(Material_t340375123 * value)
-	{
-		___dofHdrMaterial_20 = value;
-		Il2CppCodeGenWriteBarrier((&___dofHdrMaterial_20), value);
-	}
-
-	inline static int32_t get_offset_of_dx11BokehShader_21() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dx11BokehShader_21)); }
-	inline Shader_t4151988712 * get_dx11BokehShader_21() const { return ___dx11BokehShader_21; }
-	inline Shader_t4151988712 ** get_address_of_dx11BokehShader_21() { return &___dx11BokehShader_21; }
-	inline void set_dx11BokehShader_21(Shader_t4151988712 * value)
-	{
-		___dx11BokehShader_21 = value;
-		Il2CppCodeGenWriteBarrier((&___dx11BokehShader_21), value);
-	}
-
-	inline static int32_t get_offset_of_dx11bokehMaterial_22() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dx11bokehMaterial_22)); }
-	inline Material_t340375123 * get_dx11bokehMaterial_22() const { return ___dx11bokehMaterial_22; }
-	inline Material_t340375123 ** get_address_of_dx11bokehMaterial_22() { return &___dx11bokehMaterial_22; }
-	inline void set_dx11bokehMaterial_22(Material_t340375123 * value)
-	{
-		___dx11bokehMaterial_22 = value;
-		Il2CppCodeGenWriteBarrier((&___dx11bokehMaterial_22), value);
-	}
-
-	inline static int32_t get_offset_of_dx11BokehThreshold_23() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dx11BokehThreshold_23)); }
-	inline float get_dx11BokehThreshold_23() const { return ___dx11BokehThreshold_23; }
-	inline float* get_address_of_dx11BokehThreshold_23() { return &___dx11BokehThreshold_23; }
-	inline void set_dx11BokehThreshold_23(float value)
-	{
-		___dx11BokehThreshold_23 = value;
-	}
-
-	inline static int32_t get_offset_of_dx11SpawnHeuristic_24() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dx11SpawnHeuristic_24)); }
-	inline float get_dx11SpawnHeuristic_24() const { return ___dx11SpawnHeuristic_24; }
-	inline float* get_address_of_dx11SpawnHeuristic_24() { return &___dx11SpawnHeuristic_24; }
-	inline void set_dx11SpawnHeuristic_24(float value)
-	{
-		___dx11SpawnHeuristic_24 = value;
-	}
-
-	inline static int32_t get_offset_of_dx11BokehTexture_25() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dx11BokehTexture_25)); }
-	inline Texture2D_t3840446185 * get_dx11BokehTexture_25() const { return ___dx11BokehTexture_25; }
-	inline Texture2D_t3840446185 ** get_address_of_dx11BokehTexture_25() { return &___dx11BokehTexture_25; }
-	inline void set_dx11BokehTexture_25(Texture2D_t3840446185 * value)
-	{
-		___dx11BokehTexture_25 = value;
-		Il2CppCodeGenWriteBarrier((&___dx11BokehTexture_25), value);
-	}
-
-	inline static int32_t get_offset_of_dx11BokehScale_26() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dx11BokehScale_26)); }
-	inline float get_dx11BokehScale_26() const { return ___dx11BokehScale_26; }
-	inline float* get_address_of_dx11BokehScale_26() { return &___dx11BokehScale_26; }
-	inline void set_dx11BokehScale_26(float value)
-	{
-		___dx11BokehScale_26 = value;
-	}
-
-	inline static int32_t get_offset_of_dx11BokehIntensity_27() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___dx11BokehIntensity_27)); }
-	inline float get_dx11BokehIntensity_27() const { return ___dx11BokehIntensity_27; }
-	inline float* get_address_of_dx11BokehIntensity_27() { return &___dx11BokehIntensity_27; }
-	inline void set_dx11BokehIntensity_27(float value)
-	{
-		___dx11BokehIntensity_27 = value;
-	}
-
-	inline static int32_t get_offset_of_focalDistance01_28() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___focalDistance01_28)); }
-	inline float get_focalDistance01_28() const { return ___focalDistance01_28; }
-	inline float* get_address_of_focalDistance01_28() { return &___focalDistance01_28; }
-	inline void set_focalDistance01_28(float value)
-	{
-		___focalDistance01_28 = value;
-	}
-
-	inline static int32_t get_offset_of_cbDrawArgs_29() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___cbDrawArgs_29)); }
-	inline ComputeBuffer_t1033194329 * get_cbDrawArgs_29() const { return ___cbDrawArgs_29; }
-	inline ComputeBuffer_t1033194329 ** get_address_of_cbDrawArgs_29() { return &___cbDrawArgs_29; }
-	inline void set_cbDrawArgs_29(ComputeBuffer_t1033194329 * value)
-	{
-		___cbDrawArgs_29 = value;
-		Il2CppCodeGenWriteBarrier((&___cbDrawArgs_29), value);
-	}
-
-	inline static int32_t get_offset_of_cbPoints_30() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___cbPoints_30)); }
-	inline ComputeBuffer_t1033194329 * get_cbPoints_30() const { return ___cbPoints_30; }
-	inline ComputeBuffer_t1033194329 ** get_address_of_cbPoints_30() { return &___cbPoints_30; }
-	inline void set_cbPoints_30(ComputeBuffer_t1033194329 * value)
-	{
-		___cbPoints_30 = value;
-		Il2CppCodeGenWriteBarrier((&___cbPoints_30), value);
-	}
-
-	inline static int32_t get_offset_of_internalBlurWidth_31() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___internalBlurWidth_31)); }
-	inline float get_internalBlurWidth_31() const { return ___internalBlurWidth_31; }
-	inline float* get_address_of_internalBlurWidth_31() { return &___internalBlurWidth_31; }
-	inline void set_internalBlurWidth_31(float value)
-	{
-		___internalBlurWidth_31 = value;
-	}
-
-	inline static int32_t get_offset_of_cachedCamera_32() { return static_cast<int32_t>(offsetof(DepthOfField_t1116783936, ___cachedCamera_32)); }
-	inline Camera_t4157153871 * get_cachedCamera_32() const { return ___cachedCamera_32; }
-	inline Camera_t4157153871 ** get_address_of_cachedCamera_32() { return &___cachedCamera_32; }
-	inline void set_cachedCamera_32(Camera_t4157153871 * value)
-	{
-		___cachedCamera_32 = value;
-		Il2CppCodeGenWriteBarrier((&___cachedCamera_32), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DEPTHOFFIELD_T1116783936_H
-#ifndef DEPTHOFFIELDDEPRECATED_T4187663194_H
-#define DEPTHOFFIELDDEPRECATED_T4187663194_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated
-struct  DepthOfFieldDeprecated_t4187663194  : public PostEffectsBase_t2404315740
-{
-public:
-	// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/Dof34QualitySetting UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::quality
-	int32_t ___quality_10;
-	// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/DofResolution UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::resolution
-	int32_t ___resolution_11;
-	// System.Boolean UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::simpleTweakMode
-	bool ___simpleTweakMode_12;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalPoint
-	float ___focalPoint_13;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::smoothness
-	float ___smoothness_14;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalZDistance
-	float ___focalZDistance_15;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalZStartCurve
-	float ___focalZStartCurve_16;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalZEndCurve
-	float ___focalZEndCurve_17;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalStartCurve
-	float ___focalStartCurve_18;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalEndCurve
-	float ___focalEndCurve_19;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalDistance01
-	float ___focalDistance01_20;
-	// UnityEngine.Transform UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::objectFocus
-	Transform_t3600365921 * ___objectFocus_21;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::focalSize
-	float ___focalSize_22;
-	// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/DofBlurriness UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bluriness
-	int32_t ___bluriness_23;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::maxBlurSpread
-	float ___maxBlurSpread_24;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::foregroundBlurExtrude
-	float ___foregroundBlurExtrude_25;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::dofBlurShader
-	Shader_t4151988712 * ___dofBlurShader_26;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::dofBlurMaterial
-	Material_t340375123 * ___dofBlurMaterial_27;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::dofShader
-	Shader_t4151988712 * ___dofShader_28;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::dofMaterial
-	Material_t340375123 * ___dofMaterial_29;
-	// System.Boolean UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::visualize
-	bool ___visualize_30;
-	// UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated/BokehDestination UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehDestination
-	int32_t ___bokehDestination_31;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::widthOverHeight
-	float ___widthOverHeight_32;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::oneOverBaseSize
-	float ___oneOverBaseSize_33;
-	// System.Boolean UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokeh
-	bool ___bokeh_34;
-	// System.Boolean UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehSupport
-	bool ___bokehSupport_35;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehShader
-	Shader_t4151988712 * ___bokehShader_36;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehTexture
-	Texture2D_t3840446185 * ___bokehTexture_37;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehScale
-	float ___bokehScale_38;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehIntensity
-	float ___bokehIntensity_39;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehThresholdContrast
-	float ___bokehThresholdContrast_40;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehThresholdLuminance
-	float ___bokehThresholdLuminance_41;
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehDownsample
-	int32_t ___bokehDownsample_42;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehMaterial
-	Material_t340375123 * ___bokehMaterial_43;
-	// UnityEngine.Camera UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::_camera
-	Camera_t4157153871 * ____camera_44;
-	// UnityEngine.RenderTexture UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::foregroundTexture
-	RenderTexture_t2108887433 * ___foregroundTexture_45;
-	// UnityEngine.RenderTexture UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::mediumRezWorkTexture
-	RenderTexture_t2108887433 * ___mediumRezWorkTexture_46;
-	// UnityEngine.RenderTexture UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::finalDefocus
-	RenderTexture_t2108887433 * ___finalDefocus_47;
-	// UnityEngine.RenderTexture UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::lowRezWorkTexture
-	RenderTexture_t2108887433 * ___lowRezWorkTexture_48;
-	// UnityEngine.RenderTexture UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehSource
-	RenderTexture_t2108887433 * ___bokehSource_49;
-	// UnityEngine.RenderTexture UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::bokehSource2
-	RenderTexture_t2108887433 * ___bokehSource2_50;
-
-public:
-	inline static int32_t get_offset_of_quality_10() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___quality_10)); }
-	inline int32_t get_quality_10() const { return ___quality_10; }
-	inline int32_t* get_address_of_quality_10() { return &___quality_10; }
-	inline void set_quality_10(int32_t value)
-	{
-		___quality_10 = value;
-	}
-
-	inline static int32_t get_offset_of_resolution_11() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___resolution_11)); }
-	inline int32_t get_resolution_11() const { return ___resolution_11; }
-	inline int32_t* get_address_of_resolution_11() { return &___resolution_11; }
-	inline void set_resolution_11(int32_t value)
-	{
-		___resolution_11 = value;
-	}
-
-	inline static int32_t get_offset_of_simpleTweakMode_12() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___simpleTweakMode_12)); }
-	inline bool get_simpleTweakMode_12() const { return ___simpleTweakMode_12; }
-	inline bool* get_address_of_simpleTweakMode_12() { return &___simpleTweakMode_12; }
-	inline void set_simpleTweakMode_12(bool value)
-	{
-		___simpleTweakMode_12 = value;
-	}
-
-	inline static int32_t get_offset_of_focalPoint_13() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalPoint_13)); }
-	inline float get_focalPoint_13() const { return ___focalPoint_13; }
-	inline float* get_address_of_focalPoint_13() { return &___focalPoint_13; }
-	inline void set_focalPoint_13(float value)
-	{
-		___focalPoint_13 = value;
-	}
-
-	inline static int32_t get_offset_of_smoothness_14() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___smoothness_14)); }
-	inline float get_smoothness_14() const { return ___smoothness_14; }
-	inline float* get_address_of_smoothness_14() { return &___smoothness_14; }
-	inline void set_smoothness_14(float value)
-	{
-		___smoothness_14 = value;
-	}
-
-	inline static int32_t get_offset_of_focalZDistance_15() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalZDistance_15)); }
-	inline float get_focalZDistance_15() const { return ___focalZDistance_15; }
-	inline float* get_address_of_focalZDistance_15() { return &___focalZDistance_15; }
-	inline void set_focalZDistance_15(float value)
-	{
-		___focalZDistance_15 = value;
-	}
-
-	inline static int32_t get_offset_of_focalZStartCurve_16() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalZStartCurve_16)); }
-	inline float get_focalZStartCurve_16() const { return ___focalZStartCurve_16; }
-	inline float* get_address_of_focalZStartCurve_16() { return &___focalZStartCurve_16; }
-	inline void set_focalZStartCurve_16(float value)
-	{
-		___focalZStartCurve_16 = value;
-	}
-
-	inline static int32_t get_offset_of_focalZEndCurve_17() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalZEndCurve_17)); }
-	inline float get_focalZEndCurve_17() const { return ___focalZEndCurve_17; }
-	inline float* get_address_of_focalZEndCurve_17() { return &___focalZEndCurve_17; }
-	inline void set_focalZEndCurve_17(float value)
-	{
-		___focalZEndCurve_17 = value;
-	}
-
-	inline static int32_t get_offset_of_focalStartCurve_18() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalStartCurve_18)); }
-	inline float get_focalStartCurve_18() const { return ___focalStartCurve_18; }
-	inline float* get_address_of_focalStartCurve_18() { return &___focalStartCurve_18; }
-	inline void set_focalStartCurve_18(float value)
-	{
-		___focalStartCurve_18 = value;
-	}
-
-	inline static int32_t get_offset_of_focalEndCurve_19() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalEndCurve_19)); }
-	inline float get_focalEndCurve_19() const { return ___focalEndCurve_19; }
-	inline float* get_address_of_focalEndCurve_19() { return &___focalEndCurve_19; }
-	inline void set_focalEndCurve_19(float value)
-	{
-		___focalEndCurve_19 = value;
-	}
-
-	inline static int32_t get_offset_of_focalDistance01_20() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalDistance01_20)); }
-	inline float get_focalDistance01_20() const { return ___focalDistance01_20; }
-	inline float* get_address_of_focalDistance01_20() { return &___focalDistance01_20; }
-	inline void set_focalDistance01_20(float value)
-	{
-		___focalDistance01_20 = value;
-	}
-
-	inline static int32_t get_offset_of_objectFocus_21() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___objectFocus_21)); }
-	inline Transform_t3600365921 * get_objectFocus_21() const { return ___objectFocus_21; }
-	inline Transform_t3600365921 ** get_address_of_objectFocus_21() { return &___objectFocus_21; }
-	inline void set_objectFocus_21(Transform_t3600365921 * value)
-	{
-		___objectFocus_21 = value;
-		Il2CppCodeGenWriteBarrier((&___objectFocus_21), value);
-	}
-
-	inline static int32_t get_offset_of_focalSize_22() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___focalSize_22)); }
-	inline float get_focalSize_22() const { return ___focalSize_22; }
-	inline float* get_address_of_focalSize_22() { return &___focalSize_22; }
-	inline void set_focalSize_22(float value)
-	{
-		___focalSize_22 = value;
-	}
-
-	inline static int32_t get_offset_of_bluriness_23() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bluriness_23)); }
-	inline int32_t get_bluriness_23() const { return ___bluriness_23; }
-	inline int32_t* get_address_of_bluriness_23() { return &___bluriness_23; }
-	inline void set_bluriness_23(int32_t value)
-	{
-		___bluriness_23 = value;
-	}
-
-	inline static int32_t get_offset_of_maxBlurSpread_24() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___maxBlurSpread_24)); }
-	inline float get_maxBlurSpread_24() const { return ___maxBlurSpread_24; }
-	inline float* get_address_of_maxBlurSpread_24() { return &___maxBlurSpread_24; }
-	inline void set_maxBlurSpread_24(float value)
-	{
-		___maxBlurSpread_24 = value;
-	}
-
-	inline static int32_t get_offset_of_foregroundBlurExtrude_25() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___foregroundBlurExtrude_25)); }
-	inline float get_foregroundBlurExtrude_25() const { return ___foregroundBlurExtrude_25; }
-	inline float* get_address_of_foregroundBlurExtrude_25() { return &___foregroundBlurExtrude_25; }
-	inline void set_foregroundBlurExtrude_25(float value)
-	{
-		___foregroundBlurExtrude_25 = value;
-	}
-
-	inline static int32_t get_offset_of_dofBlurShader_26() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___dofBlurShader_26)); }
-	inline Shader_t4151988712 * get_dofBlurShader_26() const { return ___dofBlurShader_26; }
-	inline Shader_t4151988712 ** get_address_of_dofBlurShader_26() { return &___dofBlurShader_26; }
-	inline void set_dofBlurShader_26(Shader_t4151988712 * value)
-	{
-		___dofBlurShader_26 = value;
-		Il2CppCodeGenWriteBarrier((&___dofBlurShader_26), value);
-	}
-
-	inline static int32_t get_offset_of_dofBlurMaterial_27() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___dofBlurMaterial_27)); }
-	inline Material_t340375123 * get_dofBlurMaterial_27() const { return ___dofBlurMaterial_27; }
-	inline Material_t340375123 ** get_address_of_dofBlurMaterial_27() { return &___dofBlurMaterial_27; }
-	inline void set_dofBlurMaterial_27(Material_t340375123 * value)
-	{
-		___dofBlurMaterial_27 = value;
-		Il2CppCodeGenWriteBarrier((&___dofBlurMaterial_27), value);
-	}
-
-	inline static int32_t get_offset_of_dofShader_28() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___dofShader_28)); }
-	inline Shader_t4151988712 * get_dofShader_28() const { return ___dofShader_28; }
-	inline Shader_t4151988712 ** get_address_of_dofShader_28() { return &___dofShader_28; }
-	inline void set_dofShader_28(Shader_t4151988712 * value)
-	{
-		___dofShader_28 = value;
-		Il2CppCodeGenWriteBarrier((&___dofShader_28), value);
-	}
-
-	inline static int32_t get_offset_of_dofMaterial_29() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___dofMaterial_29)); }
-	inline Material_t340375123 * get_dofMaterial_29() const { return ___dofMaterial_29; }
-	inline Material_t340375123 ** get_address_of_dofMaterial_29() { return &___dofMaterial_29; }
-	inline void set_dofMaterial_29(Material_t340375123 * value)
-	{
-		___dofMaterial_29 = value;
-		Il2CppCodeGenWriteBarrier((&___dofMaterial_29), value);
-	}
-
-	inline static int32_t get_offset_of_visualize_30() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___visualize_30)); }
-	inline bool get_visualize_30() const { return ___visualize_30; }
-	inline bool* get_address_of_visualize_30() { return &___visualize_30; }
-	inline void set_visualize_30(bool value)
-	{
-		___visualize_30 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehDestination_31() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehDestination_31)); }
-	inline int32_t get_bokehDestination_31() const { return ___bokehDestination_31; }
-	inline int32_t* get_address_of_bokehDestination_31() { return &___bokehDestination_31; }
-	inline void set_bokehDestination_31(int32_t value)
-	{
-		___bokehDestination_31 = value;
-	}
-
-	inline static int32_t get_offset_of_widthOverHeight_32() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___widthOverHeight_32)); }
-	inline float get_widthOverHeight_32() const { return ___widthOverHeight_32; }
-	inline float* get_address_of_widthOverHeight_32() { return &___widthOverHeight_32; }
-	inline void set_widthOverHeight_32(float value)
-	{
-		___widthOverHeight_32 = value;
-	}
-
-	inline static int32_t get_offset_of_oneOverBaseSize_33() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___oneOverBaseSize_33)); }
-	inline float get_oneOverBaseSize_33() const { return ___oneOverBaseSize_33; }
-	inline float* get_address_of_oneOverBaseSize_33() { return &___oneOverBaseSize_33; }
-	inline void set_oneOverBaseSize_33(float value)
-	{
-		___oneOverBaseSize_33 = value;
-	}
-
-	inline static int32_t get_offset_of_bokeh_34() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokeh_34)); }
-	inline bool get_bokeh_34() const { return ___bokeh_34; }
-	inline bool* get_address_of_bokeh_34() { return &___bokeh_34; }
-	inline void set_bokeh_34(bool value)
-	{
-		___bokeh_34 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehSupport_35() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehSupport_35)); }
-	inline bool get_bokehSupport_35() const { return ___bokehSupport_35; }
-	inline bool* get_address_of_bokehSupport_35() { return &___bokehSupport_35; }
-	inline void set_bokehSupport_35(bool value)
-	{
-		___bokehSupport_35 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehShader_36() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehShader_36)); }
-	inline Shader_t4151988712 * get_bokehShader_36() const { return ___bokehShader_36; }
-	inline Shader_t4151988712 ** get_address_of_bokehShader_36() { return &___bokehShader_36; }
-	inline void set_bokehShader_36(Shader_t4151988712 * value)
-	{
-		___bokehShader_36 = value;
-		Il2CppCodeGenWriteBarrier((&___bokehShader_36), value);
-	}
-
-	inline static int32_t get_offset_of_bokehTexture_37() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehTexture_37)); }
-	inline Texture2D_t3840446185 * get_bokehTexture_37() const { return ___bokehTexture_37; }
-	inline Texture2D_t3840446185 ** get_address_of_bokehTexture_37() { return &___bokehTexture_37; }
-	inline void set_bokehTexture_37(Texture2D_t3840446185 * value)
-	{
-		___bokehTexture_37 = value;
-		Il2CppCodeGenWriteBarrier((&___bokehTexture_37), value);
-	}
-
-	inline static int32_t get_offset_of_bokehScale_38() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehScale_38)); }
-	inline float get_bokehScale_38() const { return ___bokehScale_38; }
-	inline float* get_address_of_bokehScale_38() { return &___bokehScale_38; }
-	inline void set_bokehScale_38(float value)
-	{
-		___bokehScale_38 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehIntensity_39() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehIntensity_39)); }
-	inline float get_bokehIntensity_39() const { return ___bokehIntensity_39; }
-	inline float* get_address_of_bokehIntensity_39() { return &___bokehIntensity_39; }
-	inline void set_bokehIntensity_39(float value)
-	{
-		___bokehIntensity_39 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehThresholdContrast_40() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehThresholdContrast_40)); }
-	inline float get_bokehThresholdContrast_40() const { return ___bokehThresholdContrast_40; }
-	inline float* get_address_of_bokehThresholdContrast_40() { return &___bokehThresholdContrast_40; }
-	inline void set_bokehThresholdContrast_40(float value)
-	{
-		___bokehThresholdContrast_40 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehThresholdLuminance_41() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehThresholdLuminance_41)); }
-	inline float get_bokehThresholdLuminance_41() const { return ___bokehThresholdLuminance_41; }
-	inline float* get_address_of_bokehThresholdLuminance_41() { return &___bokehThresholdLuminance_41; }
-	inline void set_bokehThresholdLuminance_41(float value)
-	{
-		___bokehThresholdLuminance_41 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehDownsample_42() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehDownsample_42)); }
-	inline int32_t get_bokehDownsample_42() const { return ___bokehDownsample_42; }
-	inline int32_t* get_address_of_bokehDownsample_42() { return &___bokehDownsample_42; }
-	inline void set_bokehDownsample_42(int32_t value)
-	{
-		___bokehDownsample_42 = value;
-	}
-
-	inline static int32_t get_offset_of_bokehMaterial_43() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehMaterial_43)); }
-	inline Material_t340375123 * get_bokehMaterial_43() const { return ___bokehMaterial_43; }
-	inline Material_t340375123 ** get_address_of_bokehMaterial_43() { return &___bokehMaterial_43; }
-	inline void set_bokehMaterial_43(Material_t340375123 * value)
-	{
-		___bokehMaterial_43 = value;
-		Il2CppCodeGenWriteBarrier((&___bokehMaterial_43), value);
-	}
-
-	inline static int32_t get_offset_of__camera_44() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ____camera_44)); }
-	inline Camera_t4157153871 * get__camera_44() const { return ____camera_44; }
-	inline Camera_t4157153871 ** get_address_of__camera_44() { return &____camera_44; }
-	inline void set__camera_44(Camera_t4157153871 * value)
-	{
-		____camera_44 = value;
-		Il2CppCodeGenWriteBarrier((&____camera_44), value);
-	}
-
-	inline static int32_t get_offset_of_foregroundTexture_45() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___foregroundTexture_45)); }
-	inline RenderTexture_t2108887433 * get_foregroundTexture_45() const { return ___foregroundTexture_45; }
-	inline RenderTexture_t2108887433 ** get_address_of_foregroundTexture_45() { return &___foregroundTexture_45; }
-	inline void set_foregroundTexture_45(RenderTexture_t2108887433 * value)
-	{
-		___foregroundTexture_45 = value;
-		Il2CppCodeGenWriteBarrier((&___foregroundTexture_45), value);
-	}
-
-	inline static int32_t get_offset_of_mediumRezWorkTexture_46() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___mediumRezWorkTexture_46)); }
-	inline RenderTexture_t2108887433 * get_mediumRezWorkTexture_46() const { return ___mediumRezWorkTexture_46; }
-	inline RenderTexture_t2108887433 ** get_address_of_mediumRezWorkTexture_46() { return &___mediumRezWorkTexture_46; }
-	inline void set_mediumRezWorkTexture_46(RenderTexture_t2108887433 * value)
-	{
-		___mediumRezWorkTexture_46 = value;
-		Il2CppCodeGenWriteBarrier((&___mediumRezWorkTexture_46), value);
-	}
-
-	inline static int32_t get_offset_of_finalDefocus_47() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___finalDefocus_47)); }
-	inline RenderTexture_t2108887433 * get_finalDefocus_47() const { return ___finalDefocus_47; }
-	inline RenderTexture_t2108887433 ** get_address_of_finalDefocus_47() { return &___finalDefocus_47; }
-	inline void set_finalDefocus_47(RenderTexture_t2108887433 * value)
-	{
-		___finalDefocus_47 = value;
-		Il2CppCodeGenWriteBarrier((&___finalDefocus_47), value);
-	}
-
-	inline static int32_t get_offset_of_lowRezWorkTexture_48() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___lowRezWorkTexture_48)); }
-	inline RenderTexture_t2108887433 * get_lowRezWorkTexture_48() const { return ___lowRezWorkTexture_48; }
-	inline RenderTexture_t2108887433 ** get_address_of_lowRezWorkTexture_48() { return &___lowRezWorkTexture_48; }
-	inline void set_lowRezWorkTexture_48(RenderTexture_t2108887433 * value)
-	{
-		___lowRezWorkTexture_48 = value;
-		Il2CppCodeGenWriteBarrier((&___lowRezWorkTexture_48), value);
-	}
-
-	inline static int32_t get_offset_of_bokehSource_49() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehSource_49)); }
-	inline RenderTexture_t2108887433 * get_bokehSource_49() const { return ___bokehSource_49; }
-	inline RenderTexture_t2108887433 ** get_address_of_bokehSource_49() { return &___bokehSource_49; }
-	inline void set_bokehSource_49(RenderTexture_t2108887433 * value)
-	{
-		___bokehSource_49 = value;
-		Il2CppCodeGenWriteBarrier((&___bokehSource_49), value);
-	}
-
-	inline static int32_t get_offset_of_bokehSource2_50() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194, ___bokehSource2_50)); }
-	inline RenderTexture_t2108887433 * get_bokehSource2_50() const { return ___bokehSource2_50; }
-	inline RenderTexture_t2108887433 ** get_address_of_bokehSource2_50() { return &___bokehSource2_50; }
-	inline void set_bokehSource2_50(RenderTexture_t2108887433 * value)
-	{
-		___bokehSource2_50 = value;
-		Il2CppCodeGenWriteBarrier((&___bokehSource2_50), value);
-	}
-};
-
-struct DepthOfFieldDeprecated_t4187663194_StaticFields
-{
-public:
-	// System.Int32 UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::SMOOTH_DOWNSAMPLE_PASS
-	int32_t ___SMOOTH_DOWNSAMPLE_PASS_8;
-	// System.Single UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated::BOKEH_EXTRA_BLUR
-	float ___BOKEH_EXTRA_BLUR_9;
-
-public:
-	inline static int32_t get_offset_of_SMOOTH_DOWNSAMPLE_PASS_8() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194_StaticFields, ___SMOOTH_DOWNSAMPLE_PASS_8)); }
-	inline int32_t get_SMOOTH_DOWNSAMPLE_PASS_8() const { return ___SMOOTH_DOWNSAMPLE_PASS_8; }
-	inline int32_t* get_address_of_SMOOTH_DOWNSAMPLE_PASS_8() { return &___SMOOTH_DOWNSAMPLE_PASS_8; }
-	inline void set_SMOOTH_DOWNSAMPLE_PASS_8(int32_t value)
-	{
-		___SMOOTH_DOWNSAMPLE_PASS_8 = value;
-	}
-
-	inline static int32_t get_offset_of_BOKEH_EXTRA_BLUR_9() { return static_cast<int32_t>(offsetof(DepthOfFieldDeprecated_t4187663194_StaticFields, ___BOKEH_EXTRA_BLUR_9)); }
-	inline float get_BOKEH_EXTRA_BLUR_9() const { return ___BOKEH_EXTRA_BLUR_9; }
-	inline float* get_address_of_BOKEH_EXTRA_BLUR_9() { return &___BOKEH_EXTRA_BLUR_9; }
-	inline void set_BOKEH_EXTRA_BLUR_9(float value)
-	{
-		___BOKEH_EXTRA_BLUR_9 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DEPTHOFFIELDDEPRECATED_T4187663194_H
-#ifndef EDGEDETECTION_T506487406_H
-#define EDGEDETECTION_T506487406_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.EdgeDetection
-struct  EdgeDetection_t506487406  : public PostEffectsBase_t2404315740
-{
-public:
-	// UnityStandardAssets.ImageEffects.EdgeDetection/EdgeDetectMode UnityStandardAssets.ImageEffects.EdgeDetection::mode
-	int32_t ___mode_8;
-	// System.Single UnityStandardAssets.ImageEffects.EdgeDetection::sensitivityDepth
-	float ___sensitivityDepth_9;
-	// System.Single UnityStandardAssets.ImageEffects.EdgeDetection::sensitivityNormals
-	float ___sensitivityNormals_10;
-	// System.Single UnityStandardAssets.ImageEffects.EdgeDetection::lumThreshold
-	float ___lumThreshold_11;
-	// System.Single UnityStandardAssets.ImageEffects.EdgeDetection::edgeExp
-	float ___edgeExp_12;
-	// System.Single UnityStandardAssets.ImageEffects.EdgeDetection::sampleDist
-	float ___sampleDist_13;
-	// System.Single UnityStandardAssets.ImageEffects.EdgeDetection::edgesOnly
-	float ___edgesOnly_14;
-	// UnityEngine.Color UnityStandardAssets.ImageEffects.EdgeDetection::edgesOnlyBgColor
-	Color_t2555686324  ___edgesOnlyBgColor_15;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.EdgeDetection::edgeDetectShader
-	Shader_t4151988712 * ___edgeDetectShader_16;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.EdgeDetection::edgeDetectMaterial
-	Material_t340375123 * ___edgeDetectMaterial_17;
-	// UnityStandardAssets.ImageEffects.EdgeDetection/EdgeDetectMode UnityStandardAssets.ImageEffects.EdgeDetection::oldMode
-	int32_t ___oldMode_18;
-
-public:
-	inline static int32_t get_offset_of_mode_8() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___mode_8)); }
-	inline int32_t get_mode_8() const { return ___mode_8; }
-	inline int32_t* get_address_of_mode_8() { return &___mode_8; }
-	inline void set_mode_8(int32_t value)
-	{
-		___mode_8 = value;
-	}
-
-	inline static int32_t get_offset_of_sensitivityDepth_9() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___sensitivityDepth_9)); }
-	inline float get_sensitivityDepth_9() const { return ___sensitivityDepth_9; }
-	inline float* get_address_of_sensitivityDepth_9() { return &___sensitivityDepth_9; }
-	inline void set_sensitivityDepth_9(float value)
-	{
-		___sensitivityDepth_9 = value;
-	}
-
-	inline static int32_t get_offset_of_sensitivityNormals_10() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___sensitivityNormals_10)); }
-	inline float get_sensitivityNormals_10() const { return ___sensitivityNormals_10; }
-	inline float* get_address_of_sensitivityNormals_10() { return &___sensitivityNormals_10; }
-	inline void set_sensitivityNormals_10(float value)
-	{
-		___sensitivityNormals_10 = value;
-	}
-
-	inline static int32_t get_offset_of_lumThreshold_11() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___lumThreshold_11)); }
-	inline float get_lumThreshold_11() const { return ___lumThreshold_11; }
-	inline float* get_address_of_lumThreshold_11() { return &___lumThreshold_11; }
-	inline void set_lumThreshold_11(float value)
-	{
-		___lumThreshold_11 = value;
-	}
-
-	inline static int32_t get_offset_of_edgeExp_12() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___edgeExp_12)); }
-	inline float get_edgeExp_12() const { return ___edgeExp_12; }
-	inline float* get_address_of_edgeExp_12() { return &___edgeExp_12; }
-	inline void set_edgeExp_12(float value)
-	{
-		___edgeExp_12 = value;
-	}
-
-	inline static int32_t get_offset_of_sampleDist_13() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___sampleDist_13)); }
-	inline float get_sampleDist_13() const { return ___sampleDist_13; }
-	inline float* get_address_of_sampleDist_13() { return &___sampleDist_13; }
-	inline void set_sampleDist_13(float value)
-	{
-		___sampleDist_13 = value;
-	}
-
-	inline static int32_t get_offset_of_edgesOnly_14() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___edgesOnly_14)); }
-	inline float get_edgesOnly_14() const { return ___edgesOnly_14; }
-	inline float* get_address_of_edgesOnly_14() { return &___edgesOnly_14; }
-	inline void set_edgesOnly_14(float value)
-	{
-		___edgesOnly_14 = value;
-	}
-
-	inline static int32_t get_offset_of_edgesOnlyBgColor_15() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___edgesOnlyBgColor_15)); }
-	inline Color_t2555686324  get_edgesOnlyBgColor_15() const { return ___edgesOnlyBgColor_15; }
-	inline Color_t2555686324 * get_address_of_edgesOnlyBgColor_15() { return &___edgesOnlyBgColor_15; }
-	inline void set_edgesOnlyBgColor_15(Color_t2555686324  value)
-	{
-		___edgesOnlyBgColor_15 = value;
-	}
-
-	inline static int32_t get_offset_of_edgeDetectShader_16() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___edgeDetectShader_16)); }
-	inline Shader_t4151988712 * get_edgeDetectShader_16() const { return ___edgeDetectShader_16; }
-	inline Shader_t4151988712 ** get_address_of_edgeDetectShader_16() { return &___edgeDetectShader_16; }
-	inline void set_edgeDetectShader_16(Shader_t4151988712 * value)
-	{
-		___edgeDetectShader_16 = value;
-		Il2CppCodeGenWriteBarrier((&___edgeDetectShader_16), value);
-	}
-
-	inline static int32_t get_offset_of_edgeDetectMaterial_17() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___edgeDetectMaterial_17)); }
-	inline Material_t340375123 * get_edgeDetectMaterial_17() const { return ___edgeDetectMaterial_17; }
-	inline Material_t340375123 ** get_address_of_edgeDetectMaterial_17() { return &___edgeDetectMaterial_17; }
-	inline void set_edgeDetectMaterial_17(Material_t340375123 * value)
-	{
-		___edgeDetectMaterial_17 = value;
-		Il2CppCodeGenWriteBarrier((&___edgeDetectMaterial_17), value);
-	}
-
-	inline static int32_t get_offset_of_oldMode_18() { return static_cast<int32_t>(offsetof(EdgeDetection_t506487406, ___oldMode_18)); }
-	inline int32_t get_oldMode_18() const { return ___oldMode_18; }
-	inline int32_t* get_address_of_oldMode_18() { return &___oldMode_18; }
-	inline void set_oldMode_18(int32_t value)
-	{
-		___oldMode_18 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EDGEDETECTION_T506487406_H
-#ifndef FISHEYE_T4101461743_H
-#define FISHEYE_T4101461743_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.Fisheye
-struct  Fisheye_t4101461743  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.Fisheye::strengthX
-	float ___strengthX_8;
-	// System.Single UnityStandardAssets.ImageEffects.Fisheye::strengthY
-	float ___strengthY_9;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.Fisheye::fishEyeShader
-	Shader_t4151988712 * ___fishEyeShader_10;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.Fisheye::fisheyeMaterial
-	Material_t340375123 * ___fisheyeMaterial_11;
-
-public:
-	inline static int32_t get_offset_of_strengthX_8() { return static_cast<int32_t>(offsetof(Fisheye_t4101461743, ___strengthX_8)); }
-	inline float get_strengthX_8() const { return ___strengthX_8; }
-	inline float* get_address_of_strengthX_8() { return &___strengthX_8; }
-	inline void set_strengthX_8(float value)
-	{
-		___strengthX_8 = value;
-	}
-
-	inline static int32_t get_offset_of_strengthY_9() { return static_cast<int32_t>(offsetof(Fisheye_t4101461743, ___strengthY_9)); }
-	inline float get_strengthY_9() const { return ___strengthY_9; }
-	inline float* get_address_of_strengthY_9() { return &___strengthY_9; }
-	inline void set_strengthY_9(float value)
-	{
-		___strengthY_9 = value;
-	}
-
-	inline static int32_t get_offset_of_fishEyeShader_10() { return static_cast<int32_t>(offsetof(Fisheye_t4101461743, ___fishEyeShader_10)); }
-	inline Shader_t4151988712 * get_fishEyeShader_10() const { return ___fishEyeShader_10; }
-	inline Shader_t4151988712 ** get_address_of_fishEyeShader_10() { return &___fishEyeShader_10; }
-	inline void set_fishEyeShader_10(Shader_t4151988712 * value)
-	{
-		___fishEyeShader_10 = value;
-		Il2CppCodeGenWriteBarrier((&___fishEyeShader_10), value);
-	}
-
-	inline static int32_t get_offset_of_fisheyeMaterial_11() { return static_cast<int32_t>(offsetof(Fisheye_t4101461743, ___fisheyeMaterial_11)); }
-	inline Material_t340375123 * get_fisheyeMaterial_11() const { return ___fisheyeMaterial_11; }
-	inline Material_t340375123 ** get_address_of_fisheyeMaterial_11() { return &___fisheyeMaterial_11; }
-	inline void set_fisheyeMaterial_11(Material_t340375123 * value)
-	{
-		___fisheyeMaterial_11 = value;
-		Il2CppCodeGenWriteBarrier((&___fisheyeMaterial_11), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FISHEYE_T4101461743_H
-#ifndef GLOBALFOG_T900542614_H
-#define GLOBALFOG_T900542614_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.GlobalFog
-struct  GlobalFog_t900542614  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Boolean UnityStandardAssets.ImageEffects.GlobalFog::distanceFog
-	bool ___distanceFog_8;
-	// System.Boolean UnityStandardAssets.ImageEffects.GlobalFog::excludeFarPixels
-	bool ___excludeFarPixels_9;
-	// System.Boolean UnityStandardAssets.ImageEffects.GlobalFog::useRadialDistance
-	bool ___useRadialDistance_10;
-	// System.Boolean UnityStandardAssets.ImageEffects.GlobalFog::heightFog
-	bool ___heightFog_11;
-	// System.Single UnityStandardAssets.ImageEffects.GlobalFog::height
-	float ___height_12;
-	// System.Single UnityStandardAssets.ImageEffects.GlobalFog::heightDensity
-	float ___heightDensity_13;
-	// System.Single UnityStandardAssets.ImageEffects.GlobalFog::startDistance
-	float ___startDistance_14;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.GlobalFog::fogShader
-	Shader_t4151988712 * ___fogShader_15;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.GlobalFog::fogMaterial
-	Material_t340375123 * ___fogMaterial_16;
-
-public:
-	inline static int32_t get_offset_of_distanceFog_8() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___distanceFog_8)); }
-	inline bool get_distanceFog_8() const { return ___distanceFog_8; }
-	inline bool* get_address_of_distanceFog_8() { return &___distanceFog_8; }
-	inline void set_distanceFog_8(bool value)
-	{
-		___distanceFog_8 = value;
-	}
-
-	inline static int32_t get_offset_of_excludeFarPixels_9() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___excludeFarPixels_9)); }
-	inline bool get_excludeFarPixels_9() const { return ___excludeFarPixels_9; }
-	inline bool* get_address_of_excludeFarPixels_9() { return &___excludeFarPixels_9; }
-	inline void set_excludeFarPixels_9(bool value)
-	{
-		___excludeFarPixels_9 = value;
-	}
-
-	inline static int32_t get_offset_of_useRadialDistance_10() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___useRadialDistance_10)); }
-	inline bool get_useRadialDistance_10() const { return ___useRadialDistance_10; }
-	inline bool* get_address_of_useRadialDistance_10() { return &___useRadialDistance_10; }
-	inline void set_useRadialDistance_10(bool value)
-	{
-		___useRadialDistance_10 = value;
-	}
-
-	inline static int32_t get_offset_of_heightFog_11() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___heightFog_11)); }
-	inline bool get_heightFog_11() const { return ___heightFog_11; }
-	inline bool* get_address_of_heightFog_11() { return &___heightFog_11; }
-	inline void set_heightFog_11(bool value)
-	{
-		___heightFog_11 = value;
-	}
-
-	inline static int32_t get_offset_of_height_12() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___height_12)); }
-	inline float get_height_12() const { return ___height_12; }
-	inline float* get_address_of_height_12() { return &___height_12; }
-	inline void set_height_12(float value)
-	{
-		___height_12 = value;
-	}
-
-	inline static int32_t get_offset_of_heightDensity_13() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___heightDensity_13)); }
-	inline float get_heightDensity_13() const { return ___heightDensity_13; }
-	inline float* get_address_of_heightDensity_13() { return &___heightDensity_13; }
-	inline void set_heightDensity_13(float value)
-	{
-		___heightDensity_13 = value;
-	}
-
-	inline static int32_t get_offset_of_startDistance_14() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___startDistance_14)); }
-	inline float get_startDistance_14() const { return ___startDistance_14; }
-	inline float* get_address_of_startDistance_14() { return &___startDistance_14; }
-	inline void set_startDistance_14(float value)
-	{
-		___startDistance_14 = value;
-	}
-
-	inline static int32_t get_offset_of_fogShader_15() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___fogShader_15)); }
-	inline Shader_t4151988712 * get_fogShader_15() const { return ___fogShader_15; }
-	inline Shader_t4151988712 ** get_address_of_fogShader_15() { return &___fogShader_15; }
-	inline void set_fogShader_15(Shader_t4151988712 * value)
-	{
-		___fogShader_15 = value;
-		Il2CppCodeGenWriteBarrier((&___fogShader_15), value);
-	}
-
-	inline static int32_t get_offset_of_fogMaterial_16() { return static_cast<int32_t>(offsetof(GlobalFog_t900542614, ___fogMaterial_16)); }
-	inline Material_t340375123 * get_fogMaterial_16() const { return ___fogMaterial_16; }
-	inline Material_t340375123 ** get_address_of_fogMaterial_16() { return &___fogMaterial_16; }
-	inline void set_fogMaterial_16(Material_t340375123 * value)
-	{
-		___fogMaterial_16 = value;
-		Il2CppCodeGenWriteBarrier((&___fogMaterial_16), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GLOBALFOG_T900542614_H
-#ifndef GRAYSCALE_T1707485390_H
-#define GRAYSCALE_T1707485390_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.Grayscale
-struct  Grayscale_t1707485390  : public ImageEffectBase_t2026006575
-{
-public:
-	// UnityEngine.Texture UnityStandardAssets.ImageEffects.Grayscale::textureRamp
-	Texture_t3661962703 * ___textureRamp_6;
-	// System.Single UnityStandardAssets.ImageEffects.Grayscale::rampOffset
-	float ___rampOffset_7;
-
-public:
-	inline static int32_t get_offset_of_textureRamp_6() { return static_cast<int32_t>(offsetof(Grayscale_t1707485390, ___textureRamp_6)); }
-	inline Texture_t3661962703 * get_textureRamp_6() const { return ___textureRamp_6; }
-	inline Texture_t3661962703 ** get_address_of_textureRamp_6() { return &___textureRamp_6; }
-	inline void set_textureRamp_6(Texture_t3661962703 * value)
-	{
-		___textureRamp_6 = value;
-		Il2CppCodeGenWriteBarrier((&___textureRamp_6), value);
-	}
-
-	inline static int32_t get_offset_of_rampOffset_7() { return static_cast<int32_t>(offsetof(Grayscale_t1707485390, ___rampOffset_7)); }
-	inline float get_rampOffset_7() const { return ___rampOffset_7; }
-	inline float* get_address_of_rampOffset_7() { return &___rampOffset_7; }
-	inline void set_rampOffset_7(float value)
-	{
-		___rampOffset_7 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // GRAYSCALE_T1707485390_H
-#ifndef MOTIONBLUR_T1587267364_H
-#define MOTIONBLUR_T1587267364_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.MotionBlur
-struct  MotionBlur_t1587267364  : public ImageEffectBase_t2026006575
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.MotionBlur::blurAmount
-	float ___blurAmount_6;
-	// System.Boolean UnityStandardAssets.ImageEffects.MotionBlur::extraBlur
-	bool ___extraBlur_7;
-	// UnityEngine.RenderTexture UnityStandardAssets.ImageEffects.MotionBlur::accumTexture
-	RenderTexture_t2108887433 * ___accumTexture_8;
-
-public:
-	inline static int32_t get_offset_of_blurAmount_6() { return static_cast<int32_t>(offsetof(MotionBlur_t1587267364, ___blurAmount_6)); }
-	inline float get_blurAmount_6() const { return ___blurAmount_6; }
-	inline float* get_address_of_blurAmount_6() { return &___blurAmount_6; }
-	inline void set_blurAmount_6(float value)
-	{
-		___blurAmount_6 = value;
-	}
-
-	inline static int32_t get_offset_of_extraBlur_7() { return static_cast<int32_t>(offsetof(MotionBlur_t1587267364, ___extraBlur_7)); }
-	inline bool get_extraBlur_7() const { return ___extraBlur_7; }
-	inline bool* get_address_of_extraBlur_7() { return &___extraBlur_7; }
-	inline void set_extraBlur_7(bool value)
-	{
-		___extraBlur_7 = value;
-	}
-
-	inline static int32_t get_offset_of_accumTexture_8() { return static_cast<int32_t>(offsetof(MotionBlur_t1587267364, ___accumTexture_8)); }
-	inline RenderTexture_t2108887433 * get_accumTexture_8() const { return ___accumTexture_8; }
-	inline RenderTexture_t2108887433 ** get_address_of_accumTexture_8() { return &___accumTexture_8; }
-	inline void set_accumTexture_8(RenderTexture_t2108887433 * value)
-	{
-		___accumTexture_8 = value;
-		Il2CppCodeGenWriteBarrier((&___accumTexture_8), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // MOTIONBLUR_T1587267364_H
-#ifndef NOISEANDGRAIN_T3814230817_H
-#define NOISEANDGRAIN_T3814230817_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityStandardAssets.ImageEffects.NoiseAndGrain
-struct  NoiseAndGrain_t3814230817  : public PostEffectsBase_t2404315740
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::intensityMultiplier
-	float ___intensityMultiplier_8;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::generalIntensity
-	float ___generalIntensity_9;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::blackIntensity
-	float ___blackIntensity_10;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::whiteIntensity
-	float ___whiteIntensity_11;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::midGrey
-	float ___midGrey_12;
-	// System.Boolean UnityStandardAssets.ImageEffects.NoiseAndGrain::dx11Grain
-	bool ___dx11Grain_13;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::softness
-	float ___softness_14;
-	// System.Boolean UnityStandardAssets.ImageEffects.NoiseAndGrain::monochrome
-	bool ___monochrome_15;
-	// UnityEngine.Vector3 UnityStandardAssets.ImageEffects.NoiseAndGrain::intensities
-	Vector3_t3722313464  ___intensities_16;
-	// UnityEngine.Vector3 UnityStandardAssets.ImageEffects.NoiseAndGrain::tiling
-	Vector3_t3722313464  ___tiling_17;
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::monochromeTiling
-	float ___monochromeTiling_18;
-	// UnityEngine.FilterMode UnityStandardAssets.ImageEffects.NoiseAndGrain::filterMode
-	int32_t ___filterMode_19;
-	// UnityEngine.Texture2D UnityStandardAssets.ImageEffects.NoiseAndGrain::noiseTexture
-	Texture2D_t3840446185 * ___noiseTexture_20;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.NoiseAndGrain::noiseShader
-	Shader_t4151988712 * ___noiseShader_21;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.NoiseAndGrain::noiseMaterial
-	Material_t340375123 * ___noiseMaterial_22;
-	// UnityEngine.Shader UnityStandardAssets.ImageEffects.NoiseAndGrain::dx11NoiseShader
-	Shader_t4151988712 * ___dx11NoiseShader_23;
-	// UnityEngine.Material UnityStandardAssets.ImageEffects.NoiseAndGrain::dx11NoiseMaterial
-	Material_t340375123 * ___dx11NoiseMaterial_24;
-
-public:
-	inline static int32_t get_offset_of_intensityMultiplier_8() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___intensityMultiplier_8)); }
-	inline float get_intensityMultiplier_8() const { return ___intensityMultiplier_8; }
-	inline float* get_address_of_intensityMultiplier_8() { return &___intensityMultiplier_8; }
-	inline void set_intensityMultiplier_8(float value)
-	{
-		___intensityMultiplier_8 = value;
-	}
-
-	inline static int32_t get_offset_of_generalIntensity_9() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___generalIntensity_9)); }
-	inline float get_generalIntensity_9() const { return ___generalIntensity_9; }
-	inline float* get_address_of_generalIntensity_9() { return &___generalIntensity_9; }
-	inline void set_generalIntensity_9(float value)
-	{
-		___generalIntensity_9 = value;
-	}
-
-	inline static int32_t get_offset_of_blackIntensity_10() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___blackIntensity_10)); }
-	inline float get_blackIntensity_10() const { return ___blackIntensity_10; }
-	inline float* get_address_of_blackIntensity_10() { return &___blackIntensity_10; }
-	inline void set_blackIntensity_10(float value)
-	{
-		___blackIntensity_10 = value;
-	}
-
-	inline static int32_t get_offset_of_whiteIntensity_11() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___whiteIntensity_11)); }
-	inline float get_whiteIntensity_11() const { return ___whiteIntensity_11; }
-	inline float* get_address_of_whiteIntensity_11() { return &___whiteIntensity_11; }
-	inline void set_whiteIntensity_11(float value)
-	{
-		___whiteIntensity_11 = value;
-	}
-
-	inline static int32_t get_offset_of_midGrey_12() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___midGrey_12)); }
-	inline float get_midGrey_12() const { return ___midGrey_12; }
-	inline float* get_address_of_midGrey_12() { return &___midGrey_12; }
-	inline void set_midGrey_12(float value)
-	{
-		___midGrey_12 = value;
-	}
-
-	inline static int32_t get_offset_of_dx11Grain_13() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___dx11Grain_13)); }
-	inline bool get_dx11Grain_13() const { return ___dx11Grain_13; }
-	inline bool* get_address_of_dx11Grain_13() { return &___dx11Grain_13; }
-	inline void set_dx11Grain_13(bool value)
-	{
-		___dx11Grain_13 = value;
-	}
-
-	inline static int32_t get_offset_of_softness_14() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___softness_14)); }
-	inline float get_softness_14() const { return ___softness_14; }
-	inline float* get_address_of_softness_14() { return &___softness_14; }
-	inline void set_softness_14(float value)
-	{
-		___softness_14 = value;
-	}
-
-	inline static int32_t get_offset_of_monochrome_15() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___monochrome_15)); }
-	inline bool get_monochrome_15() const { return ___monochrome_15; }
-	inline bool* get_address_of_monochrome_15() { return &___monochrome_15; }
-	inline void set_monochrome_15(bool value)
-	{
-		___monochrome_15 = value;
-	}
-
-	inline static int32_t get_offset_of_intensities_16() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___intensities_16)); }
-	inline Vector3_t3722313464  get_intensities_16() const { return ___intensities_16; }
-	inline Vector3_t3722313464 * get_address_of_intensities_16() { return &___intensities_16; }
-	inline void set_intensities_16(Vector3_t3722313464  value)
-	{
-		___intensities_16 = value;
-	}
-
-	inline static int32_t get_offset_of_tiling_17() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___tiling_17)); }
-	inline Vector3_t3722313464  get_tiling_17() const { return ___tiling_17; }
-	inline Vector3_t3722313464 * get_address_of_tiling_17() { return &___tiling_17; }
-	inline void set_tiling_17(Vector3_t3722313464  value)
-	{
-		___tiling_17 = value;
-	}
-
-	inline static int32_t get_offset_of_monochromeTiling_18() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___monochromeTiling_18)); }
-	inline float get_monochromeTiling_18() const { return ___monochromeTiling_18; }
-	inline float* get_address_of_monochromeTiling_18() { return &___monochromeTiling_18; }
-	inline void set_monochromeTiling_18(float value)
-	{
-		___monochromeTiling_18 = value;
-	}
-
-	inline static int32_t get_offset_of_filterMode_19() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___filterMode_19)); }
-	inline int32_t get_filterMode_19() const { return ___filterMode_19; }
-	inline int32_t* get_address_of_filterMode_19() { return &___filterMode_19; }
-	inline void set_filterMode_19(int32_t value)
-	{
-		___filterMode_19 = value;
-	}
-
-	inline static int32_t get_offset_of_noiseTexture_20() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___noiseTexture_20)); }
-	inline Texture2D_t3840446185 * get_noiseTexture_20() const { return ___noiseTexture_20; }
-	inline Texture2D_t3840446185 ** get_address_of_noiseTexture_20() { return &___noiseTexture_20; }
-	inline void set_noiseTexture_20(Texture2D_t3840446185 * value)
-	{
-		___noiseTexture_20 = value;
-		Il2CppCodeGenWriteBarrier((&___noiseTexture_20), value);
-	}
-
-	inline static int32_t get_offset_of_noiseShader_21() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___noiseShader_21)); }
-	inline Shader_t4151988712 * get_noiseShader_21() const { return ___noiseShader_21; }
-	inline Shader_t4151988712 ** get_address_of_noiseShader_21() { return &___noiseShader_21; }
-	inline void set_noiseShader_21(Shader_t4151988712 * value)
-	{
-		___noiseShader_21 = value;
-		Il2CppCodeGenWriteBarrier((&___noiseShader_21), value);
-	}
-
-	inline static int32_t get_offset_of_noiseMaterial_22() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___noiseMaterial_22)); }
-	inline Material_t340375123 * get_noiseMaterial_22() const { return ___noiseMaterial_22; }
-	inline Material_t340375123 ** get_address_of_noiseMaterial_22() { return &___noiseMaterial_22; }
-	inline void set_noiseMaterial_22(Material_t340375123 * value)
-	{
-		___noiseMaterial_22 = value;
-		Il2CppCodeGenWriteBarrier((&___noiseMaterial_22), value);
-	}
-
-	inline static int32_t get_offset_of_dx11NoiseShader_23() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___dx11NoiseShader_23)); }
-	inline Shader_t4151988712 * get_dx11NoiseShader_23() const { return ___dx11NoiseShader_23; }
-	inline Shader_t4151988712 ** get_address_of_dx11NoiseShader_23() { return &___dx11NoiseShader_23; }
-	inline void set_dx11NoiseShader_23(Shader_t4151988712 * value)
-	{
-		___dx11NoiseShader_23 = value;
-		Il2CppCodeGenWriteBarrier((&___dx11NoiseShader_23), value);
-	}
-
-	inline static int32_t get_offset_of_dx11NoiseMaterial_24() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817, ___dx11NoiseMaterial_24)); }
-	inline Material_t340375123 * get_dx11NoiseMaterial_24() const { return ___dx11NoiseMaterial_24; }
-	inline Material_t340375123 ** get_address_of_dx11NoiseMaterial_24() { return &___dx11NoiseMaterial_24; }
-	inline void set_dx11NoiseMaterial_24(Material_t340375123 * value)
-	{
-		___dx11NoiseMaterial_24 = value;
-		Il2CppCodeGenWriteBarrier((&___dx11NoiseMaterial_24), value);
-	}
-};
-
-struct NoiseAndGrain_t3814230817_StaticFields
-{
-public:
-	// System.Single UnityStandardAssets.ImageEffects.NoiseAndGrain::TILE_AMOUNT
-	float ___TILE_AMOUNT_25;
-
-public:
-	inline static int32_t get_offset_of_TILE_AMOUNT_25() { return static_cast<int32_t>(offsetof(NoiseAndGrain_t3814230817_StaticFields, ___TILE_AMOUNT_25)); }
-	inline float get_TILE_AMOUNT_25() const { return ___TILE_AMOUNT_25; }
-	inline float* get_address_of_TILE_AMOUNT_25() { return &___TILE_AMOUNT_25; }
-	inline void set_TILE_AMOUNT_25(float value)
-	{
-		___TILE_AMOUNT_25 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // NOISEANDGRAIN_T3814230817_H
 
 
 
@@ -9627,24 +11245,646 @@ public:
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3600 = { sizeof (MotionType_t1905163921)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3600[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3600 = { sizeof (U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3600[5] = 
+{
+	U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953::get_offset_of_delay_0(),
+	U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953::get_offset_of_U24this_1(),
+	U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953::get_offset_of_U24current_2(),
+	U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953::get_offset_of_U24disposing_3(),
+	U3CbuttonDelayTimerU3Ec__Iterator1_t1661179953::get_offset_of_U24PC_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3601 = { sizeof (InventoryManager_t1225487224), -1, sizeof(InventoryManager_t1225487224_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable3601[5] = 
+{
+	InventoryManager_t1225487224_StaticFields::get_offset_of_playerHealth_0(),
+	InventoryManager_t1225487224_StaticFields::get_offset_of_batteryCount_1(),
+	InventoryManager_t1225487224_StaticFields::get_offset_of_medCount_2(),
+	InventoryManager_t1225487224_StaticFields::get_offset_of_keyCount_3(),
+	InventoryManager_t1225487224_StaticFields::get_offset_of_stimCount_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3602 = { sizeof (Item_Enumerator_t3915226614), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3602[27] = 
+{
+	Item_Enumerator_t3915226614::get_offset_of_isActiveObject_4(),
+	Item_Enumerator_t3915226614::get_offset_of_thisItem_5(),
+	Item_Enumerator_t3915226614::get_offset_of_itemValue_6(),
+	Item_Enumerator_t3915226614::get_offset_of_player_7(),
+	Item_Enumerator_t3915226614::get_offset_of_animator_8(),
+	Item_Enumerator_t3915226614::get_offset_of_playerObject_9(),
+	Item_Enumerator_t3915226614::get_offset_of_playerBody_10(),
+	Item_Enumerator_t3915226614::get_offset_of_thisCollider_11(),
+	Item_Enumerator_t3915226614::get_offset_of_targetObject_12(),
+	Item_Enumerator_t3915226614::get_offset_of_mainCamera_13(),
+	Item_Enumerator_t3915226614::get_offset_of_pickupTextObject_14(),
+	Item_Enumerator_t3915226614::get_offset_of_hilightIcon_15(),
+	Item_Enumerator_t3915226614::get_offset_of_iconImage_16(),
+	Item_Enumerator_t3915226614::get_offset_of_dialogBG_17(),
+	Item_Enumerator_t3915226614::get_offset_of_iconVisible_18(),
+	Item_Enumerator_t3915226614::get_offset_of_colorOff_19(),
+	Item_Enumerator_t3915226614::get_offset_of_colorOn_20(),
+	Item_Enumerator_t3915226614::get_offset_of_dialogOn_21(),
+	Item_Enumerator_t3915226614::get_offset_of_OSDText_22(),
+	Item_Enumerator_t3915226614::get_offset_of_batteryText_23(),
+	Item_Enumerator_t3915226614::get_offset_of_healedTexture_24(),
+	0,
+	Item_Enumerator_t3915226614::get_offset_of_CROSS_26(),
+	Item_Enumerator_t3915226614::get_offset_of_screenPosition_27(),
+	Item_Enumerator_t3915226614::get_offset_of_targetPos_28(),
+	Item_Enumerator_t3915226614::get_offset_of_tempText_29(),
+	Item_Enumerator_t3915226614::get_offset_of_itemTexts_30(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3603 = { sizeof (pickupItem_t2990193834)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3603[6] = 
+{
+	pickupItem_t2990193834::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
+	0,
+	0,
+	0,
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3604 = { sizeof (LoadScreen_t3376497162), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3604[12] = 
+{
+	LoadScreen_t3376497162::get_offset_of_loadingOperation_4(),
+	LoadScreen_t3376497162::get_offset_of_loading_5(),
+	LoadScreen_t3376497162::get_offset_of_canvasGroup_6(),
+	LoadScreen_t3376497162::get_offset_of_progressCounterLeft_7(),
+	LoadScreen_t3376497162::get_offset_of_progressCounterRight_8(),
+	LoadScreen_t3376497162::get_offset_of_loaderHint_9(),
+	LoadScreen_t3376497162::get_offset_of_fadeDuration_10(),
+	LoadScreen_t3376497162::get_offset_of_originalValue_11(),
+	LoadScreen_t3376497162::get_offset_of_loadProgress_12(),
+	LoadScreen_t3376497162::get_offset_of_fadeValue_13(),
+	LoadScreen_t3376497162::get_offset_of_loadAtStart_14(),
+	LoadScreen_t3376497162::get_offset_of_canLoad_15(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3605 = { sizeof (U3CStartLoadU3Ec__Iterator0_t2551077925), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3605[4] = 
+{
+	U3CStartLoadU3Ec__Iterator0_t2551077925::get_offset_of_U24this_0(),
+	U3CStartLoadU3Ec__Iterator0_t2551077925::get_offset_of_U24current_1(),
+	U3CStartLoadU3Ec__Iterator0_t2551077925::get_offset_of_U24disposing_2(),
+	U3CStartLoadU3Ec__Iterator0_t2551077925::get_offset_of_U24PC_3(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3606 = { sizeof (U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3606[8] = 
+{
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_U3CstartValueU3E__0_0(),
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_U3CtimeU3E__0_1(),
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_duration_2(),
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_targetValue_3(),
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_U24this_4(),
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_U24current_5(),
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_U24disposing_6(),
+	U3CFadeLoadingScreenU3Ec__Iterator1_t1230497635::get_offset_of_U24PC_7(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3607 = { sizeof (MapController_t3762646607), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3607[14] = 
+{
+	MapController_t3762646607::get_offset_of_mapCamera_4(),
+	MapController_t3762646607::get_offset_of_minZoom_5(),
+	MapController_t3762646607::get_offset_of_maxZoom_6(),
+	MapController_t3762646607::get_offset_of_pos_7(),
+	MapController_t3762646607::get_offset_of_mapArrow_8(),
+	MapController_t3762646607::get_offset_of_mapContainer_9(),
+	MapController_t3762646607::get_offset_of_previousDistance_10(),
+	MapController_t3762646607::get_offset_of_currentDistance_11(),
+	MapController_t3762646607::get_offset_of_midPoint_12(),
+	MapController_t3762646607::get_offset_of_ScreenSize_13(),
+	MapController_t3762646607::get_offset_of_originalPos_14(),
+	MapController_t3762646607::get_offset_of_VITA_15(),
+	MapController_t3762646607::get_offset_of_RIGHT_16(),
+	MapController_t3762646607::get_offset_of_LEFT_17(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3608 = { sizeof (PlayerController_t2064355688), -1, sizeof(PlayerController_t2064355688_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable3608[72] = 
+{
+	PlayerController_t2064355688::get_offset_of_characterController_4(),
+	PlayerController_t2064355688_StaticFields::get_offset_of_hasFlashlight_5(),
+	PlayerController_t2064355688_StaticFields::get_offset_of_flashlightOff_6(),
+	PlayerController_t2064355688::get_offset_of_speed_7(),
+	PlayerController_t2064355688::get_offset_of_stamina_8(),
+	PlayerController_t2064355688::get_offset_of_rechargeDelay_9(),
+	PlayerController_t2064355688::get_offset_of_stimCooldown_10(),
+	PlayerController_t2064355688::get_offset_of_staminaObject_11(),
+	PlayerController_t2064355688::get_offset_of_walkSpeed_12(),
+	PlayerController_t2064355688::get_offset_of_animator_13(),
+	PlayerController_t2064355688::get_offset_of_cameraRig_14(),
+	PlayerController_t2064355688::get_offset_of_Camera_15(),
+	PlayerController_t2064355688::get_offset_of_camObject_16(),
+	PlayerController_t2064355688::get_offset_of_flashlight_17(),
+	PlayerController_t2064355688::get_offset_of_vertlight_18(),
+	PlayerController_t2064355688::get_offset_of_lightRig_19(),
+	PlayerController_t2064355688::get_offset_of_lightObject_20(),
+	PlayerController_t2064355688::get_offset_of_lightShaft_21(),
+	PlayerController_t2064355688::get_offset_of_handRig_22(),
+	PlayerController_t2064355688::get_offset_of_bodyRig_23(),
+	PlayerController_t2064355688::get_offset_of_lightBeam_24(),
+	PlayerController_t2064355688::get_offset_of_lightHaze_25(),
+	PlayerController_t2064355688::get_offset_of_lightChargeObject_26(),
+	PlayerController_t2064355688::get_offset_of_lightCharge_27(),
+	PlayerController_t2064355688::get_offset_of_colorStart_28(),
+	PlayerController_t2064355688::get_offset_of_colorEnd_29(),
+	PlayerController_t2064355688::get_offset_of_colorTransparent_30(),
+	PlayerController_t2064355688::get_offset_of_lightDuration_31(),
+	PlayerController_t2064355688::get_offset_of_lookSensitivity_32(),
+	PlayerController_t2064355688::get_offset_of_upLimit_33(),
+	PlayerController_t2064355688::get_offset_of_downLimit_34(),
+	PlayerController_t2064355688::get_offset_of_batteryText_35(),
+	PlayerController_t2064355688::get_offset_of_flashlightCharge_36(),
+	PlayerController_t2064355688::get_offset_of_flashlightDisabled_37(),
+	PlayerController_t2064355688::get_offset_of_SSAOScript_38(),
+	PlayerController_t2064355688::get_offset_of_BokehScript_39(),
+	PlayerController_t2064355688::get_offset_of_enabledText_40(),
+	PlayerController_t2064355688::get_offset_of_lerpRate_41(),
+	PlayerController_t2064355688::get_offset_of_gravity_42(),
+	PlayerController_t2064355688::get_offset_of_verticalSpeed_43(),
+	PlayerController_t2064355688::get_offset_of_VITA_44(),
+	PlayerController_t2064355688::get_offset_of_CROSS_45(),
+	PlayerController_t2064355688::get_offset_of_CIRCLE_46(),
+	PlayerController_t2064355688::get_offset_of_SQUARE_47(),
+	PlayerController_t2064355688::get_offset_of_TRIANGLE_48(),
+	PlayerController_t2064355688::get_offset_of_LTRIG_49(),
+	PlayerController_t2064355688::get_offset_of_RTRIG_50(),
+	PlayerController_t2064355688::get_offset_of_SELECT_51(),
+	PlayerController_t2064355688::get_offset_of_START_52(),
+	PlayerController_t2064355688::get_offset_of_UP_53(),
+	PlayerController_t2064355688::get_offset_of_RIGHT_54(),
+	PlayerController_t2064355688::get_offset_of_DOWN_55(),
+	PlayerController_t2064355688::get_offset_of_LEFT_56(),
+	PlayerController_t2064355688::get_offset_of_verticalMove_57(),
+	PlayerController_t2064355688::get_offset_of_horizontalRotation_58(),
+	PlayerController_t2064355688::get_offset_of_horizontalCamRotation_59(),
+	PlayerController_t2064355688::get_offset_of_verticalCamRotation_60(),
+	PlayerController_t2064355688::get_offset_of_savedRotation_61(),
+	PlayerController_t2064355688::get_offset_of_savedPosition_62(),
+	PlayerController_t2064355688::get_offset_of_fire_63(),
+	PlayerController_t2064355688::get_offset_of_skinnedRenderer_64(),
+	PlayerController_t2064355688::get_offset_of_walkStart_65(),
+	PlayerController_t2064355688::get_offset_of_isLerping_66(),
+	PlayerController_t2064355688::get_offset_of_isPaused_67(),
+	PlayerController_t2064355688_StaticFields::get_offset_of_isMap_68(),
+	PlayerController_t2064355688::get_offset_of_pausePanel_69(),
+	PlayerController_t2064355688::get_offset_of_mapPanel_70(),
+	PlayerController_t2064355688::get_offset_of_mapCam_71(),
+	PlayerController_t2064355688::get_offset_of_mapIndicator_72(),
+	PlayerController_t2064355688::get_offset_of_isStimulant_73(),
+	PlayerController_t2064355688::get_offset_of_cooldownValue_74(),
+	PlayerController_t2064355688::get_offset_of_delayButton_75(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3609 = { sizeof (Command_t2676217732), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3610 = { sizeof (U3ChealLerpU3Ec__Iterator0_t3646218115), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3610[9] = 
+{
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_U3CtimeU3E__0_0(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_duration_1(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_startValue_2(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_endValue_3(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_U3CswapU3E__1_4(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_U24this_5(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_U24current_6(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_U24disposing_7(),
+	U3ChealLerpU3Ec__Iterator0_t3646218115::get_offset_of_U24PC_8(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3611 = { sizeof (U3CwalkLerpU3Ec__Iterator1_t691473893), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3611[10] = 
+{
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_U3CtimeU3E__0_0(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_duration_1(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_startValue_2(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_endValue_3(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_U3CswapU3E__1_4(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_U3CswapU3E__2_5(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_U24this_6(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_U24current_7(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_U24disposing_8(),
+	U3CwalkLerpU3Ec__Iterator1_t691473893::get_offset_of_U24PC_9(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3612 = { sizeof (U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3612[16] = 
+{
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_U3CtimeU3E__0_0(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_U3CconeScaleU3E__0_1(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_duration_2(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_startColor_3(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_endColor_4(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_startIntensity_5(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_endIntensity_6(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_startAngle_7(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_endAngle_8(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_startSize_9(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_endSize_10(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_U3CscalarU3E__1_11(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_U24this_12(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_U24current_13(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_U24disposing_14(),
+	U3CFadeLightDynamicInputU3Ec__Iterator2_t2548910918::get_offset_of_U24PC_15(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3613 = { sizeof (U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3613[16] = 
+{
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_U3CtimeU3E__0_0(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_U3CconeScaleU3E__0_1(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_duration_2(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_startColor_3(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_endColor_4(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_startIntensity_5(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_endIntensity_6(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_startAngle_7(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_endAngle_8(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_startSize_9(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_endSize_10(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_U3CscalarU3E__1_11(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_U24this_12(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_U24current_13(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_U24disposing_14(),
+	U3CFadeLightStaticInputU3Ec__Iterator3_t1429986291::get_offset_of_U24PC_15(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3614 = { sizeof (U3ClerpCamU3Ec__Iterator4_t592038622), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3614[16] = 
+{
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CtimeU3E__0_0(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CnewYU3E__0_1(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CnewXU3E__0_2(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CnewZLU3E__0_3(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CnewYLU3E__0_4(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CcurrentYU3E__0_5(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CcurrentXU3E__0_6(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3ClightCurrentZU3E__0_7(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3ClightCurrentYU3E__0_8(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_duration_9(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CnewRotationU3E__1_10(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U3CnewLightRotationU3E__1_11(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U24this_12(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U24current_13(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U24disposing_14(),
+	U3ClerpCamU3Ec__Iterator4_t592038622::get_offset_of_U24PC_15(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3615 = { sizeof (U3CfadeU3Ec__Iterator5_t2959184718), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3615[9] = 
+{
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_U3CtimeU3E__0_0(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_duration_1(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_startValue_2(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_endValue_3(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_fadeObject_4(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_U24this_5(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_U24current_6(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_U24disposing_7(),
+	U3CfadeU3Ec__Iterator5_t2959184718::get_offset_of_U24PC_8(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3616 = { sizeof (U3CcountdownStimulantU3Ec__Iterator6_t151569653), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3616[8] = 
+{
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_U3CtimeU3E__0_0(),
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_duration_1(),
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_startVal_2(),
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_endVal_3(),
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_U24this_4(),
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_U24current_5(),
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_U24disposing_6(),
+	U3CcountdownStimulantU3Ec__Iterator6_t151569653::get_offset_of_U24PC_7(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3617 = { sizeof (U3CrechargeStaminaU3Ec__Iterator7_t122917907), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3617[7] = 
+{
+	U3CrechargeStaminaU3Ec__Iterator7_t122917907::get_offset_of_U3CtimeU3E__0_0(),
+	U3CrechargeStaminaU3Ec__Iterator7_t122917907::get_offset_of_duration_1(),
+	U3CrechargeStaminaU3Ec__Iterator7_t122917907::get_offset_of_currentStamina_2(),
+	U3CrechargeStaminaU3Ec__Iterator7_t122917907::get_offset_of_U24this_3(),
+	U3CrechargeStaminaU3Ec__Iterator7_t122917907::get_offset_of_U24current_4(),
+	U3CrechargeStaminaU3Ec__Iterator7_t122917907::get_offset_of_U24disposing_5(),
+	U3CrechargeStaminaU3Ec__Iterator7_t122917907::get_offset_of_U24PC_6(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3618 = { sizeof (U3CbuttonDelayTimerU3Ec__Iterator8_t648961344), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3618[5] = 
+{
+	U3CbuttonDelayTimerU3Ec__Iterator8_t648961344::get_offset_of_delay_0(),
+	U3CbuttonDelayTimerU3Ec__Iterator8_t648961344::get_offset_of_U24this_1(),
+	U3CbuttonDelayTimerU3Ec__Iterator8_t648961344::get_offset_of_U24current_2(),
+	U3CbuttonDelayTimerU3Ec__Iterator8_t648961344::get_offset_of_U24disposing_3(),
+	U3CbuttonDelayTimerU3Ec__Iterator8_t648961344::get_offset_of_U24PC_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3619 = { sizeof (U3CquickTurnU3Ec__Iterator9_t1863234760), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3619[8] = 
+{
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_U3CtimeU3E__0_0(),
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_duration_1(),
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_playerRotation_2(),
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_fullTurn_3(),
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_U24this_4(),
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_U24current_5(),
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_U24disposing_6(),
+	U3CquickTurnU3Ec__Iterator9_t1863234760::get_offset_of_U24PC_7(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3620 = { sizeof (U3ClerpFocalLengthU3Ec__IteratorA_t1187709451), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3620[15] = 
+{
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U3CtimeU3E__0_0(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_duration_1(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U3CcurrentBloomU3E__1_2(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U3CcurrentThresholdU3E__1_3(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_startValue_4(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_endValue_5(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U3CcurrentValueU3E__1_6(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_endBloom_7(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U3CbloomIntensityU3E__1_8(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_endThreshold_9(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U3CbloomThresholdU3E__1_10(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U24this_11(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U24current_12(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U24disposing_13(),
+	U3ClerpFocalLengthU3Ec__IteratorA_t1187709451::get_offset_of_U24PC_14(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3621 = { sizeof (PostProcessingManager_t277976412), -1, sizeof(PostProcessingManager_t277976412_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable3621[28] = 
+{
+	PostProcessingManager_t277976412::get_offset_of_fxaaMaterial_4(),
+	PostProcessingManager_t277976412::get_offset_of_Sharpness_5(),
+	PostProcessingManager_t277976412::get_offset_of_Threshold_6(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_sharpnessString_7(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_thresholdString_8(),
+	PostProcessingManager_t277976412::get_offset_of__startDistance_9(),
+	PostProcessingManager_t277976412::get_offset_of__useRadialDistance_10(),
+	PostProcessingManager_t277976412::get_offset_of__fadeToSkybox_11(),
+	PostProcessingManager_t277976412::get_offset_of_fogShader_12(),
+	PostProcessingManager_t277976412::get_offset_of_fogMaterial_13(),
+	PostProcessingManager_t277976412::get_offset_of_Intensity_14(),
+	PostProcessingManager_t277976412::get_offset_of_BlurAmount_15(),
+	PostProcessingManager_t277976412::get_offset_of_Radius_16(),
+	PostProcessingManager_t277976412::get_offset_of_Area_17(),
+	PostProcessingManager_t277976412::get_offset_of_FastMode_18(),
+	PostProcessingManager_t277976412::get_offset_of_ssaoMaterial_19(),
+	PostProcessingManager_t277976412::get_offset_of_cam_20(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_blurTexString_21(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_instensityString_22(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_blurAmountString_23(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_radiusString_24(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_areaString_25(),
+	PostProcessingManager_t277976412_StaticFields::get_offset_of_fastKeyword_26(),
+	PostProcessingManager_t277976412::get_offset_of_threshold_27(),
+	PostProcessingManager_t277976412::get_offset_of_intensity_28(),
+	PostProcessingManager_t277976412::get_offset_of_blurSize_29(),
+	PostProcessingManager_t277976412::get_offset_of_blurIterations_30(),
+	PostProcessingManager_t277976412::get_offset_of_fastBloomMaterial_31(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3622 = { sizeof (Rotate_Object_t1600444778), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3623 = { sizeof (SetShadowResolution_t116945529), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3623[2] = 
+{
+	SetShadowResolution_t116945529::get_offset_of_resolution_4(),
+	SetShadowResolution_t116945529::get_offset_of_thisLight_5(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3624 = { sizeof (Title_Animator_t1706872800), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3624[13] = 
+{
+	Title_Animator_t1706872800::get_offset_of_isEnabled_4(),
+	Title_Animator_t1706872800::get_offset_of_fadeImage_5(),
+	Title_Animator_t1706872800::get_offset_of_fadeAmount_6(),
+	Title_Animator_t1706872800::get_offset_of_fadeDelay_7(),
+	Title_Animator_t1706872800::get_offset_of_fadeImage2_8(),
+	Title_Animator_t1706872800::get_offset_of_fadeAmount2_9(),
+	Title_Animator_t1706872800::get_offset_of_fadeDelay2_10(),
+	Title_Animator_t1706872800::get_offset_of_fadeImage3_11(),
+	Title_Animator_t1706872800::get_offset_of_fadeAmount3_12(),
+	Title_Animator_t1706872800::get_offset_of_fadeDelay3_13(),
+	Title_Animator_t1706872800::get_offset_of_fillImage_14(),
+	Title_Animator_t1706872800::get_offset_of_fillAmount_15(),
+	Title_Animator_t1706872800::get_offset_of_fillDelay_16(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3625 = { sizeof (U3CdelayU3Ec__Iterator0_t2846553818), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3625[6] = 
+{
+	U3CdelayU3Ec__Iterator0_t2846553818::get_offset_of_U3CtimeU3E__0_0(),
+	U3CdelayU3Ec__Iterator0_t2846553818::get_offset_of_duration_1(),
+	U3CdelayU3Ec__Iterator0_t2846553818::get_offset_of_U24this_2(),
+	U3CdelayU3Ec__Iterator0_t2846553818::get_offset_of_U24current_3(),
+	U3CdelayU3Ec__Iterator0_t2846553818::get_offset_of_U24disposing_4(),
+	U3CdelayU3Ec__Iterator0_t2846553818::get_offset_of_U24PC_5(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3626 = { sizeof (U3CwipeU3Ec__Iterator1_t1508146836), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3626[8] = 
+{
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_U3CtimeU3E__0_0(),
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_duration_1(),
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_startValue_2(),
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_endValue_3(),
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_U24this_4(),
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_U24current_5(),
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_U24disposing_6(),
+	U3CwipeU3Ec__Iterator1_t1508146836::get_offset_of_U24PC_7(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3627 = { sizeof (U3CfadeU3Ec__Iterator2_t2392621686), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3627[8] = 
+{
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_U3CtimeU3E__0_0(),
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_duration_1(),
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_startValue_2(),
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_endValue_3(),
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_U24this_4(),
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_U24current_5(),
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_U24disposing_6(),
+	U3CfadeU3Ec__Iterator2_t2392621686::get_offset_of_U24PC_7(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3628 = { sizeof (U3Cfade2U3Ec__Iterator3_t3878893353), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3628[8] = 
+{
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_U3CtimeU3E__0_0(),
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_duration_1(),
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_startValue_2(),
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_endValue_3(),
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_U24this_4(),
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_U24current_5(),
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_U24disposing_6(),
+	U3Cfade2U3Ec__Iterator3_t3878893353::get_offset_of_U24PC_7(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3629 = { sizeof (U3Cfade3U3Ec__Iterator4_t3879123528), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3629[8] = 
+{
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_U3CtimeU3E__0_0(),
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_duration_1(),
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_startValue_2(),
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_endValue_3(),
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_U24this_4(),
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_U24current_5(),
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_U24disposing_6(),
+	U3Cfade3U3Ec__Iterator4_t3879123528::get_offset_of_U24PC_7(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3630 = { sizeof (DitherEffect_t3436925083), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3630[3] = 
+{
+	DitherEffect_t3436925083::get_offset_of_ditherMat_4(),
+	DitherEffect_t3436925083::get_offset_of_ditherStrength_5(),
+	DitherEffect_t3436925083::get_offset_of_colourDepth_6(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3631 = { sizeof (ScreenSpaceColoredFog_t377796908), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3631[1] = 
+{
+	ScreenSpaceColoredFog_t377796908::get_offset_of_mat_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3632 = { sizeof (Benchmark01_t1571072624), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3632[10] = 
+{
+	Benchmark01_t1571072624::get_offset_of_BenchmarkType_4(),
+	Benchmark01_t1571072624::get_offset_of_TMProFont_5(),
+	Benchmark01_t1571072624::get_offset_of_TextMeshFont_6(),
+	Benchmark01_t1571072624::get_offset_of_m_textMeshPro_7(),
+	Benchmark01_t1571072624::get_offset_of_m_textContainer_8(),
+	Benchmark01_t1571072624::get_offset_of_m_textMesh_9(),
+	0,
+	0,
+	Benchmark01_t1571072624::get_offset_of_m_material01_12(),
+	Benchmark01_t1571072624::get_offset_of_m_material02_13(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3633 = { sizeof (U3CStartU3Ec__Iterator0_t2216151886), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3633[5] = 
+{
+	U3CStartU3Ec__Iterator0_t2216151886::get_offset_of_U3CiU3E__1_0(),
+	U3CStartU3Ec__Iterator0_t2216151886::get_offset_of_U24this_1(),
+	U3CStartU3Ec__Iterator0_t2216151886::get_offset_of_U24current_2(),
+	U3CStartU3Ec__Iterator0_t2216151886::get_offset_of_U24disposing_3(),
+	U3CStartU3Ec__Iterator0_t2216151886::get_offset_of_U24PC_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3634 = { sizeof (Benchmark01_UGUI_t3264177817), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3634[10] = 
+{
+	Benchmark01_UGUI_t3264177817::get_offset_of_BenchmarkType_4(),
+	Benchmark01_UGUI_t3264177817::get_offset_of_canvas_5(),
+	Benchmark01_UGUI_t3264177817::get_offset_of_TMProFont_6(),
+	Benchmark01_UGUI_t3264177817::get_offset_of_TextMeshFont_7(),
+	Benchmark01_UGUI_t3264177817::get_offset_of_m_textMeshPro_8(),
+	Benchmark01_UGUI_t3264177817::get_offset_of_m_textMesh_9(),
+	0,
+	0,
+	Benchmark01_UGUI_t3264177817::get_offset_of_m_material01_12(),
+	Benchmark01_UGUI_t3264177817::get_offset_of_m_material02_13(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3635 = { sizeof (U3CStartU3Ec__Iterator0_t2622988697), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3635[5] = 
+{
+	U3CStartU3Ec__Iterator0_t2622988697::get_offset_of_U3CiU3E__1_0(),
+	U3CStartU3Ec__Iterator0_t2622988697::get_offset_of_U24this_1(),
+	U3CStartU3Ec__Iterator0_t2622988697::get_offset_of_U24current_2(),
+	U3CStartU3Ec__Iterator0_t2622988697::get_offset_of_U24disposing_3(),
+	U3CStartU3Ec__Iterator0_t2622988697::get_offset_of_U24PC_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3636 = { sizeof (Benchmark02_t1571269232), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3636[3] = 
+{
+	Benchmark02_t1571269232::get_offset_of_SpawnType_4(),
+	Benchmark02_t1571269232::get_offset_of_NumberOfNPC_5(),
+	Benchmark02_t1571269232::get_offset_of_floatingText_Script_6(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3637 = { sizeof (Benchmark03_t1571203696), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3637[3] = 
+{
+	Benchmark03_t1571203696::get_offset_of_SpawnType_4(),
+	Benchmark03_t1571203696::get_offset_of_NumberOfNPC_5(),
+	Benchmark03_t1571203696::get_offset_of_TheFont_6(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3638 = { sizeof (Benchmark04_t1570876016), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3638[5] = 
+{
+	Benchmark04_t1570876016::get_offset_of_SpawnType_4(),
+	Benchmark04_t1570876016::get_offset_of_MinPointSize_5(),
+	Benchmark04_t1570876016::get_offset_of_MaxPointSize_6(),
+	Benchmark04_t1570876016::get_offset_of_Steps_7(),
+	Benchmark04_t1570876016::get_offset_of_m_Transform_8(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3639 = { sizeof (CameraController_t2264742161), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3639[25] = 
+{
+	CameraController_t2264742161::get_offset_of_cameraTransform_4(),
+	CameraController_t2264742161::get_offset_of_dummyTarget_5(),
+	CameraController_t2264742161::get_offset_of_CameraTarget_6(),
+	CameraController_t2264742161::get_offset_of_FollowDistance_7(),
+	CameraController_t2264742161::get_offset_of_MaxFollowDistance_8(),
+	CameraController_t2264742161::get_offset_of_MinFollowDistance_9(),
+	CameraController_t2264742161::get_offset_of_ElevationAngle_10(),
+	CameraController_t2264742161::get_offset_of_MaxElevationAngle_11(),
+	CameraController_t2264742161::get_offset_of_MinElevationAngle_12(),
+	CameraController_t2264742161::get_offset_of_OrbitalAngle_13(),
+	CameraController_t2264742161::get_offset_of_CameraMode_14(),
+	CameraController_t2264742161::get_offset_of_MovementSmoothing_15(),
+	CameraController_t2264742161::get_offset_of_RotationSmoothing_16(),
+	CameraController_t2264742161::get_offset_of_previousSmoothing_17(),
+	CameraController_t2264742161::get_offset_of_MovementSmoothingValue_18(),
+	CameraController_t2264742161::get_offset_of_RotationSmoothingValue_19(),
+	CameraController_t2264742161::get_offset_of_MoveSensitivity_20(),
+	CameraController_t2264742161::get_offset_of_currentVelocity_21(),
+	CameraController_t2264742161::get_offset_of_desiredPosition_22(),
+	CameraController_t2264742161::get_offset_of_mouseX_23(),
+	CameraController_t2264742161::get_offset_of_mouseY_24(),
+	CameraController_t2264742161::get_offset_of_moveVector_25(),
+	CameraController_t2264742161::get_offset_of_mouseWheel_26(),
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3640 = { sizeof (CameraModes_t3200559075)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3640[4] = 
+{
+	CameraModes_t3200559075::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
+	0,
+	0,
+	0,
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3641 = { sizeof (ChatController_t3486202795), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3641[3] = 
+{
+	ChatController_t3486202795::get_offset_of_TMP_ChatInput_4(),
+	ChatController_t3486202795::get_offset_of_TMP_ChatOutput_5(),
+	ChatController_t3486202795::get_offset_of_ChatScrollbar_6(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3642 = { sizeof (EnvMapAnimator_t1140999784), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3642[3] = 
+{
+	EnvMapAnimator_t1140999784::get_offset_of_RotationSpeeds_4(),
+	EnvMapAnimator_t1140999784::get_offset_of_m_textMeshPro_5(),
+	EnvMapAnimator_t1140999784::get_offset_of_m_material_6(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3643 = { sizeof (U3CStartU3Ec__Iterator0_t1520811813), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3643[5] = 
+{
+	U3CStartU3Ec__Iterator0_t1520811813::get_offset_of_U3CmatrixU3E__0_0(),
+	U3CStartU3Ec__Iterator0_t1520811813::get_offset_of_U24this_1(),
+	U3CStartU3Ec__Iterator0_t1520811813::get_offset_of_U24current_2(),
+	U3CStartU3Ec__Iterator0_t1520811813::get_offset_of_U24disposing_3(),
+	U3CStartU3Ec__Iterator0_t1520811813::get_offset_of_U24PC_4(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3644 = { sizeof (ObjectSpin_t341713598), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3644[10] = 
+{
+	ObjectSpin_t341713598::get_offset_of_SpinSpeed_4(),
+	ObjectSpin_t341713598::get_offset_of_RotationRange_5(),
+	ObjectSpin_t341713598::get_offset_of_m_transform_6(),
+	ObjectSpin_t341713598::get_offset_of_m_time_7(),
+	ObjectSpin_t341713598::get_offset_of_m_prevPOS_8(),
+	ObjectSpin_t341713598::get_offset_of_m_initial_Rotation_9(),
+	ObjectSpin_t341713598::get_offset_of_m_initial_Position_10(),
+	ObjectSpin_t341713598::get_offset_of_m_lightColor_11(),
+	ObjectSpin_t341713598::get_offset_of_frames_12(),
+	ObjectSpin_t341713598::get_offset_of_Motion_13(),
+};
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3645 = { sizeof (MotionType_t1905163921)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3645[4] = 
 {
 	MotionType_t1905163921::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3601 = { sizeof (ShaderPropAnimator_t3617420994), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3601[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3646 = { sizeof (ShaderPropAnimator_t3617420994), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3646[4] = 
 {
 	ShaderPropAnimator_t3617420994::get_offset_of_m_Renderer_4(),
 	ShaderPropAnimator_t3617420994::get_offset_of_m_Material_5(),
 	ShaderPropAnimator_t3617420994::get_offset_of_GlowCurve_6(),
 	ShaderPropAnimator_t3617420994::get_offset_of_m_frame_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3602 = { sizeof (U3CAnimatePropertiesU3Ec__Iterator0_t4041402054), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3602[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3647 = { sizeof (U3CAnimatePropertiesU3Ec__Iterator0_t4041402054), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3647[5] = 
 {
 	U3CAnimatePropertiesU3Ec__Iterator0_t4041402054::get_offset_of_U3CglowPowerU3E__1_0(),
 	U3CAnimatePropertiesU3Ec__Iterator0_t4041402054::get_offset_of_U24this_1(),
@@ -9652,23 +11892,23 @@ extern const int32_t g_FieldOffsetTable3602[5] =
 	U3CAnimatePropertiesU3Ec__Iterator0_t4041402054::get_offset_of_U24disposing_3(),
 	U3CAnimatePropertiesU3Ec__Iterator0_t4041402054::get_offset_of_U24PC_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3603 = { sizeof (SimpleScript_t3279312205), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3603[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3648 = { sizeof (SimpleScript_t3279312205), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3648[3] = 
 {
 	SimpleScript_t3279312205::get_offset_of_m_textMeshPro_4(),
 	0,
 	SimpleScript_t3279312205::get_offset_of_m_frame_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3604 = { sizeof (SkewTextExample_t3460249701), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3604[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3649 = { sizeof (SkewTextExample_t3460249701), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3649[4] = 
 {
 	SkewTextExample_t3460249701::get_offset_of_m_TextComponent_4(),
 	SkewTextExample_t3460249701::get_offset_of_VertexCurve_5(),
 	SkewTextExample_t3460249701::get_offset_of_CurveScale_6(),
 	SkewTextExample_t3460249701::get_offset_of_ShearAmount_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3605 = { sizeof (U3CWarpTextU3Ec__Iterator0_t116130919), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3605[13] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3650 = { sizeof (U3CWarpTextU3Ec__Iterator0_t116130919), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3650[13] = 
 {
 	U3CWarpTextU3Ec__Iterator0_t116130919::get_offset_of_U3Cold_CurveScaleU3E__0_0(),
 	U3CWarpTextU3Ec__Iterator0_t116130919::get_offset_of_U3Cold_ShearValueU3E__0_1(),
@@ -9684,15 +11924,15 @@ extern const int32_t g_FieldOffsetTable3605[13] =
 	U3CWarpTextU3Ec__Iterator0_t116130919::get_offset_of_U24disposing_11(),
 	U3CWarpTextU3Ec__Iterator0_t116130919::get_offset_of_U24PC_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3606 = { sizeof (TeleType_t2409835159), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3606[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3651 = { sizeof (TeleType_t2409835159), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3651[3] = 
 {
 	TeleType_t2409835159::get_offset_of_label01_4(),
 	TeleType_t2409835159::get_offset_of_label02_5(),
 	TeleType_t2409835159::get_offset_of_m_textMeshPro_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3607 = { sizeof (U3CStartU3Ec__Iterator0_t3341539328), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3607[7] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3652 = { sizeof (U3CStartU3Ec__Iterator0_t3341539328), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3652[7] = 
 {
 	U3CStartU3Ec__Iterator0_t3341539328::get_offset_of_U3CtotalVisibleCharactersU3E__0_0(),
 	U3CStartU3Ec__Iterator0_t3341539328::get_offset_of_U3CcounterU3E__0_1(),
@@ -9702,14 +11942,14 @@ extern const int32_t g_FieldOffsetTable3607[7] =
 	U3CStartU3Ec__Iterator0_t3341539328::get_offset_of_U24disposing_5(),
 	U3CStartU3Ec__Iterator0_t3341539328::get_offset_of_U24PC_6(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3608 = { sizeof (TextConsoleSimulator_t3766250034), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3608[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3653 = { sizeof (TextConsoleSimulator_t3766250034), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3653[2] = 
 {
 	TextConsoleSimulator_t3766250034::get_offset_of_m_TextComponent_4(),
 	TextConsoleSimulator_t3766250034::get_offset_of_hasTextChanged_5(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3609 = { sizeof (U3CRevealCharactersU3Ec__Iterator0_t860191687), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3609[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3654 = { sizeof (U3CRevealCharactersU3Ec__Iterator0_t860191687), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3654[8] = 
 {
 	U3CRevealCharactersU3Ec__Iterator0_t860191687::get_offset_of_textComponent_0(),
 	U3CRevealCharactersU3Ec__Iterator0_t860191687::get_offset_of_U3CtextInfoU3E__0_1(),
@@ -9720,8 +11960,8 @@ extern const int32_t g_FieldOffsetTable3609[8] =
 	U3CRevealCharactersU3Ec__Iterator0_t860191687::get_offset_of_U24disposing_6(),
 	U3CRevealCharactersU3Ec__Iterator0_t860191687::get_offset_of_U24PC_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3610 = { sizeof (U3CRevealWordsU3Ec__Iterator1_t1343183262), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3610[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3655 = { sizeof (U3CRevealWordsU3Ec__Iterator1_t1343183262), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3655[9] = 
 {
 	U3CRevealWordsU3Ec__Iterator1_t1343183262::get_offset_of_textComponent_0(),
 	U3CRevealWordsU3Ec__Iterator1_t1343183262::get_offset_of_U3CtotalWordCountU3E__0_1(),
@@ -9733,8 +11973,8 @@ extern const int32_t g_FieldOffsetTable3610[9] =
 	U3CRevealWordsU3Ec__Iterator1_t1343183262::get_offset_of_U24disposing_7(),
 	U3CRevealWordsU3Ec__Iterator1_t1343183262::get_offset_of_U24PC_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3611 = { sizeof (TextMeshProFloatingText_t845872552), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3611[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3656 = { sizeof (TextMeshProFloatingText_t845872552), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3656[10] = 
 {
 	TextMeshProFloatingText_t845872552::get_offset_of_TheFont_4(),
 	TextMeshProFloatingText_t845872552::get_offset_of_m_floatingText_5(),
@@ -9747,8 +11987,8 @@ extern const int32_t g_FieldOffsetTable3611[10] =
 	TextMeshProFloatingText_t845872552::get_offset_of_lastRotation_12(),
 	TextMeshProFloatingText_t845872552::get_offset_of_SpawnType_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3612 = { sizeof (U3CDisplayTextMeshProFloatingTextU3Ec__Iterator0_t2967292235), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3612[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3657 = { sizeof (U3CDisplayTextMeshProFloatingTextU3Ec__Iterator0_t2967292235), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3657[12] = 
 {
 	U3CDisplayTextMeshProFloatingTextU3Ec__Iterator0_t2967292235::get_offset_of_U3CCountDurationU3E__0_0(),
 	U3CDisplayTextMeshProFloatingTextU3Ec__Iterator0_t2967292235::get_offset_of_U3Cstarting_CountU3E__0_1(),
@@ -9763,8 +12003,8 @@ extern const int32_t g_FieldOffsetTable3612[12] =
 	U3CDisplayTextMeshProFloatingTextU3Ec__Iterator0_t2967292235::get_offset_of_U24disposing_10(),
 	U3CDisplayTextMeshProFloatingTextU3Ec__Iterator0_t2967292235::get_offset_of_U24PC_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3613 = { sizeof (U3CDisplayTextMeshFloatingTextU3Ec__Iterator1_t865582314), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3613[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3658 = { sizeof (U3CDisplayTextMeshFloatingTextU3Ec__Iterator1_t865582314), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3658[12] = 
 {
 	U3CDisplayTextMeshFloatingTextU3Ec__Iterator1_t865582314::get_offset_of_U3CCountDurationU3E__0_0(),
 	U3CDisplayTextMeshFloatingTextU3Ec__Iterator1_t865582314::get_offset_of_U3Cstarting_CountU3E__0_1(),
@@ -9779,17 +12019,17 @@ extern const int32_t g_FieldOffsetTable3613[12] =
 	U3CDisplayTextMeshFloatingTextU3Ec__Iterator1_t865582314::get_offset_of_U24disposing_10(),
 	U3CDisplayTextMeshFloatingTextU3Ec__Iterator1_t865582314::get_offset_of_U24PC_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3614 = { sizeof (TextMeshSpawner_t177691618), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3614[4] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3659 = { sizeof (TextMeshSpawner_t177691618), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3659[4] = 
 {
 	TextMeshSpawner_t177691618::get_offset_of_SpawnType_4(),
 	TextMeshSpawner_t177691618::get_offset_of_NumberOfNPC_5(),
 	TextMeshSpawner_t177691618::get_offset_of_TheFont_6(),
 	TextMeshSpawner_t177691618::get_offset_of_floatingText_Script_7(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3615 = { sizeof (TMP_DigitValidator_t573672104), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3616 = { sizeof (TMP_ExampleScript_01_t3051742005), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3616[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3660 = { sizeof (TMP_DigitValidator_t573672104), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3661 = { sizeof (TMP_ExampleScript_01_t3051742005), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3661[5] = 
 {
 	TMP_ExampleScript_01_t3051742005::get_offset_of_ObjectType_4(),
 	TMP_ExampleScript_01_t3051742005::get_offset_of_isStatic_5(),
@@ -9797,15 +12037,15 @@ extern const int32_t g_FieldOffsetTable3616[5] =
 	0,
 	TMP_ExampleScript_01_t3051742005::get_offset_of_count_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3617 = { sizeof (objectType_t4082700821)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3617[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3662 = { sizeof (objectType_t4082700821)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3662[3] = 
 {
 	objectType_t4082700821::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3618 = { sizeof (TMP_FrameRateCounter_t314972976), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3618[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3663 = { sizeof (TMP_FrameRateCounter_t314972976), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3663[10] = 
 {
 	TMP_FrameRateCounter_t314972976::get_offset_of_UpdateInterval_4(),
 	TMP_FrameRateCounter_t314972976::get_offset_of_m_LastInterval_5(),
@@ -9818,8 +12058,8 @@ extern const int32_t g_FieldOffsetTable3618[10] =
 	TMP_FrameRateCounter_t314972976::get_offset_of_m_camera_12(),
 	TMP_FrameRateCounter_t314972976::get_offset_of_last_AnchorPosition_13(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3619 = { sizeof (FpsCounterAnchorPositions_t1585798158)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3619[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3664 = { sizeof (FpsCounterAnchorPositions_t1585798158)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3664[5] = 
 {
 	FpsCounterAnchorPositions_t1585798158::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9827,14 +12067,14 @@ extern const int32_t g_FieldOffsetTable3619[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3620 = { sizeof (TMP_PhoneNumberValidator_t743649728), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3621 = { sizeof (TMP_TextEventCheck_t1103849140), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3621[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3665 = { sizeof (TMP_PhoneNumberValidator_t743649728), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3666 = { sizeof (TMP_TextEventCheck_t1103849140), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3666[1] = 
 {
 	TMP_TextEventCheck_t1103849140::get_offset_of_TextEventHandler_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3622 = { sizeof (TMP_TextEventHandler_t1869054637), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3622[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3667 = { sizeof (TMP_TextEventHandler_t1869054637), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3667[12] = 
 {
 	TMP_TextEventHandler_t1869054637::get_offset_of_m_OnCharacterSelection_4(),
 	TMP_TextEventHandler_t1869054637::get_offset_of_m_OnSpriteSelection_5(),
@@ -9849,13 +12089,13 @@ extern const int32_t g_FieldOffsetTable3622[12] =
 	TMP_TextEventHandler_t1869054637::get_offset_of_m_lastWordIndex_14(),
 	TMP_TextEventHandler_t1869054637::get_offset_of_m_lastLineIndex_15(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3623 = { sizeof (CharacterSelectionEvent_t3109943174), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3624 = { sizeof (SpriteSelectionEvent_t2798445241), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3625 = { sizeof (WordSelectionEvent_t1841909953), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3626 = { sizeof (LineSelectionEvent_t2868010532), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3627 = { sizeof (LinkSelectionEvent_t1590929858), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3628 = { sizeof (TMP_TextInfoDebugTool_t1868681444), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3628[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3668 = { sizeof (CharacterSelectionEvent_t3109943174), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3669 = { sizeof (SpriteSelectionEvent_t2798445241), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3670 = { sizeof (WordSelectionEvent_t1841909953), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3671 = { sizeof (LineSelectionEvent_t2868010532), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3672 = { sizeof (LinkSelectionEvent_t1590929858), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3673 = { sizeof (TMP_TextInfoDebugTool_t1868681444), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3673[9] = 
 {
 	TMP_TextInfoDebugTool_t1868681444::get_offset_of_ShowCharacters_4(),
 	TMP_TextInfoDebugTool_t1868681444::get_offset_of_ShowWords_5(),
@@ -9867,8 +12107,8 @@ extern const int32_t g_FieldOffsetTable3628[9] =
 	TMP_TextInfoDebugTool_t1868681444::get_offset_of_m_TextComponent_11(),
 	TMP_TextInfoDebugTool_t1868681444::get_offset_of_m_Transform_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3629 = { sizeof (TMP_TextSelector_A_t3982526506), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3629[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3674 = { sizeof (TMP_TextSelector_A_t3982526506), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3674[6] = 
 {
 	TMP_TextSelector_A_t3982526506::get_offset_of_m_TextMeshPro_4(),
 	TMP_TextSelector_A_t3982526506::get_offset_of_m_Camera_5(),
@@ -9877,8 +12117,8 @@ extern const int32_t g_FieldOffsetTable3629[6] =
 	TMP_TextSelector_A_t3982526506::get_offset_of_m_lastCharIndex_8(),
 	TMP_TextSelector_A_t3982526506::get_offset_of_m_lastWordIndex_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3630 = { sizeof (TMP_TextSelector_B_t3982526505), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3630[14] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3675 = { sizeof (TMP_TextSelector_B_t3982526505), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3675[14] = 
 {
 	TMP_TextSelector_B_t3982526505::get_offset_of_TextPopup_Prefab_01_4(),
 	TMP_TextSelector_B_t3982526505::get_offset_of_m_TextPopup_RectTransform_5(),
@@ -9895,8 +12135,8 @@ extern const int32_t g_FieldOffsetTable3630[14] =
 	TMP_TextSelector_B_t3982526505::get_offset_of_m_matrix_16(),
 	TMP_TextSelector_B_t3982526505::get_offset_of_m_cachedMeshInfoVertexData_17(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3631 = { sizeof (TMP_UiFrameRateCounter_t811747397), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3631[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3676 = { sizeof (TMP_UiFrameRateCounter_t811747397), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3676[9] = 
 {
 	TMP_UiFrameRateCounter_t811747397::get_offset_of_UpdateInterval_4(),
 	TMP_UiFrameRateCounter_t811747397::get_offset_of_m_LastInterval_5(),
@@ -9908,8 +12148,8 @@ extern const int32_t g_FieldOffsetTable3631[9] =
 	TMP_UiFrameRateCounter_t811747397::get_offset_of_m_frameCounter_transform_11(),
 	TMP_UiFrameRateCounter_t811747397::get_offset_of_last_AnchorPosition_12(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3632 = { sizeof (FpsCounterAnchorPositions_t2550331785)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3632[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3677 = { sizeof (FpsCounterAnchorPositions_t2550331785)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3677[5] = 
 {
 	FpsCounterAnchorPositions_t2550331785::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9917,8 +12157,8 @@ extern const int32_t g_FieldOffsetTable3632[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3633 = { sizeof (TMPro_InstructionOverlay_t4246705477), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3633[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3678 = { sizeof (TMPro_InstructionOverlay_t4246705477), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3678[6] = 
 {
 	TMPro_InstructionOverlay_t4246705477::get_offset_of_AnchorPosition_4(),
 	0,
@@ -9927,8 +12167,8 @@ extern const int32_t g_FieldOffsetTable3633[6] =
 	TMPro_InstructionOverlay_t4246705477::get_offset_of_m_frameCounter_transform_8(),
 	TMPro_InstructionOverlay_t4246705477::get_offset_of_m_camera_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3634 = { sizeof (FpsCounterAnchorPositions_t2334657565)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3634[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3679 = { sizeof (FpsCounterAnchorPositions_t2334657565)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3679[5] = 
 {
 	FpsCounterAnchorPositions_t2334657565::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -9936,13 +12176,13 @@ extern const int32_t g_FieldOffsetTable3634[5] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3635 = { sizeof (VertexColorCycler_t3003193665), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3635[1] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3680 = { sizeof (VertexColorCycler_t3003193665), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3680[1] = 
 {
 	VertexColorCycler_t3003193665::get_offset_of_m_TextComponent_4(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3636 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t897284962), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3636[11] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3681 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t897284962), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3681[11] = 
 {
 	U3CAnimateVertexColorsU3Ec__Iterator0_t897284962::get_offset_of_U3CtextInfoU3E__0_0(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t897284962::get_offset_of_U3CcurrentCharacterU3E__0_1(),
@@ -9956,8 +12196,8 @@ extern const int32_t g_FieldOffsetTable3636[11] =
 	U3CAnimateVertexColorsU3Ec__Iterator0_t897284962::get_offset_of_U24disposing_9(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t897284962::get_offset_of_U24PC_10(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3637 = { sizeof (VertexJitter_t4087429332), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3637[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3682 = { sizeof (VertexJitter_t4087429332), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3682[5] = 
 {
 	VertexJitter_t4087429332::get_offset_of_AngleMultiplier_4(),
 	VertexJitter_t4087429332::get_offset_of_SpeedMultiplier_5(),
@@ -9965,15 +12205,15 @@ extern const int32_t g_FieldOffsetTable3637[5] =
 	VertexJitter_t4087429332::get_offset_of_m_TextComponent_7(),
 	VertexJitter_t4087429332::get_offset_of_hasTextChanged_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3638 = { sizeof (VertexAnim_t2231884842)+ sizeof (RuntimeObject), sizeof(VertexAnim_t2231884842 ), 0, 0 };
-extern const int32_t g_FieldOffsetTable3638[3] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3683 = { sizeof (VertexAnim_t2231884842)+ sizeof (RuntimeObject), sizeof(VertexAnim_t2231884842 ), 0, 0 };
+extern const int32_t g_FieldOffsetTable3683[3] = 
 {
 	VertexAnim_t2231884842::get_offset_of_angleRange_0() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	VertexAnim_t2231884842::get_offset_of_angle_1() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	VertexAnim_t2231884842::get_offset_of_speed_2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3639 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t225534713), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3639[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3684 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t225534713), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3684[10] = 
 {
 	U3CAnimateVertexColorsU3Ec__Iterator0_t225534713::get_offset_of_U3CtextInfoU3E__0_0(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t225534713::get_offset_of_U3CloopCountU3E__0_1(),
@@ -9986,8 +12226,8 @@ extern const int32_t g_FieldOffsetTable3639[10] =
 	U3CAnimateVertexColorsU3Ec__Iterator0_t225534713::get_offset_of_U24disposing_8(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t225534713::get_offset_of_U24PC_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3640 = { sizeof (VertexShakeA_t4262048139), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3640[6] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3685 = { sizeof (VertexShakeA_t4262048139), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3685[6] = 
 {
 	VertexShakeA_t4262048139::get_offset_of_AngleMultiplier_4(),
 	VertexShakeA_t4262048139::get_offset_of_SpeedMultiplier_5(),
@@ -9996,8 +12236,8 @@ extern const int32_t g_FieldOffsetTable3640[6] =
 	VertexShakeA_t4262048139::get_offset_of_m_TextComponent_8(),
 	VertexShakeA_t4262048139::get_offset_of_hasTextChanged_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3641 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3641[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3686 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t956521787), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3686[9] = 
 {
 	U3CAnimateVertexColorsU3Ec__Iterator0_t956521787::get_offset_of_U3CtextInfoU3E__0_0(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t956521787::get_offset_of_U3CcopyOfVerticesU3E__0_1(),
@@ -10009,8 +12249,8 @@ extern const int32_t g_FieldOffsetTable3641[9] =
 	U3CAnimateVertexColorsU3Ec__Iterator0_t956521787::get_offset_of_U24disposing_7(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t956521787::get_offset_of_U24PC_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3642 = { sizeof (VertexShakeB_t1533164784), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3642[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3687 = { sizeof (VertexShakeB_t1533164784), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3687[5] = 
 {
 	VertexShakeB_t1533164784::get_offset_of_AngleMultiplier_4(),
 	VertexShakeB_t1533164784::get_offset_of_SpeedMultiplier_5(),
@@ -10018,8 +12258,8 @@ extern const int32_t g_FieldOffsetTable3642[5] =
 	VertexShakeB_t1533164784::get_offset_of_m_TextComponent_7(),
 	VertexShakeB_t1533164784::get_offset_of_hasTextChanged_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3643 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t168300594), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3643[9] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3688 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t168300594), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3688[9] = 
 {
 	U3CAnimateVertexColorsU3Ec__Iterator0_t168300594::get_offset_of_U3CtextInfoU3E__0_0(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t168300594::get_offset_of_U3CcopyOfVerticesU3E__0_1(),
@@ -10031,8 +12271,8 @@ extern const int32_t g_FieldOffsetTable3643[9] =
 	U3CAnimateVertexColorsU3Ec__Iterator0_t168300594::get_offset_of_U24disposing_7(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t168300594::get_offset_of_U24PC_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3644 = { sizeof (VertexZoom_t550798657), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3644[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3689 = { sizeof (VertexZoom_t550798657), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3689[5] = 
 {
 	VertexZoom_t550798657::get_offset_of_AngleMultiplier_4(),
 	VertexZoom_t550798657::get_offset_of_SpeedMultiplier_5(),
@@ -10040,8 +12280,8 @@ extern const int32_t g_FieldOffsetTable3644[5] =
 	VertexZoom_t550798657::get_offset_of_m_TextComponent_7(),
 	VertexZoom_t550798657::get_offset_of_hasTextChanged_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3645 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3645[10] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3690 = { sizeof (U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3690[10] = 
 {
 	U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008::get_offset_of_U3CtextInfoU3E__0_0(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008::get_offset_of_U3CcachedMeshInfoVertexDataU3E__0_1(),
@@ -10054,14 +12294,14 @@ extern const int32_t g_FieldOffsetTable3645[10] =
 	U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008::get_offset_of_U24PC_8(),
 	U3CAnimateVertexColorsU3Ec__Iterator0_t3792186008::get_offset_of_U24locvar0_9(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3646 = { sizeof (U3CAnimateVertexColorsU3Ec__AnonStorey1_t446847514), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3646[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3691 = { sizeof (U3CAnimateVertexColorsU3Ec__AnonStorey1_t446847514), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3691[2] = 
 {
 	U3CAnimateVertexColorsU3Ec__AnonStorey1_t446847514::get_offset_of_modifiedCharScale_0(),
 	U3CAnimateVertexColorsU3Ec__AnonStorey1_t446847514::get_offset_of_U3CU3Ef__refU240_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3647 = { sizeof (WarpTextExample_t3821118074), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3647[5] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3692 = { sizeof (WarpTextExample_t3821118074), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3692[5] = 
 {
 	WarpTextExample_t3821118074::get_offset_of_m_TextComponent_4(),
 	WarpTextExample_t3821118074::get_offset_of_VertexCurve_5(),
@@ -10069,8 +12309,8 @@ extern const int32_t g_FieldOffsetTable3647[5] =
 	WarpTextExample_t3821118074::get_offset_of_SpeedMultiplier_7(),
 	WarpTextExample_t3821118074::get_offset_of_CurveScale_8(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3648 = { sizeof (U3CWarpTextU3Ec__Iterator0_t4025661343), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3648[12] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3693 = { sizeof (U3CWarpTextU3Ec__Iterator0_t4025661343), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3693[12] = 
 {
 	U3CWarpTextU3Ec__Iterator0_t4025661343::get_offset_of_U3Cold_CurveScaleU3E__0_0(),
 	U3CWarpTextU3Ec__Iterator0_t4025661343::get_offset_of_U3Cold_curveU3E__0_1(),
@@ -10085,16 +12325,15 @@ extern const int32_t g_FieldOffsetTable3648[12] =
 	U3CWarpTextU3Ec__Iterator0_t4025661343::get_offset_of_U24disposing_10(),
 	U3CWarpTextU3Ec__Iterator0_t4025661343::get_offset_of_U24PC_11(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3649 = { sizeof (U3CPrivateImplementationDetailsU3E_t3057255369), -1, sizeof(U3CPrivateImplementationDetailsU3E_t3057255369_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable3649[2] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3694 = { sizeof (U3CPrivateImplementationDetailsU3E_t3057255369), -1, sizeof(U3CPrivateImplementationDetailsU3E_t3057255369_StaticFields), 0 };
+extern const int32_t g_FieldOffsetTable3694[1] = 
 {
 	U3CPrivateImplementationDetailsU3E_t3057255369_StaticFields::get_offset_of_U24fieldU2D89A0099374A5746F12D728CDE3233EB874AA88EE_0(),
-	U3CPrivateImplementationDetailsU3E_t3057255369_StaticFields::get_offset_of_U24fieldU2D23447D2BC3FF6984AB09F575BC63CFE460337394_1(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3650 = { sizeof (U24ArrayTypeU3D24_t2467506694)+ sizeof (RuntimeObject), sizeof(U24ArrayTypeU3D24_t2467506694 ), 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3651 = { sizeof (U3CModuleU3E_t692745566), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3652 = { sizeof (AAMode_t1871701680)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3652[8] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3695 = { sizeof (U24ArrayTypeU3D24_t2467506694)+ sizeof (RuntimeObject), sizeof(U24ArrayTypeU3D24_t2467506694 ), 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3696 = { sizeof (U3CModuleU3E_t692745566), -1, 0, 0 };
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3697 = { sizeof (AAMode_t1871701680)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
+extern const int32_t g_FieldOffsetTable3697[8] = 
 {
 	AAMode_t1871701680::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
 	0,
@@ -10105,8 +12344,8 @@ extern const int32_t g_FieldOffsetTable3652[8] =
 	0,
 	0,
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3653 = { sizeof (Antialiasing_t1691315015), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3653[22] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3698 = { sizeof (Antialiasing_t1691315015), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3698[22] = 
 {
 	Antialiasing_t1691315015::get_offset_of_mode_8(),
 	Antialiasing_t1691315015::get_offset_of_showGeneratedNormals_9(),
@@ -10131,8 +12370,8 @@ extern const int32_t g_FieldOffsetTable3653[22] =
 	Antialiasing_t1691315015::get_offset_of_shaderFXAAIII_28(),
 	Antialiasing_t1691315015::get_offset_of_materialFXAAIII_29(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3654 = { sizeof (Bloom_t1125654350), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3654[30] = 
+extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3699 = { sizeof (Bloom_t1125654350), -1, 0, 0 };
+extern const int32_t g_FieldOffsetTable3699[30] = 
 {
 	Bloom_t1125654350::get_offset_of_tweakMode_8(),
 	Bloom_t1125654350::get_offset_of_screenBlendMode_9(),
@@ -10165,538 +12404,6 @@ extern const int32_t g_FieldOffsetTable3654[30] =
 	Bloom_t1125654350::get_offset_of_brightPassFilterShader_36(),
 	Bloom_t1125654350::get_offset_of_brightPassFilterMaterial_37(),
 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3655 = { sizeof (LensFlareStyle_t630413071)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3655[4] = 
-{
-	LensFlareStyle_t630413071::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3656 = { sizeof (TweakMode_t747557136)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3656[3] = 
-{
-	TweakMode_t747557136::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3657 = { sizeof (HDRBloomMode_t3774419504)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3657[4] = 
-{
-	HDRBloomMode_t3774419504::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3658 = { sizeof (BloomScreenBlendMode_t2012607685)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3658[3] = 
-{
-	BloomScreenBlendMode_t2012607685::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3659 = { sizeof (BloomQuality_t3369172721)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3659[3] = 
-{
-	BloomQuality_t3369172721::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3660 = { sizeof (LensflareStyle34_t4260782719)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3660[4] = 
-{
-	LensflareStyle34_t4260782719::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3661 = { sizeof (TweakMode34_t984135990)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3661[3] = 
-{
-	TweakMode34_t984135990::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3662 = { sizeof (HDRBloomMode_t4271191419)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3662[4] = 
-{
-	HDRBloomMode_t4271191419::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3663 = { sizeof (BloomScreenBlendMode_t19712272)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3663[3] = 
-{
-	BloomScreenBlendMode_t19712272::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3664 = { sizeof (BloomAndFlares_t2848767628), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3664[34] = 
-{
-	BloomAndFlares_t2848767628::get_offset_of_tweakMode_8(),
-	BloomAndFlares_t2848767628::get_offset_of_screenBlendMode_9(),
-	BloomAndFlares_t2848767628::get_offset_of_hdr_10(),
-	BloomAndFlares_t2848767628::get_offset_of_doHdr_11(),
-	BloomAndFlares_t2848767628::get_offset_of_sepBlurSpread_12(),
-	BloomAndFlares_t2848767628::get_offset_of_useSrcAlphaAsMask_13(),
-	BloomAndFlares_t2848767628::get_offset_of_bloomIntensity_14(),
-	BloomAndFlares_t2848767628::get_offset_of_bloomThreshold_15(),
-	BloomAndFlares_t2848767628::get_offset_of_bloomBlurIterations_16(),
-	BloomAndFlares_t2848767628::get_offset_of_lensflares_17(),
-	BloomAndFlares_t2848767628::get_offset_of_hollywoodFlareBlurIterations_18(),
-	BloomAndFlares_t2848767628::get_offset_of_lensflareMode_19(),
-	BloomAndFlares_t2848767628::get_offset_of_hollyStretchWidth_20(),
-	BloomAndFlares_t2848767628::get_offset_of_lensflareIntensity_21(),
-	BloomAndFlares_t2848767628::get_offset_of_lensflareThreshold_22(),
-	BloomAndFlares_t2848767628::get_offset_of_flareColorA_23(),
-	BloomAndFlares_t2848767628::get_offset_of_flareColorB_24(),
-	BloomAndFlares_t2848767628::get_offset_of_flareColorC_25(),
-	BloomAndFlares_t2848767628::get_offset_of_flareColorD_26(),
-	BloomAndFlares_t2848767628::get_offset_of_lensFlareVignetteMask_27(),
-	BloomAndFlares_t2848767628::get_offset_of_lensFlareShader_28(),
-	BloomAndFlares_t2848767628::get_offset_of_lensFlareMaterial_29(),
-	BloomAndFlares_t2848767628::get_offset_of_vignetteShader_30(),
-	BloomAndFlares_t2848767628::get_offset_of_vignetteMaterial_31(),
-	BloomAndFlares_t2848767628::get_offset_of_separableBlurShader_32(),
-	BloomAndFlares_t2848767628::get_offset_of_separableBlurMaterial_33(),
-	BloomAndFlares_t2848767628::get_offset_of_addBrightStuffOneOneShader_34(),
-	BloomAndFlares_t2848767628::get_offset_of_addBrightStuffBlendOneOneMaterial_35(),
-	BloomAndFlares_t2848767628::get_offset_of_screenBlendShader_36(),
-	BloomAndFlares_t2848767628::get_offset_of_screenBlend_37(),
-	BloomAndFlares_t2848767628::get_offset_of_hollywoodFlaresShader_38(),
-	BloomAndFlares_t2848767628::get_offset_of_hollywoodFlaresMaterial_39(),
-	BloomAndFlares_t2848767628::get_offset_of_brightPassFilterShader_40(),
-	BloomAndFlares_t2848767628::get_offset_of_brightPassFilterMaterial_41(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3665 = { sizeof (BloomOptimized_t2685819829), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3665[8] = 
-{
-	BloomOptimized_t2685819829::get_offset_of_threshold_8(),
-	BloomOptimized_t2685819829::get_offset_of_intensity_9(),
-	BloomOptimized_t2685819829::get_offset_of_blurSize_10(),
-	BloomOptimized_t2685819829::get_offset_of_resolution_11(),
-	BloomOptimized_t2685819829::get_offset_of_blurIterations_12(),
-	BloomOptimized_t2685819829::get_offset_of_blurType_13(),
-	BloomOptimized_t2685819829::get_offset_of_fastBloomShader_14(),
-	BloomOptimized_t2685819829::get_offset_of_fastBloomMaterial_15(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3666 = { sizeof (Resolution_t1804605042)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3666[3] = 
-{
-	Resolution_t1804605042::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3667 = { sizeof (BlurType_t2416258039)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3667[3] = 
-{
-	BlurType_t2416258039::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3668 = { sizeof (Blur_t1038294851), -1, sizeof(Blur_t1038294851_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable3668[4] = 
-{
-	Blur_t1038294851::get_offset_of_iterations_4(),
-	Blur_t1038294851::get_offset_of_blurSpread_5(),
-	Blur_t1038294851::get_offset_of_blurShader_6(),
-	Blur_t1038294851_StaticFields::get_offset_of_m_Material_7(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3669 = { sizeof (BlurOptimized_t3334654964), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3669[6] = 
-{
-	BlurOptimized_t3334654964::get_offset_of_downsample_8(),
-	BlurOptimized_t3334654964::get_offset_of_blurSize_9(),
-	BlurOptimized_t3334654964::get_offset_of_blurIterations_10(),
-	BlurOptimized_t3334654964::get_offset_of_blurType_11(),
-	BlurOptimized_t3334654964::get_offset_of_blurShader_12(),
-	BlurOptimized_t3334654964::get_offset_of_blurMaterial_13(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3670 = { sizeof (BlurType_t1046251128)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3670[3] = 
-{
-	BlurType_t1046251128::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3671 = { sizeof (CameraMotionBlur_t2812046500), -1, sizeof(CameraMotionBlur_t2812046500_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable3671[32] = 
-{
-	CameraMotionBlur_t2812046500_StaticFields::get_offset_of_MAX_RADIUS_8(),
-	CameraMotionBlur_t2812046500::get_offset_of_filterType_9(),
-	CameraMotionBlur_t2812046500::get_offset_of_preview_10(),
-	CameraMotionBlur_t2812046500::get_offset_of_previewScale_11(),
-	CameraMotionBlur_t2812046500::get_offset_of_movementScale_12(),
-	CameraMotionBlur_t2812046500::get_offset_of_rotationScale_13(),
-	CameraMotionBlur_t2812046500::get_offset_of_maxVelocity_14(),
-	CameraMotionBlur_t2812046500::get_offset_of_minVelocity_15(),
-	CameraMotionBlur_t2812046500::get_offset_of_velocityScale_16(),
-	CameraMotionBlur_t2812046500::get_offset_of_softZDistance_17(),
-	CameraMotionBlur_t2812046500::get_offset_of_velocityDownsample_18(),
-	CameraMotionBlur_t2812046500::get_offset_of_excludeLayers_19(),
-	CameraMotionBlur_t2812046500::get_offset_of_tmpCam_20(),
-	CameraMotionBlur_t2812046500::get_offset_of_shader_21(),
-	CameraMotionBlur_t2812046500::get_offset_of_dx11MotionBlurShader_22(),
-	CameraMotionBlur_t2812046500::get_offset_of_replacementClear_23(),
-	CameraMotionBlur_t2812046500::get_offset_of_motionBlurMaterial_24(),
-	CameraMotionBlur_t2812046500::get_offset_of_dx11MotionBlurMaterial_25(),
-	CameraMotionBlur_t2812046500::get_offset_of_noiseTexture_26(),
-	CameraMotionBlur_t2812046500::get_offset_of_jitter_27(),
-	CameraMotionBlur_t2812046500::get_offset_of_showVelocity_28(),
-	CameraMotionBlur_t2812046500::get_offset_of_showVelocityScale_29(),
-	CameraMotionBlur_t2812046500::get_offset_of_currentViewProjMat_30(),
-	CameraMotionBlur_t2812046500::get_offset_of_currentStereoViewProjMat_31(),
-	CameraMotionBlur_t2812046500::get_offset_of_prevViewProjMat_32(),
-	CameraMotionBlur_t2812046500::get_offset_of_prevStereoViewProjMat_33(),
-	CameraMotionBlur_t2812046500::get_offset_of_prevFrameCount_34(),
-	CameraMotionBlur_t2812046500::get_offset_of_wasActive_35(),
-	CameraMotionBlur_t2812046500::get_offset_of_prevFrameForward_36(),
-	CameraMotionBlur_t2812046500::get_offset_of_prevFrameUp_37(),
-	CameraMotionBlur_t2812046500::get_offset_of_prevFramePos_38(),
-	CameraMotionBlur_t2812046500::get_offset_of__camera_39(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3672 = { sizeof (MotionBlurFilter_t520253047)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3672[6] = 
-{
-	MotionBlurFilter_t520253047::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3673 = { sizeof (ColorCorrectionCurves_t3742166504), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3673[24] = 
-{
-	ColorCorrectionCurves_t3742166504::get_offset_of_redChannel_8(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_greenChannel_9(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_blueChannel_10(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_useDepthCorrection_11(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_zCurve_12(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_depthRedChannel_13(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_depthGreenChannel_14(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_depthBlueChannel_15(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_ccMaterial_16(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_ccDepthMaterial_17(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_selectiveCcMaterial_18(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_rgbChannelTex_19(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_rgbDepthChannelTex_20(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_zCurveTex_21(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_saturation_22(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_selectiveCc_23(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_selectiveFromColor_24(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_selectiveToColor_25(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_mode_26(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_updateTextures_27(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_colorCorrectionCurvesShader_28(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_simpleColorCorrectionCurvesShader_29(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_colorCorrectionSelectiveShader_30(),
-	ColorCorrectionCurves_t3742166504::get_offset_of_updateTexturesOnStartup_31(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3674 = { sizeof (ColorCorrectionMode_t1416458051)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3674[3] = 
-{
-	ColorCorrectionMode_t1416458051::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3675 = { sizeof (ColorCorrectionLookup_t1159177774), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3675[4] = 
-{
-	ColorCorrectionLookup_t1159177774::get_offset_of_shader_8(),
-	ColorCorrectionLookup_t1159177774::get_offset_of_material_9(),
-	ColorCorrectionLookup_t1159177774::get_offset_of_converted3DLut_10(),
-	ColorCorrectionLookup_t1159177774::get_offset_of_basedOnTempTex_11(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3676 = { sizeof (ColorCorrectionRamp_t3562116199), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3676[1] = 
-{
-	ColorCorrectionRamp_t3562116199::get_offset_of_textureRamp_6(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3677 = { sizeof (ContrastEnhance_t640919481), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3677[7] = 
-{
-	ContrastEnhance_t640919481::get_offset_of_intensity_8(),
-	ContrastEnhance_t640919481::get_offset_of_threshold_9(),
-	ContrastEnhance_t640919481::get_offset_of_separableBlurMaterial_10(),
-	ContrastEnhance_t640919481::get_offset_of_contrastCompositeMaterial_11(),
-	ContrastEnhance_t640919481::get_offset_of_blurSpread_12(),
-	ContrastEnhance_t640919481::get_offset_of_separableBlurShader_13(),
-	ContrastEnhance_t640919481::get_offset_of_contrastCompositeShader_14(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3678 = { sizeof (ContrastStretch_t3424449263), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3678[13] = 
-{
-	ContrastStretch_t3424449263::get_offset_of_adaptationSpeed_4(),
-	ContrastStretch_t3424449263::get_offset_of_limitMinimum_5(),
-	ContrastStretch_t3424449263::get_offset_of_limitMaximum_6(),
-	ContrastStretch_t3424449263::get_offset_of_adaptRenderTex_7(),
-	ContrastStretch_t3424449263::get_offset_of_curAdaptIndex_8(),
-	ContrastStretch_t3424449263::get_offset_of_shaderLum_9(),
-	ContrastStretch_t3424449263::get_offset_of_m_materialLum_10(),
-	ContrastStretch_t3424449263::get_offset_of_shaderReduce_11(),
-	ContrastStretch_t3424449263::get_offset_of_m_materialReduce_12(),
-	ContrastStretch_t3424449263::get_offset_of_shaderAdapt_13(),
-	ContrastStretch_t3424449263::get_offset_of_m_materialAdapt_14(),
-	ContrastStretch_t3424449263::get_offset_of_shaderApply_15(),
-	ContrastStretch_t3424449263::get_offset_of_m_materialApply_16(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3679 = { sizeof (CreaseShading_t1200394124), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3679[9] = 
-{
-	CreaseShading_t1200394124::get_offset_of_intensity_8(),
-	CreaseShading_t1200394124::get_offset_of_softness_9(),
-	CreaseShading_t1200394124::get_offset_of_spread_10(),
-	CreaseShading_t1200394124::get_offset_of_blurShader_11(),
-	CreaseShading_t1200394124::get_offset_of_blurMaterial_12(),
-	CreaseShading_t1200394124::get_offset_of_depthFetchShader_13(),
-	CreaseShading_t1200394124::get_offset_of_depthFetchMaterial_14(),
-	CreaseShading_t1200394124::get_offset_of_creaseApplyShader_15(),
-	CreaseShading_t1200394124::get_offset_of_creaseApplyMaterial_16(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3680 = { sizeof (DepthOfField_t1116783936), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3680[25] = 
-{
-	DepthOfField_t1116783936::get_offset_of_visualizeFocus_8(),
-	DepthOfField_t1116783936::get_offset_of_focalLength_9(),
-	DepthOfField_t1116783936::get_offset_of_focalSize_10(),
-	DepthOfField_t1116783936::get_offset_of_aperture_11(),
-	DepthOfField_t1116783936::get_offset_of_focalTransform_12(),
-	DepthOfField_t1116783936::get_offset_of_maxBlurSize_13(),
-	DepthOfField_t1116783936::get_offset_of_highResolution_14(),
-	DepthOfField_t1116783936::get_offset_of_blurType_15(),
-	DepthOfField_t1116783936::get_offset_of_blurSampleCount_16(),
-	DepthOfField_t1116783936::get_offset_of_nearBlur_17(),
-	DepthOfField_t1116783936::get_offset_of_foregroundOverlap_18(),
-	DepthOfField_t1116783936::get_offset_of_dofHdrShader_19(),
-	DepthOfField_t1116783936::get_offset_of_dofHdrMaterial_20(),
-	DepthOfField_t1116783936::get_offset_of_dx11BokehShader_21(),
-	DepthOfField_t1116783936::get_offset_of_dx11bokehMaterial_22(),
-	DepthOfField_t1116783936::get_offset_of_dx11BokehThreshold_23(),
-	DepthOfField_t1116783936::get_offset_of_dx11SpawnHeuristic_24(),
-	DepthOfField_t1116783936::get_offset_of_dx11BokehTexture_25(),
-	DepthOfField_t1116783936::get_offset_of_dx11BokehScale_26(),
-	DepthOfField_t1116783936::get_offset_of_dx11BokehIntensity_27(),
-	DepthOfField_t1116783936::get_offset_of_focalDistance01_28(),
-	DepthOfField_t1116783936::get_offset_of_cbDrawArgs_29(),
-	DepthOfField_t1116783936::get_offset_of_cbPoints_30(),
-	DepthOfField_t1116783936::get_offset_of_internalBlurWidth_31(),
-	DepthOfField_t1116783936::get_offset_of_cachedCamera_32(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3681 = { sizeof (BlurType_t3871645803)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3681[3] = 
-{
-	BlurType_t3871645803::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3682 = { sizeof (BlurSampleCount_t3210294001)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3682[4] = 
-{
-	BlurSampleCount_t3210294001::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3683 = { sizeof (DepthOfFieldDeprecated_t4187663194), -1, sizeof(DepthOfFieldDeprecated_t4187663194_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable3683[43] = 
-{
-	DepthOfFieldDeprecated_t4187663194_StaticFields::get_offset_of_SMOOTH_DOWNSAMPLE_PASS_8(),
-	DepthOfFieldDeprecated_t4187663194_StaticFields::get_offset_of_BOKEH_EXTRA_BLUR_9(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_quality_10(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_resolution_11(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_simpleTweakMode_12(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalPoint_13(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_smoothness_14(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalZDistance_15(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalZStartCurve_16(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalZEndCurve_17(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalStartCurve_18(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalEndCurve_19(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalDistance01_20(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_objectFocus_21(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_focalSize_22(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bluriness_23(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_maxBlurSpread_24(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_foregroundBlurExtrude_25(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_dofBlurShader_26(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_dofBlurMaterial_27(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_dofShader_28(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_dofMaterial_29(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_visualize_30(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehDestination_31(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_widthOverHeight_32(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_oneOverBaseSize_33(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokeh_34(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehSupport_35(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehShader_36(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehTexture_37(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehScale_38(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehIntensity_39(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehThresholdContrast_40(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehThresholdLuminance_41(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehDownsample_42(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehMaterial_43(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of__camera_44(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_foregroundTexture_45(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_mediumRezWorkTexture_46(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_finalDefocus_47(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_lowRezWorkTexture_48(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehSource_49(),
-	DepthOfFieldDeprecated_t4187663194::get_offset_of_bokehSource2_50(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3684 = { sizeof (Dof34QualitySetting_t3636551379)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3684[3] = 
-{
-	Dof34QualitySetting_t3636551379::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3685 = { sizeof (DofResolution_t1566655669)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3685[4] = 
-{
-	DofResolution_t1566655669::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3686 = { sizeof (DofBlurriness_t473098480)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3686[4] = 
-{
-	DofBlurriness_t473098480::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3687 = { sizeof (BokehDestination_t1233703462)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3687[4] = 
-{
-	BokehDestination_t1233703462::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3688 = { sizeof (EdgeDetection_t506487406), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3688[11] = 
-{
-	EdgeDetection_t506487406::get_offset_of_mode_8(),
-	EdgeDetection_t506487406::get_offset_of_sensitivityDepth_9(),
-	EdgeDetection_t506487406::get_offset_of_sensitivityNormals_10(),
-	EdgeDetection_t506487406::get_offset_of_lumThreshold_11(),
-	EdgeDetection_t506487406::get_offset_of_edgeExp_12(),
-	EdgeDetection_t506487406::get_offset_of_sampleDist_13(),
-	EdgeDetection_t506487406::get_offset_of_edgesOnly_14(),
-	EdgeDetection_t506487406::get_offset_of_edgesOnlyBgColor_15(),
-	EdgeDetection_t506487406::get_offset_of_edgeDetectShader_16(),
-	EdgeDetection_t506487406::get_offset_of_edgeDetectMaterial_17(),
-	EdgeDetection_t506487406::get_offset_of_oldMode_18(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3689 = { sizeof (EdgeDetectMode_t1984240676)+ sizeof (RuntimeObject), sizeof(int32_t), 0, 0 };
-extern const int32_t g_FieldOffsetTable3689[6] = 
-{
-	EdgeDetectMode_t1984240676::get_offset_of_value___2() + static_cast<int32_t>(sizeof(RuntimeObject)),
-	0,
-	0,
-	0,
-	0,
-	0,
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3690 = { sizeof (Fisheye_t4101461743), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3690[4] = 
-{
-	Fisheye_t4101461743::get_offset_of_strengthX_8(),
-	Fisheye_t4101461743::get_offset_of_strengthY_9(),
-	Fisheye_t4101461743::get_offset_of_fishEyeShader_10(),
-	Fisheye_t4101461743::get_offset_of_fisheyeMaterial_11(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3691 = { sizeof (GlobalFog_t900542614), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3691[9] = 
-{
-	GlobalFog_t900542614::get_offset_of_distanceFog_8(),
-	GlobalFog_t900542614::get_offset_of_excludeFarPixels_9(),
-	GlobalFog_t900542614::get_offset_of_useRadialDistance_10(),
-	GlobalFog_t900542614::get_offset_of_heightFog_11(),
-	GlobalFog_t900542614::get_offset_of_height_12(),
-	GlobalFog_t900542614::get_offset_of_heightDensity_13(),
-	GlobalFog_t900542614::get_offset_of_startDistance_14(),
-	GlobalFog_t900542614::get_offset_of_fogShader_15(),
-	GlobalFog_t900542614::get_offset_of_fogMaterial_16(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3692 = { sizeof (Grayscale_t1707485390), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3692[2] = 
-{
-	Grayscale_t1707485390::get_offset_of_textureRamp_6(),
-	Grayscale_t1707485390::get_offset_of_rampOffset_7(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3693 = { sizeof (ImageEffectBase_t2026006575), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3693[2] = 
-{
-	ImageEffectBase_t2026006575::get_offset_of_shader_4(),
-	ImageEffectBase_t2026006575::get_offset_of_m_Material_5(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3694 = { sizeof (ImageEffects_t1214077586), -1, 0, 0 };
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3695 = { sizeof (MotionBlur_t1587267364), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3695[3] = 
-{
-	MotionBlur_t1587267364::get_offset_of_blurAmount_6(),
-	MotionBlur_t1587267364::get_offset_of_extraBlur_7(),
-	MotionBlur_t1587267364::get_offset_of_accumTexture_8(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3696 = { sizeof (NoiseAndGrain_t3814230817), -1, sizeof(NoiseAndGrain_t3814230817_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable3696[18] = 
-{
-	NoiseAndGrain_t3814230817::get_offset_of_intensityMultiplier_8(),
-	NoiseAndGrain_t3814230817::get_offset_of_generalIntensity_9(),
-	NoiseAndGrain_t3814230817::get_offset_of_blackIntensity_10(),
-	NoiseAndGrain_t3814230817::get_offset_of_whiteIntensity_11(),
-	NoiseAndGrain_t3814230817::get_offset_of_midGrey_12(),
-	NoiseAndGrain_t3814230817::get_offset_of_dx11Grain_13(),
-	NoiseAndGrain_t3814230817::get_offset_of_softness_14(),
-	NoiseAndGrain_t3814230817::get_offset_of_monochrome_15(),
-	NoiseAndGrain_t3814230817::get_offset_of_intensities_16(),
-	NoiseAndGrain_t3814230817::get_offset_of_tiling_17(),
-	NoiseAndGrain_t3814230817::get_offset_of_monochromeTiling_18(),
-	NoiseAndGrain_t3814230817::get_offset_of_filterMode_19(),
-	NoiseAndGrain_t3814230817::get_offset_of_noiseTexture_20(),
-	NoiseAndGrain_t3814230817::get_offset_of_noiseShader_21(),
-	NoiseAndGrain_t3814230817::get_offset_of_noiseMaterial_22(),
-	NoiseAndGrain_t3814230817::get_offset_of_dx11NoiseShader_23(),
-	NoiseAndGrain_t3814230817::get_offset_of_dx11NoiseMaterial_24(),
-	NoiseAndGrain_t3814230817_StaticFields::get_offset_of_TILE_AMOUNT_25(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3697 = { sizeof (NoiseAndScratches_t1457296845), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3697[18] = 
-{
-	NoiseAndScratches_t1457296845::get_offset_of_monochrome_4(),
-	NoiseAndScratches_t1457296845::get_offset_of_rgbFallback_5(),
-	NoiseAndScratches_t1457296845::get_offset_of_grainIntensityMin_6(),
-	NoiseAndScratches_t1457296845::get_offset_of_grainIntensityMax_7(),
-	NoiseAndScratches_t1457296845::get_offset_of_grainSize_8(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchIntensityMin_9(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchIntensityMax_10(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchFPS_11(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchJitter_12(),
-	NoiseAndScratches_t1457296845::get_offset_of_grainTexture_13(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchTexture_14(),
-	NoiseAndScratches_t1457296845::get_offset_of_shaderRGB_15(),
-	NoiseAndScratches_t1457296845::get_offset_of_shaderYUV_16(),
-	NoiseAndScratches_t1457296845::get_offset_of_m_MaterialRGB_17(),
-	NoiseAndScratches_t1457296845::get_offset_of_m_MaterialYUV_18(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchTimeLeft_19(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchX_20(),
-	NoiseAndScratches_t1457296845::get_offset_of_scratchY_21(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3698 = { sizeof (PostEffectsBase_t2404315740), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3698[4] = 
-{
-	PostEffectsBase_t2404315740::get_offset_of_supportHDRTextures_4(),
-	PostEffectsBase_t2404315740::get_offset_of_supportDX11_5(),
-	PostEffectsBase_t2404315740::get_offset_of_isSupported_6(),
-	PostEffectsBase_t2404315740::get_offset_of_createdMaterials_7(),
-};
-extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3699 = { sizeof (PostEffectsHelper_t675066462), -1, 0, 0 };
 #ifdef __clang__
 #pragma clang diagnostic pop
 #endif

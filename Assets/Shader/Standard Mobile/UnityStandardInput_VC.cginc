@@ -22,47 +22,47 @@
 half4       _Color;
 half        _Cutoff;
 
-sampler2D   _MainTex;
-float4      _MainTex_ST;
+sampler2D_half   _MainTex;
+half4      _MainTex_ST;
 
-sampler2D   _DetailAlbedoMap;
-float4      _DetailAlbedoMap_ST;
+sampler2D_half   _DetailAlbedoMap;
+half4      _DetailAlbedoMap_ST;
 
-sampler2D   _BumpMap;
+sampler2D_half   _BumpMap;
 half        _BumpScale;
 
-sampler2D   _DetailMask;
-sampler2D   _DetailNormalMap;
+sampler2D_half   _DetailMask;
+sampler2D_half   _DetailNormalMap;
 half        _DetailNormalMapScale;
 
-sampler2D   _SpecGlossMap;
-sampler2D   _MetallicGlossMap;
+sampler2D_half   _SpecGlossMap;
+sampler2D_half   _MetallicGlossMap;
 half        _Metallic;
-float       _Glossiness;
-float       _GlossMapScale;
+half       _Glossiness;
+half       _GlossMapScale;
 
-sampler2D   _OcclusionMap;
+sampler2D_half   _OcclusionMap;
 half        _OcclusionStrength;
 
-sampler2D   _ParallaxMap;
+sampler2D_half   _ParallaxMap;
 half        _Parallax;
 half        _UVSec;
 
 half4       _EmissionColor;
-sampler2D   _EmissionMap;
+sampler2D_half   _EmissionMap;
 
 //-------------------------------------------------------------------------------------
 // Input functions
 
 struct VertexInput_VC
 {
-    float4 vertex   : POSITION;
+    half4 vertex   : POSITION;
     half3 normal    : NORMAL;
-    float2 uv0      : TEXCOORD0;
-    float2 uv1      : TEXCOORD1;
+    half2 uv0      : TEXCOORD0;
+    half2 uv1      : TEXCOORD1;
 
 #if defined(DYNAMICLIGHTMAP_ON) || defined(UNITY_PASS_META)
-    float2 uv2      : TEXCOORD2;
+    half2 uv2      : TEXCOORD2;
 #endif
 #ifdef _TANGENT_TO_WORLD
     half4 tangent   : TANGENT;
@@ -74,20 +74,20 @@ struct VertexInput_VC
 
 
 
-float4 TexCoords(VertexInput_VC v)
+half4 TexCoords(VertexInput_VC v)
 {
-    float4 texcoord;
+    half4 texcoord;
     texcoord.xy = TRANSFORM_TEX(v.uv0, _MainTex); // Always source from uv0
     texcoord.zw = TRANSFORM_TEX(((_UVSec == 0) ? v.uv0 : v.uv1), _DetailAlbedoMap);
     return texcoord;
 }
 
-half DetailMask(float2 uv)
+half DetailMask(half2 uv)
 {
     return tex2D (_DetailMask, uv).a;
 }
 
-half3 Albedo(float4 texcoords)
+half3 Albedo(half4 texcoords)
 {
     half3 albedo = _Color.rgb * tex2D (_MainTex, texcoords.xy).rgb;
 #if _DETAIL
@@ -112,7 +112,7 @@ half3 Albedo(float4 texcoords)
     return albedo;
 }
 
-half Alpha(float2 uv)
+half Alpha(half2 uv)
 {
 #if defined(_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A)
     return _Color.a;
@@ -121,7 +121,7 @@ half Alpha(float2 uv)
 #endif
 }
 
-half Occlusion(float2 uv)
+half Occlusion(half2 uv)
 {
 #if (SHADER_TARGET < 30)
     // SM20: instruction count limitation
@@ -133,7 +133,7 @@ half Occlusion(float2 uv)
 #endif
 }
 
-half4 SpecularGloss(float2 uv)
+half4 SpecularGloss(half2 uv)
 {
     half4 sg;
 #ifdef _SPECGLOSSMAP
@@ -155,7 +155,7 @@ half4 SpecularGloss(float2 uv)
     return sg;
 }
 
-half2 MetallicGloss(float2 uv)
+half2 MetallicGloss(half2 uv)
 {
     half2 mg;
 
@@ -178,7 +178,7 @@ half2 MetallicGloss(float2 uv)
     return mg;
 }
 
-half2 MetallicRough(float2 uv)
+half2 MetallicRough(half2 uv)
 {
     half2 mg;
 #ifdef _METALLICGLOSSMAP
@@ -195,7 +195,7 @@ half2 MetallicRough(float2 uv)
     return mg;
 }
 
-half3 Emission(float2 uv)
+half3 Emission(half2 uv)
 {
 #ifndef _EMISSION
     return 0;
@@ -205,7 +205,7 @@ half3 Emission(float2 uv)
 }
 
 #ifdef _NORMALMAP
-half3 NormalInTangentSpace(float4 texcoords)
+half3 NormalInTangentSpace(half4 texcoords)
 {
     half3 normalTangent = UnpackScaleNormal(tex2D (_BumpMap, texcoords.xy), _BumpScale);
 
@@ -229,15 +229,15 @@ half3 NormalInTangentSpace(float4 texcoords)
 }
 #endif
 
-float4 Parallax (float4 texcoords, half3 viewDir)
+half4 Parallax (half4 texcoords, half3 viewDir)
 {
 #if !defined(_PARALLAXMAP) || (SHADER_TARGET < 30)
     // Disable parallax on pre-SM3.0 shader target models
     return texcoords;
 #else
     half h = tex2D (_ParallaxMap, texcoords.xy).g;
-    float2 offset = ParallaxOffset1Step (h, _Parallax, viewDir);
-    return float4(texcoords.xy + offset, texcoords.zw + offset);
+    half2 offset = ParallaxOffset1Step (h, _Parallax, viewDir);
+    return half4(texcoords.xy + offset, texcoords.zw + offset);
 #endif
 
 }

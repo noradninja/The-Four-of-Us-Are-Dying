@@ -116,7 +116,7 @@ v2f vert(appdata IN) {
 }
 
 // textures
-sampler2D _MainTex;
+sampler2D_half _MainTex;
 half4 _Color;
 
 // fragment shader

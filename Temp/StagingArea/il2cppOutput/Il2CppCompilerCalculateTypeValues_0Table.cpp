@@ -7705,7 +7705,7 @@ extern const int32_t g_FieldOffsetTable55[5] =
 	NormalizationTableUtil_t3596622836_StaticFields::get_offset_of_Helper_4(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize56 = { sizeof (SimpleCollator_t2877834729), -1, sizeof(SimpleCollator_t2877834729_StaticFields), 0 };
-extern const int32_t g_FieldOffsetTable56[13] = 
+extern const int32_t g_FieldOffsetTable56[14] = 
 {
 	SimpleCollator_t2877834729_StaticFields::get_offset_of_QuickCheckDisabled_0(),
 	SimpleCollator_t2877834729_StaticFields::get_offset_of_invariant_1(),
@@ -7720,6 +7720,7 @@ extern const int32_t g_FieldOffsetTable56[13] =
 	SimpleCollator_t2877834729::get_offset_of_cjkLv2Indexer_10(),
 	SimpleCollator_t2877834729::get_offset_of_lcid_11(),
 	SimpleCollator_t2877834729::get_offset_of_frenchSort_12(),
+	0,
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize57 = { sizeof (Context_t1744531130)+ sizeof (RuntimeObject), sizeof(Context_t1744531130_marshaled_pinvoke), 0, 0 };
 extern const int32_t g_FieldOffsetTable57[7] = 

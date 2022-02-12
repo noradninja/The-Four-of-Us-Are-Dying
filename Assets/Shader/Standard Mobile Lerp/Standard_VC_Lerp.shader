@@ -78,7 +78,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZWrite [_ZWrite]
             Cull [_Cull]
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
 
             // -------------------------------------
 
@@ -117,7 +117,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZTest LEqual
 
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
 
             // -------------------------------------
 
@@ -151,7 +151,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZWrite On ZTest LEqual
 
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
 
             // -------------------------------------
 

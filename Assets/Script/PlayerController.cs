@@ -127,7 +127,6 @@ public class PlayerController : MonoBehaviour
             SSAOScript.GetComponent<FXAA>().enabled = true;
             enabledText.GetComponent<Text>().color = Color.green;
             enabledText.GetComponent<Text>().text = ("Enabled");
-            if (!Application.isEditor) QualitySettings.vSyncCount = 1;
          }
     }
 
@@ -190,26 +189,23 @@ public class PlayerController : MonoBehaviour
 //select
         if (Input.GetKeyDown(VITA + SELECT))
         {   
-            //enable/disable SSAO and UI text
-            if (SSAOScript.GetComponent<FastSSAO>().enabled){
-                SSAOScript.GetComponent<FastSSAO>().enabled = false;
-                BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
-                SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
-                SSAOScript.GetComponent<FXAA>().enabled = false;
-                enabledText.GetComponent<Text>().color = Color.red;
-                enabledText.GetComponent<Text>().text = ("Disabled");
-                if (!Application.isEditor) QualitySettings.vSyncCount = 1;
-
-            }
-            else {
-                SSAOScript.GetComponent<FastSSAO>().enabled = true;
-                BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-                SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
-                SSAOScript.GetComponent<FXAA>().enabled = true;
-                enabledText.GetComponent<Text>().color = Color.green;
-                enabledText.GetComponent<Text>().text = ("Enabled");
-                if (!Application.isEditor) QualitySettings.vSyncCount = 1;
-            }
+            // //enable/disable SSAO and UI text
+            // if (SSAOScript.GetComponent<FastSSAO>().enabled){
+            //     SSAOScript.GetComponent<FastSSAO>().enabled = false;
+            //     BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
+            //     SSAOScript.GetComponent<FastMobileBloom>().enabled = false;
+            //     SSAOScript.GetComponent<FXAA>().enabled = false;
+            //     enabledText.GetComponent<Text>().color = Color.red;
+            //     enabledText.GetComponent<Text>().text = ("Disabled");
+            // }
+            // else {
+            //     SSAOScript.GetComponent<FastSSAO>().enabled = true;
+            //     BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
+            //     SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
+            //     SSAOScript.GetComponent<FXAA>().enabled = true;
+            //     enabledText.GetComponent<Text>().color = Color.green;
+            //     enabledText.GetComponent<Text>().text = ("Enabled");
+            // }
         }
 
 ///////////////////////////DPad//////////////////////////////////////

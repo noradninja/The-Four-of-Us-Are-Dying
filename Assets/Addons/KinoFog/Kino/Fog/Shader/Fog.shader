@@ -40,10 +40,10 @@ Shader "Hidden/Kino/Fog"
     #pragma multi_compile _ RADIAL_DIST
     #pragma multi_compile _ USE_SKYBOX
 
-    sampler2D _MainTex;
+    sampler2D_half _MainTex;
     half4 _MainTex_TexelSize;
 
-    sampler2D_half _CameraDepthTexture;
+    sampler2D _CameraDepthTexture;
 
     half _DistanceOffset;
     half _Density;

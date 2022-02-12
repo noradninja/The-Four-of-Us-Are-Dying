@@ -485,6 +485,12 @@ extern "C" void DelegatePInvokeWrapper_unitytls_tlsctx_x509verify_callback_t1945
 extern const RuntimeType unitytls_tlsctx_x509verify_callback_t194548070_0_0_0;
 extern "C" void DelegatePInvokeWrapper_unitytls_x509verify_callback_t321808703();
 extern const RuntimeType unitytls_x509verify_callback_t321808703_0_0_0;
+extern "C" void ProcessStartInfo_t2184852744_marshal_pinvoke(void* managedStructure, void* marshaledStructure);
+extern "C" void ProcessStartInfo_t2184852744_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
+extern "C" void ProcessStartInfo_t2184852744_marshal_pinvoke_cleanup(void* marshaledStructure);
+extern const RuntimeType ProcessStartInfo_t2184852744_0_0_0;
+extern "C" void DelegatePInvokeWrapper_UserCallBack_t3837741765();
+extern const RuntimeType UserCallBack_t3837741765_0_0_0;
 extern "C" void DelegatePInvokeWrapper_ReadMethod_t893206259();
 extern const RuntimeType ReadMethod_t893206259_0_0_0;
 extern "C" void DelegatePInvokeWrapper_WriteMethod_t2538911768();
@@ -943,7 +949,7 @@ extern "C" void StaticRenderer_t3915673590_marshal_pinvoke(void* managedStructur
 extern "C" void StaticRenderer_t3915673590_marshal_pinvoke_back(void* marshaledStructure, void* managedStructure);
 extern "C" void StaticRenderer_t3915673590_marshal_pinvoke_cleanup(void* marshaledStructure);
 extern const RuntimeType StaticRenderer_t3915673590_0_0_0;
-extern Il2CppInteropData g_Il2CppInteropData[271] = 
+extern Il2CppInteropData g_Il2CppInteropData[273] = 
 {
 	{ NULL, Context_t1744531130_marshal_pinvoke, Context_t1744531130_marshal_pinvoke_back, Context_t1744531130_marshal_pinvoke_cleanup, NULL, NULL, &Context_t1744531130_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Context */,
 	{ NULL, Escape_t3294788190_marshal_pinvoke, Escape_t3294788190_marshal_pinvoke_back, Escape_t3294788190_marshal_pinvoke_cleanup, NULL, NULL, &Escape_t3294788190_0_0_0 } /* Mono.Globalization.Unicode.SimpleCollator/Escape */,
@@ -1084,6 +1090,8 @@ extern Il2CppInteropData g_Il2CppInteropData[271] =
 	{ DelegatePInvokeWrapper_unitytls_tlsctx_write_callback_t2121017372, NULL, NULL, NULL, NULL, NULL, &unitytls_tlsctx_write_callback_t2121017372_0_0_0 } /* Mono.Unity.UnityTls/unitytls_tlsctx_write_callback */,
 	{ DelegatePInvokeWrapper_unitytls_tlsctx_x509verify_callback_t194548070, NULL, NULL, NULL, NULL, NULL, &unitytls_tlsctx_x509verify_callback_t194548070_0_0_0 } /* Mono.Unity.UnityTls/unitytls_tlsctx_x509verify_callback */,
 	{ DelegatePInvokeWrapper_unitytls_x509verify_callback_t321808703, NULL, NULL, NULL, NULL, NULL, &unitytls_x509verify_callback_t321808703_0_0_0 } /* Mono.Unity.UnityTls/unitytls_x509verify_callback */,
+	{ NULL, ProcessStartInfo_t2184852744_marshal_pinvoke, ProcessStartInfo_t2184852744_marshal_pinvoke_back, ProcessStartInfo_t2184852744_marshal_pinvoke_cleanup, NULL, NULL, &ProcessStartInfo_t2184852744_0_0_0 } /* System.Diagnostics.ProcessStartInfo */,
+	{ DelegatePInvokeWrapper_UserCallBack_t3837741765, NULL, NULL, NULL, NULL, NULL, &UserCallBack_t3837741765_0_0_0 } /* System.Diagnostics.UserCallBack */,
 	{ DelegatePInvokeWrapper_ReadMethod_t893206259, NULL, NULL, NULL, NULL, NULL, &ReadMethod_t893206259_0_0_0 } /* System.IO.Compression.DeflateStream/ReadMethod */,
 	{ DelegatePInvokeWrapper_WriteMethod_t2538911768, NULL, NULL, NULL, NULL, NULL, &WriteMethod_t2538911768_0_0_0 } /* System.IO.Compression.DeflateStream/WriteMethod */,
 	{ DelegatePInvokeWrapper_UnmanagedReadOrWrite_t1975956110, NULL, NULL, NULL, NULL, NULL, &UnmanagedReadOrWrite_t1975956110_0_0_0 } /* System.IO.Compression.DeflateStreamNative/UnmanagedReadOrWrite */,

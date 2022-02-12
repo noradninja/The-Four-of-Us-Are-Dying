@@ -24,7 +24,7 @@ RenderSettings:
   m_AmbientSkyColor: {r: 0, g: 0, b: 0, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
-  m_AmbientIntensity: 1
+  m_AmbientIntensity: 1.325
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0, g: 0, b: 0, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: a4d8809d9d08cc24d9f0208c935d75eb, type: 2}
@@ -2370,8 +2370,8 @@ GameObject:
   - component: {fileID: 121908230}
   - component: {fileID: 121908231}
   - component: {fileID: 121908233}
-  - component: {fileID: 121908228}
   - component: {fileID: 121908229}
+  - component: {fileID: 121908228}
   - component: {fileID: 121908232}
   - component: {fileID: 121908235}
   - component: {fileID: 121908227}
@@ -2418,7 +2418,7 @@ Camera:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 622391
-  m_RenderingPath: 1
+  m_RenderingPath: 2
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
@@ -3020,6 +3020,7 @@ GameObject:
   - component: {fileID: 141954559}
   - component: {fileID: 141954558}
   - component: {fileID: 141954560}
+  - component: {fileID: 141954561}
   m_Layer: 9
   m_Name: Street_Light_Mixed
   m_TagString: Untagged
@@ -3144,6 +3145,17 @@ MonoBehaviour:
   saveOnOutOfRange: 0
   isHDRP: 0
   hdrpAreaSize: {x: 0, y: 0}
+--- !u!114 &141954561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141954556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &154556057
 GameObject:
   m_ObjectHideFlags: 0
@@ -13877,7 +13889,6 @@ GameObject:
   - component: {fileID: 284095804}
   - component: {fileID: 284095803}
   - component: {fileID: 284095802}
-  - component: {fileID: 284095806}
   m_Layer: 19
   m_Name: Decal H
   m_TagString: Untagged
@@ -13958,17 +13969,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
---- !u!114 &284095806
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 284095801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &284740574
 Prefab:
   m_ObjectHideFlags: 0
@@ -25132,13 +25132,14 @@ GameObject:
   - component: {fileID: 667586564}
   - component: {fileID: 667586563}
   - component: {fileID: 667586561}
+  - component: {fileID: 667586562}
   m_Layer: 0
-  m_Name: RenderMode_Text
+  m_Name: Device_Type_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &667586560
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25163,13 +25164,28 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 667586559}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e349c9c861ced1045a0589630f0c8fb9, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b077f56ee80e7f4aac6bb1c862193b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainCam: {fileID: 121908225}
-  UIText: {fileID: 667586563}
+  cpuCounterText: {fileID: 667586563}
+  updateInterval: 1
+  processorCount: 4
+  CpuUsage: 0
+--- !u!114 &667586562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 667586559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a3476f6c24578499fba42e002aed04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentDeviceModel: 
+  deviceModelUIText: {fileID: 667586563}
 --- !u!114 &667586563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25202,7 +25218,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Render Mode:'
+  m_Text: 'Device Type:'
 --- !u!222 &667586564
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25221,7 +25237,6 @@ GameObject:
   - component: {fileID: 673224508}
   - component: {fileID: 673224507}
   - component: {fileID: 673224506}
-  - component: {fileID: 673224510}
   m_Layer: 19
   m_Name: Decal E
   m_TagString: Untagged
@@ -25302,17 +25317,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &673224510
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 673224505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &676896676
 GameObject:
   m_ObjectHideFlags: 0
@@ -29860,7 +29864,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!20 &986674712
 Camera:
   m_ObjectHideFlags: 0
@@ -37140,7 +37144,6 @@ GameObject:
   - component: {fileID: 1277834832}
   - component: {fileID: 1277834834}
   - component: {fileID: 1277834833}
-  - component: {fileID: 1277834835}
   m_Layer: 0
   m_Name: Lamp_Glass
   m_TagString: Untagged
@@ -37206,17 +37209,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1277834831}
   m_Mesh: {fileID: 4300066, guid: 779311d29d22a0943b2a2b2b02324960, type: 3}
---- !u!114 &1277834835
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1277834831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1278256493
 GameObject:
   m_ObjectHideFlags: 0
@@ -37559,7 +37551,6 @@ GameObject:
   - component: {fileID: 1296770124}
   - component: {fileID: 1296770126}
   - component: {fileID: 1296770125}
-  - component: {fileID: 1296770127}
   m_Layer: 0
   m_Name: Lamp_Glass
   m_TagString: Untagged
@@ -37625,17 +37616,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1296770123}
   m_Mesh: {fileID: 4300066, guid: 779311d29d22a0943b2a2b2b02324960, type: 3}
---- !u!114 &1296770127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1296770123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1297202375
 GameObject:
   m_ObjectHideFlags: 0
@@ -41570,7 +41550,6 @@ GameObject:
   - component: {fileID: 1475357446}
   - component: {fileID: 1475357445}
   - component: {fileID: 1475357444}
-  - component: {fileID: 1475357448}
   m_Layer: 19
   m_Name: Decal F
   m_TagString: Untagged
@@ -41651,17 +41630,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
---- !u!114 &1475357448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1475357443}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1477174504
 GameObject:
   m_ObjectHideFlags: 0
@@ -45256,7 +45224,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1655480489}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -7.572, y: -23.959, z: -4.221}
+  m_LocalPosition: {x: -7.079, y: -23.959, z: -4.328}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

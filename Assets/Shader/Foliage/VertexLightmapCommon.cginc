@@ -24,7 +24,7 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 		dirToLight -= eyePosition * unity_LightPosition[idx].w;
 		
 		// distance attenuation
-		float distSqr = dot(dirToLight, dirToLight);
+		half distSqr = dot(dirToLight, dirToLight);
 		att /= (1.0 + unity_LightAtten[idx].z * distSqr);
 
 		if (unity_LightPosition[idx].w != 0 &&
@@ -92,10 +92,10 @@ v2f vert(appdata v) {
 
 	half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
 	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.vertex, 1) ).xyz;
-	half3 eyeNormal = normalize(mul( (float3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
-	//float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
- 	float dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
- 	float rimWidth = 1;
+	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
+	//half3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
+ 	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
+ 	half rimWidth = 1;
 
 	//Leaf Movement and Wiggle
 	( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x

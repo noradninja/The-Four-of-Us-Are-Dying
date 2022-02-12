@@ -4893,6 +4893,8 @@ public:
 	RuntimeObject * ____rngAccess_12;
 	// System.Security.Cryptography.RandomNumberGenerator System.Guid::_rng
 	RandomNumberGenerator_t386037858 * ____rng_13;
+	// System.Security.Cryptography.RandomNumberGenerator System.Guid::_fastRng
+	RandomNumberGenerator_t386037858 * ____fastRng_14;
 
 public:
 	inline static int32_t get_offset_of_Empty_0() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ___Empty_0)); }
@@ -4920,6 +4922,15 @@ public:
 		____rng_13 = value;
 		Il2CppCodeGenWriteBarrier((&____rng_13), value);
 	}
+
+	inline static int32_t get_offset_of__fastRng_14() { return static_cast<int32_t>(offsetof(Guid_t_StaticFields, ____fastRng_14)); }
+	inline RandomNumberGenerator_t386037858 * get__fastRng_14() const { return ____fastRng_14; }
+	inline RandomNumberGenerator_t386037858 ** get_address_of__fastRng_14() { return &____fastRng_14; }
+	inline void set__fastRng_14(RandomNumberGenerator_t386037858 * value)
+	{
+		____fastRng_14 = value;
+		Il2CppCodeGenWriteBarrier((&____fastRng_14), value);
+	}
 };
 
 #ifdef __clang__
@@ -4939,27 +4950,27 @@ struct  Stream_t1273022909  : public MarshalByRefObject_t2760389100
 {
 public:
 	// System.IO.Stream/ReadWriteTask System.IO.Stream::_activeReadWriteTask
-	ReadWriteTask_t156472862 * ____activeReadWriteTask_2;
+	ReadWriteTask_t156472862 * ____activeReadWriteTask_3;
 	// System.Threading.SemaphoreSlim System.IO.Stream::_asyncActiveSemaphore
-	SemaphoreSlim_t2974092902 * ____asyncActiveSemaphore_3;
+	SemaphoreSlim_t2974092902 * ____asyncActiveSemaphore_4;
 
 public:
-	inline static int32_t get_offset_of__activeReadWriteTask_2() { return static_cast<int32_t>(offsetof(Stream_t1273022909, ____activeReadWriteTask_2)); }
-	inline ReadWriteTask_t156472862 * get__activeReadWriteTask_2() const { return ____activeReadWriteTask_2; }
-	inline ReadWriteTask_t156472862 ** get_address_of__activeReadWriteTask_2() { return &____activeReadWriteTask_2; }
-	inline void set__activeReadWriteTask_2(ReadWriteTask_t156472862 * value)
+	inline static int32_t get_offset_of__activeReadWriteTask_3() { return static_cast<int32_t>(offsetof(Stream_t1273022909, ____activeReadWriteTask_3)); }
+	inline ReadWriteTask_t156472862 * get__activeReadWriteTask_3() const { return ____activeReadWriteTask_3; }
+	inline ReadWriteTask_t156472862 ** get_address_of__activeReadWriteTask_3() { return &____activeReadWriteTask_3; }
+	inline void set__activeReadWriteTask_3(ReadWriteTask_t156472862 * value)
 	{
-		____activeReadWriteTask_2 = value;
-		Il2CppCodeGenWriteBarrier((&____activeReadWriteTask_2), value);
+		____activeReadWriteTask_3 = value;
+		Il2CppCodeGenWriteBarrier((&____activeReadWriteTask_3), value);
 	}
 
-	inline static int32_t get_offset_of__asyncActiveSemaphore_3() { return static_cast<int32_t>(offsetof(Stream_t1273022909, ____asyncActiveSemaphore_3)); }
-	inline SemaphoreSlim_t2974092902 * get__asyncActiveSemaphore_3() const { return ____asyncActiveSemaphore_3; }
-	inline SemaphoreSlim_t2974092902 ** get_address_of__asyncActiveSemaphore_3() { return &____asyncActiveSemaphore_3; }
-	inline void set__asyncActiveSemaphore_3(SemaphoreSlim_t2974092902 * value)
+	inline static int32_t get_offset_of__asyncActiveSemaphore_4() { return static_cast<int32_t>(offsetof(Stream_t1273022909, ____asyncActiveSemaphore_4)); }
+	inline SemaphoreSlim_t2974092902 * get__asyncActiveSemaphore_4() const { return ____asyncActiveSemaphore_4; }
+	inline SemaphoreSlim_t2974092902 ** get_address_of__asyncActiveSemaphore_4() { return &____asyncActiveSemaphore_4; }
+	inline void set__asyncActiveSemaphore_4(SemaphoreSlim_t2974092902 * value)
 	{
-		____asyncActiveSemaphore_3 = value;
-		Il2CppCodeGenWriteBarrier((&____asyncActiveSemaphore_3), value);
+		____asyncActiveSemaphore_4 = value;
+		Il2CppCodeGenWriteBarrier((&____asyncActiveSemaphore_4), value);
 	}
 };
 
@@ -11873,15 +11884,15 @@ struct  TimeSpan_t881159249
 {
 public:
 	// System.Int64 System.TimeSpan::_ticks
-	int64_t ____ticks_3;
+	int64_t ____ticks_22;
 
 public:
-	inline static int32_t get_offset_of__ticks_3() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249, ____ticks_3)); }
-	inline int64_t get__ticks_3() const { return ____ticks_3; }
-	inline int64_t* get_address_of__ticks_3() { return &____ticks_3; }
-	inline void set__ticks_3(int64_t value)
+	inline static int32_t get_offset_of__ticks_22() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249, ____ticks_22)); }
+	inline int64_t get__ticks_22() const { return ____ticks_22; }
+	inline int64_t* get_address_of__ticks_22() { return &____ticks_22; }
+	inline void set__ticks_22(int64_t value)
 	{
-		____ticks_3 = value;
+		____ticks_22 = value;
 	}
 };
 
@@ -11889,55 +11900,55 @@ struct TimeSpan_t881159249_StaticFields
 {
 public:
 	// System.TimeSpan System.TimeSpan::Zero
-	TimeSpan_t881159249  ___Zero_0;
+	TimeSpan_t881159249  ___Zero_19;
 	// System.TimeSpan System.TimeSpan::MaxValue
-	TimeSpan_t881159249  ___MaxValue_1;
+	TimeSpan_t881159249  ___MaxValue_20;
 	// System.TimeSpan System.TimeSpan::MinValue
-	TimeSpan_t881159249  ___MinValue_2;
+	TimeSpan_t881159249  ___MinValue_21;
 	// System.Boolean modreq(System.Runtime.CompilerServices.IsVolatile) System.TimeSpan::_legacyConfigChecked
-	bool ____legacyConfigChecked_4;
+	bool ____legacyConfigChecked_23;
 	// System.Boolean modreq(System.Runtime.CompilerServices.IsVolatile) System.TimeSpan::_legacyMode
-	bool ____legacyMode_5;
+	bool ____legacyMode_24;
 
 public:
-	inline static int32_t get_offset_of_Zero_0() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ___Zero_0)); }
-	inline TimeSpan_t881159249  get_Zero_0() const { return ___Zero_0; }
-	inline TimeSpan_t881159249 * get_address_of_Zero_0() { return &___Zero_0; }
-	inline void set_Zero_0(TimeSpan_t881159249  value)
+	inline static int32_t get_offset_of_Zero_19() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ___Zero_19)); }
+	inline TimeSpan_t881159249  get_Zero_19() const { return ___Zero_19; }
+	inline TimeSpan_t881159249 * get_address_of_Zero_19() { return &___Zero_19; }
+	inline void set_Zero_19(TimeSpan_t881159249  value)
 	{
-		___Zero_0 = value;
+		___Zero_19 = value;
 	}
 
-	inline static int32_t get_offset_of_MaxValue_1() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ___MaxValue_1)); }
-	inline TimeSpan_t881159249  get_MaxValue_1() const { return ___MaxValue_1; }
-	inline TimeSpan_t881159249 * get_address_of_MaxValue_1() { return &___MaxValue_1; }
-	inline void set_MaxValue_1(TimeSpan_t881159249  value)
+	inline static int32_t get_offset_of_MaxValue_20() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ___MaxValue_20)); }
+	inline TimeSpan_t881159249  get_MaxValue_20() const { return ___MaxValue_20; }
+	inline TimeSpan_t881159249 * get_address_of_MaxValue_20() { return &___MaxValue_20; }
+	inline void set_MaxValue_20(TimeSpan_t881159249  value)
 	{
-		___MaxValue_1 = value;
+		___MaxValue_20 = value;
 	}
 
-	inline static int32_t get_offset_of_MinValue_2() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ___MinValue_2)); }
-	inline TimeSpan_t881159249  get_MinValue_2() const { return ___MinValue_2; }
-	inline TimeSpan_t881159249 * get_address_of_MinValue_2() { return &___MinValue_2; }
-	inline void set_MinValue_2(TimeSpan_t881159249  value)
+	inline static int32_t get_offset_of_MinValue_21() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ___MinValue_21)); }
+	inline TimeSpan_t881159249  get_MinValue_21() const { return ___MinValue_21; }
+	inline TimeSpan_t881159249 * get_address_of_MinValue_21() { return &___MinValue_21; }
+	inline void set_MinValue_21(TimeSpan_t881159249  value)
 	{
-		___MinValue_2 = value;
+		___MinValue_21 = value;
 	}
 
-	inline static int32_t get_offset_of__legacyConfigChecked_4() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ____legacyConfigChecked_4)); }
-	inline bool get__legacyConfigChecked_4() const { return ____legacyConfigChecked_4; }
-	inline bool* get_address_of__legacyConfigChecked_4() { return &____legacyConfigChecked_4; }
-	inline void set__legacyConfigChecked_4(bool value)
+	inline static int32_t get_offset_of__legacyConfigChecked_23() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ____legacyConfigChecked_23)); }
+	inline bool get__legacyConfigChecked_23() const { return ____legacyConfigChecked_23; }
+	inline bool* get_address_of__legacyConfigChecked_23() { return &____legacyConfigChecked_23; }
+	inline void set__legacyConfigChecked_23(bool value)
 	{
-		____legacyConfigChecked_4 = value;
+		____legacyConfigChecked_23 = value;
 	}
 
-	inline static int32_t get_offset_of__legacyMode_5() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ____legacyMode_5)); }
-	inline bool get__legacyMode_5() const { return ____legacyMode_5; }
-	inline bool* get_address_of__legacyMode_5() { return &____legacyMode_5; }
-	inline void set__legacyMode_5(bool value)
+	inline static int32_t get_offset_of__legacyMode_24() { return static_cast<int32_t>(offsetof(TimeSpan_t881159249_StaticFields, ____legacyMode_24)); }
+	inline bool get__legacyMode_24() const { return ____legacyMode_24; }
+	inline bool* get_address_of__legacyMode_24() { return &____legacyMode_24; }
+	inline void set__legacyMode_24(bool value)
 	{
-		____legacyMode_5 = value;
+		____legacyMode_24 = value;
 	}
 };
 
@@ -20205,8 +20216,6 @@ extern "C" IL2CPP_METHOD_ATTR Texture_t3661962703 * Material_GetTextureImpl_m158
 extern "C" IL2CPP_METHOD_ATTR intptr_t MaterialPropertyBlock_CreateImpl_m770231657 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void UnityEngine.MaterialPropertyBlock::SetVectorImpl_Injected(System.Int32,UnityEngine.Vector4&)
 extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetVectorImpl_Injected_m1188344249 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Vector4_t3319028937 * ___value1, const RuntimeMethod* method);
-// System.Void UnityEngine.MaterialPropertyBlock::SetColorImpl_Injected(System.Int32,UnityEngine.Color&)
-extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetColorImpl_Injected_m258797033 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Color_t2555686324 * ___value1, const RuntimeMethod* method);
 // System.Void UnityEngine.MaterialPropertyBlock::Dispose()
 extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_Dispose_m899785735 (MaterialPropertyBlock_t3213117958 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.MaterialPropertyBlock::DestroyImpl(System.IntPtr)
@@ -20215,8 +20224,6 @@ extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_DestroyImpl_m3677355635
 extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetFloatImpl_m3676134540 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, float ___value1, const RuntimeMethod* method);
 // System.Void UnityEngine.MaterialPropertyBlock::SetVectorImpl(System.Int32,UnityEngine.Vector4)
 extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetVectorImpl_m1255012286 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Vector4_t3319028937  ___value1, const RuntimeMethod* method);
-// System.Void UnityEngine.MaterialPropertyBlock::SetColorImpl(System.Int32,UnityEngine.Color)
-extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetColorImpl_m1051908922 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Color_t2555686324  ___value1, const RuntimeMethod* method);
 // System.Void UnityEngine.MaterialPropertyBlock::SetTextureImpl(System.Int32,UnityEngine.Texture)
 extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetTextureImpl_m2943090108 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method);
 // System.Double System.Math::Log(System.Double,System.Double)
@@ -20461,8 +20468,6 @@ extern "C" IL2CPP_METHOD_ATTR void Mesh_RecalculateNormalsImpl_m3102285457 (Mesh
 extern "C" IL2CPP_METHOD_ATTR void Mesh_RecalculateTangentsImpl_m2340358000 (Mesh_t3648964284 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Mesh::MarkDynamicImpl()
 extern "C" IL2CPP_METHOD_ATTR void Mesh_MarkDynamicImpl_m206310269 (Mesh_t3648964284 * __this, const RuntimeMethod* method);
-// System.Void UnityEngine.Mesh::UploadMeshDataImpl(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void Mesh_UploadMeshDataImpl_m755635474 (Mesh_t3648964284 * __this, bool ___markNoLongerReadable0, const RuntimeMethod* method);
 // System.Void UnityEngine.Mesh::CombineMeshesImpl(UnityEngine.CombineInstance[],System.Boolean,System.Boolean,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void Mesh_CombineMeshesImpl_m64868513 (Mesh_t3648964284 * __this, CombineInstanceU5BU5D_t4267154537* ___combine0, bool ___mergeSubMeshes1, bool ___useMatrices2, bool ___hasLightmapData3, const RuntimeMethod* method);
 // System.Boolean UnityEngine.MonoBehaviour::Internal_IsInvokingAll(UnityEngine.MonoBehaviour)
@@ -21291,6 +21296,15 @@ IL_0055:
 		bool L_4 = V_1;
 		return L_4;
 	}
+}
+// System.Void UnityEngine.Application::set_runInBackground(System.Boolean)
+extern "C" IL2CPP_METHOD_ATTR void Application_set_runInBackground_m2169704730 (RuntimeObject * __this /* static, unused */, bool ___value0, const RuntimeMethod* method)
+{
+	typedef void (*Application_set_runInBackground_m2169704730_ftn) (bool);
+	static Application_set_runInBackground_m2169704730_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Application_set_runInBackground_m2169704730_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Application::set_runInBackground(System.Boolean)");
+	_il2cpp_icall_func(___value0);
 }
 // System.String UnityEngine.Application::get_dataPath()
 extern "C" IL2CPP_METHOD_ATTR String_t* Application_get_dataPath_m4232621142 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
@@ -24091,26 +24105,6 @@ extern "C" IL2CPP_METHOD_ATTR Rect_t2360479859  Camera_get_pixelRect_m2283183456
 		Rect_t2360479859  L_0 = V_0;
 		return L_0;
 	}
-}
-// System.Int32 UnityEngine.Camera::get_pixelWidth()
-extern "C" IL2CPP_METHOD_ATTR int32_t Camera_get_pixelWidth_m1110053668 (Camera_t4157153871 * __this, const RuntimeMethod* method)
-{
-	typedef int32_t (*Camera_get_pixelWidth_m1110053668_ftn) (Camera_t4157153871 *);
-	static Camera_get_pixelWidth_m1110053668_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Camera_get_pixelWidth_m1110053668_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::get_pixelWidth()");
-	int32_t retVal = _il2cpp_icall_func(__this);
-	return retVal;
-}
-// System.Int32 UnityEngine.Camera::get_pixelHeight()
-extern "C" IL2CPP_METHOD_ATTR int32_t Camera_get_pixelHeight_m722276884 (Camera_t4157153871 * __this, const RuntimeMethod* method)
-{
-	typedef int32_t (*Camera_get_pixelHeight_m722276884_ftn) (Camera_t4157153871 *);
-	static Camera_get_pixelHeight_m722276884_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Camera_get_pixelHeight_m722276884_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Camera::get_pixelHeight()");
-	int32_t retVal = _il2cpp_icall_func(__this);
-	return retVal;
 }
 // UnityEngine.RenderTexture UnityEngine.Camera::get_targetTexture()
 extern "C" IL2CPP_METHOD_ATTR RenderTexture_t2108887433 * Camera_get_targetTexture_m2278634983 (Camera_t4157153871 * __this, const RuntimeMethod* method)
@@ -34876,16 +34870,6 @@ extern "C" IL2CPP_METHOD_ATTR bool GameObject_get_activeInHierarchy_m2006396688 
 	bool retVal = _il2cpp_icall_func(__this);
 	return retVal;
 }
-// System.Boolean UnityEngine.GameObject::get_isStatic()
-extern "C" IL2CPP_METHOD_ATTR bool GameObject_get_isStatic_m206749679 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
-{
-	typedef bool (*GameObject_get_isStatic_m206749679_ftn) (GameObject_t1113636619 *);
-	static GameObject_get_isStatic_m206749679_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (GameObject_get_isStatic_m206749679_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::get_isStatic()");
-	bool retVal = _il2cpp_icall_func(__this);
-	return retVal;
-}
 // System.Void UnityEngine.GameObject::set_isStatic(System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void GameObject_set_isStatic_m2301607277 (GameObject_t1113636619 * __this, bool ___value0, const RuntimeMethod* method)
 {
@@ -38219,15 +38203,6 @@ extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetVectorImpl_m12550122
 		return;
 	}
 }
-// System.Void UnityEngine.MaterialPropertyBlock::SetColorImpl(System.Int32,UnityEngine.Color)
-extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetColorImpl_m1051908922 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Color_t2555686324  ___value1, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = ___name0;
-		MaterialPropertyBlock_SetColorImpl_Injected_m258797033(__this, L_0, (Color_t2555686324 *)(&___value1), /*hidden argument*/NULL);
-		return;
-	}
-}
 // System.Void UnityEngine.MaterialPropertyBlock::SetTextureImpl(System.Int32,UnityEngine.Texture)
 extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetTextureImpl_m2943090108 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method)
 {
@@ -38348,17 +38323,6 @@ extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetVector_m3008712437 (
 		return;
 	}
 }
-// System.Void UnityEngine.MaterialPropertyBlock::SetColor(System.String,UnityEngine.Color)
-extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetColor_m3590470453 (MaterialPropertyBlock_t3213117958 * __this, String_t* ___name0, Color_t2555686324  ___value1, const RuntimeMethod* method)
-{
-	{
-		String_t* L_0 = ___name0;
-		int32_t L_1 = Shader_PropertyToID_m1030499873(NULL /*static, unused*/, L_0, /*hidden argument*/NULL);
-		Color_t2555686324  L_2 = ___value1;
-		MaterialPropertyBlock_SetColorImpl_m1051908922(__this, L_1, L_2, /*hidden argument*/NULL);
-		return;
-	}
-}
 // System.Void UnityEngine.MaterialPropertyBlock::SetTexture(System.String,UnityEngine.Texture)
 extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetTexture_m3017316857 (MaterialPropertyBlock_t3213117958 * __this, String_t* ___name0, Texture_t3661962703 * ___value1, const RuntimeMethod* method)
 {
@@ -38377,15 +38341,6 @@ extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetVectorImpl_Injected_
 	static MaterialPropertyBlock_SetVectorImpl_Injected_m1188344249_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (MaterialPropertyBlock_SetVectorImpl_Injected_m1188344249_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MaterialPropertyBlock::SetVectorImpl_Injected(System.Int32,UnityEngine.Vector4&)");
-	_il2cpp_icall_func(__this, ___name0, ___value1);
-}
-// System.Void UnityEngine.MaterialPropertyBlock::SetColorImpl_Injected(System.Int32,UnityEngine.Color&)
-extern "C" IL2CPP_METHOD_ATTR void MaterialPropertyBlock_SetColorImpl_Injected_m258797033 (MaterialPropertyBlock_t3213117958 * __this, int32_t ___name0, Color_t2555686324 * ___value1, const RuntimeMethod* method)
-{
-	typedef void (*MaterialPropertyBlock_SetColorImpl_Injected_m258797033_ftn) (MaterialPropertyBlock_t3213117958 *, int32_t, Color_t2555686324 *);
-	static MaterialPropertyBlock_SetColorImpl_Injected_m258797033_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (MaterialPropertyBlock_SetColorImpl_Injected_m258797033_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.MaterialPropertyBlock::SetColorImpl_Injected(System.Int32,UnityEngine.Color&)");
 	_il2cpp_icall_func(__this, ___name0, ___value1);
 }
 #ifdef __clang__
@@ -41662,15 +41617,6 @@ extern "C" IL2CPP_METHOD_ATTR void Mesh_MarkDynamicImpl_m206310269 (Mesh_t364896
 	_il2cpp_icall_func = (Mesh_MarkDynamicImpl_m206310269_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::MarkDynamicImpl()");
 	_il2cpp_icall_func(__this);
 }
-// System.Void UnityEngine.Mesh::UploadMeshDataImpl(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void Mesh_UploadMeshDataImpl_m755635474 (Mesh_t3648964284 * __this, bool ___markNoLongerReadable0, const RuntimeMethod* method)
-{
-	typedef void (*Mesh_UploadMeshDataImpl_m755635474_ftn) (Mesh_t3648964284 *, bool);
-	static Mesh_UploadMeshDataImpl_m755635474_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Mesh_UploadMeshDataImpl_m755635474_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Mesh::UploadMeshDataImpl(System.Boolean)");
-	_il2cpp_icall_func(__this, ___markNoLongerReadable0);
-}
 // System.Void UnityEngine.Mesh::CombineMeshesImpl(UnityEngine.CombineInstance[],System.Boolean,System.Boolean,System.Boolean)
 extern "C" IL2CPP_METHOD_ATTR void Mesh_CombineMeshesImpl_m64868513 (Mesh_t3648964284 * __this, CombineInstanceU5BU5D_t4267154537* ___combine0, bool ___mergeSubMeshes1, bool ___useMatrices2, bool ___hasLightmapData3, const RuntimeMethod* method)
 {
@@ -42976,26 +42922,6 @@ extern "C" IL2CPP_METHOD_ATTR void Mesh_MarkDynamic_m813264685 (Mesh_t3648964284
 	}
 
 IL_0012:
-	{
-		return;
-	}
-}
-// System.Void UnityEngine.Mesh::UploadMeshData(System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void Mesh_UploadMeshData_m969465843 (Mesh_t3648964284 * __this, bool ___markNoLongerReadable0, const RuntimeMethod* method)
-{
-	{
-		bool L_0 = Mesh_get_canAccess_m2239225054(__this, /*hidden argument*/NULL);
-		if (!L_0)
-		{
-			goto IL_0013;
-		}
-	}
-	{
-		bool L_1 = ___markNoLongerReadable0;
-		Mesh_UploadMeshDataImpl_m755635474(__this, L_1, /*hidden argument*/NULL);
-	}
-
-IL_0013:
 	{
 		return;
 	}

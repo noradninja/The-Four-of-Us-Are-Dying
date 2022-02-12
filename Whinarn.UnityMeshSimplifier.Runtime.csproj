@@ -53,28 +53,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\BlendShape.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Components\LODBackupComponent.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Components\LODGeneratorHelper.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\LODGenerator.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\LODLevel.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\MeshCombiner.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\MeshSimplifier.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\SimplificationOptions.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\BlendShapeContainer.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\BlendShapeFrameContainer.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\BorderVertex.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Edge.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Ref.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\ToleranceSphere.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Triangle.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\UVChannels.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Vertex.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\MathHelper.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\MeshUtils.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\ResizableArray.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\SymmetricMatrix.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\Vector3d.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\BlendShape.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Components\LODBackupComponent.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Components\LODGeneratorHelper.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\LODGenerator.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\LODLevel.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\MeshCombiner.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\MeshSimplifier.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\SimplificationOptions.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\BlendShapeContainer.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\BlendShapeFrameContainer.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\BorderVertex.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Edge.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Ref.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\ToleranceSphere.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Triangle.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\UVChannels.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Structures\Vertex.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\MathHelper.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\MeshUtils.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\ResizableArray.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\SymmetricMatrix.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Runtime\Utility\Vector3d.cs" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AIModule.dll</HintPath>
  </Reference>

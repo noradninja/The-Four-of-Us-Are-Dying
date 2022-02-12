@@ -53,8 +53,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Editor\LODGeneratorHelperEditor.cs" />
-     <Compile Include="Assets\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Editor\SerializedPropertyExtensions.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Editor\LODGeneratorHelperEditor.cs" />
+     <Compile Include="Assets\Addons\PolyFew\ThirdParty\Whinarn_UnityMeshSimplifier\Editor\SerializedPropertyExtensions.cs" />
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity2018/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AIModule.dll</HintPath>
  </Reference>
