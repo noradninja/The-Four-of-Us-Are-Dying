@@ -2372,6 +2372,7 @@ GameObject:
   - component: {fileID: 121908233}
   - component: {fileID: 121908229}
   - component: {fileID: 121908228}
+  - component: {fileID: 121908234}
   - component: {fileID: 121908232}
   - component: {fileID: 121908235}
   - component: {fileID: 121908227}
@@ -2464,7 +2465,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee4ab9821096c489f84e50f35b7b9644, type: 3}
   m_Name: 
@@ -2624,6 +2625,19 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: d381d4349e5cfc24c93bb6280e373058, type: 2}
   Sharpness: 4
   Threshold: 0.1
+--- !u!114 &121908234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121908223}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 422e4fa7307243b4da3cfa7cbc51497c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
+  myLight: {fileID: 489463876}
 --- !u!114 &121908235
 MonoBehaviour:
   m_ObjectHideFlags: 0

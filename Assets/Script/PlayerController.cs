@@ -125,6 +125,8 @@ public class PlayerController : MonoBehaviour
             BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
             SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
             SSAOScript.GetComponent<FXAA>().enabled = true;
+            SSAOScript.GetComponent<Crepuscular>().enabled = true;
+            SSAOScript.GetComponent<Kino.Fog>().enabled = true;
             enabledText.GetComponent<Text>().color = Color.green;
             enabledText.GetComponent<Text>().text = ("Enabled");
          }

@@ -16,7 +16,11 @@
 		ZWrite On
 		Cull Off
 		Blend One OneMinusSrcAlpha //because we are going to clip at the end
-		
+		Stencil
+		{
+                 Ref 2
+                 Pass Replace
+		} 
 		
 		// Non-lightmapped
 		Pass {
@@ -34,7 +38,11 @@
 
 			ENDCG
 		}
-
+		Stencil
+		{
+                 Ref 2
+                 Pass Replace
+		} 
 		// Lightmapped
 		Pass {
 			Tags { "LightMode" = "VertexLM" }

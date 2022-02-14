@@ -58,6 +58,7 @@
      <Compile Include="Assets\Addons\Bloom (Titles)\Scripts\BloomQuad.cs" />
      <Compile Include="Assets\Addons\Bloom (Titles)\Scripts\RenderTextureExtensions.cs" />
      <Compile Include="Assets\Addons\Bloom (Titles)\Scripts\RenderTextureUtils.cs" />
+     <Compile Include="Assets\Addons\CrepuscularRays\Crepuscular.cs" />
      <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Decal.cs" />
      <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\DecalBuilder.cs" />
      <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\DecalUtils.cs" />
@@ -241,6 +242,7 @@
      <None Include="Assets\___www.unityassetcollection.com___.txt" />
      <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
+     <None Include="Assets\Addons\CrepuscularRays\CrepuscularRayShader.shader" />
      <None Include="Assets\_www.unityassetcollection.com.txt" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
@@ -250,6 +252,7 @@
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardInput_VC.cginc" />
      <None Include="Assets\Addons\Magic Light Probes\Shaders\MLPVolumeBounds.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\Addons\CrepuscularRays\Readme.txt" />
      <None Include="Assets\Addons\Shaders\sprite.shader" />
      <None Include="Assets\Shader\SSS\SSS_Fast_Clip.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCore_VC.cginc" />
