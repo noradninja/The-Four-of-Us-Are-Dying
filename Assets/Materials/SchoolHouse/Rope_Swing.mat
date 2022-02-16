@@ -425,9 +425,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0
-    - _leaves_wiggle_disp: 0
-    - _leaves_wiggle_speed: 0
+    - _influence: 0.1
+    - _leaves_wiggle_disp: 0.1
+    - _leaves_wiggle_speed: 0.05
     - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -461,4 +461,4 @@ Material:
     - _RimOptions: {r: 0.1, g: 0.5, b: 1, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _wind_dir: {r: 0.5, g: 0.05, b: 0.5, a: 0}

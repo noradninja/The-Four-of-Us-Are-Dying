@@ -31,9 +31,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _Contrast: 1.125
     - _Decay: 1
-    - _Density: 0.075
-    - _Exposure: 0.55
+    - _Density: 0.1
+    - _Exposure: 0.5
     - _NumSamples: 10
-    - _Weight: 1
+    - _Parameter: 1
+    - _Weight: 2
     m_Colors: []

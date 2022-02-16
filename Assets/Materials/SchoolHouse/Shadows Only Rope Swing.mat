@@ -420,9 +420,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0
-    - _leaves_wiggle_disp: 0
-    - _leaves_wiggle_speed: 0
+    - _influence: 0.1
+    - _leaves_wiggle_disp: 0.1
+    - _leaves_wiggle_speed: 0.05
     - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

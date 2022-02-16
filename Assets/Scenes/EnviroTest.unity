@@ -736,17 +736,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40047188}
   m_Mesh: {fileID: 4300070, guid: 779311d29d22a0943b2a2b2b02324960, type: 3}
---- !u!114 &40047192
-MonoBehaviour:
+--- !u!136 &40047192
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 40047188}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Radius: 0.0058402726
+  m_Height: 0.040382195
+  m_Direction: 1
+  m_Center: {x: 0, y: -0.052706815, z: 0}
 --- !u!1 &43317701 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: dd46a9c7652d10048969eedc831a766d,
@@ -2369,12 +2371,11 @@ GameObject:
   - component: {fileID: 121908224}
   - component: {fileID: 121908230}
   - component: {fileID: 121908231}
-  - component: {fileID: 121908233}
   - component: {fileID: 121908229}
+  - component: {fileID: 121908233}
   - component: {fileID: 121908228}
-  - component: {fileID: 121908234}
-  - component: {fileID: 121908232}
   - component: {fileID: 121908235}
+  - component: {fileID: 121908234}
   - component: {fileID: 121908227}
   m_Layer: 10
   m_Name: Main Camera
@@ -2595,22 +2596,6 @@ Behaviour:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
   m_Enabled: 0
---- !u!114 &121908232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4cb4d9bd051a71f48a18edd27bce7c19, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  threshold: 0.25
-  intensity: 0.5
-  blurSize: 0.5
-  blurIterations: 1
-  fastBloomMaterial: {fileID: 2100000, guid: 221340b8b5ad10940ba1646f87e3770c, type: 2}
 --- !u!114 &121908233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2637,7 +2622,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
-  myLight: {fileID: 489463876}
+  mainLight: {fileID: 489463876}
+  blurSize: 4
+  resolutionDivisor: 7
 --- !u!114 &121908235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18465,7 +18452,6 @@ GameObject:
   - component: {fileID: 531122079}
   - component: {fileID: 531122081}
   - component: {fileID: 531122080}
-  - component: {fileID: 531122082}
   m_Layer: 9
   m_Name: Rope_Swing_Shadows
   m_TagString: Untagged
@@ -18531,17 +18517,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 531122078}
   m_Mesh: {fileID: 4300070, guid: 779311d29d22a0943b2a2b2b02324960, type: 3}
---- !u!114 &531122082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 531122078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &537266550
 GameObject:
   m_ObjectHideFlags: 0

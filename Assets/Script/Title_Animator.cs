@@ -23,7 +23,7 @@ public float fillDelay;
 	// Use this for initialization
 	void Start () {
 		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
-		StartCoroutine(delay(1, 0, 1.0f));
+		StartCoroutine(delay(1, 0, 3.0f));
 	}
 	
 	// Update is called once per frame

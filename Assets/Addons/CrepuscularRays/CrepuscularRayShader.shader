@@ -7,7 +7,7 @@ Shader "Custom/Crepuscular Rays" {
 		_BlurTex("BlurTex (RGB)", 2D) = "white" {}
 		_NumSamples("Number of Samples", Range(0, 1024)) = 128
 		_Density("Density", Range(0, 1)) = 1.0
-		_Weight("Weight", Range(0, 1)) = 1.0
+		_Weight("Weight", Range(0, 2)) = 1.0
 		_Decay("Decay", Range(0, 1)) = 1.0
 		_Exposure("Exposure", Range(0, 1)) = 1.0
 		_Parameter("Kernel Offset", Range(0, 1)) = 1.0
@@ -70,7 +70,7 @@ Shader "Custom/Crepuscular Rays" {
 				// Calculate vector from pixel to light source in screen space.
 				half4 light = half4(_LightPos.xyz,1);
 				half2 deltaTexCoord = (0,0);
-				
+
 				// get our y vector direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
 				if (light.y < 0){
@@ -105,7 +105,8 @@ Shader "Custom/Crepuscular Rays" {
 					// Update exponential decay factor.
 					illuminationDecay *= _Decay;
 				}
-				color = (color.r + color.g+color.b)/3;
+				//drop color
+				color = (color.r + color.g + color.b)/3;
 				// Output final color with a further scale control factor.
 				return half4(color * _Exposure, 1);
 			}

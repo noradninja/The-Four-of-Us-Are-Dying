@@ -123,7 +123,7 @@ public class PlayerController : MonoBehaviour
          if (SSAOScript.GetComponent<FastSSAO>().enabled == false){      
             SSAOScript.GetComponent<FastSSAO>().enabled = true;
             BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-            SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
+            //SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
             SSAOScript.GetComponent<FXAA>().enabled = true;
             SSAOScript.GetComponent<Crepuscular>().enabled = true;
             SSAOScript.GetComponent<Kino.Fog>().enabled = true;
@@ -839,14 +839,14 @@ public class PlayerController : MonoBehaviour
     IEnumerator lerpFocalLength (float startValue, float endValue, float endBloom, float endThreshold, float duration){
        float time = 0.0f;
             while (time < duration){
-                float currentBloom = Camera.GetComponent<FastMobileBloom>().intensity;
-                float currentThreshold = Camera.GetComponent<FastMobileBloom>().threshold;
+                //float currentBloom = Camera.GetComponent<FastMobileBloom>().intensity;
+               // float currentThreshold = Camera.GetComponent<FastMobileBloom>().threshold;
                 float currentValue = Mathf.Lerp (startValue, endValue, time/(duration/4));
-                float bloomIntensity = Mathf.Lerp (currentBloom, endBloom, time/(duration/2));
-                float bloomThreshold = Mathf.Lerp (currentThreshold, endThreshold, time/duration);
+                //float bloomIntensity = Mathf.Lerp (currentBloom, endBloom, time/(duration/2));
+                //float bloomThreshold = Mathf.Lerp (currentThreshold, endThreshold, time/duration);
                 Camera.GetComponent<Kino.Bokeh>().focalLength = currentValue;
-                Camera.GetComponent<FastMobileBloom>().intensity = bloomIntensity;
-                Camera.GetComponent<FastMobileBloom>().threshold = bloomThreshold;
+                //Camera.GetComponent<FastMobileBloom>().intensity = bloomIntensity;
+               // Camera.GetComponent<FastMobileBloom>().threshold = bloomThreshold;
                 time += Time.deltaTime;
                 yield return null;
             }
