@@ -1038,6 +1038,7 @@ extern const Il2CppType TextMesh_t1536577757_0_0_0;
 extern const Il2CppType TextMeshProFloatingText_t845872552_0_0_0;
 extern const Il2CppType Light_t3756812086_0_0_0;
 extern const Il2CppType TextContainer_t97923372_0_0_0;
+extern const Il2CppType PlayerController_t2064355688_0_0_0;
 extern const Il2CppType ConfiguredTaskAwaiter_t107639853_0_0_0;
 extern const Il2CppType TaskAwaiter_1_t1579621299_0_0_0;
 extern const Il2CppType ValueTuple_2_t4134755962_gp_0_0_0_0;
@@ -3945,6 +3946,8 @@ static const RuntimeType* GenInst_Light_t3756812086_0_0_0_Types[] = { (&Light_t3
 extern const Il2CppGenericInst GenInst_Light_t3756812086_0_0_0 = { 1, GenInst_Light_t3756812086_0_0_0_Types };
 static const RuntimeType* GenInst_TextContainer_t97923372_0_0_0_Types[] = { (&TextContainer_t97923372_0_0_0) };
 extern const Il2CppGenericInst GenInst_TextContainer_t97923372_0_0_0 = { 1, GenInst_TextContainer_t97923372_0_0_0_Types };
+static const RuntimeType* GenInst_PlayerController_t2064355688_0_0_0_Types[] = { (&PlayerController_t2064355688_0_0_0) };
+extern const Il2CppGenericInst GenInst_PlayerController_t2064355688_0_0_0 = { 1, GenInst_PlayerController_t2064355688_0_0_0_Types };
 static const RuntimeType* GenInst_RegexOptions_t92845595_0_0_0_Int32_t2950945753_0_0_0_Types[] = { (&RegexOptions_t92845595_0_0_0), (&Int32_t2950945753_0_0_0) };
 extern const Il2CppGenericInst GenInst_RegexOptions_t92845595_0_0_0_Int32_t2950945753_0_0_0 = { 2, GenInst_RegexOptions_t92845595_0_0_0_Int32_t2950945753_0_0_0_Types };
 static const RuntimeType* GenInst_ShadowAlgorithm_t721465368_0_0_0_Int32_t2950945753_0_0_0_Types[] = { (&ShadowAlgorithm_t721465368_0_0_0), (&Int32_t2950945753_0_0_0) };
@@ -4817,7 +4820,7 @@ static const RuntimeType* GenInst_VolumeParameter_1_t4078826557_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t4078826557_0_0_0 = { 1, GenInst_VolumeParameter_1_t4078826557_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t2051106872_0_0_0_Types[] = { (&VolumeParameter_1_t2051106872_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t2051106872_0_0_0 = { 1, GenInst_VolumeParameter_1_t2051106872_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1693] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1694] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_String_t_0_0_0,
@@ -6076,6 +6079,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1693] =
 	&GenInst_TextMeshProFloatingText_t845872552_0_0_0,
 	&GenInst_Light_t3756812086_0_0_0,
 	&GenInst_TextContainer_t97923372_0_0_0,
+	&GenInst_PlayerController_t2064355688_0_0_0,
 	&GenInst_RegexOptions_t92845595_0_0_0_Int32_t2950945753_0_0_0,
 	&GenInst_ShadowAlgorithm_t721465368_0_0_0_Int32_t2950945753_0_0_0,
 	&GenInst_TouchScreenKeyboardType_t1530597702_0_0_0_Int32_t2950945753_0_0_0,

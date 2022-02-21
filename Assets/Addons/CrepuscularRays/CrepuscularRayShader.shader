@@ -1,7 +1,7 @@
 ﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
 
 
-Shader "Custom/Crepuscular Rays" {
+Shader "Lighting/Crepuscular Rays" {
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_BlurTex("BlurTex (RGB)", 2D) = "white" {}
@@ -10,7 +10,7 @@ Shader "Custom/Crepuscular Rays" {
 		_Weight("Weight", Range(0, 2)) = 1.0
 		_Decay("Decay", Range(0, 1)) = 1.0
 		_Exposure("Exposure", Range(0, 1)) = 1.0
-		_Parameter("Kernel Offset", Range(0, 1)) = 1.0
+		//_Parameter("Kernel Offset", Range(0, 5)) = 1.0
 		_Contrast("Contrast", Range(1, 5)) = 1.0
 		
 		}
@@ -70,6 +70,10 @@ Shader "Custom/Crepuscular Rays" {
 				// Calculate vector from pixel to light source in screen space.
 				half4 light = half4(_LightPos.xyz,1);
 				half2 deltaTexCoord = (0,0);
+				
+				if (_LightPos.y > 7){
+					light = half4(_LightPos.x, 7, _LightPos.z,1);
+				}
 
 				// get our y vector direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
@@ -80,6 +84,7 @@ Shader "Custom/Crepuscular Rays" {
 				if (light.y > 0){
 					deltaTexCoord = (i.uv - light.xy);
 				}
+			
 				
 				// Divide by number of samples and scale by control factor.
 				deltaTexCoord *= 1.0f / _NumSamples * _Density;
@@ -96,10 +101,10 @@ Shader "Custom/Crepuscular Rays" {
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
 					half3 sample = tex2D(_MainTex, uv);
-					half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
+					//half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 					// Apply sample attenuation scale/decay factors.
-					sample *= illuminationDecay * (_Weight/ _NumSamples);
-					sample *= depth;
+					sample *= illuminationDecay * (_Weight/ _NumSamples*4);
+					sample *= 5;
 					// Accumulate combined color.
 					color += sample;
 					// Update exponential decay factor.
@@ -108,7 +113,7 @@ Shader "Custom/Crepuscular Rays" {
 				//drop color
 				color = (color.r + color.g + color.b)/3;
 				// Output final color with a further scale control factor.
-				return half4(color * _Exposure, 1);
+				return max(half4(color * _Exposure, 1), 0.125f);
 			}
 /////////////// SGX Horizontal Blur /////////////////////////////		
 		v2f_withBlurCoordsSGX vertBlurHorizontalSGX (appdata_img v)

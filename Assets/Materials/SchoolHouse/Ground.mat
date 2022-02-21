@@ -11,6 +11,7 @@ Material:
   m_ShaderKeywords: SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON
     SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1
     SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 _GLOSSYREFLECTIONS_OFF _NORMALMAP
+    _SPECULARHIGHLIGHTS_OFF
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -227,7 +228,7 @@ Material:
     - _FogOffset: 0
     - _FogToggle: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0
+    - _Glossiness: 0.5
     - _GlossyReflections: 0
     - _IntensityVC: 0
     - _IntersectFold: 0
@@ -419,7 +420,7 @@ Material:
     - _Smoothness2: 1
     - _Smoothness3: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SpecularMapType: 999
     - _SrcBlend: 1
     - _SrcBlendAddPass: 1

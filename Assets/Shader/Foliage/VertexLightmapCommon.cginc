@@ -63,46 +63,52 @@ half _leaves_wiggle_speed;
 half _influence;
 
 
-// vertex shader input data
+// pos shader input data
 struct appdata {
-	half3 vertex : POSITION;
+	half3 pos : POSITION;
 	half3 normal : NORMAL;
 	half3 uv0 : TEXCOORD0;
 	half3 uv1 : TEXCOORD1;
 };
 
-// vertex-to-fragment interpolators
+// pos-to-fragment interpolators
 struct v2f {
-	half4 vertex : SV_POSITION;
+	// half4 pos : SV_POSITION;
 	half4 color : COLOR0;
 	half2 uv0 : TEXCOORD0;
 	half2 uv1 : TEXCOORD1;
-
+	
 
 	#if USING_FOG
             UNITY_FOG_COORDS(3)
 	#endif
+	#if defined(LOD_FADE_CROSSFADE)
+		UNITY_DITHER_CROSSFADE_COORDS
+		UNITY_VPOS_TYPE vpos : VPOS;
+	#else
+		half4 pos : SV_POSITION;
+	#endif
 
 };
 
-// vertex shader
+// pos shader
 v2f vert(appdata v) {
 
 	v2f o;
 
-	half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
-	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.vertex, 1) ).xyz;
+	half3 worldPos = mul (unity_ObjectToWorld, half4(v.pos, 1) ).xyz;
+	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1) ).xyz;
 	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
-	//half3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
+	//half3 viewDir = normalize(ObjSpaceViewDir(v.pos));
  	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
  	half rimWidth = 1;
 
 	//Leaf Movement and Wiggle
-	( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-	(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-	(v.vertex.z += cos(_Time.z * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) ); //z
+	( (v.pos.x += cos(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
+	(v.pos.y += sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
+	(v.pos.z += cos(_Time.z * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) ); //z
                     
-	// vertex lighting
+	// pos lighting
 	half4 color = half4(0, 0, 0, 1);
 
 	#if defined(AMBIENT_ON) || !defined(CUSTOM_LIGHTMAPPED)
@@ -122,10 +128,9 @@ v2f vert(appdata v) {
 		o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
 	#endif
 
-	// transform position
-	o.vertex = UnityObjectToClipPos(v.vertex);
-	
-	UNITY_TRANSFER_FOG(o,o.vertex);
+	o.pos = UnityObjectToClipPos(v.pos);
+
+	UNITY_TRANSFER_FOG(o,o.pos);
 
 	return o;
 
@@ -134,27 +139,34 @@ v2f vert(appdata v) {
 // fragment shader
 fixed4 frag(v2f v) : SV_Target {
 
-	half4 vertexLighting = v.color;
+	half4 posLighting = v.color;
 	UNITY_EXTRACT_FOG(v);
 	#if defined(CUSTOM_LIGHTMAPPED)
 		half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
 
 	#if CUSTOM_LIGHTMAPPED == 1
-		half4 lighting = (lightmap * 0.25f) + vertexLighting;
+		half4 lighting = (lightmap * 0.25f) + posLighting;
 	#endif
 
 	#else
-		half4 lighting = vertexLighting;
+		half4 lighting = posLighting;
 	#endif
 		
 		half4 diffuse = tex2D(_MainTex, v.uv0.xy);
 		half4 col = (diffuse * lighting);
+
+	
 		col.a = diffuse.a;
 		clip(col.a - _Cutoff);
-		#if USING_FOG
-			UNITY_APPLY_FOG(v.fogCoord, col);
-		#endif
+
+	#if defined(LOD_FADE_CROSSFADE)
+		UnityApplyDitherCrossFade(v.vpos);
+	#endif
+	
+	#if USING_FOG
+		UNITY_APPLY_FOG(v.fogCoord, col);
+	#endif
 		
 	
-		return col;
+	return col;
 }

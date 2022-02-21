@@ -5219,10 +5219,10 @@ public:
 	Material_t340375123 * ___material_4;
 	// UnityEngine.GameObject Crepuscular::mainLight
 	GameObject_t1113636619 * ___mainLight_5;
-	// System.Single Crepuscular::blurSize
-	float ___blurSize_7;
-	// System.Single Crepuscular::resolutionDivisor
-	float ___resolutionDivisor_8;
+	// System.Int32 Crepuscular::blurSize
+	int32_t ___blurSize_7;
+	// System.Int32 Crepuscular::resolutionDivisor
+	int32_t ___resolutionDivisor_8;
 
 public:
 	inline static int32_t get_offset_of_material_4() { return static_cast<int32_t>(offsetof(Crepuscular_t186719810, ___material_4)); }
@@ -5244,17 +5244,17 @@ public:
 	}
 
 	inline static int32_t get_offset_of_blurSize_7() { return static_cast<int32_t>(offsetof(Crepuscular_t186719810, ___blurSize_7)); }
-	inline float get_blurSize_7() const { return ___blurSize_7; }
-	inline float* get_address_of_blurSize_7() { return &___blurSize_7; }
-	inline void set_blurSize_7(float value)
+	inline int32_t get_blurSize_7() const { return ___blurSize_7; }
+	inline int32_t* get_address_of_blurSize_7() { return &___blurSize_7; }
+	inline void set_blurSize_7(int32_t value)
 	{
 		___blurSize_7 = value;
 	}
 
 	inline static int32_t get_offset_of_resolutionDivisor_8() { return static_cast<int32_t>(offsetof(Crepuscular_t186719810, ___resolutionDivisor_8)); }
-	inline float get_resolutionDivisor_8() const { return ___resolutionDivisor_8; }
-	inline float* get_address_of_resolutionDivisor_8() { return &___resolutionDivisor_8; }
-	inline void set_resolutionDivisor_8(float value)
+	inline int32_t get_resolutionDivisor_8() const { return ___resolutionDivisor_8; }
+	inline int32_t* get_address_of_resolutionDivisor_8() { return &___resolutionDivisor_8; }
+	inline void set_resolutionDivisor_8(int32_t value)
 	{
 		___resolutionDivisor_8 = value;
 	}

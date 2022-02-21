@@ -32,8 +32,12 @@
 			#pragma multi_compile_fog
 			// Compile specialized variants for when positional (point/spot) and spot lights are present
 			#pragma multi_compile __ POINT SPOT
-			#pragma multi_compile _ LOD_FADE_CROSSFADE
+			#pragma multi_compile __ LOD_FADE_CROSSFADE
 			#include "VertexLightmapCommon.cginc"
+			#include "UnityCG.cginc"
+			#include "UnityStandardConfig.cginc"
+			#include "UnityPBSLighting.cginc" // TBD: remove
+			#include "UnityStandardUtils.cginc"
 		
 
 			ENDCG
@@ -55,9 +59,14 @@
 			// Compile specialized variants for when positional (point/spot) and spot lights are present
 			#pragma multi_compile __ POINT SPOT
 			#pragma multi_compile __ AMBIENT_ON
+			#pragma multi_compile __ LOD_FADE_CROSSFADE
 			#define CUSTOM_LIGHTMAPPED 1 
 			#include "VertexLightmapCommon.cginc"
 			#include "UnityCG.cginc"
+			#include "UnityCG.cginc"
+			#include "UnityStandardConfig.cginc"
+			#include "UnityPBSLighting.cginc" // TBD: remove
+			#include "UnityStandardUtils.cginc"
 			#define _ALPHATEST_ON
 
 			ENDCG
@@ -71,8 +80,12 @@
             #pragma fragment frag
             #pragma multi_compile_shadowcaster
 			#pragma multi_compile_fog
-			#pragma multi_compile _ LOD_FADE_CROSSFADE
+			#pragma multi_compile __ LOD_FADE_CROSSFADE
             #include "UnityCG.cginc"
+			#include "UnityCG.cginc"
+			#include "UnityStandardConfig.cginc"
+			#include "UnityPBSLighting.cginc" // TBD: remove
+			#include "UnityStandardUtils.cginc"
 			
 			struct v2f {
 				V2F_SHADOW_CASTER;
@@ -115,8 +128,13 @@
 			uniform fixed _Cutoff;
 
 			float4 frag( v2f i ) : SV_Target
-			{
+sha			{
 				fixed4 texcol = tex2D( _MainTex, i.uv );
+				// #if LOD_FADE_CROSSFADE 
+				// 	texcol.a =  texcol.a  * unity_LODFade.x;
+				// #else
+				// 	texcol.a = texcol.a;
+				// #endif
 				clip( texcol.a - _Cutoff );
 
 				SHADOW_CASTER_FRAGMENT(i);

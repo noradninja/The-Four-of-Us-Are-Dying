@@ -10,10 +10,12 @@ public class Crepuscular : MonoBehaviour
 	public Material material;
 	public GameObject mainLight;
 	static readonly int blurTexString = Shader.PropertyToID("_BlurTex");
-	[Range(0.0f, 20.0f)]
-	public float blurSize = 3.0f;
-	[Range(1.0f, 8.0f)]
-	public float resolutionDivisor = 1.0f;
+	[Range(0, 20)]
+	public int blurSize = 3;
+	[Range(1, 16)]
+	public int resolutionDivisor = 1;
+	
+
 
 	// Start is called before the first frame update
 	void Start()
@@ -21,7 +23,7 @@ public class Crepuscular : MonoBehaviour
       
     }
 
-
+	// [ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		var blurTex = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /resolutionDivisor), Mathf.RoundToInt(Screen.height /resolutionDivisor), 0, source.format);
@@ -29,8 +31,8 @@ public class Crepuscular : MonoBehaviour
 		Graphics.Blit(source, blurTex, material, 0);
 		material.SetTexture(blurTexString, blurTex);
 
-		float widthMod = 1.0f / 8.0f;
-
+		float widthMod = 1.0f / resolutionDivisor;
+	if (blurSize > 0){
 		for(int i = 0; i < 1; i++) {
                 float iterationOffs = (i*1.0f);
                 material.SetVector ("_Parameter", new Vector4 (blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
@@ -49,6 +51,7 @@ public class Crepuscular : MonoBehaviour
                 RenderTexture.ReleaseTemporary (blurTex);
                 blurTex = rt2;
             }
+	}
 		RenderTexture.ReleaseTemporary(blurTex);
 		Graphics.Blit(source, destination, material, 3);
 	}

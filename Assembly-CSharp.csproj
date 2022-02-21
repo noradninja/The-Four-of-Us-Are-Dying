@@ -184,6 +184,7 @@
      <Compile Include="Assets\Script\Rotate_Object.cs" />
      <Compile Include="Assets\Script\SetShadowResolution.cs" />
      <Compile Include="Assets\Script\Title_Animator.cs" />
+     <Compile Include="Assets\Script\UI_Fader.cs" />
      <Compile Include="Assets\Shader\Dither\DitherEffect.cs" />
      <Compile Include="Assets\Shader\ScreenSpaceColoredFog.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
@@ -256,6 +257,7 @@
      <None Include="Assets\Addons\Shaders\sprite.shader" />
      <None Include="Assets\Shader\SSS\SSS_Fast_Clip.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCore_VC.cginc" />
+     <None Include="Assets\Shader\VertexLightmap.shader" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicBRDF.cginc" />
      <None Include="Assets\Addons\Kino\Bokeh\Shader\DiskBlur.cginc" />
      <None Include="Assets\Addons\Kino\Bokeh\Shader\Bokeh.shader" />
@@ -333,6 +335,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Shader\Light &amp; Shadow\ShadowCaster.shader" />
      <None Include="Assets\Addons\Shaders\explosion.shader" />
+     <None Include="Assets\Shader\VertexLightmapCommon.cginc" />
      <None Include="Assets\Addons\Shaders\tubeLum.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForward.cginc" />
