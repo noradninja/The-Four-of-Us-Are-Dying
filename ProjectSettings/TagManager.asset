@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ShadowCaster
   - IOC
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -27,7 +28,7 @@ TagManager:
   - Inventory
   - Map_Overlay
   - Road
-  - 
+  - Enemy
   - 
   - 
   - 

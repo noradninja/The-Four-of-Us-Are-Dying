@@ -124,7 +124,6 @@ GameObject:
   - component: {fileID: 65476714}
   - component: {fileID: 65476716}
   - component: {fileID: 65476713}
-  - component: {fileID: 65476715}
   m_Layer: 0
   m_Name: Fadeout_Mask
   m_TagString: Untagged
@@ -183,20 +182,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 65476711}
   m_CullTransparentMesh: 1
---- !u!114 &65476715
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 65476711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed76e269c2f9c154d86a4baa6e8aefad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  duration: 2
-  fadeImage: {fileID: 65476713}
-  Target: {fileID: 0}
 --- !u!114 &65476716
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,6 +275,7 @@ GameObject:
   - component: {fileID: 417573618}
   - component: {fileID: 417573617}
   - component: {fileID: 417573616}
+  - component: {fileID: 417573619}
   m_Layer: 0
   m_Name: Start_Text_Mask_Fader
   m_TagString: Untagged
@@ -329,7 +315,7 @@ CanvasRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 417573615}
-  m_CullTransparentMesh: 1
+  m_CullTransparentMesh: 0
 --- !u!224 &417573618
 RectTransform:
   m_ObjectHideFlags: 0
@@ -348,6 +334,20 @@ RectTransform:
   m_AnchoredPosition: {x: 12, y: -221}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &417573619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 417573615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed76e269c2f9c154d86a4baa6e8aefad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 2
+  fadeImage: {fileID: 65476713}
+  Target: {fileID: 417573616}
 --- !u!1 &420257347
 GameObject:
   m_ObjectHideFlags: 0

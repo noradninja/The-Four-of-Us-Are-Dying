@@ -87,7 +87,7 @@ public float fillDelay;
 				yield return null;
 			}
 			fadeImage3.color = endValue;
-			fadeImage3.gameObject.SetActive(false);
+			//fadeImage3.gameObject.SetActive(false);
 		}
 
 }

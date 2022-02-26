@@ -7,7 +7,7 @@ public class FadeIn : MonoBehaviour {
 
 	public float duration = 2.0f;
 	public RawImage fadeImage;
-	public GameObject Target;
+	public RawImage Target;
 	
 	private bool ignore = true;
 	private const string joystick1 = "joystick button ";
@@ -20,7 +20,7 @@ public class FadeIn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(Input.GetKeyDown(joystick1 + CROSS)){
+		if(Input.GetKeyDown(joystick1 + CROSS) && Target.color.a <= 0.01f){
 			StartCoroutine(fade(new Color(0,0,0,0),new Color (0,0,0,1), duration));
 			//SceneManager.LoadSceneAsync("EnviroTest");		
 		}

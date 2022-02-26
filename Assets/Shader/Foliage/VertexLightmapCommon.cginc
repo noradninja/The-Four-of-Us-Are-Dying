@@ -6,6 +6,12 @@
 #include "Lighting.cginc"
 #include "UnityShadowLibrary.cginc"
 
+#include "UnityStandardConfig.cginc"
+#include "UnityPBSLighting.cginc"
+#include "UnityStandardUtils.cginc"
+#include "UnityGBuffer.cginc"
+#include "UnityStandardBRDF.cginc"
+
 #define USING_FOG (defined(FOG_LINEAR) || defined(FOG_EXP) || defined(FOG_EXP2))
 // ES2.0 can not do loops with non-constant-expression iteration counts :(
 #if defined(SHADER_API_GLES)
@@ -73,21 +79,16 @@ struct appdata {
 
 // pos-to-fragment interpolators
 struct v2f {
-	// half4 pos : SV_POSITION;
+	half4 pos : SV_POSITION;
 	half4 color : COLOR0;
 	half2 uv0 : TEXCOORD0;
 	half2 uv1 : TEXCOORD1;
+	half4 screenPosition : TEXCOORD2;
 	
-
 	#if USING_FOG
             UNITY_FOG_COORDS(3)
 	#endif
-	#if defined(LOD_FADE_CROSSFADE)
-		UNITY_DITHER_CROSSFADE_COORDS
-		UNITY_VPOS_TYPE vpos : VPOS;
-	#else
-		half4 pos : SV_POSITION;
-	#endif
+
 
 };
 
@@ -99,7 +100,6 @@ v2f vert(appdata v) {
 	half3 worldPos = mul (unity_ObjectToWorld, half4(v.pos, 1) ).xyz;
 	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1) ).xyz;
 	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
-	//half3 viewDir = normalize(ObjSpaceViewDir(v.pos));
  	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
  	half rimWidth = 1;
 
@@ -127,9 +127,10 @@ v2f vert(appdata v) {
 	#if defined(CUSTOM_LIGHTMAPPED)
 		o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
 	#endif
-
 	o.pos = UnityObjectToClipPos(v.pos);
-
+	o.screenPosition = ComputeScreenPos(o.pos);
+	
+	
 	UNITY_TRANSFER_FOG(o,o.pos);
 
 	return o;
@@ -151,17 +152,12 @@ fixed4 frag(v2f v) : SV_Target {
 	#else
 		half4 lighting = posLighting;
 	#endif
-		
+	
 		half4 diffuse = tex2D(_MainTex, v.uv0.xy);
 		half4 col = (diffuse * lighting);
 
-	
 		col.a = diffuse.a;
-		clip(col.a - _Cutoff);
-
-	#if defined(LOD_FADE_CROSSFADE)
-		UnityApplyDitherCrossFade(v.vpos);
-	#endif
+		clip(col.a - _Cutoff);	
 	
 	#if USING_FOG
 		UNITY_APPLY_FOG(v.fogCoord, col);

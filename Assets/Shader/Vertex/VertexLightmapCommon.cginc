@@ -77,7 +77,11 @@ struct v2f {
 	fixed fog : TEXCOORD1;
 #endif
 #endif
-	float4 pos : SV_POSITION;
+	#if defined(LOD_FADE_CROSSFADE)
+		UNITY_VPOS_TYPE vpos : VPOS;
+	#else
+		float4 pos : SV_POSITION;
+	#endif
 };
 
 // vertex shader
@@ -118,7 +122,7 @@ v2f vert(appdata IN) {
 // textures
 sampler2D_half _MainTex;
 half4 _Color;
-
+half _Cutoff;
 // fragment shader
 fixed4 frag(v2f IN) : SV_Target {
 	half4 vertexLighting = IN.color * 2.0f;
@@ -139,12 +143,17 @@ fixed4 frag(v2f IN) : SV_Target {
 	half4 diffuse = tex2D(_MainTex, IN.uv0.xy);
 
 	half4 color = diffuse * lighting;
-	color.a = 1;
+	
 	
 	// fog
 	#if USING_FOG
 	color.rgb = lerp(unity_FogColor.rgb, color.rgb, IN.fog);
 	#endif
+	#if defined(LOD_FADE_CROSSFADE)
+		UnityApplyDitherCrossFade(i.vpos);
+	#endif
+				clip( color.a - _Cutoff );
+
 	
 	return color;
 }

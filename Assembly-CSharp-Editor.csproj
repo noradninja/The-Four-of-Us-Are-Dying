@@ -83,6 +83,7 @@
      <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PolyfewMenu.cs" />
      <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PopupToggleTemplate.cs" />
      <Compile Include="Assets\Addons\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
+     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI_Lerp.cs" />
      <Compile Include="Assets\VitaFTPI\Editor\UploadBuild.cs" />

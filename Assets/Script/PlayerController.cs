@@ -94,8 +94,10 @@ public class PlayerController : MonoBehaviour
     public bool isStimulant = false;
     public float cooldownValue;
     public bool delayButton = false;
+    public bool isCharging;
     public GameObject perfOverlay;
     public CanvasGroup UICanvasGroup;
+    public float currentCharge;
 
     
       private void Awake()
@@ -263,7 +265,8 @@ public class PlayerController : MonoBehaviour
 
 //if we add batteries
         if (Input.GetKeyDown(VITA + SQUARE)  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
-        {   
+        {  
+            StopAllCoroutines(); 
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
         if (flashlightCharge < 1.0f){
@@ -283,14 +286,21 @@ public class PlayerController : MonoBehaviour
             //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
+                    currentCharge = flashlightCharge;
+            // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
                     if (isStimulant && cooldownValue <= stimCooldown){
                         StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
                     }
                     if (!Input.GetKey(VITA + RTRIG)){
-                        StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+                        StartCoroutine(rechargeStamina(((100-stamina)), stamina));
                     }
+                   
                     StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
                     flashlightDisabled = false;
+                }
+                if (isCharging){
+                    currentCharge = flashlightCharge;
+                    StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
                 }
             }
             delayButton = true;
@@ -299,16 +309,21 @@ public class PlayerController : MonoBehaviour
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
+            // if (UICanvasGroup.alpha == 0){
+            //     StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
+            // }
         }
 //if we add battery while 'firing' flashlight
         if (Input.GetKeyDown(VITA + SQUARE)  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
         {   
             StopAllCoroutines();
+            currentCharge = flashlightCharge;
+           // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
             if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             }
             StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, lightDuration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
             if (flashlightCharge < 1.0f){
@@ -327,13 +342,15 @@ public class PlayerController : MonoBehaviour
             //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
+                    currentCharge = flashlightCharge;
+            //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
                     if (isStimulant && cooldownValue <= stimCooldown){
                         StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
                     }
                     StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
                     flashlightDisabled = false;
                     if (!Input.GetKey(VITA + RTRIG)){
-                        StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+                        StartCoroutine(rechargeStamina(((100-stamina)), stamina));
                     }
                 }
             }
@@ -372,17 +389,20 @@ public class PlayerController : MonoBehaviour
 ///////////////////////////LTRIG//////////////////////////////////////
 
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
-        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge < 0.05f)
+        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightDisabled)
         {   
-            flashlightCharge = 0;
+            //flashlightCharge = 0;
+            isCharging = false;
             StartCoroutine(FadeLightStaticInput(colorTransparent, colorStart, 0.25f, 0, 
                                                 5, 40, 40, 0.08f, 0.08f)); //fade in quick
             StopAllCoroutines();
+            // currentCharge = flashlightCharge;
+            // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
             if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             }
              StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
                                                 5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
@@ -394,21 +414,26 @@ public class PlayerController : MonoBehaviour
             && !flashlightDisabled && !flashlightOff)
         {   
             lightFocusing = true;
+            isCharging = false;
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
+           
             StopAllCoroutines();
+            // currentCharge = flashlightCharge;
+            // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
             if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             }
+            //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
                                                 flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(walkLerp(0, 1,  lerpRate));
             
             if (UICanvasGroup.alpha != 1){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f));
+                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
             }
         }
 //change FOV while we hold the L trigger
@@ -419,26 +444,33 @@ public class PlayerController : MonoBehaviour
             if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
         }
 //reset the flashlight and camera when we release the L trigger
-        if (Input.GetKeyUp(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f)
+        if (Input.GetKeyUp(VITA + LTRIG) && hasFlashlight)
         {   
             lightFocusing = false;
             StopAllCoroutines();
+            currentCharge = flashlightCharge;
+            
+            if(!isCharging){
+                StartCoroutine(rechargeFlashlight (currentCharge,  10f));
+            }
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
-            if (UICanvasGroup.alpha != 0 && stamina >= 95.0f){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f));
+            if (UICanvasGroup.alpha != 0 && stamina >= 95.0f  && !isStimulant && !isCharging){
+                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
             }
             if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             }
-            float currentIntensity = flashlight.intensity;
-            float currentAngle = flashlight.spotAngle;
-            float currentSize = lightShaft.transform.localScale.x;
-            Color currentColor = lightBeam.material.color;
-            StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
-                                                currentAngle, 40, currentSize, 0.08f));
-            StartCoroutine(walkLerp(0, 1,  lerpRate));
+            if (!flashlightDisabled){
+                float currentIntensity = flashlight.intensity;
+                float currentAngle = flashlight.spotAngle;
+                float currentSize = lightShaft.transform.localScale.x;
+                Color currentColor = lightBeam.material.color;
+                StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
+                                                    currentAngle, 40, currentSize, 0.08f));
+            }
+            StartCoroutine(walkLerp(0, 1,  lerpRate));           
         }
     
         ///////////////////////////RTRIG////////////////////////////////////// 
@@ -453,7 +485,7 @@ public class PlayerController : MonoBehaviour
             }
             if (verticalMove != 0 && stamina > 0f && !isStimulant){
                 float oldStamina = stamina;
-                stamina -= 0.25f; //full is 100
+                stamina -= 0.75f; //full is 100
                 if (speed > walkSpeed){ //speed starts at 5
                     speed -= (speed / (8 * stamina)); //speed loss falls off as you lose stamina and slow down  
                 }
@@ -471,6 +503,10 @@ public class PlayerController : MonoBehaviour
         {   
             isRunning = true;
             StopAllCoroutines();
+            if (isCharging){
+                currentCharge = flashlightCharge;
+                StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+            }
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
@@ -482,7 +518,7 @@ public class PlayerController : MonoBehaviour
             walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
             StartCoroutine(walkLerp(0, 1,  lerpRate));
             if (UICanvasGroup.alpha != 1){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f));
+                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
             }
             
         }
@@ -490,11 +526,15 @@ public class PlayerController : MonoBehaviour
         {   
             isRunning = false;
             StopAllCoroutines();
+            if (isCharging){
+                currentCharge = flashlightCharge;
+                StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+            }
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
             speed = walkSpeed;
-            StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+            StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
             lerpRate = 0.55f;
             StartCoroutine(walkLerp(0, 1,  lerpRate));   
@@ -503,11 +543,11 @@ public class PlayerController : MonoBehaviour
             lightRig.transform.localRotation = savedRotation;
             lightRig.transform.localPosition = savedPosition;
             delayButton = false;
-            if (UICanvasGroup.alpha != 0 && stamina >= 95.0f){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f));
+            if (UICanvasGroup.alpha != 0 && stamina >= 95.0f  && !isStimulant && !isCharging){
+                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
             }
         }
-        else if (!Input.GetKey(VITA + RTRIG) && (!Input.GetKey(VITA + LTRIG)) && (!Input.GetKeyDown(VITA + SQUARE)))
+        if (!Input.GetKey(VITA + RTRIG) && (!Input.GetKey(VITA + LTRIG)) && (!Input.GetKeyDown(VITA + SQUARE)))
         {
             if (camObject.fieldOfView > 40 && camObject.fieldOfView != 40){
                 camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
@@ -515,9 +555,14 @@ public class PlayerController : MonoBehaviour
             if (camObject.fieldOfView < 40 && camObject.fieldOfView != 40){
                 camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32;
             }
-            if (UICanvasGroup.alpha != 0 && stamina >= 95.0f){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f));
+            if (UICanvasGroup.alpha != 0 && stamina >= 95.0f && !isStimulant && !isCharging){
+                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
             }
+            // if (!isCharging && lightCharge != 100){
+            //     currentCharge = flashlightCharge;
+            // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+            // }
+        
         }
    
     }
@@ -814,7 +859,8 @@ public class PlayerController : MonoBehaviour
         }
 	}
 
-IEnumerator fadeAlpha (float startValue, float endValue, float duration){
+IEnumerator fadeAlpha (float startValue, float endValue, float duration, float waitTime){
+        yield return new WaitForSeconds(waitTime);
         float time = 0;
         while (time <= duration){
             float swap = Mathf.Lerp(startValue, endValue, time/duration);
@@ -839,7 +885,7 @@ IEnumerator fadeAlpha (float startValue, float endValue, float duration){
             cooldownValue = stimCooldown;
             StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f, 0.20f, 2.0f));
             if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(rechargeDelay, stamina));
+                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             }
             isStimulant = false;           
     }
@@ -850,13 +896,40 @@ IEnumerator fadeAlpha (float startValue, float endValue, float duration){
             if (stamina > 97){
                 stamina = 100;
             }
-            currentStamina = Mathf.Lerp (currentStamina, 100f, time / (duration * 50f) );
-            staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp((currentStamina/100), 1, time / (duration * 50f));
+            currentStamina = Mathf.Lerp (currentStamina, 100f, time / (duration * 10f) );
+            staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp((currentStamina/100), 1, time / (duration * 10f));
             time += Time.deltaTime;
             stamina = currentStamina;
             yield return null;
         }
         stamina = 100f;
+    }
+      IEnumerator rechargeFlashlight(float currentCharge, float duration){
+        float time = 0.0f;
+        isCharging = true;
+        //yield return new WaitForSeconds(2f); //delay before charge happens
+        while (time < duration){
+            // if (lightChargeObject.GetComponent<Image>().fillAmount > 0.97f){
+            //     flashlightCharge = 1;
+            // }
+            lightCharge = Mathf.Lerp (currentCharge, 100f, time / duration );
+            lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 1, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        lightCharge = 100;
+        lightChargeObject.GetComponent<Image>().fillAmount = 1;
+        isCharging = false;
+        flashlightDisabled = false;
+  
+        float currentIntensity = flashlight.intensity;
+        float currentAngle = flashlight.spotAngle;
+        float currentSize = lightShaft.transform.localScale.x;
+        Color currentColor = lightBeam.material.color;
+        StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
+                                            currentAngle, 40, currentSize, 0.08f));
+        StartCoroutine(walkLerp(0, 1,  lerpRate));
+            
     }
    IEnumerator buttonDelayTimer(float delay){
         yield return new WaitForSeconds(delay);

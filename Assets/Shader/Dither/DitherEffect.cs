@@ -9,7 +9,7 @@ public class DitherEffect : MonoBehaviour
     public Material ditherMat;
     [Range(0.0f, 1.0f)]
     public float ditherStrength = 0.1f;
-    [Range(1, 32)]
+    [Range(1, 256)]
     public int colourDepth = 4;
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)

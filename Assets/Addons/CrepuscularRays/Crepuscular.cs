@@ -23,7 +23,7 @@ public class Crepuscular : MonoBehaviour
       
     }
 
-	// [ImageEffectOpaque]
+	[ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		var blurTex = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /resolutionDivisor), Mathf.RoundToInt(Screen.height /resolutionDivisor), 0, source.format);

@@ -29,7 +29,7 @@ Shader "Vita/Standard Mobile"
         _OcclusionStrength("Occlusion Strength", Range(0.0, 1.0)) = 1.0
         //_OcclusionMap("Occlusion", 2D) = "white" {}
 
-        _EmissionColor("Color", Color) = (0,0,0)
+        _EmissionColor("Color", Color) = (0,0,0) 
         _EmissionMap("Emission", 2D) = "white" {}
 
         _DetailMask("Detail Mask", 2D) = "white" {}
@@ -53,7 +53,7 @@ Shader "Vita/Standard Mobile"
     CGINCLUDE
         #define UNITY_SETUP_BRDF_INPUT MetallicSetup
         #define UNITY_NO_FULL_STANDARD_SHADER
-        #define UNITY_BRDF_GGX 1
+       // #define UNITY_BRDF_GGX 1
         //#define DYNAMICLIGHTMAP_ON
         // #define SHADOWS_NATIVE
         //#define SHADOWS_SCREEN
@@ -76,7 +76,7 @@ Shader "Vita/Standard Mobile"
             ZWrite [_ZWrite]
             Cull [_Cull]
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.1
 
             // -------------------------------------
 
@@ -116,7 +116,7 @@ Shader "Vita/Standard Mobile"
             ZTest LEqual
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.1
 
             // -------------------------------------
 
@@ -152,7 +152,7 @@ Shader "Vita/Standard Mobile"
             ZWrite On ZTest LEqual
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.1
 
             #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
             #pragma shader_feature _METALLICGLOSSMAP
