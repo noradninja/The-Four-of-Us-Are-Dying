@@ -2870,8 +2870,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   mainLight: {fileID: 489463876}
-  blurSize: 4
-  resolutionDivisor: 8
+  blurSize: 6
+  resolutionDivisor: 10
 --- !u!114 &121908235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29736,7 +29736,7 @@ MonoBehaviour:
   colorStart: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.4}
   colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0.8509804}
   colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
-  lightDuration: 120
+  lightDuration: 240
   lookSensitivity: 14
   upLimit: 3
   downLimit: 17
@@ -36674,7 +36674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1120093142
 Transform:
   m_ObjectHideFlags: 0

@@ -32,11 +32,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Contrast: 1.25
-    - _Decay: 1
+    - _Decay: 0.975
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.09
-    - _Exposure: 0.03
+    - _Density: 0.08
+    - _Exposure: 0.05
     - _NumSamples: 32
     - _Parameter: 5
     - _Spread: 1

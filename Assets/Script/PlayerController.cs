@@ -158,7 +158,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
             }    
         }
-        if (lightFocusing){
+        if (lightFocusing && currentTarget != null){
             if (currentTarget.GetComponentInParent<EnemyController>().isPlayerNear == true) lightMovement = false;
                  //rotate player
         Vector3 dir = currentTarget.transform.position - transform.position;
