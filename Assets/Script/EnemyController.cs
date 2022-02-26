@@ -10,6 +10,7 @@ public class EnemyController : MonoBehaviour {
 	}
 	public GameObject player;
 	public enemyType thisEnemy;
+	public GameObject targetPoint;
 	public float turnSpeed = 1.0f;
 	public bool isPlayerNear = false;
 	// Use this for initialization
@@ -41,6 +42,8 @@ public class EnemyController : MonoBehaviour {
 			case enemyType.standIn :
 				if (col == player.GetComponent<Collider>()){
 					isPlayerNear = true;
+					player.GetComponent<PlayerController>().currentTarget = targetPoint;
+					
 				}
 
 			break;
@@ -55,6 +58,10 @@ public class EnemyController : MonoBehaviour {
 			case enemyType.standIn :
 				if (col == player.GetComponent<Collider>()){
 					isPlayerNear = false;
+					if (player.GetComponent<PlayerController>().currentTarget == targetPoint){
+						player.GetComponent<PlayerController>().currentTarget = null;
+					}
+					player.GetComponent<PlayerController>().lightMovement = true;
 				}
 			break;
 			case enemyType.type2 :

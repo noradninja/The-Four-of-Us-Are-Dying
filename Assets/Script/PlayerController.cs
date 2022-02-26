@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController characterController;
     public static bool hasFlashlight = false;
     public static bool flashlightOff = true;
+
     public float speed = 3;
     public float stamina = 100f;
     public float rechargeDelay;
@@ -98,6 +99,11 @@ public class PlayerController : MonoBehaviour
     public GameObject perfOverlay;
     public CanvasGroup UICanvasGroup;
     public float currentCharge;
+    public bool lightMovement = true;
+    public GameObject lightRoot;
+    public GameObject currentTarget;
+    public Quaternion storedLightRotation;
+    public Quaternion endLightRotation;
 
     
       private void Awake()
@@ -151,6 +157,20 @@ public class PlayerController : MonoBehaviour
             if (walkStart == 0f){   
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
             }    
+        }
+        if (lightFocusing){
+            if (currentTarget.GetComponentInParent<EnemyController>().isPlayerNear == true) lightMovement = false;
+                 //rotate player
+        Vector3 dir = currentTarget.transform.position - transform.position;
+                Quaternion lookRotation = Quaternion.LookRotation(dir);
+                Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 14f).eulerAngles;
+                transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+        //rotate flashlight
+         Vector3 lightdir = currentTarget.transform.position - lightRoot.transform.position;
+                Quaternion lightlookRotation = Quaternion.LookRotation(lightdir);
+                //lightRoot.transform.Rotate(0,-horizontalCamRotation*(lookSensitivity*2),verticalCamRotation*lookSensitivity);
+                Vector3 lightrotation = Quaternion.Lerp(lightRoot.transform.rotation, lightlookRotation, Time.deltaTime * 21f).eulerAngles;
+                lightRoot.transform.rotation = Quaternion.Euler(lightrotation);
         }
         
     }
@@ -414,7 +434,9 @@ public class PlayerController : MonoBehaviour
             && !flashlightDisabled && !flashlightOff)
         {   
             lightFocusing = true;
+            if (currentTarget != null) lightMovement = false;
             isCharging = false;
+            storedLightRotation = lightRoot.transform.localRotation;
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
            
@@ -435,6 +457,7 @@ public class PlayerController : MonoBehaviour
             if (UICanvasGroup.alpha != 1){
                 StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
             }
+        
         }
 //change FOV while we hold the L trigger
         if (Input.GetKey(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f 
@@ -446,9 +469,10 @@ public class PlayerController : MonoBehaviour
 //reset the flashlight and camera when we release the L trigger
         if (Input.GetKeyUp(VITA + LTRIG) && hasFlashlight)
         {   
-            lightFocusing = false;
+           
             StopAllCoroutines();
             currentCharge = flashlightCharge;
+            //currentTarget = null;
             
             if(!isCharging){
                 StartCoroutine(rechargeFlashlight (currentCharge,  10f));
@@ -470,7 +494,12 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
                                                     currentAngle, 40, currentSize, 0.08f));
             }
-            StartCoroutine(walkLerp(0, 1,  lerpRate));           
+            lightFocusing = false;
+            lightMovement = true;
+            endLightRotation =  lightRoot.transform.localRotation;
+            lightRoot.transform.localRotation = storedLightRotation;
+            StartCoroutine(walkLerp(0, 1,  lerpRate));     
+            StartCoroutine(lerpCam(0.5f));      
         }
     
         ///////////////////////////RTRIG////////////////////////////////////// 
@@ -539,7 +568,7 @@ public class PlayerController : MonoBehaviour
             lerpRate = 0.55f;
             StartCoroutine(walkLerp(0, 1,  lerpRate));   
             animator.SetBool("isRunning", false);
-            lightRig.transform.parent = bodyRig;
+            lightRig.transform.parent = lightRoot.transform;
             lightRig.transform.localRotation = savedRotation;
             lightRig.transform.localPosition = savedPosition;
             delayButton = false;
@@ -581,28 +610,36 @@ public class PlayerController : MonoBehaviour
         horizontalCamRotation = Input.GetAxis("Right Stick Horizontal"); //flashlight l/r
         verticalCamRotation = Input.GetAxis("Right Stick Vertical"); //flashlight/look u/d
     }
+    if (lightMovement){
         transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
         mapIndicator.transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
         Camera.Rotate(verticalCamRotation*lookSensitivity/2,horizontalCamRotation*lookSensitivity/2,0);
         lightRig.transform.Rotate(0,-horizontalCamRotation*(lookSensitivity*2),verticalCamRotation*lookSensitivity);
-
-        Vector3 currentRotation = Camera.localEulerAngles;
         Vector3 currentLightRotation = lightRig.transform.localEulerAngles;
+    if (currentLightRotation.y > 180) {
+        currentLightRotation.y -= 360;
+    }
+        currentLightRotation.x = 0;
+        currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 20, 120); //rain light left/right
+        currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //rain light up/down
+        lightRig.transform.localRotation = Quaternion.Euler(currentLightRotation);
+    }
 
+   
+        
+        Vector3 currentRotation = Camera.localEulerAngles;
+       
         if (currentRotation.x > 180) currentRotation.x -= 360;
         if (currentRotation.y > 180) currentRotation.y -= 360;
         currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit); //rain camera up/down
         currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //rain camera left/right
         currentRotation.z = 0;
 
-        if (currentLightRotation.y > 180) currentLightRotation.y -= 360;
-        currentLightRotation.x = 0;
-        currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 40, 120); //rain light left/right
-        currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //rain light up/down
+        
 
     //apply the rotations
         Camera.localRotation = Quaternion.Euler(currentRotation);
-        lightRig.transform.localRotation = Quaternion.Euler(currentLightRotation);
+       
      
         if (animator.GetBool("isRunning") == false && animator.GetBool("isWalking") == false) {
             if (horizontalRotation == 0 ||verticalMove == 0){
@@ -645,7 +682,11 @@ public class PlayerController : MonoBehaviour
 
     //apply forward/backward/gravity movement  
         Vector3 gravityMove = new Vector3(0, verticalSpeed, 0);  
-        Vector3 move = transform.forward * -verticalMove + transform.right * 0;
+        Vector3 move = new Vector3(0,0,0);
+        if (lightMovement){
+            move = transform.forward * -verticalMove + transform.right * 0;
+        }
+        else move = transform.forward * -verticalMove + transform.right * horizontalRotation;
         characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
         if (animator.GetBool("isRunning") == false ) {
             animator.SetBool("isWalking", verticalMove != 0 || horizontalRotation !=0);
@@ -708,8 +749,9 @@ public class PlayerController : MonoBehaviour
 
     private void Focus()
     {
-        Debug.Log("You're holding down the focus button!");
+        //Debug.Log("You're holding down the focus button!");
         camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32; //zoom in
+
         // animator.SetBool("isRunning", false);
         // animator.SetBool("isWalking", true); 
 
@@ -813,13 +855,13 @@ public class PlayerController : MonoBehaviour
         while (time < duration){
             newY = Mathf.Lerp(currentY, 90, time/duration);
             newX = Mathf.Lerp(currentX, 10, time/duration);
-            newYL = Mathf.Lerp(lightCurrentY, 90, time/duration);
-            newZL = Mathf.Lerp(lightCurrentZ, 180, time/duration);
+            newYL = Mathf.Lerp(lightCurrentY, 75, time/duration);
+            newZL = Mathf.Lerp(lightCurrentZ, 184, time/duration);
 
             if (newY > 89.95 && newY < 90.05) newY = 90;
             if (newX > 9.95f && newX < 10.05f) newX = 10;
-            if (newYL > 89.95f && newYL < 90.05f) newYL = 90;
-            if (newZL > 179.95f && newZL < 180.05f) newZL = 180;
+            if (newYL > 74.95f && newYL < 75.05f) newYL = 75;
+            if (newZL > 183.95f && newZL < 184.05f) newZL = 184;
 
             Vector3 newRotation = new Vector3(newX, newY, Camera.localEulerAngles.z); 
             Vector3 newLightRotation = new Vector3(lightRig.transform.localEulerAngles.x, newYL, newZL);
