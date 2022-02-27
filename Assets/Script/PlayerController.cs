@@ -451,8 +451,9 @@ public class PlayerController : MonoBehaviour
             }
             //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
-                                                flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
+                                                flashlight.intensity, 20, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(walkLerp(0, 1,  lerpRate));
+            if (!isStimulant) StartCoroutine(lerpFocalLength(0.115f, 0.125f, 0.5f, 0.5f, 0.5f));
             
             if (UICanvasGroup.alpha != 1){
                 StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
@@ -499,7 +500,9 @@ public class PlayerController : MonoBehaviour
             endLightRotation =  lightRoot.transform.localRotation;
             lightRoot.transform.localRotation = storedLightRotation;
             StartCoroutine(walkLerp(0, 1,  lerpRate));     
-            StartCoroutine(lerpCam(0.5f));      
+            StartCoroutine(lerpCam(0.5f));  
+            if (!isStimulant) StartCoroutine(lerpFocalLength(0.125f,0.115f, 0.5f, 0.5f, 0.5f));
+    
         }
     
         ///////////////////////////RTRIG////////////////////////////////////// 

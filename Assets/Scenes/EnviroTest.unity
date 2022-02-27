@@ -5,9 +5,9 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 0.5
+    smallestOccluder: 1
     smallestHole: 0.25
-    backfaceThreshold: 5
+    backfaceThreshold: 10
   m_SceneGUID: b10435b05133b0d4f9396fc0b953dcba
   m_OcclusionCullingData: {fileID: 36300000, guid: a30de2bd7dca36644b0c0b29e99d3e6d,
     type: 2}
@@ -15,7 +15,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 1
   m_FogDensity: 0.27
@@ -26437,7 +26437,6 @@ GameObject:
   - component: {fileID: 625471175}
   - component: {fileID: 625471174}
   - component: {fileID: 625471173}
-  - component: {fileID: 625471179}
   m_Layer: 20
   m_Name: Standin_Dummy (3)
   m_TagString: Enemy
@@ -26532,7 +26531,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 625471172}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.191, y: -24.161, z: -2.655}
+  m_LocalPosition: {x: 0.062, y: -24.105, z: 1.018}
   m_LocalScale: {x: 0.48581618, y: 0.48581618, z: 0.48581618}
   m_Children:
   - {fileID: 490854982}
@@ -26541,17 +26540,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!114 &625471179
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 625471172}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &632038523
 GameObject:
   m_ObjectHideFlags: 0
@@ -32260,7 +32248,6 @@ GameObject:
   - component: {fileID: 949359331}
   - component: {fileID: 949359330}
   - component: {fileID: 949359335}
-  - component: {fileID: 949359336}
   m_Layer: 20
   m_Name: Standin_Dummy (2)
   m_TagString: Enemy
@@ -32343,7 +32330,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 949359329}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -0.14, y: -24.113, z: -7.17}
+  m_LocalPosition: {x: -0.172, y: -24.106, z: -7.39}
   m_LocalScale: {x: 0.48581618, y: 0.48581618, z: 0.48581618}
   m_Children:
   - {fileID: 262256242}
@@ -32364,17 +32351,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 5
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &949359336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 949359329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &949794425
 GameObject:
   m_ObjectHideFlags: 0
@@ -36674,7 +36650,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1120093142
 Transform:
   m_ObjectHideFlags: 0
@@ -41434,7 +41410,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1318483819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -47275,13 +47251,13 @@ Transform:
     type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1550034749}
-  m_LocalRotation: {x: 0.5791262, y: -0.33179656, z: 0.6076026, w: -0.43051502}
+  m_LocalRotation: {x: 0.51018417, y: -0.37631217, z: 0.6665434, w: -0.39220035}
   m_LocalPosition: {x: 11.802209, y: 0.95440423, z: 10.461279}
   m_LocalScale: {x: 45.454544, y: 45.454544, z: 45.454533}
   m_Children: []
   m_Father: {fileID: 787849895}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: -5.477, y: 83.711006, z: -114.268005}
+  m_LocalEulerAnglesHint: {x: 5.8240004, y: 78.62601, z: -114.284004}
 --- !u!114 &1550034751
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47362,7 +47338,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 1049600
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -61060,7 +61036,6 @@ GameObject:
   - component: {fileID: 2102746374}
   - component: {fileID: 2102746373}
   - component: {fileID: 2102746372}
-  - component: {fileID: 2102746371}
   m_Layer: 20
   m_Name: Standin_Dummy (4)
   m_TagString: Enemy
@@ -61068,17 +61043,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2102746371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2102746370}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!135 &2102746372
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -61166,7 +61130,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2102746370}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -4.21, y: -24.161, z: -4.43}
+  m_LocalPosition: {x: -7.78, y: -24.11, z: -6.88}
   m_LocalScale: {x: 0.48581618, y: 0.48581618, z: 0.48581618}
   m_Children:
   - {fileID: 353800265}
