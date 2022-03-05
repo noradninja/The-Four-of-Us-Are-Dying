@@ -39,7 +39,7 @@ public class CameraResolutionScaler : MonoBehaviour
 	void Start(){
 		if(!Application.isEditor) {
 			UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToMonoHeap();
-			//Screen.SetResolution(720, 408, true);	
+			Screen.SetResolution(720, 408, true);	
 			QualitySettings.vSyncCount = 2;	
 		}
 		
