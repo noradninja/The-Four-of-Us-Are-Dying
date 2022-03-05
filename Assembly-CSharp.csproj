@@ -246,7 +246,9 @@
      <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
      <None Include="Assets\Addons\CrepuscularRays\CrepuscularRayShader.shader" />
+     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardMeta_VC.cginc" />
      <None Include="Assets\_www.unityassetcollection.com.txt" />
+     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC.shader" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
      <None Include="Assets\Addons\FastSSAO\FastSSAO.shader" />
@@ -260,6 +262,7 @@
      <None Include="Assets\Addons\Shaders\sprite.shader" />
      <None Include="Assets\Shader\SSS\SSS_Fast_Clip.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCore_VC.cginc" />
+     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCoreForward_VC.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicBRDF.cginc" />
      <None Include="Assets\Addons\Kino\Bokeh\Shader\DiskBlur.cginc" />
      <None Include="Assets\Addons\Kino\Bokeh\Shader\Bokeh.shader" />
@@ -286,6 +289,7 @@
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardCore.cginc" />
      <None Include="Assets\Addons\Shaders\font.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForward_VC.cginc" />
+     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCoreForwardSimple_VC.cginc" />
      <None Include="Assets\Addons\Shaders\beam2.shader" />
      <None Include="Assets\Addons\Lightbeam\Documentation\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
@@ -298,6 +302,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\Addons\Shaders\aura.shader" />
      <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\CalculateProbeSpacing.compute" />
+     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCore_VC.cginc" />
      <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\RecalculateVolumeFilling.compute" />
      <None Include="Assets\Shader\Foliage\Diffuse_Additive_Color.shader" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
@@ -335,11 +340,13 @@
      <None Include="Assets\Addons\Kino\Bokeh\Shader\Common.cginc" />
      <None Include="Assets\Shader\Standard Mobile\Standard_VC.shader" />
      <None Include="Assets\VitaFTPI\SaveConfig.txt" />
+     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardInput_VC.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
      <None Include="Assets\Shader\Light &amp; Shadow\ShadowCaster.shader" />
      <None Include="Assets\Addons\Shaders\explosion.shader" />
      <None Include="Assets\Addons\Shaders\tubeLum.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC_No_Fog.shader" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForward.cginc" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCore.cginc" />
      <None Include="Assets\Shader\Vertex\Diffuse_Additive_Color.shader" />

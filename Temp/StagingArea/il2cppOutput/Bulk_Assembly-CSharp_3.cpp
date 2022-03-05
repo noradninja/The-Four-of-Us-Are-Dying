@@ -10782,6 +10782,10 @@ public:
 	Quaternion_t2301928331  ___storedLightRotation_84;
 	// UnityEngine.Quaternion PlayerController::endLightRotation
 	Quaternion_t2301928331  ___endLightRotation_85;
+	// UnityEngine.Transform PlayerController::midPoint
+	Transform_t3600365921 * ___midPoint_86;
+	// UnityEngine.Vector3 PlayerController::direction
+	Vector3_t3722313464  ___direction_87;
 
 public:
 	inline static int32_t get_offset_of_characterController_4() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___characterController_4)); }
@@ -11444,6 +11448,23 @@ public:
 	inline void set_endLightRotation_85(Quaternion_t2301928331  value)
 	{
 		___endLightRotation_85 = value;
+	}
+
+	inline static int32_t get_offset_of_midPoint_86() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___midPoint_86)); }
+	inline Transform_t3600365921 * get_midPoint_86() const { return ___midPoint_86; }
+	inline Transform_t3600365921 ** get_address_of_midPoint_86() { return &___midPoint_86; }
+	inline void set_midPoint_86(Transform_t3600365921 * value)
+	{
+		___midPoint_86 = value;
+		Il2CppCodeGenWriteBarrier((&___midPoint_86), value);
+	}
+
+	inline static int32_t get_offset_of_direction_87() { return static_cast<int32_t>(offsetof(PlayerController_t2064355688, ___direction_87)); }
+	inline Vector3_t3722313464  get_direction_87() const { return ___direction_87; }
+	inline Vector3_t3722313464 * get_address_of_direction_87() { return &___direction_87; }
+	inline void set_direction_87(Vector3_t3722313464  value)
+	{
+		___direction_87 = value;
 	}
 };
 

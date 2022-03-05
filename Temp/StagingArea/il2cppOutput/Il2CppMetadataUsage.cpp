@@ -2814,7 +2814,6 @@ const RuntimeMethod* GameObject_GetComponent_TisObjectImporter_t330720501_m12425
 const RuntimeMethod* GameObject_GetComponent_TisPathSettings_t1004671762_m2551787434_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisObjectMaterialLinks_t2334331831_m3081270083_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603_RuntimeMethod_var;
-const RuntimeMethod* GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisFastSSAO_t1400243781_m1663729539_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisBokeh_t660694511_m969703322_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisFog_t1478163583_m1502070570_RuntimeMethod_var;
@@ -3103,14 +3102,14 @@ const RuntimeMethod* UnixRegistryApi_CreateSubKey_m3129232792_RuntimeMethod_var;
 const RuntimeMethod* Process_GetProcessHandle_m120623796_RuntimeMethod_var;
 const RuntimeMethod* SimpleCollator_GetTailContraction_m2107754083_RuntimeMethod_var;
 const RuntimeMethod* U3CU3Ec_U3CAuthenticateU3Eb__1_0_m1309887775_RuntimeMethod_var;
-const RuntimeMethod* Kernel_LeftShift_m4140742987_RuntimeMethod_var;
 const RuntimeMethod* Kernel_LeftShift_m3302851050_RuntimeMethod_var;
-const RuntimeMethod* Kernel_RightShift_m2207393597_RuntimeMethod_var;
+const RuntimeMethod* Kernel_LeftShift_m4140742987_RuntimeMethod_var;
 const RuntimeMethod* Kernel_RightShift_m3246168448_RuntimeMethod_var;
+const RuntimeMethod* Kernel_RightShift_m2207393597_RuntimeMethod_var;
 const RuntimeMethod* Kernel_modInverse_m652700340_RuntimeMethod_var;
 const RuntimeMethod* Kernel_modInverse_m3523342258_RuntimeMethod_var;
-const RuntimeMethod* ModulusRing_Difference_m3686091506_RuntimeMethod_var;
 const RuntimeMethod* ModulusRing_Difference_m1345688434_RuntimeMethod_var;
+const RuntimeMethod* ModulusRing_Difference_m3686091506_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Implicit_m2847009755_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Implicit_m2547142909_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Multiply_m3683746602_RuntimeMethod_var;
@@ -3123,8 +3122,8 @@ const RuntimeMethod* CFNetwork_GetProxiesForAutoConfigurationScript_m571709647_R
 const RuntimeMethod* CFNetwork_GetProxiesForURL_m699197090_RuntimeMethod_var;
 const RuntimeMethod* CFNetwork_GetProxiesForUri_m1791810095_RuntimeMethod_var;
 const RuntimeMethod* MobileAuthenticatedStream_ProcessHandshake_m1385946050_RuntimeMethod_var;
-const RuntimeMethod* ASN1Convert_FromOid_m3844102704_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_FromOid_m3740816339_RuntimeMethod_var;
+const RuntimeMethod* ASN1Convert_FromOid_m3844102704_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_FromUnsignedBigInteger_m1312950810_RuntimeMethod_var;
 const RuntimeMethod* MonoTlsProviderFactory_GetProvider_m35375509_RuntimeMethod_var;
 const RuntimeMethod* MonoTlsProviderFactory_LookupProvider_m1821132006_RuntimeMethod_var;
@@ -4335,8 +4334,8 @@ const RuntimeMethod* Array_AsReadOnly_TisCustomAttributeNamedArgument_t287865710
 const RuntimeMethod* Array_AsReadOnly_TisCustomAttributeTypedArgument_t2723150157_m78691718_RuntimeMethod_var;
 const RuntimeMethod* SortedList_Synchronized_m3588493120_RuntimeMethod_var;
 const RuntimeMethod* WindowsConsoleDriver_ReadKey_m209631140_RuntimeMethod_var;
-const RuntimeMethod* ASN1Convert_ToDateTime_m1246060840_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_ToDateTime_m3103388320_RuntimeMethod_var;
+const RuntimeMethod* ASN1Convert_ToDateTime_m1246060840_RuntimeMethod_var;
 const RuntimeMethod* Boolean_System_IConvertible_ToDateTime_m603510836_RuntimeMethod_var;
 const RuntimeMethod* Byte_System_IConvertible_ToDateTime_m3654084722_RuntimeMethod_var;
 const RuntimeMethod* Char_System_IConvertible_ToDateTime_m3564102661_RuntimeMethod_var;
@@ -4460,8 +4459,8 @@ const RuntimeMethod* PolyfewRuntime_SimplifyObjectDeep_m1848745566_RuntimeMethod
 const RuntimeMethod* U3CU3Ec_U3CBuildTailoringTablesU3Eb__17_0_m2657889552_RuntimeMethod_var;
 const RuntimeMethod* SimpleCollator_IndexOf_m2273655786_RuntimeMethod_var;
 const RuntimeMethod* SimpleCollator_LastIndexOf_m3026739976_RuntimeMethod_var;
-const RuntimeMethod* PrimalityTests_GetSPPRounds_m228447904_RuntimeMethod_var;
 const RuntimeMethod* PrimalityTests_GetSPPRounds_m2558073743_RuntimeMethod_var;
+const RuntimeMethod* PrimalityTests_GetSPPRounds_m228447904_RuntimeMethod_var;
 const RuntimeMethod* U3CU3Ec__DisplayClass66_0_U3CInnerReadU3Eb__0_m1392690406_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_ToInt32_m2228176117_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_ToInt32_m254930636_RuntimeMethod_var;
@@ -5699,8 +5698,8 @@ const RuntimeMethod* PublicKey_get_Key_m3077215602_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate2ImplMono_get_PrivateKey_m447648088_RuntimeMethod_var;
 const RuntimeMethod* PrivateKeyInfo_DecodeDSA_m771724585_RuntimeMethod_var;
 const RuntimeMethod* PrivateKeyInfo_DecodeDSA_m2335813142_RuntimeMethod_var;
-const RuntimeMethod* X509Certificate_get_DSA_m1760272844_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate_get_DSA_m565099499_RuntimeMethod_var;
+const RuntimeMethod* X509Certificate_get_DSA_m1760272844_RuntimeMethod_var;
 const RuntimeMethod* PublicKey_DecodeDSA_m3490622362_RuntimeMethod_var;
 const RuntimeMethod* DSAManaged_ExportParameters_m1426347745_RuntimeMethod_var;
 const RuntimeMethod* DSACryptoServiceProvider_ExportParameters_m591135777_RuntimeMethod_var;
@@ -5717,8 +5716,8 @@ const RuntimeMethod* RC2CryptoServiceProvider_CreateEncryptor_m1615052595_Runtim
 const RuntimeMethod* TripleDESCryptoServiceProvider_CreateDecryptor_m740960117_RuntimeMethod_var;
 const RuntimeMethod* TripleDESCryptoServiceProvider_CreateEncryptor_m450924958_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate2ImplMono_get_SignatureAlgorithm_m1685648403_RuntimeMethod_var;
-const RuntimeMethod* PrivateKeyInfo_DecodeRSA_m2889346634_RuntimeMethod_var;
 const RuntimeMethod* PrivateKeyInfo_DecodeRSA_m4129124827_RuntimeMethod_var;
+const RuntimeMethod* PrivateKeyInfo_DecodeRSA_m2889346634_RuntimeMethod_var;
 const RuntimeMethod* PublicKey_DecodeRSA_m1824703659_RuntimeMethod_var;
 const RuntimeMethod* RSAManaged_ExportParameters_m280454101_RuntimeMethod_var;
 const RuntimeMethod* RSAManaged_ExportParameters_m1754454264_RuntimeMethod_var;
@@ -5779,8 +5778,8 @@ const RuntimeMethod* Vector4_get_Item_m2380866393_RuntimeMethod_var;
 const RuntimeMethod* YogaNode_BaselineInternal_m3366972940_RuntimeMethod_var;
 const RuntimeMethod* KeyHandler_GetRootFromDir_m1404311037_RuntimeMethod_var;
 const RuntimeMethod* RegistryKey_GetHiveName_m2271341117_RuntimeMethod_var;
-const RuntimeMethod* BigInteger_ToString_m3475000413_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_ToString_m1181683046_RuntimeMethod_var;
+const RuntimeMethod* BigInteger_ToString_m3475000413_RuntimeMethod_var;
 const RuntimeMethod* RuntimeMarshal_PtrToUtf8String_m504390466_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_ToOid_m4290825381_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_ToOid_m1223840396_RuntimeMethod_var;
@@ -6286,8 +6285,8 @@ const RuntimeMethod* RegistryKey_AssertKeyNameLength_m3602149535_RuntimeMethod_v
 const RuntimeMethod* RegistryKey_AssertKeyStillValid_m1726962448_RuntimeMethod_var;
 const RuntimeMethod* Win32RegistryApi_GenerateException_m3595262897_RuntimeMethod_var;
 const RuntimeMethod* MSCompatUnicodeTable_BuildTailoringTables_m1316979344_RuntimeMethod_var;
-const RuntimeMethod* ModulusRing_BarrettReduction_m3024442734_RuntimeMethod_var;
 const RuntimeMethod* ModulusRing_BarrettReduction_m167376748_RuntimeMethod_var;
+const RuntimeMethod* ModulusRing_BarrettReduction_m3024442734_RuntimeMethod_var;
 const RuntimeMethod* U3CU3Ec__DisplayClass13_0_U3CExecuteProxyAutoConfigurationURLU3Eb__0_m2694075153_RuntimeMethod_var;
 const RuntimeMethod* CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScriptThread_m3555933794_RuntimeMethod_var;
 const RuntimeMethod* U3CInnerReadU3Ed__25_MoveNext_m3626833002_RuntimeMethod_var;
@@ -6301,8 +6300,8 @@ const RuntimeMethod* MobileAuthenticatedStream_U3CInnerWriteU3Eb__67_0_m11009697
 const RuntimeMethod* MobileAuthenticatedStream_CheckThrow_m3982772620_RuntimeMethod_var;
 const RuntimeMethod* MobileAuthenticatedStream_set_Position_m2903160421_RuntimeMethod_var;
 const RuntimeMethod* MonoTlsProviderFactory_InitializeInternal_m2925452808_RuntimeMethod_var;
-const RuntimeMethod* ASN1__ctor_m1219137533_RuntimeMethod_var;
 const RuntimeMethod* ASN1__ctor_m1601690794_RuntimeMethod_var;
+const RuntimeMethod* ASN1__ctor_m1219137533_RuntimeMethod_var;
 const RuntimeMethod* ARC4Managed_CheckInput_m49728936_RuntimeMethod_var;
 const RuntimeMethod* ARC4Managed_set_Key_m1669311750_RuntimeMethod_var;
 const RuntimeMethod* DSAManaged_ImportParameters_m2247591247_RuntimeMethod_var;
@@ -6311,8 +6310,8 @@ const RuntimeMethod* EncryptedPrivateKeyInfo_Decode_m2516465782_RuntimeMethod_va
 const RuntimeMethod* EncryptedPrivateKeyInfo_Decode_m3008916518_RuntimeMethod_var;
 const RuntimeMethod* PrivateKeyInfo_Decode_m682813286_RuntimeMethod_var;
 const RuntimeMethod* PrivateKeyInfo_Decode_m986145117_RuntimeMethod_var;
-const RuntimeMethod* RSAManaged_ImportParameters_m1117427048_RuntimeMethod_var;
 const RuntimeMethod* RSAManaged_ImportParameters_m1844641996_RuntimeMethod_var;
+const RuntimeMethod* RSAManaged_ImportParameters_m1117427048_RuntimeMethod_var;
 const RuntimeMethod* SymmetricTransform__ctor_m25459519_RuntimeMethod_var;
 const RuntimeMethod* SymmetricTransform_CTS_m2571643614_RuntimeMethod_var;
 const RuntimeMethod* SymmetricTransform_CheckInput_m1829858759_RuntimeMethod_var;
@@ -6321,24 +6320,24 @@ const RuntimeMethod* SymmetricTransform_ThrowBadPaddingException_m2926778011_Run
 const RuntimeMethod* SymmetricTransform_Transform_m3073016850_RuntimeMethod_var;
 const RuntimeMethod* ContentInfo__ctor_m3397951412_RuntimeMethod_var;
 const RuntimeMethod* ContentInfo__ctor_m2639021892_RuntimeMethod_var;
-const RuntimeMethod* EncryptedData__ctor_m4001546383_RuntimeMethod_var;
 const RuntimeMethod* EncryptedData__ctor_m2497911783_RuntimeMethod_var;
+const RuntimeMethod* EncryptedData__ctor_m4001546383_RuntimeMethod_var;
 const RuntimeMethod* ChallengeResponse2_Compute_m1395485354_RuntimeMethod_var;
 const RuntimeMethod* ChallengeResponse_set_Challenge_m2001764172_RuntimeMethod_var;
 const RuntimeMethod* ChallengeResponse_set_Password_m644923800_RuntimeMethod_var;
 const RuntimeMethod* MessageBase_Decode_m2327798753_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_AddPrivateKey_m1877554254_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_AddPrivateKey_m1542850936_RuntimeMethod_var;
-const RuntimeMethod* PKCS12_Decode_m163534693_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_Decode_m1913457787_RuntimeMethod_var;
-const RuntimeMethod* PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var;
+const RuntimeMethod* PKCS12_Decode_m163534693_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_ReadSafeBag_m1585166574_RuntimeMethod_var;
-const RuntimeMethod* X509Certificate__ctor_m3656389950_RuntimeMethod_var;
+const RuntimeMethod* PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate__ctor_m2595927506_RuntimeMethod_var;
+const RuntimeMethod* X509Certificate__ctor_m3656389950_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate_Parse_m54358579_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate_Parse_m1106379228_RuntimeMethod_var;
-const RuntimeMethod* X509Extension__ctor_m1750445243_RuntimeMethod_var;
 const RuntimeMethod* X509Extension__ctor_m710637961_RuntimeMethod_var;
+const RuntimeMethod* X509Extension__ctor_m1750445243_RuntimeMethod_var;
 const RuntimeMethod* X509ExtensionCollection__ctor_m3315097415_RuntimeMethod_var;
 const RuntimeMethod* X509ExtensionCollection__ctor_m551870633_RuntimeMethod_var;
 const RuntimeMethod* Debug_CheckAndThrow_m3340652565_RuntimeMethod_var;
@@ -16403,7 +16402,7 @@ String_t* _stringLiteral3770758299;
 String_t* _stringLiteral1214352242;
 String_t* _stringLiteral3926843441;
 String_t* _stringLiteral1527136891;
-extern void** const g_MetadataUsages[16384] = 
+extern void** const g_MetadataUsages[16383] = 
 {
 	(void**)(&KeyHandler_t326058990_0_0_0_var),
 	(void**)(&ExceptionU5BU5D_t2535001212_0_0_0_var),
@@ -19200,7 +19199,6 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&GameObject_GetComponent_TisPathSettings_t1004671762_m2551787434_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisObjectMaterialLinks_t2334331831_m3081270083_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603_RuntimeMethod_var),
-	(void**)(&GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisFastSSAO_t1400243781_m1663729539_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisBokeh_t660694511_m969703322_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisFog_t1478163583_m1502070570_RuntimeMethod_var),
@@ -19489,14 +19487,14 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&Process_GetProcessHandle_m120623796_RuntimeMethod_var),
 	(void**)(&SimpleCollator_GetTailContraction_m2107754083_RuntimeMethod_var),
 	(void**)(&U3CU3Ec_U3CAuthenticateU3Eb__1_0_m1309887775_RuntimeMethod_var),
-	(void**)(&Kernel_LeftShift_m4140742987_RuntimeMethod_var),
 	(void**)(&Kernel_LeftShift_m3302851050_RuntimeMethod_var),
-	(void**)(&Kernel_RightShift_m2207393597_RuntimeMethod_var),
+	(void**)(&Kernel_LeftShift_m4140742987_RuntimeMethod_var),
 	(void**)(&Kernel_RightShift_m3246168448_RuntimeMethod_var),
+	(void**)(&Kernel_RightShift_m2207393597_RuntimeMethod_var),
 	(void**)(&Kernel_modInverse_m652700340_RuntimeMethod_var),
 	(void**)(&Kernel_modInverse_m3523342258_RuntimeMethod_var),
-	(void**)(&ModulusRing_Difference_m3686091506_RuntimeMethod_var),
 	(void**)(&ModulusRing_Difference_m1345688434_RuntimeMethod_var),
+	(void**)(&ModulusRing_Difference_m3686091506_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Implicit_m2847009755_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Implicit_m2547142909_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Multiply_m3683746602_RuntimeMethod_var),
@@ -19509,8 +19507,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&CFNetwork_GetProxiesForURL_m699197090_RuntimeMethod_var),
 	(void**)(&CFNetwork_GetProxiesForUri_m1791810095_RuntimeMethod_var),
 	(void**)(&MobileAuthenticatedStream_ProcessHandshake_m1385946050_RuntimeMethod_var),
-	(void**)(&ASN1Convert_FromOid_m3844102704_RuntimeMethod_var),
 	(void**)(&ASN1Convert_FromOid_m3740816339_RuntimeMethod_var),
+	(void**)(&ASN1Convert_FromOid_m3844102704_RuntimeMethod_var),
 	(void**)(&ASN1Convert_FromUnsignedBigInteger_m1312950810_RuntimeMethod_var),
 	(void**)(&MonoTlsProviderFactory_GetProvider_m35375509_RuntimeMethod_var),
 	(void**)(&MonoTlsProviderFactory_LookupProvider_m1821132006_RuntimeMethod_var),
@@ -20721,8 +20719,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&Array_AsReadOnly_TisCustomAttributeTypedArgument_t2723150157_m78691718_RuntimeMethod_var),
 	(void**)(&SortedList_Synchronized_m3588493120_RuntimeMethod_var),
 	(void**)(&WindowsConsoleDriver_ReadKey_m209631140_RuntimeMethod_var),
-	(void**)(&ASN1Convert_ToDateTime_m1246060840_RuntimeMethod_var),
 	(void**)(&ASN1Convert_ToDateTime_m3103388320_RuntimeMethod_var),
+	(void**)(&ASN1Convert_ToDateTime_m1246060840_RuntimeMethod_var),
 	(void**)(&Boolean_System_IConvertible_ToDateTime_m603510836_RuntimeMethod_var),
 	(void**)(&Byte_System_IConvertible_ToDateTime_m3654084722_RuntimeMethod_var),
 	(void**)(&Char_System_IConvertible_ToDateTime_m3564102661_RuntimeMethod_var),
@@ -20846,8 +20844,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&U3CU3Ec_U3CBuildTailoringTablesU3Eb__17_0_m2657889552_RuntimeMethod_var),
 	(void**)(&SimpleCollator_IndexOf_m2273655786_RuntimeMethod_var),
 	(void**)(&SimpleCollator_LastIndexOf_m3026739976_RuntimeMethod_var),
-	(void**)(&PrimalityTests_GetSPPRounds_m228447904_RuntimeMethod_var),
 	(void**)(&PrimalityTests_GetSPPRounds_m2558073743_RuntimeMethod_var),
+	(void**)(&PrimalityTests_GetSPPRounds_m228447904_RuntimeMethod_var),
 	(void**)(&U3CU3Ec__DisplayClass66_0_U3CInnerReadU3Eb__0_m1392690406_RuntimeMethod_var),
 	(void**)(&ASN1Convert_ToInt32_m2228176117_RuntimeMethod_var),
 	(void**)(&ASN1Convert_ToInt32_m254930636_RuntimeMethod_var),
@@ -22085,8 +22083,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&X509Certificate2ImplMono_get_PrivateKey_m447648088_RuntimeMethod_var),
 	(void**)(&PrivateKeyInfo_DecodeDSA_m771724585_RuntimeMethod_var),
 	(void**)(&PrivateKeyInfo_DecodeDSA_m2335813142_RuntimeMethod_var),
-	(void**)(&X509Certificate_get_DSA_m1760272844_RuntimeMethod_var),
 	(void**)(&X509Certificate_get_DSA_m565099499_RuntimeMethod_var),
+	(void**)(&X509Certificate_get_DSA_m1760272844_RuntimeMethod_var),
 	(void**)(&PublicKey_DecodeDSA_m3490622362_RuntimeMethod_var),
 	(void**)(&DSAManaged_ExportParameters_m1426347745_RuntimeMethod_var),
 	(void**)(&DSACryptoServiceProvider_ExportParameters_m591135777_RuntimeMethod_var),
@@ -22103,8 +22101,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&TripleDESCryptoServiceProvider_CreateDecryptor_m740960117_RuntimeMethod_var),
 	(void**)(&TripleDESCryptoServiceProvider_CreateEncryptor_m450924958_RuntimeMethod_var),
 	(void**)(&X509Certificate2ImplMono_get_SignatureAlgorithm_m1685648403_RuntimeMethod_var),
-	(void**)(&PrivateKeyInfo_DecodeRSA_m2889346634_RuntimeMethod_var),
 	(void**)(&PrivateKeyInfo_DecodeRSA_m4129124827_RuntimeMethod_var),
+	(void**)(&PrivateKeyInfo_DecodeRSA_m2889346634_RuntimeMethod_var),
 	(void**)(&PublicKey_DecodeRSA_m1824703659_RuntimeMethod_var),
 	(void**)(&RSAManaged_ExportParameters_m280454101_RuntimeMethod_var),
 	(void**)(&RSAManaged_ExportParameters_m1754454264_RuntimeMethod_var),
@@ -22165,8 +22163,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&YogaNode_BaselineInternal_m3366972940_RuntimeMethod_var),
 	(void**)(&KeyHandler_GetRootFromDir_m1404311037_RuntimeMethod_var),
 	(void**)(&RegistryKey_GetHiveName_m2271341117_RuntimeMethod_var),
-	(void**)(&BigInteger_ToString_m3475000413_RuntimeMethod_var),
 	(void**)(&BigInteger_ToString_m1181683046_RuntimeMethod_var),
+	(void**)(&BigInteger_ToString_m3475000413_RuntimeMethod_var),
 	(void**)(&RuntimeMarshal_PtrToUtf8String_m504390466_RuntimeMethod_var),
 	(void**)(&ASN1Convert_ToOid_m4290825381_RuntimeMethod_var),
 	(void**)(&ASN1Convert_ToOid_m1223840396_RuntimeMethod_var),
@@ -22672,8 +22670,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&RegistryKey_AssertKeyStillValid_m1726962448_RuntimeMethod_var),
 	(void**)(&Win32RegistryApi_GenerateException_m3595262897_RuntimeMethod_var),
 	(void**)(&MSCompatUnicodeTable_BuildTailoringTables_m1316979344_RuntimeMethod_var),
-	(void**)(&ModulusRing_BarrettReduction_m3024442734_RuntimeMethod_var),
 	(void**)(&ModulusRing_BarrettReduction_m167376748_RuntimeMethod_var),
+	(void**)(&ModulusRing_BarrettReduction_m3024442734_RuntimeMethod_var),
 	(void**)(&U3CU3Ec__DisplayClass13_0_U3CExecuteProxyAutoConfigurationURLU3Eb__0_m2694075153_RuntimeMethod_var),
 	(void**)(&CFNetwork_CFNetworkCopyProxiesForAutoConfigurationScriptThread_m3555933794_RuntimeMethod_var),
 	(void**)(&U3CInnerReadU3Ed__25_MoveNext_m3626833002_RuntimeMethod_var),
@@ -22687,8 +22685,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&MobileAuthenticatedStream_CheckThrow_m3982772620_RuntimeMethod_var),
 	(void**)(&MobileAuthenticatedStream_set_Position_m2903160421_RuntimeMethod_var),
 	(void**)(&MonoTlsProviderFactory_InitializeInternal_m2925452808_RuntimeMethod_var),
-	(void**)(&ASN1__ctor_m1219137533_RuntimeMethod_var),
 	(void**)(&ASN1__ctor_m1601690794_RuntimeMethod_var),
+	(void**)(&ASN1__ctor_m1219137533_RuntimeMethod_var),
 	(void**)(&ARC4Managed_CheckInput_m49728936_RuntimeMethod_var),
 	(void**)(&ARC4Managed_set_Key_m1669311750_RuntimeMethod_var),
 	(void**)(&DSAManaged_ImportParameters_m2247591247_RuntimeMethod_var),
@@ -22697,8 +22695,8 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&EncryptedPrivateKeyInfo_Decode_m3008916518_RuntimeMethod_var),
 	(void**)(&PrivateKeyInfo_Decode_m682813286_RuntimeMethod_var),
 	(void**)(&PrivateKeyInfo_Decode_m986145117_RuntimeMethod_var),
-	(void**)(&RSAManaged_ImportParameters_m1117427048_RuntimeMethod_var),
 	(void**)(&RSAManaged_ImportParameters_m1844641996_RuntimeMethod_var),
+	(void**)(&RSAManaged_ImportParameters_m1117427048_RuntimeMethod_var),
 	(void**)(&SymmetricTransform__ctor_m25459519_RuntimeMethod_var),
 	(void**)(&SymmetricTransform_CTS_m2571643614_RuntimeMethod_var),
 	(void**)(&SymmetricTransform_CheckInput_m1829858759_RuntimeMethod_var),
@@ -22707,24 +22705,24 @@ extern void** const g_MetadataUsages[16384] =
 	(void**)(&SymmetricTransform_Transform_m3073016850_RuntimeMethod_var),
 	(void**)(&ContentInfo__ctor_m3397951412_RuntimeMethod_var),
 	(void**)(&ContentInfo__ctor_m2639021892_RuntimeMethod_var),
-	(void**)(&EncryptedData__ctor_m4001546383_RuntimeMethod_var),
 	(void**)(&EncryptedData__ctor_m2497911783_RuntimeMethod_var),
+	(void**)(&EncryptedData__ctor_m4001546383_RuntimeMethod_var),
 	(void**)(&ChallengeResponse2_Compute_m1395485354_RuntimeMethod_var),
 	(void**)(&ChallengeResponse_set_Challenge_m2001764172_RuntimeMethod_var),
 	(void**)(&ChallengeResponse_set_Password_m644923800_RuntimeMethod_var),
 	(void**)(&MessageBase_Decode_m2327798753_RuntimeMethod_var),
 	(void**)(&PKCS12_AddPrivateKey_m1877554254_RuntimeMethod_var),
 	(void**)(&PKCS12_AddPrivateKey_m1542850936_RuntimeMethod_var),
-	(void**)(&PKCS12_Decode_m163534693_RuntimeMethod_var),
 	(void**)(&PKCS12_Decode_m1913457787_RuntimeMethod_var),
-	(void**)(&PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var),
+	(void**)(&PKCS12_Decode_m163534693_RuntimeMethod_var),
 	(void**)(&PKCS12_ReadSafeBag_m1585166574_RuntimeMethod_var),
-	(void**)(&X509Certificate__ctor_m3656389950_RuntimeMethod_var),
+	(void**)(&PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var),
 	(void**)(&X509Certificate__ctor_m2595927506_RuntimeMethod_var),
+	(void**)(&X509Certificate__ctor_m3656389950_RuntimeMethod_var),
 	(void**)(&X509Certificate_Parse_m54358579_RuntimeMethod_var),
 	(void**)(&X509Certificate_Parse_m1106379228_RuntimeMethod_var),
-	(void**)(&X509Extension__ctor_m1750445243_RuntimeMethod_var),
 	(void**)(&X509Extension__ctor_m710637961_RuntimeMethod_var),
+	(void**)(&X509Extension__ctor_m1750445243_RuntimeMethod_var),
 	(void**)(&X509ExtensionCollection__ctor_m3315097415_RuntimeMethod_var),
 	(void**)(&X509ExtensionCollection__ctor_m551870633_RuntimeMethod_var),
 	(void**)(&Debug_CheckAndThrow_m3340652565_RuntimeMethod_var),

@@ -104,6 +104,8 @@ public class PlayerController : MonoBehaviour
     public GameObject currentTarget;
     public Quaternion storedLightRotation;
     public Quaternion endLightRotation;
+    public Transform midPoint;
+    public Vector3 direction;
 
     
       private void Awake()
@@ -135,7 +137,7 @@ public class PlayerController : MonoBehaviour
             SSAOScript.GetComponent<FastSSAO>().enabled = true;
             BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
             //SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
-            SSAOScript.GetComponent<FXAA>().enabled = true;
+           // SSAOScript.GetComponent<FXAA>().enabled = true;
             SSAOScript.GetComponent<Crepuscular>().enabled = true;
             SSAOScript.GetComponent<Kino.Fog>().enabled = true;
             enabledText.GetComponent<Text>().color = Color.green;
@@ -255,7 +257,7 @@ public class PlayerController : MonoBehaviour
                 SSAOScript.GetComponent<FastSSAO>().enabled = false;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
                 SSAOScript.GetComponent<Crepuscular>().enabled = false;
-                SSAOScript.GetComponent<FXAA>().enabled = false;
+                //SSAOScript.GetComponent<FXAA>().enabled = false;
                 enabledText.GetComponent<Text>().color = Color.red;
                 enabledText.GetComponent<Text>().text = ("Disabled");
             }
@@ -263,7 +265,7 @@ public class PlayerController : MonoBehaviour
                 SSAOScript.GetComponent<FastSSAO>().enabled = true;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
                 SSAOScript.GetComponent<Crepuscular>().enabled = true;
-                SSAOScript.GetComponent<FXAA>().enabled = true;
+               // SSAOScript.GetComponent<FXAA>().enabled = true;
                 enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");
             }
@@ -450,10 +452,13 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             }
             //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+            // direction = (currentTarget.transform.position + transform.position) * 0.5f;
+            // midPoint.position = direction;
+            camObject.GetComponent<Kino.Bokeh>().pointOfFocus = midPoint;
             StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
                                                 flashlight.intensity, 20, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(walkLerp(0, 1,  lerpRate));
-            if (!isStimulant) StartCoroutine(lerpFocalLength(0.115f, 0.125f, 0.5f, 0.5f, 0.5f));
+            if (!isStimulant) StartCoroutine(lerpFocalLength(0.115f, 0.130f, 0.5f, 0.5f, 0.5f));
             
             if (UICanvasGroup.alpha != 1){
                 StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
@@ -466,6 +471,8 @@ public class PlayerController : MonoBehaviour
         {
             Focus();
             if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
+            // direction = (currentTarget.transform.position + transform.position) * 0.5f;    
+            // midPoint.position = direction;
         }
 //reset the flashlight and camera when we release the L trigger
         if (Input.GetKeyUp(VITA + LTRIG) && hasFlashlight)
@@ -492,6 +499,7 @@ public class PlayerController : MonoBehaviour
                 float currentAngle = flashlight.spotAngle;
                 float currentSize = lightShaft.transform.localScale.x;
                 Color currentColor = lightBeam.material.color;
+                camObject.GetComponent<Kino.Bokeh>().pointOfFocus = transform;
                 StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
                                                     currentAngle, 40, currentSize, 0.08f));
             }
@@ -501,7 +509,7 @@ public class PlayerController : MonoBehaviour
             lightRoot.transform.localRotation = storedLightRotation;
             StartCoroutine(walkLerp(0, 1,  lerpRate));     
             StartCoroutine(lerpCam(0.5f));  
-            if (!isStimulant) StartCoroutine(lerpFocalLength(0.125f,0.115f, 0.5f, 0.5f, 0.5f));
+            if (!isStimulant) StartCoroutine(lerpFocalLength(0.130f,0.115f, 0.5f, 0.5f, 0.5f));
     
         }
     

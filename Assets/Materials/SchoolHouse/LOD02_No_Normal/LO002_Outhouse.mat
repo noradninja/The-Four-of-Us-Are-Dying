@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: LO002_Outhouse
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF
+  m_ShaderKeywords: _METALLICGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -119,7 +119,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 98463e880c8542f438408b253a8646c4, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal0:
@@ -214,7 +214,7 @@ Material:
     - _FogToggle: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.125
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
     - _IntensityVC: 0
     - _IntersectFold: 0
     - _IntersectThreshold: 1
