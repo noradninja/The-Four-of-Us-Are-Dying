@@ -39,7 +39,8 @@ public class CameraResolutionScaler : MonoBehaviour
 	void Start(){
 		if(!Application.isEditor) {
 			UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToMonoHeap();
-			Screen.SetResolution(720, 408, true);			
+			//Screen.SetResolution(720, 408, true);	
+			QualitySettings.vSyncCount = 2;	
 		}
 		
 	}
@@ -82,6 +83,7 @@ public class CameraResolutionScaler : MonoBehaviour
 		renderTex = GetTemporaryTexture(Mathf.RoundToInt(960/renderDivisor), Mathf.RoundToInt(544/renderDivisor));
 		camera.rect = originalRect;
 		src.filterMode = filterMode;
+
 		Graphics.Blit(src, renderTex);
 		Graphics.Blit(renderTex, dest);
 		RenderTexture.ReleaseTemporary(renderTex);

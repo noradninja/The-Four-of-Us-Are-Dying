@@ -226,7 +226,7 @@ Material:
     - _EmissionToggle: 0
     - _FogOffset: 0
     - _FogToggle: 1
-    - _GlossMapScale: 0.75
+    - _GlossMapScale: 0.744
     - _Glossiness: 0.3
     - _GlossyReflections: 1
     - _IntensityVC: 0

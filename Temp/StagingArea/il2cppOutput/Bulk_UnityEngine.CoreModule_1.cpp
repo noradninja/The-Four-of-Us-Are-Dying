@@ -6800,35 +6800,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // FOGMODE_T1277989386_H
-#ifndef FULLSCREENMODE_T905228759_H
-#define FULLSCREENMODE_T905228759_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityEngine.FullScreenMode
-struct  FullScreenMode_t905228759 
-{
-public:
-	// System.Int32 UnityEngine.FullScreenMode::value__
-	int32_t ___value___2;
-
-public:
-	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(FullScreenMode_t905228759, ___value___2)); }
-	inline int32_t get_value___2() const { return ___value___2; }
-	inline int32_t* get_address_of_value___2() { return &___value___2; }
-	inline void set_value___2(int32_t value)
-	{
-		___value___2 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // FULLSCREENMODE_T905228759_H
 #ifndef MATERIALPROPERTYBLOCK_T3213117958_H
 #define MATERIALPROPERTYBLOCK_T3213117958_H
 #ifdef __clang__
@@ -12286,10 +12257,6 @@ inline void UnityAction_2_Invoke_m944492567 (UnityAction_2_t1262235195 * __this,
 {
 	((  void (*) (UnityAction_2_t1262235195 *, Scene_t2348375561 , Scene_t2348375561 , const RuntimeMethod*))UnityAction_2_Invoke_m944492567_gshared)(__this, p0, p1, method);
 }
-// System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,UnityEngine.FullScreenMode,System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void Screen_SetResolution_m1868494096 (RuntimeObject * __this /* static, unused */, int32_t ___width0, int32_t ___height1, int32_t ___fullscreenMode2, int32_t ___preferredRefreshRate3, const RuntimeMethod* method);
-// System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,System.Boolean,System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void Screen_SetResolution_m298539064 (RuntimeObject * __this /* static, unused */, int32_t ___width0, int32_t ___height1, bool ___fullscreen2, int32_t ___preferredRefreshRate3, const RuntimeMethod* method);
 // System.Void UnityEngine.Object::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Object__ctor_m1087895580 (Object_t631007953 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.ScriptableObject::CreateScriptableObject(UnityEngine.ScriptableObject)
@@ -14363,6 +14330,15 @@ extern "C" IL2CPP_METHOD_ATTR int32_t QualitySettings_get_vSyncCount_m1170877849
 	_il2cpp_icall_func = (QualitySettings_get_vSyncCount_m1170877849_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::get_vSyncCount()");
 	int32_t retVal = _il2cpp_icall_func();
 	return retVal;
+}
+// System.Void UnityEngine.QualitySettings::set_vSyncCount(System.Int32)
+extern "C" IL2CPP_METHOD_ATTR void QualitySettings_set_vSyncCount_m3131636076 (RuntimeObject * __this /* static, unused */, int32_t ___value0, const RuntimeMethod* method)
+{
+	typedef void (*QualitySettings_set_vSyncCount_m3131636076_ftn) (int32_t);
+	static QualitySettings_set_vSyncCount_m3131636076_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (QualitySettings_set_vSyncCount_m3131636076_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.QualitySettings::set_vSyncCount(System.Int32)");
+	_il2cpp_icall_func(___value0);
 }
 // UnityEngine.ColorSpace UnityEngine.QualitySettings::get_activeColorSpace()
 extern "C" IL2CPP_METHOD_ATTR int32_t QualitySettings_get_activeColorSpace_m2902748248 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
@@ -22315,70 +22291,6 @@ extern "C" IL2CPP_METHOD_ATTR float Screen_get_dpi_m495672463 (RuntimeObject * _
 	_il2cpp_icall_func = (Screen_get_dpi_m495672463_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Screen::get_dpi()");
 	float retVal = _il2cpp_icall_func();
 	return retVal;
-}
-// System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,UnityEngine.FullScreenMode,System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void Screen_SetResolution_m1868494096 (RuntimeObject * __this /* static, unused */, int32_t ___width0, int32_t ___height1, int32_t ___fullscreenMode2, int32_t ___preferredRefreshRate3, const RuntimeMethod* method)
-{
-	typedef void (*Screen_SetResolution_m1868494096_ftn) (int32_t, int32_t, int32_t, int32_t);
-	static Screen_SetResolution_m1868494096_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (Screen_SetResolution_m1868494096_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Screen::SetResolution(System.Int32,System.Int32,UnityEngine.FullScreenMode,System.Int32)");
-	_il2cpp_icall_func(___width0, ___height1, ___fullscreenMode2, ___preferredRefreshRate3);
-}
-// System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,System.Boolean,System.Int32)
-extern "C" IL2CPP_METHOD_ATTR void Screen_SetResolution_m298539064 (RuntimeObject * __this /* static, unused */, int32_t ___width0, int32_t ___height1, bool ___fullscreen2, int32_t ___preferredRefreshRate3, const RuntimeMethod* method)
-{
-	int32_t G_B2_0 = 0;
-	int32_t G_B2_1 = 0;
-	int32_t G_B1_0 = 0;
-	int32_t G_B1_1 = 0;
-	int32_t G_B3_0 = 0;
-	int32_t G_B3_1 = 0;
-	int32_t G_B3_2 = 0;
-	{
-		int32_t L_0 = ___width0;
-		int32_t L_1 = ___height1;
-		bool L_2 = ___fullscreen2;
-		G_B1_0 = L_1;
-		G_B1_1 = L_0;
-		if (!L_2)
-		{
-			G_B2_0 = L_1;
-			G_B2_1 = L_0;
-			goto IL_000f;
-		}
-	}
-	{
-		G_B3_0 = 1;
-		G_B3_1 = G_B1_0;
-		G_B3_2 = G_B1_1;
-		goto IL_0010;
-	}
-
-IL_000f:
-	{
-		G_B3_0 = 3;
-		G_B3_1 = G_B2_0;
-		G_B3_2 = G_B2_1;
-	}
-
-IL_0010:
-	{
-		int32_t L_3 = ___preferredRefreshRate3;
-		Screen_SetResolution_m1868494096(NULL /*static, unused*/, G_B3_2, G_B3_1, G_B3_0, L_3, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void UnityEngine.Screen::SetResolution(System.Int32,System.Int32,System.Boolean)
-extern "C" IL2CPP_METHOD_ATTR void Screen_SetResolution_m875896249 (RuntimeObject * __this /* static, unused */, int32_t ___width0, int32_t ___height1, bool ___fullscreen2, const RuntimeMethod* method)
-{
-	{
-		int32_t L_0 = ___width0;
-		int32_t L_1 = ___height1;
-		bool L_2 = ___fullscreen2;
-		Screen_SetResolution_m298539064(NULL /*static, unused*/, L_0, L_1, L_2, 0, /*hidden argument*/NULL);
-		return;
-	}
 }
 #ifdef __clang__
 #pragma clang diagnostic pop
