@@ -30,7 +30,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 64f3a13c1277a7f1324321d93d0ec13b UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 cafe34666744094f2aef4f686779b868 Assembly-CSharp.dll:.FXAA
 51c7f2da0e648ac14d16777ffbf26e8e Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ImageEffectBase
-7f55af042adac04742e306fcf252134e Assembly-CSharp.dll:.FPS_Counter
+a20496f94a6fd630715a8e58950eaf5d Assembly-CSharp.dll:.FPS_Counter
 d4bb4b82edd6583fb3ed02ce19889d5f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BlurOptimized
 4076cc969ce586df3f32a5f3a66a0900 Assembly-CSharp.dll:DigitalRuby.RainMaker.RainScript
 a1745a63aaebc245b5d095f3d84b9534 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Bloom
@@ -335,7 +335,7 @@ bd57674768d88af20344e9f680801c2d Assembly-CSharp-firstpass.dll:UnityStandardAsse
 df03e2ffa8b3251f71a6c2235d50c66b Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Fisheye
 c1791db8df7a6d30dc3a3e487bced78b Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessVolume
 7c997acc7f9930bd5f16c49cff4a6b10 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerCanvas
-dc5eff9767c29e9924f2030b10a5d20f Assembly-CSharp.dll:.CameraResolutionScaler
+285cb180ee03acd2ac7fd877aa6f332a Assembly-CSharp.dll:.CameraResolutionScaler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TeleType
 58b80cf56079b9b2c86ad9aaede3dca8 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
 7a1ff18e15d0a860ac99542974a3cbd5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Grain

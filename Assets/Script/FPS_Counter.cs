@@ -1,53 +1,138 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PSVita;
 using UnityEngine.UI;
-
 public class FPS_Counter : MonoBehaviour {
 
-	public float updateInterval = 0.5f; //How often should the number update
+	//public float updateInterval = 0.5f; //How often should the number update
 	public Text fpsText;
+    public int frameRange = 60;
+    public float updateInterval = 0.5f;
+    public int maxFPS;
+    public int minFPS;
     float accum = 0.0f;
     int frames = 0;
     float timeleft;
-    public float fps;
+    int[] fpsBuffer;
+	int fpsBufferIndex;
+    public float averageFPS;
 	public float msFrame;
+    public Text vramText;
+	public Text ramText;
 
     // Use this for initialization
-    void Start()
-    {
-        timeleft = updateInterval;
-    }
-
+void Start(){
+		if(!Application.isEditor) {
+			UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToMonoHeap();
+			Screen.SetResolution(720, 408, true);	
+			QualitySettings.vSyncCount = 1;	
+		}
+		else {
+			QualitySettings.vSyncCount = 0;	
+		}
+          timeleft = updateInterval;
+		
+	}
+  
     // Update is called once per frame
     void Update()
     {
-        timeleft -= Time.deltaTime;
-        accum += Time.timeScale / Time.deltaTime;
+        timeleft -= Time.unscaledDeltaTime;
+        accum += Time.timeScale / Time.unscaledDeltaTime;
         ++frames;
-
+      
         // Interval ended - update GUI text and start new interval
         if (timeleft <= 0.0)
         {
             // display two fractional digits (f2 format)
-            fps = (accum / frames);
-			msFrame = (1/fps) * 1000; //get ms/frame
+           // averageFPS = (accum / frames);
+			msFrame = (1/averageFPS) * 1000; //get ms/frame
             timeleft = updateInterval;
             accum = 0.0f;
             frames = 0;
-        }
-    }
-
-    void OnGUI()
-    {
+            //Display the fps/ms and round to n decimals
+            fpsText.text = (Mathf.Clamp(averageFPS,0,99).ToString("F0") + " FPS Average / " + msFrame.ToString("F2") + " ms/frame over " + frameRange/30 + " seconds");
+            if(!Application.isEditor) {
 		
-        //Display the fps/ms and round to n decimals
-        fpsText.text = (Mathf.Round(fps).ToString("F0") + " FPS / " + msFrame.ToString("F2") + " ms/frame");
-		if (Mathf.Round(fps) >= 30.00f){
+                float VRAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryCDRAM();
+                decimal VRAMFree = Math.Round((decimal)(VRAMValue/1000000), 2);
+                decimal calcVRAM = (((128-VRAMFree)/128)*100);
+                decimal percentVRAM = Math.Round((decimal)calcVRAM ,2);
+                
+                float RAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryLPDDR();
+                decimal RAMFree = Math.Round((decimal)(RAMValue/1000000), 2);
+                decimal calcRAM = (((512-RAMFree)/512)*100);
+                decimal percentRAM = Math.Round((decimal)calcRAM ,2);
+
+                vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
+                ramText.text = ("RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
+                if (percentVRAM >= 75){
+                    vramText.color = Color.red;
+                }
+                else if(percentVRAM < 75 && percentVRAM > 50){
+                    vramText.color = Color.yellow;
+                }
+                else vramText.color = Color.green;
+
+                if (percentRAM >= 75){
+                    ramText.color = Color.red;
+                }
+                else if(percentRAM < 75 && percentRAM > 50){
+                    ramText.color = Color.yellow;
+                }
+                else ramText.color = Color.green;
+            }
+            if(Application.isEditor) {
+                vramText.text = ("VRAM: Unavailable");
+                ramText.text = ("RAM: Unavailable");
+            }
+        }
+        
+        if (fpsBuffer == null || fpsBuffer.Length != frameRange) {
+			InitializeBuffer();
+		}
+		UpdateBuffer();
+		CalculateFPS();
+
+		if (Mathf.RoundToInt(averageFPS) >= 30.00f){
 			fpsText.color = Color.green;
 		}
-		else if (Mathf.Round(fps) < 30.00f) {
+		else if (Mathf.Round(averageFPS) < 30.00f) {
 			fpsText.color = Color.red;
 		}
     }
+    void InitializeBuffer () {
+		if (frameRange <= 0) {
+			frameRange = 1;
+		}
+		fpsBuffer = new int[frameRange];
+		fpsBufferIndex = 0;
+	}
+   void UpdateBuffer () {
+		fpsBuffer[fpsBufferIndex++] = (int)(1f / Time.unscaledDeltaTime);
+		if (fpsBufferIndex >= frameRange) {
+			fpsBufferIndex = 0;
+		}
+	}
+    void CalculateFPS () {
+        int sum = 0;
+		int highest = 0;
+		int lowest = int.MaxValue;
+		for (int i = 0; i < frameRange; i++) {
+			int fps = fpsBuffer[i];
+			sum += fps;
+			if (fps > highest) {
+				highest = fps;
+			}
+			if (fps < lowest) {
+				lowest = fps;
+			}
+		}
+		averageFPS = sum / frameRange;
+		maxFPS = highest;
+		minFPS = lowest;
+    }
+    
 }

@@ -46,6 +46,8 @@ struct Dictionary_2_t1632706988;
 struct List_1_t4027761066;
 // System.Func`3<System.TimeSpan,System.Diagnostics.Process,System.TimeSpan>
 struct Func_3_t3037081196;
+// System.Int32[]
+struct Int32U5BU5D_t385246372;
 // System.Object[]
 struct ObjectU5BU5D_t2843939325;
 // System.String
@@ -6142,20 +6144,14 @@ public:
 	float ___renderDivisor_4;
 	// UnityEngine.FilterMode CameraResolutionScaler::filterMode
 	int32_t ___filterMode_5;
-	// UnityEngine.UI.Text CameraResolutionScaler::vramText
-	Text_t1901882714 * ___vramText_6;
-	// UnityEngine.UI.Text CameraResolutionScaler::ramText
-	Text_t1901882714 * ___ramText_7;
 	// UnityEngine.Camera CameraResolutionScaler::camera
-	Camera_t4157153871 * ___camera_8;
-	// System.Boolean CameraResolutionScaler::statsActive
-	bool ___statsActive_12;
+	Camera_t4157153871 * ___camera_6;
 	// UnityEngine.RenderTexture CameraResolutionScaler::renderTex
-	RenderTexture_t2108887433 * ___renderTex_13;
+	RenderTexture_t2108887433 * ___renderTex_7;
 	// UnityEngine.Rect CameraResolutionScaler::originalRect
-	Rect_t2360479859  ___originalRect_14;
+	Rect_t2360479859  ___originalRect_8;
 	// UnityEngine.Rect CameraResolutionScaler::scaledRect
-	Rect_t2360479859  ___scaledRect_15;
+	Rect_t2360479859  ___scaledRect_9;
 
 public:
 	inline static int32_t get_offset_of_renderDivisor_4() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___renderDivisor_4)); }
@@ -6174,64 +6170,38 @@ public:
 		___filterMode_5 = value;
 	}
 
-	inline static int32_t get_offset_of_vramText_6() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___vramText_6)); }
-	inline Text_t1901882714 * get_vramText_6() const { return ___vramText_6; }
-	inline Text_t1901882714 ** get_address_of_vramText_6() { return &___vramText_6; }
-	inline void set_vramText_6(Text_t1901882714 * value)
+	inline static int32_t get_offset_of_camera_6() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___camera_6)); }
+	inline Camera_t4157153871 * get_camera_6() const { return ___camera_6; }
+	inline Camera_t4157153871 ** get_address_of_camera_6() { return &___camera_6; }
+	inline void set_camera_6(Camera_t4157153871 * value)
 	{
-		___vramText_6 = value;
-		Il2CppCodeGenWriteBarrier((&___vramText_6), value);
+		___camera_6 = value;
+		Il2CppCodeGenWriteBarrier((&___camera_6), value);
 	}
 
-	inline static int32_t get_offset_of_ramText_7() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___ramText_7)); }
-	inline Text_t1901882714 * get_ramText_7() const { return ___ramText_7; }
-	inline Text_t1901882714 ** get_address_of_ramText_7() { return &___ramText_7; }
-	inline void set_ramText_7(Text_t1901882714 * value)
+	inline static int32_t get_offset_of_renderTex_7() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___renderTex_7)); }
+	inline RenderTexture_t2108887433 * get_renderTex_7() const { return ___renderTex_7; }
+	inline RenderTexture_t2108887433 ** get_address_of_renderTex_7() { return &___renderTex_7; }
+	inline void set_renderTex_7(RenderTexture_t2108887433 * value)
 	{
-		___ramText_7 = value;
-		Il2CppCodeGenWriteBarrier((&___ramText_7), value);
+		___renderTex_7 = value;
+		Il2CppCodeGenWriteBarrier((&___renderTex_7), value);
 	}
 
-	inline static int32_t get_offset_of_camera_8() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___camera_8)); }
-	inline Camera_t4157153871 * get_camera_8() const { return ___camera_8; }
-	inline Camera_t4157153871 ** get_address_of_camera_8() { return &___camera_8; }
-	inline void set_camera_8(Camera_t4157153871 * value)
+	inline static int32_t get_offset_of_originalRect_8() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___originalRect_8)); }
+	inline Rect_t2360479859  get_originalRect_8() const { return ___originalRect_8; }
+	inline Rect_t2360479859 * get_address_of_originalRect_8() { return &___originalRect_8; }
+	inline void set_originalRect_8(Rect_t2360479859  value)
 	{
-		___camera_8 = value;
-		Il2CppCodeGenWriteBarrier((&___camera_8), value);
+		___originalRect_8 = value;
 	}
 
-	inline static int32_t get_offset_of_statsActive_12() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___statsActive_12)); }
-	inline bool get_statsActive_12() const { return ___statsActive_12; }
-	inline bool* get_address_of_statsActive_12() { return &___statsActive_12; }
-	inline void set_statsActive_12(bool value)
+	inline static int32_t get_offset_of_scaledRect_9() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___scaledRect_9)); }
+	inline Rect_t2360479859  get_scaledRect_9() const { return ___scaledRect_9; }
+	inline Rect_t2360479859 * get_address_of_scaledRect_9() { return &___scaledRect_9; }
+	inline void set_scaledRect_9(Rect_t2360479859  value)
 	{
-		___statsActive_12 = value;
-	}
-
-	inline static int32_t get_offset_of_renderTex_13() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___renderTex_13)); }
-	inline RenderTexture_t2108887433 * get_renderTex_13() const { return ___renderTex_13; }
-	inline RenderTexture_t2108887433 ** get_address_of_renderTex_13() { return &___renderTex_13; }
-	inline void set_renderTex_13(RenderTexture_t2108887433 * value)
-	{
-		___renderTex_13 = value;
-		Il2CppCodeGenWriteBarrier((&___renderTex_13), value);
-	}
-
-	inline static int32_t get_offset_of_originalRect_14() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___originalRect_14)); }
-	inline Rect_t2360479859  get_originalRect_14() const { return ___originalRect_14; }
-	inline Rect_t2360479859 * get_address_of_originalRect_14() { return &___originalRect_14; }
-	inline void set_originalRect_14(Rect_t2360479859  value)
-	{
-		___originalRect_14 = value;
-	}
-
-	inline static int32_t get_offset_of_scaledRect_15() { return static_cast<int32_t>(offsetof(CameraResolutionScaler_t2459044074, ___scaledRect_15)); }
-	inline Rect_t2360479859  get_scaledRect_15() const { return ___scaledRect_15; }
-	inline Rect_t2360479859 * get_address_of_scaledRect_15() { return &___scaledRect_15; }
-	inline void set_scaledRect_15(Rect_t2360479859  value)
-	{
-		___scaledRect_15 = value;
+		___scaledRect_9 = value;
 	}
 };
 
@@ -6782,77 +6752,150 @@ public:
 struct  FPS_Counter_t957419163  : public MonoBehaviour_t3962482529
 {
 public:
-	// System.Single FPS_Counter::updateInterval
-	float ___updateInterval_4;
 	// UnityEngine.UI.Text FPS_Counter::fpsText
-	Text_t1901882714 * ___fpsText_5;
+	Text_t1901882714 * ___fpsText_4;
+	// System.Int32 FPS_Counter::frameRange
+	int32_t ___frameRange_5;
+	// System.Single FPS_Counter::updateInterval
+	float ___updateInterval_6;
+	// System.Int32 FPS_Counter::maxFPS
+	int32_t ___maxFPS_7;
+	// System.Int32 FPS_Counter::minFPS
+	int32_t ___minFPS_8;
 	// System.Single FPS_Counter::accum
-	float ___accum_6;
+	float ___accum_9;
 	// System.Int32 FPS_Counter::frames
-	int32_t ___frames_7;
+	int32_t ___frames_10;
 	// System.Single FPS_Counter::timeleft
-	float ___timeleft_8;
-	// System.Single FPS_Counter::fps
-	float ___fps_9;
+	float ___timeleft_11;
+	// System.Int32[] FPS_Counter::fpsBuffer
+	Int32U5BU5D_t385246372* ___fpsBuffer_12;
+	// System.Int32 FPS_Counter::fpsBufferIndex
+	int32_t ___fpsBufferIndex_13;
+	// System.Single FPS_Counter::averageFPS
+	float ___averageFPS_14;
 	// System.Single FPS_Counter::msFrame
-	float ___msFrame_10;
+	float ___msFrame_15;
+	// UnityEngine.UI.Text FPS_Counter::vramText
+	Text_t1901882714 * ___vramText_16;
+	// UnityEngine.UI.Text FPS_Counter::ramText
+	Text_t1901882714 * ___ramText_17;
 
 public:
-	inline static int32_t get_offset_of_updateInterval_4() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___updateInterval_4)); }
-	inline float get_updateInterval_4() const { return ___updateInterval_4; }
-	inline float* get_address_of_updateInterval_4() { return &___updateInterval_4; }
-	inline void set_updateInterval_4(float value)
+	inline static int32_t get_offset_of_fpsText_4() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___fpsText_4)); }
+	inline Text_t1901882714 * get_fpsText_4() const { return ___fpsText_4; }
+	inline Text_t1901882714 ** get_address_of_fpsText_4() { return &___fpsText_4; }
+	inline void set_fpsText_4(Text_t1901882714 * value)
 	{
-		___updateInterval_4 = value;
+		___fpsText_4 = value;
+		Il2CppCodeGenWriteBarrier((&___fpsText_4), value);
 	}
 
-	inline static int32_t get_offset_of_fpsText_5() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___fpsText_5)); }
-	inline Text_t1901882714 * get_fpsText_5() const { return ___fpsText_5; }
-	inline Text_t1901882714 ** get_address_of_fpsText_5() { return &___fpsText_5; }
-	inline void set_fpsText_5(Text_t1901882714 * value)
+	inline static int32_t get_offset_of_frameRange_5() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___frameRange_5)); }
+	inline int32_t get_frameRange_5() const { return ___frameRange_5; }
+	inline int32_t* get_address_of_frameRange_5() { return &___frameRange_5; }
+	inline void set_frameRange_5(int32_t value)
 	{
-		___fpsText_5 = value;
-		Il2CppCodeGenWriteBarrier((&___fpsText_5), value);
+		___frameRange_5 = value;
 	}
 
-	inline static int32_t get_offset_of_accum_6() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___accum_6)); }
-	inline float get_accum_6() const { return ___accum_6; }
-	inline float* get_address_of_accum_6() { return &___accum_6; }
-	inline void set_accum_6(float value)
+	inline static int32_t get_offset_of_updateInterval_6() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___updateInterval_6)); }
+	inline float get_updateInterval_6() const { return ___updateInterval_6; }
+	inline float* get_address_of_updateInterval_6() { return &___updateInterval_6; }
+	inline void set_updateInterval_6(float value)
 	{
-		___accum_6 = value;
+		___updateInterval_6 = value;
 	}
 
-	inline static int32_t get_offset_of_frames_7() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___frames_7)); }
-	inline int32_t get_frames_7() const { return ___frames_7; }
-	inline int32_t* get_address_of_frames_7() { return &___frames_7; }
-	inline void set_frames_7(int32_t value)
+	inline static int32_t get_offset_of_maxFPS_7() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___maxFPS_7)); }
+	inline int32_t get_maxFPS_7() const { return ___maxFPS_7; }
+	inline int32_t* get_address_of_maxFPS_7() { return &___maxFPS_7; }
+	inline void set_maxFPS_7(int32_t value)
 	{
-		___frames_7 = value;
+		___maxFPS_7 = value;
 	}
 
-	inline static int32_t get_offset_of_timeleft_8() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___timeleft_8)); }
-	inline float get_timeleft_8() const { return ___timeleft_8; }
-	inline float* get_address_of_timeleft_8() { return &___timeleft_8; }
-	inline void set_timeleft_8(float value)
+	inline static int32_t get_offset_of_minFPS_8() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___minFPS_8)); }
+	inline int32_t get_minFPS_8() const { return ___minFPS_8; }
+	inline int32_t* get_address_of_minFPS_8() { return &___minFPS_8; }
+	inline void set_minFPS_8(int32_t value)
 	{
-		___timeleft_8 = value;
+		___minFPS_8 = value;
 	}
 
-	inline static int32_t get_offset_of_fps_9() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___fps_9)); }
-	inline float get_fps_9() const { return ___fps_9; }
-	inline float* get_address_of_fps_9() { return &___fps_9; }
-	inline void set_fps_9(float value)
+	inline static int32_t get_offset_of_accum_9() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___accum_9)); }
+	inline float get_accum_9() const { return ___accum_9; }
+	inline float* get_address_of_accum_9() { return &___accum_9; }
+	inline void set_accum_9(float value)
 	{
-		___fps_9 = value;
+		___accum_9 = value;
 	}
 
-	inline static int32_t get_offset_of_msFrame_10() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___msFrame_10)); }
-	inline float get_msFrame_10() const { return ___msFrame_10; }
-	inline float* get_address_of_msFrame_10() { return &___msFrame_10; }
-	inline void set_msFrame_10(float value)
+	inline static int32_t get_offset_of_frames_10() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___frames_10)); }
+	inline int32_t get_frames_10() const { return ___frames_10; }
+	inline int32_t* get_address_of_frames_10() { return &___frames_10; }
+	inline void set_frames_10(int32_t value)
 	{
-		___msFrame_10 = value;
+		___frames_10 = value;
+	}
+
+	inline static int32_t get_offset_of_timeleft_11() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___timeleft_11)); }
+	inline float get_timeleft_11() const { return ___timeleft_11; }
+	inline float* get_address_of_timeleft_11() { return &___timeleft_11; }
+	inline void set_timeleft_11(float value)
+	{
+		___timeleft_11 = value;
+	}
+
+	inline static int32_t get_offset_of_fpsBuffer_12() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___fpsBuffer_12)); }
+	inline Int32U5BU5D_t385246372* get_fpsBuffer_12() const { return ___fpsBuffer_12; }
+	inline Int32U5BU5D_t385246372** get_address_of_fpsBuffer_12() { return &___fpsBuffer_12; }
+	inline void set_fpsBuffer_12(Int32U5BU5D_t385246372* value)
+	{
+		___fpsBuffer_12 = value;
+		Il2CppCodeGenWriteBarrier((&___fpsBuffer_12), value);
+	}
+
+	inline static int32_t get_offset_of_fpsBufferIndex_13() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___fpsBufferIndex_13)); }
+	inline int32_t get_fpsBufferIndex_13() const { return ___fpsBufferIndex_13; }
+	inline int32_t* get_address_of_fpsBufferIndex_13() { return &___fpsBufferIndex_13; }
+	inline void set_fpsBufferIndex_13(int32_t value)
+	{
+		___fpsBufferIndex_13 = value;
+	}
+
+	inline static int32_t get_offset_of_averageFPS_14() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___averageFPS_14)); }
+	inline float get_averageFPS_14() const { return ___averageFPS_14; }
+	inline float* get_address_of_averageFPS_14() { return &___averageFPS_14; }
+	inline void set_averageFPS_14(float value)
+	{
+		___averageFPS_14 = value;
+	}
+
+	inline static int32_t get_offset_of_msFrame_15() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___msFrame_15)); }
+	inline float get_msFrame_15() const { return ___msFrame_15; }
+	inline float* get_address_of_msFrame_15() { return &___msFrame_15; }
+	inline void set_msFrame_15(float value)
+	{
+		___msFrame_15 = value;
+	}
+
+	inline static int32_t get_offset_of_vramText_16() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___vramText_16)); }
+	inline Text_t1901882714 * get_vramText_16() const { return ___vramText_16; }
+	inline Text_t1901882714 ** get_address_of_vramText_16() { return &___vramText_16; }
+	inline void set_vramText_16(Text_t1901882714 * value)
+	{
+		___vramText_16 = value;
+		Il2CppCodeGenWriteBarrier((&___vramText_16), value);
+	}
+
+	inline static int32_t get_offset_of_ramText_17() { return static_cast<int32_t>(offsetof(FPS_Counter_t957419163, ___ramText_17)); }
+	inline Text_t1901882714 * get_ramText_17() const { return ___ramText_17; }
+	inline Text_t1901882714 ** get_address_of_ramText_17() { return &___ramText_17; }
+	inline void set_ramText_17(Text_t1901882714 * value)
+	{
+		___ramText_17 = value;
+		Il2CppCodeGenWriteBarrier((&___ramText_17), value);
 	}
 };
 
@@ -11578,20 +11621,14 @@ extern const int32_t g_FieldOffsetTable3604[1] =
 	CameraFacingBillboard_t1991403390::get_offset_of_m_Camera_4(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3605 = { sizeof (CameraResolutionScaler_t2459044074), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3605[12] = 
+extern const int32_t g_FieldOffsetTable3605[6] = 
 {
 	CameraResolutionScaler_t2459044074::get_offset_of_renderDivisor_4(),
 	CameraResolutionScaler_t2459044074::get_offset_of_filterMode_5(),
-	CameraResolutionScaler_t2459044074::get_offset_of_vramText_6(),
-	CameraResolutionScaler_t2459044074::get_offset_of_ramText_7(),
-	CameraResolutionScaler_t2459044074::get_offset_of_camera_8(),
-	0,
-	0,
-	0,
-	CameraResolutionScaler_t2459044074::get_offset_of_statsActive_12(),
-	CameraResolutionScaler_t2459044074::get_offset_of_renderTex_13(),
-	CameraResolutionScaler_t2459044074::get_offset_of_originalRect_14(),
-	CameraResolutionScaler_t2459044074::get_offset_of_scaledRect_15(),
+	CameraResolutionScaler_t2459044074::get_offset_of_camera_6(),
+	CameraResolutionScaler_t2459044074::get_offset_of_renderTex_7(),
+	CameraResolutionScaler_t2459044074::get_offset_of_originalRect_8(),
+	CameraResolutionScaler_t2459044074::get_offset_of_scaledRect_9(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3606 = { sizeof (CPU_Counter_t3445161786), -1, sizeof(CPU_Counter_t3445161786_StaticFields), 0 };
 extern const int32_t g_FieldOffsetTable3606[7] = 
@@ -11689,15 +11726,22 @@ extern const int32_t g_FieldOffsetTable3614[8] =
 	U3CfadeU3Ec__Iterator0_t2368515847::get_offset_of_U24PC_7(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3615 = { sizeof (FPS_Counter_t957419163), -1, 0, 0 };
-extern const int32_t g_FieldOffsetTable3615[7] = 
+extern const int32_t g_FieldOffsetTable3615[14] = 
 {
-	FPS_Counter_t957419163::get_offset_of_updateInterval_4(),
-	FPS_Counter_t957419163::get_offset_of_fpsText_5(),
-	FPS_Counter_t957419163::get_offset_of_accum_6(),
-	FPS_Counter_t957419163::get_offset_of_frames_7(),
-	FPS_Counter_t957419163::get_offset_of_timeleft_8(),
-	FPS_Counter_t957419163::get_offset_of_fps_9(),
-	FPS_Counter_t957419163::get_offset_of_msFrame_10(),
+	FPS_Counter_t957419163::get_offset_of_fpsText_4(),
+	FPS_Counter_t957419163::get_offset_of_frameRange_5(),
+	FPS_Counter_t957419163::get_offset_of_updateInterval_6(),
+	FPS_Counter_t957419163::get_offset_of_maxFPS_7(),
+	FPS_Counter_t957419163::get_offset_of_minFPS_8(),
+	FPS_Counter_t957419163::get_offset_of_accum_9(),
+	FPS_Counter_t957419163::get_offset_of_frames_10(),
+	FPS_Counter_t957419163::get_offset_of_timeleft_11(),
+	FPS_Counter_t957419163::get_offset_of_fpsBuffer_12(),
+	FPS_Counter_t957419163::get_offset_of_fpsBufferIndex_13(),
+	FPS_Counter_t957419163::get_offset_of_averageFPS_14(),
+	FPS_Counter_t957419163::get_offset_of_msFrame_15(),
+	FPS_Counter_t957419163::get_offset_of_vramText_16(),
+	FPS_Counter_t957419163::get_offset_of_ramText_17(),
 };
 extern const Il2CppTypeDefinitionSizes g_typeDefinitionSize3616 = { sizeof (FXAA3_11_ConsoleEffect_t3571672928), -1, 0, 0 };
 extern const int32_t g_FieldOffsetTable3616[5] = 

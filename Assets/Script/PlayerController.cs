@@ -174,7 +174,14 @@ public class PlayerController : MonoBehaviour
                 Vector3 lightrotation = Quaternion.Lerp(lightRoot.transform.rotation, lightlookRotation, Time.deltaTime * 21f).eulerAngles;
                 lightRoot.transform.rotation = Quaternion.Euler(lightrotation);
         }
-        
+        if (!isMap){
+            mapCam.gameObject.SetActive(false);
+           
+        }
+        else{
+            mapCam.gameObject.SetActive(true);
+           
+        }
     }
     private void Flashlight()
     {
@@ -892,24 +899,26 @@ public class PlayerController : MonoBehaviour
     }
     IEnumerator fade(RawImage fadeObject, float startValue, float endValue, float duration){
 		float time = 0.0f;
+          if (isMap){
+            isMap = false;
+        }
+        else if (!isMap){
+            isMap = true;
+        }
+           if (isPaused){
+            isPaused = false;
+        }
+        else if (!isPaused){
+            isPaused = true;
+        }
 		while (time < duration){
 			fadeObject.color = Color.Lerp (new Color(1,1,1,startValue), new Color(1,1,1,endValue), time/duration);
 			time += Time.deltaTime;
         	yield return null;
 		}
 		fadeObject.color = new Color (1,1,1,endValue);
-        if (isPaused){
-            isPaused = false;
-        }
-        else if (!isPaused){
-            isPaused = true;
-        }
-        if (isMap){
-            isMap = false;
-        }
-        else if (!isMap){
-            isMap = true;
-        }
+     
+      
 	}
 
 IEnumerator fadeAlpha (float startValue, float endValue, float duration, float waitTime){

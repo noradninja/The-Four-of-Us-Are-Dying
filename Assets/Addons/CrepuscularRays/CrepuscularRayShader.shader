@@ -111,7 +111,7 @@ Shader "Lighting/Crepuscular Rays" {
 					illuminationDecay *= _Decay;
 				}
 				//drop color
-				color = (color.r + color.g + color.b)/3;
+				//color = (color.r + color.g + color.b)/3;
 				// Output final color with a further scale control factor.
 				return max(half4(color * _Exposure, 1), 0.125f);
 			}
@@ -176,7 +176,7 @@ Shader "Lighting/Crepuscular Rays" {
 				fixed4 sample = tex2D(_BlurTex, i.uv);
 				fixed contrast = _Contrast;
 				//add our ray greyscale samples at + 50% brightness to the main image 
-				return  (((col) + (sample * 0.55h))- 0.5h) * contrast + 0.5h;
+				return  (((col) + (sample * 0.5h))- 0.5h) * contrast + 0.5h;
 			}
 		ENDCG
 

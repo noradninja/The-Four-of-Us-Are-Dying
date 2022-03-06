@@ -12,12 +12,15 @@ public class FXAA : MonoBehaviour
 
     static readonly int sharpnessString = Shader.PropertyToID("_Sharpness");
     static readonly int thresholdString = Shader.PropertyToID("_Threshold");
-  [ImageEffectOpaque]
     public void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
         material.SetFloat(sharpnessString, Sharpness);
         material.SetFloat(thresholdString, Threshold);
+        var blurTex = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /2), 
+                                                Mathf.RoundToInt(Screen.height /2));
 
-        Graphics.Blit(source, destination, material);
+        Graphics.Blit(source, blurTex, material);
+        Graphics.Blit(blurTex, destination);
+        RenderTexture.ReleaseTemporary(blurTex);
     }
 }
