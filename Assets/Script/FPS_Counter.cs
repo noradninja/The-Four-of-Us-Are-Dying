@@ -25,7 +25,8 @@ public class FPS_Counter : MonoBehaviour {
     // Use this for initialization
 void Start(){
 		if(!Application.isEditor) {
-			UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToMonoHeap();
+			UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToHeap();
+            UnityEngine.PSVita.Utility.SetMonoHeapBehaviours(false, true);
 			Screen.SetResolution(720, 408, true);	
 			QualitySettings.vSyncCount = 1;	
 		}
@@ -53,7 +54,8 @@ void Start(){
             accum = 0.0f;
             frames = 0;
             //Display the fps/ms and round to n decimals
-            fpsText.text = (Mathf.Clamp(averageFPS,0,99).ToString("F0") + " FPS Average / " + msFrame.ToString("F2") + " ms/frame over " + frameRange/30 + " seconds");
+            fpsText.text = (Mathf.Clamp(Mathf.RoundToInt(averageFPS),0,99).ToString("F0") + " FPS Average / " + 
+                                        msFrame.ToString("F2") + " ms/frame over " + frameRange/30 + " second(s)");
             if(!Application.isEditor) {
 		
                 float VRAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryCDRAM();
@@ -99,7 +101,7 @@ void Start(){
 		if (Mathf.RoundToInt(averageFPS) >= 30.00f){
 			fpsText.color = Color.green;
 		}
-		else if (Mathf.Round(averageFPS) < 30.00f) {
+		else if (Mathf.RoundToInt(averageFPS) < 30.00f) {
 			fpsText.color = Color.red;
 		}
     }

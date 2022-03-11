@@ -168,8 +168,9 @@
      <Compile Include="Assets\Script\Cam.cs" />
      <Compile Include="Assets\Script\CameraFacingBillboard.cs" />
      <Compile Include="Assets\Script\CameraResolutionScaler.cs" />
+     <Compile Include="Assets\Script\Controllers\EnemyController.cs" />
+     <Compile Include="Assets\Script\Controllers\PlayerController.cs" />
      <Compile Include="Assets\Script\CPU_Counter.cs" />
-     <Compile Include="Assets\Script\EnemyController.cs" />
      <Compile Include="Assets\Script\FadeIn.cs" />
      <Compile Include="Assets\Script\FadeInWithCross.cs" />
      <Compile Include="Assets\Script\Fadeout.cs" />
@@ -184,7 +185,6 @@
      <Compile Include="Assets\Script\Item_Enumerator.cs" />
      <Compile Include="Assets\Script\LoadScreen.cs" />
      <Compile Include="Assets\Script\MapController.cs" />
-     <Compile Include="Assets\Script\PlayerController.cs" />
      <Compile Include="Assets\Script\PostProcessingManager.cs" />
      <Compile Include="Assets\Script\Rotate_Object.cs" />
      <Compile Include="Assets\Script\SetShadowResolution.cs" />
@@ -225,6 +225,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCoreForwardSimple_VC.cginc" />
+     <None Include="Assets\GlassBumpEffect\Shaders\GlassStainedBumpDistort_Orthographic.shader" />
      <None Include="Assets\Addons\Kino\Bokeh\Shader\DiskKernel.cginc" />
      <None Include="Assets\Addons\FastMobileBloom\readme.txt" />
      <None Include="Assets\Shader\Foliage\Vertex Color.shader" />
@@ -289,6 +290,7 @@
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardCore.cginc" />
      <None Include="Assets\Addons\Shaders\font.shader" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForward_VC.cginc" />
+     <None Include="Assets\GlassBumpEffect\Shaders\GlassStainedBumpDistort_Perspective.shader" />
      <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCoreForwardSimple_VC.cginc" />
      <None Include="Assets\Addons\Shaders\beam2.shader" />
      <None Include="Assets\Addons\Lightbeam\Documentation\Readme.txt" />

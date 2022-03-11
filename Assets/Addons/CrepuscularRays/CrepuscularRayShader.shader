@@ -175,7 +175,7 @@ Shader "Lighting/Crepuscular Rays" {
 				fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 sample = tex2D(_BlurTex, i.uv);
 				fixed contrast = _Contrast;
-				//add our ray greyscale samples at + 50% brightness to the main image 
+				//add our ray samples at + 50% brightness to the main image 
 				return  (((col) + (sample * 0.5h))- 0.5h) * contrast + 0.5h;
 			}
 		ENDCG
