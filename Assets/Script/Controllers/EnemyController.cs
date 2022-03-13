@@ -19,32 +19,47 @@ public class EnemyController : MonoBehaviour {
 		enemy3
 	}
 
-	public GameObject player;
-	public enemyState thisState;
-	public enemyType thisEnemyType;
-	public GameObject targetPoint;
-	public float turnSpeed = 1.0f;
-	public bool isPlayerNear = false;
-	public NavMeshAgent agent;
-	public float distanceToPlayer;
+//private vars
 	private Vector3 startingPosition;
+	private Collider[] rangeChecks;
+	private bool onMesh = false;
 
-	public float radius;
+//public vars
+	[Header("Enemy Setup")]
+	public enemyType typeOfEnemy;
+	public Animator enemyAnimator;
+	public GameObject player;
+	public GameObject targetPoint;
+	public  GameObject randomPointObject;
+	public NavMeshAgent meshAgent;
+	public float turnSpeed = 1.0f;
+
+	
+	[Header("FOV and Visibility")]
+	public float viewRadius;
 	[Range (0, 360)]
-	public float angle;
+	public float fovAngle;
 	public LayerMask targetMask;
 	public LayerMask obstructionMask;
-	public bool canSeePlayer;
-	public  GameObject randomPoint;
-
-	public Collider[] rangeChecks;
-	public bool onMesh = false;
+	public float distanceToPlayer;
+	public bool isPlayerNear = false;
+	public bool canSeePlayer = false;
+	[Header("Behavior")]
+	public enemyState behaviorState;
+	public float alertDelay = 1.5f;
+	public float lookDelay = 1.5f;
+	public bool alerted = false;
 	public bool lookingForPlayer = false;
 	public bool roaming = false;
+	
+	
+	
+
+
 	// Use this for initialization
 	void Start () {
 		startingPosition = transform.position;
-		
+		enemyAnimator = GetComponent<Animator>();
 		RandomizePoint();
 	}
 		
@@ -52,18 +67,31 @@ public class EnemyController : MonoBehaviour {
 	void Update () {
 		distanceToPlayer = Vector3.Distance(player.transform.position, this.transform.position); 
 		
-		if (distanceToPlayer < 3.0f && distanceToPlayer > 2.5f){
-			thisState = enemyState.alert;
+		if (distanceToPlayer < viewRadius && distanceToPlayer > viewRadius - (viewRadius /(viewRadius * 0.5f))){
+			behaviorState = enemyState.alert;
+			//isPlayerNear = true;
 		}
-		if (distanceToPlayer < 2.5f && distanceToPlayer > 0.5f && canSeePlayer){
-			thisState = enemyState.chase;
+
+		if (distanceToPlayer <= 1.25f){
+			behaviorState = enemyState.attack;
 		}
-		if (distanceToPlayer < 0.5f && canSeePlayer){
-			thisState = enemyState.attack;
+		
+	
+		if (distanceToPlayer > viewRadius){
+			isPlayerNear = false;
+			alerted = false;
+		}
+
+		if (isPlayerNear){
+
+			Vector3 dir = player.transform.position - transform.position;
+			Quaternion lookRotation = Quaternion.LookRotation(dir);
+			Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
+			transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
 		}
 
 
-		switch (thisEnemyType){
+		switch (typeOfEnemy){
             case enemyType.standIn:
                 StandInStates();
                 break;
@@ -82,7 +110,7 @@ public class EnemyController : MonoBehaviour {
 
     private void Type3States()
     {
-        switch (thisState)
+        switch (behaviorState)
         {
             case enemyState.idle:
                 //play idle animation
@@ -112,7 +140,7 @@ public class EnemyController : MonoBehaviour {
 
     private void Type2States()
     {
-        switch (thisState)
+        switch (behaviorState)
         {
             case enemyState.idle:
                 //play idle animation
@@ -142,69 +170,103 @@ public class EnemyController : MonoBehaviour {
 
     private void StandInStates()
     {
-        switch (thisState)
+        switch (behaviorState)
         {
             case enemyState.idle:
 				if (!canSeePlayer){
 					if (!lookingForPlayer){
-						thisState = enemyState.looking;
+						behaviorState = enemyState.looking;
 					}
 				}
 				if (canSeePlayer){
-					thisState = enemyState.alert;
+					behaviorState = enemyState.alert;
 				}
                 if (player.GetComponent<PlayerController>().currentTarget == targetPoint)
                 {
                     player.GetComponent<PlayerController>().currentTarget = null;
                 }
                 player.GetComponent<PlayerController>().lightMovement = true;
-                break;
+				isPlayerNear = false;
+                if (enemyAnimator.GetBool("isAttacking") == true){
+					enemyAnimator.SetBool("isAttacking", false);
+				}
+				break;
 
             case enemyState.alert:
 				StartCoroutine(FOVRoutine());
-				if (canSeePlayer){
-					FaceTarget(player);
-					player.GetComponent<PlayerController>().currentTarget = targetPoint;
-					thisState = enemyState.chase;
-				}
-				else { 
-					if (!lookingForPlayer){
-						roaming = false;
-						thisState = enemyState.looking;
+				StartCoroutine(AlertTimer(alertDelay));
+				if (distanceToPlayer <= viewRadius){
+					if (alerted){
+						FaceTarget(player);
+						player.GetComponent<PlayerController>().currentTarget = targetPoint;
+						if (canSeePlayer){
+								meshAgent.SetDestination(player.transform.position);
+								FaceTarget(player);
+						}
+						if (enemyAnimator.GetBool("isAttacking") == true){
+								enemyAnimator.SetBool("isAttacking", false);
+						}
 					}
 				}
-				               
+				else { 
+					if (!lookingForPlayer || !isPlayerNear){
+						behaviorState = enemyState.looking;
+					}
+				}
+				if (enemyAnimator.GetBool("isAttacking") == true){
+					enemyAnimator.SetBool("isAttacking", false);
+				}              
                 break;
 
 			case enemyState.looking:
 				roaming = false;
+				alerted = false;
 				if (!lookingForPlayer){
 					Look();
+				}
+				if (enemyAnimator.GetBool("isAttacking") == true){
+					enemyAnimator.SetBool("isAttacking", false);
 				}
 			break;
 
 			case enemyState.roaming:
-				
+					lookingForPlayer = false;
+					alerted = false;
 					RoamAround();
+				if (enemyAnimator.GetBool("isAttacking") == true){
+					enemyAnimator.SetBool("isAttacking", false);
+				}
 			break;
 
             case enemyState.chase:
-				if (canSeePlayer){
-					agent.SetDestination(player.transform.position);
-					FaceTarget(player);
-				}
-				else {
-					thisState = enemyState.alert;
-				}
-				break;
+			lookingForPlayer = false;
+			roaming = false;
+			alerted = false;
+			FieldOfViewCheck();
+			if (canSeePlayer){
+				meshAgent.SetDestination(player.transform.position);
+				FaceTarget(player);
+			}
+			if (enemyAnimator.GetBool("isAttacking") == true){
+					enemyAnimator.SetBool("isAttacking", false);
+			}
+			break;
 
             case enemyState.attack:
+				lookingForPlayer = false;
+				roaming = false;
+				alerted = false;
                 //attack player
-                break;
+				if (enemyAnimator.GetBool("isAttacking") == false){
+					enemyAnimator.SetBool("isAttacking", true);
+				}
+				meshAgent.SetDestination(player.transform.position);
+				FaceTarget(player);
+			break;
 
             case enemyState.dodge:
                 //dodge player attack
-                break;
+			break;
         }
     }
 
@@ -227,13 +289,13 @@ public class EnemyController : MonoBehaviour {
 
 	private void FieldOfViewCheck()
 	{
-		rangeChecks = Physics.OverlapSphere(transform.position, radius, targetMask);
+		rangeChecks = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
 		if (rangeChecks.Length !=0){
 			Transform target = rangeChecks[0].transform;
 			Vector3 directionToTarget = (target.position - transform.position).normalized;
 
-			if (Vector3.Angle(transform.forward, directionToTarget) < angle /2){
+			if (Vector3.Angle(transform.forward, directionToTarget) < fovAngle /2){
 				float distanceToTarget = Vector3.Distance(transform.position, target.position);
 				if(!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
 					canSeePlayer = true;
@@ -246,31 +308,39 @@ public class EnemyController : MonoBehaviour {
 		else if (canSeePlayer)
 			canSeePlayer = false;
 	}
-
+	private IEnumerator AlertTimer(float duration){
+		WaitForSecondsRealtime wait = new WaitForSecondsRealtime(duration);
+		yield return wait;
+		alerted = true;
+		isPlayerNear = true;
+	}
 	private void Look(){
 		lookingForPlayer = true;
 		roaming = false;
 		print ("Looking Around");
-		StartCoroutine(LookWait(1.5f));
+		StartCoroutine(LookWait(lookDelay));
 	}
 
 	private IEnumerator LookWait(float duration){
-		yield return new WaitForSeconds(duration);
+		print ("Enter");
+		WaitForSecondsRealtime wait = new WaitForSecondsRealtime(duration);
+		yield return wait;
+		print ("Exit after " + duration + " seconds.");
 		RandomizePoint();
-		thisState = enemyState.roaming;
+		behaviorState = enemyState.roaming;
 	}
 
 	private void RandomizePoint(){
 		
 
-		Vector3 randomCircle = new Vector3(Random.insideUnitCircle.x * radius, 0, Random.insideUnitCircle.y * radius);
-		Vector3 point = randomPoint.transform.position + randomCircle;
+		Vector3 randomCircle = new Vector3(Random.insideUnitCircle.x * viewRadius, 0, Random.insideUnitCircle.y * viewRadius);
+		Vector3 point = randomPointObject.transform.position + randomCircle;
 		int walkMask = 1 << NavMesh.GetAreaFromName("Walkable");
 		NavMeshHit hit;
 		if (NavMesh.SamplePosition(point, out hit, 0.125f, walkMask)) //is the point within 0.25 units of a NavMesh surface
 		{
 			onMesh = true;
-			randomPoint.transform.position = point;
+			randomPointObject.transform.position = point;
 		}
 		else
 		{
@@ -281,16 +351,16 @@ public class EnemyController : MonoBehaviour {
 	private void RoamAround(){
 		lookingForPlayer = false;
 		roaming = true;
-		agent.SetDestination(randomPoint.transform.position);
-		FaceTarget(randomPoint);
+		meshAgent.SetDestination(randomPointObject.transform.position);
+		FaceTarget(randomPointObject);
 		// // Check if we've reached the destination
-		if (!agent.pathPending)
+		if (!meshAgent.pathPending)
 		{
-			if (agent.remainingDistance <= agent.stoppingDistance)
+			if (meshAgent.remainingDistance <= meshAgent.stoppingDistance)
 			{
-				if (agent.velocity.sqrMagnitude <= 0.275f)
+				if (meshAgent.velocity.sqrMagnitude <= 0.01f)
 				{
-					thisState = enemyState.looking;
+					behaviorState = enemyState.looking;
 				}
 			}
 		}

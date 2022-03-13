@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Road
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _GLOSSYREFLECTIONS_OFF _METALLICGLOSSMAP _SPECULARHIGHLIGHTS_OFF
+  m_ShaderKeywords: _METALLICGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -212,9 +212,9 @@ Material:
     - _EmissionToggle: 0
     - _FogOffset: 0
     - _FogToggle: 1
-    - _GlossMapScale: 0.5
+    - _GlossMapScale: 0.74
     - _Glossiness: 0.823
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
     - _IntensityVC: 0
     - _IntersectFold: 0
     - _IntersectThreshold: 1
@@ -403,7 +403,7 @@ Material:
     - _Smoothness2: 1
     - _Smoothness3: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 0
+    - _SpecularHighlights: 1
     - _SpecularMapType: 999
     - _SrcBlend: 1
     - _SrcBlendAddPass: 1
