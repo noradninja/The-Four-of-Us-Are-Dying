@@ -24,17 +24,9 @@ public class FPS_Counter : MonoBehaviour {
 
     // Use this for initialization
 void Start(){
-		if(!Application.isEditor) {
-			UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToHeap();
-            UnityEngine.PSVita.Utility.SetMonoHeapBehaviours(false, true);
-			Screen.SetResolution(720, 408, true);	
-			QualitySettings.vSyncCount = 1;	
-		}
-		else {
-			QualitySettings.vSyncCount = 0;	
-		}
-          timeleft = updateInterval;
 		
+        
+        timeleft = updateInterval;
 	}
   
     // Update is called once per frame

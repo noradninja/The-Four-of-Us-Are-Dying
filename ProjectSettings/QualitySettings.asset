@@ -8,7 +8,7 @@ QualitySettings:
   m_QualitySettings:
   - serializedVersion: 2
     name: Vita
-    pixelLightCount: 4
+    pixelLightCount: 3
     shadows: 1
     shadowResolution: 0
     shadowProjection: 1
@@ -26,12 +26,12 @@ QualitySettings:
     softVegetation: 1
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
-    vSyncCount: 1
+    vSyncCount: 0
     lodBias: 1
     maximumLODLevel: 0
-    streamingMipmapsActive: 0
+    streamingMipmapsActive: 1
     streamingMipmapsAddAllCameras: 1
-    streamingMipmapsMemoryBudget: 128
+    streamingMipmapsMemoryBudget: 96
     streamingMipmapsRenderersPerFrame: 128
     streamingMipmapsMaxLevelReduction: 2
     streamingMipmapsMaxFileIORequests: 128

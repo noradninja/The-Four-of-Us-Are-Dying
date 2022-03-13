@@ -360,7 +360,7 @@ namespace UnityEditor
                      material.SetInt("_SrcBlend", (int)UnityEngine.Rendering.BlendMode.SrcAlpha);
                     material.SetInt("_DstBlend", (int)UnityEngine.Rendering.BlendMode.Zero);
                     material.SetInt("_ZWrite", 1);
-                    material.SetInt("_Cull", 0);
+                    material.SetInt("_Cull", 2);
                     material.EnableKeyword("_ALPHATEST_ON");
                     material.DisableKeyword("_ALPHABLEND_ON");
                     material.EnableKeyword("_ALPHAPREMULTIPLY_ON");

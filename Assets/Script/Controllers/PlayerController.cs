@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
         Keys();
     
         if (verticalMove != 0 || horizontalRotation !=0){
-        walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+        walkStart = skinnedRenderer.sharedMaterial.GetFloat("_CrossFade");
             if (walkStart == 0f){   
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
             }    
@@ -478,6 +478,7 @@ public class PlayerController : MonoBehaviour
         {
             Focus();
             if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
+            if (currentTarget != null) lightMovement = false;
             // direction = (currentTarget.transform.position + transform.position) * 0.5f;    
             // midPoint.position = direction;
         }
@@ -562,7 +563,7 @@ public class PlayerController : MonoBehaviour
             savedPosition = lightRig.transform.localPosition;
             savedRotation = lightRig.transform.localRotation;
             lightRig.transform.parent = handRig; 
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            walkStart = skinnedRenderer.sharedMaterial.GetFloat("_CrossFade");
             StartCoroutine(walkLerp(0, 1,  lerpRate));
             if (UICanvasGroup.alpha != 1){
                 StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
@@ -582,7 +583,7 @@ public class PlayerController : MonoBehaviour
             }
             speed = walkSpeed;
             StartCoroutine(rechargeStamina(((100-stamina)), stamina));
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            walkStart = skinnedRenderer.sharedMaterial.GetFloat("_CrossFade");
             lerpRate = 0.55f;
             StartCoroutine(walkLerp(0, 1,  lerpRate));   
             animator.SetBool("isRunning", false);
@@ -685,7 +686,7 @@ public class PlayerController : MonoBehaviour
 
         }
         if (verticalMove != 0 || horizontalRotation !=0){
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            walkStart = skinnedRenderer.sharedMaterial.GetFloat("_CrossFade");
               
                 if (animator.GetBool("isWalking") == true){ 
                     lerpRate = 0.55f;
@@ -709,7 +710,7 @@ public class PlayerController : MonoBehaviour
         if (animator.GetBool("isRunning") == false ) {
             animator.SetBool("isWalking", verticalMove != 0 || horizontalRotation !=0);
             animator.SetBool("isIdle", false);
-              walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+              walkStart = skinnedRenderer.sharedMaterial.GetFloat("_CrossFade");
               
                 if (animator.GetBool("isWalking") == true){ 
                     lerpRate = 0.55f;
@@ -744,7 +745,7 @@ public class PlayerController : MonoBehaviour
             if (animator.GetBool("isRunning") == true  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
                 animator.SetBool("isRunning", false);
                 animator.SetBool("isWalking", true);  
-                walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+                walkStart = skinnedRenderer.sharedMaterial.GetFloat("_CrossFade");
                 lerpRate = 0.55f;
                 if (walkStart == 0f){
                     StartCoroutine(walkLerp(0, 1,  lerpRate));
@@ -787,7 +788,7 @@ public class PlayerController : MonoBehaviour
         float time = 0;
         while (time <= duration){
             float swap = Mathf.Lerp(startValue, endValue, time/duration);
-            skinnedRenderer.material.SetFloat("_PainValue", swap);
+            skinnedRenderer.sharedMaterial.SetFloat("_PainValue", swap);
             time += Time.deltaTime;
             yield return null;  
         }
@@ -803,20 +804,20 @@ public class PlayerController : MonoBehaviour
         while (time <= duration){
             isLerping = true;
             float swap = Mathf.Lerp(startValue, endValue, time/duration);
-            skinnedRenderer.material.SetFloat("_CrossFade", swap);
+            skinnedRenderer.sharedMaterial.SetFloat("_CrossFade", swap);
             time += Time.deltaTime;
             yield return null;  
         }
-        skinnedRenderer.material.SetFloat("_CrossFade", 1);
+        skinnedRenderer.sharedMaterial.SetFloat("_CrossFade", 1);
         time = 0;
         while (time <= duration){
             isLerping = true;
             float swap = Mathf.Lerp(endValue, startValue, time/duration);
-            skinnedRenderer.material.SetFloat("_CrossFade", swap);
+            skinnedRenderer.sharedMaterial.SetFloat("_CrossFade", swap);
             time += Time.deltaTime;
             yield return null;  
         }
-        skinnedRenderer.material.SetFloat("_CrossFade", 0);
+        skinnedRenderer.sharedMaterial.SetFloat("_CrossFade", 0);
         isLerping = false; 
     }
 
@@ -891,7 +892,7 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
         if (verticalMove != 0 || horizontalRotation !=0){
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            walkStart = skinnedRenderer.sharedMaterial.GetFloat("_CrossFade");
             if (walkStart == 0f){   
                 StartCoroutine(walkLerp(0, 1,  lerpRate));
             }    

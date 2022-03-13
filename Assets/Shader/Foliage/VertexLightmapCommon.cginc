@@ -6,12 +6,6 @@
 #include "Lighting.cginc"
 #include "UnityShadowLibrary.cginc"
 
-#include "UnityStandardConfig.cginc"
-#include "UnityPBSLighting.cginc"
-#include "UnityStandardUtils.cginc"
-#include "UnityGBuffer.cginc"
-#include "UnityStandardBRDF.cginc"
-
 #define USING_FOG (defined(FOG_LINEAR) || defined(FOG_EXP) || defined(FOG_EXP2))
 // ES2.0 can not do loops with non-constant-expression iteration counts :(
 #if defined(SHADER_API_GLES)
@@ -30,7 +24,7 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 		dirToLight -= eyePosition * unity_LightPosition[idx].w;
 		
 		// distance attenuation
-		half distSqr = dot(dirToLight, dirToLight);
+		float distSqr = dot(dirToLight, dirToLight);
 		att /= (1.0 + unity_LightAtten[idx].z * distSqr);
 
 		if (unity_LightPosition[idx].w != 0 &&
@@ -69,46 +63,47 @@ half _leaves_wiggle_speed;
 half _influence;
 
 
-// pos shader input data
+// vertex shader input data
 struct appdata {
-	half3 pos : POSITION;
+	half3 vertex : POSITION;
 	half3 normal : NORMAL;
 	half3 uv0 : TEXCOORD0;
 	half3 uv1 : TEXCOORD1;
 };
 
-// pos-to-fragment interpolators
+// vertex-to-fragment interpolators
 struct v2f {
-	half4 pos : SV_POSITION;
+	half4 vertex : SV_POSITION;
 	half4 color : COLOR0;
 	half2 uv0 : TEXCOORD0;
 	half2 uv1 : TEXCOORD1;
-	half4 screenPosition : TEXCOORD2;
-	
+
+
 	#if USING_FOG
             UNITY_FOG_COORDS(3)
 	#endif
 
-
 };
 
-// pos shader
+// vertex shader
 v2f vert(appdata v) {
 
 	v2f o;
-
-	half3 worldPos = mul (unity_ObjectToWorld, half4(v.pos, 1) ).xyz;
-	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1) ).xyz;
-	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
- 	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
- 	half rimWidth = 1;
+	UNITY_SETUP_INSTANCE_ID(v);
+	UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+	half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
+	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.vertex, 1) ).xyz;
+	half3 eyeNormal = normalize(mul( (float3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
+	//float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
+ 	float dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
+ 	float rimWidth = 1;
 
 	//Leaf Movement and Wiggle
-	( (v.pos.x += cos(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-	(v.pos.y += sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-	(v.pos.z += cos(_Time.z * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) ); //z
+	( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
+	(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
+	(v.vertex.z += cos(_Time.z * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) ); //z
                     
-	// pos lighting
+	// vertex lighting
 	half4 color = half4(0, 0, 0, 1);
 
 	#if defined(AMBIENT_ON) || !defined(CUSTOM_LIGHTMAPPED)
@@ -127,11 +122,11 @@ v2f vert(appdata v) {
 	#if defined(CUSTOM_LIGHTMAPPED)
 		o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
 	#endif
-	o.pos = UnityObjectToClipPos(v.pos);
-	o.screenPosition = ComputeScreenPos(o.pos);
+
+	// transform position
+	o.vertex = UnityObjectToClipPos(v.vertex);
 	
-	
-	UNITY_TRANSFER_FOG(o,o.pos);
+	UNITY_TRANSFER_FOG(o,o.vertex);
 
 	return o;
 
@@ -140,29 +135,28 @@ v2f vert(appdata v) {
 // fragment shader
 fixed4 frag(v2f v) : SV_Target {
 
-	half4 posLighting = v.color;
+	half4 vertexLighting = v.color;
 	UNITY_EXTRACT_FOG(v);
 	#if defined(CUSTOM_LIGHTMAPPED)
 		half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
 
 	#if CUSTOM_LIGHTMAPPED == 1
-		half4 lighting = (lightmap * 0.25f) + posLighting;
+		half4 lighting = (lightmap * 0.25f) + vertexLighting;
 	#endif
 
 	#else
-		half4 lighting = posLighting;
-	#endif
-	
-		half4 diffuse = tex2D(_MainTex, v.uv0.xy);
-		half4 col = (diffuse * lighting);
-
-		col.a = diffuse.a;
-		clip(col.a - _Cutoff);	
-	
-	#if USING_FOG
-		UNITY_APPLY_FOG(v.fogCoord, col);
+		half4 lighting = vertexLighting;
 	#endif
 		
+		half4 diffuse = tex2D(_MainTex, v.uv0.xy);
+		half4 col = (diffuse * lighting);
+		
+		col.a = diffuse.a;
+		clip(col.a - _Cutoff);
+		#if USING_FOG
+			UNITY_APPLY_FOG(v.fogCoord, col);
+		#endif
+		
 	
-	return col;
+		return col;
 }

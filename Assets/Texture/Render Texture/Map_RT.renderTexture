@@ -13,10 +13,10 @@ RenderTexture:
   m_DownscaleFallback: 0
   m_Width: 1024
   m_Height: 1024
-  m_AntiAliasing: 4
+  m_AntiAliasing: 1
   m_DepthFormat: 0
   m_ColorFormat: 0
-  m_MipMap: 0
+  m_MipMap: 1
   m_GenerateMips: 1
   m_SRGB: 1
   m_UseDynamicScale: 0

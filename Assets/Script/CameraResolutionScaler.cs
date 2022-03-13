@@ -28,8 +28,19 @@ public class CameraResolutionScaler : MonoBehaviour
 					}
 	private Rect originalRect;
 	private Rect scaledRect;
+	public bool changeInternalResolution;
 	void Awake(){
 		camera = this.GetComponent<Camera>();
+		if(!Application.isEditor) {
+			// UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToHeap();
+            // UnityEngine.PSVita.Utility.SetMonoHeapBehaviours(false, true);
+			if (changeInternalResolution){
+				Screen.SetResolution(720, 408, true, 60);	
+			}
+		}
+		else {
+			QualitySettings.vSyncCount = 0;	
+		}
 	}
 	void Update(){
 	

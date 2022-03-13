@@ -72,7 +72,7 @@ public class EnemyController : MonoBehaviour {
 			//isPlayerNear = true;
 		}
 
-		if (distanceToPlayer <= 1.25f){
+		if (distanceToPlayer <= 1.5f){
 			behaviorState = enemyState.attack;
 		}
 		
@@ -185,7 +185,7 @@ public class EnemyController : MonoBehaviour {
                 {
                     player.GetComponent<PlayerController>().currentTarget = null;
                 }
-                player.GetComponent<PlayerController>().lightMovement = true;
+                // player.GetComponent<PlayerController>().lightMovement = true;
 				isPlayerNear = false;
                 if (enemyAnimator.GetBool("isAttacking") == true){
 					enemyAnimator.SetBool("isAttacking", false);
@@ -193,12 +193,15 @@ public class EnemyController : MonoBehaviour {
 				break;
 
             case enemyState.alert:
-				StartCoroutine(FOVRoutine());
-				StartCoroutine(AlertTimer(alertDelay));
+				if (!alerted){
+					StartCoroutine(FOVRoutine());
+					StartCoroutine(AlertTimer(alertDelay));
+				}
 				if (distanceToPlayer <= viewRadius){
 					if (alerted){
 						FaceTarget(player);
 						player.GetComponent<PlayerController>().currentTarget = targetPoint;
+						// player.GetComponent<PlayerController>().lightMovement = false;
 						if (canSeePlayer){
 								meshAgent.SetDestination(player.transform.position);
 								FaceTarget(player);
@@ -221,6 +224,7 @@ public class EnemyController : MonoBehaviour {
 			case enemyState.looking:
 				roaming = false;
 				alerted = false;
+				player.GetComponent<PlayerController>().lightMovement = true;
 				if (!lookingForPlayer){
 					Look();
 				}
@@ -246,6 +250,8 @@ public class EnemyController : MonoBehaviour {
 			if (canSeePlayer){
 				meshAgent.SetDestination(player.transform.position);
 				FaceTarget(player);
+				player.GetComponent<PlayerController>().currentTarget = targetPoint;
+				// player.GetComponent<PlayerController>().lightMovement = false;
 			}
 			if (enemyAnimator.GetBool("isAttacking") == true){
 					enemyAnimator.SetBool("isAttacking", false);
@@ -262,6 +268,8 @@ public class EnemyController : MonoBehaviour {
 				}
 				meshAgent.SetDestination(player.transform.position);
 				FaceTarget(player);
+				player.GetComponent<PlayerController>().currentTarget = targetPoint;
+				// player.GetComponent<PlayerController>().lightMovement = false;
 			break;
 
             case enemyState.dodge:

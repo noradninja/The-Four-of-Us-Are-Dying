@@ -65,7 +65,7 @@ Material:
     m_Floats:
     - _Bump2Scale: 1
     - _BumpScale: 2
-    - _CrossFade: 0
+    - _CrossFade: 0.22532582
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailFade: 0.614
@@ -79,7 +79,7 @@ Material:
     - _Metallic: 1
     - _Mode: 0
     - _OcclusionStrength: 0
-    - _PainValue: 0.1
+    - _PainValue: 0.55583245
     - _Parallax: 0.08
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

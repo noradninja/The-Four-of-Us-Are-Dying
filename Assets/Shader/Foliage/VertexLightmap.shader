@@ -11,33 +11,29 @@
 	}
 
 	SubShader {
-	Tags { "Queue"="AlphaTest" "IgnoreProjector"="True" "RenderType"="TransparentCutout" } //I know this is weird but it's a workaround for the Vita
-		LOD 80
-		ZWrite On
+	Tags { "Queue"="AlphaTest" "RenderType"="TransparentCutout" } //I know this is weird but it's a workaround for the Vita
 		Cull Off
-		Blend One OneMinusSrcAlpha //because we are going to clip at the end
+		Blend SrcAlpha OneMinusSrcAlpha
+        ZWrite On
 
+		
 		// Non-lightmapped
 		Pass {
 			Tags { "LightMode" = "Vertex" }
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma target 3.0
+			
 			#pragma multi_compile_fog
 			// Compile specialized variants for when positional (point/spot) and spot lights are present
 			#pragma multi_compile __ POINT SPOT
-			#pragma multi_compile _ LOD_FADE_CROSSFADE
+
 			#include "VertexLightmapCommon.cginc"
-			#include "UnityCG.cginc"
-			#include "UnityStandardConfig.cginc"
-			#include "UnityPBSLighting.cginc" // TBD: remove
-			#include "UnityStandardUtils.cginc"
 		
 
 			ENDCG
 		}
-	
+
 		// Lightmapped
 		Pass {
 			Tags { "LightMode" = "VertexLM" }
@@ -46,21 +42,15 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag	
-			#pragma target 3.0
 			#pragma multi_compile_fog
 			// Compile specialized variants for when positional (point/spot) and spot lights are present
 			#pragma multi_compile __ POINT SPOT
 			#pragma multi_compile __ AMBIENT_ON
-			#pragma multi_compile _ LOD_FADE_CROSSFADE
 			#define CUSTOM_LIGHTMAPPED 1 
 			#include "VertexLightmapCommon.cginc"
 			#include "UnityCG.cginc"
-			#include "UnityCG.cginc"
-			#include "UnityStandardConfig.cginc"
-			#include "UnityPBSLighting.cginc" // TBD: remove
-			#include "UnityStandardUtils.cginc"
-	
-	
+			#define _ALPHATEST_ON
+
 			ENDCG
 		}
 
@@ -70,15 +60,9 @@
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-			#pragma target 3.0
             #pragma multi_compile_shadowcaster
 			#pragma multi_compile_fog
-			#pragma multi_compile _ LOD_FADE_CROSSFADE
             #include "UnityCG.cginc"
-			#include "UnityCG.cginc"
-			#include "UnityStandardConfig.cginc"
-			#include "UnityPBSLighting.cginc" // TBD: remove
-			#include "UnityStandardUtils.cginc"
 			
 			struct v2f {
 				V2F_SHADOW_CASTER;
@@ -89,7 +73,6 @@
 			struct appdata {
 				half3 vertex : POSITION;
 				half3 uv : TEXCOORD0;
-				
 
 			};
 

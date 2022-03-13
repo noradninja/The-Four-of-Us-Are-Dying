@@ -253,7 +253,7 @@ a8ed76bb902dcca4750ff52846a68870 Assembly-CSharp.dll:BrainFailProductions.PolyFe
 486cd95c82d8305219c352c06b776e1f Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.MiniProfiler
 835999720c64ca72971bdcd599094aa9 Assembly-CSharp.dll:TMPro.Examples.ObjectSpin
 5cd53758e254febdafbc2cbf649a0c20 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerFoldout
-187ba8429b8443d40b0ac4128176c04d Assembly-CSharp.dll:.EnemyController
+6fa70ad454c25dad48f4ee86f0e28877 Assembly-CSharp.dll:.EnemyController
 72a8523b432c0a5317826b7a9e0a0e79 Unity.TextMeshPro.dll:TMPro.PackageResourceImporterWindow
 580d344ee114d1128ec9dc36863d375b Assembly-CSharp.dll:PostEffects.BloomQuad
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.TMP_DigitValidator
@@ -335,7 +335,7 @@ bd57674768d88af20344e9f680801c2d Assembly-CSharp-firstpass.dll:UnityStandardAsse
 df03e2ffa8b3251f71a6c2235d50c66b Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Fisheye
 c1791db8df7a6d30dc3a3e487bced78b Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessVolume
 7c997acc7f9930bd5f16c49cff4a6b10 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerCanvas
-285cb180ee03acd2ac7fd877aa6f332a Assembly-CSharp.dll:.CameraResolutionScaler
+1aa02ef0033597c36dd5cabbd3cb47f3 Assembly-CSharp.dll:.CameraResolutionScaler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TeleType
 58b80cf56079b9b2c86ad9aaede3dca8 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
 7a1ff18e15d0a860ac99542974a3cbd5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Grain
