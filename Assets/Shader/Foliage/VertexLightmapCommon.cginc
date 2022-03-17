@@ -24,7 +24,7 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 		dirToLight -= eyePosition * unity_LightPosition[idx].w;
 		
 		// distance attenuation
-		float distSqr = dot(dirToLight, dirToLight);
+		half distSqr = dot(dirToLight, dirToLight);
 		att /= (1.0 + unity_LightAtten[idx].z * distSqr);
 
 		if (unity_LightPosition[idx].w != 0 &&
@@ -89,14 +89,13 @@ struct v2f {
 v2f vert(appdata v) {
 
 	v2f o;
-	UNITY_SETUP_INSTANCE_ID(v);
-	UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+
 	half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
 	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.vertex, 1) ).xyz;
-	half3 eyeNormal = normalize(mul( (float3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
-	//float3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
- 	float dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
- 	float rimWidth = 1;
+	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
+	//half3 viewDir = normalize(ObjSpaceViewDir(v.vertex));
+ 	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
+ 	half rimWidth = 1;
 
 	//Leaf Movement and Wiggle
 	( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
@@ -150,12 +149,10 @@ fixed4 frag(v2f v) : SV_Target {
 		
 		half4 diffuse = tex2D(_MainTex, v.uv0.xy);
 		half4 col = (diffuse * lighting);
-		
 		col.a = diffuse.a;
 		clip(col.a - _Cutoff);
-		#if USING_FOG
-			UNITY_APPLY_FOG(v.fogCoord, col);
-		#endif
+		UNITY_APPLY_FOG(v.fogCoord, col);
+
 		
 	
 		return col;
