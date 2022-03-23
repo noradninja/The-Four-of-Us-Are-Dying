@@ -7,14 +7,14 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Grass_Tips
-  m_Shader: {fileID: 4800000, guid: 6c1ea552f0eb1d24194e25d956a43ac6, type: 3}
+  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON
     SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1
     SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 _ALPHAPREMULTIPLY_ON _ALPHATEST_ON
-    _METALLICGLOSSMAP _SPECULARHIGHLIGHTS_OFF
+    _METALLICGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2450
   stringTagMap:
     RenderType: TransparentCutout
@@ -52,7 +52,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 10, y: 10}
+        m_Scale: {x: 16, y: 16}
         m_Offset: {x: 4, y: 8}
     - _IrradianceMap:
         m_Texture: {fileID: 8900000, guid: b927e4fbf29e3ef4ab9bd2a81a3aa285, type: 3}
@@ -128,7 +128,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 72fe0ed36fde3c24f898b1f24f2d257b, type: 3}
-        m_Scale: {x: 10, y: 10}
+        m_Scale: {x: 16, y: 16}
         m_Offset: {x: 4, y: 8}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
@@ -201,7 +201,7 @@ Material:
     - _CrossFade: 0
     - _Cull: 2
     - _CullMode: 0
-    - _Cutoff: 0.61
+    - _Cutoff: 0.543
     - _DetailFade: 1
     - _DetailMask: 1
     - _DetailNormalMapScale: 1
@@ -421,7 +421,7 @@ Material:
     - _Smoothness2: 1
     - _Smoothness3: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 0
+    - _SpecularHighlights: 1
     - _SpecularMapType: 999
     - _SrcBlend: 5
     - _SrcBlendAddPass: 1

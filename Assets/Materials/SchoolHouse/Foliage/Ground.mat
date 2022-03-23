@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON
     SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1
-    SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 _SPECULARHIGHLIGHTS_OFF
+    SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 _METALLICGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -129,7 +129,7 @@ Material:
         m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal0:
@@ -226,7 +226,7 @@ Material:
     - _EmissionToggle: 0
     - _FogOffset: 0
     - _FogToggle: 1
-    - _GlossMapScale: 0.744
+    - _GlossMapScale: 0.5
     - _Glossiness: 0.25
     - _GlossyReflections: 1
     - _IntensityVC: 0
@@ -419,7 +419,7 @@ Material:
     - _Smoothness2: 1
     - _Smoothness3: 1
     - _SmoothnessTextureChannel: 0
-    - _SpecularHighlights: 0
+    - _SpecularHighlights: 1
     - _SpecularMapType: 999
     - _SrcBlend: 1
     - _SrcBlendAddPass: 1

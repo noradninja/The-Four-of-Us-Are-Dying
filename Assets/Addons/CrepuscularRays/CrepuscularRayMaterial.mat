@@ -12,7 +12,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -31,13 +31,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Contrast: 1.15
-    - _Decay: 1
+    - _Contrast: 1.25
+    - _Decay: 0.975
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
     - _Density: 0.08
-    - _Exposure: 0.04
-    - _NumSamples: 8
+    - _Exposure: 0.05
+    - _NumSamples: 32
     - _Parameter: 5
     - _Spread: 1
     - _ThresholdParams: 0.25

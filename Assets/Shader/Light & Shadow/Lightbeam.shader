@@ -14,7 +14,7 @@ Shader "Lighting/Lightbeam" {
 			Cull Back
 			Blend SrcAlpha OneMinusSrcAlpha
 			ZWrite Off
-			ZTest Always
+			ZTest NotEqual
 			Lighting Off
 			
 			CGPROGRAM

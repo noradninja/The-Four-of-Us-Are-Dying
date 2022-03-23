@@ -117,7 +117,7 @@ half Alpha(half2 uv)
 #if defined(_SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A)
     return _Color.a;
 #else
-    return tex2D(_MetallicGlossMap, uv).b * _Color.a;
+    return tex2D(_ParallaxMap, uv) * _Color.a;
 #endif
 }
 
@@ -231,14 +231,14 @@ half3 NormalInTangentSpace(half4 texcoords)
 
 half4 Parallax (half4 texcoords, half3 viewDir)
 {
-#if !defined(_PARALLAXMAP) || (SHADER_TARGET < 30)
-    // Disable parallax on pre-SM3.0 shader target models
-    return texcoords;
-#else
-    half h = tex2D (_ParallaxMap, texcoords.xy).g;
-    half2 offset = ParallaxOffset1Step (h, _Parallax, viewDir);
-    return half4(texcoords.xy + offset, texcoords.zw + offset);
-#endif
+// #if !defined(_PARALLAXMAP) || (SHADER_TARGET < 30)
+//     // Disable parallax on pre-SM3.0 shader target models
+//     return texcoords;
+// #else
+//     half h = tex2D (_ParallaxMap, texcoords.xy).g;
+//     half2 offset = ParallaxOffset1Step (h, _Parallax, viewDir);
+//     return half4(texcoords.xy + offset, texcoords.zw + offset);
+// #endif
 
 }
 
