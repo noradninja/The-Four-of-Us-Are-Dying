@@ -2529,7 +2529,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ee4ab9821096c489f84e50f35b7b9644, type: 3}
   m_Name: 
@@ -2665,14 +2665,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1cd1890cdc009848ac7d87a68ef0126, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: d381d4349e5cfc24c93bb6280e373058, type: 2}
   Sharpness: 3
-  Threshold: 0.2
+  Threshold: 0.25
 --- !u!82 &121908233
 AudioSource:
   m_ObjectHideFlags: 0
@@ -17312,7 +17312,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26dc97c53c1f0564b9e0d61b0eefd665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 128
+  resolution: 64
   thisLight: {fileID: 446414589}
 --- !u!108 &446414589
 Light:
@@ -24925,7 +24925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26dc97c53c1f0564b9e0d61b0eefd665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 512
+  resolution: 64
   thisLight: {fileID: 618167703}
 --- !u!108 &618167703
 Light:
@@ -25967,10 +25967,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b077f56ee80e7f4aac6bb1c862193b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cpuCounterText: {fileID: 667586563}
-  updateInterval: 1
-  processorCount: 4
-  CpuUsage: 0
 --- !u!114 &667586562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28333,8 +28329,6 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   storedLightRotation: {x: 0, y: 0, z: 0, w: 0}
   endLightRotation: {x: 0, y: 0, z: 0, w: 0}
-  midPoint: {fileID: 1868241083}
-  direction: {x: 0, y: 0, z: 0}
 --- !u!143 &787849890
 CharacterController:
   m_ObjectHideFlags: 0
@@ -30744,7 +30738,6 @@ MonoBehaviour:
   turnSpeed: 3
   viewRadius: 2.5
   fovAngle: 80
-  peripheralAngle: 0
   targetMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -30754,14 +30747,14 @@ MonoBehaviour:
   distanceToPlayer: 0
   isPlayerNear: 0
   canSeePlayer: 0
-  flashlightDisabled: 0
-  isPlayerRunning: 0
   behaviorState: 0
-  alertDelay: 3.5
+  alertDelay: 2.5
   lookDelay: 2.5
   alerted: 0
   lookingForPlayer: 0
   roaming: 0
+  isPlayerRunning: 0
+  flashlightDisabled: 0
 --- !u!95 &949359333
 Animator:
   serializedVersion: 3
@@ -49874,12 +49867,12 @@ Prefab:
     - target: {fileID: 198270193400346888, guid: e034434a844564d83a09dc60a7173770,
         type: 2}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.02
+      value: 0.0175
       objectReference: {fileID: 0}
     - target: {fileID: 198270193400346888, guid: e034434a844564d83a09dc60a7173770,
         type: 2}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.02
+      value: 0.0175
       objectReference: {fileID: 0}
     - target: {fileID: 198270193400346888, guid: e034434a844564d83a09dc60a7173770,
         type: 2}

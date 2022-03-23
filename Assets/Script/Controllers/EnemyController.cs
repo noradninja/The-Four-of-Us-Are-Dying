@@ -51,6 +51,8 @@ public class EnemyController : MonoBehaviour {
 	public bool alerted = false;
 	public bool lookingForPlayer = false;
 	public bool roaming = false;
+	public bool isPlayerRunning;
+	public bool flashlightDisabled;
 	
 	
 	
@@ -65,9 +67,12 @@ public class EnemyController : MonoBehaviour {
 		
 	// Update is called once per frame
 	void Update () {
-		distanceToPlayer = Vector3.Distance(player.transform.position, this.transform.position); 
+		distanceToPlayer = Vector3.Distance(player.transform.position, this.transform.position);
+		flashlightDisabled = PlayerController.flashlightOff; 
+		isPlayerRunning = player.GetComponent<PlayerController>().isRunning;
 		
-		if (distanceToPlayer < viewRadius && distanceToPlayer > viewRadius - (viewRadius /(viewRadius * 0.5f))){
+		if (distanceToPlayer < viewRadius){
+			//isPlayerNear = true;
 			behaviorState = enemyState.alert;
 			//isPlayerNear = true;
 		}
@@ -80,6 +85,7 @@ public class EnemyController : MonoBehaviour {
 		if (distanceToPlayer > viewRadius){
 			isPlayerNear = false;
 			alerted = false;
+			canSeePlayer = false;
 		}
 
 		if (isPlayerNear){
@@ -194,12 +200,30 @@ public class EnemyController : MonoBehaviour {
 
             case enemyState.alert:
 				if (!alerted){
-					StartCoroutine(FOVRoutine());
-					StartCoroutine(AlertTimer(alertDelay));
+					// StopAllCoroutines();
+					if (!flashlightDisabled){ 
+						if (isPlayerRunning){
+							StartCoroutine(AlertTimer(alertDelay/3));
+						}
+						else if (!isPlayerRunning){
+							StartCoroutine(AlertTimer(alertDelay));	
+						}
+					}
+					else if (flashlightDisabled){
+						if (isPlayerRunning){
+							StartCoroutine(AlertTimer(alertDelay/2));
+						}
+						else if (!isPlayerRunning){
+							StartCoroutine(AlertTimer(alertDelay*2));	
+						}
+					}
 				}
 				if (distanceToPlayer <= viewRadius){
 					if (alerted){
+						roaming = false;
+						lookingForPlayer = false;
 						FaceTarget(player);
+						StartCoroutine(FOVRoutine());
 						player.GetComponent<PlayerController>().currentTarget = targetPoint;
 						// player.GetComponent<PlayerController>().lightMovement = false;
 						if (canSeePlayer){
@@ -211,10 +235,9 @@ public class EnemyController : MonoBehaviour {
 						}
 					}
 				}
-				else { 
-					if (!lookingForPlayer || !isPlayerNear){
+				if (!isPlayerNear){
+						lookingForPlayer = false;
 						behaviorState = enemyState.looking;
-					}
 				}
 				if (enemyAnimator.GetBool("isAttacking") == true){
 					enemyAnimator.SetBool("isAttacking", false);
@@ -225,6 +248,7 @@ public class EnemyController : MonoBehaviour {
 				roaming = false;
 				alerted = false;
 				player.GetComponent<PlayerController>().lightMovement = true;
+
 				if (!lookingForPlayer){
 					Look();
 				}
@@ -287,12 +311,8 @@ public class EnemyController : MonoBehaviour {
     }
 
 	private IEnumerator FOVRoutine(){
-
-		WaitForSeconds wait = new WaitForSeconds(0.1f); //set up a timer that fires 10x/frame
-		while (true){
-			yield return wait;
-			FieldOfViewCheck();
-		}
+		FieldOfViewCheck();
+		yield return null;
 	}
 
 	private void FieldOfViewCheck()

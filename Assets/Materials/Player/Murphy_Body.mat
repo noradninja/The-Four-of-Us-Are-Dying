@@ -65,14 +65,14 @@ Material:
     m_Floats:
     - _Bump2Scale: 1
     - _BumpScale: 2
-    - _CrossFade: 0.608118
+    - _CrossFade: 0.02878946
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailFade: 0.614
     - _DetailMask: 1
     - _DetailNormalMapScale: 5
     - _DstBlend: 0
-    - _GlossMapScale: 0.75
+    - _GlossMapScale: 0.9
     - _Glossiness: 0.125
     - _GlossyReflections: 1
     - _IntensityVC: 1

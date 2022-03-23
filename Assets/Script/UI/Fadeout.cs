@@ -15,10 +15,6 @@ public class Fadeout : MonoBehaviour {
 	// Use this for initialization
 	
 	void Start () {
-		if(delay > 0f){
-			new WaitForSeconds(delay);
-		}
-		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
 		StartCoroutine(fade(startColor, endColor, duration));	
 	}
 	
