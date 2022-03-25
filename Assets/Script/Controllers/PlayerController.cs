@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
     public Transform cameraRig;
     public Transform Camera;
     public Camera camObject;
+    public GameObject mapCamera;
     public Light flashlight;
     public Light vertlight;
     public GameObject lightRig;
@@ -127,6 +128,7 @@ public class PlayerController : MonoBehaviour
 
         //LODGroup.crossFadeAnimationDuration = 0.25f;
         animator.SetBool("isGrab", false);
+        
         cameraRig = Camera.transform.parent.transform; //get the transform of the righ the camera is a child to
         walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
@@ -151,6 +153,7 @@ public class PlayerController : MonoBehaviour
         Rotate();
         Flashlight();
         Keys();
+    
     
         if (verticalMove != 0 || horizontalRotation !=0){
         walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
@@ -385,6 +388,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown(VITA + CIRCLE))
         {
             if(!isMap && !delayButton){
+                mapCamera.SetActive(true);
                 delayButton = true;
                 StartCoroutine(fade(mapPanel, 0, 1, 0.5f));
                 StartCoroutine(buttonDelayTimer(0.5f));
@@ -898,6 +902,7 @@ public class PlayerController : MonoBehaviour
         }
         if (isMap){
             isMap = false;
+            mapCamera.SetActive(false);
         }
         else if (!isMap){
             isMap = true;

@@ -24938,7 +24938,7 @@ Light:
   m_Type: 0
   m_Color: {r: 0.5943396, g: 0.43594247, b: 0.27754536, a: 1}
   m_Intensity: 5
-  m_Range: 12
+  m_Range: 4.5
   m_SpotAngle: 45
   m_CookieSize: 10
   m_Shadows:
@@ -25699,7 +25699,6 @@ GameObject:
   m_Component:
   - component: {fileID: 652633788}
   - component: {fileID: 652633789}
-  - component: {fileID: 652633790}
   m_Layer: 10
   m_Name: Spot Light Foliage ONLY
   m_TagString: Untagged
@@ -25731,7 +25730,7 @@ Light:
   m_Type: 0
   m_Color: {r: 0.5943396, g: 0.43594247, b: 0.27754536, a: 1}
   m_Intensity: 5
-  m_Range: 12
+  m_Range: 4.5
   m_SpotAngle: 45
   m_CookieSize: 10
   m_Shadows:
@@ -25757,17 +25756,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &652633790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 652633787}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &653340053
 GameObject:
   m_ObjectHideFlags: 0
@@ -27853,7 +27841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &759713689
 Transform:
   m_ObjectHideFlags: 0
@@ -28284,6 +28272,7 @@ MonoBehaviour:
   cameraRig: {fileID: 0}
   Camera: {fileID: 121908226}
   camObject: {fileID: 121908225}
+  mapCamera: {fileID: 759713688}
   flashlight: {fileID: 618167703}
   vertlight: {fileID: 652633789}
   lightRig: {fileID: 1953679437}

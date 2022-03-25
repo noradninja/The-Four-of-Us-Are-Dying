@@ -55,10 +55,10 @@ Material:
     m_Floats:
     - _BumpScale: 2
     - _Cull: 2
-    - _Cutoff: 0.15
+    - _Cutoff: 0.245
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.73
+    - _GlossMapScale: 0.75
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _IntensityVC: 1
