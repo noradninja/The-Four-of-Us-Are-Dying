@@ -170,6 +170,7 @@
      <Compile Include="Assets\Script\Enumerators\Item_Enumerator.cs" />
      <Compile Include="Assets\Script\Managers\Inventory_Screen_Manager.cs" />
      <Compile Include="Assets\Script\Managers\InventoryManager.cs" />
+     <Compile Include="Assets\Script\Managers\Lightning_Manager.cs" />
      <Compile Include="Assets\Script\Managers\LoadScreen.cs" />
      <Compile Include="Assets\Script\Managers\Title_Animator.cs" />
      <Compile Include="Assets\Script\Tools\AutoRotate.cs" />

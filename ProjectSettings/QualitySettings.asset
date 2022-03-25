@@ -31,9 +31,9 @@ QualitySettings:
     maximumLODLevel: 0
     streamingMipmapsActive: 1
     streamingMipmapsAddAllCameras: 1
-    streamingMipmapsMemoryBudget: 96
+    streamingMipmapsMemoryBudget: 128
     streamingMipmapsRenderersPerFrame: 128
-    streamingMipmapsMaxLevelReduction: 2
+    streamingMipmapsMaxLevelReduction: 1
     streamingMipmapsMaxFileIORequests: 128
     particleRaycastBudget: 512
     asyncUploadTimeSlice: 11
@@ -41,4 +41,6 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms:
     - Standalone
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    PSP2: 0
+    Standalone: 0

@@ -281,7 +281,7 @@ Material:
     - _Cull: 0
     - _CullMode: 0
     - _CustomColorAmount: 0
-    - _Cutoff: 0.5
+    - _Cutoff: 0.33
     - _Cutout: 0.5
     - _DarknessOnSundown: 1
     - _DesaturateTranslucency: 0
