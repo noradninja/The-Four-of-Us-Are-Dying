@@ -1,0 +1,38 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class SFXController : MonoBehaviour {
+
+	public AudioSource audioSource;
+	public AudioClip audioClip;
+	public AudioClip[] grassSounds;
+	public AudioClip[] roadSounds;
+	public AudioClip[] currentClips;
+	public float distance = 0.055f;
+	public RaycastHit hit;
+	private int i;
+	private int maskValue;
+
+	public void FixedUpdate(){
+		maskValue = (LayerMask.GetMask("Ground"));
+		if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)){
+			Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
+			currentClips = grassSounds;
+		}
+		else{
+			maskValue = (LayerMask.GetMask("Road"));
+			if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)){
+				Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
+				currentClips = roadSounds;
+			}
+		}
+	}
+
+	private void footstepSound(){
+		i = Random.Range(0, currentClips.Length);
+		audioClip = currentClips[i];
+		audioSource.pitch = Random.Range (0.5f, 1.5f);
+		audioSource.PlayOneShot(audioClip);
+	}
+}

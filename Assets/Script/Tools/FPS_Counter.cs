@@ -124,6 +124,7 @@ void Start(){
 			}
 		}
 		averageFPS = sum / frameRange;
+        averageFPS += 1;
 		maxFPS = highest;
 		minFPS = lowest;
     }

@@ -248,6 +248,10 @@ public class EnemyController : MonoBehaviour {
 				roaming = false;
 				alerted = false;
 				player.GetComponent<PlayerController>().lightMovement = true;
+				//only null if the player hasn't targeted another enemy since us
+				if (player.GetComponent<PlayerController>().currentTarget == targetPoint){ 
+					player.GetComponent<PlayerController>().currentTarget = null;
+				}
 
 				if (!lookingForPlayer){
 					Look();
@@ -345,15 +349,15 @@ public class EnemyController : MonoBehaviour {
 	private void Look(){
 		lookingForPlayer = true;
 		roaming = false;
-		print ("Looking Around");
+		//print ("Looking Around");
 		StartCoroutine(LookWait(lookDelay));
 	}
 
 	private IEnumerator LookWait(float duration){
-		print ("Enter");
+		//print ("Enter");
 		WaitForSecondsRealtime wait = new WaitForSecondsRealtime(duration);
 		yield return wait;
-		print ("Exit after " + duration + " seconds.");
+		//print ("Exit after " + duration + " seconds.");
 		RandomizePoint();
 		behaviorState = enemyState.roaming;
 	}
@@ -365,7 +369,7 @@ public class EnemyController : MonoBehaviour {
 		Vector3 point = randomPointObject.transform.position + randomCircle;
 		int walkMask = 1 << NavMesh.GetAreaFromName("Walkable");
 		NavMeshHit hit;
-		if (NavMesh.SamplePosition(point, out hit, 0.125f, walkMask)) //is the point within 0.25 units of a NavMesh surface
+		if (NavMesh.SamplePosition(point, out hit, 0.055125f, walkMask)) //is the point within 0.25 units of a NavMesh surface
 		{
 			onMesh = true;
 			randomPointObject.transform.position = point;
@@ -386,7 +390,7 @@ public class EnemyController : MonoBehaviour {
 		{
 			if (meshAgent.remainingDistance <= meshAgent.stoppingDistance)
 			{
-				if (meshAgent.velocity.sqrMagnitude <= 0.01f)
+				if (meshAgent.velocity.sqrMagnitude <= 0.025f)
 				{
 					behaviorState = enemyState.looking;
 				}

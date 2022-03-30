@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 savedPosition;
     public bool lightFocusing;
     public bool isRunning;
+    public bool isWalking;
     public SkinnedMeshRenderer skinnedRenderer;
     private float walkStart;
     public bool isLerping;
@@ -678,6 +679,7 @@ public class PlayerController : MonoBehaviour
               
                 if (animator.GetBool("isWalking") == true){ 
                     lerpRate = 0.55f;
+                    isWalking = true;
                 if (walkStart == 0f){
                     StartCoroutine(walkLerp(0, 1,  lerpRate));
                 }
@@ -711,6 +713,7 @@ public class PlayerController : MonoBehaviour
         } 
         if (!animator.GetBool("isWalking") && !animator.GetBool("isRunning")){
             animator.SetBool("isIdle", verticalMove == 0);
+            isWalking = false;
         }
          
     }

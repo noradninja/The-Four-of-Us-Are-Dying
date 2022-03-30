@@ -167,6 +167,7 @@
      <Compile Include="Assets\Script\Controllers\EnemyController.cs" />
      <Compile Include="Assets\Script\Controllers\MapController.cs" />
      <Compile Include="Assets\Script\Controllers\PlayerController.cs" />
+     <Compile Include="Assets\Script\Controllers\SFXController.cs" />
      <Compile Include="Assets\Script\Enumerators\Item_Enumerator.cs" />
      <Compile Include="Assets\Script\Managers\Inventory_Screen_Manager.cs" />
      <Compile Include="Assets\Script\Managers\InventoryManager.cs" />

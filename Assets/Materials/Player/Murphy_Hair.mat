@@ -83,10 +83,10 @@ Material:
     - _Fresnel: 0
     - _FresnelDamp: 1
     - _GlossMapScale: 0
-    - _Glossiness: 1
+    - _Glossiness: 0.35
     - _GlossyReflections: 1
     - _IntensityVC: 1
-    - _Metallic: 0.85
+    - _Metallic: 0.45
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02

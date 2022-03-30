@@ -116,7 +116,6 @@ public class Item_Enumerator : MonoBehaviour {
 		if (isActiveObject){
             SetPosition();
         }
-        else return;
     }
 
     void OnTriggerEnter (Collider col){
