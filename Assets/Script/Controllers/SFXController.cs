@@ -32,7 +32,7 @@ public class SFXController : MonoBehaviour {
 	private void footstepSound(){
 		i = Random.Range(0, currentClips.Length);
 		audioClip = currentClips[i];
-		audioSource.pitch = Random.Range (0.5f, 1.5f);
+		audioSource.pitch = Random.Range (0.75f, 1.25f);
 		audioSource.PlayOneShot(audioClip);
 	}
 }

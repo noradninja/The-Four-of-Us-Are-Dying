@@ -12,18 +12,20 @@ public int sampleDataLength = 1024;
 public float scaleFactor = 1;
 public Material skyBox;
 public Material glowMat;
+public Material crepuscularMat;
 public float clipLoudness;
 public float oldClipLoudness;
 public float clipLoudnessB;
 private float[] clipSampleData;
 private float currentUpdateTime = 0f;
-private Color leftColor;
+public float contrastHolder;
 public Color lerpColor;
  
 
 	public void Awake () {
 		clipSampleData = new float[sampleDataLength];
 		lerpColor = glowMat.GetColor("_TintColor");
+		contrastHolder = crepuscularMat.GetFloat("_Contrast");
 	}
 	
 	public void Update () {
@@ -48,7 +50,9 @@ public Color lerpColor;
 			clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
 			skyBox.SetFloat("_Exposure", clipLoudness);
 			lerpColor.a = clipLoudnessB/10;
+			contrastHolder = Mathf.Clamp01(clipLoudnessB) * 0.35f + 1.15f;
 			glowMat.SetColor("_TintColor", lerpColor);
+			crepuscularMat.SetFloat("_Contrast", contrastHolder);
 		}
 	}
  

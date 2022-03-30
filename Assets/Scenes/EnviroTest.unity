@@ -13834,13 +13834,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255398535}
-  m_LocalRotation: {x: -0.0004601393, y: -0.033076756, z: -0.99944746, w: 0.0032312174}
-  m_LocalPosition: {x: 0.104, y: -0.003, z: 0.422}
+  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalPosition: {x: 0.104, y: -0.029, z: 0.422}
   m_LocalScale: {x: 0.5000002, y: 0.5643365, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 121908226}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 6.7300005, y: -90.00001, z: 180.00002}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &255612824
 GameObject:
   m_ObjectHideFlags: 0
@@ -19282,7 +19282,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 29887e3fe8ea9154b949aec9dffd322f, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -26971,6 +26971,7 @@ GameObject:
   - component: {fileID: 663922318}
   - component: {fileID: 663922317}
   - component: {fileID: 663922316}
+  - component: {fileID: 663922315}
   m_Layer: 0
   m_Name: Lightning_Overlay_L
   m_TagString: Untagged
@@ -26978,6 +26979,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &663922315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663922314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!23 &663922316
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27026,13 +27038,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663922314}
-  m_LocalRotation: {x: 0.033076756, y: -0.000459969, z: -0.003231264, w: -0.9994476}
-  m_LocalPosition: {x: -0.125, y: -0.004, z: 0.422}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.125, y: -0.03, z: 0.422}
   m_LocalScale: {x: 0.49999997, y: 0.5643358, z: 0.50000006}
   m_Children: []
   m_Father: {fileID: 121908226}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 6.7300005, y: -90.00001, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &667586559
 GameObject:
   m_ObjectHideFlags: 0
@@ -29154,7 +29166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 2100000, guid: 29887e3fe8ea9154b949aec9dffd322f, type: 2}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.5019608}
   m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -41786,7 +41798,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1318483819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -52135,9 +52147,11 @@ MonoBehaviour:
   scaleFactor: 3.5
   skyBox: {fileID: 2100000, guid: a4d8809d9d08cc24d9f0208c935d75eb, type: 2}
   glowMat: {fileID: 2100000, guid: 29887e3fe8ea9154b949aec9dffd322f, type: 2}
+  crepuscularMat: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   clipLoudness: 0
   oldClipLoudness: 0
   clipLoudnessB: 0
+  contrastHolder: 0
   lerpColor: {r: 0.067499995, g: 0.44249982, b: 0.48, a: 1}
 --- !u!4 &1742728653
 Transform:
