@@ -18864,6 +18864,8 @@ public:
 	bool ___isPlayerRunning_27;
 	// System.Boolean EnemyController::flashlightDisabled
 	bool ___flashlightDisabled_28;
+	// UnityEngine.Vector3 EnemyController::randomCircle
+	Vector3_t3722313464  ___randomCircle_29;
 
 public:
 	inline static int32_t get_offset_of_startingPosition_4() { return static_cast<int32_t>(offsetof(EnemyController_t2191660454, ___startingPosition_4)); }
@@ -19070,6 +19072,14 @@ public:
 	inline void set_flashlightDisabled_28(bool value)
 	{
 		___flashlightDisabled_28 = value;
+	}
+
+	inline static int32_t get_offset_of_randomCircle_29() { return static_cast<int32_t>(offsetof(EnemyController_t2191660454, ___randomCircle_29)); }
+	inline Vector3_t3722313464  get_randomCircle_29() const { return ___randomCircle_29; }
+	inline Vector3_t3722313464 * get_address_of_randomCircle_29() { return &___randomCircle_29; }
+	inline void set_randomCircle_29(Vector3_t3722313464  value)
+	{
+		___randomCircle_29 = value;
 	}
 };
 
@@ -31570,6 +31580,8 @@ extern "C" IL2CPP_METHOD_ATTR AudioClip_t3680889665 * AudioSource_get_clip_m1234
 extern "C" IL2CPP_METHOD_ATTR int32_t AudioSource_get_timeSamples_m3096573545 (AudioSource_t3935305588 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.AudioClip::GetData(System.Single[],System.Int32)
 extern "C" IL2CPP_METHOD_ATTR bool AudioClip_GetData_m1251334845 (AudioClip_t3680889665 * __this, SingleU5BU5D_t1444911251* p0, int32_t p1, const RuntimeMethod* method);
+// System.Single UnityEngine.Mathf::Clamp01(System.Single)
+extern "C" IL2CPP_METHOD_ATTR float Mathf_Clamp01_m56433566 (RuntimeObject * __this /* static, unused */, float p0, const RuntimeMethod* method);
 // System.Collections.IEnumerator LoadScreen::StartLoad()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* LoadScreen_StartLoad_m4090113330 (LoadScreen_t3376497162 * __this, const RuntimeMethod* method);
 // System.Collections.IEnumerator LoadScreen::FadeLoadingScreen(System.Single,System.Single)
@@ -32002,8 +32014,6 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_op_Multiply_m21043577
 extern "C" IL2CPP_METHOD_ATTR int32_t CharacterController_Move_m1547317252 (CharacterController_t1138636865 * __this, Vector3_t3722313464  p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Debug::Log(System.Object)
 extern "C" IL2CPP_METHOD_ATTR void Debug_Log_m4051431634 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, const RuntimeMethod* method);
-// System.Single UnityEngine.Mathf::Clamp01(System.Single)
-extern "C" IL2CPP_METHOD_ATTR float Mathf_Clamp01_m56433566 (RuntimeObject * __this /* static, unused */, float p0, const RuntimeMethod* method);
 // System.Collections.IEnumerator PlayerController::healLerp(System.Single,System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_healLerp_m3808073812 (PlayerController_t2064355688 * __this, float ___startValue0, float ___endValue1, float ___duration2, const RuntimeMethod* method);
 // System.Void PlayerController/<healLerp>c__Iterator0::.ctor()
@@ -35831,60 +35841,61 @@ extern "C" IL2CPP_METHOD_ATTR void EnemyController_RandomizePoint_m94304359 (Ene
 		il2cpp_codegen_initialize_method (EnemyController_RandomizePoint_m94304359_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	Vector3_t3722313464  V_0;
+	Vector2_t2156229523  V_0;
 	memset(&V_0, 0, sizeof(V_0));
 	Vector2_t2156229523  V_1;
 	memset(&V_1, 0, sizeof(V_1));
-	Vector2_t2156229523  V_2;
+	Vector3_t3722313464  V_2;
 	memset(&V_2, 0, sizeof(V_2));
-	Vector3_t3722313464  V_3;
-	memset(&V_3, 0, sizeof(V_3));
-	int32_t V_4 = 0;
-	NavMeshHit_t1526781090  V_5;
-	memset(&V_5, 0, sizeof(V_5));
+	int32_t V_3 = 0;
+	NavMeshHit_t1526781090  V_4;
+	memset(&V_4, 0, sizeof(V_4));
 	{
 		Vector2_t2156229523  L_0 = Random_get_insideUnitCircle_m1267895911(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_1 = L_0;
-		float L_1 = (&V_1)->get_x_0();
+		V_0 = L_0;
+		float L_1 = (&V_0)->get_x_0();
 		float L_2 = __this->get_viewRadius_14();
 		Vector2_t2156229523  L_3 = Random_get_insideUnitCircle_m1267895911(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_2 = L_3;
-		float L_4 = (&V_2)->get_y_1();
+		V_1 = L_3;
+		float L_4 = (&V_1)->get_y_1();
 		float L_5 = __this->get_viewRadius_14();
-		Vector3__ctor_m3353183577((Vector3_t3722313464 *)(&V_0), ((float)il2cpp_codegen_multiply((float)L_1, (float)L_2)), (0.0f), ((float)il2cpp_codegen_multiply((float)L_4, (float)L_5)), /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_6 = __this->get_randomPointObject_11();
-		Transform_t3600365921 * L_7 = GameObject_get_transform_m1369836730(L_6, /*hidden argument*/NULL);
-		Vector3_t3722313464  L_8 = Transform_get_position_m36019626(L_7, /*hidden argument*/NULL);
-		Vector3_t3722313464  L_9 = V_0;
+		Vector3_t3722313464  L_6;
+		memset(&L_6, 0, sizeof(L_6));
+		Vector3__ctor_m3353183577((&L_6), ((float)il2cpp_codegen_multiply((float)L_1, (float)L_2)), (0.0f), ((float)il2cpp_codegen_multiply((float)L_4, (float)L_5)), /*hidden argument*/NULL);
+		__this->set_randomCircle_29(L_6);
+		GameObject_t1113636619 * L_7 = __this->get_randomPointObject_11();
+		Transform_t3600365921 * L_8 = GameObject_get_transform_m1369836730(L_7, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_9 = Transform_get_position_m36019626(L_8, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_10 = __this->get_randomCircle_29();
 		IL2CPP_RUNTIME_CLASS_INIT(Vector3_t3722313464_il2cpp_TypeInfo_var);
-		Vector3_t3722313464  L_10 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, L_8, L_9, /*hidden argument*/NULL);
-		V_3 = L_10;
-		int32_t L_11 = NavMesh_GetAreaFromName_m305917180(NULL /*static, unused*/, _stringLiteral4134546408, /*hidden argument*/NULL);
-		V_4 = ((int32_t)((int32_t)1<<(int32_t)((int32_t)((int32_t)L_11&(int32_t)((int32_t)31)))));
-		Vector3_t3722313464  L_12 = V_3;
-		int32_t L_13 = V_4;
-		bool L_14 = NavMesh_SamplePosition_m2061351713(NULL /*static, unused*/, L_12, (NavMeshHit_t1526781090 *)(&V_5), (0.055125f), L_13, /*hidden argument*/NULL);
-		if (!L_14)
+		Vector3_t3722313464  L_11 = Vector3_op_Addition_m779775034(NULL /*static, unused*/, L_9, L_10, /*hidden argument*/NULL);
+		V_2 = L_11;
+		int32_t L_12 = NavMesh_GetAreaFromName_m305917180(NULL /*static, unused*/, _stringLiteral4134546408, /*hidden argument*/NULL);
+		V_3 = ((int32_t)((int32_t)1<<(int32_t)((int32_t)((int32_t)L_12&(int32_t)((int32_t)31)))));
+		Vector3_t3722313464  L_13 = V_2;
+		int32_t L_14 = V_3;
+		bool L_15 = NavMesh_SamplePosition_m2061351713(NULL /*static, unused*/, L_13, (NavMeshHit_t1526781090 *)(&V_4), (0.15f), L_14, /*hidden argument*/NULL);
+		if (!L_15)
 		{
-			goto IL_008d;
+			goto IL_0094;
 		}
 	}
 	{
 		__this->set_onMesh_6((bool)1);
-		GameObject_t1113636619 * L_15 = __this->get_randomPointObject_11();
-		Transform_t3600365921 * L_16 = GameObject_get_transform_m1369836730(L_15, /*hidden argument*/NULL);
-		Vector3_t3722313464  L_17 = V_3;
-		Transform_set_position_m3387557959(L_16, L_17, /*hidden argument*/NULL);
-		goto IL_009a;
+		GameObject_t1113636619 * L_16 = __this->get_randomPointObject_11();
+		Transform_t3600365921 * L_17 = GameObject_get_transform_m1369836730(L_16, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_18 = V_2;
+		Transform_set_position_m3387557959(L_17, L_18, /*hidden argument*/NULL);
+		goto IL_00a1;
 	}
 
-IL_008d:
+IL_0094:
 	{
 		__this->set_onMesh_6((bool)0);
 		EnemyController_RandomizePoint_m94304359(__this, /*hidden argument*/NULL);
 	}
 
-IL_009a:
+IL_00a1:
 	{
 		return;
 	}
@@ -41397,7 +41408,7 @@ extern "C" IL2CPP_METHOD_ATTR void Lightning_Manager_Update_m3359733818 (Lightni
 		float L_3 = __this->get_step_5();
 		if ((!(((float)L_2) >= ((float)L_3))))
 		{
-			goto IL_0197;
+			goto IL_0186;
 		}
 	}
 	{
@@ -41479,16 +41490,14 @@ IL_00ab:
 		float L_36 = __this->get_clipLoudnessB_13();
 		L_35->set_a_3(((float)((float)L_36/(float)(10.0f))));
 		float L_37 = __this->get_clipLoudnessB_13();
-		__this->set_contrastHolder_16(((float)il2cpp_codegen_add((float)((float)((float)L_37/(float)(2.75f))), (float)(1.15f))));
-		Material_t340375123 * L_38 = __this->get_glowMat_9();
-		Color_t2555686324  L_39 = __this->get_lerpColor_17();
-		Material_SetColor_m2020215303(L_38, _stringLiteral2810103870, L_39, /*hidden argument*/NULL);
-		Material_t340375123 * L_40 = __this->get_crepuscularMat_10();
-		float L_41 = __this->get_contrastHolder_16();
-		Material_SetFloat_m3226510453(L_40, _stringLiteral2023611031, L_41, /*hidden argument*/NULL);
+		float L_38 = Mathf_Clamp01_m56433566(NULL /*static, unused*/, L_37, /*hidden argument*/NULL);
+		__this->set_contrastHolder_16(((float)il2cpp_codegen_add((float)((float)il2cpp_codegen_multiply((float)L_38, (float)(0.35f))), (float)(1.15f))));
+		Material_t340375123 * L_39 = __this->get_glowMat_9();
+		Color_t2555686324  L_40 = __this->get_lerpColor_17();
+		Material_SetColor_m2020215303(L_39, _stringLiteral2810103870, L_40, /*hidden argument*/NULL);
 	}
 
-IL_0197:
+IL_0186:
 	{
 		return;
 	}

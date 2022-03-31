@@ -425,6 +425,7 @@ Material:
     - _SpecularMapType: 999
     - _SrcBlend: 5
     - _SrcBlendAddPass: 1
+    - _StencilRef: 1
     - _Surface: 0
     - _SurfaceMapTypeA: 1
     - _SurfaceMapTypeB: 998

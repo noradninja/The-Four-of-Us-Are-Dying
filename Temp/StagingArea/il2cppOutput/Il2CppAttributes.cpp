@@ -400,6 +400,7 @@ extern const uint32_t ConcurrentDictionary_2_t1886183882_CustomAttributesCacheGe
 extern const uint32_t ConstructorInfo_t5769829_CustomAttributesCacheGenerator_MetadataUsageId;
 extern const uint32_t ContentSizeFitter_t3850442145_CustomAttributesCacheGenerator_MetadataUsageId;
 extern const uint32_t ContrastEnhance_t640919481_CustomAttributesCacheGenerator_MetadataUsageId;
+extern const uint32_t Contrast_Manager_t1945764136_CustomAttributesCacheGenerator_MetadataUsageId;
 extern const uint32_t CreaseShading_t1200394124_CustomAttributesCacheGenerator_MetadataUsageId;
 extern const uint32_t Crepuscular_t186719810_CustomAttributesCacheGenerator_MetadataUsageId;
 extern const uint32_t CryptoStream_t2702504504_CustomAttributesCacheGenerator_CryptoStream_ReadAsyncInternal_m3337684600_MetadataUsageId;
@@ -61471,6 +61472,19 @@ static void U3ClerpFocalLengthU3Ec__IteratorC_t1187840523_CustomAttributesCacheG
 		DebuggerHiddenAttribute__ctor_m2764625696(tmp, NULL);
 	}
 }
+static void Contrast_Manager_t1945764136_CustomAttributesCacheGenerator(CustomAttributesCache* cache)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Contrast_Manager_t1945764136_CustomAttributesCacheGenerator_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		RequireComponent_t3490506609 * tmp = (RequireComponent_t3490506609 *)cache->attributes[0];
+		RequireComponent__ctor_m886241599(tmp, il2cpp_codegen_type_get_object(Camera_t4157153871_0_0_0_var), NULL);
+	}
+}
 static void Inventory_Screen_Manager_t2612322343_CustomAttributesCacheGenerator_Inventory_Screen_Manager_crossFade_m2005912082(CustomAttributesCache* cache)
 {
 	{
@@ -64128,7 +64142,7 @@ static void Vortex_t3420399868_CustomAttributesCacheGenerator(CustomAttributesCa
 		AddComponentMenu__ctor_m867138430(tmp, il2cpp_codegen_string_new_wrapper("\x49\x6D\x61\x67\x65\x20\x45\x66\x66\x65\x63\x74\x73\x2F\x44\x69\x73\x70\x6C\x61\x63\x65\x6D\x65\x6E\x74\x2F\x56\x6F\x72\x74\x65\x78"), NULL);
 	}
 }
-extern const CustomAttributesCacheGenerator g_AttributeGenerators[6367] = 
+extern const CustomAttributesCacheGenerator g_AttributeGenerators[6368] = 
 {
 	NULL,
 	g_mscorlib_Assembly_CustomAttributesCacheGenerator,
@@ -70177,6 +70191,7 @@ extern const CustomAttributesCacheGenerator g_AttributeGenerators[6367] =
 	U3ClerpFocalLengthU3Ec__IteratorC_t1187840523_CustomAttributesCacheGenerator_U3ClerpFocalLengthU3Ec__IteratorC_System_Collections_IEnumerator_get_Current_m1836840896,
 	U3ClerpFocalLengthU3Ec__IteratorC_t1187840523_CustomAttributesCacheGenerator_U3ClerpFocalLengthU3Ec__IteratorC_Dispose_m1069663603,
 	U3ClerpFocalLengthU3Ec__IteratorC_t1187840523_CustomAttributesCacheGenerator_U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711,
+	Contrast_Manager_t1945764136_CustomAttributesCacheGenerator,
 	Inventory_Screen_Manager_t2612322343_CustomAttributesCacheGenerator_Inventory_Screen_Manager_crossFade_m2005912082,
 	Inventory_Screen_Manager_t2612322343_CustomAttributesCacheGenerator_Inventory_Screen_Manager_buttonDelayTimer_m2388519221,
 	U3CcrossFadeU3Ec__Iterator0_t3837246250_CustomAttributesCacheGenerator,

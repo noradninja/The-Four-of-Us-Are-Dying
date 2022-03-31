@@ -53,6 +53,7 @@ public class EnemyController : MonoBehaviour {
 	public bool roaming = false;
 	public bool isPlayerRunning;
 	public bool flashlightDisabled;
+	public Vector3 randomCircle;
 	
 	
 	
@@ -365,11 +366,11 @@ public class EnemyController : MonoBehaviour {
 	private void RandomizePoint(){
 		
 
-		Vector3 randomCircle = new Vector3(Random.insideUnitCircle.x * viewRadius, 0, Random.insideUnitCircle.y * viewRadius);
+		randomCircle = new Vector3(Random.insideUnitCircle.x * viewRadius, 0, (Random.insideUnitCircle.y) * viewRadius);
 		Vector3 point = randomPointObject.transform.position + randomCircle;
 		int walkMask = 1 << NavMesh.GetAreaFromName("Walkable");
 		NavMeshHit hit;
-		if (NavMesh.SamplePosition(point, out hit, 0.055125f, walkMask)) //is the point within 0.25 units of a NavMesh surface
+		if (NavMesh.SamplePosition(point, out hit, 0.15f, walkMask)) //is the point within 0.25 units of a NavMesh surface
 		{
 			onMesh = true;
 			randomPointObject.transform.position = point;

@@ -169,6 +169,7 @@
      <Compile Include="Assets\Script\Controllers\PlayerController.cs" />
      <Compile Include="Assets\Script\Controllers\SFXController.cs" />
      <Compile Include="Assets\Script\Enumerators\Item_Enumerator.cs" />
+     <Compile Include="Assets\Script\Managers\Contrast_Manager.cs" />
      <Compile Include="Assets\Script\Managers\Inventory_Screen_Manager.cs" />
      <Compile Include="Assets\Script\Managers\InventoryManager.cs" />
      <Compile Include="Assets\Script\Managers\Lightning_Manager.cs" />
@@ -239,6 +240,7 @@
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCore_VC.cginc" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardUtils.cginc" />
      <None Include="Assets\Addons\Kino\Bokeh\Shader\Debug.cginc" />
+     <None Include="Assets\Shader\Light &amp; Shadow\Skybox.shader" />
      <None Include="Assets\Shader\Foliage\VertexLightmap.shader" />
      <None Include="Assets\___www.unityassetcollection.com___.txt" />
      <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
@@ -331,6 +333,7 @@
      <None Include="Assets\Addons\Shaders\beam_old.shader" />
      <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\CalculateDistanceFromGeometry.compute" />
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCommon.cginc" />
+     <None Include="Assets\Shader\Light &amp; Shadow\Lightning_Contrast.shader" />
      <None Include="Assets\Addons\Magic Light Probes\Shaders\MLPVolumeBounds 1.shader" />
      <None Include="Assets\RainMaker\Readme.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

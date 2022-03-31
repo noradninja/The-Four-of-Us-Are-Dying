@@ -46,6 +46,7 @@ Shader "Vita/Standard Mobile"
         [HideInInspector] _SrcBlend ("__src", Float) = 1.0
         [HideInInspector] _DstBlend ("__dst", Float) = 0.0
         [HideInInspector] _ZWrite ("__zw", Float) = 1.0
+        [IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
         
         _IntensityVC("Vertex Color Intensity", Range(0.0, 1.0)) = 1.0
     }
@@ -63,7 +64,11 @@ Shader "Vita/Standard Mobile"
     {
         Tags { "RenderType"="Opaque"}
         LOD 300
-
+        Stencil {
+		    Ref [_StencilRef]
+            Comp NotEqual
+            Pass Keep
+        }
 
         // ------------------------------------------------------------------
         //  Base forward pass (directional light, emission, lightmaps, ...)
@@ -195,5 +200,5 @@ Shader "Vita/Standard Mobile"
 
 
     //FallBack "VertexLit"
-   CustomEditor "Standard_VCShaderGUI"
+  // CustomEditor "Standard_VCShaderGUI"
 }

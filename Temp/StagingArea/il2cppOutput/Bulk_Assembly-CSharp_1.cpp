@@ -182,6 +182,8 @@ struct CameraFacingBillboard_t1991403390;
 struct CameraResolutionScaler_t2459044074;
 // ChatController
 struct ChatController_t3486202795;
+// Contrast_Manager
+struct Contrast_Manager_t1945764136;
 // Crepuscular
 struct Crepuscular_t186719810;
 // DecalSystem.Decal
@@ -1025,6 +1027,7 @@ extern String_t* _stringLiteral1538501347;
 extern String_t* _stringLiteral1543742942;
 extern String_t* _stringLiteral1595134219;
 extern String_t* _stringLiteral1602046325;
+extern String_t* _stringLiteral1639261578;
 extern String_t* _stringLiteral1641911283;
 extern String_t* _stringLiteral1644442557;
 extern String_t* _stringLiteral1706900036;
@@ -1064,6 +1067,7 @@ extern String_t* _stringLiteral2532884856;
 extern String_t* _stringLiteral2695125245;
 extern String_t* _stringLiteral2732841182;
 extern String_t* _stringLiteral2802000432;
+extern String_t* _stringLiteral2810103870;
 extern String_t* _stringLiteral2837188276;
 extern String_t* _stringLiteral2855671424;
 extern String_t* _stringLiteral2860068956;
@@ -1468,6 +1472,7 @@ extern const uint32_t CameraResolutionScaler_OnRenderImage_m2849322546_MetadataU
 extern const uint32_t ChatController_AddToChatOutput_m191672758_MetadataUsageId;
 extern const uint32_t ChatController_OnDisable_m198214062_MetadataUsageId;
 extern const uint32_t ChatController_OnEnable_m2623215102_MetadataUsageId;
+extern const uint32_t Contrast_Manager_Update_m3963300062_MetadataUsageId;
 extern const uint32_t Crepuscular_OnRenderImage_m3334495196_MetadataUsageId;
 extern const uint32_t Crepuscular__cctor_m1089782950_MetadataUsageId;
 extern const uint32_t Decal_Awake_m809091930_MetadataUsageId;
@@ -22141,6 +22146,117 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // CHATCONTROLLER_T3486202795_H
+#ifndef CONTRAST_MANAGER_T1945764136_H
+#define CONTRAST_MANAGER_T1945764136_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Contrast_Manager
+struct  Contrast_Manager_t1945764136  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Material Contrast_Manager::contrastMaterial
+	Material_t340375123 * ___contrastMaterial_4;
+	// UnityEngine.Material Contrast_Manager::skyboxMaterial
+	Material_t340375123 * ___skyboxMaterial_5;
+	// System.Single Contrast_Manager::contrastValue
+	float ___contrastValue_6;
+	// UnityEngine.Color Contrast_Manager::tintColor
+	Color_t2555686324  ___tintColor_7;
+	// System.Single Contrast_Manager::fromAbs
+	float ___fromAbs_8;
+	// System.Single Contrast_Manager::fromMaxAbs
+	float ___fromMaxAbs_9;
+	// System.Single Contrast_Manager::normal
+	float ___normal_10;
+	// System.Single Contrast_Manager::toMaxAbs
+	float ___toMaxAbs_11;
+	// System.Single Contrast_Manager::toAbs
+	float ___toAbs_12;
+
+public:
+	inline static int32_t get_offset_of_contrastMaterial_4() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___contrastMaterial_4)); }
+	inline Material_t340375123 * get_contrastMaterial_4() const { return ___contrastMaterial_4; }
+	inline Material_t340375123 ** get_address_of_contrastMaterial_4() { return &___contrastMaterial_4; }
+	inline void set_contrastMaterial_4(Material_t340375123 * value)
+	{
+		___contrastMaterial_4 = value;
+		Il2CppCodeGenWriteBarrier((&___contrastMaterial_4), value);
+	}
+
+	inline static int32_t get_offset_of_skyboxMaterial_5() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___skyboxMaterial_5)); }
+	inline Material_t340375123 * get_skyboxMaterial_5() const { return ___skyboxMaterial_5; }
+	inline Material_t340375123 ** get_address_of_skyboxMaterial_5() { return &___skyboxMaterial_5; }
+	inline void set_skyboxMaterial_5(Material_t340375123 * value)
+	{
+		___skyboxMaterial_5 = value;
+		Il2CppCodeGenWriteBarrier((&___skyboxMaterial_5), value);
+	}
+
+	inline static int32_t get_offset_of_contrastValue_6() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___contrastValue_6)); }
+	inline float get_contrastValue_6() const { return ___contrastValue_6; }
+	inline float* get_address_of_contrastValue_6() { return &___contrastValue_6; }
+	inline void set_contrastValue_6(float value)
+	{
+		___contrastValue_6 = value;
+	}
+
+	inline static int32_t get_offset_of_tintColor_7() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___tintColor_7)); }
+	inline Color_t2555686324  get_tintColor_7() const { return ___tintColor_7; }
+	inline Color_t2555686324 * get_address_of_tintColor_7() { return &___tintColor_7; }
+	inline void set_tintColor_7(Color_t2555686324  value)
+	{
+		___tintColor_7 = value;
+	}
+
+	inline static int32_t get_offset_of_fromAbs_8() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___fromAbs_8)); }
+	inline float get_fromAbs_8() const { return ___fromAbs_8; }
+	inline float* get_address_of_fromAbs_8() { return &___fromAbs_8; }
+	inline void set_fromAbs_8(float value)
+	{
+		___fromAbs_8 = value;
+	}
+
+	inline static int32_t get_offset_of_fromMaxAbs_9() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___fromMaxAbs_9)); }
+	inline float get_fromMaxAbs_9() const { return ___fromMaxAbs_9; }
+	inline float* get_address_of_fromMaxAbs_9() { return &___fromMaxAbs_9; }
+	inline void set_fromMaxAbs_9(float value)
+	{
+		___fromMaxAbs_9 = value;
+	}
+
+	inline static int32_t get_offset_of_normal_10() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___normal_10)); }
+	inline float get_normal_10() const { return ___normal_10; }
+	inline float* get_address_of_normal_10() { return &___normal_10; }
+	inline void set_normal_10(float value)
+	{
+		___normal_10 = value;
+	}
+
+	inline static int32_t get_offset_of_toMaxAbs_11() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___toMaxAbs_11)); }
+	inline float get_toMaxAbs_11() const { return ___toMaxAbs_11; }
+	inline float* get_address_of_toMaxAbs_11() { return &___toMaxAbs_11; }
+	inline void set_toMaxAbs_11(float value)
+	{
+		___toMaxAbs_11 = value;
+	}
+
+	inline static int32_t get_offset_of_toAbs_12() { return static_cast<int32_t>(offsetof(Contrast_Manager_t1945764136, ___toAbs_12)); }
+	inline float get_toAbs_12() const { return ___toAbs_12; }
+	inline float* get_address_of_toAbs_12() { return &___toAbs_12; }
+	inline void set_toAbs_12(float value)
+	{
+		___toAbs_12 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // CONTRAST_MANAGER_T1945764136_H
 #ifndef CREPUSCULAR_T186719810_H
 #define CREPUSCULAR_T186719810_H
 #ifdef __clang__
@@ -30387,6 +30503,14 @@ extern "C" IL2CPP_METHOD_ATTR void TMP_Text_set_text_m1216996582 (TMP_Text_t2599
 extern "C" IL2CPP_METHOD_ATTR void TMP_InputField_ActivateInputField_m2361847789 (TMP_InputField_t1099764886 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.UI.Scrollbar::set_value(System.Single)
 extern "C" IL2CPP_METHOD_ATTR void Scrollbar_set_value_m2277767288 (Scrollbar_t1494447233 * __this, float p0, const RuntimeMethod* method);
+// System.Single UnityEngine.Material::GetFloat(System.String)
+extern "C" IL2CPP_METHOD_ATTR float Material_GetFloat_m2210875428 (Material_t340375123 * __this, String_t* p0, const RuntimeMethod* method);
+// System.Single UnityEngine.Mathf::Clamp01(System.Single)
+extern "C" IL2CPP_METHOD_ATTR float Mathf_Clamp01_m56433566 (RuntimeObject * __this /* static, unused */, float p0, const RuntimeMethod* method);
+// System.Void Contrast_Manager::Remap(System.Single,System.Single,System.Single,System.Single,System.Single)
+extern "C" IL2CPP_METHOD_ATTR void Contrast_Manager_Remap_m2614535028 (Contrast_Manager_t1945764136 * __this, float ___from0, float ___fromMin1, float ___fromMax2, float ___toMin3, float ___toMax4, const RuntimeMethod* method);
+// System.Void UnityEngine.Material::SetColor(System.String,UnityEngine.Color)
+extern "C" IL2CPP_METHOD_ATTR void Material_SetColor_m2020215303 (Material_t340375123 * __this, String_t* p0, Color_t2555686324  p1, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Screen::get_width()
 extern "C" IL2CPP_METHOD_ATTR int32_t Screen_get_width_m345039817 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Mathf::RoundToInt(System.Single)
@@ -56510,6 +56634,84 @@ extern "C" IL2CPP_METHOD_ATTR void ChatController_AddToChatOutput_m191672758 (Ch
 		TMP_InputField_ActivateInputField_m2361847789(L_26, /*hidden argument*/NULL);
 		Scrollbar_t1494447233 * L_27 = __this->get_ChatScrollbar_6();
 		Scrollbar_set_value_m2277767288(L_27, (0.0f), /*hidden argument*/NULL);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void Contrast_Manager::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void Contrast_Manager__ctor_m3331457968 (Contrast_Manager_t1945764136 * __this, const RuntimeMethod* method)
+{
+	{
+		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Contrast_Manager::Start()
+extern "C" IL2CPP_METHOD_ATTR void Contrast_Manager_Start_m1730037552 (Contrast_Manager_t1945764136 * __this, const RuntimeMethod* method)
+{
+	{
+		Color_t2555686324  L_0;
+		memset(&L_0, 0, sizeof(L_0));
+		Color__ctor_m2943235014((&L_0), (0.0f), (0.0f), (0.0f), (0.0f), /*hidden argument*/NULL);
+		__this->set_tintColor_7(L_0);
+		return;
+	}
+}
+// System.Void Contrast_Manager::Update()
+extern "C" IL2CPP_METHOD_ATTR void Contrast_Manager_Update_m3963300062 (Contrast_Manager_t1945764136 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Contrast_Manager_Update_m3963300062_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Material_t340375123 * L_0 = __this->get_skyboxMaterial_5();
+		float L_1 = Material_GetFloat_m2210875428(L_0, _stringLiteral1639261578, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
+		float L_2 = Mathf_Clamp01_m56433566(NULL /*static, unused*/, ((float)il2cpp_codegen_subtract((float)L_1, (float)(0.75f))), /*hidden argument*/NULL);
+		__this->set_contrastValue_6(L_2);
+		float L_3 = __this->get_contrastValue_6();
+		Contrast_Manager_Remap_m2614535028(__this, L_3, (0.0f), (1.0f), (0.0f), (0.0625f), /*hidden argument*/NULL);
+		Color_t2555686324 * L_4 = __this->get_address_of_tintColor_7();
+		float L_5 = __this->get_contrastValue_6();
+		L_4->set_a_3(L_5);
+		Material_t340375123 * L_6 = __this->get_contrastMaterial_4();
+		Color_t2555686324  L_7 = __this->get_tintColor_7();
+		Material_SetColor_m2020215303(L_6, _stringLiteral2810103870, L_7, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void Contrast_Manager::Remap(System.Single,System.Single,System.Single,System.Single,System.Single)
+extern "C" IL2CPP_METHOD_ATTR void Contrast_Manager_Remap_m2614535028 (Contrast_Manager_t1945764136 * __this, float ___from0, float ___fromMin1, float ___fromMax2, float ___toMin3, float ___toMax4, const RuntimeMethod* method)
+{
+	{
+		float L_0 = ___from0;
+		float L_1 = ___fromMin1;
+		__this->set_fromAbs_8(((float)il2cpp_codegen_subtract((float)L_0, (float)L_1)));
+		float L_2 = ___fromMax2;
+		float L_3 = ___fromMin1;
+		__this->set_fromMaxAbs_9(((float)il2cpp_codegen_subtract((float)L_2, (float)L_3)));
+		float L_4 = __this->get_fromAbs_8();
+		float L_5 = __this->get_fromMaxAbs_9();
+		__this->set_normal_10(((float)((float)L_4/(float)L_5)));
+		float L_6 = ___toMax4;
+		float L_7 = ___toMin3;
+		__this->set_toMaxAbs_11(((float)il2cpp_codegen_subtract((float)L_6, (float)L_7)));
+		float L_8 = __this->get_toMaxAbs_11();
+		float L_9 = __this->get_normal_10();
+		__this->set_toAbs_12(((float)il2cpp_codegen_multiply((float)L_8, (float)L_9)));
+		float L_10 = __this->get_toAbs_12();
+		float L_11 = ___toMin3;
+		__this->set_contrastValue_6(((float)il2cpp_codegen_add((float)L_10, (float)L_11)));
 		return;
 	}
 }
