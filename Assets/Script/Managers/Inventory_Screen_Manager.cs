@@ -13,6 +13,8 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	public bool delayButton = false;
 	private  string VITA = "joystick button ";
     private  int SELECT = 6;
+	private float tempAlpha;
+	private float time;
 
 	// Use this for initialization
 	void Start () {
@@ -96,12 +98,12 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	}
 
 	IEnumerator crossFade (float startValue, float endValue, float duration){
-		float time = 0.0f;
+		time = 0.0f;
 		if (inventoryCam.activeSelf == false){
 			inventoryCam.SetActive(true);
 		}
 		while (time < duration){
-			float tempAlpha = Mathf.Lerp (startValue, endValue, time/duration);
+			tempAlpha = Mathf.Lerp (startValue, endValue, time/duration);
 			time += Time.deltaTime;
 			inventoryMat.SetFloat("_Alpha", tempAlpha);
 			yield return null;

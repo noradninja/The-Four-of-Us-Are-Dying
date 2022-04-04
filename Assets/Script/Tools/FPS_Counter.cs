@@ -124,7 +124,7 @@ void Start(){
 			}
 		}
 		averageFPS = sum / frameRange;
-        averageFPS += 1;
+        averageFPS += 1; //fix for off by one error cause I am fucking lazy
 		maxFPS = highest;
 		minFPS = lowest;
     }

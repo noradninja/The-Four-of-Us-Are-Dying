@@ -90,13 +90,13 @@ public class PlayerController : MonoBehaviour
     public bool isLerping;
     private bool isPaused;
     public static bool isMap;
-    public RawImage pausePanel;
+    public CanvasGroup pausePanel;
     public RawImage mapPanel;
     public Camera mapCam;
     public GameObject mapIndicator;
     public bool isStimulant = false;
     public float cooldownValue;
-    public bool delayButton = false;
+    public static bool delayButton = false;
     public bool isCharging;
     public GameObject perfOverlay;
     public CanvasGroup UICanvasGroup;
@@ -149,7 +149,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {  
 
-
+    if(!PauseManager.isPaused){
         Move();
         Rotate();
         Flashlight();
@@ -176,6 +176,7 @@ public class PlayerController : MonoBehaviour
                 Vector3 lightrotation = Quaternion.Lerp(lightRoot.transform.rotation, lightlookRotation, Time.deltaTime * 21f).eulerAngles;
                 lightRoot.transform.rotation = Quaternion.Euler(lightrotation);
         }
+    }
         
     }
     private void Flashlight()
@@ -208,11 +209,13 @@ public class PlayerController : MonoBehaviour
 
 //pause
         if (Input.GetKeyDown(VITA + START)  && !delayButton){
-            if(!isPaused){
-                StartCoroutine(fade(pausePanel, 0, 1, 0.5f));
+            if(!PauseManager.isPaused){
+                	StartCoroutine(FadeScreen(1 , 0.5F));
+                    PauseManager.isPaused = true;
             }
             else {
-                StartCoroutine(fade(pausePanel, 1, 0, 0.5f));
+                	StartCoroutine(FadeScreen(1 , 0.5F));
+                    PauseManager.isPaused = false;
             }
             delayButton = true;
             StartCoroutine(buttonDelayTimer(0.5f));
@@ -607,16 +610,16 @@ public class PlayerController : MonoBehaviour
     ///////////////////////////Joysticks//////////////////////////////////////
     private void Rotate()
     {
-        horizontalRotation = Input.GetAxis("Left Stick Horizontal"); //turn
+        horizontalRotation = Input.GetAxis("Left Stick Horizontal") * OptionsManagerInputs.sensitivity; //turn
 
     if (Application.isEditor){ //this is here because the DS3 uses different input axes for the right stick
-        horizontalCamRotation = Input.GetAxis("DS3Right Stick Horizontal"); //flashlight l/r
-        verticalCamRotation = Input.GetAxis("DS3Right Stick Vertical"); //flashlight/look u/d
+        horizontalCamRotation = Input.GetAxis("DS3Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
+        verticalCamRotation = Input.GetAxis("DS3Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
        
     }
     else {
-        horizontalCamRotation = Input.GetAxis("Right Stick Horizontal"); //flashlight l/r
-        verticalCamRotation = Input.GetAxis("Right Stick Vertical"); //flashlight/look u/d
+        horizontalCamRotation = Input.GetAxis("Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
+        verticalCamRotation = Input.GetAxis("Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
     }
     if (lightMovement){
         transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
@@ -984,7 +987,7 @@ IEnumerator fadeAlpha (float startValue, float endValue, float duration, float w
         StartCoroutine(walkLerp(0, 1,  lerpRate));
             
     }
-   IEnumerator buttonDelayTimer(float delay){
+   public static IEnumerator buttonDelayTimer(float delay){
         yield return new WaitForSeconds(delay);
         delayButton = false;
     }
@@ -1018,4 +1021,16 @@ IEnumerator fadeAlpha (float startValue, float endValue, float duration, float w
             }
         Camera.GetComponent<Kino.Bokeh>().focalLength = endValue;
     }
+    IEnumerator FadeScreen(float targetValue, float duration) {
+        float startValue = pausePanel.alpha;
+        float fadeTime = 0;
+		//fade out the loadscreen canvas group
+        while (fadeTime < duration)
+        {
+            pausePanel.alpha = Mathf.Lerp(startValue, targetValue, fadeTime / duration);
+            fadeTime += Time.deltaTime;
+            yield return null;
+        }
+		pausePanel.alpha = targetValue;
+	}
 }

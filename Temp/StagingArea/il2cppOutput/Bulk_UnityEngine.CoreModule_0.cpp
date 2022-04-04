@@ -807,7 +807,6 @@ extern RuntimeClass* PlaneU5BU5D_t3656189108_il2cpp_TypeInfo_var;
 extern RuntimeClass* PlayableBindingU5BU5D_t829358056_il2cpp_TypeInfo_var;
 extern RuntimeClass* PlayableBinding_t354260709_il2cpp_TypeInfo_var;
 extern RuntimeClass* PlayableGraph_t3515989261_il2cpp_TypeInfo_var;
-extern RuntimeClass* PlayableHandle_t1095853803_il2cpp_TypeInfo_var;
 extern RuntimeClass* Playable_t459825607_il2cpp_TypeInfo_var;
 extern RuntimeClass* PlayerConnectionInternal_t3892293164_il2cpp_TypeInfo_var;
 extern RuntimeClass* PlayerConnection_t3081694049_il2cpp_TypeInfo_var;
@@ -1333,7 +1332,6 @@ extern const uint32_t PlayableAsset_Internal_CreatePlayable_m2550417712_Metadata
 extern const uint32_t PlayableAsset_get_duration_m3549083384_MetadataUsageId;
 extern const uint32_t PlayableAsset_get_outputs_m2130546921_MetadataUsageId;
 extern const uint32_t PlayableBinding__cctor_m2159960528_MetadataUsageId;
-extern const uint32_t PlayableHandle_Equals_m1666612586_MetadataUsageId;
 extern const uint32_t Playable__cctor_m464525928_MetadataUsageId;
 extern const uint32_t Playable_get_Null_m3556999077_MetadataUsageId;
 extern const uint32_t PlayerConnection_BlockUntilRecvMsg_m1369178756_MetadataUsageId;
@@ -19801,6 +19799,8 @@ extern "C" IL2CPP_METHOD_ATTR void GameObject_Internal_CreateGameObject_m2533291
 extern "C" IL2CPP_METHOD_ATTR Component_t1923634451 * GameObject_AddComponent_m136524825 (GameObject_t1113636619 * __this, Type_t * ___componentType0, const RuntimeMethod* method);
 // UnityEngine.Component UnityEngine.GameObject::Internal_AddComponentWithType(System.Type)
 extern "C" IL2CPP_METHOD_ATTR Component_t1923634451 * GameObject_Internal_AddComponentWithType_m3797731663 (GameObject_t1113636619 * __this, Type_t * ___componentType0, const RuntimeMethod* method);
+// System.Void UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_BroadcastMessage_m3721316603 (GameObject_t1113636619 * __this, String_t* ___methodName0, RuntimeObject * ___parameter1, int32_t ___options2, const RuntimeMethod* method);
 // System.Void UnityEngine.GeometryUtility::CalculateFrustumPlanes(UnityEngine.Camera,UnityEngine.Plane[])
 extern "C" IL2CPP_METHOD_ATTR void GeometryUtility_CalculateFrustumPlanes_m1194921787 (RuntimeObject * __this /* static, unused */, Camera_t4157153871 * ___camera0, PlaneU5BU5D_t3656189108* ___planes1, const RuntimeMethod* method);
 // UnityEngine.Matrix4x4 UnityEngine.Camera::get_projectionMatrix()
@@ -20500,26 +20500,6 @@ extern "C" IL2CPP_METHOD_ATTR PlayableHandle_t1095853803  PlayableHandle_get_Nul
 extern "C" IL2CPP_METHOD_ATTR Playable_t459825607  Playable_get_Null_m3556999077 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Object System.Object::MemberwiseClone()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Object_MemberwiseClone_m1474068832 (RuntimeObject * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Playables.PlayableHandle::CompareVersion(UnityEngine.Playables.PlayableHandle,UnityEngine.Playables.PlayableHandle)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_CompareVersion_m2748798983 (RuntimeObject * __this /* static, unused */, PlayableHandle_t1095853803  ___lhs0, PlayableHandle_t1095853803  ___rhs1, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Playables.PlayableHandle::Equals(UnityEngine.Playables.PlayableHandle)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_Equals_m2546735654 (PlayableHandle_t1095853803 * __this, PlayableHandle_t1095853803  ___other0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Playables.PlayableHandle::Equals(System.Object)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_Equals_m1666612586 (PlayableHandle_t1095853803 * __this, RuntimeObject * ___p0, const RuntimeMethod* method);
-// System.Int32 System.IntPtr::GetHashCode()
-extern "C" IL2CPP_METHOD_ATTR int32_t IntPtr_GetHashCode_m3588219647 (intptr_t* __this, const RuntimeMethod* method);
-// System.Int32 System.UInt32::GetHashCode()
-extern "C" IL2CPP_METHOD_ATTR int32_t UInt32_GetHashCode_m3722548385 (uint32_t* __this, const RuntimeMethod* method);
-// System.Int32 UnityEngine.Playables.PlayableHandle::GetHashCode()
-extern "C" IL2CPP_METHOD_ATTR int32_t PlayableHandle_GetHashCode_m1297878485 (PlayableHandle_t1095853803 * __this, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Playables.PlayableHandle::IsValid_Injected(UnityEngine.Playables.PlayableHandle&)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_IsValid_Injected_m2746805669 (RuntimeObject * __this /* static, unused */, PlayableHandle_t1095853803 * ____unity_self0, const RuntimeMethod* method);
-// System.Boolean UnityEngine.Playables.PlayableHandle::IsValid()
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_IsValid_m777349566 (PlayableHandle_t1095853803 * __this, const RuntimeMethod* method);
-// System.Type UnityEngine.Playables.PlayableHandle::GetPlayableType_Injected(UnityEngine.Playables.PlayableHandle&)
-extern "C" IL2CPP_METHOD_ATTR Type_t * PlayableHandle_GetPlayableType_Injected_m686992718 (RuntimeObject * __this /* static, unused */, PlayableHandle_t1095853803 * ____unity_self0, const RuntimeMethod* method);
-// System.Type UnityEngine.Playables.PlayableHandle::GetPlayableType()
-extern "C" IL2CPP_METHOD_ATTR Type_t * PlayableHandle_GetPlayableType_m432385838 (PlayableHandle_t1095853803 * __this, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -34627,6 +34607,30 @@ extern "C" IL2CPP_METHOD_ATTR void GameObject_SendMessage_m3720186693 (GameObjec
 	_il2cpp_icall_func = (GameObject_SendMessage_m3720186693_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::SendMessage(System.String,System.Object,UnityEngine.SendMessageOptions)");
 	_il2cpp_icall_func(__this, ___methodName0, ___value1, ___options2);
 }
+// System.Void UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_BroadcastMessage_m3721316603 (GameObject_t1113636619 * __this, String_t* ___methodName0, RuntimeObject * ___parameter1, int32_t ___options2, const RuntimeMethod* method)
+{
+	typedef void (*GameObject_BroadcastMessage_m3721316603_ftn) (GameObject_t1113636619 *, String_t*, RuntimeObject *, int32_t);
+	static GameObject_BroadcastMessage_m3721316603_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GameObject_BroadcastMessage_m3721316603_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GameObject::BroadcastMessage(System.String,System.Object,UnityEngine.SendMessageOptions)");
+	_il2cpp_icall_func(__this, ___methodName0, ___parameter1, ___options2);
+}
+// System.Void UnityEngine.GameObject::BroadcastMessage(System.String)
+extern "C" IL2CPP_METHOD_ATTR void GameObject_BroadcastMessage_m217296818 (GameObject_t1113636619 * __this, String_t* ___methodName0, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	RuntimeObject * V_1 = NULL;
+	{
+		V_0 = 0;
+		V_1 = NULL;
+		String_t* L_0 = ___methodName0;
+		RuntimeObject * L_1 = V_1;
+		int32_t L_2 = V_0;
+		GameObject_BroadcastMessage_m3721316603(__this, L_0, L_1, L_2, /*hidden argument*/NULL);
+		return;
+	}
+}
 // System.Void UnityEngine.GameObject::Internal_CreateGameObject(UnityEngine.GameObject,System.String)
 extern "C" IL2CPP_METHOD_ATTR void GameObject_Internal_CreateGameObject_m2533291801 (RuntimeObject * __this /* static, unused */, GameObject_t1113636619 * ___self0, String_t* ___name1, const RuntimeMethod* method)
 {
@@ -46208,238 +46212,6 @@ extern "C" IL2CPP_METHOD_ATTR PlayableOutput_t3179894105  CreateOutputMethod_End
 {
 	RuntimeObject *__result = il2cpp_codegen_delegate_end_invoke((Il2CppAsyncResult*) ___result0, 0);
 	return *(PlayableOutput_t3179894105 *)UnBox ((RuntimeObject*)__result);
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// UnityEngine.Playables.PlayableHandle UnityEngine.Playables.PlayableHandle::get_Null()
-extern "C" IL2CPP_METHOD_ATTR PlayableHandle_t1095853803  PlayableHandle_get_Null_m218234861 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	PlayableHandle_t1095853803  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	PlayableHandle_t1095853803  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	{
-		il2cpp_codegen_initobj((&V_0), sizeof(PlayableHandle_t1095853803 ));
-		(&V_0)->set_m_Version_1((-1));
-		PlayableHandle_t1095853803  L_0 = V_0;
-		V_1 = L_0;
-		goto IL_0018;
-	}
-
-IL_0018:
-	{
-		PlayableHandle_t1095853803  L_1 = V_1;
-		return L_1;
-	}
-}
-// System.Boolean UnityEngine.Playables.PlayableHandle::op_Equality(UnityEngine.Playables.PlayableHandle,UnityEngine.Playables.PlayableHandle)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_op_Equality_m3344837515 (RuntimeObject * __this /* static, unused */, PlayableHandle_t1095853803  ___x0, PlayableHandle_t1095853803  ___y1, const RuntimeMethod* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1095853803  L_0 = ___x0;
-		PlayableHandle_t1095853803  L_1 = ___y1;
-		bool L_2 = PlayableHandle_CompareVersion_m2748798983(NULL /*static, unused*/, L_0, L_1, /*hidden argument*/NULL);
-		V_0 = L_2;
-		goto IL_000e;
-	}
-
-IL_000e:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-// System.Boolean UnityEngine.Playables.PlayableHandle::Equals(System.Object)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_Equals_m1666612586 (PlayableHandle_t1095853803 * __this, RuntimeObject * ___p0, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (PlayableHandle_Equals_m1666612586_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
-	{
-		RuntimeObject * L_0 = ___p0;
-		if (!((RuntimeObject *)IsInstSealed((RuntimeObject*)L_0, PlayableHandle_t1095853803_il2cpp_TypeInfo_var)))
-		{
-			goto IL_001a;
-		}
-	}
-	{
-		RuntimeObject * L_1 = ___p0;
-		bool L_2 = PlayableHandle_Equals_m2546735654((PlayableHandle_t1095853803 *)__this, ((*(PlayableHandle_t1095853803 *)((PlayableHandle_t1095853803 *)UnBox(L_1, PlayableHandle_t1095853803_il2cpp_TypeInfo_var)))), /*hidden argument*/NULL);
-		G_B3_0 = ((int32_t)(L_2));
-		goto IL_001b;
-	}
-
-IL_001a:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_001b:
-	{
-		V_0 = (bool)G_B3_0;
-		goto IL_0021;
-	}
-
-IL_0021:
-	{
-		bool L_3 = V_0;
-		return L_3;
-	}
-}
-extern "C"  bool PlayableHandle_Equals_m1666612586_AdjustorThunk (RuntimeObject * __this, RuntimeObject * ___p0, const RuntimeMethod* method)
-{
-	PlayableHandle_t1095853803 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1095853803 *>(__this + 1);
-	return PlayableHandle_Equals_m1666612586(_thisAdjusted, ___p0, method);
-}
-// System.Boolean UnityEngine.Playables.PlayableHandle::Equals(UnityEngine.Playables.PlayableHandle)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_Equals_m2546735654 (PlayableHandle_t1095853803 * __this, PlayableHandle_t1095853803  ___other0, const RuntimeMethod* method)
-{
-	bool V_0 = false;
-	{
-		PlayableHandle_t1095853803  L_0 = ___other0;
-		bool L_1 = PlayableHandle_CompareVersion_m2748798983(NULL /*static, unused*/, (*(PlayableHandle_t1095853803 *)__this), L_0, /*hidden argument*/NULL);
-		V_0 = L_1;
-		goto IL_0013;
-	}
-
-IL_0013:
-	{
-		bool L_2 = V_0;
-		return L_2;
-	}
-}
-extern "C"  bool PlayableHandle_Equals_m2546735654_AdjustorThunk (RuntimeObject * __this, PlayableHandle_t1095853803  ___other0, const RuntimeMethod* method)
-{
-	PlayableHandle_t1095853803 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1095853803 *>(__this + 1);
-	return PlayableHandle_Equals_m2546735654(_thisAdjusted, ___other0, method);
-}
-// System.Int32 UnityEngine.Playables.PlayableHandle::GetHashCode()
-extern "C" IL2CPP_METHOD_ATTR int32_t PlayableHandle_GetHashCode_m1297878485 (PlayableHandle_t1095853803 * __this, const RuntimeMethod* method)
-{
-	int32_t V_0 = 0;
-	{
-		intptr_t* L_0 = __this->get_address_of_m_Handle_0();
-		int32_t L_1 = IntPtr_GetHashCode_m3588219647((intptr_t*)L_0, /*hidden argument*/NULL);
-		uint32_t* L_2 = __this->get_address_of_m_Version_1();
-		int32_t L_3 = UInt32_GetHashCode_m3722548385((uint32_t*)L_2, /*hidden argument*/NULL);
-		V_0 = ((int32_t)((int32_t)L_1^(int32_t)L_3));
-		goto IL_002a;
-	}
-
-IL_002a:
-	{
-		int32_t L_4 = V_0;
-		return L_4;
-	}
-}
-extern "C"  int32_t PlayableHandle_GetHashCode_m1297878485_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
-{
-	PlayableHandle_t1095853803 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1095853803 *>(__this + 1);
-	return PlayableHandle_GetHashCode_m1297878485(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Playables.PlayableHandle::CompareVersion(UnityEngine.Playables.PlayableHandle,UnityEngine.Playables.PlayableHandle)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_CompareVersion_m2748798983 (RuntimeObject * __this /* static, unused */, PlayableHandle_t1095853803  ___lhs0, PlayableHandle_t1095853803  ___rhs1, const RuntimeMethod* method)
-{
-	bool V_0 = false;
-	int32_t G_B3_0 = 0;
-	{
-		intptr_t L_0 = (&___lhs0)->get_m_Handle_0();
-		intptr_t L_1 = (&___rhs1)->get_m_Handle_0();
-		bool L_2 = IntPtr_op_Equality_m408849716(NULL /*static, unused*/, (intptr_t)L_0, (intptr_t)L_1, /*hidden argument*/NULL);
-		if (!L_2)
-		{
-			goto IL_002b;
-		}
-	}
-	{
-		uint32_t L_3 = (&___lhs0)->get_m_Version_1();
-		uint32_t L_4 = (&___rhs1)->get_m_Version_1();
-		G_B3_0 = ((((int32_t)L_3) == ((int32_t)L_4))? 1 : 0);
-		goto IL_002c;
-	}
-
-IL_002b:
-	{
-		G_B3_0 = 0;
-	}
-
-IL_002c:
-	{
-		V_0 = (bool)G_B3_0;
-		goto IL_0032;
-	}
-
-IL_0032:
-	{
-		bool L_5 = V_0;
-		return L_5;
-	}
-}
-// System.Boolean UnityEngine.Playables.PlayableHandle::IsValid()
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_IsValid_m777349566 (PlayableHandle_t1095853803 * __this, const RuntimeMethod* method)
-{
-	{
-		bool L_0 = PlayableHandle_IsValid_Injected_m2746805669(NULL /*static, unused*/, (PlayableHandle_t1095853803 *)__this, /*hidden argument*/NULL);
-		return L_0;
-	}
-}
-extern "C"  bool PlayableHandle_IsValid_m777349566_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
-{
-	PlayableHandle_t1095853803 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1095853803 *>(__this + 1);
-	return PlayableHandle_IsValid_m777349566(_thisAdjusted, method);
-}
-// System.Type UnityEngine.Playables.PlayableHandle::GetPlayableType()
-extern "C" IL2CPP_METHOD_ATTR Type_t * PlayableHandle_GetPlayableType_m432385838 (PlayableHandle_t1095853803 * __this, const RuntimeMethod* method)
-{
-	{
-		Type_t * L_0 = PlayableHandle_GetPlayableType_Injected_m686992718(NULL /*static, unused*/, (PlayableHandle_t1095853803 *)__this, /*hidden argument*/NULL);
-		return L_0;
-	}
-}
-extern "C"  Type_t * PlayableHandle_GetPlayableType_m432385838_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
-{
-	PlayableHandle_t1095853803 * _thisAdjusted = reinterpret_cast<PlayableHandle_t1095853803 *>(__this + 1);
-	return PlayableHandle_GetPlayableType_m432385838(_thisAdjusted, method);
-}
-// System.Boolean UnityEngine.Playables.PlayableHandle::IsValid_Injected(UnityEngine.Playables.PlayableHandle&)
-extern "C" IL2CPP_METHOD_ATTR bool PlayableHandle_IsValid_Injected_m2746805669 (RuntimeObject * __this /* static, unused */, PlayableHandle_t1095853803 * ____unity_self0, const RuntimeMethod* method)
-{
-	typedef bool (*PlayableHandle_IsValid_Injected_m2746805669_ftn) (PlayableHandle_t1095853803 *);
-	static PlayableHandle_IsValid_Injected_m2746805669_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayableHandle_IsValid_Injected_m2746805669_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableHandle::IsValid_Injected(UnityEngine.Playables.PlayableHandle&)");
-	bool retVal = _il2cpp_icall_func(____unity_self0);
-	return retVal;
-}
-// System.Type UnityEngine.Playables.PlayableHandle::GetPlayableType_Injected(UnityEngine.Playables.PlayableHandle&)
-extern "C" IL2CPP_METHOD_ATTR Type_t * PlayableHandle_GetPlayableType_Injected_m686992718 (RuntimeObject * __this /* static, unused */, PlayableHandle_t1095853803 * ____unity_self0, const RuntimeMethod* method)
-{
-	typedef Type_t * (*PlayableHandle_GetPlayableType_Injected_m686992718_ftn) (PlayableHandle_t1095853803 *);
-	static PlayableHandle_GetPlayableType_Injected_m686992718_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (PlayableHandle_GetPlayableType_Injected_m686992718_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Playables.PlayableHandle::GetPlayableType_Injected(UnityEngine.Playables.PlayableHandle&)");
-	Type_t * retVal = _il2cpp_icall_func(____unity_self0);
-	return retVal;
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

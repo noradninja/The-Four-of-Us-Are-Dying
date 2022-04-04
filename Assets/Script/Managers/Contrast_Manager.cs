@@ -10,6 +10,8 @@ public class Contrast_Manager : MonoBehaviour
 	public Material contrastMaterial;
     public Material skyboxMaterial;
     public float contrastValue = 0f;
+    [Range (0f,0.1f)]
+    public float maxShadowAmount = 0.055f;
     public Color tintColor;
 
     private float fromAbs;
@@ -29,7 +31,7 @@ public class Contrast_Manager : MonoBehaviour
 	public void Update()
     {
         contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat("_Exposure")-0.75f);
-        Remap(contrastValue, 0f, 1.0f, 0f, 0.0625f);
+        Remap(contrastValue, 0f, 1.0f, 0f, maxShadowAmount);
         tintColor.a = contrastValue;
         contrastMaterial.SetColor("_TintColor", tintColor);    
     }

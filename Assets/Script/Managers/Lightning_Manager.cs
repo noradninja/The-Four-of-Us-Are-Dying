@@ -52,7 +52,6 @@ public Color lerpColor;
 			lerpColor.a = clipLoudnessB/10;
 			contrastHolder = Mathf.Clamp01(clipLoudnessB) * 0.35f + 1.15f;
 			glowMat.SetColor("_TintColor", lerpColor);
-			//crepuscularMat.SetFloat("_Contrast", contrastHolder);
 		}
 	}
  

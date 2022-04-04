@@ -1030,11 +1030,14 @@ extern const Il2CppType AudioSource_t3935305588_0_0_0;
 extern const Il2CppType PlayerController_t2064355688_0_0_0;
 extern const Il2CppType LoadScreen_t3376497162_0_0_0;
 extern const Il2CppType SphereCollider_t2077223608_0_0_0;
+extern const Il2CppType SaveManager_Inputs_t2402574047_0_0_0;
+extern const Il2CppType Menu_Manager_t102876996_0_0_0;
 extern const Il2CppType FastSSAO_t1400243781_0_0_0;
 extern const Il2CppType Bokeh_t660694511_0_0_0;
 extern const Il2CppType Crepuscular_t186719810_0_0_0;
 extern const Il2CppType Fog_t1478163583_0_0_0;
 extern const Il2CppType EnemyController_t2191660454_0_0_0;
+extern const Il2CppType SceneLoadTrigger_t68892663_0_0_0;
 extern const Il2CppType TextMesh_t1536577757_0_0_0;
 extern const Il2CppType TextMeshProFloatingText_t845872552_0_0_0;
 extern const Il2CppType Light_t3756812086_0_0_0;
@@ -3922,6 +3925,10 @@ static const RuntimeType* GenInst_LoadScreen_t3376497162_0_0_0_Types[] = { (&Loa
 extern const Il2CppGenericInst GenInst_LoadScreen_t3376497162_0_0_0 = { 1, GenInst_LoadScreen_t3376497162_0_0_0_Types };
 static const RuntimeType* GenInst_SphereCollider_t2077223608_0_0_0_Types[] = { (&SphereCollider_t2077223608_0_0_0) };
 extern const Il2CppGenericInst GenInst_SphereCollider_t2077223608_0_0_0 = { 1, GenInst_SphereCollider_t2077223608_0_0_0_Types };
+static const RuntimeType* GenInst_SaveManager_Inputs_t2402574047_0_0_0_Types[] = { (&SaveManager_Inputs_t2402574047_0_0_0) };
+extern const Il2CppGenericInst GenInst_SaveManager_Inputs_t2402574047_0_0_0 = { 1, GenInst_SaveManager_Inputs_t2402574047_0_0_0_Types };
+static const RuntimeType* GenInst_Menu_Manager_t102876996_0_0_0_Types[] = { (&Menu_Manager_t102876996_0_0_0) };
+extern const Il2CppGenericInst GenInst_Menu_Manager_t102876996_0_0_0 = { 1, GenInst_Menu_Manager_t102876996_0_0_0_Types };
 static const RuntimeType* GenInst_FastSSAO_t1400243781_0_0_0_Types[] = { (&FastSSAO_t1400243781_0_0_0) };
 extern const Il2CppGenericInst GenInst_FastSSAO_t1400243781_0_0_0 = { 1, GenInst_FastSSAO_t1400243781_0_0_0_Types };
 static const RuntimeType* GenInst_Bokeh_t660694511_0_0_0_Types[] = { (&Bokeh_t660694511_0_0_0) };
@@ -3932,6 +3939,8 @@ static const RuntimeType* GenInst_Fog_t1478163583_0_0_0_Types[] = { (&Fog_t14781
 extern const Il2CppGenericInst GenInst_Fog_t1478163583_0_0_0 = { 1, GenInst_Fog_t1478163583_0_0_0_Types };
 static const RuntimeType* GenInst_EnemyController_t2191660454_0_0_0_Types[] = { (&EnemyController_t2191660454_0_0_0) };
 extern const Il2CppGenericInst GenInst_EnemyController_t2191660454_0_0_0 = { 1, GenInst_EnemyController_t2191660454_0_0_0_Types };
+static const RuntimeType* GenInst_SceneLoadTrigger_t68892663_0_0_0_Types[] = { (&SceneLoadTrigger_t68892663_0_0_0) };
+extern const Il2CppGenericInst GenInst_SceneLoadTrigger_t68892663_0_0_0 = { 1, GenInst_SceneLoadTrigger_t68892663_0_0_0_Types };
 static const RuntimeType* GenInst_TextMesh_t1536577757_0_0_0_Types[] = { (&TextMesh_t1536577757_0_0_0) };
 extern const Il2CppGenericInst GenInst_TextMesh_t1536577757_0_0_0 = { 1, GenInst_TextMesh_t1536577757_0_0_0_Types };
 static const RuntimeType* GenInst_TextMeshProFloatingText_t845872552_0_0_0_Types[] = { (&TextMeshProFloatingText_t845872552_0_0_0) };
@@ -4806,7 +4815,7 @@ static const RuntimeType* GenInst_VolumeParameter_1_t4078826557_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t4078826557_0_0_0 = { 1, GenInst_VolumeParameter_1_t4078826557_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t2051106872_0_0_0_Types[] = { (&VolumeParameter_1_t2051106872_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t2051106872_0_0_0 = { 1, GenInst_VolumeParameter_1_t2051106872_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1688] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1691] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_String_t_0_0_0,
@@ -6054,11 +6063,14 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1688] =
 	&GenInst_PlayerController_t2064355688_0_0_0,
 	&GenInst_LoadScreen_t3376497162_0_0_0,
 	&GenInst_SphereCollider_t2077223608_0_0_0,
+	&GenInst_SaveManager_Inputs_t2402574047_0_0_0,
+	&GenInst_Menu_Manager_t102876996_0_0_0,
 	&GenInst_FastSSAO_t1400243781_0_0_0,
 	&GenInst_Bokeh_t660694511_0_0_0,
 	&GenInst_Crepuscular_t186719810_0_0_0,
 	&GenInst_Fog_t1478163583_0_0_0,
 	&GenInst_EnemyController_t2191660454_0_0_0,
+	&GenInst_SceneLoadTrigger_t68892663_0_0_0,
 	&GenInst_TextMesh_t1536577757_0_0_0,
 	&GenInst_TextMeshProFloatingText_t845872552_0_0_0,
 	&GenInst_Light_t3756812086_0_0_0,
