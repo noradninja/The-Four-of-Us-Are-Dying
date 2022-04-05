@@ -143,7 +143,7 @@ private const string joystick1 = "joystick 1 button ";
 					sfxSource.volume = SFXLevel.fillAmount;
 					ambientSource.volume = SFXLevel.fillAmount;
 					thunderStormSource.volume = SFXLevel.fillAmount;
-					rainSource.volume = SFXLevel.fillAmount;
+					rainSource.volume = SFXLevel.fillAmount * 0.65f;
 					PlayerPrefs.SetInt("SavedOnce", 1);
 					PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
 				}
@@ -174,7 +174,7 @@ private const string joystick1 = "joystick 1 button ";
 					sfxSource.volume = SFXLevel.fillAmount;
 					ambientSource.volume = SFXLevel.fillAmount;
 					thunderStormSource.volume = SFXLevel.fillAmount;
-					rainSource.volume = SFXLevel.fillAmount;
+					rainSource.volume = SFXLevel.fillAmount * 0.65f;
 					PlayerPrefs.SetInt("SavedOnce", 1);
 					PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
 				}

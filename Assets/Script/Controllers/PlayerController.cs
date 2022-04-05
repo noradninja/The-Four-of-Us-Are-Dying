@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
     public CharacterController characterController;
     public static bool hasFlashlight = false;
     public static bool flashlightOff = true;
-
+    public float health;
     public float speed = 3;
     public float stamina = 100f;
     public float rechargeDelay;
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {  
-
+        health = InventoryManager.playerHealth;
     if(!PauseManager.isPaused){
         Move();
         Rotate();

@@ -20,6 +20,7 @@ public class Item_Enumerator : MonoBehaviour {
 	}
 
 //public vars
+	public int identifier;
 	public bool isActiveObject = false;
 	public pickupItem thisItem;
 	public int itemValue;
@@ -50,9 +51,12 @@ public class Item_Enumerator : MonoBehaviour {
 	private Vector3 targetPos;
 	private string tempText;
 	private Dictionary<string, string> itemTexts;
+
+
 	// Use this for initialization
 	void Start ()
     {
+		
 		if (Application.isEditor){
 			CROSS = 2;
 		}
@@ -77,7 +81,7 @@ public class Item_Enumerator : MonoBehaviour {
 				case pickupItem.flashlight :
 					PlayerController.hasFlashlight = true;
 					PlayerController.flashlightOff = false;
-					targetObject.SetActive(false);
+					Destroy(targetObject);
 				break;
 
 				case pickupItem.battery :
@@ -85,26 +89,31 @@ public class Item_Enumerator : MonoBehaviour {
 					InventoryManager.batteryCount += 2;
 					string currentCount = string.Format("{0:D2}", InventoryManager.batteryCount);
 					batteryText.text = currentCount;
-					targetObject.transform.parent.gameObject.SetActive(false); //this is because the parent doesn't contain the collider
+					SetScenes.collectedItems.Add(this.identifier);
+					Destroy(targetObject.transform.parent.gameObject); //this is because the parent doesn't contain the collider
 				break;
 
 				case pickupItem.key :
 					print("That's a key");
 					//do key shit here
 					InventoryManager.keyCount += 1;
-					targetObject.SetActive(false);
+					SetScenes.collectedItems.Add(this.identifier);
+					Destroy(targetObject);
+					
 				break;
 
 				case pickupItem.health :
 					print("That's a medkit");
 					InventoryManager.medCount += 1;
-					targetObject.SetActive(false);
+					SetScenes.collectedItems.Add(this.identifier);
+					Destroy(targetObject);
 				break;
 
 				case pickupItem.stims :
 					print("That's a stimulant");
 					InventoryManager.stimCount += 1;
-					targetObject.SetActive(false);
+					SetScenes.collectedItems.Add(this.identifier);
+					Destroy(targetObject);
 				break;
 			}
 			ClearOSD();

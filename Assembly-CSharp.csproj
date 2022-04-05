@@ -171,9 +171,11 @@
      <Compile Include="Assets\Script\Enumerators\Item_Enumerator.cs" />
      <Compile Include="Assets\Script\Managers\ClearPlayerPrefs.cs" />
      <Compile Include="Assets\Script\Managers\Contrast_Manager.cs" />
+     <Compile Include="Assets\Script\Managers\Data_Loaded_Manager.cs" />
      <Compile Include="Assets\Script\Managers\Inventory_Screen_Manager.cs" />
      <Compile Include="Assets\Script\Managers\InventoryManager.cs" />
      <Compile Include="Assets\Script\Managers\Lightning_Manager.cs" />
+     <Compile Include="Assets\Script\Managers\LoadManager_Inputs.cs" />
      <Compile Include="Assets\Script\Managers\LoadScreen.cs" />
      <Compile Include="Assets\Script\Managers\Menu_Manager.cs" />
      <Compile Include="Assets\Script\Managers\OptionsManagerInputs.cs" />
@@ -184,6 +186,10 @@
      <Compile Include="Assets\Script\Managers\SceneLoadTrigger.cs" />
      <Compile Include="Assets\Script\Managers\SetScenes.cs" />
      <Compile Include="Assets\Script\Managers\Title_Animator.cs" />
+     <Compile Include="Assets\Script\Managers\Title_Menu_Manager.cs" />
+     <Compile Include="Assets\Script\StartMenuManagerInputs.cs" />
+     <Compile Include="Assets\Script\TitleSaveManagerInputs.cs" />
+     <Compile Include="Assets\Script\TitleScreenOptionsManager.cs" />
      <Compile Include="Assets\Script\Tools\AutoRotate.cs" />
      <Compile Include="Assets\Script\Tools\CameraFacingBillboard.cs" />
      <Compile Include="Assets\Script\Tools\CameraResolutionScaler.cs" />

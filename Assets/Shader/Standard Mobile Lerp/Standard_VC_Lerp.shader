@@ -360,5 +360,5 @@ Shader "Vita/Standard Mobile Lerp"
 
 
     //FallBack "VertexLit"
-    CustomEditor "Standard_VCShaderGUI_Lerp"
+   // CustomEditor "Standard_VCShaderGUI_Lerp"
 }

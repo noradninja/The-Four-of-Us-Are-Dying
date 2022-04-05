@@ -58,7 +58,7 @@ public class LoadScreen : MonoBehaviour {
     {
 		loading = true;
 		//load the level, but don't activate it yet
-		loadingOperation = SceneManager.LoadSceneAsync("EnviroTest", LoadSceneMode.Single);
+		loadingOperation = SceneManager.LoadSceneAsync(SetScenes.sceneToLoad, LoadSceneMode.Single);
 		loadingOperation.allowSceneActivation = false;
 		
 		while (loadProgress < 0.9f) {
@@ -87,7 +87,7 @@ public class LoadScreen : MonoBehaviour {
 		loadingOperation.allowSceneActivation = true;
 		//if loading is done, activate the level and unload the loader
 		if(loadingOperation.isDone) {
-			SceneManager.SetActiveScene(SceneManager.GetSceneByName("EnviroTest"));
+			SceneManager.SetActiveScene(SceneManager.GetSceneByName(SetScenes.sceneToLoad));
 			SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("LoadScreen"));
 		}
     }

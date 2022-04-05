@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Road
   - Ground
+  - Item
   layers:
   - Default
   - TransparentFX

@@ -22,11 +22,11 @@ public class SaveSerial : MonoBehaviour {
 // Set up the data we are saving to the file
 	public string levelToSave;
 	public GameObject player;
+	
 
 void Start() {
 	SetScenes.sceneToLoad = "LoadScreen";
-	levelToSave = this.GetComponent<SceneLoadTrigger>().currentScene;
-
+	levelToSave = this.GetComponent<SceneLoadTrigger>().currentScene; 
 //ignore this if we are in the editor
 
 //create directory on the Vita for our save files if it doesn't exist
@@ -37,10 +37,12 @@ void Start() {
 
  void Update() {
 	
-	slotSelector = saveManager.GetComponent<SaveManager_Inputs>().selectedSlot;	
+	if (SetScenes.currentScene == "Title"){
+		slotSelector = saveManager.GetComponent<LoadManager_Inputs>().selectedSlot;
+	}
+	else slotSelector = saveManager.GetComponent<SaveManager_Inputs>().selectedSlot;	
 	 //set save file name based on the slot selected so we know which file we are loading/saving
 	saveFileName = (savePrefix + slotSelector + ".sav");
-	
 	
 }
 	
@@ -55,6 +57,7 @@ public class SaveData
 		public int playerStimulants;
 		public int playerBatteries;
 		public float playerHealth;
+		public List<int> collectedObjects;
 	}
 //create a binary file, copy our data from the game to a SaveData instance
 public void Save()
@@ -67,16 +70,19 @@ public void Save()
 		data.playerPosition[0] = player.transform.position.x;
 		data.playerPosition[1] = player.transform.position.y;
 		data.playerPosition[2] = player.transform.position.z;
-		data.playerRotation[0] = player.transform.rotation.x;
-		data.playerRotation[1] = player.transform.rotation.y;
-		data.playerRotation[2] = player.transform.rotation.z;
+		data.playerRotation[0] = player.transform.rotation.eulerAngles.x;
+		data.playerRotation[1] = player.transform.rotation.eulerAngles.y;
+		data.playerRotation[2] = player.transform.rotation.eulerAngles.z;
 		data.playerBatteries = InventoryManager.batteryCount;
 		data.playerMedkits = InventoryManager.medCount;
 		data.playerStimulants = InventoryManager.stimCount;
-		data.playerHealth = InventoryManager.playerHealth;
+		data.playerHealth = player.GetComponent<PlayerController>().health;
+		data.collectedObjects = SetScenes.collectedItems;
 
 		bf.Serialize(file, data);
-		Debug.Log(data.savedLevel + "saved!");
+		PlayerPrefs.SetInt("haveSavedGame", 1);
+		PlayerPrefs.Save();
+		Debug.Log(data.savedLevel + " saved!");
 		file.Close();	
 	}
 //checks if the file exists, if so load the data from it and copy it back to our game
@@ -103,6 +109,9 @@ public void Load()
 			SetScenes.playerHealth = data.playerHealth;
 			SetScenes.playerMedkits = data.playerMedkits;
 			SetScenes.playerStimulants = data.playerStimulants;
+			SetScenes.collectedItems = data.collectedObjects;
+			PlayerPrefs.SetInt("hasLoadedFile",1);
+			PlayerPrefs.Save();
 		}
 		else Debug.Log("No Save File Exists to Load!");
 	}

@@ -51,7 +51,6 @@ private  string joystick1 = "joystick 1 button ";
 
 	// Use this for initialization
 	void Start () {
-		PauseManager.isPaused = false;
 		//set the color of the initially selected slot
 		setColor();
 		if (Application.isEditor){
@@ -159,21 +158,39 @@ void Update () {
 					}
 					
 					if (Input.GetKeyDown (joystick1 + CROSS) && saverEnabled == false && optionEnabled == false && dialogEnabled == false){
-						//audioSource.PlayOneShot(clipList[0]);
-						if (selectedSlot == 1){
+						if (SetScenes.currentScene == "Title"){	//audioSource.PlayOneShot(clipList[0]);
+							if (selectedSlot == 1){
+								//do new game here
+							}
+							if (selectedSlot == 2){
+								//animateButtons();
+								selectedCanvas = saverCanvas;
+								timer = 0.0f;
+								StartCoroutine(FadeScreen(1 , 0.0F));
+							}
+							if (selectedSlot == 3){
+								//animateButtons();
+								selectedCanvas = optionCanvas;
+								timer = 0.0f;
+								StartCoroutine(FadeScreen(1 , 0.0F));
+							}
+						}
+						else{
+							if (selectedSlot == 1){
+								//animateButtons();
+								selectedCanvas = saverCanvas;
+								timer = 0.0f;
+								StartCoroutine(FadeScreen(1 , 0.0F));
+							}
+							if (selectedSlot == 2){
 							//animateButtons();
-							selectedCanvas = saverCanvas;
-							timer = 0.0f;
-							StartCoroutine(FadeScreen(1 , 0.0F));
-						}
-						if (selectedSlot == 2){
-						//animateButtons();
-							selectedCanvas = optionCanvas;
-							timer = 0.0f;
-							StartCoroutine(FadeScreen(1 , 0.0F));
-						}
-						if (selectedSlot == 3){
-							//do quit to title here
+								selectedCanvas = optionCanvas;
+								timer = 0.0f;
+								StartCoroutine(FadeScreen(1 , 0.0F));
+							}
+							if (selectedSlot == 3){
+								//do quit to title here
+							}
 						}
 					}
 

@@ -402,11 +402,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fae5e112b4074dbbb579d2561fa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderDivisor: 1.334
+  renderResolution: 0
+  screenResolution: 0
   filterMode: 1
-  vramText: {fileID: 0}
-  ramText: {fileID: 0}
-  statsActive: 0
 --- !u!21 &447247604
 Material:
   serializedVersion: 6

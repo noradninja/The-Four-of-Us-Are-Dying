@@ -20,7 +20,7 @@ public class FadeInWithCross : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (loadScreen.GetComponent<LoadScreen>().loadingOperation.progress > 0.95f){
+		if (loadScreen.GetComponent<LoadScreen>().loadProgress > 0.95f){
 			StartCoroutine(fade(new Color(0,0,0,0),new Color (0,0,0,1), duration));
 		}
 
