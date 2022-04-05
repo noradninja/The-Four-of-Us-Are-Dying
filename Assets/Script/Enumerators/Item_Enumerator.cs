@@ -52,6 +52,12 @@ public class Item_Enumerator : MonoBehaviour {
 	private string tempText;
 	private Dictionary<string, string> itemTexts;
 
+	public int GetFirstDigit(int number) {
+ 	 	if ( number < 10 ) {
+    		return number;
+  		}
+ 	return GetFirstDigit ( (number - (number % 10)) / 10);
+	}
 
 	// Use this for initialization
 	void Start ()
@@ -70,6 +76,33 @@ public class Item_Enumerator : MonoBehaviour {
      	itemTexts.Add("stims", "stimulants");	
 	///////////////////////////////////////////////////////////////////////////////
 	batteryText.text = string.Format("{0:D2}", InventoryManager.batteryCount);
+
+	////Check lists to see if we are in it; if not, destroy
+		// Meds
+		if (GetFirstDigit(identifier) == 1 && SetScenes.MedsRemaining != null){
+			if(!SetScenes.MedsRemaining.Contains(identifier)){
+				Destroy(targetObject);
+			}
+		}
+		//Batteries
+		if (GetFirstDigit(identifier) == 2 && SetScenes.BatteryRemaining != null){
+			if(!SetScenes.BatteryRemaining.Contains(identifier)){
+				Destroy(targetObject);
+			}
+		}
+		//Light Weapons
+		if (GetFirstDigit(identifier) == 3 && SetScenes.LightWepRemaining != null){
+			if(!SetScenes.LightWepRemaining.Contains(identifier)){
+				Destroy(targetObject);
+			}
+		}
+		//Heavy Weapons
+		if (GetFirstDigit(identifier) == 4 && SetScenes.HvyWepRemaining != null){
+			if(!SetScenes.HvyWepRemaining.Contains(identifier)){
+				Destroy(targetObject);
+			}
+		}	
+
     }
 
     // Update is called once per frame
@@ -89,30 +122,25 @@ public class Item_Enumerator : MonoBehaviour {
 					InventoryManager.batteryCount += 2;
 					string currentCount = string.Format("{0:D2}", InventoryManager.batteryCount);
 					batteryText.text = currentCount;
-					SetScenes.collectedItems.Add(this.identifier);
-					Destroy(targetObject.transform.parent.gameObject); //this is because the parent doesn't contain the collider
+					Destroy(targetObject);
 				break;
 
 				case pickupItem.key :
 					print("That's a key");
 					//do key shit here
 					InventoryManager.keyCount += 1;
-					SetScenes.collectedItems.Add(this.identifier);
-					Destroy(targetObject);
-					
+					Destroy(targetObject);				
 				break;
 
 				case pickupItem.health :
 					print("That's a medkit");
 					InventoryManager.medCount += 1;
-					SetScenes.collectedItems.Add(this.identifier);
 					Destroy(targetObject);
 				break;
 
 				case pickupItem.stims :
 					print("That's a stimulant");
 					InventoryManager.stimCount += 1;
-					SetScenes.collectedItems.Add(this.identifier);
 					Destroy(targetObject);
 				break;
 			}
@@ -160,5 +188,4 @@ public class Item_Enumerator : MonoBehaviour {
         screenPosition = mainCamera.WorldToScreenPoint(targetPos); //convert target position to screen space coordinates
         hilightIcon.transform.position = screenPosition; //set the icon position to the converted screen position of the object
 	}
-
 }

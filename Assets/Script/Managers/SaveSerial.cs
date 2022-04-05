@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 
 
-[System.Serializable]
 /*This script serializes a binary file for saving data. For Vita use, dataPath should be formatted as ux0:/data/someDirectoryName/ in the Inspector.
 You should also define savePrefix in some fashion, otherwise youre saves will just be based on the number of the slot you've selected*/
 public class SaveSerial : MonoBehaviour {
@@ -22,6 +21,11 @@ public class SaveSerial : MonoBehaviour {
 // Set up the data we are saving to the file
 	public string levelToSave;
 	public GameObject player;
+	public List<GameObject> medList;
+	public List <GameObject> battList;
+	public List<GameObject> lwList;
+	public List<GameObject> hwList;
+
 	
 
 void Start() {
@@ -48,6 +52,7 @@ void Start() {
 	
 //this is the class we are using to store our data we want to save
 [System.Serializable]
+
 public class SaveData
 	{
 		public string savedLevel;
@@ -57,28 +62,65 @@ public class SaveData
 		public int playerStimulants;
 		public int playerBatteries;
 		public float playerHealth;
-		public List<int> collectedObjects;
+		public List<int> collectedMeds = new List<int>();
+		public List<int> collectedBattery = new List<int>();
+		public List<int> collectedLightWep = new List<int>();
+		public List<int> collectedHvyWep = new List<int>();
+
 	}
 //create a binary file, copy our data from the game to a SaveData instance
 public void Save()
 	{
+		//data prep
+		medList.Clear();
+		medList.AddRange(GameObject.FindGameObjectsWithTag("Meds"));
+		battList.Clear();
+		battList.AddRange(GameObject.FindGameObjectsWithTag("Battery"));
+		hwList.Clear();
+		hwList.AddRange(GameObject.FindGameObjectsWithTag("Heavy"));
+		lwList.Clear();
+		lwList.AddRange(GameObject.FindGameObjectsWithTag("Light"));
+
 		BinaryFormatter bf = new BinaryFormatter(); 
 		FileStream file = File.Create(dataPath + saveFileName); 
 		SaveData data = new SaveData();
+
 	//data needed for reloading on game load
 		data.savedLevel = levelToSave;
+
 		data.playerPosition[0] = player.transform.position.x;
 		data.playerPosition[1] = player.transform.position.y;
 		data.playerPosition[2] = player.transform.position.z;
+
 		data.playerRotation[0] = player.transform.rotation.eulerAngles.x;
 		data.playerRotation[1] = player.transform.rotation.eulerAngles.y;
 		data.playerRotation[2] = player.transform.rotation.eulerAngles.z;
+
 		data.playerBatteries = InventoryManager.batteryCount;
 		data.playerMedkits = InventoryManager.medCount;
 		data.playerStimulants = InventoryManager.stimCount;
-		data.playerHealth = player.GetComponent<PlayerController>().health;
-		data.collectedObjects = SetScenes.collectedItems;
 
+		data.playerHealth = player.GetComponent<PlayerController>().health;
+		 
+		// //spin through list data to store identifiers
+		
+		//meds
+		for (int i = 0; i < medList.Count; i++){
+			data.collectedMeds.Add(medList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
+		}
+		//batteries
+		for (int i = 0; i < battList.Count; i++){
+			data.collectedBattery.Add(battList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
+		}
+		//light weapons
+		for (int i = 0; i < lwList.Count; i++){
+			data.collectedLightWep.Add(lwList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
+		}
+		//heavy weapons
+		for (int i = 0; i < hwList.Count; i++){
+			data.collectedHvyWep.Add(hwList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
+		}
+		
 		bf.Serialize(file, data);
 		PlayerPrefs.SetInt("haveSavedGame", 1);
 		PlayerPrefs.Save();
@@ -109,7 +151,10 @@ public void Load()
 			SetScenes.playerHealth = data.playerHealth;
 			SetScenes.playerMedkits = data.playerMedkits;
 			SetScenes.playerStimulants = data.playerStimulants;
-			SetScenes.collectedItems = data.collectedObjects;
+			SetScenes.MedsRemaining = data.collectedMeds;
+			SetScenes.BatteryRemaining = data.collectedBattery;
+			SetScenes.LightWepRemaining = data.collectedLightWep;
+			SetScenes.HvyWepRemaining = data.collectedHvyWep;
 			PlayerPrefs.SetInt("hasLoadedFile",1);
 			PlayerPrefs.Save();
 		}

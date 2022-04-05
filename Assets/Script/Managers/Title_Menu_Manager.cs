@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class Title_Menu_Manager : MonoBehaviour {
@@ -32,9 +33,9 @@ private  string joystick1 = "joystick 1 button ";
 	public CanvasGroup saverCanvas;
 	public CanvasGroup optionCanvas;
 	public CanvasGroup dialogCanvas;
+	public CanvasGroup faderCanvas;
 	public CanvasGroup selectedCanvas;
 	public GameObject audioManager;
-	public float fadeDuration;
 	public float targetValue;
 	public bool mainMenuEnabled = false;
 	public bool saverEnabled = false;
@@ -103,16 +104,19 @@ void Update () {
 			PlayerController.delayButton = true;
 			if (Input.GetKeyDown (joystick1 + CIRCLE) && !dialogEnabled && !delayTimer){
 				if (optionEnabled){
-					StartCoroutine(FadeScreen(0 , 0.0F));
+					StartCoroutine(FadeScreen(1, 0 , 0.0F));
+					selectedCanvas = mainMenuCanvas;
 				}
 				if (saverEnabled){
-					StartCoroutine(FadeScreen(0 , 0.0F));
+					StartCoroutine(FadeScreen(1, 0 , 0.0F));
+					selectedCanvas = mainMenuCanvas;
 				}
 				if (dialogEnabled){
-					StartCoroutine(FadeScreen(0 , 0.0F));
+					StartCoroutine(FadeScreen(1, 0 , 0.0F));
+					selectedCanvas = mainMenuCanvas;
 				}
 				if (mainMenuEnabled){
-					StartCoroutine(FadeScreen(0 , 0.5F));
+					StartCoroutine(FadeScreen(1, 0 , 0.5F));
 					PauseManager.isPaused = false;
 					StartCoroutine(PlayerController.buttonDelayTimer(0.5f));
 				}
@@ -120,7 +124,6 @@ void Update () {
 			}
 			if (optionEnabled == false && saverEnabled == false && dialogEnabled == false){
 				mainMenuEnabled = true;
-				selectedCanvas = mainMenuCanvas;
 				timer = timer += 0.01f;
 				if (timer > delay){
 					//Decrement slot by -1 if you press up
@@ -160,19 +163,21 @@ void Update () {
 					if (Input.GetKeyDown (joystick1 + CROSS) && saverEnabled == false && optionEnabled == false && dialogEnabled == false){
 	
 						if (selectedSlot == 1){
-							//do new game here
+							selectedCanvas = faderCanvas;
+							timer = 0.0f;
+							StartCoroutine(FadeScreen(0, 1 , 0.25F));
 						}
 						if (selectedSlot == 2){
 							//animateButtons();
 							selectedCanvas = saverCanvas;
 							timer = 0.0f;
-							StartCoroutine(FadeScreen(1 , 0.0F));
+							StartCoroutine(FadeScreen(0, 1 , 0.0F));
 						}
 						if (selectedSlot == 3){
 							//animateButtons();
 							selectedCanvas = optionCanvas;
 							timer = 0.0f;
-							StartCoroutine(FadeScreen(1 , 0.0F));
+							StartCoroutine(FadeScreen(0, 1 , 0.0F));
 						}
 						
 					}
@@ -251,8 +256,7 @@ void Update () {
 		// else anim.SetTrigger("SteadyState");
 	}
 
-	public IEnumerator FadeScreen(float targetValue, float duration) {
-        float startValue = selectedCanvas.alpha;
+	public IEnumerator FadeScreen(float startValue, float targetValue, float duration) {
         float fadeTime = 0;
 		//fade out the loadscreen canvas group
         while (fadeTime < duration)
@@ -262,5 +266,10 @@ void Update () {
             yield return null;
         }
 		selectedCanvas.alpha = targetValue;
+		if (selectedCanvas == faderCanvas){
+			print ("Fader Canvas");
+			SetScenes.sceneToLoad = SetScenes.nextScene;
+			SceneManager.LoadSceneAsync("LoadScreen", LoadSceneMode.Single);
+		}
 	}
 }

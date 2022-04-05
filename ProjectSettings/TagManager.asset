@@ -10,6 +10,10 @@ TagManager:
   - Road
   - Ground
   - Item
+  - Meds
+  - Battery
+  - Heavy
+  - Light
   layers:
   - Default
   - TransparentFX

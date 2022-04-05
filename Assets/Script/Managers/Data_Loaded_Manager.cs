@@ -16,28 +16,12 @@ public class Data_Loaded_Manager : MonoBehaviour {
 			InventoryManager.batteryCount = SetScenes.playerBatteries;
 			InventoryManager.medCount = SetScenes.playerMedkits;
 			InventoryManager.stimCount = SetScenes.playerStimulants;
+	
 			playerBody.material.SetFloat("_PainValue", (InventoryManager.playerHealth * 0.01f));
 			print ("Data Transfered!");
-
-			
-			if (!objectList.Contains(GameObject.FindGameObjectWithTag("Item"))){
-				objectList.Add(GameObject.FindGameObjectWithTag("Item"));
-			}
-			
-			for (int i=0; i < objectList.Count; i++){
-				if(objectList[i].GetComponent<Item_Enumerator>().identifier == SetScenes.collectedItems[i]){
-					Destroy(objectList[i]);
-					objectList.Remove(objectList[i]);
-				}
-			}
 		}
 		PlayerPrefs.SetInt("hasLoadedFile",0);
-		PauseManager.isPaused = false;
-		
+		PauseManager.isPaused = false;	
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }

@@ -4410,7 +4410,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_TagString
-      value: Item
+      value: Meds
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
@@ -18001,6 +18001,7 @@ GameObject:
   - component: {fileID: 446414586}
   - component: {fileID: 446414589}
   - component: {fileID: 446414587}
+  - component: {fileID: 446414588}
   m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
@@ -18035,6 +18036,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolution: 64
   thisLight: {fileID: 446414589}
+--- !u!114 &446414588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 446414585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!108 &446414589
 Light:
   m_ObjectHideFlags: 0
@@ -26010,6 +26022,7 @@ GameObject:
   - component: {fileID: 618167704}
   - component: {fileID: 618167703}
   - component: {fileID: 618167702}
+  - component: {fileID: 618167705}
   m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
@@ -26081,6 +26094,17 @@ Transform:
   m_Father: {fileID: 1953679438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -12.580001, y: -287.76, z: 88.079}
+--- !u!114 &618167705
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 618167701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619680636
 GameObject:
   m_ObjectHideFlags: 0
@@ -31623,13 +31647,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveManager: {fileID: 1423133505}
-  dataPath: C:\Test\
+  dataPath: ux0:/data/TFoUAD/
   savePrefix: TFoUAD_Slot_
   saveFileName: 
   hasLoaded: 0
   slotSelector: 0
   levelToSave: 
   player: {fileID: 787849888}
+  medList: []
+  battList: []
+  lwList: []
+  hwList: []
 --- !u!4 &886072613
 Transform:
   m_ObjectHideFlags: 0
@@ -31649,7 +31677,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886072610}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e651de6ee6873f47a950484b04ee2f3, type: 3}
   m_Name: 
@@ -36198,7 +36226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9329f13eccd78d41a8d804ff1a7f24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 3
+  identifier: 12
   isActiveObject: 0
   thisItem: 4
   itemValue: 1
@@ -36647,7 +36675,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1dd326d840f9eac43bfdcb96d78a9819, type: 3}
       propertyPath: m_TagString
-      value: Item
+      value: Meds
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 1dd326d840f9eac43bfdcb96d78a9819, type: 3}
       propertyPath: m_Layer
@@ -42117,7 +42145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1318483819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50726,7 +50754,7 @@ GameObject:
   - component: {fileID: 1701024992}
   m_Layer: 13
   m_Name: Batteries
-  m_TagString: Item
+  m_TagString: Battery
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -50754,7 +50782,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9329f13eccd78d41a8d804ff1a7f24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 0
+  identifier: 20
   isActiveObject: 0
   thisItem: 1
   itemValue: 2
@@ -50763,7 +50791,7 @@ MonoBehaviour:
   playerObject: {fileID: 787849888}
   playerBody: {fileID: 2100000, guid: bd7f93d0dd7df9d4a93a16722be58a64, type: 2}
   thisCollider: {fileID: 1286267776}
-  targetObject: {fileID: 1286267771}
+  targetObject: {fileID: 1701024989}
   mainCamera: {fileID: 121908225}
   pickupTextObject: {fileID: 1095426728}
   hilightIcon: {fileID: 1754829746}
@@ -59604,7 +59632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9329f13eccd78d41a8d804ff1a7f24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 1
+  identifier: 10
   isActiveObject: 0
   thisItem: 3
   itemValue: 1
@@ -59727,7 +59755,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
       propertyPath: m_TagString
-      value: Item
+      value: Meds
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7d4a480eda43eb748895714b81bcbafe, type: 3}
@@ -59753,7 +59781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9329f13eccd78d41a8d804ff1a7f24e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  identifier: 2
+  identifier: 11
   isActiveObject: 0
   thisItem: 3
   itemValue: 1
@@ -60911,6 +60939,7 @@ GameObject:
   - component: {fileID: 2042831798}
   - component: {fileID: 2042831802}
   - component: {fileID: 2042831805}
+  - component: {fileID: 2042831797}
   m_Layer: 13
   m_Name: Pickup_Flashlight
   m_TagString: Untagged
@@ -60918,6 +60947,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &2042831797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2042831796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &2042831798
 SphereCollider:
   m_ObjectHideFlags: 0
