@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class OptionsManagerInputs : MonoBehaviour {
@@ -47,6 +48,7 @@ private const string joystick1 = "joystick 1 button ";
 	public GameObject currentSelection;
 	public GameObject previousSelection;
 	public Animator anim;
+	public bool optionEnabled;
 
 	// Use this for initialization
 	void Start () {
@@ -67,17 +69,26 @@ private const string joystick1 = "joystick 1 button ";
 		SensitivityToSave = PlayerPrefs.GetFloat("SavedSensitivity");
 		}
 		else SensitivityToSave = 1;
-		
+		sfxSource.volume = SFXToSave;
+		bgmSource.volume = BGMToSave;
 		BGMLevel.fillAmount = BGMToSave;
 		SFXLevel.fillAmount = SFXToSave;
 		sensitivityLevel.fillAmount = SensitivityToSave;
 		//clipList = audioManager.GetComponent<AudioManager>().SFXList;
+	
 	}
+
 	
 	// Update is called once per frame
 	void Update () {
-	
-	if ((menuManager.GetComponent<Menu_Manager>().optionEnabled == true)){
+		if (SceneManager.GetActiveScene().name == "Title"){
+			optionEnabled = menuManager.GetComponent<Title_Menu_Manager>().optionEnabled;
+		}
+		else if (SetScenes.currentScene != "Title"){
+			optionEnabled = menuManager.GetComponent<Menu_Manager>().optionEnabled;
+		}
+
+		if ((optionEnabled == true)){
 			timer = timer += 0.01f;
 		if (timer > delay){
 			//Decrement slot by -1 if you press up
@@ -141,9 +152,11 @@ private const string joystick1 = "joystick 1 button ";
 					SFXLevel.fillAmount -= 0.1f;
 					SFXToSave = SFXLevel.fillAmount;
 					sfxSource.volume = SFXLevel.fillAmount;
-					ambientSource.volume = SFXLevel.fillAmount;
-					thunderStormSource.volume = SFXLevel.fillAmount;
-					rainSource.volume = SFXLevel.fillAmount * 0.65f;
+					if (SceneManager.GetActiveScene().name != "Title"){
+						ambientSource.volume = SFXLevel.fillAmount;
+						thunderStormSource.volume = SFXLevel.fillAmount;
+						rainSource.volume = SFXLevel.fillAmount * 0.65f;
+					}
 					PlayerPrefs.SetInt("SavedOnce", 1);
 					PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
 				}
@@ -155,6 +168,7 @@ private const string joystick1 = "joystick 1 button ";
 					SensitivityToSave = sensitivityLevel.fillAmount;
 					PlayerPrefs.SetInt("SavedOnce", 1);
 					PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
+					
 				}
 				PlayerPrefs.Save();
 			}

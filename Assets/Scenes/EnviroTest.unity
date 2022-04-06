@@ -17709,8 +17709,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 787849888}
+  OptionsManagerInputs: {fileID: 0}
   playerBody: {fileID: 1039149773}
   objectList: []
+  bgmSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  ambientSource: {fileID: 0}
+  thunderStormSource: {fileID: 0}
+  rainSource: {fileID: 0}
+  SFXLevel: {fileID: 0}
 --- !u!4 &422521462
 Transform:
   m_ObjectHideFlags: 0
@@ -31677,7 +31684,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886072610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e651de6ee6873f47a950484b04ee2f3, type: 3}
   m_Name: 

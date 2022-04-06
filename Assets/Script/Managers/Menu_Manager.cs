@@ -65,6 +65,7 @@ private  string joystick1 = "joystick 1 button ";
             UP = 10;
             DOWN = 11;
         }
+		
 		//EventManager.GetComponent<SaveSerial>();
 		//clipList = audioManager.GetComponent<AudioManager>().SFXList;
 	}
