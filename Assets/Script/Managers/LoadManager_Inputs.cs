@@ -35,6 +35,7 @@ public class LoadManager_Inputs : MonoBehaviour {
 	public CanvasGroup menuGroup;
 	public CanvasGroup saveGroup;
 	public CanvasGroup loadDialogGroup;
+	public CanvasGroup faderCanvas;
 	public GameObject audioManager;
 	public float fadeDuration;
 	public float targetValue;
@@ -177,14 +178,10 @@ public class LoadManager_Inputs : MonoBehaviour {
 		
 				if (menuManager.GetComponent<Title_Menu_Manager>().dialogEnabled == true){
 				
-					sceneManager.BroadcastMessage("Load");
-					if (PlayerPrefs.GetInt("hasLoadedFile") == 1){
-						SetScenes.sceneToLoad = SetScenes.nextScene;
-						SceneManager.LoadSceneAsync("LoadScreen", LoadSceneMode.Single);
-						print ("Loaded From Save File");
-					}
+					
 					setColor();
 					loadDialogGroup.alpha = 0;
+					StartCoroutine(FadeLoadingScreen(0, 1, 0.25f));
 					//anim.SetTrigger("SteadyState");
 				}
 			}
@@ -283,11 +280,20 @@ public class LoadManager_Inputs : MonoBehaviour {
 			//previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
 		}	
 	}
+	void DoLoad(){
+		
+		sceneManager.BroadcastMessage("Load");
+		if (PlayerPrefs.GetInt("hasLoadedFile") == 1){
+			SetScenes.sceneToLoad = SetScenes.nextScene;
+			SceneManager.LoadSceneAsync("LoadScreen", LoadSceneMode.Single);
+			print ("Loaded From Save File");
+		}	
+	}
 	
 	IEnumerator StartLoad() {
 		loading = true;
 		//load the level, but don't activate it yet
-		loadingOperation = SceneManager.LoadSceneAsync(SetScenes.sceneToLoad, LoadSceneMode.Single);
+		loadingOperation = SceneManager.LoadSceneAsync("Load Screen", LoadSceneMode.Single);
 		loadingOperation.allowSceneActivation = false;
 		
 		while (loadProgress < 0.9f && !loadingOperation.isDone) {
@@ -295,33 +301,24 @@ public class LoadManager_Inputs : MonoBehaviour {
         }
 		
 		//after loadProgress hits 0.9, start fading routine
-        yield return StartCoroutine(FadeLoadingScreen(1, fadeDuration));
+        yield return StartCoroutine(FadeLoadingScreen(0,1, fadeDuration));
 		
     }
 
-	IEnumerator FadeLoadingScreen(float targetValue, float duration) {
-		saveGroup.alpha = 0;
-		Time.timeScale = 1;
-        float startValue = menuGroup.alpha;
-        float time = 0;
+	IEnumerator FadeLoadingScreen(float startValue, float targetValue, float duration) {
+		
+		print ("Enter");
+        float time = 0.0f;
 
 		//fade out the loadscreen canvas group
         while (time < duration)
         {
-            menuGroup.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
+            faderCanvas.alpha = Mathf.Lerp(startValue, targetValue, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
-		menuGroup.alpha = targetValue;
-		//activate the scene
-		loadingOperation.allowSceneActivation = true;
-		//if loading is done, activate the level and unload the loader
-		if(loadingOperation.isDone) {
-			SceneManager.SetActiveScene(SceneManager.GetSceneByName(SetScenes.sceneToLoad));
-			SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(SetScenes.sceneToUnload));
-		}
-		//load the next scene, which should be the first level
-		SetScenes.sceneToLoad = SetScenes.nextScene;	
+		faderCanvas.alpha = targetValue;
+		DoLoad();
     }
 	IEnumerator DialogHandler(){
 		float duration = 0.1f;

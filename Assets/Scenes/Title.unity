@@ -482,7 +482,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   saveManager: {fileID: 1855626880}
-  dataPath: ux0:/data/TFoUAD/
+  dataPath: C:\Test\
   savePrefix: TFoUAD_Slot_
   saveFileName: 
   hasLoaded: 0
@@ -1703,6 +1703,7 @@ MonoBehaviour:
   menuGroup: {fileID: 643161643}
   saveGroup: {fileID: 1855626882}
   loadDialogGroup: {fileID: 1672972666}
+  faderCanvas: {fileID: 1849868229}
   audioManager: {fileID: 0}
   fadeDuration: 0
   targetValue: 0
