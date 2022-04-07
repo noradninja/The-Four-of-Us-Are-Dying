@@ -17717,7 +17717,7 @@ MonoBehaviour:
   ambientSource: {fileID: 249153888}
   thunderStormSource: {fileID: 1742728651}
   rainSource: {fileID: 454705688}
-  SFXLevel: {fileID: 0}
+  SFXLevel: {fileID: 1521253583}
 --- !u!4 &422521462
 Transform:
   m_ObjectHideFlags: 0
@@ -18253,7 +18253,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: b100c58e8a68a084d92edcc3e89d8a78, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.65
+  m_Volume: 0.75
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -47552,6 +47552,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d4c910dd150dc4ba1816870bb7f398, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1521253583 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114450435093944918, guid: a3d4c910dd150dc4ba1816870bb7f398,
+    type: 2}
+  m_PrefabInternal: {fileID: 1521253582}
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1524579734
 GameObject:
   m_ObjectHideFlags: 0
@@ -53598,12 +53604,12 @@ Prefab:
     - target: {fileID: 198270193400346888, guid: e034434a844564d83a09dc60a7173770,
         type: 2}
       propertyPath: InitialModule.maxNumParticles
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 198270193400346888, guid: e034434a844564d83a09dc60a7173770,
         type: 2}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 300
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 198270193400346888, guid: e034434a844564d83a09dc60a7173770,
         type: 2}
