@@ -20,7 +20,7 @@ public class Data_Loaded_Manager : MonoBehaviour {
 //player
 			player.transform.position = SetScenes.playerPosition;
 			player.transform.rotation = SetScenes.playerRotation;
-			playerBody.material.SetFloat("_PainValue", (SetScenes.playerHealthcr * 0.01f));
+			playerBody.material.SetFloat("_PainValue", (SetScenes.playerHealth * 0.01f));
 //Inventory
 			InventoryManager.playerHealth = SetScenes.playerHealth;
 			InventoryManager.batteryCount = SetScenes.playerBatteries;

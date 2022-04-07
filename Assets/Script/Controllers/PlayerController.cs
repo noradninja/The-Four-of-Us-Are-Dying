@@ -111,6 +111,7 @@ public class PlayerController : MonoBehaviour
       private void Awake()
     {
         PauseManager.isPaused = false;
+        delayButton = false;
         if (Application.isEditor){
         //because the DS3 registers the buttons differently in Windows
             TRIANGLE = 0;

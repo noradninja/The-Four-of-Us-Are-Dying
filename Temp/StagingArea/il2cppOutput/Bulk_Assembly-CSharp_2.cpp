@@ -48537,10 +48537,12 @@ extern "C" IL2CPP_METHOD_ATTR void PlayerController_Awake_m4099664953 (PlayerCon
 	int32_t V_1 = 0;
 	{
 		((PauseManager_t1166378904_StaticFields*)il2cpp_codegen_static_fields_for(PauseManager_t1166378904_il2cpp_TypeInfo_var))->set_isPaused_4((bool)0);
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_79((bool)0);
 		bool L_0 = Application_get_isEditor_m857789090(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0063;
+			goto IL_0069;
 		}
 	}
 	{
@@ -48558,7 +48560,7 @@ extern "C" IL2CPP_METHOD_ATTR void PlayerController_Awake_m4099664953 (PlayerCon
 		__this->set_DOWN_57((11.0f));
 	}
 
-IL_0063:
+IL_0069:
 	{
 		Animator_t434523843 * L_1 = __this->get_animator_14();
 		Animator_SetBool_m234840832(L_1, _stringLiteral471519557, (bool)0, /*hidden argument*/NULL);
@@ -48580,7 +48582,7 @@ IL_0063:
 		bool L_13 = Behaviour_get_enabled_m753527255(L_12, /*hidden argument*/NULL);
 		if (L_13)
 		{
-			goto IL_0140;
+			goto IL_0146;
 		}
 	}
 	{
@@ -48605,7 +48607,7 @@ IL_0063:
 		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_26, _stringLiteral646179308);
 	}
 
-IL_0140:
+IL_0146:
 	{
 		return;
 	}
