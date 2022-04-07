@@ -27,16 +27,28 @@ public class Data_Loaded_Manager : MonoBehaviour {
 			InventoryManager.medCount = SetScenes.playerMedkits;
 			InventoryManager.stimCount = SetScenes.playerStimulants;
 //Settings
-			bgmSource.volume = PlayerPrefs.GetFloat("SavedBGM");
+		if (PlayerPrefs.HasKey("SavedBGM")){
+				bgmSource.volume = PlayerPrefs.GetFloat("SavedBGM");
+		}
+		else bgmSource.volume = 1f;
+		if (PlayerPrefs.HasKey("SavedSFX")){
 			sfxSource.volume = PlayerPrefs.GetFloat("SavedSFX");
 			ambientSource.volume = PlayerPrefs.GetFloat("SavedSFX");
 			thunderStormSource.volume =  PlayerPrefs.GetFloat("SavedSFX");
-			rainSource.volume = PlayerPrefs.GetFloat("SavedSFX") * 0.65f;
-			OptionsManagerInputs.GetComponent<OptionsManagerInputs>().SensitivityToSave =  PlayerPrefs.GetFloat("SavedSensitivity");
+			rainSource.volume = PlayerPrefs.GetFloat("SavedSFX") * 0.6f;
+			
 		}
-		PlayerPrefs.SetInt("hasLoadedFile",0);
-		PlayerPrefs.Save();
-		PauseManager.isPaused = false;	
+		else {
+			sfxSource.volume = 1f;
+			ambientSource.volume = 1f;
+			thunderStormSource.volume =  1f;
+			rainSource.volume = 0.6f;
+		}
+		OptionsManagerInputs.GetComponent<OptionsManagerInputs>().SensitivityToSave =  PlayerPrefs.GetFloat("SavedSensitivity");	
+		}
+	PlayerPrefs.SetInt("hasLoadedFile",0);
+	PlayerPrefs.Save();
+	PauseManager.isPaused = false;	
 	}
 
 }
