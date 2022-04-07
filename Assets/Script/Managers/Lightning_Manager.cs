@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class Lightning_Manager : MonoBehaviour {
 
 // Properties
 public AudioSource audioSource;
-public float step = 0.01f;
-public int sampleDataLength = 1024;
+public float step = 0.33f;
+public int sampleDataLength = 256;
 public float scaleFactor = 1;
 public Material skyBox;
 public Material glowMat;
@@ -33,27 +34,31 @@ public Color lerpColor;
 		
 		if (currentUpdateTime >= step){
 			currentUpdateTime = 0f;
+		}
+		else {
+			currentUpdateTime += 0.1f;
+		}
 
 			audioSource.clip.GetData(clipSampleData, audioSource.timeSamples);
 			oldClipLoudness = clipLoudness;
 			clipLoudness = 0f;
 			clipLoudnessB = 0f;
 			foreach (var sample in clipSampleData){
-				if (Mathf.Abs(sample) > 0.1f){
-					clipLoudness += Mathf.Abs(sample);
+				// float absSample = Math.Abs(sample);
+				if ( sample > 0.1f){
+					clipLoudness += sample;
 				}
 			}
 			clipLoudness /= sampleDataLength;
 			clipLoudness *= scaleFactor;
 			clipLoudness += 0.75f;
 			
-			clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
+			clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + UnityEngine.Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
 			skyBox.SetFloat("_Exposure", clipLoudness);
 			lerpColor.a = clipLoudnessB/10;
-			contrastHolder = Mathf.Clamp01(clipLoudnessB) * 0.35f + 1.15f;
 			glowMat.SetColor("_TintColor", lerpColor);
 		}
 	}
  
-}
+
 

@@ -28,7 +28,7 @@
 			// Compile specialized variants for when positional (point/spot) and spot lights are present
 			#pragma multi_compile __ POINT SPOT
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
-			#include "VertexLightmapCommon.cginc"
+			#include "VertexLightmapCommon_LOD.cginc"
 			#include "UnityCG.cginc"
 			#include "UnityStandardConfig.cginc"
 			#include "UnityPBSLighting.cginc" // TBD: remove
@@ -53,7 +53,7 @@
 			#pragma multi_compile __ AMBIENT_ON
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
 			#define CUSTOM_LIGHTMAPPED 1 
-			#include "VertexLightmapCommon.cginc"
+			#include "VertexLightmapCommon_LOD.cginc"
 			#include "UnityCG.cginc"
 			#include "UnityCG.cginc"
 			#include "UnityStandardConfig.cginc"

@@ -93,7 +93,7 @@ public class SaveManager_Inputs : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		dateTime = (System.DateTime.Now.ToShortDateString() + " " + System.DateTime.Now.ToShortTimeString());
+		// dateTime = (System.DateTime.Now.ToShortDateString() + " " + System.DateTime.Now.ToShortTimeString());
 		if (menuManager.GetComponent<Menu_Manager>().dialogEnabled == false ){
 			menuManager.GetComponent<Menu_Manager>().delayTimer = false;
 		}

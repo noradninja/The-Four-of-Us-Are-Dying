@@ -155,7 +155,7 @@ v2f vert(appdata v) {
 	half3 worldPos = mul (unity_ObjectToWorld, half4(v.pos, 1) ).xyz;
 	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1) ).xyz;
 	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
-	//half3 viewDir = normalize(ObjSpaceViewDir(v.pos));
+	//half3 viewDir = normalize(screenPos(v.pos));
  	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
  	half rimWidth = 1;
 
@@ -224,7 +224,8 @@ float2 xy = (v.uv0 * float2(4,4)) * 4;
 
 		fixed final = find_closest(x, y, grayscale);
 		col.a = diffuse.a;
-		clip(col.a - _Cutoff);	
+		clip(col.a - _Cutoff);
+		ClipLOD(screenPos, col.a);
 	
 	#if USING_FOG
 		UNITY_APPLY_FOG(v.fogCoord, col);

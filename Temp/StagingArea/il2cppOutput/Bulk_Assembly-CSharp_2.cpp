@@ -571,7 +571,6 @@ struct WindZone_t1835817526;
 extern RuntimeClass* Bloom_t1238018143_il2cpp_TypeInfo_var;
 extern RuntimeClass* CombineInstanceU5BU5D_t4267154537_il2cpp_TypeInfo_var;
 extern RuntimeClass* ComputeBuffer_t1033194329_il2cpp_TypeInfo_var;
-extern RuntimeClass* DateTime_t3738529785_il2cpp_TypeInfo_var;
 extern RuntimeClass* Debug_t3317548046_il2cpp_TypeInfo_var;
 extern RuntimeClass* Decal_t1804074568_il2cpp_TypeInfo_var;
 extern RuntimeClass* Decimal_t2948259380_il2cpp_TypeInfo_var;
@@ -778,7 +777,6 @@ extern String_t* _stringLiteral341621035;
 extern String_t* _stringLiteral3445876180;
 extern String_t* _stringLiteral3451434970;
 extern String_t* _stringLiteral3451566042;
-extern String_t* _stringLiteral3452614528;
 extern String_t* _stringLiteral3452614529;
 extern String_t* _stringLiteral3452614530;
 extern String_t* _stringLiteral3465344661;
@@ -6379,83 +6377,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // ENUMERATOR_T1175238756_H
-#ifndef DATETIME_T3738529785_H
-#define DATETIME_T3738529785_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.DateTime
-struct  DateTime_t3738529785 
-{
-public:
-	// System.UInt64 System.DateTime::dateData
-	uint64_t ___dateData_44;
-
-public:
-	inline static int32_t get_offset_of_dateData_44() { return static_cast<int32_t>(offsetof(DateTime_t3738529785, ___dateData_44)); }
-	inline uint64_t get_dateData_44() const { return ___dateData_44; }
-	inline uint64_t* get_address_of_dateData_44() { return &___dateData_44; }
-	inline void set_dateData_44(uint64_t value)
-	{
-		___dateData_44 = value;
-	}
-};
-
-struct DateTime_t3738529785_StaticFields
-{
-public:
-	// System.Int32[] System.DateTime::DaysToMonth365
-	Int32U5BU5D_t385246372* ___DaysToMonth365_29;
-	// System.Int32[] System.DateTime::DaysToMonth366
-	Int32U5BU5D_t385246372* ___DaysToMonth366_30;
-	// System.DateTime System.DateTime::MinValue
-	DateTime_t3738529785  ___MinValue_31;
-	// System.DateTime System.DateTime::MaxValue
-	DateTime_t3738529785  ___MaxValue_32;
-
-public:
-	inline static int32_t get_offset_of_DaysToMonth365_29() { return static_cast<int32_t>(offsetof(DateTime_t3738529785_StaticFields, ___DaysToMonth365_29)); }
-	inline Int32U5BU5D_t385246372* get_DaysToMonth365_29() const { return ___DaysToMonth365_29; }
-	inline Int32U5BU5D_t385246372** get_address_of_DaysToMonth365_29() { return &___DaysToMonth365_29; }
-	inline void set_DaysToMonth365_29(Int32U5BU5D_t385246372* value)
-	{
-		___DaysToMonth365_29 = value;
-		Il2CppCodeGenWriteBarrier((&___DaysToMonth365_29), value);
-	}
-
-	inline static int32_t get_offset_of_DaysToMonth366_30() { return static_cast<int32_t>(offsetof(DateTime_t3738529785_StaticFields, ___DaysToMonth366_30)); }
-	inline Int32U5BU5D_t385246372* get_DaysToMonth366_30() const { return ___DaysToMonth366_30; }
-	inline Int32U5BU5D_t385246372** get_address_of_DaysToMonth366_30() { return &___DaysToMonth366_30; }
-	inline void set_DaysToMonth366_30(Int32U5BU5D_t385246372* value)
-	{
-		___DaysToMonth366_30 = value;
-		Il2CppCodeGenWriteBarrier((&___DaysToMonth366_30), value);
-	}
-
-	inline static int32_t get_offset_of_MinValue_31() { return static_cast<int32_t>(offsetof(DateTime_t3738529785_StaticFields, ___MinValue_31)); }
-	inline DateTime_t3738529785  get_MinValue_31() const { return ___MinValue_31; }
-	inline DateTime_t3738529785 * get_address_of_MinValue_31() { return &___MinValue_31; }
-	inline void set_MinValue_31(DateTime_t3738529785  value)
-	{
-		___MinValue_31 = value;
-	}
-
-	inline static int32_t get_offset_of_MaxValue_32() { return static_cast<int32_t>(offsetof(DateTime_t3738529785_StaticFields, ___MaxValue_32)); }
-	inline DateTime_t3738529785  get_MaxValue_32() const { return ___MaxValue_32; }
-	inline DateTime_t3738529785 * get_address_of_MaxValue_32() { return &___MaxValue_32; }
-	inline void set_MaxValue_32(DateTime_t3738529785  value)
-	{
-		___MaxValue_32 = value;
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // DATETIME_T3738529785_H
 #ifndef DECIMAL_T2948259380_H
 #define DECIMAL_T2948259380_H
 #ifdef __clang__
@@ -30171,8 +30092,6 @@ extern "C" IL2CPP_METHOD_ATTR AudioClip_t3680889665 * AudioSource_get_clip_m1234
 extern "C" IL2CPP_METHOD_ATTR int32_t AudioSource_get_timeSamples_m3096573545 (AudioSource_t3935305588 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.AudioClip::GetData(System.Single[],System.Int32)
 extern "C" IL2CPP_METHOD_ATTR bool AudioClip_GetData_m1251334845 (AudioClip_t3680889665 * __this, SingleU5BU5D_t1444911251* p0, int32_t p1, const RuntimeMethod* method);
-// System.Single UnityEngine.Mathf::Clamp01(System.Single)
-extern "C" IL2CPP_METHOD_ATTR float Mathf_Clamp01_m56433566 (RuntimeObject * __this /* static, unused */, float p0, const RuntimeMethod* method);
 // System.Void LoadManager_Inputs::setColor()
 extern "C" IL2CPP_METHOD_ATTR void LoadManager_Inputs_setColor_m3425400193 (LoadManager_Inputs_t4203782917 * __this, const RuntimeMethod* method);
 // System.Boolean UnityEngine.PlayerPrefs::HasKey(System.String)
@@ -30672,6 +30591,8 @@ extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_op_Multiply_m21043577
 extern "C" IL2CPP_METHOD_ATTR int32_t CharacterController_Move_m1547317252 (CharacterController_t1138636865 * __this, Vector3_t3722313464  p0, const RuntimeMethod* method);
 // System.Void UnityEngine.Debug::Log(System.Object)
 extern "C" IL2CPP_METHOD_ATTR void Debug_Log_m4051431634 (RuntimeObject * __this /* static, unused */, RuntimeObject * p0, const RuntimeMethod* method);
+// System.Single UnityEngine.Mathf::Clamp01(System.Single)
+extern "C" IL2CPP_METHOD_ATTR float Mathf_Clamp01_m56433566 (RuntimeObject * __this /* static, unused */, float p0, const RuntimeMethod* method);
 // System.Collections.IEnumerator PlayerController::healLerp(System.Single,System.Single,System.Single)
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject* PlayerController_healLerp_m3808073812 (PlayerController_t2064355688 * __this, float ___startValue0, float ___endValue1, float ___duration2, const RuntimeMethod* method);
 // System.Void PlayerController/<healLerp>c__Iterator0::.ctor()
@@ -30855,12 +30776,6 @@ extern "C" IL2CPP_METHOD_ATTR void Debug_DrawRay_m3147787426 (RuntimeObject * __
 extern "C" IL2CPP_METHOD_ATTR void AudioSource_set_pitch_m2413801168 (AudioSource_t3935305588 * __this, float p0, const RuntimeMethod* method);
 // System.Void UnityEngine.AudioSource::PlayOneShot(UnityEngine.AudioClip)
 extern "C" IL2CPP_METHOD_ATTR void AudioSource_PlayOneShot_m1688286683 (AudioSource_t3935305588 * __this, AudioClip_t3680889665 * p0, const RuntimeMethod* method);
-// System.DateTime System.DateTime::get_Now()
-extern "C" IL2CPP_METHOD_ATTR DateTime_t3738529785  DateTime_get_Now_m1277138875 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
-// System.String System.DateTime::ToShortDateString()
-extern "C" IL2CPP_METHOD_ATTR String_t* DateTime_ToShortDateString_m2934767635 (DateTime_t3738529785 * __this, const RuntimeMethod* method);
-// System.String System.DateTime::ToShortTimeString()
-extern "C" IL2CPP_METHOD_ATTR String_t* DateTime_ToShortTimeString_m1551520344 (DateTime_t3738529785 * __this, const RuntimeMethod* method);
 // System.Void SaveManager_Inputs::animateButtons()
 extern "C" IL2CPP_METHOD_ATTR void SaveManager_Inputs_animateButtons_m3760138962 (SaveManager_Inputs_t2402574047 * __this, const RuntimeMethod* method);
 // System.Void SaveManager_Inputs::setLoadedColor()
@@ -40388,8 +40303,8 @@ extern "C" IL2CPP_METHOD_ATTR void LightbeamSettings__ctor_m4246907482 (Lightbea
 extern "C" IL2CPP_METHOD_ATTR void Lightning_Manager__ctor_m1803328058 (Lightning_Manager_t3394885560 * __this, const RuntimeMethod* method)
 {
 	{
-		__this->set_step_5((0.01f));
-		__this->set_sampleDataLength_6(((int32_t)1024));
+		__this->set_step_5((0.33f));
+		__this->set_sampleDataLength_6(((int32_t)256));
 		__this->set_scaleFactor_7((1.0f));
 		MonoBehaviour__ctor_m1579109191(__this, /*hidden argument*/NULL);
 		return;
@@ -40437,97 +40352,97 @@ extern "C" IL2CPP_METHOD_ATTR void Lightning_Manager_Update_m3359733818 (Lightni
 		float L_3 = __this->get_step_5();
 		if ((!(((float)L_2) >= ((float)L_3))))
 		{
-			goto IL_0186;
+			goto IL_0033;
 		}
 	}
 	{
 		__this->set_currentUpdateTime_15((0.0f));
-		AudioSource_t3935305588 * L_4 = __this->get_audioSource_4();
-		AudioClip_t3680889665 * L_5 = AudioSource_get_clip_m1234340632(L_4, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_6 = __this->get_clipSampleData_14();
-		AudioSource_t3935305588 * L_7 = __this->get_audioSource_4();
-		int32_t L_8 = AudioSource_get_timeSamples_m3096573545(L_7, /*hidden argument*/NULL);
-		AudioClip_GetData_m1251334845(L_5, L_6, L_8, /*hidden argument*/NULL);
-		float L_9 = __this->get_clipLoudness_11();
-		__this->set_oldClipLoudness_12(L_9);
-		__this->set_clipLoudness_11((0.0f));
-		__this->set_clipLoudnessB_13((0.0f));
-		SingleU5BU5D_t1444911251* L_10 = __this->get_clipSampleData_14();
-		V_1 = L_10;
-		V_2 = 0;
-		goto IL_00ab;
+		goto IL_0045;
 	}
 
-IL_0080:
+IL_0033:
 	{
-		SingleU5BU5D_t1444911251* L_11 = V_1;
-		int32_t L_12 = V_2;
-		int32_t L_13 = L_12;
-		float L_14 = (L_11)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_13));
-		V_0 = L_14;
-		float L_15 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_16 = fabsf(L_15);
+		float L_4 = __this->get_currentUpdateTime_15();
+		__this->set_currentUpdateTime_15(((float)il2cpp_codegen_add((float)L_4, (float)(0.1f))));
+	}
+
+IL_0045:
+	{
+		AudioSource_t3935305588 * L_5 = __this->get_audioSource_4();
+		AudioClip_t3680889665 * L_6 = AudioSource_get_clip_m1234340632(L_5, /*hidden argument*/NULL);
+		SingleU5BU5D_t1444911251* L_7 = __this->get_clipSampleData_14();
+		AudioSource_t3935305588 * L_8 = __this->get_audioSource_4();
+		int32_t L_9 = AudioSource_get_timeSamples_m3096573545(L_8, /*hidden argument*/NULL);
+		AudioClip_GetData_m1251334845(L_6, L_7, L_9, /*hidden argument*/NULL);
+		float L_10 = __this->get_clipLoudness_11();
+		__this->set_oldClipLoudness_12(L_10);
+		__this->set_clipLoudness_11((0.0f));
+		__this->set_clipLoudnessB_13((0.0f));
+		SingleU5BU5D_t1444911251* L_11 = __this->get_clipSampleData_14();
+		V_1 = L_11;
+		V_2 = 0;
+		goto IL_00b8;
+	}
+
+IL_0097:
+	{
+		SingleU5BU5D_t1444911251* L_12 = V_1;
+		int32_t L_13 = V_2;
+		int32_t L_14 = L_13;
+		float L_15 = (L_12)->GetAtUnchecked(static_cast<il2cpp_array_size_t>(L_14));
+		V_0 = L_15;
+		float L_16 = V_0;
 		if ((!(((float)L_16) > ((float)(0.1f)))))
 		{
-			goto IL_00a7;
+			goto IL_00b4;
 		}
 	}
 	{
 		float L_17 = __this->get_clipLoudness_11();
 		float L_18 = V_0;
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_19 = fabsf(L_18);
-		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_17, (float)L_19)));
+		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_17, (float)L_18)));
 	}
 
-IL_00a7:
+IL_00b4:
+	{
+		int32_t L_19 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_19, (int32_t)1));
+	}
+
+IL_00b8:
 	{
 		int32_t L_20 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_20, (int32_t)1));
-	}
-
-IL_00ab:
-	{
-		int32_t L_21 = V_2;
-		SingleU5BU5D_t1444911251* L_22 = V_1;
-		if ((((int32_t)L_21) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_22)->max_length)))))))
+		SingleU5BU5D_t1444911251* L_21 = V_1;
+		if ((((int32_t)L_20) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_21)->max_length)))))))
 		{
-			goto IL_0080;
+			goto IL_0097;
 		}
 	}
 	{
-		float L_23 = __this->get_clipLoudness_11();
-		int32_t L_24 = __this->get_sampleDataLength_6();
-		__this->set_clipLoudness_11(((float)((float)L_23/(float)(((float)((float)L_24))))));
-		float L_25 = __this->get_clipLoudness_11();
-		float L_26 = __this->get_scaleFactor_7();
-		__this->set_clipLoudness_11(((float)il2cpp_codegen_multiply((float)L_25, (float)L_26)));
-		float L_27 = __this->get_clipLoudness_11();
-		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_27, (float)(0.75f))));
-		float L_28 = __this->get_oldClipLoudness_12();
-		float L_29 = __this->get_clipLoudness_11();
-		float L_30 = Random_Range_m2202990745(NULL /*static, unused*/, (0.1f), (0.3f), /*hidden argument*/NULL);
-		float L_31 = __this->get_currentUpdateTime_15();
+		float L_22 = __this->get_clipLoudness_11();
+		int32_t L_23 = __this->get_sampleDataLength_6();
+		__this->set_clipLoudness_11(((float)((float)L_22/(float)(((float)((float)L_23))))));
+		float L_24 = __this->get_clipLoudness_11();
+		float L_25 = __this->get_scaleFactor_7();
+		__this->set_clipLoudness_11(((float)il2cpp_codegen_multiply((float)L_24, (float)L_25)));
+		float L_26 = __this->get_clipLoudness_11();
+		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_26, (float)(0.75f))));
+		float L_27 = __this->get_oldClipLoudness_12();
+		float L_28 = __this->get_clipLoudness_11();
+		float L_29 = Random_Range_m2202990745(NULL /*static, unused*/, (0.1f), (0.3f), /*hidden argument*/NULL);
+		float L_30 = __this->get_currentUpdateTime_15();
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_32 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, L_28, ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_add((float)((float)((float)L_29/(float)(2.0f))), (float)L_30)), (float)(0.75f))), L_31, /*hidden argument*/NULL);
-		__this->set_clipLoudnessB_13(L_32);
-		Material_t340375123 * L_33 = __this->get_skyBox_8();
-		float L_34 = __this->get_clipLoudness_11();
-		Material_SetFloat_m3226510453(L_33, _stringLiteral1639261578, L_34, /*hidden argument*/NULL);
-		Color_t2555686324 * L_35 = __this->get_address_of_lerpColor_17();
-		float L_36 = __this->get_clipLoudnessB_13();
-		L_35->set_a_3(((float)((float)L_36/(float)(10.0f))));
-		float L_37 = __this->get_clipLoudnessB_13();
-		float L_38 = Mathf_Clamp01_m56433566(NULL /*static, unused*/, L_37, /*hidden argument*/NULL);
-		__this->set_contrastHolder_16(((float)il2cpp_codegen_add((float)((float)il2cpp_codegen_multiply((float)L_38, (float)(0.35f))), (float)(1.15f))));
-		Material_t340375123 * L_39 = __this->get_glowMat_9();
-		Color_t2555686324  L_40 = __this->get_lerpColor_17();
-		Material_SetColor_m2020215303(L_39, _stringLiteral2810103870, L_40, /*hidden argument*/NULL);
-	}
-
-IL_0186:
-	{
+		float L_31 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, L_27, ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_add((float)((float)((float)L_28/(float)(2.0f))), (float)L_29)), (float)(0.75f))), L_30, /*hidden argument*/NULL);
+		__this->set_clipLoudnessB_13(L_31);
+		Material_t340375123 * L_32 = __this->get_skyBox_8();
+		float L_33 = __this->get_clipLoudness_11();
+		Material_SetFloat_m3226510453(L_32, _stringLiteral1639261578, L_33, /*hidden argument*/NULL);
+		Color_t2555686324 * L_34 = __this->get_address_of_lerpColor_17();
+		float L_35 = __this->get_clipLoudnessB_13();
+		L_34->set_a_3(((float)((float)L_35/(float)(10.0f))));
+		Material_t340375123 * L_36 = __this->get_glowMat_9();
+		Color_t2555686324  L_37 = __this->get_lerpColor_17();
+		Material_SetColor_m2020215303(L_36, _stringLiteral2810103870, L_37, /*hidden argument*/NULL);
 		return;
 	}
 }
@@ -48533,8 +48448,6 @@ extern "C" IL2CPP_METHOD_ATTR void PlayerController_Awake_m4099664953 (PlayerCon
 		il2cpp_codegen_initialize_method (PlayerController_Awake_m4099664953_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	int32_t V_0 = 0;
-	int32_t V_1 = 0;
 	{
 		((PauseManager_t1166378904_StaticFields*)il2cpp_codegen_static_fields_for(PauseManager_t1166378904_il2cpp_TypeInfo_var))->set_isPaused_4((bool)0);
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
@@ -48542,7 +48455,7 @@ extern "C" IL2CPP_METHOD_ATTR void PlayerController_Awake_m4099664953 (PlayerCon
 		bool L_0 = Application_get_isEditor_m857789090(NULL /*static, unused*/, /*hidden argument*/NULL);
 		if (!L_0)
 		{
-			goto IL_0069;
+			goto IL_0065;
 		}
 	}
 	{
@@ -48550,8 +48463,6 @@ extern "C" IL2CPP_METHOD_ATTR void PlayerController_Awake_m4099664953 (PlayerCon
 		__this->set_CIRCLE_48(1);
 		__this->set_CROSS_47(2);
 		__this->set_SQUARE_49(3);
-		V_0 = 4;
-		V_1 = 5;
 		__this->set_LTRIG_51(6);
 		__this->set_RTRIG_52(7);
 		__this->set_START_54(8);
@@ -48560,7 +48471,7 @@ extern "C" IL2CPP_METHOD_ATTR void PlayerController_Awake_m4099664953 (PlayerCon
 		__this->set_DOWN_57((11.0f));
 	}
 
-IL_0069:
+IL_0065:
 	{
 		Animator_t434523843 * L_1 = __this->get_animator_14();
 		Animator_SetBool_m234840832(L_1, _stringLiteral471519557, (bool)0, /*hidden argument*/NULL);
@@ -48582,7 +48493,7 @@ IL_0069:
 		bool L_13 = Behaviour_get_enabled_m753527255(L_12, /*hidden argument*/NULL);
 		if (L_13)
 		{
-			goto IL_0146;
+			goto IL_0142;
 		}
 	}
 	{
@@ -48607,7 +48518,7 @@ IL_0069:
 		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_26, _stringLiteral646179308);
 	}
 
-IL_0146:
+IL_0142:
 	{
 		return;
 	}
@@ -57223,417 +57134,404 @@ extern "C" IL2CPP_METHOD_ATTR void SaveManager_Inputs_Update_m2073334930 (SaveMa
 		il2cpp_codegen_initialize_method (SaveManager_Inputs_Update_m2073334930_MetadataUsageId);
 		s_Il2CppMethodInitialized = true;
 	}
-	DateTime_t3738529785  V_0;
-	memset(&V_0, 0, sizeof(V_0));
-	DateTime_t3738529785  V_1;
-	memset(&V_1, 0, sizeof(V_1));
-	float V_2 = 0.0f;
+	float V_0 = 0.0f;
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(DateTime_t3738529785_il2cpp_TypeInfo_var);
-		DateTime_t3738529785  L_0 = DateTime_get_Now_m1277138875(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_0 = L_0;
-		String_t* L_1 = DateTime_ToShortDateString_m2934767635((DateTime_t3738529785 *)(&V_0), /*hidden argument*/NULL);
-		DateTime_t3738529785  L_2 = DateTime_get_Now_m1277138875(NULL /*static, unused*/, /*hidden argument*/NULL);
-		V_1 = L_2;
-		String_t* L_3 = DateTime_ToShortTimeString_m1551520344((DateTime_t3738529785 *)(&V_1), /*hidden argument*/NULL);
-		String_t* L_4 = String_Concat_m3755062657(NULL /*static, unused*/, L_1, _stringLiteral3452614528, L_3, /*hidden argument*/NULL);
-		__this->set_dateTime_45(L_4);
-		GameObject_t1113636619 * L_5 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_6 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_5, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		bool L_7 = L_6->get_dialogEnabled_37();
-		if (L_7)
+		GameObject_t1113636619 * L_0 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_1 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_0, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		bool L_2 = L_1->get_dialogEnabled_37();
+		if (L_2)
 		{
-			goto IL_0050;
+			goto IL_0026;
 		}
 	}
 	{
-		GameObject_t1113636619 * L_8 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_9 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_8, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_9->set_delayTimer_38((bool)0);
+		GameObject_t1113636619 * L_3 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_4 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_3, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_4->set_delayTimer_38((bool)0);
 	}
 
-IL_0050:
+IL_0026:
 	{
-		GameObject_t1113636619 * L_10 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_11 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_10, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		bool L_12 = L_11->get_saverEnabled_35();
-		if (!L_12)
+		GameObject_t1113636619 * L_5 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_6 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_5, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		bool L_7 = L_6->get_saverEnabled_35();
+		if (!L_7)
 		{
-			goto IL_0462;
+			goto IL_0438;
 		}
 	}
 	{
-		float L_13 = __this->get_timer_35();
-		float L_14 = ((float)il2cpp_codegen_add((float)L_13, (float)(0.01f)));
-		V_2 = L_14;
-		__this->set_timer_35(L_14);
-		float L_15 = V_2;
-		__this->set_timer_35(L_15);
-		float L_16 = __this->get_timer_35();
-		float L_17 = __this->get_delay_36();
-		if ((!(((float)L_16) > ((float)L_17))))
+		float L_8 = __this->get_timer_35();
+		float L_9 = ((float)il2cpp_codegen_add((float)L_8, (float)(0.01f)));
+		V_0 = L_9;
+		__this->set_timer_35(L_9);
+		float L_10 = V_0;
+		__this->set_timer_35(L_10);
+		float L_11 = __this->get_timer_35();
+		float L_12 = __this->get_delay_36();
+		if ((!(((float)L_11) > ((float)L_12))))
 		{
-			goto IL_0462;
+			goto IL_0438;
+		}
+	}
+	{
+		int32_t L_13 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_13) == ((uint32_t)1))))
+		{
+			goto IL_0083;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_14 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral1148044317, /*hidden argument*/NULL);
+		__this->set_currentSelection_46(L_14);
+	}
+
+IL_0083:
+	{
+		int32_t L_15 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_15) == ((uint32_t)2))))
+		{
+			goto IL_009f;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_16 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral1147847709, /*hidden argument*/NULL);
+		__this->set_currentSelection_46(L_16);
+	}
+
+IL_009f:
+	{
+		int32_t L_17 = __this->get_selectedSlot_15();
+		if ((((int32_t)L_17) == ((int32_t)1)))
+		{
+			goto IL_00c7;
 		}
 	}
 	{
 		int32_t L_18 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_18) == ((uint32_t)1))))
+		if ((((int32_t)L_18) == ((int32_t)2)))
 		{
-			goto IL_00ad;
+			goto IL_00c7;
 		}
 	}
 	{
-		GameObject_t1113636619 * L_19 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral1148044317, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_19 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral1147913245, /*hidden argument*/NULL);
 		__this->set_currentSelection_46(L_19);
 	}
 
-IL_00ad:
+IL_00c7:
 	{
-		int32_t L_20 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_20) == ((uint32_t)2))))
-		{
-			goto IL_00c9;
-		}
-	}
-	{
-		GameObject_t1113636619 * L_21 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral1147847709, /*hidden argument*/NULL);
-		__this->set_currentSelection_46(L_21);
-	}
-
-IL_00c9:
-	{
-		int32_t L_22 = __this->get_selectedSlot_15();
-		if ((((int32_t)L_22) == ((int32_t)1)))
-		{
-			goto IL_00f1;
-		}
-	}
-	{
-		int32_t L_23 = __this->get_selectedSlot_15();
-		if ((((int32_t)L_23) == ((int32_t)2)))
-		{
-			goto IL_00f1;
-		}
-	}
-	{
-		GameObject_t1113636619 * L_24 = GameObject_Find_m2032535176(NULL /*static, unused*/, _stringLiteral1147913245, /*hidden argument*/NULL);
-		__this->set_currentSelection_46(L_24);
-	}
-
-IL_00f1:
-	{
-		String_t* L_25 = __this->get_joystick1_4();
-		int32_t L_26 = __this->get_UP_11();
-		int32_t L_27 = L_26;
-		RuntimeObject * L_28 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_27);
-		String_t* L_29 = String_Concat_m904156431(NULL /*static, unused*/, L_25, L_28, /*hidden argument*/NULL);
+		String_t* L_20 = __this->get_joystick1_4();
+		int32_t L_21 = __this->get_UP_11();
+		int32_t L_22 = L_21;
+		RuntimeObject * L_23 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_22);
+		String_t* L_24 = String_Concat_m904156431(NULL /*static, unused*/, L_20, L_23, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_30 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_29, /*hidden argument*/NULL);
-		if (!L_30)
+		bool L_25 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_24, /*hidden argument*/NULL);
+		if (!L_25)
 		{
-			goto IL_01b7;
+			goto IL_018d;
+		}
+	}
+	{
+		int32_t L_26 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_26) == ((uint32_t)1))))
+		{
+			goto IL_011c;
+		}
+	}
+	{
+		int32_t L_27 = __this->get_selectedSlot_15();
+		__this->set_previousSlot_16(L_27);
+		__this->set_selectedSlot_15(3);
+		GameObject_t1113636619 * L_28 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_29 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_28, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_29->set_selectedSLSlot_16(3);
+		goto IL_0181;
+	}
+
+IL_011c:
+	{
+		int32_t L_30 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_30) == ((uint32_t)2))))
+		{
+			goto IL_0151;
 		}
 	}
 	{
 		int32_t L_31 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_31) == ((uint32_t)1))))
-		{
-			goto IL_0146;
-		}
-	}
-	{
-		int32_t L_32 = __this->get_selectedSlot_15();
-		__this->set_previousSlot_16(L_32);
-		__this->set_selectedSlot_15(3);
-		GameObject_t1113636619 * L_33 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_34 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_33, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_34->set_selectedSLSlot_16(3);
-		goto IL_01ab;
+		__this->set_previousSlot_16(L_31);
+		__this->set_selectedSlot_15(1);
+		GameObject_t1113636619 * L_32 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_33 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_32, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_33->set_selectedSLSlot_16(2);
+		goto IL_0181;
 	}
 
-IL_0146:
+IL_0151:
+	{
+		int32_t L_34 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_34) == ((uint32_t)3))))
+		{
+			goto IL_0181;
+		}
+	}
 	{
 		int32_t L_35 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_35) == ((uint32_t)2))))
-		{
-			goto IL_017b;
-		}
-	}
-	{
-		int32_t L_36 = __this->get_selectedSlot_15();
-		__this->set_previousSlot_16(L_36);
-		__this->set_selectedSlot_15(1);
-		GameObject_t1113636619 * L_37 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_38 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_37, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_38->set_selectedSLSlot_16(2);
-		goto IL_01ab;
-	}
-
-IL_017b:
-	{
-		int32_t L_39 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_39) == ((uint32_t)3))))
-		{
-			goto IL_01ab;
-		}
-	}
-	{
-		int32_t L_40 = __this->get_selectedSlot_15();
-		__this->set_previousSlot_16(L_40);
+		__this->set_previousSlot_16(L_35);
 		__this->set_selectedSlot_15(2);
-		GameObject_t1113636619 * L_41 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_42 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_41, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_42->set_selectedSLSlot_16(1);
+		GameObject_t1113636619 * L_36 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_37 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_36, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_37->set_selectedSLSlot_16(1);
 	}
 
-IL_01ab:
+IL_0181:
 	{
 		SaveManager_Inputs_setColor_m3441062333(__this, /*hidden argument*/NULL);
 		SaveManager_Inputs_animateButtons_m3760138962(__this, /*hidden argument*/NULL);
 	}
 
-IL_01b7:
+IL_018d:
 	{
-		String_t* L_43 = __this->get_joystick1_4();
-		int32_t L_44 = __this->get_DOWN_13();
-		int32_t L_45 = L_44;
-		RuntimeObject * L_46 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_45);
-		String_t* L_47 = String_Concat_m904156431(NULL /*static, unused*/, L_43, L_46, /*hidden argument*/NULL);
+		String_t* L_38 = __this->get_joystick1_4();
+		int32_t L_39 = __this->get_DOWN_13();
+		int32_t L_40 = L_39;
+		RuntimeObject * L_41 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_40);
+		String_t* L_42 = String_Concat_m904156431(NULL /*static, unused*/, L_38, L_41, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_48 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_47, /*hidden argument*/NULL);
-		if (!L_48)
+		bool L_43 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_42, /*hidden argument*/NULL);
+		if (!L_43)
 		{
-			goto IL_027d;
+			goto IL_0253;
+		}
+	}
+	{
+		int32_t L_44 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_44) == ((uint32_t)3))))
+		{
+			goto IL_01e2;
+		}
+	}
+	{
+		int32_t L_45 = __this->get_selectedSlot_15();
+		__this->set_previousSlot_16(L_45);
+		__this->set_selectedSlot_15(1);
+		GameObject_t1113636619 * L_46 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_47 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_46, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_47->set_selectedSLSlot_16(1);
+		goto IL_0247;
+	}
+
+IL_01e2:
+	{
+		int32_t L_48 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_48) == ((uint32_t)2))))
+		{
+			goto IL_0217;
 		}
 	}
 	{
 		int32_t L_49 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_49) == ((uint32_t)3))))
-		{
-			goto IL_020c;
-		}
-	}
-	{
-		int32_t L_50 = __this->get_selectedSlot_15();
-		__this->set_previousSlot_16(L_50);
-		__this->set_selectedSlot_15(1);
-		GameObject_t1113636619 * L_51 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_52 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_51, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_52->set_selectedSLSlot_16(1);
-		goto IL_0271;
+		__this->set_previousSlot_16(L_49);
+		__this->set_selectedSlot_15(3);
+		GameObject_t1113636619 * L_50 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_51 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_50, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_51->set_selectedSLSlot_16(3);
+		goto IL_0247;
 	}
 
-IL_020c:
+IL_0217:
+	{
+		int32_t L_52 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_52) == ((uint32_t)1))))
+		{
+			goto IL_0247;
+		}
+	}
 	{
 		int32_t L_53 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_53) == ((uint32_t)2))))
-		{
-			goto IL_0241;
-		}
-	}
-	{
-		int32_t L_54 = __this->get_selectedSlot_15();
-		__this->set_previousSlot_16(L_54);
-		__this->set_selectedSlot_15(3);
-		GameObject_t1113636619 * L_55 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_56 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_55, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_56->set_selectedSLSlot_16(3);
-		goto IL_0271;
-	}
-
-IL_0241:
-	{
-		int32_t L_57 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_57) == ((uint32_t)1))))
-		{
-			goto IL_0271;
-		}
-	}
-	{
-		int32_t L_58 = __this->get_selectedSlot_15();
-		__this->set_previousSlot_16(L_58);
+		__this->set_previousSlot_16(L_53);
 		__this->set_selectedSlot_15(2);
-		GameObject_t1113636619 * L_59 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_60 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_59, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_60->set_selectedSLSlot_16(2);
+		GameObject_t1113636619 * L_54 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_55 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_54, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_55->set_selectedSLSlot_16(2);
 	}
 
-IL_0271:
+IL_0247:
 	{
 		SaveManager_Inputs_setColor_m3441062333(__this, /*hidden argument*/NULL);
 		SaveManager_Inputs_animateButtons_m3760138962(__this, /*hidden argument*/NULL);
 	}
 
-IL_027d:
+IL_0253:
 	{
-		String_t* L_61 = __this->get_joystick1_4();
-		int32_t L_62 = __this->get_CROSS_5();
-		int32_t L_63 = L_62;
-		RuntimeObject * L_64 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_63);
-		String_t* L_65 = String_Concat_m904156431(NULL /*static, unused*/, L_61, L_64, /*hidden argument*/NULL);
+		String_t* L_56 = __this->get_joystick1_4();
+		int32_t L_57 = __this->get_CROSS_5();
+		int32_t L_58 = L_57;
+		RuntimeObject * L_59 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_58);
+		String_t* L_60 = String_Concat_m904156431(NULL /*static, unused*/, L_56, L_59, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_66 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_65, /*hidden argument*/NULL);
-		if (!L_66)
+		bool L_61 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_60, /*hidden argument*/NULL);
+		if (!L_61)
 		{
-			goto IL_02e6;
+			goto IL_02bc;
 		}
 	}
 	{
-		GameObject_t1113636619 * L_67 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_68 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_67, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		bool L_69 = L_68->get_dialogEnabled_37();
-		if (L_69)
+		GameObject_t1113636619 * L_62 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_63 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_62, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		bool L_64 = L_63->get_dialogEnabled_37();
+		if (L_64)
 		{
-			goto IL_02e6;
+			goto IL_02bc;
 		}
 	}
 	{
 		SaveManager_Inputs_setLoadedColor_m2389068017(__this, /*hidden argument*/NULL);
-		CanvasGroup_t4083511760 * L_70 = __this->get_loadDialogGroup_29();
-		CanvasGroup_set_alpha_m4032573(L_70, (1.0f), /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_71 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_72 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_71, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		L_72->set_dialogEnabled_37((bool)1);
-		RuntimeObject* L_73 = SaveManager_Inputs_DialogHandler_m4183091591(__this, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_73, /*hidden argument*/NULL);
+		CanvasGroup_t4083511760 * L_65 = __this->get_loadDialogGroup_29();
+		CanvasGroup_set_alpha_m4032573(L_65, (1.0f), /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_66 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_67 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_66, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		L_67->set_dialogEnabled_37((bool)1);
+		RuntimeObject* L_68 = SaveManager_Inputs_DialogHandler_m4183091591(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_68, /*hidden argument*/NULL);
 	}
 
-IL_02e6:
+IL_02bc:
 	{
-		String_t* L_74 = __this->get_joystick1_4();
-		int32_t L_75 = __this->get_CROSS_5();
-		int32_t L_76 = L_75;
-		RuntimeObject * L_77 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_76);
-		String_t* L_78 = String_Concat_m904156431(NULL /*static, unused*/, L_74, L_77, /*hidden argument*/NULL);
+		String_t* L_69 = __this->get_joystick1_4();
+		int32_t L_70 = __this->get_CROSS_5();
+		int32_t L_71 = L_70;
+		RuntimeObject * L_72 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_71);
+		String_t* L_73 = String_Concat_m904156431(NULL /*static, unused*/, L_69, L_72, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_79 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_78, /*hidden argument*/NULL);
-		if (!L_79)
+		bool L_74 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_73, /*hidden argument*/NULL);
+		if (!L_74)
 		{
-			goto IL_03ee;
+			goto IL_03c4;
 		}
 	}
 	{
-		GameObject_t1113636619 * L_80 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_81 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_80, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		bool L_82 = L_81->get_delayTimer_38();
-		if (!L_82)
+		GameObject_t1113636619 * L_75 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_76 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_75, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		bool L_77 = L_76->get_delayTimer_38();
+		if (!L_77)
 		{
-			goto IL_03ee;
+			goto IL_03c4;
 		}
 	}
 	{
-		GameObject_t1113636619 * L_83 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_84 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_83, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		bool L_85 = L_84->get_dialogEnabled_37();
-		if (!L_85)
+		GameObject_t1113636619 * L_78 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_79 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_78, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		bool L_80 = L_79->get_dialogEnabled_37();
+		if (!L_80)
 		{
-			goto IL_03ee;
+			goto IL_03c4;
 		}
 	}
 	{
-		GameObject_t1113636619 * L_86 = __this->get_sceneManager_25();
-		GameObject_BroadcastMessage_m217296818(L_86, _stringLiteral2435378281, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_81 = __this->get_sceneManager_25();
+		GameObject_BroadcastMessage_m217296818(L_81, _stringLiteral2435378281, /*hidden argument*/NULL);
 		SaveManager_Inputs_setColor_m3441062333(__this, /*hidden argument*/NULL);
-		CanvasGroup_t4083511760 * L_87 = __this->get_loadDialogGroup_29();
-		CanvasGroup_set_alpha_m4032573(L_87, (0.0f), /*hidden argument*/NULL);
-		int32_t L_88 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_88) == ((uint32_t)1))))
+		CanvasGroup_t4083511760 * L_82 = __this->get_loadDialogGroup_29();
+		CanvasGroup_set_alpha_m4032573(L_82, (0.0f), /*hidden argument*/NULL);
+		int32_t L_83 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_83) == ((uint32_t)1))))
 		{
-			goto IL_0372;
+			goto IL_0348;
 		}
 	}
+	{
+		TextMeshProUGUI_t529313277 * L_84 = __this->get_slot1Text_39();
+		TMP_Text_set_text_m1216996582(L_84, _stringLiteral1245620927, /*hidden argument*/NULL);
+	}
+
+IL_0348:
+	{
+		int32_t L_85 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_85) == ((uint32_t)2))))
+		{
+			goto IL_0364;
+		}
+	}
+	{
+		TextMeshProUGUI_t529313277 * L_86 = __this->get_slot2Text_40();
+		TMP_Text_set_text_m1216996582(L_86, _stringLiteral1245817535, /*hidden argument*/NULL);
+	}
+
+IL_0364:
+	{
+		int32_t L_87 = __this->get_selectedSlot_15();
+		if ((!(((uint32_t)L_87) == ((uint32_t)3))))
+		{
+			goto IL_0380;
+		}
+	}
+	{
+		TextMeshProUGUI_t529313277 * L_88 = __this->get_slot3Text_41();
+		TMP_Text_set_text_m1216996582(L_88, _stringLiteral1245751999, /*hidden argument*/NULL);
+	}
+
+IL_0380:
 	{
 		TextMeshProUGUI_t529313277 * L_89 = __this->get_slot1Text_39();
-		TMP_Text_set_text_m1216996582(L_89, _stringLiteral1245620927, /*hidden argument*/NULL);
-	}
-
-IL_0372:
-	{
-		int32_t L_90 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_90) == ((uint32_t)2))))
-		{
-			goto IL_038e;
-		}
-	}
-	{
+		String_t* L_90 = TMP_Text_get_text_m3381890347(L_89, /*hidden argument*/NULL);
+		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral1144833091, L_90, /*hidden argument*/NULL);
 		TextMeshProUGUI_t529313277 * L_91 = __this->get_slot2Text_40();
-		TMP_Text_set_text_m1216996582(L_91, _stringLiteral1245817535, /*hidden argument*/NULL);
-	}
-
-IL_038e:
-	{
-		int32_t L_92 = __this->get_selectedSlot_15();
-		if ((!(((uint32_t)L_92) == ((uint32_t)3))))
-		{
-			goto IL_03aa;
-		}
-	}
-	{
+		String_t* L_92 = TMP_Text_get_text_m3381890347(L_91, /*hidden argument*/NULL);
+		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral1144833088, L_92, /*hidden argument*/NULL);
 		TextMeshProUGUI_t529313277 * L_93 = __this->get_slot3Text_41();
-		TMP_Text_set_text_m1216996582(L_93, _stringLiteral1245751999, /*hidden argument*/NULL);
-	}
-
-IL_03aa:
-	{
-		TextMeshProUGUI_t529313277 * L_94 = __this->get_slot1Text_39();
-		String_t* L_95 = TMP_Text_get_text_m3381890347(L_94, /*hidden argument*/NULL);
-		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral1144833091, L_95, /*hidden argument*/NULL);
-		TextMeshProUGUI_t529313277 * L_96 = __this->get_slot2Text_40();
-		String_t* L_97 = TMP_Text_get_text_m3381890347(L_96, /*hidden argument*/NULL);
-		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral1144833088, L_97, /*hidden argument*/NULL);
-		TextMeshProUGUI_t529313277 * L_98 = __this->get_slot3Text_41();
-		String_t* L_99 = TMP_Text_get_text_m3381890347(L_98, /*hidden argument*/NULL);
-		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral1144833089, L_99, /*hidden argument*/NULL);
+		String_t* L_94 = TMP_Text_get_text_m3381890347(L_93, /*hidden argument*/NULL);
+		PlayerPrefs_SetString_m2101271233(NULL /*static, unused*/, _stringLiteral1144833089, L_94, /*hidden argument*/NULL);
 		PlayerPrefs_Save_m2701929462(NULL /*static, unused*/, /*hidden argument*/NULL);
 	}
 
-IL_03ee:
+IL_03c4:
 	{
-		String_t* L_100 = __this->get_joystick1_4();
-		int32_t L_101 = __this->get_CIRCLE_6();
-		int32_t L_102 = L_101;
-		RuntimeObject * L_103 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_102);
-		String_t* L_104 = String_Concat_m904156431(NULL /*static, unused*/, L_100, L_103, /*hidden argument*/NULL);
+		String_t* L_95 = __this->get_joystick1_4();
+		int32_t L_96 = __this->get_CIRCLE_6();
+		int32_t L_97 = L_96;
+		RuntimeObject * L_98 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_97);
+		String_t* L_99 = String_Concat_m904156431(NULL /*static, unused*/, L_95, L_98, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_105 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_104, /*hidden argument*/NULL);
-		if (!L_105)
+		bool L_100 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_99, /*hidden argument*/NULL);
+		if (!L_100)
 		{
-			goto IL_0446;
+			goto IL_041c;
 		}
 	}
 	{
-		GameObject_t1113636619 * L_106 = __this->get_menuManager_26();
-		Menu_Manager_t102876996 * L_107 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_106, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
-		bool L_108 = L_107->get_dialogEnabled_37();
-		if (!L_108)
+		GameObject_t1113636619 * L_101 = __this->get_menuManager_26();
+		Menu_Manager_t102876996 * L_102 = GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263(L_101, /*hidden argument*/GameObject_GetComponent_TisMenu_Manager_t102876996_m1753252263_RuntimeMethod_var);
+		bool L_103 = L_102->get_dialogEnabled_37();
+		if (!L_103)
 		{
-			goto IL_0446;
+			goto IL_041c;
 		}
 	}
 	{
 		SaveManager_Inputs_setColor_m3441062333(__this, /*hidden argument*/NULL);
-		CanvasGroup_t4083511760 * L_109 = __this->get_loadDialogGroup_29();
-		CanvasGroup_set_alpha_m4032573(L_109, (0.0f), /*hidden argument*/NULL);
-		RuntimeObject* L_110 = SaveManager_Inputs_DialogHandler_m4183091591(__this, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_110, /*hidden argument*/NULL);
+		CanvasGroup_t4083511760 * L_104 = __this->get_loadDialogGroup_29();
+		CanvasGroup_set_alpha_m4032573(L_104, (0.0f), /*hidden argument*/NULL);
+		RuntimeObject* L_105 = SaveManager_Inputs_DialogHandler_m4183091591(__this, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_105, /*hidden argument*/NULL);
 	}
 
-IL_0446:
+IL_041c:
 	{
-		bool L_111 = __this->get_loading_34();
-		if (!L_111)
+		bool L_106 = __this->get_loading_34();
+		if (!L_106)
 		{
-			goto IL_0462;
+			goto IL_0438;
 		}
 	}
 	{
-		AsyncOperation_t1445031843 * L_112 = __this->get_loadingOperation_24();
-		float L_113 = AsyncOperation_get_progress_m2461797197(L_112, /*hidden argument*/NULL);
-		__this->set_loadProgress_33(L_113);
+		AsyncOperation_t1445031843 * L_107 = __this->get_loadingOperation_24();
+		float L_108 = AsyncOperation_get_progress_m2461797197(L_107, /*hidden argument*/NULL);
+		__this->set_loadProgress_33(L_108);
 	}
 
-IL_0462:
+IL_0438:
 	{
 		return;
 	}
