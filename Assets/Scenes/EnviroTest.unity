@@ -17709,14 +17709,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 787849888}
-  OptionsManagerInputs: {fileID: 0}
+  OptionsManagerInputs: {fileID: 1043915272}
   playerBody: {fileID: 1039149773}
   objectList: []
-  bgmSource: {fileID: 0}
-  sfxSource: {fileID: 0}
-  ambientSource: {fileID: 0}
-  thunderStormSource: {fileID: 0}
-  rainSource: {fileID: 0}
+  bgmSource: {fileID: 966679675}
+  sfxSource: {fileID: 424847229}
+  ambientSource: {fileID: 249153888}
+  thunderStormSource: {fileID: 1742728651}
+  rainSource: {fileID: 454705688}
   SFXLevel: {fileID: 0}
 --- !u!4 &422521462
 Transform:
@@ -31684,7 +31684,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886072610}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e651de6ee6873f47a950484b04ee2f3, type: 3}
   m_Name: 
@@ -35802,6 +35802,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1043915272 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1589712537159484, guid: a3d4c910dd150dc4ba1816870bb7f398,
+    type: 2}
+  m_PrefabInternal: {fileID: 1521253582}
 --- !u!43 &1050884505
 Mesh:
   m_ObjectHideFlags: 0
@@ -37318,7 +37323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1120093142
 Transform:
   m_ObjectHideFlags: 0
