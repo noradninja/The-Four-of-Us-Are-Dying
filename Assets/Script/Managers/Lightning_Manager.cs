@@ -9,7 +9,7 @@ public class Lightning_Manager : MonoBehaviour {
 // Properties
 public AudioSource audioSource;
 public float step = 0.33f;
-public int sampleDataLength = 256;
+public int sampleDataLength = 512;
 public float scaleFactor = 1;
 public Material skyBox;
 public Material glowMat;
@@ -44,9 +44,8 @@ public Color lerpColor;
 			clipLoudness = 0f;
 			clipLoudnessB = 0f;
 			foreach (var sample in clipSampleData){
-				// float absSample = Math.Abs(sample);
-				if ( sample > 0.1f){
-					clipLoudness += sample;
+				if (Math.Abs(sample) > 0.1f){
+					clipLoudness += Math.Abs(sample);
 				}
 			}
 			clipLoudness /= sampleDataLength;

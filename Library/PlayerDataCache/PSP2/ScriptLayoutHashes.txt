@@ -1,6 +1,6 @@
 PSP2
 PlayerPath?
-C:/PSVITA/Builds/School
+C:/PSVITA/Builds
 SceneListBegin?
 Assets/Scenes/Title.unity
 Assets/Scenes/LoadScreen.unity
