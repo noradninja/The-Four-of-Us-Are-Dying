@@ -17,11 +17,11 @@ public class SAI2x : MonoBehaviour {
 	}
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
-		var blurTex = RenderTexture.GetTemporary(720, 408, 0, RenderTextureFormat.Default);
+		// var blurTex = RenderTexture.GetTemporary(720, 408, 0, RenderTextureFormat.Default);
 		source.filterMode = FilterMode.Bilinear;
-		Graphics.Blit(source, blurTex, material, 0);
-		material.SetTexture(blurTexString, blurTex);
-		Graphics.Blit(blurTex, destination);
-		RenderTexture.ReleaseTemporary(blurTex);
+		Graphics.Blit(source, destination, material, 0);
+		// material.SetTexture(blurTexString, blurTex);
+		// Graphics.Blit(blurTex, destination);
+		// RenderTexture.ReleaseTemporary(blurTex);
 	}
 }
