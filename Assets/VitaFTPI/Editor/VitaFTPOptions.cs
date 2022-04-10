@@ -13,10 +13,10 @@ public class VitaFTPOptions : EditorWindow
     private static UploadWrapper.UploadData uploadData;
     public static string Path = new System.Diagnostics.StackTrace(true).GetFrame(0).GetFileName();
 
-    [MenuItem("Window/General/Vita Deploy")]
+    [MenuItem("VitaFTPI/Options")]
     public static void ShowWindow()
     {
-        GetWindow<VitaFTPOptions>("Vita Deploy");
+        GetWindow<VitaFTPOptions>("VitaFTPI Options");
     }
 
     void OnEnable()

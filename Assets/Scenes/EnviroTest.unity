@@ -2595,8 +2595,8 @@ GameObject:
   - component: {fileID: 121908235}
   - component: {fileID: 121908234}
   - component: {fileID: 121908238}
-  - component: {fileID: 121908233}
   - component: {fileID: 121908227}
+  - component: {fileID: 121908230}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2678,7 +2678,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fae5e112b4074dbbb579d2561fa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  renderResolution: 3
+  enableInternalResolution: 0
+  renderResolution: 2
   screenResolution: 1
   filterMode: 1
 --- !u!114 &121908228
@@ -2715,6 +2716,18 @@ MonoBehaviour:
   FastMode: 1
   material: {fileID: 2100000, guid: 7d363303b6fc57d468dc1793327b70b9, type: 2}
   cam: {fileID: 121908225}
+--- !u!114 &121908230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121908223}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78db79d5050703c488eb83f52f38a61d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: a8d8cc8d685905942a1319600b230365, type: 2}
 --- !u!124 &121908231
 Behaviour:
   m_ObjectHideFlags: 0
@@ -2736,32 +2749,6 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: d381d4349e5cfc24c93bb6280e373058, type: 2}
   Sharpness: 3
   Threshold: 0.25
---- !u!114 &121908233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9191284b058eef549b7108b5f04e1117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  intensityMultiplier: 0.085
-  generalIntensity: 0.5
-  blackIntensity: 1
-  whiteIntensity: 1
-  midGrey: 0.5
-  dx11Grain: 0
-  softness: 0
-  monochrome: 1
-  intensities: {x: 1, y: 1, z: 1}
-  tiling: {x: 128128130, y: 64, z: 64}
-  monochromeTiling: 64
-  filterMode: 0
-  noiseTexture: {fileID: 2800000, guid: 7a632f967e8ad42f5bd275898151ab6a, type: 3}
-  noiseShader: {fileID: 4800000, guid: b0249d8c935344451aa4de6db76f0688, type: 3}
-  dx11NoiseShader: {fileID: 4800000, guid: 8b30686bb4322ab42ad5eb50a0210b58, type: 3}
 --- !u!114 &121908234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3761,7 +3748,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 960, y: 544}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -13627,7 +13614,6 @@ GameObject:
   - component: {fileID: 255398539}
   - component: {fileID: 255398538}
   - component: {fileID: 255398537}
-  - component: {fileID: 255398536}
   m_Layer: 0
   m_Name: Lightning_Overlay_R
   m_TagString: Untagged
@@ -13635,17 +13621,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &255398536
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255398535}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!23 &255398537
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13695,8 +13670,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 255398535}
   m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.104, y: -0.029, z: 0.422}
-  m_LocalScale: {x: 0.5000002, y: 0.5643365, z: 0.50000006}
+  m_LocalPosition: {x: 0.15, y: -0, z: 0.422}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 121908226}
   m_RootOrder: 1
@@ -21353,8 +21328,9 @@ MonoBehaviour:
   combinedVolumeComponent: {fileID: 1702080214}
   allVolumes:
   - {fileID: 599889676}
-  dataPath: C:/PSVITA/2018/TFOUAD/Assets
-  workPath: C:/PSVITA/2018/TFOUAD/Assets\Addons\Magic Light Probes
+  dataPath: C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets
+  workPath: C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets\Addons\Magic Light
+    Probes
   workPathFound: 1
   localFinishedPositions:
   - {x: -8.119127, y: 0.0017460436, z: -10.791752}
@@ -25168,7 +25144,8 @@ MonoBehaviour:
   - {x: 0.8549719, y: 0.64674604, z: -9.757073}
   - {x: 1.2108727, y: 0.34674585, z: -9.455066}
   - {x: 1.309125, y: 0.42176726, z: -10.011752}
-  assetEditorPath: C:/PSVITA/2018/TFOUAD/Assets\Addons\Magic Light Probes/Editor/
+  assetEditorPath: C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets\Addons\Magic
+    Light Probes/Editor/
   parentVolume: {fileID: 0}
   localOperationalDataLost: 1
   recombinationNeeded: 0
@@ -27211,8 +27188,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 663922314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.125, y: -0.03, z: 0.422}
-  m_LocalScale: {x: 0.49999997, y: 0.5643358, z: 0.50000006}
+  m_LocalPosition: {x: -0.15, y: -0.001, z: 0.422}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
   m_Children: []
   m_Father: {fileID: 121908226}
   m_RootOrder: 0
@@ -29723,6 +29700,8 @@ MonoBehaviour:
   Camera: {fileID: 121908226}
   camObject: {fileID: 121908225}
   mapCamera: {fileID: 759713688}
+  upLimit: 3
+  downLimit: 17
   flashlight: {fileID: 618167703}
   vertlight: {fileID: 652633789}
   lightRig: {fileID: 1953679437}
@@ -29733,41 +29712,39 @@ MonoBehaviour:
   lightBeam: {fileID: 1438941432}
   lightHaze: {fileID: 1539118455}
   lightChargeObject: {fileID: 913620391}
+  lightRoot: {fileID: 133598110}
+  currentTarget: {fileID: 0}
+  storedLightRotation: {x: 0, y: 0, z: 0, w: 0}
+  endLightRotation: {x: 0, y: 0, z: 0, w: 0}
   lightCharge: 100
   colorStart: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.4}
   colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0.8509804}
   colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
   lightDuration: 300
   lookSensitivity: 14
-  upLimit: 3
-  downLimit: 17
-  batteryText: {fileID: 717110221}
   flashlightCharge: 1
   flashlightDisabled: 0
+  batteryText: {fileID: 717110221}
   SSAOScript: {fileID: 121908223}
   BokehScript: {fileID: 121908223}
   enabledText: {fileID: 787333238}
   lerpRate: 0.55
+  skinnedRenderer: {fileID: 1039149773}
   lightFocusing: 0
   isRunning: 0
   isWalking: 0
-  skinnedRenderer: {fileID: 1039149773}
+  isStimulant: 0
   isLerping: 0
+  isCharging: 0
+  lightMovement: 1
+  cooldownValue: 0
   pausePanel: {fileID: 772211283}
   mapPanel: {fileID: 1490393797}
   mapCam: {fileID: 759713698}
   mapIndicator: {fileID: 1821656442}
-  isStimulant: 0
-  cooldownValue: 0
-  isCharging: 0
   perfOverlay: {fileID: 1482558063}
   UICanvasGroup: {fileID: 1415299053}
   currentCharge: 0
-  lightMovement: 1
-  lightRoot: {fileID: 133598110}
-  currentTarget: {fileID: 0}
-  storedLightRotation: {x: 0, y: 0, z: 0, w: 0}
-  endLightRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!143 &787849890
 CharacterController:
   m_ObjectHideFlags: 0
@@ -31420,7 +31397,6 @@ GameObject:
   - component: {fileID: 877305392}
   - component: {fileID: 877305394}
   - component: {fileID: 877305393}
-  - component: {fileID: 877305395}
   m_Layer: 9
   m_Name: Leaves_1 1
   m_TagString: Untagged
@@ -31486,17 +31462,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 877305391}
   m_Mesh: {fileID: 4300000, guid: 23c7bf72257bfb4489acf8845d6d6ab7, type: 2}
---- !u!114 &877305395
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 877305391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &882286365
 GameObject:
   m_ObjectHideFlags: 0
@@ -58885,7 +58850,6 @@ GameObject:
   - component: {fileID: 1977694566}
   - component: {fileID: 1977694565}
   - component: {fileID: 1977694564}
-  - component: {fileID: 1977694568}
   m_Layer: 19
   m_Name: Decal B
   m_TagString: Untagged
@@ -58966,17 +58930,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1977694568
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1977694563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1978907057
 GameObject:
   m_ObjectHideFlags: 0

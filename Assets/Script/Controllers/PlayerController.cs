@@ -32,6 +32,10 @@ public class PlayerController : MonoBehaviour
     public Transform Camera;
     public Camera camObject;
     public GameObject mapCamera;
+    public float upLimit = -50;
+    public float downLimit = 50;
+    
+    //flashlight
     public Light flashlight;
     public Light vertlight;
     public GameObject lightRig;
@@ -42,17 +46,21 @@ public class PlayerController : MonoBehaviour
     public Renderer lightBeam;
     public Renderer lightHaze;
     public GameObject lightChargeObject;
+    public GameObject lightRoot;
+    public GameObject currentTarget;
+    public Quaternion storedLightRotation;
+    public Quaternion endLightRotation;
     public float lightCharge = 100f;
     public Color colorStart;
     public Color colorEnd;
     public Color colorTransparent;
     public float lightDuration = 1.0f;
     public float lookSensitivity = 5f;
-    public float upLimit = -50;
-    public float downLimit = 50;
-    public TextMeshProUGUI batteryText;
     public float flashlightCharge = 1.0f;
     public bool flashlightDisabled;
+   
+    public TextMeshProUGUI batteryText;
+  
     public GameObject SSAOScript;
     public GameObject BokehScript;
     public GameObject enabledText;
@@ -62,6 +70,8 @@ public class PlayerController : MonoBehaviour
     // gravity
     private float gravity = 9.87f;
     private float verticalSpeed = 0;
+
+    //private vars
     private  string VITA = "joystick button ";
 	
     private  int CROSS = 0;
@@ -82,30 +92,35 @@ public class PlayerController : MonoBehaviour
     private float verticalCamRotation;
     private Quaternion savedRotation;
     private Vector3 savedPosition;
+    private bool isPaused;
+   
+    public SkinnedMeshRenderer skinnedRenderer;
+    private float walkStart;
+
+    //states
     public bool lightFocusing;
     public bool isRunning;
     public bool isWalking;
-    public SkinnedMeshRenderer skinnedRenderer;
-    private float walkStart;
+    public bool isStimulant = false;
     public bool isLerping;
-    private bool isPaused;
+    public bool isCharging;
     public static bool isMap;
+    public bool lightMovement = true;
+    public static bool delayButton = false;
+    public float cooldownValue;
+ 
+    //map/menu
     public CanvasGroup pausePanel;
     public RawImage mapPanel;
     public Camera mapCam;
     public GameObject mapIndicator;
-    public bool isStimulant = false;
-    public float cooldownValue;
-    public static bool delayButton = false;
-    public bool isCharging;
+
+    //overlay
     public GameObject perfOverlay;
     public CanvasGroup UICanvasGroup;
     public float currentCharge;
-    public bool lightMovement = true;
-    public GameObject lightRoot;
-    public GameObject currentTarget;
-    public Quaternion storedLightRotation;
-    public Quaternion endLightRotation;
+   
+
 
     
       private void Awake()
@@ -139,7 +154,7 @@ public class PlayerController : MonoBehaviour
          if (SSAOScript.GetComponent<FastSSAO>().enabled == false){      
             SSAOScript.GetComponent<FastSSAO>().enabled = true;
             BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-            //SSAOScript.GetComponent<FastMobileBloom>().enabled = true;
+            SSAOScript.GetComponent<SAI2x>().enabled = true;
             //SSAOScript.GetComponent<FXAA>().enabled = true;
             SSAOScript.GetComponent<Crepuscular>().enabled = true;
             SSAOScript.GetComponent<Kino.Fog>().enabled = true;
@@ -264,7 +279,7 @@ public class PlayerController : MonoBehaviour
                 SSAOScript.GetComponent<FastSSAO>().enabled = false;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
                 SSAOScript.GetComponent<Crepuscular>().enabled = false;
-                //SSAOScript.GetComponent<FXAA>().enabled = false;
+                SSAOScript.GetComponent<SAI2x>().enabled = false;
                 enabledText.GetComponent<Text>().color = Color.red;
                 enabledText.GetComponent<Text>().text = ("Disabled");
             }
@@ -272,7 +287,7 @@ public class PlayerController : MonoBehaviour
                 SSAOScript.GetComponent<FastSSAO>().enabled = true;
                 BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
                 SSAOScript.GetComponent<Crepuscular>().enabled = true;
-               // SSAOScript.GetComponent<FXAA>().enabled = true;
+                SSAOScript.GetComponent<SAI2x>().enabled = true;
                 enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");
             }

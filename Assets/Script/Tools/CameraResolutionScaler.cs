@@ -19,6 +19,7 @@ public class CameraResolutionScaler : MonoBehaviour
 		[Tooltip ("480x272")]
 		PSP
 	}
+	public bool enableInternalResolution = true;
 	public internalResolution renderResolution;
 	private float renderDivisor;
 	private int width;
@@ -80,41 +81,48 @@ public class CameraResolutionScaler : MonoBehaviour
 
 	void OnPreRender ()
 	{
-		switch (renderResolution){
-			case internalResolution.Full:
-						width = 960;
-						height = 544;	
-						renderDivisor = 1;
-					break;
-					case internalResolution.Mid:
-						width = 720;
-						height = 408;
-						renderDivisor = 1.334f;
-					break;
-					case internalResolution.Low:
-						width = 640;
-						height = 363;
-						renderDivisor = 1.5f;
-					break;
-					case internalResolution.PSP:
-						width = 480;
-						height = 272;
-						renderDivisor = 2;
-					break;
+		if (enableInternalResolution){
+			switch (renderResolution){
+				case internalResolution.Full:
+							width = 960;
+							height = 544;	
+							renderDivisor = 1;
+						break;
+						case internalResolution.Mid:
+							width = 720;
+							height = 408;
+							renderDivisor = 1.334f;
+						break;
+						case internalResolution.Low:
+							width = 640;
+							height = 363;
+							renderDivisor = 1.5f;
+						break;
+						case internalResolution.PSP:
+							width = 480;
+							height = 272;
+							renderDivisor = 2;
+						break;
+			}
+			originalRect = camera.rect;
+			scaledRect.Set(originalRect.x, originalRect.y, originalRect.width / renderDivisor, originalRect.height / renderDivisor);
+			camera.rect = scaledRect;
 		}
-		originalRect = camera.rect;
-		scaledRect.Set(originalRect.x, originalRect.y, originalRect.width / renderDivisor, originalRect.height / renderDivisor);
-		camera.rect = scaledRect;
 	}
 
 	void OnRenderImage (RenderTexture src, RenderTexture dest)
 	{
-		renderTex = GetTemporaryTexture(width, height);
-		camera.rect = originalRect;
-		src.filterMode = filterMode;
+		if (enableInternalResolution){
+			renderTex = GetTemporaryTexture(width, height);
+			camera.rect = originalRect;
+			src.filterMode = filterMode;
 
-		Graphics.Blit(src, renderTex);
-		Graphics.Blit(renderTex, dest);
-		RenderTexture.ReleaseTemporary(renderTex);
+			Graphics.Blit(src, renderTex);
+			Graphics.Blit(renderTex, dest);
+			RenderTexture.ReleaseTemporary(renderTex);
+		}
+		else{
+			Graphics.Blit(src, dest);
+		}
 	}
 }
