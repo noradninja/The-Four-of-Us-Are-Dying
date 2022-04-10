@@ -275,18 +275,18 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(VITA + RIGHT)){//} && !delayButton){
            // //enable/disable SSAO and UI text
-            if (SSAOScript.GetComponent<FastSSAO>().enabled){
-                SSAOScript.GetComponent<FastSSAO>().enabled = false;
-                BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
-                SSAOScript.GetComponent<Crepuscular>().enabled = false;
+            if (SSAOScript.GetComponent<SAI2x>().enabled){
+                // SSAOScript.GetComponent<FastSSAO>().enabled = false;
+                // BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
+                // SSAOScript.GetComponent<Crepuscular>().enabled = false;
                 SSAOScript.GetComponent<SAI2x>().enabled = false;
                 enabledText.GetComponent<Text>().color = Color.red;
                 enabledText.GetComponent<Text>().text = ("Disabled");
             }
             else {
-                SSAOScript.GetComponent<FastSSAO>().enabled = true;
-                BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-                SSAOScript.GetComponent<Crepuscular>().enabled = true;
+                // SSAOScript.GetComponent<FastSSAO>().enabled = true;
+                // BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
+                // SSAOScript.GetComponent<Crepuscular>().enabled = true;
                 SSAOScript.GetComponent<SAI2x>().enabled = true;
                 enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");

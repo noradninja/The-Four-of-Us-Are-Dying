@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class SAI2x : MonoBehaviour {
 	public Material material;
+	static readonly int blurTexString = Shader.PropertyToID("_MainTex");
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +17,11 @@ public class SAI2x : MonoBehaviour {
 	}
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
-		Graphics.Blit(source, destination, material);;
+		var blurTex = RenderTexture.GetTemporary(720, 408, 0, RenderTextureFormat.Default);
+		source.filterMode = FilterMode.Bilinear;
+		Graphics.Blit(source, blurTex, material, 0);
+		material.SetTexture(blurTexString, blurTex);
+		Graphics.Blit(blurTex, destination);
+		RenderTexture.ReleaseTemporary(blurTex);
 	}
 }

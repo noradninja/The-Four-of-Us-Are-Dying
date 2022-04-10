@@ -7,7 +7,7 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	public Text battText;
 	public Text medText;
 	public Text stimText;
-	public Material inventoryMat;
+	public RawImage inventoryMat;
 	public GameObject inventoryCam;
 	public static bool inventoryOn = false;
 	public bool delayButton = false;
@@ -19,7 +19,7 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		inventoryOn = false;
-		inventoryMat.SetFloat("_Alpha", 0f);
+		inventoryMat.color = new Color (1,1,1, 0);
 		inventoryCam.SetActive(false);
 		if (Application.isEditor){
 			//because the DS3 registers the buttons differently in Windows 
@@ -105,11 +105,11 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 		while (time < duration){
 			tempAlpha = Mathf.Lerp (startValue, endValue, time/duration);
 			time += Time.deltaTime;
-			inventoryMat.SetFloat("_Alpha", tempAlpha);
+			inventoryMat.color = new Color (1,1,1, tempAlpha);
 			yield return null;
 		}
-		inventoryMat.SetFloat("_Alpha", endValue);
-		if (inventoryMat.GetFloat("_Alpha") <= 0){
+		inventoryMat.color = new Color (1,1,1, endValue);
+		if (inventoryMat.color.a <= 0){
 			inventoryCam.SetActive(false);
 			print("Inventory Cam disabled");
 		}

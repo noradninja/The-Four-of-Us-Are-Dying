@@ -60,7 +60,7 @@ public class CameraResolutionScaler : MonoBehaviour
 						Screen.SetResolution(720, 408, true, 60);
 					break;
 					case currentResolution.Low:
-						Screen.SetResolution(640, 384, true, 60);
+						Screen.SetResolution(640, 363, true, 60);
 					break;
 					case currentResolution.PSP:
 					Screen.SetResolution(480, 272, true, 60);
@@ -94,14 +94,14 @@ public class CameraResolutionScaler : MonoBehaviour
 							renderDivisor = 1.334f;
 						break;
 						case internalResolution.Low:
-							width = 640;
-							height = 363;
-							renderDivisor = 1.5f;
+							width = 495 ;
+							height = 291;
+							renderDivisor = 1.334f;
 						break;
 						case internalResolution.PSP:
 							width = 480;
 							height = 272;
-							renderDivisor = 2;
+							renderDivisor = 1.334f;
 						break;
 			}
 			originalRect = camera.rect;
