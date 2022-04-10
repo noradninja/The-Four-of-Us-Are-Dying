@@ -16,7 +16,7 @@ Shader "Lighting/Crepuscular Rays" {
 		}
 		CGINCLUDE
 		#include "UnityCG.cginc"
-		#pragma 
+		#pragma target 2.0
 
 		uniform sampler2D_half _MainTex;
 		uniform sampler2D_half _BlurTex;

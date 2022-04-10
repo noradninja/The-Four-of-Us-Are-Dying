@@ -586,6 +586,8 @@ struct EmptyInternalEnumerator_1_t3863221300;
 struct EmptyInternalEnumerator_1_t3389783477;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.Rendering.RenderTargetIdentifier>
 struct EmptyInternalEnumerator_1_t3721154311;
+// System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>
+struct EmptyInternalEnumerator_1_t4129589574;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.SendMouseEvents/HitInfo>
 struct EmptyInternalEnumerator_1_t576612255;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.Touch>
@@ -636,8 +638,6 @@ struct EmptyInternalEnumerator_1_t817001058;
 struct EmptyInternalEnumerator_1_t1069315979;
 // System.Array/EmptyInternalEnumerator`1<UnityEngine.Vector4>
 struct EmptyInternalEnumerator_1_t666031452;
-// System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>
-struct EmptyInternalEnumerator_1_t1158922350;
 // System.AsyncCallback
 struct AsyncCallback_t3962456242;
 // System.Boolean[]
@@ -750,8 +750,6 @@ struct Vector2U5BU5D_t1457185986;
 struct Vector3U5BU5D_t1718750761;
 // UnityEngine.Vector4[]
 struct Vector4U5BU5D_t934056436;
-// UnityMeshSimplifier.BlendShapeFrame[]
-struct BlendShapeFrameU5BU5D_t703126791;
 
 extern RuntimeClass* AsyncLocalValueChangedArgs_1_t416175285_il2cpp_TypeInfo_var;
 extern RuntimeClass* BoneWeight_t1955788027_il2cpp_TypeInfo_var;
@@ -813,7 +811,6 @@ extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m1451740210_Ru
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m146184088_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m1471943143_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m1535121134_RuntimeMethod_var;
-extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m1551137476_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m156529210_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m1575162540_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m1577296309_RuntimeMethod_var;
@@ -946,6 +943,7 @@ extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m678668301_Run
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m706784053_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m733364016_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m753957504_RuntimeMethod_var;
+extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m772300616_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m786867368_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m803566976_RuntimeMethod_var;
 extern const RuntimeMethod* EmptyInternalEnumerator_1_get_Current_m80619633_RuntimeMethod_var;
@@ -1026,7 +1024,6 @@ extern const uint32_t EmptyInternalEnumerator_1_get_Current_m1451740210_Metadata
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m146184088_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m1471943143_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m1535121134_MetadataUsageId;
-extern const uint32_t EmptyInternalEnumerator_1_get_Current_m1551137476_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m156529210_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m1575162540_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m1577296309_MetadataUsageId;
@@ -1159,6 +1156,7 @@ extern const uint32_t EmptyInternalEnumerator_1_get_Current_m678668301_MetadataU
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m706784053_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m733364016_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m753957504_MetadataUsageId;
+extern const uint32_t EmptyInternalEnumerator_1_get_Current_m772300616_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m786867368_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m803566976_MetadataUsageId;
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m80619633_MetadataUsageId;
@@ -1172,8 +1170,6 @@ extern const uint32_t EmptyInternalEnumerator_1_get_Current_m94581896_MetadataUs
 extern const uint32_t EmptyInternalEnumerator_1_get_Current_m954034183_MetadataUsageId;
 struct BlendShapeFrame_t1580192975_marshaled_com;
 struct BlendShapeFrame_t1580192975_marshaled_pinvoke;
-struct BlendShapeFrame_t949214962_marshaled_com;
-struct BlendShapeFrame_t949214962_marshaled_pinvoke;
 struct Color32_t2600501292 ;
 struct Dels_t361700601_marshaled_com;
 struct Dels_t361700601_marshaled_pinvoke;
@@ -6420,6 +6416,43 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EMPTYINTERNALENUMERATOR_1_T3721154311_H
+#ifndef EMPTYINTERNALENUMERATOR_1_T4129589574_H
+#define EMPTYINTERNALENUMERATOR_1_T4129589574_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>
+struct  EmptyInternalEnumerator_1_t4129589574  : public RuntimeObject
+{
+public:
+
+public:
+};
+
+struct EmptyInternalEnumerator_1_t4129589574_StaticFields
+{
+public:
+	// System.Array/EmptyInternalEnumerator`1<T> System.Array/EmptyInternalEnumerator`1::Value
+	EmptyInternalEnumerator_1_t4129589574 * ___Value_0;
+
+public:
+	inline static int32_t get_offset_of_Value_0() { return static_cast<int32_t>(offsetof(EmptyInternalEnumerator_1_t4129589574_StaticFields, ___Value_0)); }
+	inline EmptyInternalEnumerator_1_t4129589574 * get_Value_0() const { return ___Value_0; }
+	inline EmptyInternalEnumerator_1_t4129589574 ** get_address_of_Value_0() { return &___Value_0; }
+	inline void set_Value_0(EmptyInternalEnumerator_1_t4129589574 * value)
+	{
+		___Value_0 = value;
+		Il2CppCodeGenWriteBarrier((&___Value_0), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // EMPTYINTERNALENUMERATOR_1_T4129589574_H
 #ifndef EMPTYINTERNALENUMERATOR_1_T576612255_H
 #define EMPTYINTERNALENUMERATOR_1_T576612255_H
 #ifdef __clang__
@@ -7345,43 +7378,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // EMPTYINTERNALENUMERATOR_1_T666031452_H
-#ifndef EMPTYINTERNALENUMERATOR_1_T1158922350_H
-#define EMPTYINTERNALENUMERATOR_1_T1158922350_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>
-struct  EmptyInternalEnumerator_1_t1158922350  : public RuntimeObject
-{
-public:
-
-public:
-};
-
-struct EmptyInternalEnumerator_1_t1158922350_StaticFields
-{
-public:
-	// System.Array/EmptyInternalEnumerator`1<T> System.Array/EmptyInternalEnumerator`1::Value
-	EmptyInternalEnumerator_1_t1158922350 * ___Value_0;
-
-public:
-	inline static int32_t get_offset_of_Value_0() { return static_cast<int32_t>(offsetof(EmptyInternalEnumerator_1_t1158922350_StaticFields, ___Value_0)); }
-	inline EmptyInternalEnumerator_1_t1158922350 * get_Value_0() const { return ___Value_0; }
-	inline EmptyInternalEnumerator_1_t1158922350 ** get_address_of_Value_0() { return &___Value_0; }
-	inline void set_Value_0(EmptyInternalEnumerator_1_t1158922350 * value)
-	{
-		___Value_0 = value;
-		Il2CppCodeGenWriteBarrier((&___Value_0), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#endif // EMPTYINTERNALENUMERATOR_1_T1158922350_H
 #ifndef EXCEPTION_T_H
 #define EXCEPTION_T_H
 #ifdef __clang__
@@ -12745,6 +12741,55 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // RECT_T2360479859_H
+#ifndef RESOLUTION_T2487619763_H
+#define RESOLUTION_T2487619763_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Resolution
+struct  Resolution_t2487619763 
+{
+public:
+	// System.Int32 UnityEngine.Resolution::m_Width
+	int32_t ___m_Width_0;
+	// System.Int32 UnityEngine.Resolution::m_Height
+	int32_t ___m_Height_1;
+	// System.Int32 UnityEngine.Resolution::m_RefreshRate
+	int32_t ___m_RefreshRate_2;
+
+public:
+	inline static int32_t get_offset_of_m_Width_0() { return static_cast<int32_t>(offsetof(Resolution_t2487619763, ___m_Width_0)); }
+	inline int32_t get_m_Width_0() const { return ___m_Width_0; }
+	inline int32_t* get_address_of_m_Width_0() { return &___m_Width_0; }
+	inline void set_m_Width_0(int32_t value)
+	{
+		___m_Width_0 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Height_1() { return static_cast<int32_t>(offsetof(Resolution_t2487619763, ___m_Height_1)); }
+	inline int32_t get_m_Height_1() const { return ___m_Height_1; }
+	inline int32_t* get_address_of_m_Height_1() { return &___m_Height_1; }
+	inline void set_m_Height_1(int32_t value)
+	{
+		___m_Height_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_RefreshRate_2() { return static_cast<int32_t>(offsetof(Resolution_t2487619763, ___m_RefreshRate_2)); }
+	inline int32_t get_m_RefreshRate_2() const { return ___m_RefreshRate_2; }
+	inline int32_t* get_address_of_m_RefreshRate_2() { return &___m_RefreshRate_2; }
+	inline void set_m_RefreshRate_2(int32_t value)
+	{
+		___m_RefreshRate_2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // RESOLUTION_T2487619763_H
 #ifndef HITINFO_T3229609740_H
 #define HITINFO_T3229609740_H
 #ifdef __clang__
@@ -13479,59 +13524,6 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // VECTOR4_T3319028937_H
-#ifndef BLENDSHAPE_T3811919835_H
-#define BLENDSHAPE_T3811919835_H
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-
-// UnityMeshSimplifier.BlendShape
-struct  BlendShape_t3811919835 
-{
-public:
-	// System.String UnityMeshSimplifier.BlendShape::ShapeName
-	String_t* ___ShapeName_0;
-	// UnityMeshSimplifier.BlendShapeFrame[] UnityMeshSimplifier.BlendShape::Frames
-	BlendShapeFrameU5BU5D_t703126791* ___Frames_1;
-
-public:
-	inline static int32_t get_offset_of_ShapeName_0() { return static_cast<int32_t>(offsetof(BlendShape_t3811919835, ___ShapeName_0)); }
-	inline String_t* get_ShapeName_0() const { return ___ShapeName_0; }
-	inline String_t** get_address_of_ShapeName_0() { return &___ShapeName_0; }
-	inline void set_ShapeName_0(String_t* value)
-	{
-		___ShapeName_0 = value;
-		Il2CppCodeGenWriteBarrier((&___ShapeName_0), value);
-	}
-
-	inline static int32_t get_offset_of_Frames_1() { return static_cast<int32_t>(offsetof(BlendShape_t3811919835, ___Frames_1)); }
-	inline BlendShapeFrameU5BU5D_t703126791* get_Frames_1() const { return ___Frames_1; }
-	inline BlendShapeFrameU5BU5D_t703126791** get_address_of_Frames_1() { return &___Frames_1; }
-	inline void set_Frames_1(BlendShapeFrameU5BU5D_t703126791* value)
-	{
-		___Frames_1 = value;
-		Il2CppCodeGenWriteBarrier((&___Frames_1), value);
-	}
-};
-
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-// Native definition for P/Invoke marshalling of UnityMeshSimplifier.BlendShape
-struct BlendShape_t3811919835_marshaled_pinvoke
-{
-	char* ___ShapeName_0;
-	BlendShapeFrame_t949214962_marshaled_pinvoke* ___Frames_1;
-};
-// Native definition for COM marshalling of UnityMeshSimplifier.BlendShape
-struct BlendShape_t3811919835_marshaled_com
-{
-	Il2CppChar* ___ShapeName_0;
-	BlendShapeFrame_t949214962_marshaled_com* ___Frames_1;
-};
-#endif // BLENDSHAPE_T3811919835_H
 #ifndef BLENDSHAPEFRAME_T949214962_H
 #define BLENDSHAPEFRAME_T949214962_H
 #ifdef __clang__
@@ -39044,6 +39036,73 @@ extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m2575116201_
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Void System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>::Dispose()
+extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1_Dispose_m4211742070_gshared (EmptyInternalEnumerator_1_t4129589574 * __this, const RuntimeMethod* method)
+{
+	{
+		return;
+	}
+}
+// System.Boolean System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>::MoveNext()
+extern "C" IL2CPP_METHOD_ATTR bool EmptyInternalEnumerator_1_MoveNext_m1256724950_gshared (EmptyInternalEnumerator_1_t4129589574 * __this, const RuntimeMethod* method)
+{
+	{
+		return (bool)0;
+	}
+}
+// T System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>::get_Current()
+extern "C" IL2CPP_METHOD_ATTR Resolution_t2487619763  EmptyInternalEnumerator_1_get_Current_m772300616_gshared (EmptyInternalEnumerator_1_t4129589574 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (EmptyInternalEnumerator_1_get_Current_m772300616_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		InvalidOperationException_t56020091 * L_0 = (InvalidOperationException_t56020091 *)il2cpp_codegen_object_new(InvalidOperationException_t56020091_il2cpp_TypeInfo_var);
+		InvalidOperationException__ctor_m237278729(L_0, (String_t*)_stringLiteral2287514662, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, EmptyInternalEnumerator_1_get_Current_m772300616_RuntimeMethod_var);
+	}
+}
+// System.Object System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>::System.Collections.IEnumerator.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * EmptyInternalEnumerator_1_System_Collections_IEnumerator_get_Current_m597178517_gshared (EmptyInternalEnumerator_1_t4129589574 * __this, const RuntimeMethod* method)
+{
+	{
+		NullCheck((EmptyInternalEnumerator_1_t4129589574 *)__this);
+		Resolution_t2487619763  L_0 = ((  Resolution_t2487619763  (*) (EmptyInternalEnumerator_1_t4129589574 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 0)->methodPointer)((EmptyInternalEnumerator_1_t4129589574 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 0));
+		Resolution_t2487619763  L_1 = L_0;
+		RuntimeObject * L_2 = Box(IL2CPP_RGCTX_DATA(method->klass->rgctx_data, 1), &L_1);
+		return L_2;
+	}
+}
+// System.Void System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__ctor_m3830001302_gshared (EmptyInternalEnumerator_1_t4129589574 * __this, const RuntimeMethod* method)
+{
+	{
+		NullCheck((RuntimeObject *)__this);
+		Object__ctor_m297566312((RuntimeObject *)__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Void System.Array/EmptyInternalEnumerator`1<UnityEngine.Resolution>::.cctor()
+extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m1746916545_gshared (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	{
+		EmptyInternalEnumerator_1_t4129589574 * L_0 = (EmptyInternalEnumerator_1_t4129589574 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 2));
+		((  void (*) (EmptyInternalEnumerator_1_t4129589574 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3)->methodPointer)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3));
+		((EmptyInternalEnumerator_1_t4129589574_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->set_Value_0(L_0);
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // System.Void System.Array/EmptyInternalEnumerator`1<UnityEngine.SendMouseEvents/HitInfo>::Dispose()
 extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1_Dispose_m1903337225_gshared (EmptyInternalEnumerator_1_t576612255 * __this, const RuntimeMethod* method)
 {
@@ -40708,73 +40767,6 @@ extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m372497633_g
 		EmptyInternalEnumerator_1_t666031452 * L_0 = (EmptyInternalEnumerator_1_t666031452 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 2));
 		((  void (*) (EmptyInternalEnumerator_1_t666031452 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3)->methodPointer)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3));
 		((EmptyInternalEnumerator_1_t666031452_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->set_Value_0(L_0);
-		return;
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>::Dispose()
-extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1_Dispose_m2313346383_gshared (EmptyInternalEnumerator_1_t1158922350 * __this, const RuntimeMethod* method)
-{
-	{
-		return;
-	}
-}
-// System.Boolean System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>::MoveNext()
-extern "C" IL2CPP_METHOD_ATTR bool EmptyInternalEnumerator_1_MoveNext_m223437889_gshared (EmptyInternalEnumerator_1_t1158922350 * __this, const RuntimeMethod* method)
-{
-	{
-		return (bool)0;
-	}
-}
-// T System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>::get_Current()
-extern "C" IL2CPP_METHOD_ATTR BlendShape_t3811919835  EmptyInternalEnumerator_1_get_Current_m1551137476_gshared (EmptyInternalEnumerator_1_t1158922350 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (EmptyInternalEnumerator_1_get_Current_m1551137476_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		InvalidOperationException_t56020091 * L_0 = (InvalidOperationException_t56020091 *)il2cpp_codegen_object_new(InvalidOperationException_t56020091_il2cpp_TypeInfo_var);
-		InvalidOperationException__ctor_m237278729(L_0, (String_t*)_stringLiteral2287514662, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, EmptyInternalEnumerator_1_get_Current_m1551137476_RuntimeMethod_var);
-	}
-}
-// System.Object System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>::System.Collections.IEnumerator.get_Current()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject * EmptyInternalEnumerator_1_System_Collections_IEnumerator_get_Current_m3586273924_gshared (EmptyInternalEnumerator_1_t1158922350 * __this, const RuntimeMethod* method)
-{
-	{
-		NullCheck((EmptyInternalEnumerator_1_t1158922350 *)__this);
-		BlendShape_t3811919835  L_0 = ((  BlendShape_t3811919835  (*) (EmptyInternalEnumerator_1_t1158922350 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 0)->methodPointer)((EmptyInternalEnumerator_1_t1158922350 *)__this, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(method->klass->rgctx_data, 0));
-		BlendShape_t3811919835  L_1 = L_0;
-		RuntimeObject * L_2 = Box(IL2CPP_RGCTX_DATA(method->klass->rgctx_data, 1), &L_1);
-		return L_2;
-	}
-}
-// System.Void System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__ctor_m770712748_gshared (EmptyInternalEnumerator_1_t1158922350 * __this, const RuntimeMethod* method)
-{
-	{
-		NullCheck((RuntimeObject *)__this);
-		Object__ctor_m297566312((RuntimeObject *)__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Void System.Array/EmptyInternalEnumerator`1<UnityMeshSimplifier.BlendShape>::.cctor()
-extern "C" IL2CPP_METHOD_ATTR void EmptyInternalEnumerator_1__cctor_m766203961_gshared (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
-{
-	{
-		EmptyInternalEnumerator_1_t1158922350 * L_0 = (EmptyInternalEnumerator_1_t1158922350 *)il2cpp_codegen_object_new(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 2));
-		((  void (*) (EmptyInternalEnumerator_1_t1158922350 *, const RuntimeMethod*))IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3)->methodPointer)(L_0, /*hidden argument*/IL2CPP_RGCTX_METHOD_INFO(InitializedTypeInfo(method->klass)->rgctx_data, 3));
-		((EmptyInternalEnumerator_1_t1158922350_StaticFields*)il2cpp_codegen_static_fields_for(IL2CPP_RGCTX_DATA(InitializedTypeInfo(method->klass)->rgctx_data, 4)))->set_Value_0(L_0);
 		return;
 	}
 }

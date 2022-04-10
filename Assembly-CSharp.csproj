@@ -198,6 +198,7 @@
      <Compile Include="Assets\Script\Tools\GC_Manager.cs" />
      <Compile Include="Assets\Script\Tools\GetDeviceModel.cs" />
      <Compile Include="Assets\Script\Tools\PostProcessingManager.cs" />
+     <Compile Include="Assets\Script\Tools\Res.cs" />
      <Compile Include="Assets\Script\Tools\Rotate_Object.cs" />
      <Compile Include="Assets\Script\Tools\SetShadowResolution.cs" />
      <Compile Include="Assets\Script\UI\FadeIn.cs" />

@@ -376,3 +376,4 @@ eb565135f5b2f106ea4734c3cad2730e Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 22d012272156bc74a9b9b7425ffabdd9 Assembly-CSharp.dll:.SceneLoader
 e958cc1ee46a616a6e0cde964bfe9918 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 aae9893fc05b6c8cba8317ed327be0c4 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
+9fcb2fae12c9a885e572f33731d12a60 Assembly-CSharp.dll:.Res

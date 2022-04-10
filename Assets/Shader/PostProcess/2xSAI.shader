@@ -42,8 +42,8 @@
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				half2 offset = _MainTex_TexelSize.xy * 0.25h;
-				o.uv1 = half4(v.uv - offset, v.uv + offset);
+				half2 offset = _MainTex_TexelSize.xy * 0.5h;
+				o.uv1 = half4(v.uv + offset, v.uv + offset);
 				return o;
 			}
 			
@@ -52,17 +52,17 @@
 				// sample the texture
 				half4 col = tex2D(_MainTex, i.uv);
 				half2 texsize = Vector(_TextureSize.x, _TextureSize.y,0,0).xy;
-				half dx = pow(texsize.x, -1.0h) * 0.60h;
-				half dy = pow(texsize.y, -1.0h) * 0.75h;
-				half3 dt = half3(1.0h, 1.0h, 1.0h);
+				half dx = pow(texsize.x, -1.0h) * 0.6h;
+				half dy = pow(texsize.y, -1.0h) * 0.6h;
+				half3 dt = half3(1.0h,1.0h,1.0h);
 
-				half3 c00 = tex2D(_MainTex, i.uv + half2(-dx, -dy)).xyz;
-				half3 c20 = tex2D(_MainTex, i.uv1 + half2(dx, -dy)).xyz;
-				half3 c02 = tex2D(_MainTex, i.uv + half2(-dx, dy)).xyz;
+				half3 c00 = tex2D(_MainTex, i.uv1 + half2(-dx, -dy)).xyz;
+				half3 c20 = tex2D(_MainTex, half2(dx + i.uv1.x, -dy + i.uv1.y)).xyz;
+				half3 c02 = tex2D(_MainTex, half2(-dx + i.uv1.x, dy + i.uv1.y)).xyz;
 				half3 c22 = tex2D(_MainTex, i.uv1 + half2(dx, dy)).xyz;
 
-				half m1=dot(abs(c00-c22),dt)+0.01h;
-				half m2=dot(abs(c02-c20),dt)+0.011h;
+				half m1=dot(abs(c00-c22),dt)+0.001h;
+				half m2=dot(abs(c02-c20),dt)+0.001h;
 				col = half4((m1*(c02+c20)+m2*(c22+c00))/(2.0h*(m1+m2)),1.0h);
 
 				return col;

@@ -440,6 +440,8 @@ struct RenderBufferStoreActionU5BU5D_t2825152535;
 struct RenderTargetIdentifierU5BU5D_t2742279485;
 // UnityEngine.RequireComponent
 struct RequireComponent_t3490506609;
+// UnityEngine.Resolution[]
+struct ResolutionU5BU5D_t290426658;
 // UnityEngine.RuntimeInitializeOnLoadMethodAttribute
 struct RuntimeInitializeOnLoadMethodAttribute_t3192313494;
 // UnityEngine.ScriptableObject
@@ -601,6 +603,7 @@ extern String_t* _stringLiteral1421022474;
 extern String_t* _stringLiteral1464230170;
 extern String_t* _stringLiteral1504445675;
 extern String_t* _stringLiteral1552523976;
+extern String_t* _stringLiteral158126097;
 extern String_t* _stringLiteral1625510709;
 extern String_t* _stringLiteral1641435443;
 extern String_t* _stringLiteral1660887176;
@@ -817,6 +820,7 @@ extern const uint32_t RenderTextureDescriptor__cctor_m3115061957_MetadataUsageId
 extern const uint32_t RenderTextureDescriptor_get_depthBufferBits_m2160829816_MetadataUsageId;
 extern const uint32_t RenderTexture_ValidateRenderTextureDesc_m1651269986_MetadataUsageId;
 extern const uint32_t RenderTexture__ctor_m2281969544_MetadataUsageId;
+extern const uint32_t Resolution_ToString_m1790511863_MetadataUsageId;
 extern const uint32_t Sampler_GetRecorder_m2085211347_MetadataUsageId;
 extern const uint32_t Sampler_Get_m3583000346_MetadataUsageId;
 extern const uint32_t Sampler__cctor_m1956704057_MetadataUsageId;
@@ -986,6 +990,7 @@ struct MaterialU5BU5D_t561872642;
 struct RenderBufferLoadActionU5BU5D_t648152252;
 struct RenderBufferStoreActionU5BU5D_t2825152535;
 struct RenderTargetIdentifierU5BU5D_t2742279485;
+struct ResolutionU5BU5D_t290426658;
 struct HitInfoU5BU5D_t1685002053;
 struct TransformU5BU5D_t807237628;
 struct Vector3U5BU5D_t1718750761;
@@ -4782,6 +4787,55 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // REQUIRECOMPONENT_T3490506609_H
+#ifndef RESOLUTION_T2487619763_H
+#define RESOLUTION_T2487619763_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// UnityEngine.Resolution
+struct  Resolution_t2487619763 
+{
+public:
+	// System.Int32 UnityEngine.Resolution::m_Width
+	int32_t ___m_Width_0;
+	// System.Int32 UnityEngine.Resolution::m_Height
+	int32_t ___m_Height_1;
+	// System.Int32 UnityEngine.Resolution::m_RefreshRate
+	int32_t ___m_RefreshRate_2;
+
+public:
+	inline static int32_t get_offset_of_m_Width_0() { return static_cast<int32_t>(offsetof(Resolution_t2487619763, ___m_Width_0)); }
+	inline int32_t get_m_Width_0() const { return ___m_Width_0; }
+	inline int32_t* get_address_of_m_Width_0() { return &___m_Width_0; }
+	inline void set_m_Width_0(int32_t value)
+	{
+		___m_Width_0 = value;
+	}
+
+	inline static int32_t get_offset_of_m_Height_1() { return static_cast<int32_t>(offsetof(Resolution_t2487619763, ___m_Height_1)); }
+	inline int32_t get_m_Height_1() const { return ___m_Height_1; }
+	inline int32_t* get_address_of_m_Height_1() { return &___m_Height_1; }
+	inline void set_m_Height_1(int32_t value)
+	{
+		___m_Height_1 = value;
+	}
+
+	inline static int32_t get_offset_of_m_RefreshRate_2() { return static_cast<int32_t>(offsetof(Resolution_t2487619763, ___m_RefreshRate_2)); }
+	inline int32_t get_m_RefreshRate_2() const { return ___m_RefreshRate_2; }
+	inline int32_t* get_address_of_m_RefreshRate_2() { return &___m_RefreshRate_2; }
+	inline void set_m_RefreshRate_2(int32_t value)
+	{
+		___m_RefreshRate_2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // RESOLUTION_T2487619763_H
 #ifndef SCENE_T2348375561_H
 #define SCENE_T2348375561_H
 #ifdef __clang__
@@ -11190,6 +11244,41 @@ public:
 		m_Items[index] = value;
 	}
 };
+// UnityEngine.Resolution[]
+struct ResolutionU5BU5D_t290426658  : public RuntimeArray
+{
+public:
+	ALIGN_FIELD (8) Resolution_t2487619763  m_Items[1];
+
+public:
+	inline Resolution_t2487619763  GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline Resolution_t2487619763 * GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, Resolution_t2487619763  value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+	}
+	inline Resolution_t2487619763  GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline Resolution_t2487619763 * GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, Resolution_t2487619763  value)
+	{
+		m_Items[index] = value;
+	}
+};
 // UnityEngine.Camera[]
 struct CameraU5BU5D_t1709987734  : public RuntimeArray
 {
@@ -12181,6 +12270,12 @@ extern "C" IL2CPP_METHOD_ATTR int32_t RenderTargetIdentifier_GetHashCode_m196115
 extern "C" IL2CPP_METHOD_ATTR bool RenderTargetIdentifier_Equals_m4153726175 (RenderTargetIdentifier_t2079184500 * __this, RenderTargetIdentifier_t2079184500  ___rhs0, const RuntimeMethod* method);
 // System.Boolean UnityEngine.Rendering.RenderTargetIdentifier::Equals(System.Object)
 extern "C" IL2CPP_METHOD_ATTR bool RenderTargetIdentifier_Equals_m1528828512 (RenderTargetIdentifier_t2079184500 * __this, RuntimeObject * ___obj0, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Resolution::get_width()
+extern "C" IL2CPP_METHOD_ATTR int32_t Resolution_get_width_m400677188 (Resolution_t2487619763 * __this, const RuntimeMethod* method);
+// System.Int32 UnityEngine.Resolution::get_height()
+extern "C" IL2CPP_METHOD_ATTR int32_t Resolution_get_height_m933996501 (Resolution_t2487619763 * __this, const RuntimeMethod* method);
+// System.String UnityEngine.Resolution::ToString()
+extern "C" IL2CPP_METHOD_ATTR String_t* Resolution_ToString_m1790511863 (Resolution_t2487619763 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Scripting.PreserveAttribute::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void PreserveAttribute__ctor_m1123812627 (PreserveAttribute_t1583619344 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.RuntimeInitializeOnLoadMethodAttribute::set_loadType(UnityEngine.RuntimeInitializeLoadType)
@@ -22117,6 +22212,105 @@ extern "C" IL2CPP_METHOD_ATTR void RequireComponent__ctor_m1154052627 (RequireCo
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
+// System.Int32 UnityEngine.Resolution::get_width()
+extern "C" IL2CPP_METHOD_ATTR int32_t Resolution_get_width_m400677188 (Resolution_t2487619763 * __this, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->get_m_Width_0();
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  int32_t Resolution_get_width_m400677188_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	Resolution_t2487619763 * _thisAdjusted = reinterpret_cast<Resolution_t2487619763 *>(__this + 1);
+	return Resolution_get_width_m400677188(_thisAdjusted, method);
+}
+// System.Int32 UnityEngine.Resolution::get_height()
+extern "C" IL2CPP_METHOD_ATTR int32_t Resolution_get_height_m933996501 (Resolution_t2487619763 * __this, const RuntimeMethod* method)
+{
+	int32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->get_m_Height_1();
+		V_0 = L_0;
+		goto IL_000d;
+	}
+
+IL_000d:
+	{
+		int32_t L_1 = V_0;
+		return L_1;
+	}
+}
+extern "C"  int32_t Resolution_get_height_m933996501_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	Resolution_t2487619763 * _thisAdjusted = reinterpret_cast<Resolution_t2487619763 *>(__this + 1);
+	return Resolution_get_height_m933996501(_thisAdjusted, method);
+}
+// System.String UnityEngine.Resolution::ToString()
+extern "C" IL2CPP_METHOD_ATTR String_t* Resolution_ToString_m1790511863 (Resolution_t2487619763 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (Resolution_ToString_m1790511863_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	String_t* V_0 = NULL;
+	{
+		ObjectU5BU5D_t2843939325* L_0 = (ObjectU5BU5D_t2843939325*)SZArrayNew(ObjectU5BU5D_t2843939325_il2cpp_TypeInfo_var, (uint32_t)3);
+		ObjectU5BU5D_t2843939325* L_1 = L_0;
+		int32_t L_2 = __this->get_m_Width_0();
+		int32_t L_3 = L_2;
+		RuntimeObject * L_4 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_3);
+		NullCheck(L_1);
+		ArrayElementTypeCheck (L_1, L_4);
+		(L_1)->SetAt(static_cast<il2cpp_array_size_t>(0), (RuntimeObject *)L_4);
+		ObjectU5BU5D_t2843939325* L_5 = L_1;
+		int32_t L_6 = __this->get_m_Height_1();
+		int32_t L_7 = L_6;
+		RuntimeObject * L_8 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_7);
+		NullCheck(L_5);
+		ArrayElementTypeCheck (L_5, L_8);
+		(L_5)->SetAt(static_cast<il2cpp_array_size_t>(1), (RuntimeObject *)L_8);
+		ObjectU5BU5D_t2843939325* L_9 = L_5;
+		int32_t L_10 = __this->get_m_RefreshRate_2();
+		int32_t L_11 = L_10;
+		RuntimeObject * L_12 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_11);
+		NullCheck(L_9);
+		ArrayElementTypeCheck (L_9, L_12);
+		(L_9)->SetAt(static_cast<il2cpp_array_size_t>(2), (RuntimeObject *)L_12);
+		String_t* L_13 = UnityString_Format_m261690510(NULL /*static, unused*/, _stringLiteral158126097, L_9, /*hidden argument*/NULL);
+		V_0 = L_13;
+		goto IL_0041;
+	}
+
+IL_0041:
+	{
+		String_t* L_14 = V_0;
+		return L_14;
+	}
+}
+extern "C"  String_t* Resolution_ToString_m1790511863_AdjustorThunk (RuntimeObject * __this, const RuntimeMethod* method)
+{
+	Resolution_t2487619763 * _thisAdjusted = reinterpret_cast<Resolution_t2487619763 *>(__this + 1);
+	return Resolution_ToString_m1790511863(_thisAdjusted, method);
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
 // Conversion methods for marshalling of: UnityEngine.ResourceRequest
 extern "C" void ResourceRequest_t3109103591_marshal_pinvoke(const ResourceRequest_t3109103591& unmarshaled, ResourceRequest_t3109103591_marshaled_pinvoke& marshaled)
 {
@@ -22691,6 +22885,16 @@ IL_0010:
 		Screen_SetResolution_m1868494096(NULL /*static, unused*/, G_B3_2, G_B3_1, G_B3_0, L_3, /*hidden argument*/NULL);
 		return;
 	}
+}
+// UnityEngine.Resolution[] UnityEngine.Screen::get_resolutions()
+extern "C" IL2CPP_METHOD_ATTR ResolutionU5BU5D_t290426658* Screen_get_resolutions_m1570439325 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method)
+{
+	typedef ResolutionU5BU5D_t290426658* (*Screen_get_resolutions_m1570439325_ftn) ();
+	static Screen_get_resolutions_m1570439325_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Screen_get_resolutions_m1570439325_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Screen::get_resolutions()");
+	ResolutionU5BU5D_t290426658* retVal = _il2cpp_icall_func();
+	return retVal;
 }
 #ifdef __clang__
 #pragma clang diagnostic pop

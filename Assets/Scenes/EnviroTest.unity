@@ -2596,7 +2596,6 @@ GameObject:
   - component: {fileID: 121908234}
   - component: {fileID: 121908238}
   - component: {fileID: 121908227}
-  - component: {fileID: 121908230}
   m_Layer: 10
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -2679,9 +2678,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableInternalResolution: 1
-  renderResolution: 2
+  renderResolution: 3
   screenResolution: 1
-  filterMode: 0
+  filterMode: 1
 --- !u!114 &121908228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2716,18 +2715,6 @@ MonoBehaviour:
   FastMode: 1
   material: {fileID: 2100000, guid: 7d363303b6fc57d468dc1793327b70b9, type: 2}
   cam: {fileID: 121908225}
---- !u!114 &121908230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78db79d5050703c488eb83f52f38a61d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: a8d8cc8d685905942a1319600b230365, type: 2}
 --- !u!124 &121908231
 Behaviour:
   m_ObjectHideFlags: 0
@@ -3748,7 +3735,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 960, y: 544}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
