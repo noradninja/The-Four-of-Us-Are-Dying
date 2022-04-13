@@ -1037,6 +1037,7 @@ extern const Il2CppType SaveManager_Inputs_t2402574047_0_0_0;
 extern const Il2CppType Menu_Manager_t102876996_0_0_0;
 extern const Il2CppType FastSSAO_t1400243781_0_0_0;
 extern const Il2CppType Bokeh_t660694511_0_0_0;
+extern const Il2CppType FXAA_t264094441_0_0_0;
 extern const Il2CppType Crepuscular_t186719810_0_0_0;
 extern const Il2CppType Fog_t1478163583_0_0_0;
 extern const Il2CppType EnemyController_t2191660454_0_0_0;
@@ -3948,6 +3949,8 @@ static const RuntimeType* GenInst_FastSSAO_t1400243781_0_0_0_Types[] = { (&FastS
 extern const Il2CppGenericInst GenInst_FastSSAO_t1400243781_0_0_0 = { 1, GenInst_FastSSAO_t1400243781_0_0_0_Types };
 static const RuntimeType* GenInst_Bokeh_t660694511_0_0_0_Types[] = { (&Bokeh_t660694511_0_0_0) };
 extern const Il2CppGenericInst GenInst_Bokeh_t660694511_0_0_0 = { 1, GenInst_Bokeh_t660694511_0_0_0_Types };
+static const RuntimeType* GenInst_FXAA_t264094441_0_0_0_Types[] = { (&FXAA_t264094441_0_0_0) };
+extern const Il2CppGenericInst GenInst_FXAA_t264094441_0_0_0 = { 1, GenInst_FXAA_t264094441_0_0_0_Types };
 static const RuntimeType* GenInst_Crepuscular_t186719810_0_0_0_Types[] = { (&Crepuscular_t186719810_0_0_0) };
 extern const Il2CppGenericInst GenInst_Crepuscular_t186719810_0_0_0 = { 1, GenInst_Crepuscular_t186719810_0_0_0_Types };
 static const RuntimeType* GenInst_Fog_t1478163583_0_0_0_Types[] = { (&Fog_t1478163583_0_0_0) };
@@ -4842,7 +4845,7 @@ static const RuntimeType* GenInst_VolumeParameter_1_t4078826557_0_0_0_Types[] = 
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t4078826557_0_0_0 = { 1, GenInst_VolumeParameter_1_t4078826557_0_0_0_Types };
 static const RuntimeType* GenInst_VolumeParameter_1_t2051106872_0_0_0_Types[] = { (&VolumeParameter_1_t2051106872_0_0_0) };
 extern const Il2CppGenericInst GenInst_VolumeParameter_1_t2051106872_0_0_0 = { 1, GenInst_VolumeParameter_1_t2051106872_0_0_0_Types };
-extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1700] = 
+extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1701] = 
 {
 	&GenInst_RuntimeObject_0_0_0,
 	&GenInst_String_t_0_0_0,
@@ -6097,6 +6100,7 @@ extern const Il2CppGenericInst* const g_Il2CppGenericInstTable[1700] =
 	&GenInst_Menu_Manager_t102876996_0_0_0,
 	&GenInst_FastSSAO_t1400243781_0_0_0,
 	&GenInst_Bokeh_t660694511_0_0_0,
+	&GenInst_FXAA_t264094441_0_0_0,
 	&GenInst_Crepuscular_t186719810_0_0_0,
 	&GenInst_Fog_t1478163583_0_0_0,
 	&GenInst_EnemyController_t2191660454_0_0_0,

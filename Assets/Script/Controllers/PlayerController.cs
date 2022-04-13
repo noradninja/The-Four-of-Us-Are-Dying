@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -221,11 +222,12 @@ public class PlayerController : MonoBehaviour
     }
     private void Keys()
     {
-
+        var name = "joystick button ";
+        var nameBuilder = new StringBuilder(name);
 ///////////////////////////Start/Select//////////////////////////////////////
 
 //pause
-        if (Input.GetKeyDown(VITA + START)  && !delayButton){
+        if (Input.GetKeyDown(nameBuilder.Append(START).ToString())  && !delayButton){
             if(!PauseManager.isPaused){
                 	StartCoroutine(FadeScreen(1 , 0.5F));
                     PauseManager.isPaused = true;
@@ -240,7 +242,7 @@ public class PlayerController : MonoBehaviour
 //select
         if (Input.GetKeyDown(VITA + SELECT))
         {   
-            
+          
         }
 
 ///////////////////////////DPad//////////////////////////////////////
@@ -274,23 +276,27 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetKeyDown(VITA + RIGHT)){//} && !delayButton){
-           // //enable/disable SSAO and UI text
-            // if (SSAOScript.GetComponent<SAI2x>().enabled){
-            //     // SSAOScript.GetComponent<FastSSAO>().enabled = false;
-            //     // BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
-            //     // SSAOScript.GetComponent<Crepuscular>().enabled = false;
-            //     SSAOScript.GetComponent<SAI2x>().enabled = false;
-            //     enabledText.GetComponent<Text>().color = Color.red;
-            //     enabledText.GetComponent<Text>().text = ("Disabled");
-            // }
-            // else {
-            //     // SSAOScript.GetComponent<FastSSAO>().enabled = true;
-            //     // BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-            //     // SSAOScript.GetComponent<Crepuscular>().enabled = true;
-            //     SSAOScript.GetComponent<SAI2x>().enabled = true;
-            //     enabledText.GetComponent<Text>().color = Color.green;
-            //     enabledText.GetComponent<Text>().text = ("Enabled");
-            // }
+           //enable/disable SSAO and UI text
+            if (SSAOScript.GetComponent<FXAA>().enabled){
+                // SSAOScript.GetComponent<FastSSAO>().enabled = false;
+                // BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
+                // SSAOScript.GetComponent<Crepuscular>().enabled = false;
+                SSAOScript.GetComponent<FXAA>().enabled = false;
+                enabledText.GetComponent<Text>().color = Color.red;
+                enabledText.GetComponent<Text>().text = ("Disabled");
+            }
+            else {
+                // SSAOScript.GetComponent<FastSSAO>().enabled = true;
+                // BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
+                // SSAOScript.GetComponent<Crepuscular>().enabled = true;
+                SSAOScript.GetComponent<FXAA>().enabled = true;
+                enabledText.GetComponent<Text>().color = Color.green;
+                enabledText.GetComponent<Text>().text = ("Enabled");
+            }
+        //     if(SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution){
+        //         SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution = false;
+        //    } 
+        //    else SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution = true;
         }
 
 ///////////////////////////Face Buttons//////////////////////////////////////

@@ -65,6 +65,8 @@ struct VirtActionInvoker2
 
 // Item_Enumerator
 struct Item_Enumerator_t3915226614;
+// Kino.Bokeh
+struct Bokeh_t660694511;
 // LoadManager_Inputs
 struct LoadManager_Inputs_t4203782917;
 // Menu_Manager
@@ -73,6 +75,8 @@ struct Menu_Manager_t102876996;
 struct SafeFileHandle_t2755812594;
 // PlayerController
 struct PlayerController_t2064355688;
+// PlayerController/<lerpFocalLength>c__IteratorC
+struct U3ClerpFocalLengthU3Ec__IteratorC_t1187840523;
 // PlayerController/<quickTurn>c__IteratorB
 struct U3CquickTurnU3Ec__IteratorB_t1321710792;
 // PlayerController/<rechargeFlashlight>c__Iterator9
@@ -880,6 +884,7 @@ extern String_t* _stringLiteral988731871;
 extern const RuntimeMethod* Action_1__ctor_m1040786011_RuntimeMethod_var;
 extern const RuntimeMethod* Comparison_1__ctor_m786672811_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponentInChildren_TisTextMeshProUGUI_t529313277_m2500490337_RuntimeMethod_var;
+extern const RuntimeMethod* Component_GetComponent_TisBokeh_t660694511_m1119545058_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponent_TisCamera_t4157153871_m1557787507_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponent_TisLight_t3756812086_m916313317_RuntimeMethod_var;
 extern const RuntimeMethod* Component_GetComponent_TisMeshFilter_t3523625662_m1770465678_RuntimeMethod_var;
@@ -979,6 +984,7 @@ extern const RuntimeMethod* U3CdelayU3Ec__Iterator0_Reset_m3495327985_RuntimeMet
 extern const RuntimeMethod* U3Cfade2U3Ec__Iterator3_Reset_m228208529_RuntimeMethod_var;
 extern const RuntimeMethod* U3Cfade3U3Ec__Iterator4_Reset_m1333964255_RuntimeMethod_var;
 extern const RuntimeMethod* U3CfadeU3Ec__Iterator2_Reset_m2908421060_RuntimeMethod_var;
+extern const RuntimeMethod* U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_RuntimeMethod_var;
 extern const RuntimeMethod* U3CquickTurnU3Ec__IteratorB_Reset_m2333376582_RuntimeMethod_var;
 extern const RuntimeMethod* U3CrechargeFlashlightU3Ec__Iterator9_Reset_m1686453206_RuntimeMethod_var;
 extern const RuntimeMethod* U3CrechargeStaminaU3Ec__Iterator8_Reset_m3699561692_RuntimeMethod_var;
@@ -1210,6 +1216,8 @@ extern const uint32_t U3CdelayU3Ec__Iterator0_Reset_m3495327985_MetadataUsageId;
 extern const uint32_t U3Cfade2U3Ec__Iterator3_Reset_m228208529_MetadataUsageId;
 extern const uint32_t U3Cfade3U3Ec__Iterator4_Reset_m1333964255_MetadataUsageId;
 extern const uint32_t U3CfadeU3Ec__Iterator2_Reset_m2908421060_MetadataUsageId;
+extern const uint32_t U3ClerpFocalLengthU3Ec__IteratorC_MoveNext_m707934386_MetadataUsageId;
+extern const uint32_t U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_MetadataUsageId;
 extern const uint32_t U3CquickTurnU3Ec__IteratorB_MoveNext_m682630555_MetadataUsageId;
 extern const uint32_t U3CquickTurnU3Ec__IteratorB_Reset_m2333376582_MetadataUsageId;
 extern const uint32_t U3CrechargeFlashlightU3Ec__Iterator9_MoveNext_m3536019288_MetadataUsageId;
@@ -1366,6 +1374,117 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // INVENTORYMANAGER_T1225487224_H
+#ifndef U3CLERPFOCALLENGTHU3EC__ITERATORC_T1187840523_H
+#define U3CLERPFOCALLENGTHU3EC__ITERATORC_T1187840523_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// PlayerController/<lerpFocalLength>c__IteratorC
+struct  U3ClerpFocalLengthU3Ec__IteratorC_t1187840523  : public RuntimeObject
+{
+public:
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorC::<time>__0
+	float ___U3CtimeU3E__0_0;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorC::duration
+	float ___duration_1;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorC::startValue
+	float ___startValue_2;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorC::endValue
+	float ___endValue_3;
+	// System.Single PlayerController/<lerpFocalLength>c__IteratorC::<currentValue>__1
+	float ___U3CcurrentValueU3E__1_4;
+	// PlayerController PlayerController/<lerpFocalLength>c__IteratorC::$this
+	PlayerController_t2064355688 * ___U24this_5;
+	// System.Object PlayerController/<lerpFocalLength>c__IteratorC::$current
+	RuntimeObject * ___U24current_6;
+	// System.Boolean PlayerController/<lerpFocalLength>c__IteratorC::$disposing
+	bool ___U24disposing_7;
+	// System.Int32 PlayerController/<lerpFocalLength>c__IteratorC::$PC
+	int32_t ___U24PC_8;
+
+public:
+	inline static int32_t get_offset_of_U3CtimeU3E__0_0() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___U3CtimeU3E__0_0)); }
+	inline float get_U3CtimeU3E__0_0() const { return ___U3CtimeU3E__0_0; }
+	inline float* get_address_of_U3CtimeU3E__0_0() { return &___U3CtimeU3E__0_0; }
+	inline void set_U3CtimeU3E__0_0(float value)
+	{
+		___U3CtimeU3E__0_0 = value;
+	}
+
+	inline static int32_t get_offset_of_duration_1() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___duration_1)); }
+	inline float get_duration_1() const { return ___duration_1; }
+	inline float* get_address_of_duration_1() { return &___duration_1; }
+	inline void set_duration_1(float value)
+	{
+		___duration_1 = value;
+	}
+
+	inline static int32_t get_offset_of_startValue_2() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___startValue_2)); }
+	inline float get_startValue_2() const { return ___startValue_2; }
+	inline float* get_address_of_startValue_2() { return &___startValue_2; }
+	inline void set_startValue_2(float value)
+	{
+		___startValue_2 = value;
+	}
+
+	inline static int32_t get_offset_of_endValue_3() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___endValue_3)); }
+	inline float get_endValue_3() const { return ___endValue_3; }
+	inline float* get_address_of_endValue_3() { return &___endValue_3; }
+	inline void set_endValue_3(float value)
+	{
+		___endValue_3 = value;
+	}
+
+	inline static int32_t get_offset_of_U3CcurrentValueU3E__1_4() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___U3CcurrentValueU3E__1_4)); }
+	inline float get_U3CcurrentValueU3E__1_4() const { return ___U3CcurrentValueU3E__1_4; }
+	inline float* get_address_of_U3CcurrentValueU3E__1_4() { return &___U3CcurrentValueU3E__1_4; }
+	inline void set_U3CcurrentValueU3E__1_4(float value)
+	{
+		___U3CcurrentValueU3E__1_4 = value;
+	}
+
+	inline static int32_t get_offset_of_U24this_5() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___U24this_5)); }
+	inline PlayerController_t2064355688 * get_U24this_5() const { return ___U24this_5; }
+	inline PlayerController_t2064355688 ** get_address_of_U24this_5() { return &___U24this_5; }
+	inline void set_U24this_5(PlayerController_t2064355688 * value)
+	{
+		___U24this_5 = value;
+		Il2CppCodeGenWriteBarrier((&___U24this_5), value);
+	}
+
+	inline static int32_t get_offset_of_U24current_6() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___U24current_6)); }
+	inline RuntimeObject * get_U24current_6() const { return ___U24current_6; }
+	inline RuntimeObject ** get_address_of_U24current_6() { return &___U24current_6; }
+	inline void set_U24current_6(RuntimeObject * value)
+	{
+		___U24current_6 = value;
+		Il2CppCodeGenWriteBarrier((&___U24current_6), value);
+	}
+
+	inline static int32_t get_offset_of_U24disposing_7() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___U24disposing_7)); }
+	inline bool get_U24disposing_7() const { return ___U24disposing_7; }
+	inline bool* get_address_of_U24disposing_7() { return &___U24disposing_7; }
+	inline void set_U24disposing_7(bool value)
+	{
+		___U24disposing_7 = value;
+	}
+
+	inline static int32_t get_offset_of_U24PC_8() { return static_cast<int32_t>(offsetof(U3ClerpFocalLengthU3Ec__IteratorC_t1187840523, ___U24PC_8)); }
+	inline int32_t get_U24PC_8() const { return ___U24PC_8; }
+	inline int32_t* get_address_of_U24PC_8() { return &___U24PC_8; }
+	inline void set_U24PC_8(int32_t value)
+	{
+		___U24PC_8 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // U3CLERPFOCALLENGTHU3EC__ITERATORC_T1187840523_H
 #ifndef U3CRECHARGESTAMINAU3EC__ITERATOR8_T123376659_H
 #define U3CRECHARGESTAMINAU3EC__ITERATOR8_T123376659_H
 #ifdef __clang__
@@ -8097,6 +8216,35 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // PICKUPITEM_T2990193834_H
+#ifndef KERNELSIZE_T1110659132_H
+#define KERNELSIZE_T1110659132_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Kino.Bokeh/KernelSize
+struct  KernelSize_t1110659132 
+{
+public:
+	// System.Int32 Kino.Bokeh/KernelSize::value__
+	int32_t ___value___2;
+
+public:
+	inline static int32_t get_offset_of_value___2() { return static_cast<int32_t>(offsetof(KernelSize_t1110659132, ___value___2)); }
+	inline int32_t get_value___2() const { return ___value___2; }
+	inline int32_t* get_address_of_value___2() { return &___value___2; }
+	inline void set_value___2(int32_t value)
+	{
+		___value___2 = value;
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // KERNELSIZE_T1110659132_H
 #ifndef U3CQUICKTURNU3EC__ITERATORB_T1321710792_H
 #define U3CQUICKTURNU3EC__ITERATORB_T1321710792_H
 #ifdef __clang__
@@ -16960,6 +17108,108 @@ public:
 #pragma clang diagnostic pop
 #endif
 #endif // ITEM_ENUMERATOR_T3915226614_H
+#ifndef BOKEH_T660694511_H
+#define BOKEH_T660694511_H
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+
+// Kino.Bokeh
+struct  Bokeh_t660694511  : public MonoBehaviour_t3962482529
+{
+public:
+	// UnityEngine.Transform Kino.Bokeh::_pointOfFocus
+	Transform_t3600365921 * ____pointOfFocus_4;
+	// System.Single Kino.Bokeh::_focusDistance
+	float ____focusDistance_5;
+	// System.Single Kino.Bokeh::_fNumber
+	float ____fNumber_6;
+	// System.Boolean Kino.Bokeh::_useCameraFov
+	bool ____useCameraFov_7;
+	// System.Single Kino.Bokeh::_focalLength
+	float ____focalLength_8;
+	// Kino.Bokeh/KernelSize Kino.Bokeh::_kernelSize
+	int32_t ____kernelSize_9;
+	// UnityEngine.Shader Kino.Bokeh::_shader
+	Shader_t4151988712 * ____shader_11;
+	// UnityEngine.Material Kino.Bokeh::_material
+	Material_t340375123 * ____material_12;
+
+public:
+	inline static int32_t get_offset_of__pointOfFocus_4() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____pointOfFocus_4)); }
+	inline Transform_t3600365921 * get__pointOfFocus_4() const { return ____pointOfFocus_4; }
+	inline Transform_t3600365921 ** get_address_of__pointOfFocus_4() { return &____pointOfFocus_4; }
+	inline void set__pointOfFocus_4(Transform_t3600365921 * value)
+	{
+		____pointOfFocus_4 = value;
+		Il2CppCodeGenWriteBarrier((&____pointOfFocus_4), value);
+	}
+
+	inline static int32_t get_offset_of__focusDistance_5() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____focusDistance_5)); }
+	inline float get__focusDistance_5() const { return ____focusDistance_5; }
+	inline float* get_address_of__focusDistance_5() { return &____focusDistance_5; }
+	inline void set__focusDistance_5(float value)
+	{
+		____focusDistance_5 = value;
+	}
+
+	inline static int32_t get_offset_of__fNumber_6() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____fNumber_6)); }
+	inline float get__fNumber_6() const { return ____fNumber_6; }
+	inline float* get_address_of__fNumber_6() { return &____fNumber_6; }
+	inline void set__fNumber_6(float value)
+	{
+		____fNumber_6 = value;
+	}
+
+	inline static int32_t get_offset_of__useCameraFov_7() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____useCameraFov_7)); }
+	inline bool get__useCameraFov_7() const { return ____useCameraFov_7; }
+	inline bool* get_address_of__useCameraFov_7() { return &____useCameraFov_7; }
+	inline void set__useCameraFov_7(bool value)
+	{
+		____useCameraFov_7 = value;
+	}
+
+	inline static int32_t get_offset_of__focalLength_8() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____focalLength_8)); }
+	inline float get__focalLength_8() const { return ____focalLength_8; }
+	inline float* get_address_of__focalLength_8() { return &____focalLength_8; }
+	inline void set__focalLength_8(float value)
+	{
+		____focalLength_8 = value;
+	}
+
+	inline static int32_t get_offset_of__kernelSize_9() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____kernelSize_9)); }
+	inline int32_t get__kernelSize_9() const { return ____kernelSize_9; }
+	inline int32_t* get_address_of__kernelSize_9() { return &____kernelSize_9; }
+	inline void set__kernelSize_9(int32_t value)
+	{
+		____kernelSize_9 = value;
+	}
+
+	inline static int32_t get_offset_of__shader_11() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____shader_11)); }
+	inline Shader_t4151988712 * get__shader_11() const { return ____shader_11; }
+	inline Shader_t4151988712 ** get_address_of__shader_11() { return &____shader_11; }
+	inline void set__shader_11(Shader_t4151988712 * value)
+	{
+		____shader_11 = value;
+		Il2CppCodeGenWriteBarrier((&____shader_11), value);
+	}
+
+	inline static int32_t get_offset_of__material_12() { return static_cast<int32_t>(offsetof(Bokeh_t660694511, ____material_12)); }
+	inline Material_t340375123 * get__material_12() const { return ____material_12; }
+	inline Material_t340375123 ** get_address_of__material_12() { return &____material_12; }
+	inline void set__material_12(Material_t340375123 * value)
+	{
+		____material_12 = value;
+		Il2CppCodeGenWriteBarrier((&____material_12), value);
+	}
+};
+
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#endif // BOKEH_T660694511_H
 #ifndef LOADMANAGER_INPUTS_T4203782917_H
 #define LOADMANAGER_INPUTS_T4203782917_H
 #ifdef __clang__
@@ -28889,6 +29139,8 @@ public:
 };
 
 
+// !!0 UnityEngine.Component::GetComponent<System.Object>()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Component_GetComponent_TisRuntimeObject_m2906321015_gshared (Component_t1923634451 * __this, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::GetComponent<System.Object>()
 extern "C" IL2CPP_METHOD_ATTR RuntimeObject * GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared (GameObject_t1113636619 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
@@ -28909,8 +29161,6 @@ extern "C" IL2CPP_METHOD_ATTR RuntimeObject * List_1_get_Item_m1328026504_gshare
 extern "C" IL2CPP_METHOD_ATTR void List_1_Clear_m3697625829_gshared (List_1_t257213610 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Object>::Add(!0)
 extern "C" IL2CPP_METHOD_ATTR void List_1_Add_m3338814081_gshared (List_1_t257213610 * __this, RuntimeObject * p0, const RuntimeMethod* method);
-// !!0 UnityEngine.Component::GetComponent<System.Object>()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject * Component_GetComponent_TisRuntimeObject_m2906321015_gshared (Component_t1923634451 * __this, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Object>::AddRange(System.Collections.Generic.IEnumerable`1<!0>)
 extern "C" IL2CPP_METHOD_ATTR void List_1_AddRange_m614412439_gshared (List_1_t257213610 * __this, RuntimeObject* p0, const RuntimeMethod* method);
 // System.Void System.Collections.Generic.List`1<System.Int32>::Add(!0)
@@ -28982,20 +29232,27 @@ extern "C" IL2CPP_METHOD_ATTR void UnityEvent_3__ctor_m3959046166_gshared (Unity
 
 // System.Void System.Object::.ctor()
 extern "C" IL2CPP_METHOD_ATTR void Object__ctor_m297566312 (RuntimeObject * __this, const RuntimeMethod* method);
+// System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
+extern "C" IL2CPP_METHOD_ATTR float Mathf_Lerp_m1004423579 (RuntimeObject * __this /* static, unused */, float p0, float p1, float p2, const RuntimeMethod* method);
+// !!0 UnityEngine.Component::GetComponent<Kino.Bokeh>()
+inline Bokeh_t660694511 * Component_GetComponent_TisBokeh_t660694511_m1119545058 (Component_t1923634451 * __this, const RuntimeMethod* method)
+{
+	return ((  Bokeh_t660694511 * (*) (Component_t1923634451 *, const RuntimeMethod*))Component_GetComponent_TisRuntimeObject_m2906321015_gshared)(__this, method);
+}
+// System.Void Kino.Bokeh::set_focalLength(System.Single)
+extern "C" IL2CPP_METHOD_ATTR void Bokeh_set_focalLength_m2677680673 (Bokeh_t660694511 * __this, float ___value0, const RuntimeMethod* method);
+// System.Single UnityEngine.Time::get_deltaTime()
+extern "C" IL2CPP_METHOD_ATTR float Time_get_deltaTime_m372706562 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
+// System.Void System.NotSupportedException::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m2730133172 (NotSupportedException_t1314879016 * __this, const RuntimeMethod* method);
 // UnityEngine.Vector3 UnityEngine.Vector3::Lerp(UnityEngine.Vector3,UnityEngine.Vector3,System.Single)
 extern "C" IL2CPP_METHOD_ATTR Vector3_t3722313464  Vector3_Lerp_m407887542 (RuntimeObject * __this /* static, unused */, Vector3_t3722313464  p0, Vector3_t3722313464  p1, float p2, const RuntimeMethod* method);
 // UnityEngine.Transform UnityEngine.Component::get_transform()
 extern "C" IL2CPP_METHOD_ATTR Transform_t3600365921 * Component_get_transform_m3162698980 (Component_t1923634451 * __this, const RuntimeMethod* method);
 // System.Void UnityEngine.Transform::set_eulerAngles(UnityEngine.Vector3)
 extern "C" IL2CPP_METHOD_ATTR void Transform_set_eulerAngles_m135219616 (Transform_t3600365921 * __this, Vector3_t3722313464  p0, const RuntimeMethod* method);
-// System.Single UnityEngine.Time::get_deltaTime()
-extern "C" IL2CPP_METHOD_ATTR float Time_get_deltaTime_m372706562 (RuntimeObject * __this /* static, unused */, const RuntimeMethod* method);
 // System.Void UnityEngine.WaitForSeconds::.ctor(System.Single)
 extern "C" IL2CPP_METHOD_ATTR void WaitForSeconds__ctor_m2199082655 (WaitForSeconds_t1699091251 * __this, float p0, const RuntimeMethod* method);
-// System.Void System.NotSupportedException::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void NotSupportedException__ctor_m2730133172 (NotSupportedException_t1314879016 * __this, const RuntimeMethod* method);
-// System.Single UnityEngine.Mathf::Lerp(System.Single,System.Single,System.Single)
-extern "C" IL2CPP_METHOD_ATTR float Mathf_Lerp_m1004423579 (RuntimeObject * __this /* static, unused */, float p0, float p1, float p2, const RuntimeMethod* method);
 // !!0 UnityEngine.GameObject::GetComponent<UnityEngine.UI.Image>()
 inline Image_t2670269651 * GameObject_GetComponent_TisImage_t2670269651_m2486712510 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
 {
@@ -30284,6 +30541,166 @@ extern "C" IL2CPP_METHOD_ATTR void Camera_set_depthTextureMode_m754977860 (Camer
 extern "C" IL2CPP_METHOD_ATTR void GL_TexCoord2_m3805673132 (RuntimeObject * __this /* static, unused */, float p0, float p1, const RuntimeMethod* method);
 // System.Int32 UnityEngine.Material::get_passCount()
 extern "C" IL2CPP_METHOD_ATTR int32_t Material_get_passCount_m3995310840 (Material_t340375123 * __this, const RuntimeMethod* method);
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void PlayerController/<lerpFocalLength>c__IteratorC::.ctor()
+extern "C" IL2CPP_METHOD_ATTR void U3ClerpFocalLengthU3Ec__IteratorC__ctor_m3772706424 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
+{
+	{
+		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
+		return;
+	}
+}
+// System.Boolean PlayerController/<lerpFocalLength>c__IteratorC::MoveNext()
+extern "C" IL2CPP_METHOD_ATTR bool U3ClerpFocalLengthU3Ec__IteratorC_MoveNext_m707934386 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3ClerpFocalLengthU3Ec__IteratorC_MoveNext_m707934386_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	uint32_t V_0 = 0;
+	{
+		int32_t L_0 = __this->get_U24PC_8();
+		V_0 = L_0;
+		__this->set_U24PC_8((-1));
+		uint32_t L_1 = V_0;
+		switch (L_1)
+		{
+			case 0:
+			{
+				goto IL_0021;
+			}
+			case 1:
+			{
+				goto IL_00a3;
+			}
+		}
+	}
+	{
+		goto IL_00d6;
+	}
+
+IL_0021:
+	{
+		__this->set_U3CtimeU3E__0_0((0.0f));
+		goto IL_00a3;
+	}
+
+IL_0031:
+	{
+		float L_2 = __this->get_startValue_2();
+		float L_3 = __this->get_endValue_3();
+		float L_4 = __this->get_U3CtimeU3E__0_0();
+		float L_5 = __this->get_duration_1();
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
+		float L_6 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, L_2, L_3, ((float)((float)L_4/(float)((float)((float)L_5/(float)(4.0f))))), /*hidden argument*/NULL);
+		__this->set_U3CcurrentValueU3E__1_4(L_6);
+		PlayerController_t2064355688 * L_7 = __this->get_U24this_5();
+		NullCheck(L_7);
+		Transform_t3600365921 * L_8 = L_7->get_Camera_16();
+		NullCheck(L_8);
+		Bokeh_t660694511 * L_9 = Component_GetComponent_TisBokeh_t660694511_m1119545058(L_8, /*hidden argument*/Component_GetComponent_TisBokeh_t660694511_m1119545058_RuntimeMethod_var);
+		float L_10 = __this->get_U3CcurrentValueU3E__1_4();
+		NullCheck(L_9);
+		Bokeh_set_focalLength_m2677680673(L_9, L_10, /*hidden argument*/NULL);
+		float L_11 = __this->get_U3CtimeU3E__0_0();
+		float L_12 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set_U3CtimeU3E__0_0(((float)il2cpp_codegen_add((float)L_11, (float)L_12)));
+		__this->set_U24current_6(NULL);
+		bool L_13 = __this->get_U24disposing_7();
+		if (L_13)
+		{
+			goto IL_009e;
+		}
+	}
+	{
+		__this->set_U24PC_8(1);
+	}
+
+IL_009e:
+	{
+		goto IL_00d8;
+	}
+
+IL_00a3:
+	{
+		float L_14 = __this->get_U3CtimeU3E__0_0();
+		float L_15 = __this->get_duration_1();
+		if ((((float)L_14) < ((float)L_15)))
+		{
+			goto IL_0031;
+		}
+	}
+	{
+		PlayerController_t2064355688 * L_16 = __this->get_U24this_5();
+		NullCheck(L_16);
+		Transform_t3600365921 * L_17 = L_16->get_Camera_16();
+		NullCheck(L_17);
+		Bokeh_t660694511 * L_18 = Component_GetComponent_TisBokeh_t660694511_m1119545058(L_17, /*hidden argument*/Component_GetComponent_TisBokeh_t660694511_m1119545058_RuntimeMethod_var);
+		float L_19 = __this->get_endValue_3();
+		NullCheck(L_18);
+		Bokeh_set_focalLength_m2677680673(L_18, L_19, /*hidden argument*/NULL);
+		__this->set_U24PC_8((-1));
+	}
+
+IL_00d6:
+	{
+		return (bool)0;
+	}
+
+IL_00d8:
+	{
+		return (bool)1;
+	}
+}
+// System.Object PlayerController/<lerpFocalLength>c__IteratorC::System.Collections.Generic.IEnumerator<object>.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3ClerpFocalLengthU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3585430506 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_6();
+		return L_0;
+	}
+}
+// System.Object PlayerController/<lerpFocalLength>c__IteratorC::System.Collections.IEnumerator.get_Current()
+extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3ClerpFocalLengthU3Ec__IteratorC_System_Collections_IEnumerator_get_Current_m1836840896 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
+{
+	{
+		RuntimeObject * L_0 = __this->get_U24current_6();
+		return L_0;
+	}
+}
+// System.Void PlayerController/<lerpFocalLength>c__IteratorC::Dispose()
+extern "C" IL2CPP_METHOD_ATTR void U3ClerpFocalLengthU3Ec__IteratorC_Dispose_m1069663603 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
+{
+	{
+		__this->set_U24disposing_7((bool)1);
+		__this->set_U24PC_8((-1));
+		return;
+	}
+}
+// System.Void PlayerController/<lerpFocalLength>c__IteratorC::Reset()
+extern "C" IL2CPP_METHOD_ATTR void U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_method (U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_MetadataUsageId);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		NotSupportedException_t1314879016 * L_0 = (NotSupportedException_t1314879016 *)il2cpp_codegen_object_new(NotSupportedException_t1314879016_il2cpp_TypeInfo_var);
+		NotSupportedException__ctor_m2730133172(L_0, /*hidden argument*/NULL);
+		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_RuntimeMethod_var);
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"

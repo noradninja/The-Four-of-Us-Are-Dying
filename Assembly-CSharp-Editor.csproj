@@ -83,6 +83,16 @@
      <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PolyfewMenu.cs" />
      <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PopupToggleTemplate.cs" />
      <Compile Include="Assets\Addons\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\EnchanterEditor.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\BackendData\MyTreeElement.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\BackendData\MyTreeElementGenerator.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\BackendData\TreeViewWithTreeModel.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\MultiColumnTreeView.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\MultiColumnWindow.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\SimpleWindow.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\TreeDataModel\TreeElement.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\TreeDataModel\TreeElementUtility.cs" />
+     <Compile Include="Assets\CodeEnchanter\Editor\GUI\TreeDataModel\TreeModel.cs" />
      <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
      <Compile Include="Assets\Script\Editor\FOV_Render.cs" />
      <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
@@ -383,6 +393,12 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="EnchanterCore">
+ <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCore.dll</HintPath>
+ </Reference>
+ <Reference Include="EnchanterCommon">
+ <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCommon.dll</HintPath>
  </Reference>
  <Reference Include="mscorlib">
  <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

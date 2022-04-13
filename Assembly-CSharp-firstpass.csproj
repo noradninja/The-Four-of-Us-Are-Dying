@@ -392,6 +392,12 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
+ <Reference Include="EnchanterCore">
+ <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCore.dll</HintPath>
+ </Reference>
+ <Reference Include="EnchanterCommon">
+ <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCommon.dll</HintPath>
+ </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
  </Reference>

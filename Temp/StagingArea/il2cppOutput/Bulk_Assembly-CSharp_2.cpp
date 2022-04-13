@@ -794,6 +794,7 @@ extern String_t* _stringLiteral1149657675;
 extern String_t* _stringLiteral1177307133;
 extern String_t* _stringLiteral1180587857;
 extern String_t* _stringLiteral126224608;
+extern String_t* _stringLiteral1262762470;
 extern String_t* _stringLiteral1305173550;
 extern String_t* _stringLiteral1329212762;
 extern String_t* _stringLiteral1344543914;
@@ -978,6 +979,7 @@ extern const RuntimeMethod* GameObject_GetComponentInParent_TisEnemyController_t
 extern const RuntimeMethod* GameObject_GetComponent_TisAnimator_t434523843_m440019408_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisBokeh_t660694511_m969703322_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603_RuntimeMethod_var;
+extern const RuntimeMethod* GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisFastSSAO_t1400243781_m1663729539_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisFog_t1478163583_m1502070570_RuntimeMethod_var;
 extern const RuntimeMethod* GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var;
@@ -1061,7 +1063,6 @@ extern const RuntimeMethod* U3CfadeU3Ec__Iterator0_Reset_m3409782313_RuntimeMeth
 extern const RuntimeMethod* U3CfadeU3Ec__Iterator5_Reset_m153209239_RuntimeMethod_var;
 extern const RuntimeMethod* U3ChealLerpU3Ec__Iterator0_Reset_m3996507768_RuntimeMethod_var;
 extern const RuntimeMethod* U3ClerpCamU3Ec__Iterator4_Reset_m2580473112_RuntimeMethod_var;
-extern const RuntimeMethod* U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_RuntimeMethod_var;
 extern const RuntimeMethod* UnityAction_1__ctor_m1742195854_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_1_AddListener_m2268272923_RuntimeMethod_var;
 extern const RuntimeMethod* UnityEvent_1_RemoveListener_m2615492532_RuntimeMethod_var;
@@ -1288,8 +1289,6 @@ extern const uint32_t U3ChealLerpU3Ec__Iterator0_MoveNext_m3675004133_MetadataUs
 extern const uint32_t U3ChealLerpU3Ec__Iterator0_Reset_m3996507768_MetadataUsageId;
 extern const uint32_t U3ClerpCamU3Ec__Iterator4_MoveNext_m780945030_MetadataUsageId;
 extern const uint32_t U3ClerpCamU3Ec__Iterator4_Reset_m2580473112_MetadataUsageId;
-extern const uint32_t U3ClerpFocalLengthU3Ec__IteratorC_MoveNext_m707934386_MetadataUsageId;
-extern const uint32_t U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_MetadataUsageId;
 extern const uint32_t WorkPathFoundEvent__ctor_m724692328_MetadataUsageId;
 struct AnimationCurve_t3046754366_marshaled_com;
 struct Exception_t_marshaled_com;
@@ -34004,6 +34003,11 @@ inline Bokeh_t660694511 * GameObject_GetComponent_TisBokeh_t660694511_m969703322
 {
 	return ((  Bokeh_t660694511 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
 }
+// !!0 UnityEngine.GameObject::GetComponent<FXAA>()
+inline FXAA_t264094441 * GameObject_GetComponent_TisFXAA_t264094441_m3608635218 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
+{
+	return ((  FXAA_t264094441 * (*) (GameObject_t1113636619 *, const RuntimeMethod*))GameObject_GetComponent_TisRuntimeObject_m2049753423_gshared)(__this, method);
+}
 // !!0 UnityEngine.GameObject::GetComponent<Crepuscular>()
 inline Crepuscular_t186719810 * GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603 (GameObject_t1113636619 * __this, const RuntimeMethod* method)
 {
@@ -34145,8 +34149,6 @@ inline Bokeh_t660694511 * Component_GetComponent_TisBokeh_t660694511_m1119545058
 }
 // System.Single Kino.Bokeh::get_focalLength()
 extern "C" IL2CPP_METHOD_ATTR float Bokeh_get_focalLength_m911881709 (Bokeh_t660694511 * __this, const RuntimeMethod* method);
-// System.Void Kino.Bokeh::set_focalLength(System.Single)
-extern "C" IL2CPP_METHOD_ATTR void Bokeh_set_focalLength_m2677680673 (Bokeh_t660694511 * __this, float ___value0, const RuntimeMethod* method);
 #ifdef __clang__
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
@@ -45286,7 +45288,7 @@ extern "C" IL2CPP_METHOD_ATTR void Bokeh_SetUpShaderParameters_m1392163644 (Boke
 		RenderTexture_t2108887433 * L_23 = ___source0;
 		NullCheck(L_23);
 		int32_t L_24 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_23);
-		V_4 = ((float)((float)(((float)((float)L_22)))/(float)(((float)((float)L_24)))));
+		V_4 = ((float)((float)(((float)((float)((int32_t)((int32_t)L_22/(int32_t)2)))))/(float)(((float)((float)((int32_t)((int32_t)L_24/(int32_t)2)))))));
 		Material_t340375123 * L_25 = __this->get__material_12();
 		float L_26 = V_4;
 		NullCheck(L_25);
@@ -45485,11 +45487,11 @@ IL_002a:
 		RenderTexture_t2108887433 * L_5 = ___source0;
 		NullCheck(L_5);
 		int32_t L_6 = VirtFuncInvoker0< int32_t >::Invoke(4 /* System.Int32 UnityEngine.Texture::get_width() */, L_5);
-		V_0 = L_6;
+		V_0 = ((int32_t)((int32_t)L_6/(int32_t)2));
 		RenderTexture_t2108887433 * L_7 = ___source0;
 		NullCheck(L_7);
 		int32_t L_8 = VirtFuncInvoker0< int32_t >::Invoke(6 /* System.Int32 UnityEngine.Texture::get_height() */, L_7);
-		V_1 = L_8;
+		V_1 = ((int32_t)((int32_t)L_8/(int32_t)2));
 		V_2 = 2;
 		RenderTexture_t2108887433 * L_9 = ___source0;
 		Bokeh_SetUpShaderParameters_m1392163644(__this, L_9, /*hidden argument*/NULL);
@@ -47171,115 +47173,134 @@ extern "C" IL2CPP_METHOD_ATTR void Lightning_Manager_Update_m3359733818 (Lightni
 	SingleU5BU5D_t1444911251* V_1 = NULL;
 	int32_t V_2 = 0;
 	{
-		float L_0 = __this->get_currentUpdateTime_15();
-		float L_1 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_currentUpdateTime_15(((float)il2cpp_codegen_add((float)L_0, (float)L_1)));
-		float L_2 = __this->get_currentUpdateTime_15();
-		float L_3 = __this->get_step_5();
-		if ((!(((float)L_2) >= ((float)L_3))))
+		bool L_0 = ((PauseManager_t1166378904_StaticFields*)il2cpp_codegen_static_fields_for(PauseManager_t1166378904_il2cpp_TypeInfo_var))->get_isPaused_4();
+		if (L_0)
 		{
-			goto IL_0033;
+			goto IL_0194;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(Inventory_Screen_Manager_t2612322343_il2cpp_TypeInfo_var);
+		bool L_1 = ((Inventory_Screen_Manager_t2612322343_StaticFields*)il2cpp_codegen_static_fields_for(Inventory_Screen_Manager_t2612322343_il2cpp_TypeInfo_var))->get_inventoryOn_9();
+		if (L_1)
+		{
+			goto IL_0194;
+		}
+	}
+	{
+		float L_2 = __this->get_currentUpdateTime_15();
+		float L_3 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
+		__this->set_currentUpdateTime_15(((float)il2cpp_codegen_add((float)L_2, (float)L_3)));
+		float L_4 = __this->get_currentUpdateTime_15();
+		float L_5 = __this->get_step_5();
+		if ((!(((float)L_4) >= ((float)L_5))))
+		{
+			goto IL_0047;
 		}
 	}
 	{
 		__this->set_currentUpdateTime_15((0.0f));
-		goto IL_0045;
+		goto IL_0059;
 	}
 
-IL_0033:
+IL_0047:
 	{
-		float L_4 = __this->get_currentUpdateTime_15();
-		__this->set_currentUpdateTime_15(((float)il2cpp_codegen_add((float)L_4, (float)(0.1f))));
+		float L_6 = __this->get_currentUpdateTime_15();
+		__this->set_currentUpdateTime_15(((float)il2cpp_codegen_add((float)L_6, (float)(0.1f))));
 	}
 
-IL_0045:
+IL_0059:
 	{
-		AudioSource_t3935305588 * L_5 = __this->get_audioSource_4();
-		NullCheck(L_5);
-		AudioClip_t3680889665 * L_6 = AudioSource_get_clip_m1234340632(L_5, /*hidden argument*/NULL);
-		SingleU5BU5D_t1444911251* L_7 = __this->get_clipSampleData_14();
-		AudioSource_t3935305588 * L_8 = __this->get_audioSource_4();
+		AudioSource_t3935305588 * L_7 = __this->get_audioSource_4();
+		NullCheck(L_7);
+		AudioClip_t3680889665 * L_8 = AudioSource_get_clip_m1234340632(L_7, /*hidden argument*/NULL);
+		SingleU5BU5D_t1444911251* L_9 = __this->get_clipSampleData_14();
+		AudioSource_t3935305588 * L_10 = __this->get_audioSource_4();
+		NullCheck(L_10);
+		int32_t L_11 = AudioSource_get_timeSamples_m3096573545(L_10, /*hidden argument*/NULL);
 		NullCheck(L_8);
-		int32_t L_9 = AudioSource_get_timeSamples_m3096573545(L_8, /*hidden argument*/NULL);
-		NullCheck(L_6);
-		AudioClip_GetData_m1251334845(L_6, L_7, L_9, /*hidden argument*/NULL);
-		float L_10 = __this->get_clipLoudness_11();
-		__this->set_oldClipLoudness_12(L_10);
+		AudioClip_GetData_m1251334845(L_8, L_9, L_11, /*hidden argument*/NULL);
+		float L_12 = __this->get_clipLoudness_11();
+		__this->set_oldClipLoudness_12(L_12);
 		__this->set_clipLoudness_11((0.0f));
 		__this->set_clipLoudnessB_13((0.0f));
-		SingleU5BU5D_t1444911251* L_11 = __this->get_clipSampleData_14();
-		V_1 = L_11;
+		SingleU5BU5D_t1444911251* L_13 = __this->get_clipSampleData_14();
+		V_1 = L_13;
 		V_2 = 0;
-		goto IL_00c2;
+		goto IL_00d6;
 	}
 
-IL_0097:
+IL_00ab:
 	{
-		SingleU5BU5D_t1444911251* L_12 = V_1;
-		int32_t L_13 = V_2;
-		NullCheck(L_12);
-		int32_t L_14 = L_13;
-		float L_15 = (L_12)->GetAt(static_cast<il2cpp_array_size_t>(L_14));
-		V_0 = L_15;
-		float L_16 = V_0;
+		SingleU5BU5D_t1444911251* L_14 = V_1;
+		int32_t L_15 = V_2;
+		NullCheck(L_14);
+		int32_t L_16 = L_15;
+		float L_17 = (L_14)->GetAt(static_cast<il2cpp_array_size_t>(L_16));
+		V_0 = L_17;
+		float L_18 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Math_t1671470975_il2cpp_TypeInfo_var);
-		float L_17 = fabsf(L_16);
-		if ((!(((float)L_17) > ((float)(0.1f)))))
+		float L_19 = fabsf(L_18);
+		if ((!(((float)L_19) > ((float)(0.1f)))))
 		{
-			goto IL_00be;
+			goto IL_00d2;
 		}
 	}
 	{
-		float L_18 = __this->get_clipLoudness_11();
-		float L_19 = V_0;
+		float L_20 = __this->get_clipLoudness_11();
+		float L_21 = V_0;
 		IL2CPP_RUNTIME_CLASS_INIT(Math_t1671470975_il2cpp_TypeInfo_var);
-		float L_20 = fabsf(L_19);
-		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_18, (float)L_20)));
+		float L_22 = fabsf(L_21);
+		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_20, (float)L_22)));
 	}
 
-IL_00be:
+IL_00d2:
 	{
-		int32_t L_21 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_21, (int32_t)1));
+		int32_t L_23 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add((int32_t)L_23, (int32_t)1));
 	}
 
-IL_00c2:
+IL_00d6:
 	{
-		int32_t L_22 = V_2;
-		SingleU5BU5D_t1444911251* L_23 = V_1;
-		NullCheck(L_23);
-		if ((((int32_t)L_22) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_23)->max_length)))))))
+		int32_t L_24 = V_2;
+		SingleU5BU5D_t1444911251* L_25 = V_1;
+		NullCheck(L_25);
+		if ((((int32_t)L_24) < ((int32_t)(((int32_t)((int32_t)(((RuntimeArray *)L_25)->max_length)))))))
 		{
-			goto IL_0097;
+			goto IL_00ab;
 		}
 	}
 	{
-		float L_24 = __this->get_clipLoudness_11();
-		int32_t L_25 = __this->get_sampleDataLength_6();
-		__this->set_clipLoudness_11(((float)((float)L_24/(float)(((float)((float)L_25))))));
 		float L_26 = __this->get_clipLoudness_11();
-		float L_27 = __this->get_scaleFactor_7();
-		__this->set_clipLoudness_11(((float)il2cpp_codegen_multiply((float)L_26, (float)L_27)));
+		int32_t L_27 = __this->get_sampleDataLength_6();
+		__this->set_clipLoudness_11(((float)((float)L_26/(float)(((float)((float)L_27))))));
 		float L_28 = __this->get_clipLoudness_11();
-		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_28, (float)(0.75f))));
-		float L_29 = __this->get_oldClipLoudness_12();
+		float L_29 = __this->get_scaleFactor_7();
+		__this->set_clipLoudness_11(((float)il2cpp_codegen_multiply((float)L_28, (float)L_29)));
 		float L_30 = __this->get_clipLoudness_11();
-		float L_31 = Random_Range_m2202990745(NULL /*static, unused*/, (0.1f), (0.3f), /*hidden argument*/NULL);
-		float L_32 = __this->get_currentUpdateTime_15();
+		__this->set_clipLoudness_11(((float)il2cpp_codegen_add((float)L_30, (float)(0.75f))));
+		float L_31 = __this->get_oldClipLoudness_12();
+		float L_32 = __this->get_clipLoudness_11();
+		float L_33 = Random_Range_m2202990745(NULL /*static, unused*/, (0.1f), (0.3f), /*hidden argument*/NULL);
+		float L_34 = __this->get_currentUpdateTime_15();
 		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_33 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, L_29, ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_add((float)((float)((float)L_30/(float)(2.0f))), (float)L_31)), (float)(0.75f))), L_32, /*hidden argument*/NULL);
-		__this->set_clipLoudnessB_13(L_33);
-		Material_t340375123 * L_34 = __this->get_skyBox_8();
-		float L_35 = __this->get_clipLoudness_11();
-		NullCheck(L_34);
-		Material_SetFloat_m3226510453(L_34, _stringLiteral1639261578, L_35, /*hidden argument*/NULL);
-		Color_t2555686324 * L_36 = __this->get_address_of_lerpColor_17();
-		float L_37 = __this->get_clipLoudnessB_13();
-		L_36->set_a_3(((float)((float)L_37/(float)(10.0f))));
-		Material_t340375123 * L_38 = __this->get_glowMat_9();
-		Color_t2555686324  L_39 = __this->get_lerpColor_17();
-		NullCheck(L_38);
-		Material_SetColor_m2020215303(L_38, _stringLiteral2810103870, L_39, /*hidden argument*/NULL);
+		float L_35 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, L_31, ((float)il2cpp_codegen_subtract((float)((float)il2cpp_codegen_add((float)((float)((float)L_32/(float)(2.0f))), (float)L_33)), (float)(0.75f))), L_34, /*hidden argument*/NULL);
+		__this->set_clipLoudnessB_13(L_35);
+		Material_t340375123 * L_36 = __this->get_skyBox_8();
+		float L_37 = __this->get_clipLoudness_11();
+		NullCheck(L_36);
+		Material_SetFloat_m3226510453(L_36, _stringLiteral1639261578, L_37, /*hidden argument*/NULL);
+		Color_t2555686324 * L_38 = __this->get_address_of_lerpColor_17();
+		float L_39 = __this->get_clipLoudnessB_13();
+		L_38->set_a_3(((float)((float)L_39/(float)(10.0f))));
+		Material_t340375123 * L_40 = __this->get_glowMat_9();
+		Color_t2555686324  L_41 = __this->get_lerpColor_17();
+		NullCheck(L_40);
+		Material_SetColor_m2020215303(L_40, _stringLiteral2810103870, L_41, /*hidden argument*/NULL);
+	}
+
+IL_0194:
+	{
 		return;
 	}
 }
@@ -56036,7 +56057,7 @@ IL_0069:
 		bool L_13 = Behaviour_get_enabled_m753527255(L_12, /*hidden argument*/NULL);
 		if (L_13)
 		{
-			goto IL_0146;
+			goto IL_0157;
 		}
 	}
 	{
@@ -56052,28 +56073,33 @@ IL_0069:
 		Behaviour_set_enabled_m20417929(L_17, (bool)1, /*hidden argument*/NULL);
 		GameObject_t1113636619 * L_18 = __this->get_SSAOScript_44();
 		NullCheck(L_18);
-		Crepuscular_t186719810 * L_19 = GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603(L_18, /*hidden argument*/GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603_RuntimeMethod_var);
+		FXAA_t264094441 * L_19 = GameObject_GetComponent_TisFXAA_t264094441_m3608635218(L_18, /*hidden argument*/GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var);
 		NullCheck(L_19);
 		Behaviour_set_enabled_m20417929(L_19, (bool)1, /*hidden argument*/NULL);
 		GameObject_t1113636619 * L_20 = __this->get_SSAOScript_44();
 		NullCheck(L_20);
-		Fog_t1478163583 * L_21 = GameObject_GetComponent_TisFog_t1478163583_m1502070570(L_20, /*hidden argument*/GameObject_GetComponent_TisFog_t1478163583_m1502070570_RuntimeMethod_var);
+		Crepuscular_t186719810 * L_21 = GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603(L_20, /*hidden argument*/GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603_RuntimeMethod_var);
 		NullCheck(L_21);
 		Behaviour_set_enabled_m20417929(L_21, (bool)1, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_22 = __this->get_enabledText_46();
+		GameObject_t1113636619 * L_22 = __this->get_SSAOScript_44();
 		NullCheck(L_22);
-		Text_t1901882714 * L_23 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_22, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
-		Color_t2555686324  L_24 = Color_get_green_m490390750(NULL /*static, unused*/, /*hidden argument*/NULL);
+		Fog_t1478163583 * L_23 = GameObject_GetComponent_TisFog_t1478163583_m1502070570(L_22, /*hidden argument*/GameObject_GetComponent_TisFog_t1478163583_m1502070570_RuntimeMethod_var);
 		NullCheck(L_23);
-		VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_23, L_24);
-		GameObject_t1113636619 * L_25 = __this->get_enabledText_46();
+		Behaviour_set_enabled_m20417929(L_23, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_24 = __this->get_enabledText_46();
+		NullCheck(L_24);
+		Text_t1901882714 * L_25 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_24, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
+		Color_t2555686324  L_26 = Color_get_green_m490390750(NULL /*static, unused*/, /*hidden argument*/NULL);
 		NullCheck(L_25);
-		Text_t1901882714 * L_26 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_25, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
-		NullCheck(L_26);
-		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_26, _stringLiteral646179308);
+		VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_25, L_26);
+		GameObject_t1113636619 * L_27 = __this->get_enabledText_46();
+		NullCheck(L_27);
+		Text_t1901882714 * L_28 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_27, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
+		NullCheck(L_28);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_28, _stringLiteral646179308);
 	}
 
-IL_0146:
+IL_0157:
 	{
 		return;
 	}
@@ -56611,92 +56637,64 @@ IL_0210:
 		bool L_59 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_58, /*hidden argument*/NULL);
 		if (!L_59)
 		{
-			goto IL_0230;
+			goto IL_02c0;
 		}
+	}
+	{
+		GameObject_t1113636619 * L_60 = __this->get_SSAOScript_44();
+		NullCheck(L_60);
+		FXAA_t264094441 * L_61 = GameObject_GetComponent_TisFXAA_t264094441_m3608635218(L_60, /*hidden argument*/GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var);
+		NullCheck(L_61);
+		bool L_62 = Behaviour_get_enabled_m753527255(L_61, /*hidden argument*/NULL);
+		if (!L_62)
+		{
+			goto IL_0285;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_63 = __this->get_SSAOScript_44();
+		NullCheck(L_63);
+		FXAA_t264094441 * L_64 = GameObject_GetComponent_TisFXAA_t264094441_m3608635218(L_63, /*hidden argument*/GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var);
+		NullCheck(L_64);
+		Behaviour_set_enabled_m20417929(L_64, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_65 = __this->get_enabledText_46();
+		NullCheck(L_65);
+		Text_t1901882714 * L_66 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_65, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
+		Color_t2555686324  L_67 = Color_get_red_m3227813939(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_66);
+		VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_66, L_67);
+		GameObject_t1113636619 * L_68 = __this->get_enabledText_46();
+		NullCheck(L_68);
+		Text_t1901882714 * L_69 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_68, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
+		NullCheck(L_69);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_69, _stringLiteral1262762470);
+		goto IL_02c0;
 	}
 
-IL_0230:
+IL_0285:
 	{
-		String_t* L_60 = __this->get_VITA_50();
-		int32_t L_61 = __this->get_TRIANGLE_54();
-		int32_t L_62 = L_61;
-		RuntimeObject * L_63 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_62);
-		String_t* L_64 = String_Concat_m904156431(NULL /*static, unused*/, L_60, L_63, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_65 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_64, /*hidden argument*/NULL);
-		if (!L_65)
-		{
-			goto IL_02c6;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_66 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
-		if (L_66)
-		{
-			goto IL_02c6;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_67 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
-		if (!L_67)
-		{
-			goto IL_02c6;
-		}
-	}
-	{
-		float L_68 = __this->get_flashlightCharge_41();
-		if ((!(((float)L_68) > ((float)(0.05f)))))
-		{
-			goto IL_02c6;
-		}
-	}
-	{
-		String_t* L_69 = __this->get_VITA_50();
-		int32_t L_70 = __this->get_LTRIG_55();
-		int32_t L_71 = L_70;
-		RuntimeObject * L_72 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_71);
-		String_t* L_73 = String_Concat_m904156431(NULL /*static, unused*/, L_69, L_72, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_74 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_73, /*hidden argument*/NULL);
-		if (L_74)
-		{
-			goto IL_02c6;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_75 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
-		if (!L_75)
-		{
-			goto IL_02a9;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_flashlightOff_6((bool)0);
-		goto IL_02af;
+		GameObject_t1113636619 * L_70 = __this->get_SSAOScript_44();
+		NullCheck(L_70);
+		FXAA_t264094441 * L_71 = GameObject_GetComponent_TisFXAA_t264094441_m3608635218(L_70, /*hidden argument*/GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var);
+		NullCheck(L_71);
+		Behaviour_set_enabled_m20417929(L_71, (bool)1, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_72 = __this->get_enabledText_46();
+		NullCheck(L_72);
+		Text_t1901882714 * L_73 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_72, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
+		Color_t2555686324  L_74 = Color_get_green_m490390750(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_73);
+		VirtActionInvoker1< Color_t2555686324  >::Invoke(23 /* System.Void UnityEngine.UI.Graphic::set_color(UnityEngine.Color) */, L_73, L_74);
+		GameObject_t1113636619 * L_75 = __this->get_enabledText_46();
+		NullCheck(L_75);
+		Text_t1901882714 * L_76 = GameObject_GetComponent_TisText_t1901882714_m2114913816(L_75, /*hidden argument*/GameObject_GetComponent_TisText_t1901882714_m2114913816_RuntimeMethod_var);
+		NullCheck(L_76);
+		VirtActionInvoker1< String_t* >::Invoke(73 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_76, _stringLiteral646179308);
 	}
 
-IL_02a9:
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_flashlightOff_6((bool)1);
-	}
-
-IL_02af:
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
-		RuntimeObject* L_76 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.25f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_76, /*hidden argument*/NULL);
-	}
-
-IL_02c6:
+IL_02c0:
 	{
 		String_t* L_77 = __this->get_VITA_50();
-		int32_t L_78 = __this->get_SQUARE_53();
+		int32_t L_78 = __this->get_TRIANGLE_54();
 		int32_t L_79 = L_78;
 		RuntimeObject * L_80 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_79);
 		String_t* L_81 = String_Concat_m904156431(NULL /*static, unused*/, L_77, L_80, /*hidden argument*/NULL);
@@ -56704,7 +56702,7 @@ IL_02c6:
 		bool L_82 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_81, /*hidden argument*/NULL);
 		if (!L_82)
 		{
-			goto IL_057b;
+			goto IL_0356;
 		}
 	}
 	{
@@ -56712,7 +56710,7 @@ IL_02c6:
 		bool L_83 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
 		if (L_83)
 		{
-			goto IL_057b;
+			goto IL_0356;
 		}
 	}
 	{
@@ -56720,15 +56718,14 @@ IL_02c6:
 		bool L_84 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
 		if (!L_84)
 		{
-			goto IL_057b;
+			goto IL_0356;
 		}
 	}
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_85 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		if ((((int32_t)L_85) <= ((int32_t)0)))
+		float L_85 = __this->get_flashlightCharge_41();
+		if ((!(((float)L_85) > ((float)(0.05f)))))
 		{
-			goto IL_057b;
+			goto IL_0356;
 		}
 	}
 	{
@@ -56741,549 +56738,557 @@ IL_02c6:
 		bool L_91 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_90, /*hidden argument*/NULL);
 		if (L_91)
 		{
-			goto IL_057b;
+			goto IL_0356;
 		}
 	}
 	{
-		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		Light_t3756812086 * L_92 = __this->get_flashlight_21();
-		NullCheck(L_92);
-		float L_93 = Light_get_intensity_m767788470(L_92, /*hidden argument*/NULL);
-		V_0 = L_93;
-		Renderer_t2627027031 * L_94 = __this->get_lightBeam_28();
-		NullCheck(L_94);
-		Material_t340375123 * L_95 = Renderer_get_material_m4171603682(L_94, /*hidden argument*/NULL);
-		NullCheck(L_95);
-		Color_t2555686324  L_96 = Material_get_color_m3827673574(L_95, /*hidden argument*/NULL);
-		V_1 = L_96;
-		float L_97 = __this->get_flashlightCharge_41();
-		if ((!(((float)L_97) < ((float)(1.0f)))))
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_92 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
+		if (!L_92)
 		{
-			goto IL_052a;
+			goto IL_0339;
 		}
 	}
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_98 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->set_batteryCount_1(((int32_t)il2cpp_codegen_subtract((int32_t)L_98, (int32_t)1)));
-		float L_99 = __this->get_flashlightCharge_41();
-		__this->set_flashlightCharge_41(((float)il2cpp_codegen_add((float)L_99, (float)(0.5f))));
-		Light_t3756812086 * L_100 = __this->get_flashlight_21();
-		NullCheck(L_100);
-		float L_101 = Light_get_intensity_m767788470(L_100, /*hidden argument*/NULL);
-		if ((!(((float)L_101) < ((float)(10.0f)))))
-		{
-			goto IL_03b6;
-		}
-	}
-	{
-		Light_t3756812086 * L_102 = __this->get_flashlight_21();
-		NullCheck(L_102);
-		float L_103 = Light_get_intensity_m767788470(L_102, /*hidden argument*/NULL);
-		V_2 = ((float)il2cpp_codegen_subtract((float)(10.0f), (float)L_103));
-		Light_t3756812086 * L_104 = __this->get_flashlight_21();
-		Light_t3756812086 * L_105 = L_104;
-		NullCheck(L_105);
-		float L_106 = Light_get_intensity_m767788470(L_105, /*hidden argument*/NULL);
-		float L_107 = V_2;
-		NullCheck(L_105);
-		Light_set_intensity_m2345549762(L_105, ((float)il2cpp_codegen_add((float)L_106, (float)((float)il2cpp_codegen_subtract((float)L_107, (float)(5.0f))))), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_flashlightOff_6((bool)0);
+		goto IL_033f;
 	}
 
-IL_03b6:
+IL_0339:
 	{
-		GameObject_t1113636619 * L_108 = __this->get_lightChargeObject_30();
-		NullCheck(L_108);
-		Image_t2670269651 * L_109 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_108, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
-		float L_110 = __this->get_flashlightCharge_41();
-		NullCheck(L_109);
-		Image_set_fillAmount_m3737925590(L_109, L_110, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_111 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		if ((((int32_t)L_111) >= ((int32_t)((int32_t)10))))
-		{
-			goto IL_03fc;
-		}
-	}
-	{
-		TextMeshProUGUI_t529313277 * L_112 = __this->get_batteryText_43();
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_113 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		int32_t L_114 = L_113;
-		RuntimeObject * L_115 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_114);
-		String_t* L_116 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_115, /*hidden argument*/NULL);
-		NullCheck(L_112);
-		TMP_Text_set_text_m1216996582(L_112, L_116, /*hidden argument*/NULL);
-		goto IL_041b;
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_flashlightOff_6((bool)1);
 	}
 
-IL_03fc:
+IL_033f:
 	{
-		TextMeshProUGUI_t529313277 * L_117 = __this->get_batteryText_43();
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_118 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		int32_t L_119 = L_118;
-		RuntimeObject * L_120 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_119);
-		String_t* L_121 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_120, /*hidden argument*/NULL);
-		NullCheck(L_117);
-		TMP_Text_set_text_m1216996582(L_117, L_121, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
+		RuntimeObject* L_93 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.25f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_93, /*hidden argument*/NULL);
 	}
 
-IL_041b:
+IL_0356:
 	{
-		bool L_122 = __this->get_flashlightDisabled_42();
-		if (!L_122)
-		{
-			goto IL_04f4;
-		}
-	}
-	{
-		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		float L_123 = __this->get_flashlightCharge_41();
-		__this->set_currentCharge_88(L_123);
-		bool L_124 = __this->get_isStimulant_75();
-		if (!L_124)
-		{
-			goto IL_0472;
-		}
-	}
-	{
-		float L_125 = __this->get_cooldownValue_81();
-		float L_126 = __this->get_stimCooldown_11();
-		if ((!(((float)L_125) <= ((float)L_126))))
-		{
-			goto IL_0472;
-		}
-	}
-	{
-		float L_127 = __this->get_cooldownValue_81();
-		float L_128 = __this->get_cooldownValue_81();
-		RuntimeObject* L_129 = PlayerController_countdownStimulant_m1716973018(__this, L_127, (0.0f), L_128, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_129, /*hidden argument*/NULL);
-	}
-
-IL_0472:
-	{
-		String_t* L_130 = __this->get_VITA_50();
-		int32_t L_131 = __this->get_RTRIG_56();
-		int32_t L_132 = L_131;
-		RuntimeObject * L_133 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_132);
-		String_t* L_134 = String_Concat_m904156431(NULL /*static, unused*/, L_130, L_133, /*hidden argument*/NULL);
+		String_t* L_94 = __this->get_VITA_50();
+		int32_t L_95 = __this->get_SQUARE_53();
+		int32_t L_96 = L_95;
+		RuntimeObject * L_97 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_96);
+		String_t* L_98 = String_Concat_m904156431(NULL /*static, unused*/, L_94, L_97, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_135 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_134, /*hidden argument*/NULL);
-		if (L_135)
+		bool L_99 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_98, /*hidden argument*/NULL);
+		if (!L_99)
 		{
-			goto IL_04b1;
+			goto IL_060b;
 		}
 	}
 	{
-		float L_136 = __this->get_stamina_9();
-		float L_137 = __this->get_stamina_9();
-		RuntimeObject* L_138 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_136)), L_137, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_138, /*hidden argument*/NULL);
-	}
-
-IL_04b1:
-	{
-		Color_t2555686324  L_139 = __this->get_colorTransparent_38();
-		Color_t2555686324  L_140 = __this->get_colorStart_36();
-		RuntimeObject* L_141 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_139, L_140, (0.25f), (0.0f), (5.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_141, /*hidden argument*/NULL);
-		__this->set_flashlightDisabled_42((bool)0);
-	}
-
-IL_04f4:
-	{
-		bool L_142 = __this->get_isCharging_77();
-		if (!L_142)
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_100 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
+		if (L_100)
 		{
-			goto IL_052a;
+			goto IL_060b;
 		}
 	}
 	{
-		float L_143 = __this->get_flashlightCharge_41();
-		__this->set_currentCharge_88(L_143);
-		float L_144 = __this->get_currentCharge_88();
-		float L_145 = __this->get_flashlightCharge_41();
-		RuntimeObject* L_146 = PlayerController_rechargeFlashlight_m3593985256(__this, L_144, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_145)), /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_101 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
+		if (!L_101)
+		{
+			goto IL_060b;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_102 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		if ((((int32_t)L_102) <= ((int32_t)0)))
+		{
+			goto IL_060b;
+		}
+	}
+	{
+		String_t* L_103 = __this->get_VITA_50();
+		int32_t L_104 = __this->get_LTRIG_55();
+		int32_t L_105 = L_104;
+		RuntimeObject * L_106 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_105);
+		String_t* L_107 = String_Concat_m904156431(NULL /*static, unused*/, L_103, L_106, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_108 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_107, /*hidden argument*/NULL);
+		if (L_108)
+		{
+			goto IL_060b;
+		}
+	}
+	{
+		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
+		Light_t3756812086 * L_109 = __this->get_flashlight_21();
+		NullCheck(L_109);
+		float L_110 = Light_get_intensity_m767788470(L_109, /*hidden argument*/NULL);
+		V_0 = L_110;
+		Renderer_t2627027031 * L_111 = __this->get_lightBeam_28();
+		NullCheck(L_111);
+		Material_t340375123 * L_112 = Renderer_get_material_m4171603682(L_111, /*hidden argument*/NULL);
+		NullCheck(L_112);
+		Color_t2555686324  L_113 = Material_get_color_m3827673574(L_112, /*hidden argument*/NULL);
+		V_1 = L_113;
+		float L_114 = __this->get_flashlightCharge_41();
+		if ((!(((float)L_114) < ((float)(1.0f)))))
+		{
+			goto IL_05ba;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_115 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->set_batteryCount_1(((int32_t)il2cpp_codegen_subtract((int32_t)L_115, (int32_t)1)));
+		float L_116 = __this->get_flashlightCharge_41();
+		__this->set_flashlightCharge_41(((float)il2cpp_codegen_add((float)L_116, (float)(0.5f))));
+		Light_t3756812086 * L_117 = __this->get_flashlight_21();
+		NullCheck(L_117);
+		float L_118 = Light_get_intensity_m767788470(L_117, /*hidden argument*/NULL);
+		if ((!(((float)L_118) < ((float)(10.0f)))))
+		{
+			goto IL_0446;
+		}
+	}
+	{
+		Light_t3756812086 * L_119 = __this->get_flashlight_21();
+		NullCheck(L_119);
+		float L_120 = Light_get_intensity_m767788470(L_119, /*hidden argument*/NULL);
+		V_2 = ((float)il2cpp_codegen_subtract((float)(10.0f), (float)L_120));
+		Light_t3756812086 * L_121 = __this->get_flashlight_21();
+		Light_t3756812086 * L_122 = L_121;
+		NullCheck(L_122);
+		float L_123 = Light_get_intensity_m767788470(L_122, /*hidden argument*/NULL);
+		float L_124 = V_2;
+		NullCheck(L_122);
+		Light_set_intensity_m2345549762(L_122, ((float)il2cpp_codegen_add((float)L_123, (float)((float)il2cpp_codegen_subtract((float)L_124, (float)(5.0f))))), /*hidden argument*/NULL);
+	}
+
+IL_0446:
+	{
+		GameObject_t1113636619 * L_125 = __this->get_lightChargeObject_30();
+		NullCheck(L_125);
+		Image_t2670269651 * L_126 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_125, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
+		float L_127 = __this->get_flashlightCharge_41();
+		NullCheck(L_126);
+		Image_set_fillAmount_m3737925590(L_126, L_127, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_128 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		if ((((int32_t)L_128) >= ((int32_t)((int32_t)10))))
+		{
+			goto IL_048c;
+		}
+	}
+	{
+		TextMeshProUGUI_t529313277 * L_129 = __this->get_batteryText_43();
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_130 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		int32_t L_131 = L_130;
+		RuntimeObject * L_132 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_131);
+		String_t* L_133 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_132, /*hidden argument*/NULL);
+		NullCheck(L_129);
+		TMP_Text_set_text_m1216996582(L_129, L_133, /*hidden argument*/NULL);
+		goto IL_04ab;
+	}
+
+IL_048c:
+	{
+		TextMeshProUGUI_t529313277 * L_134 = __this->get_batteryText_43();
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_135 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		int32_t L_136 = L_135;
+		RuntimeObject * L_137 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_136);
+		String_t* L_138 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_137, /*hidden argument*/NULL);
+		NullCheck(L_134);
+		TMP_Text_set_text_m1216996582(L_134, L_138, /*hidden argument*/NULL);
+	}
+
+IL_04ab:
+	{
+		bool L_139 = __this->get_flashlightDisabled_42();
+		if (!L_139)
+		{
+			goto IL_0584;
+		}
+	}
+	{
+		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
+		float L_140 = __this->get_flashlightCharge_41();
+		__this->set_currentCharge_88(L_140);
+		bool L_141 = __this->get_isStimulant_75();
+		if (!L_141)
+		{
+			goto IL_0502;
+		}
+	}
+	{
+		float L_142 = __this->get_cooldownValue_81();
+		float L_143 = __this->get_stimCooldown_11();
+		if ((!(((float)L_142) <= ((float)L_143))))
+		{
+			goto IL_0502;
+		}
+	}
+	{
+		float L_144 = __this->get_cooldownValue_81();
+		float L_145 = __this->get_cooldownValue_81();
+		RuntimeObject* L_146 = PlayerController_countdownStimulant_m1716973018(__this, L_144, (0.0f), L_145, /*hidden argument*/NULL);
 		MonoBehaviour_StartCoroutine_m3411253000(__this, L_146, /*hidden argument*/NULL);
 	}
 
-IL_052a:
+IL_0502:
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
-		RuntimeObject* L_147 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.25f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_147, /*hidden argument*/NULL);
-		bool L_148 = __this->get_isStimulant_75();
-		if (!L_148)
+		String_t* L_147 = __this->get_VITA_50();
+		int32_t L_148 = __this->get_RTRIG_56();
+		int32_t L_149 = L_148;
+		RuntimeObject * L_150 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_149);
+		String_t* L_151 = String_Concat_m904156431(NULL /*static, unused*/, L_147, L_150, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_152 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_151, /*hidden argument*/NULL);
+		if (L_152)
 		{
-			goto IL_057b;
+			goto IL_0541;
 		}
 	}
 	{
-		float L_149 = __this->get_cooldownValue_81();
-		float L_150 = __this->get_stimCooldown_11();
-		if ((!(((float)L_149) <= ((float)L_150))))
-		{
-			goto IL_057b;
-		}
-	}
-	{
-		float L_151 = __this->get_cooldownValue_81();
-		float L_152 = __this->get_cooldownValue_81();
-		RuntimeObject* L_153 = PlayerController_countdownStimulant_m1716973018(__this, L_151, (0.0f), L_152, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_153, /*hidden argument*/NULL);
+		float L_153 = __this->get_stamina_9();
+		float L_154 = __this->get_stamina_9();
+		RuntimeObject* L_155 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_153)), L_154, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_155, /*hidden argument*/NULL);
 	}
 
-IL_057b:
+IL_0541:
 	{
-		String_t* L_154 = __this->get_VITA_50();
-		int32_t L_155 = __this->get_SQUARE_53();
-		int32_t L_156 = L_155;
-		RuntimeObject * L_157 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_156);
-		String_t* L_158 = String_Concat_m904156431(NULL /*static, unused*/, L_154, L_157, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_159 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_158, /*hidden argument*/NULL);
+		Color_t2555686324  L_156 = __this->get_colorTransparent_38();
+		Color_t2555686324  L_157 = __this->get_colorStart_36();
+		RuntimeObject* L_158 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_156, L_157, (0.25f), (0.0f), (5.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_158, /*hidden argument*/NULL);
+		__this->set_flashlightDisabled_42((bool)0);
+	}
+
+IL_0584:
+	{
+		bool L_159 = __this->get_isCharging_77();
 		if (!L_159)
 		{
-			goto IL_08aa;
+			goto IL_05ba;
 		}
 	}
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_160 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
-		if (L_160)
-		{
-			goto IL_08aa;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_161 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
-		if (!L_161)
-		{
-			goto IL_08aa;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_162 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		if ((((int32_t)L_162) <= ((int32_t)0)))
-		{
-			goto IL_08aa;
-		}
-	}
-	{
-		String_t* L_163 = __this->get_VITA_50();
-		int32_t L_164 = __this->get_LTRIG_55();
-		int32_t L_165 = L_164;
-		RuntimeObject * L_166 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_165);
-		String_t* L_167 = String_Concat_m904156431(NULL /*static, unused*/, L_163, L_166, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_168 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_167, /*hidden argument*/NULL);
-		if (!L_168)
-		{
-			goto IL_08aa;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_169 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
-		if (L_169)
-		{
-			goto IL_08aa;
-		}
-	}
-	{
-		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		float L_170 = __this->get_flashlightCharge_41();
-		__this->set_currentCharge_88(L_170);
-		bool L_171 = __this->get_isStimulant_75();
-		if (!L_171)
-		{
-			goto IL_0630;
-		}
-	}
-	{
-		float L_172 = __this->get_cooldownValue_81();
-		float L_173 = __this->get_stimCooldown_11();
-		if ((!(((float)L_172) <= ((float)L_173))))
-		{
-			goto IL_0630;
-		}
-	}
-	{
-		float L_174 = __this->get_cooldownValue_81();
-		float L_175 = __this->get_cooldownValue_81();
-		RuntimeObject* L_176 = PlayerController_countdownStimulant_m1716973018(__this, L_174, (0.0f), L_175, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_176, /*hidden argument*/NULL);
+		float L_160 = __this->get_flashlightCharge_41();
+		__this->set_currentCharge_88(L_160);
+		float L_161 = __this->get_currentCharge_88();
+		float L_162 = __this->get_flashlightCharge_41();
+		RuntimeObject* L_163 = PlayerController_rechargeFlashlight_m3593985256(__this, L_161, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_162)), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_163, /*hidden argument*/NULL);
 	}
 
-IL_0630:
-	{
-		String_t* L_177 = __this->get_VITA_50();
-		int32_t L_178 = __this->get_RTRIG_56();
-		int32_t L_179 = L_178;
-		RuntimeObject * L_180 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_179);
-		String_t* L_181 = String_Concat_m904156431(NULL /*static, unused*/, L_177, L_180, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_182 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_181, /*hidden argument*/NULL);
-		if (L_182)
-		{
-			goto IL_066f;
-		}
-	}
-	{
-		float L_183 = __this->get_stamina_9();
-		float L_184 = __this->get_stamina_9();
-		RuntimeObject* L_185 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_183)), L_184, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_185, /*hidden argument*/NULL);
-	}
-
-IL_066f:
-	{
-		Renderer_t2627027031 * L_186 = __this->get_lightBeam_28();
-		NullCheck(L_186);
-		Material_t340375123 * L_187 = Renderer_get_material_m4171603682(L_186, /*hidden argument*/NULL);
-		NullCheck(L_187);
-		Color_t2555686324  L_188 = Material_get_color_m3827673574(L_187, /*hidden argument*/NULL);
-		Color_t2555686324  L_189 = __this->get_colorEnd_37();
-		float L_190 = __this->get_lightDuration_39();
-		Light_t3756812086 * L_191 = __this->get_flashlight_21();
-		NullCheck(L_191);
-		float L_192 = Light_get_intensity_m767788470(L_191, /*hidden argument*/NULL);
-		RuntimeObject* L_193 = PlayerController_FadeLightDynamicInput_m1165344512(__this, L_188, L_189, L_190, L_192, (60.0f), (40.0f), (25.0f), (0.08f), (0.04f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_193, /*hidden argument*/NULL);
-		float L_194 = __this->get_flashlightCharge_41();
-		if ((!(((float)L_194) < ((float)(1.0f)))))
-		{
-			goto IL_0859;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_195 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->set_batteryCount_1(((int32_t)il2cpp_codegen_subtract((int32_t)L_195, (int32_t)1)));
-		float L_196 = __this->get_flashlightCharge_41();
-		__this->set_flashlightCharge_41(((float)il2cpp_codegen_add((float)L_196, (float)(0.5f))));
-		Light_t3756812086 * L_197 = __this->get_flashlight_21();
-		NullCheck(L_197);
-		float L_198 = Light_get_intensity_m767788470(L_197, /*hidden argument*/NULL);
-		if ((!(((float)L_198) < ((float)(10.0f)))))
-		{
-			goto IL_071b;
-		}
-	}
-	{
-		Light_t3756812086 * L_199 = __this->get_flashlight_21();
-		Light_t3756812086 * L_200 = __this->get_flashlight_21();
-		NullCheck(L_200);
-		float L_201 = Light_get_intensity_m767788470(L_200, /*hidden argument*/NULL);
-		NullCheck(L_199);
-		Light_set_intensity_m2345549762(L_199, ((float)il2cpp_codegen_add((float)L_201, (float)(5.0f))), /*hidden argument*/NULL);
-	}
-
-IL_071b:
-	{
-		GameObject_t1113636619 * L_202 = __this->get_lightChargeObject_30();
-		NullCheck(L_202);
-		Image_t2670269651 * L_203 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_202, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
-		float L_204 = __this->get_flashlightCharge_41();
-		NullCheck(L_203);
-		Image_set_fillAmount_m3737925590(L_203, L_204, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_205 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		if ((((int32_t)L_205) >= ((int32_t)((int32_t)10))))
-		{
-			goto IL_0761;
-		}
-	}
-	{
-		TextMeshProUGUI_t529313277 * L_206 = __this->get_batteryText_43();
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_207 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		int32_t L_208 = L_207;
-		RuntimeObject * L_209 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_208);
-		String_t* L_210 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_209, /*hidden argument*/NULL);
-		NullCheck(L_206);
-		TMP_Text_set_text_m1216996582(L_206, L_210, /*hidden argument*/NULL);
-		goto IL_0780;
-	}
-
-IL_0761:
-	{
-		TextMeshProUGUI_t529313277 * L_211 = __this->get_batteryText_43();
-		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
-		int32_t L_212 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
-		int32_t L_213 = L_212;
-		RuntimeObject * L_214 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_213);
-		String_t* L_215 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_214, /*hidden argument*/NULL);
-		NullCheck(L_211);
-		TMP_Text_set_text_m1216996582(L_211, L_215, /*hidden argument*/NULL);
-	}
-
-IL_0780:
-	{
-		bool L_216 = __this->get_flashlightDisabled_42();
-		if (!L_216)
-		{
-			goto IL_0859;
-		}
-	}
-	{
-		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		float L_217 = __this->get_flashlightCharge_41();
-		__this->set_currentCharge_88(L_217);
-		bool L_218 = __this->get_isStimulant_75();
-		if (!L_218)
-		{
-			goto IL_07d7;
-		}
-	}
-	{
-		float L_219 = __this->get_cooldownValue_81();
-		float L_220 = __this->get_stimCooldown_11();
-		if ((!(((float)L_219) <= ((float)L_220))))
-		{
-			goto IL_07d7;
-		}
-	}
-	{
-		float L_221 = __this->get_cooldownValue_81();
-		float L_222 = __this->get_cooldownValue_81();
-		RuntimeObject* L_223 = PlayerController_countdownStimulant_m1716973018(__this, L_221, (0.0f), L_222, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_223, /*hidden argument*/NULL);
-	}
-
-IL_07d7:
-	{
-		Color_t2555686324  L_224 = __this->get_colorTransparent_38();
-		Color_t2555686324  L_225 = __this->get_colorStart_36();
-		RuntimeObject* L_226 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_224, L_225, (0.25f), (0.0f), (5.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_226, /*hidden argument*/NULL);
-		__this->set_flashlightDisabled_42((bool)0);
-		String_t* L_227 = __this->get_VITA_50();
-		int32_t L_228 = __this->get_RTRIG_56();
-		int32_t L_229 = L_228;
-		RuntimeObject * L_230 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_229);
-		String_t* L_231 = String_Concat_m904156431(NULL /*static, unused*/, L_227, L_230, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_232 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_231, /*hidden argument*/NULL);
-		if (L_232)
-		{
-			goto IL_0859;
-		}
-	}
-	{
-		float L_233 = __this->get_stamina_9();
-		float L_234 = __this->get_stamina_9();
-		RuntimeObject* L_235 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_233)), L_234, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_235, /*hidden argument*/NULL);
-	}
-
-IL_0859:
+IL_05ba:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
 		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
-		RuntimeObject* L_236 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.25f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_236, /*hidden argument*/NULL);
-		bool L_237 = __this->get_isStimulant_75();
-		if (!L_237)
+		RuntimeObject* L_164 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.25f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_164, /*hidden argument*/NULL);
+		bool L_165 = __this->get_isStimulant_75();
+		if (!L_165)
 		{
-			goto IL_08aa;
+			goto IL_060b;
+		}
+	}
+	{
+		float L_166 = __this->get_cooldownValue_81();
+		float L_167 = __this->get_stimCooldown_11();
+		if ((!(((float)L_166) <= ((float)L_167))))
+		{
+			goto IL_060b;
+		}
+	}
+	{
+		float L_168 = __this->get_cooldownValue_81();
+		float L_169 = __this->get_cooldownValue_81();
+		RuntimeObject* L_170 = PlayerController_countdownStimulant_m1716973018(__this, L_168, (0.0f), L_169, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_170, /*hidden argument*/NULL);
+	}
+
+IL_060b:
+	{
+		String_t* L_171 = __this->get_VITA_50();
+		int32_t L_172 = __this->get_SQUARE_53();
+		int32_t L_173 = L_172;
+		RuntimeObject * L_174 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_173);
+		String_t* L_175 = String_Concat_m904156431(NULL /*static, unused*/, L_171, L_174, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_176 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_175, /*hidden argument*/NULL);
+		if (!L_176)
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_177 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
+		if (L_177)
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_178 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
+		if (!L_178)
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_179 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		if ((((int32_t)L_179) <= ((int32_t)0)))
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		String_t* L_180 = __this->get_VITA_50();
+		int32_t L_181 = __this->get_LTRIG_55();
+		int32_t L_182 = L_181;
+		RuntimeObject * L_183 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_182);
+		String_t* L_184 = String_Concat_m904156431(NULL /*static, unused*/, L_180, L_183, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_185 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_184, /*hidden argument*/NULL);
+		if (!L_185)
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_186 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
+		if (L_186)
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
+		float L_187 = __this->get_flashlightCharge_41();
+		__this->set_currentCharge_88(L_187);
+		bool L_188 = __this->get_isStimulant_75();
+		if (!L_188)
+		{
+			goto IL_06c0;
+		}
+	}
+	{
+		float L_189 = __this->get_cooldownValue_81();
+		float L_190 = __this->get_stimCooldown_11();
+		if ((!(((float)L_189) <= ((float)L_190))))
+		{
+			goto IL_06c0;
+		}
+	}
+	{
+		float L_191 = __this->get_cooldownValue_81();
+		float L_192 = __this->get_cooldownValue_81();
+		RuntimeObject* L_193 = PlayerController_countdownStimulant_m1716973018(__this, L_191, (0.0f), L_192, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_193, /*hidden argument*/NULL);
+	}
+
+IL_06c0:
+	{
+		String_t* L_194 = __this->get_VITA_50();
+		int32_t L_195 = __this->get_RTRIG_56();
+		int32_t L_196 = L_195;
+		RuntimeObject * L_197 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_196);
+		String_t* L_198 = String_Concat_m904156431(NULL /*static, unused*/, L_194, L_197, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_199 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_198, /*hidden argument*/NULL);
+		if (L_199)
+		{
+			goto IL_06ff;
+		}
+	}
+	{
+		float L_200 = __this->get_stamina_9();
+		float L_201 = __this->get_stamina_9();
+		RuntimeObject* L_202 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_200)), L_201, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_202, /*hidden argument*/NULL);
+	}
+
+IL_06ff:
+	{
+		Renderer_t2627027031 * L_203 = __this->get_lightBeam_28();
+		NullCheck(L_203);
+		Material_t340375123 * L_204 = Renderer_get_material_m4171603682(L_203, /*hidden argument*/NULL);
+		NullCheck(L_204);
+		Color_t2555686324  L_205 = Material_get_color_m3827673574(L_204, /*hidden argument*/NULL);
+		Color_t2555686324  L_206 = __this->get_colorEnd_37();
+		float L_207 = __this->get_lightDuration_39();
+		Light_t3756812086 * L_208 = __this->get_flashlight_21();
+		NullCheck(L_208);
+		float L_209 = Light_get_intensity_m767788470(L_208, /*hidden argument*/NULL);
+		RuntimeObject* L_210 = PlayerController_FadeLightDynamicInput_m1165344512(__this, L_205, L_206, L_207, L_209, (60.0f), (40.0f), (25.0f), (0.08f), (0.04f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_210, /*hidden argument*/NULL);
+		float L_211 = __this->get_flashlightCharge_41();
+		if ((!(((float)L_211) < ((float)(1.0f)))))
+		{
+			goto IL_08e9;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_212 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->set_batteryCount_1(((int32_t)il2cpp_codegen_subtract((int32_t)L_212, (int32_t)1)));
+		float L_213 = __this->get_flashlightCharge_41();
+		__this->set_flashlightCharge_41(((float)il2cpp_codegen_add((float)L_213, (float)(0.5f))));
+		Light_t3756812086 * L_214 = __this->get_flashlight_21();
+		NullCheck(L_214);
+		float L_215 = Light_get_intensity_m767788470(L_214, /*hidden argument*/NULL);
+		if ((!(((float)L_215) < ((float)(10.0f)))))
+		{
+			goto IL_07ab;
+		}
+	}
+	{
+		Light_t3756812086 * L_216 = __this->get_flashlight_21();
+		Light_t3756812086 * L_217 = __this->get_flashlight_21();
+		NullCheck(L_217);
+		float L_218 = Light_get_intensity_m767788470(L_217, /*hidden argument*/NULL);
+		NullCheck(L_216);
+		Light_set_intensity_m2345549762(L_216, ((float)il2cpp_codegen_add((float)L_218, (float)(5.0f))), /*hidden argument*/NULL);
+	}
+
+IL_07ab:
+	{
+		GameObject_t1113636619 * L_219 = __this->get_lightChargeObject_30();
+		NullCheck(L_219);
+		Image_t2670269651 * L_220 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_219, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
+		float L_221 = __this->get_flashlightCharge_41();
+		NullCheck(L_220);
+		Image_set_fillAmount_m3737925590(L_220, L_221, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_222 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		if ((((int32_t)L_222) >= ((int32_t)((int32_t)10))))
+		{
+			goto IL_07f1;
+		}
+	}
+	{
+		TextMeshProUGUI_t529313277 * L_223 = __this->get_batteryText_43();
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_224 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		int32_t L_225 = L_224;
+		RuntimeObject * L_226 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_225);
+		String_t* L_227 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_226, /*hidden argument*/NULL);
+		NullCheck(L_223);
+		TMP_Text_set_text_m1216996582(L_223, L_227, /*hidden argument*/NULL);
+		goto IL_0810;
+	}
+
+IL_07f1:
+	{
+		TextMeshProUGUI_t529313277 * L_228 = __this->get_batteryText_43();
+		IL2CPP_RUNTIME_CLASS_INIT(InventoryManager_t1225487224_il2cpp_TypeInfo_var);
+		int32_t L_229 = ((InventoryManager_t1225487224_StaticFields*)il2cpp_codegen_static_fields_for(InventoryManager_t1225487224_il2cpp_TypeInfo_var))->get_batteryCount_1();
+		int32_t L_230 = L_229;
+		RuntimeObject * L_231 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_230);
+		String_t* L_232 = String_Format_m2844511972(NULL /*static, unused*/, _stringLiteral1180587857, L_231, /*hidden argument*/NULL);
+		NullCheck(L_228);
+		TMP_Text_set_text_m1216996582(L_228, L_232, /*hidden argument*/NULL);
+	}
+
+IL_0810:
+	{
+		bool L_233 = __this->get_flashlightDisabled_42();
+		if (!L_233)
+		{
+			goto IL_08e9;
+		}
+	}
+	{
+		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
+		float L_234 = __this->get_flashlightCharge_41();
+		__this->set_currentCharge_88(L_234);
+		bool L_235 = __this->get_isStimulant_75();
+		if (!L_235)
+		{
+			goto IL_0867;
+		}
+	}
+	{
+		float L_236 = __this->get_cooldownValue_81();
+		float L_237 = __this->get_stimCooldown_11();
+		if ((!(((float)L_236) <= ((float)L_237))))
+		{
+			goto IL_0867;
 		}
 	}
 	{
 		float L_238 = __this->get_cooldownValue_81();
-		float L_239 = __this->get_stimCooldown_11();
-		if ((!(((float)L_238) <= ((float)L_239))))
-		{
-			goto IL_08aa;
-		}
-	}
-	{
-		float L_240 = __this->get_cooldownValue_81();
-		float L_241 = __this->get_cooldownValue_81();
-		RuntimeObject* L_242 = PlayerController_countdownStimulant_m1716973018(__this, L_240, (0.0f), L_241, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_242, /*hidden argument*/NULL);
+		float L_239 = __this->get_cooldownValue_81();
+		RuntimeObject* L_240 = PlayerController_countdownStimulant_m1716973018(__this, L_238, (0.0f), L_239, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_240, /*hidden argument*/NULL);
 	}
 
-IL_08aa:
+IL_0867:
 	{
-		String_t* L_243 = __this->get_VITA_50();
-		int32_t L_244 = __this->get_CIRCLE_52();
-		int32_t L_245 = L_244;
-		RuntimeObject * L_246 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_245);
-		String_t* L_247 = String_Concat_m904156431(NULL /*static, unused*/, L_243, L_246, /*hidden argument*/NULL);
+		Color_t2555686324  L_241 = __this->get_colorTransparent_38();
+		Color_t2555686324  L_242 = __this->get_colorStart_36();
+		RuntimeObject* L_243 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_241, L_242, (0.25f), (0.0f), (5.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_243, /*hidden argument*/NULL);
+		__this->set_flashlightDisabled_42((bool)0);
+		String_t* L_244 = __this->get_VITA_50();
+		int32_t L_245 = __this->get_RTRIG_56();
+		int32_t L_246 = L_245;
+		RuntimeObject * L_247 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_246);
+		String_t* L_248 = String_Concat_m904156431(NULL /*static, unused*/, L_244, L_247, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_248 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_247, /*hidden argument*/NULL);
-		if (!L_248)
-		{
-			goto IL_0975;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_249 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_isMap_78();
+		bool L_249 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_248, /*hidden argument*/NULL);
 		if (L_249)
 		{
-			goto IL_0928;
+			goto IL_08e9;
 		}
 	}
 	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_250 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
-		if (L_250)
-		{
-			goto IL_0928;
-		}
-	}
-	{
-		GameObject_t1113636619 * L_251 = __this->get_mapCamera_18();
-		NullCheck(L_251);
-		GameObject_SetActive_m796801857(L_251, (bool)1, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
-		RawImage_t3182918964 * L_252 = __this->get_mapPanel_83();
-		RuntimeObject* L_253 = PlayerController_fade_m1874425066(__this, L_252, (0.0f), (1.0f), (0.5f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_253, /*hidden argument*/NULL);
-		RuntimeObject* L_254 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.5f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_254, /*hidden argument*/NULL);
-		goto IL_0975;
+		float L_250 = __this->get_stamina_9();
+		float L_251 = __this->get_stamina_9();
+		RuntimeObject* L_252 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_250)), L_251, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_252, /*hidden argument*/NULL);
 	}
 
-IL_0928:
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_255 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_isMap_78();
-		if (!L_255)
-		{
-			goto IL_0975;
-		}
-	}
-	{
-		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_256 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
-		if (L_256)
-		{
-			goto IL_0975;
-		}
-	}
+IL_08e9:
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
 		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
-		RawImage_t3182918964 * L_257 = __this->get_mapPanel_83();
-		RuntimeObject* L_258 = PlayerController_fade_m1874425066(__this, L_257, (1.0f), (0.0f), (0.5f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_258, /*hidden argument*/NULL);
-		RuntimeObject* L_259 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.5f), /*hidden argument*/NULL);
+		RuntimeObject* L_253 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.25f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_253, /*hidden argument*/NULL);
+		bool L_254 = __this->get_isStimulant_75();
+		if (!L_254)
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		float L_255 = __this->get_cooldownValue_81();
+		float L_256 = __this->get_stimCooldown_11();
+		if ((!(((float)L_255) <= ((float)L_256))))
+		{
+			goto IL_093a;
+		}
+	}
+	{
+		float L_257 = __this->get_cooldownValue_81();
+		float L_258 = __this->get_cooldownValue_81();
+		RuntimeObject* L_259 = PlayerController_countdownStimulant_m1716973018(__this, L_257, (0.0f), L_258, /*hidden argument*/NULL);
 		MonoBehaviour_StartCoroutine_m3411253000(__this, L_259, /*hidden argument*/NULL);
 	}
 
-IL_0975:
+IL_093a:
 	{
 		String_t* L_260 = __this->get_VITA_50();
-		int32_t L_261 = __this->get_CROSS_51();
+		int32_t L_261 = __this->get_CIRCLE_52();
 		int32_t L_262 = L_261;
 		RuntimeObject * L_263 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_262);
 		String_t* L_264 = String_Concat_m904156431(NULL /*static, unused*/, L_260, L_263, /*hidden argument*/NULL);
@@ -57291,14 +57296,15 @@ IL_0975:
 		bool L_265 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_264, /*hidden argument*/NULL);
 		if (!L_265)
 		{
-			goto IL_0a1f;
+			goto IL_0a05;
 		}
 	}
 	{
-		float L_266 = __this->get_verticalMove_63();
-		if ((!(((float)L_266) > ((float)(0.0f)))))
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_266 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_isMap_78();
+		if (L_266)
 		{
-			goto IL_0a1f;
+			goto IL_09b8;
 		}
 	}
 	{
@@ -57306,1045 +57312,1115 @@ IL_0975:
 		bool L_267 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
 		if (L_267)
 		{
-			goto IL_0a1f;
+			goto IL_09b8;
+		}
+	}
+	{
+		GameObject_t1113636619 * L_268 = __this->get_mapCamera_18();
+		NullCheck(L_268);
+		GameObject_SetActive_m796801857(L_268, (bool)1, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
+		RawImage_t3182918964 * L_269 = __this->get_mapPanel_83();
+		RuntimeObject* L_270 = PlayerController_fade_m1874425066(__this, L_269, (0.0f), (1.0f), (0.5f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_270, /*hidden argument*/NULL);
+		RuntimeObject* L_271 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.5f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_271, /*hidden argument*/NULL);
+		goto IL_0a05;
+	}
+
+IL_09b8:
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_272 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_isMap_78();
+		if (!L_272)
+		{
+			goto IL_0a05;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_273 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
+		if (L_273)
+		{
+			goto IL_0a05;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
 		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
-		Transform_t3600365921 * L_268 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		NullCheck(L_268);
-		Vector3_t3722313464  L_269 = Transform_get_eulerAngles_m2743581774(L_268, /*hidden argument*/NULL);
-		V_3 = L_269;
-		Transform_t3600365921 * L_270 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		NullCheck(L_270);
-		Vector3_t3722313464  L_271 = Transform_get_eulerAngles_m2743581774(L_270, /*hidden argument*/NULL);
-		V_5 = L_271;
-		float L_272 = (&V_5)->get_x_2();
-		Transform_t3600365921 * L_273 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		NullCheck(L_273);
-		Vector3_t3722313464  L_274 = Transform_get_eulerAngles_m2743581774(L_273, /*hidden argument*/NULL);
-		V_6 = L_274;
-		float L_275 = (&V_6)->get_y_3();
-		Transform_t3600365921 * L_276 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
-		NullCheck(L_276);
-		Vector3_t3722313464  L_277 = Transform_get_eulerAngles_m2743581774(L_276, /*hidden argument*/NULL);
-		V_7 = L_277;
-		float L_278 = (&V_7)->get_z_4();
-		Vector3__ctor_m3353183577((Vector3_t3722313464 *)(&V_4), L_272, ((float)il2cpp_codegen_add((float)L_275, (float)(180.0f))), L_278, /*hidden argument*/NULL);
-		Vector3_t3722313464  L_279 = V_3;
-		Vector3_t3722313464  L_280 = V_4;
-		RuntimeObject* L_281 = PlayerController_quickTurn_m3381122320(__this, L_279, L_280, (1.5f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_281, /*hidden argument*/NULL);
+		RawImage_t3182918964 * L_274 = __this->get_mapPanel_83();
+		RuntimeObject* L_275 = PlayerController_fade_m1874425066(__this, L_274, (1.0f), (0.0f), (0.5f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_275, /*hidden argument*/NULL);
+		RuntimeObject* L_276 = PlayerController_buttonDelayTimer_m4125268382(NULL /*static, unused*/, (0.5f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_276, /*hidden argument*/NULL);
 	}
 
-IL_0a1f:
+IL_0a05:
 	{
-		String_t* L_282 = __this->get_VITA_50();
-		int32_t L_283 = __this->get_LTRIG_55();
-		int32_t L_284 = L_283;
-		RuntimeObject * L_285 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_284);
-		String_t* L_286 = String_Concat_m904156431(NULL /*static, unused*/, L_282, L_285, /*hidden argument*/NULL);
+		String_t* L_277 = __this->get_VITA_50();
+		int32_t L_278 = __this->get_CROSS_51();
+		int32_t L_279 = L_278;
+		RuntimeObject * L_280 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_279);
+		String_t* L_281 = String_Concat_m904156431(NULL /*static, unused*/, L_277, L_280, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_287 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_286, /*hidden argument*/NULL);
-		if (!L_287)
+		bool L_282 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_281, /*hidden argument*/NULL);
+		if (!L_282)
 		{
-			goto IL_0b76;
+			goto IL_0aaf;
+		}
+	}
+	{
+		float L_283 = __this->get_verticalMove_63();
+		if ((!(((float)L_283) > ((float)(0.0f)))))
+		{
+			goto IL_0aaf;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_288 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
-		if (!L_288)
+		bool L_284 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_delayButton_80();
+		if (L_284)
 		{
-			goto IL_0b76;
+			goto IL_0aaf;
 		}
 	}
 	{
-		bool L_289 = __this->get_flashlightDisabled_42();
-		if (!L_289)
-		{
-			goto IL_0b76;
-		}
-	}
-	{
-		__this->set_isCharging_77((bool)0);
-		Color_t2555686324  L_290 = __this->get_colorTransparent_38();
-		Color_t2555686324  L_291 = __this->get_colorStart_36();
-		RuntimeObject* L_292 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_290, L_291, (0.25f), (0.0f), (5.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_292, /*hidden argument*/NULL);
-		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		bool L_293 = __this->get_isStimulant_75();
-		if (!L_293)
-		{
-			goto IL_0ad7;
-		}
-	}
-	{
-		float L_294 = __this->get_cooldownValue_81();
-		float L_295 = __this->get_stimCooldown_11();
-		if ((!(((float)L_294) <= ((float)L_295))))
-		{
-			goto IL_0ad7;
-		}
-	}
-	{
-		float L_296 = __this->get_cooldownValue_81();
-		float L_297 = __this->get_cooldownValue_81();
-		RuntimeObject* L_298 = PlayerController_countdownStimulant_m1716973018(__this, L_296, (0.0f), L_297, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)1);
+		Transform_t3600365921 * L_285 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		NullCheck(L_285);
+		Vector3_t3722313464  L_286 = Transform_get_eulerAngles_m2743581774(L_285, /*hidden argument*/NULL);
+		V_3 = L_286;
+		Transform_t3600365921 * L_287 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		NullCheck(L_287);
+		Vector3_t3722313464  L_288 = Transform_get_eulerAngles_m2743581774(L_287, /*hidden argument*/NULL);
+		V_5 = L_288;
+		float L_289 = (&V_5)->get_x_2();
+		Transform_t3600365921 * L_290 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		NullCheck(L_290);
+		Vector3_t3722313464  L_291 = Transform_get_eulerAngles_m2743581774(L_290, /*hidden argument*/NULL);
+		V_6 = L_291;
+		float L_292 = (&V_6)->get_y_3();
+		Transform_t3600365921 * L_293 = Component_get_transform_m3162698980(__this, /*hidden argument*/NULL);
+		NullCheck(L_293);
+		Vector3_t3722313464  L_294 = Transform_get_eulerAngles_m2743581774(L_293, /*hidden argument*/NULL);
+		V_7 = L_294;
+		float L_295 = (&V_7)->get_z_4();
+		Vector3__ctor_m3353183577((Vector3_t3722313464 *)(&V_4), L_289, ((float)il2cpp_codegen_add((float)L_292, (float)(180.0f))), L_295, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_296 = V_3;
+		Vector3_t3722313464  L_297 = V_4;
+		RuntimeObject* L_298 = PlayerController_quickTurn_m3381122320(__this, L_296, L_297, (1.5f), /*hidden argument*/NULL);
 		MonoBehaviour_StartCoroutine_m3411253000(__this, L_298, /*hidden argument*/NULL);
 	}
 
-IL_0ad7:
+IL_0aaf:
 	{
 		String_t* L_299 = __this->get_VITA_50();
-		int32_t L_300 = __this->get_RTRIG_56();
+		int32_t L_300 = __this->get_LTRIG_55();
 		int32_t L_301 = L_300;
 		RuntimeObject * L_302 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_301);
 		String_t* L_303 = String_Concat_m904156431(NULL /*static, unused*/, L_299, L_302, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_304 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_303, /*hidden argument*/NULL);
-		if (L_304)
+		bool L_304 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_303, /*hidden argument*/NULL);
+		if (!L_304)
 		{
-			goto IL_0b16;
-		}
-	}
-	{
-		float L_305 = __this->get_stamina_9();
-		float L_306 = __this->get_stamina_9();
-		RuntimeObject* L_307 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_305)), L_306, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_307, /*hidden argument*/NULL);
-	}
-
-IL_0b16:
-	{
-		Color_t2555686324  L_308 = __this->get_colorStart_36();
-		Color_t2555686324  L_309 = __this->get_colorTransparent_38();
-		RuntimeObject* L_310 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_308, L_309, (0.25f), (5.0f), (0.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_310, /*hidden argument*/NULL);
-		__this->set_flashlightDisabled_42((bool)1);
-		float L_311 = __this->get_lerpRate_47();
-		RuntimeObject* L_312 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_311, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_312, /*hidden argument*/NULL);
-	}
-
-IL_0b76:
-	{
-		String_t* L_313 = __this->get_VITA_50();
-		int32_t L_314 = __this->get_LTRIG_55();
-		int32_t L_315 = L_314;
-		RuntimeObject * L_316 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_315);
-		String_t* L_317 = String_Concat_m904156431(NULL /*static, unused*/, L_313, L_316, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_318 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_317, /*hidden argument*/NULL);
-		if (!L_318)
-		{
-			goto IL_0d68;
+			goto IL_0c06;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_319 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
-		if (!L_319)
+		bool L_305 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
+		if (!L_305)
 		{
-			goto IL_0d68;
+			goto IL_0c06;
 		}
 	}
 	{
-		float L_320 = __this->get_flashlightCharge_41();
-		if ((!(((float)L_320) > ((float)(0.05f)))))
+		bool L_306 = __this->get_flashlightDisabled_42();
+		if (!L_306)
 		{
-			goto IL_0d68;
+			goto IL_0c06;
 		}
 	}
 	{
-		bool L_321 = __this->get_flashlightDisabled_42();
+		__this->set_isCharging_77((bool)0);
+		Color_t2555686324  L_307 = __this->get_colorTransparent_38();
+		Color_t2555686324  L_308 = __this->get_colorStart_36();
+		RuntimeObject* L_309 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_307, L_308, (0.25f), (0.0f), (5.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_309, /*hidden argument*/NULL);
+		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
+		bool L_310 = __this->get_isStimulant_75();
+		if (!L_310)
+		{
+			goto IL_0b67;
+		}
+	}
+	{
+		float L_311 = __this->get_cooldownValue_81();
+		float L_312 = __this->get_stimCooldown_11();
+		if ((!(((float)L_311) <= ((float)L_312))))
+		{
+			goto IL_0b67;
+		}
+	}
+	{
+		float L_313 = __this->get_cooldownValue_81();
+		float L_314 = __this->get_cooldownValue_81();
+		RuntimeObject* L_315 = PlayerController_countdownStimulant_m1716973018(__this, L_313, (0.0f), L_314, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_315, /*hidden argument*/NULL);
+	}
+
+IL_0b67:
+	{
+		String_t* L_316 = __this->get_VITA_50();
+		int32_t L_317 = __this->get_RTRIG_56();
+		int32_t L_318 = L_317;
+		RuntimeObject * L_319 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_318);
+		String_t* L_320 = String_Concat_m904156431(NULL /*static, unused*/, L_316, L_319, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_321 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_320, /*hidden argument*/NULL);
 		if (L_321)
 		{
-			goto IL_0d68;
+			goto IL_0ba6;
+		}
+	}
+	{
+		float L_322 = __this->get_stamina_9();
+		float L_323 = __this->get_stamina_9();
+		RuntimeObject* L_324 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_322)), L_323, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_324, /*hidden argument*/NULL);
+	}
+
+IL_0ba6:
+	{
+		Color_t2555686324  L_325 = __this->get_colorStart_36();
+		Color_t2555686324  L_326 = __this->get_colorTransparent_38();
+		RuntimeObject* L_327 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_325, L_326, (0.25f), (5.0f), (0.0f), (40.0f), (40.0f), (0.08f), (0.08f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_327, /*hidden argument*/NULL);
+		__this->set_flashlightDisabled_42((bool)1);
+		float L_328 = __this->get_lerpRate_47();
+		RuntimeObject* L_329 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_328, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_329, /*hidden argument*/NULL);
+	}
+
+IL_0c06:
+	{
+		String_t* L_330 = __this->get_VITA_50();
+		int32_t L_331 = __this->get_LTRIG_55();
+		int32_t L_332 = L_331;
+		RuntimeObject * L_333 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_332);
+		String_t* L_334 = String_Concat_m904156431(NULL /*static, unused*/, L_330, L_333, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_335 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_334, /*hidden argument*/NULL);
+		if (!L_335)
+		{
+			goto IL_0df8;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_322 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
-		if (L_322)
+		bool L_336 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
+		if (!L_336)
 		{
-			goto IL_0d68;
+			goto IL_0df8;
+		}
+	}
+	{
+		float L_337 = __this->get_flashlightCharge_41();
+		if ((!(((float)L_337) > ((float)(0.05f)))))
+		{
+			goto IL_0df8;
+		}
+	}
+	{
+		bool L_338 = __this->get_flashlightDisabled_42();
+		if (L_338)
+		{
+			goto IL_0df8;
+		}
+	}
+	{
+		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
+		bool L_339 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
+		if (L_339)
+		{
+			goto IL_0df8;
 		}
 	}
 	{
 		__this->set_lightFocusing_72((bool)1);
-		GameObject_t1113636619 * L_323 = __this->get_currentTarget_32();
+		GameObject_t1113636619 * L_340 = __this->get_currentTarget_32();
 		IL2CPP_RUNTIME_CLASS_INIT(Object_t631007953_il2cpp_TypeInfo_var);
-		bool L_324 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_323, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
-		if (!L_324)
+		bool L_341 = Object_op_Inequality_m4071470834(NULL /*static, unused*/, L_340, (Object_t631007953 *)NULL, /*hidden argument*/NULL);
+		if (!L_341)
 		{
-			goto IL_0be4;
+			goto IL_0c74;
 		}
 	}
 	{
 		__this->set_lightMovement_79((bool)0);
 	}
 
-IL_0be4:
+IL_0c74:
 	{
 		__this->set_isCharging_77((bool)0);
-		GameObject_t1113636619 * L_325 = __this->get_lightRoot_31();
-		NullCheck(L_325);
-		Transform_t3600365921 * L_326 = GameObject_get_transform_m1369836730(L_325, /*hidden argument*/NULL);
-		NullCheck(L_326);
-		Quaternion_t2301928331  L_327 = Transform_get_localRotation_m3487911431(L_326, /*hidden argument*/NULL);
-		__this->set_storedLightRotation_33(L_327);
-		Light_t3756812086 * L_328 = __this->get_flashlight_21();
-		NullCheck(L_328);
-		float L_329 = Light_get_intensity_m767788470(L_328, /*hidden argument*/NULL);
-		V_8 = L_329;
-		Renderer_t2627027031 * L_330 = __this->get_lightBeam_28();
-		NullCheck(L_330);
-		Material_t340375123 * L_331 = Renderer_get_material_m4171603682(L_330, /*hidden argument*/NULL);
-		NullCheck(L_331);
-		Color_t2555686324  L_332 = Material_get_color_m3827673574(L_331, /*hidden argument*/NULL);
-		V_9 = L_332;
+		GameObject_t1113636619 * L_342 = __this->get_lightRoot_31();
+		NullCheck(L_342);
+		Transform_t3600365921 * L_343 = GameObject_get_transform_m1369836730(L_342, /*hidden argument*/NULL);
+		NullCheck(L_343);
+		Quaternion_t2301928331  L_344 = Transform_get_localRotation_m3487911431(L_343, /*hidden argument*/NULL);
+		__this->set_storedLightRotation_33(L_344);
+		Light_t3756812086 * L_345 = __this->get_flashlight_21();
+		NullCheck(L_345);
+		float L_346 = Light_get_intensity_m767788470(L_345, /*hidden argument*/NULL);
+		V_8 = L_346;
+		Renderer_t2627027031 * L_347 = __this->get_lightBeam_28();
+		NullCheck(L_347);
+		Material_t340375123 * L_348 = Renderer_get_material_m4171603682(L_347, /*hidden argument*/NULL);
+		NullCheck(L_348);
+		Color_t2555686324  L_349 = Material_get_color_m3827673574(L_348, /*hidden argument*/NULL);
+		V_9 = L_349;
 		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		bool L_333 = __this->get_isStimulant_75();
-		if (!L_333)
+		bool L_350 = __this->get_isStimulant_75();
+		if (!L_350)
 		{
-			goto IL_0c60;
+			goto IL_0cf0;
 		}
 	}
 	{
-		float L_334 = __this->get_cooldownValue_81();
-		float L_335 = __this->get_stimCooldown_11();
-		if ((!(((float)L_334) <= ((float)L_335))))
+		float L_351 = __this->get_cooldownValue_81();
+		float L_352 = __this->get_stimCooldown_11();
+		if ((!(((float)L_351) <= ((float)L_352))))
 		{
-			goto IL_0c60;
+			goto IL_0cf0;
 		}
 	}
 	{
-		float L_336 = __this->get_cooldownValue_81();
-		float L_337 = __this->get_cooldownValue_81();
-		RuntimeObject* L_338 = PlayerController_countdownStimulant_m1716973018(__this, L_336, (0.0f), L_337, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_338, /*hidden argument*/NULL);
-	}
-
-IL_0c60:
-	{
-		String_t* L_339 = __this->get_VITA_50();
-		int32_t L_340 = __this->get_RTRIG_56();
-		int32_t L_341 = L_340;
-		RuntimeObject * L_342 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_341);
-		String_t* L_343 = String_Concat_m904156431(NULL /*static, unused*/, L_339, L_342, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_344 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_343, /*hidden argument*/NULL);
-		if (L_344)
-		{
-			goto IL_0c9f;
-		}
-	}
-	{
-		float L_345 = __this->get_stamina_9();
-		float L_346 = __this->get_stamina_9();
-		RuntimeObject* L_347 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_345)), L_346, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_347, /*hidden argument*/NULL);
-	}
-
-IL_0c9f:
-	{
-		Color_t2555686324  L_348 = V_9;
-		Color_t2555686324  L_349 = __this->get_colorEnd_37();
-		float L_350 = __this->get_lightDuration_39();
-		Light_t3756812086 * L_351 = __this->get_flashlight_21();
-		NullCheck(L_351);
-		float L_352 = Light_get_intensity_m767788470(L_351, /*hidden argument*/NULL);
-		RuntimeObject* L_353 = PlayerController_FadeLightDynamicInput_m1165344512(__this, L_348, L_349, L_350, L_352, (20.0f), (40.0f), (25.0f), (0.08f), (0.04f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_353, /*hidden argument*/NULL);
-		float L_354 = __this->get_lerpRate_47();
-		RuntimeObject* L_355 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_354, /*hidden argument*/NULL);
+		float L_353 = __this->get_cooldownValue_81();
+		float L_354 = __this->get_cooldownValue_81();
+		RuntimeObject* L_355 = PlayerController_countdownStimulant_m1716973018(__this, L_353, (0.0f), L_354, /*hidden argument*/NULL);
 		MonoBehaviour_StartCoroutine_m3411253000(__this, L_355, /*hidden argument*/NULL);
-		bool L_356 = __this->get_isStimulant_75();
-		if (L_356)
-		{
-			goto IL_0d2c;
-		}
-	}
-	{
-		RuntimeObject* L_357 = PlayerController_lerpFocalLength_m3680988181(__this, (0.115f), (0.125f), (0.5f), (0.5f), (0.5f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_357, /*hidden argument*/NULL);
 	}
 
-IL_0d2c:
+IL_0cf0:
 	{
-		CanvasGroup_t4083511760 * L_358 = __this->get_UICanvasGroup_87();
-		NullCheck(L_358);
-		float L_359 = CanvasGroup_get_alpha_m2918269489(L_358, /*hidden argument*/NULL);
-		if ((((float)L_359) == ((float)(1.0f))))
-		{
-			goto IL_0d68;
-		}
-	}
-	{
-		CanvasGroup_t4083511760 * L_360 = __this->get_UICanvasGroup_87();
-		NullCheck(L_360);
-		float L_361 = CanvasGroup_get_alpha_m2918269489(L_360, /*hidden argument*/NULL);
-		RuntimeObject* L_362 = PlayerController_fadeAlpha_m1570045651(__this, L_361, (1.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_362, /*hidden argument*/NULL);
-	}
-
-IL_0d68:
-	{
-		String_t* L_363 = __this->get_VITA_50();
-		int32_t L_364 = __this->get_LTRIG_55();
-		int32_t L_365 = L_364;
-		RuntimeObject * L_366 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_365);
-		String_t* L_367 = String_Concat_m904156431(NULL /*static, unused*/, L_363, L_366, /*hidden argument*/NULL);
+		String_t* L_356 = __this->get_VITA_50();
+		int32_t L_357 = __this->get_RTRIG_56();
+		int32_t L_358 = L_357;
+		RuntimeObject * L_359 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_358);
+		String_t* L_360 = String_Concat_m904156431(NULL /*static, unused*/, L_356, L_359, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_368 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_367, /*hidden argument*/NULL);
-		if (!L_368)
+		bool L_361 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_360, /*hidden argument*/NULL);
+		if (L_361)
 		{
-			goto IL_0de2;
+			goto IL_0d2f;
+		}
+	}
+	{
+		float L_362 = __this->get_stamina_9();
+		float L_363 = __this->get_stamina_9();
+		RuntimeObject* L_364 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_362)), L_363, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_364, /*hidden argument*/NULL);
+	}
+
+IL_0d2f:
+	{
+		Color_t2555686324  L_365 = V_9;
+		Color_t2555686324  L_366 = __this->get_colorEnd_37();
+		float L_367 = __this->get_lightDuration_39();
+		Light_t3756812086 * L_368 = __this->get_flashlight_21();
+		NullCheck(L_368);
+		float L_369 = Light_get_intensity_m767788470(L_368, /*hidden argument*/NULL);
+		RuntimeObject* L_370 = PlayerController_FadeLightDynamicInput_m1165344512(__this, L_365, L_366, L_367, L_369, (20.0f), (40.0f), (25.0f), (0.08f), (0.04f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_370, /*hidden argument*/NULL);
+		float L_371 = __this->get_lerpRate_47();
+		RuntimeObject* L_372 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_371, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_372, /*hidden argument*/NULL);
+		bool L_373 = __this->get_isStimulant_75();
+		if (L_373)
+		{
+			goto IL_0dbc;
+		}
+	}
+	{
+		RuntimeObject* L_374 = PlayerController_lerpFocalLength_m3680988181(__this, (0.115f), (0.125f), (0.5f), (0.5f), (0.5f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_374, /*hidden argument*/NULL);
+	}
+
+IL_0dbc:
+	{
+		CanvasGroup_t4083511760 * L_375 = __this->get_UICanvasGroup_87();
+		NullCheck(L_375);
+		float L_376 = CanvasGroup_get_alpha_m2918269489(L_375, /*hidden argument*/NULL);
+		if ((((float)L_376) == ((float)(1.0f))))
+		{
+			goto IL_0df8;
+		}
+	}
+	{
+		CanvasGroup_t4083511760 * L_377 = __this->get_UICanvasGroup_87();
+		NullCheck(L_377);
+		float L_378 = CanvasGroup_get_alpha_m2918269489(L_377, /*hidden argument*/NULL);
+		RuntimeObject* L_379 = PlayerController_fadeAlpha_m1570045651(__this, L_378, (1.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_379, /*hidden argument*/NULL);
+	}
+
+IL_0df8:
+	{
+		String_t* L_380 = __this->get_VITA_50();
+		int32_t L_381 = __this->get_LTRIG_55();
+		int32_t L_382 = L_381;
+		RuntimeObject * L_383 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_382);
+		String_t* L_384 = String_Concat_m904156431(NULL /*static, unused*/, L_380, L_383, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_385 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_384, /*hidden argument*/NULL);
+		if (!L_385)
+		{
+			goto IL_0e72;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_369 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
-		if (!L_369)
+		bool L_386 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
+		if (!L_386)
 		{
-			goto IL_0de2;
+			goto IL_0e72;
 		}
 	}
 	{
-		float L_370 = __this->get_flashlightCharge_41();
-		if ((!(((float)L_370) > ((float)(0.05f)))))
+		float L_387 = __this->get_flashlightCharge_41();
+		if ((!(((float)L_387) > ((float)(0.05f)))))
 		{
-			goto IL_0de2;
+			goto IL_0e72;
 		}
 	}
 	{
-		bool L_371 = __this->get_flashlightDisabled_42();
-		if (L_371)
+		bool L_388 = __this->get_flashlightDisabled_42();
+		if (L_388)
 		{
-			goto IL_0de2;
+			goto IL_0e72;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_372 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
-		if (L_372)
+		bool L_389 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_flashlightOff_6();
+		if (L_389)
 		{
-			goto IL_0de2;
+			goto IL_0e72;
 		}
 	}
 	{
 		PlayerController_Focus_m1205097580(__this, /*hidden argument*/NULL);
-		Camera_t4157153871 * L_373 = __this->get_camObject_17();
-		NullCheck(L_373);
-		float L_374 = Camera_get_fieldOfView_m1018585504(L_373, /*hidden argument*/NULL);
-		if ((!(((float)L_374) < ((float)(30.0f)))))
+		Camera_t4157153871 * L_390 = __this->get_camObject_17();
+		NullCheck(L_390);
+		float L_391 = Camera_get_fieldOfView_m1018585504(L_390, /*hidden argument*/NULL);
+		if ((!(((float)L_391) < ((float)(30.0f)))))
 		{
-			goto IL_0de2;
+			goto IL_0e72;
 		}
 	}
 	{
-		Camera_t4157153871 * L_375 = __this->get_camObject_17();
-		NullCheck(L_375);
-		Camera_set_fieldOfView_m1438246590(L_375, (30.0f), /*hidden argument*/NULL);
+		Camera_t4157153871 * L_392 = __this->get_camObject_17();
+		NullCheck(L_392);
+		Camera_set_fieldOfView_m1438246590(L_392, (30.0f), /*hidden argument*/NULL);
 	}
 
-IL_0de2:
+IL_0e72:
 	{
-		String_t* L_376 = __this->get_VITA_50();
-		int32_t L_377 = __this->get_LTRIG_55();
-		int32_t L_378 = L_377;
-		RuntimeObject * L_379 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_378);
-		String_t* L_380 = String_Concat_m904156431(NULL /*static, unused*/, L_376, L_379, /*hidden argument*/NULL);
+		String_t* L_393 = __this->get_VITA_50();
+		int32_t L_394 = __this->get_LTRIG_55();
+		int32_t L_395 = L_394;
+		RuntimeObject * L_396 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_395);
+		String_t* L_397 = String_Concat_m904156431(NULL /*static, unused*/, L_393, L_396, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_381 = Input_GetKeyUp_m3609240977(NULL /*static, unused*/, L_380, /*hidden argument*/NULL);
-		if (!L_381)
+		bool L_398 = Input_GetKeyUp_m3609240977(NULL /*static, unused*/, L_397, /*hidden argument*/NULL);
+		if (!L_398)
 		{
-			goto IL_1037;
+			goto IL_10c7;
 		}
 	}
 	{
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
-		bool L_382 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
-		if (!L_382)
+		bool L_399 = ((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->get_hasFlashlight_5();
+		if (!L_399)
 		{
-			goto IL_1037;
+			goto IL_10c7;
 		}
 	}
 	{
 		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		float L_383 = __this->get_flashlightCharge_41();
-		__this->set_currentCharge_88(L_383);
-		bool L_384 = __this->get_isCharging_77();
-		if (L_384)
+		float L_400 = __this->get_flashlightCharge_41();
+		__this->set_currentCharge_88(L_400);
+		bool L_401 = __this->get_isCharging_77();
+		if (L_401)
 		{
-			goto IL_0e41;
+			goto IL_0ed1;
 		}
 	}
 	{
-		float L_385 = __this->get_currentCharge_88();
-		RuntimeObject* L_386 = PlayerController_rechargeFlashlight_m3593985256(__this, L_385, (10.0f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_386, /*hidden argument*/NULL);
+		float L_402 = __this->get_currentCharge_88();
+		RuntimeObject* L_403 = PlayerController_rechargeFlashlight_m3593985256(__this, L_402, (10.0f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_403, /*hidden argument*/NULL);
 	}
 
-IL_0e41:
+IL_0ed1:
 	{
-		bool L_387 = __this->get_isStimulant_75();
-		if (!L_387)
+		bool L_404 = __this->get_isStimulant_75();
+		if (!L_404)
 		{
-			goto IL_0e7b;
+			goto IL_0f0b;
 		}
 	}
 	{
-		float L_388 = __this->get_cooldownValue_81();
-		float L_389 = __this->get_stimCooldown_11();
-		if ((!(((float)L_388) <= ((float)L_389))))
+		float L_405 = __this->get_cooldownValue_81();
+		float L_406 = __this->get_stimCooldown_11();
+		if ((!(((float)L_405) <= ((float)L_406))))
 		{
-			goto IL_0e7b;
+			goto IL_0f0b;
 		}
 	}
 	{
-		float L_390 = __this->get_cooldownValue_81();
-		float L_391 = __this->get_cooldownValue_81();
-		RuntimeObject* L_392 = PlayerController_countdownStimulant_m1716973018(__this, L_390, (0.0f), L_391, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_392, /*hidden argument*/NULL);
-	}
-
-IL_0e7b:
-	{
-		CanvasGroup_t4083511760 * L_393 = __this->get_UICanvasGroup_87();
-		NullCheck(L_393);
-		float L_394 = CanvasGroup_get_alpha_m2918269489(L_393, /*hidden argument*/NULL);
-		if ((((float)L_394) == ((float)(0.0f))))
-		{
-			goto IL_0edd;
-		}
-	}
-	{
-		float L_395 = __this->get_stamina_9();
-		if ((!(((float)L_395) >= ((float)(95.0f)))))
-		{
-			goto IL_0edd;
-		}
-	}
-	{
-		bool L_396 = __this->get_isStimulant_75();
-		if (L_396)
-		{
-			goto IL_0edd;
-		}
-	}
-	{
-		bool L_397 = __this->get_isCharging_77();
-		if (L_397)
-		{
-			goto IL_0edd;
-		}
-	}
-	{
-		CanvasGroup_t4083511760 * L_398 = __this->get_UICanvasGroup_87();
-		NullCheck(L_398);
-		float L_399 = CanvasGroup_get_alpha_m2918269489(L_398, /*hidden argument*/NULL);
-		RuntimeObject* L_400 = PlayerController_fadeAlpha_m1570045651(__this, L_399, (0.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_400, /*hidden argument*/NULL);
-	}
-
-IL_0edd:
-	{
-		String_t* L_401 = __this->get_VITA_50();
-		int32_t L_402 = __this->get_RTRIG_56();
-		int32_t L_403 = L_402;
-		RuntimeObject * L_404 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_403);
-		String_t* L_405 = String_Concat_m904156431(NULL /*static, unused*/, L_401, L_404, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_406 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_405, /*hidden argument*/NULL);
-		if (L_406)
-		{
-			goto IL_0f1c;
-		}
-	}
-	{
-		float L_407 = __this->get_stamina_9();
-		float L_408 = __this->get_stamina_9();
-		RuntimeObject* L_409 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_407)), L_408, /*hidden argument*/NULL);
+		float L_407 = __this->get_cooldownValue_81();
+		float L_408 = __this->get_cooldownValue_81();
+		RuntimeObject* L_409 = PlayerController_countdownStimulant_m1716973018(__this, L_407, (0.0f), L_408, /*hidden argument*/NULL);
 		MonoBehaviour_StartCoroutine_m3411253000(__this, L_409, /*hidden argument*/NULL);
 	}
 
-IL_0f1c:
+IL_0f0b:
 	{
-		bool L_410 = __this->get_flashlightDisabled_42();
-		if (L_410)
+		CanvasGroup_t4083511760 * L_410 = __this->get_UICanvasGroup_87();
+		NullCheck(L_410);
+		float L_411 = CanvasGroup_get_alpha_m2918269489(L_410, /*hidden argument*/NULL);
+		if ((((float)L_411) == ((float)(0.0f))))
 		{
-			goto IL_0f9d;
+			goto IL_0f6d;
 		}
 	}
 	{
-		Light_t3756812086 * L_411 = __this->get_flashlight_21();
-		NullCheck(L_411);
-		float L_412 = Light_get_intensity_m767788470(L_411, /*hidden argument*/NULL);
-		V_10 = L_412;
-		Light_t3756812086 * L_413 = __this->get_flashlight_21();
-		NullCheck(L_413);
-		float L_414 = Light_get_spotAngle_m3262157804(L_413, /*hidden argument*/NULL);
-		V_11 = L_414;
-		GameObject_t1113636619 * L_415 = __this->get_lightShaft_25();
+		float L_412 = __this->get_stamina_9();
+		if ((!(((float)L_412) >= ((float)(95.0f)))))
+		{
+			goto IL_0f6d;
+		}
+	}
+	{
+		bool L_413 = __this->get_isStimulant_75();
+		if (L_413)
+		{
+			goto IL_0f6d;
+		}
+	}
+	{
+		bool L_414 = __this->get_isCharging_77();
+		if (L_414)
+		{
+			goto IL_0f6d;
+		}
+	}
+	{
+		CanvasGroup_t4083511760 * L_415 = __this->get_UICanvasGroup_87();
 		NullCheck(L_415);
-		Transform_t3600365921 * L_416 = GameObject_get_transform_m1369836730(L_415, /*hidden argument*/NULL);
-		NullCheck(L_416);
-		Vector3_t3722313464  L_417 = Transform_get_localScale_m129152068(L_416, /*hidden argument*/NULL);
-		V_13 = L_417;
-		float L_418 = (&V_13)->get_x_2();
-		V_12 = L_418;
-		Renderer_t2627027031 * L_419 = __this->get_lightBeam_28();
-		NullCheck(L_419);
-		Material_t340375123 * L_420 = Renderer_get_material_m4171603682(L_419, /*hidden argument*/NULL);
-		NullCheck(L_420);
-		Color_t2555686324  L_421 = Material_get_color_m3827673574(L_420, /*hidden argument*/NULL);
-		V_14 = L_421;
-		Color_t2555686324  L_422 = V_14;
-		Color_t2555686324  L_423 = __this->get_colorStart_36();
-		float L_424 = V_10;
-		float L_425 = V_11;
-		float L_426 = V_12;
-		RuntimeObject* L_427 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_422, L_423, (0.25f), L_424, (5.0f), L_425, (40.0f), L_426, (0.08f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_427, /*hidden argument*/NULL);
+		float L_416 = CanvasGroup_get_alpha_m2918269489(L_415, /*hidden argument*/NULL);
+		RuntimeObject* L_417 = PlayerController_fadeAlpha_m1570045651(__this, L_416, (0.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_417, /*hidden argument*/NULL);
 	}
 
-IL_0f9d:
+IL_0f6d:
+	{
+		String_t* L_418 = __this->get_VITA_50();
+		int32_t L_419 = __this->get_RTRIG_56();
+		int32_t L_420 = L_419;
+		RuntimeObject * L_421 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_420);
+		String_t* L_422 = String_Concat_m904156431(NULL /*static, unused*/, L_418, L_421, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_423 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_422, /*hidden argument*/NULL);
+		if (L_423)
+		{
+			goto IL_0fac;
+		}
+	}
+	{
+		float L_424 = __this->get_stamina_9();
+		float L_425 = __this->get_stamina_9();
+		RuntimeObject* L_426 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_424)), L_425, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_426, /*hidden argument*/NULL);
+	}
+
+IL_0fac:
+	{
+		bool L_427 = __this->get_flashlightDisabled_42();
+		if (L_427)
+		{
+			goto IL_102d;
+		}
+	}
+	{
+		Light_t3756812086 * L_428 = __this->get_flashlight_21();
+		NullCheck(L_428);
+		float L_429 = Light_get_intensity_m767788470(L_428, /*hidden argument*/NULL);
+		V_10 = L_429;
+		Light_t3756812086 * L_430 = __this->get_flashlight_21();
+		NullCheck(L_430);
+		float L_431 = Light_get_spotAngle_m3262157804(L_430, /*hidden argument*/NULL);
+		V_11 = L_431;
+		GameObject_t1113636619 * L_432 = __this->get_lightShaft_25();
+		NullCheck(L_432);
+		Transform_t3600365921 * L_433 = GameObject_get_transform_m1369836730(L_432, /*hidden argument*/NULL);
+		NullCheck(L_433);
+		Vector3_t3722313464  L_434 = Transform_get_localScale_m129152068(L_433, /*hidden argument*/NULL);
+		V_13 = L_434;
+		float L_435 = (&V_13)->get_x_2();
+		V_12 = L_435;
+		Renderer_t2627027031 * L_436 = __this->get_lightBeam_28();
+		NullCheck(L_436);
+		Material_t340375123 * L_437 = Renderer_get_material_m4171603682(L_436, /*hidden argument*/NULL);
+		NullCheck(L_437);
+		Color_t2555686324  L_438 = Material_get_color_m3827673574(L_437, /*hidden argument*/NULL);
+		V_14 = L_438;
+		Color_t2555686324  L_439 = V_14;
+		Color_t2555686324  L_440 = __this->get_colorStart_36();
+		float L_441 = V_10;
+		float L_442 = V_11;
+		float L_443 = V_12;
+		RuntimeObject* L_444 = PlayerController_FadeLightStaticInput_m1547076252(__this, L_439, L_440, (0.25f), L_441, (5.0f), L_442, (40.0f), L_443, (0.08f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_444, /*hidden argument*/NULL);
+	}
+
+IL_102d:
 	{
 		__this->set_lightFocusing_72((bool)0);
 		__this->set_lightMovement_79((bool)1);
-		GameObject_t1113636619 * L_428 = __this->get_lightRoot_31();
-		NullCheck(L_428);
-		Transform_t3600365921 * L_429 = GameObject_get_transform_m1369836730(L_428, /*hidden argument*/NULL);
-		NullCheck(L_429);
-		Quaternion_t2301928331  L_430 = Transform_get_localRotation_m3487911431(L_429, /*hidden argument*/NULL);
-		__this->set_endLightRotation_34(L_430);
-		GameObject_t1113636619 * L_431 = __this->get_lightRoot_31();
-		NullCheck(L_431);
-		Transform_t3600365921 * L_432 = GameObject_get_transform_m1369836730(L_431, /*hidden argument*/NULL);
-		Quaternion_t2301928331  L_433 = __this->get_storedLightRotation_33();
-		NullCheck(L_432);
-		Transform_set_localRotation_m19445462(L_432, L_433, /*hidden argument*/NULL);
-		float L_434 = __this->get_lerpRate_47();
-		RuntimeObject* L_435 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_434, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_435, /*hidden argument*/NULL);
-		RuntimeObject* L_436 = PlayerController_lerpCam_m965613352(__this, (0.5f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_436, /*hidden argument*/NULL);
-		bool L_437 = __this->get_isStimulant_75();
-		if (L_437)
+		GameObject_t1113636619 * L_445 = __this->get_lightRoot_31();
+		NullCheck(L_445);
+		Transform_t3600365921 * L_446 = GameObject_get_transform_m1369836730(L_445, /*hidden argument*/NULL);
+		NullCheck(L_446);
+		Quaternion_t2301928331  L_447 = Transform_get_localRotation_m3487911431(L_446, /*hidden argument*/NULL);
+		__this->set_endLightRotation_34(L_447);
+		GameObject_t1113636619 * L_448 = __this->get_lightRoot_31();
+		NullCheck(L_448);
+		Transform_t3600365921 * L_449 = GameObject_get_transform_m1369836730(L_448, /*hidden argument*/NULL);
+		Quaternion_t2301928331  L_450 = __this->get_storedLightRotation_33();
+		NullCheck(L_449);
+		Transform_set_localRotation_m19445462(L_449, L_450, /*hidden argument*/NULL);
+		float L_451 = __this->get_lerpRate_47();
+		RuntimeObject* L_452 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_451, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_452, /*hidden argument*/NULL);
+		RuntimeObject* L_453 = PlayerController_lerpCam_m965613352(__this, (0.5f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_453, /*hidden argument*/NULL);
+		bool L_454 = __this->get_isStimulant_75();
+		if (L_454)
 		{
-			goto IL_1037;
+			goto IL_10c7;
 		}
 	}
 	{
-		RuntimeObject* L_438 = PlayerController_lerpFocalLength_m3680988181(__this, (0.125f), (0.115f), (0.5f), (0.5f), (0.5f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_438, /*hidden argument*/NULL);
+		RuntimeObject* L_455 = PlayerController_lerpFocalLength_m3680988181(__this, (0.125f), (0.115f), (0.5f), (0.5f), (0.5f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_455, /*hidden argument*/NULL);
 	}
 
-IL_1037:
+IL_10c7:
 	{
-		String_t* L_439 = __this->get_VITA_50();
-		int32_t L_440 = __this->get_RTRIG_56();
-		int32_t L_441 = L_440;
-		RuntimeObject * L_442 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_441);
-		String_t* L_443 = String_Concat_m904156431(NULL /*static, unused*/, L_439, L_442, /*hidden argument*/NULL);
+		String_t* L_456 = __this->get_VITA_50();
+		int32_t L_457 = __this->get_RTRIG_56();
+		int32_t L_458 = L_457;
+		RuntimeObject * L_459 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_458);
+		String_t* L_460 = String_Concat_m904156431(NULL /*static, unused*/, L_456, L_459, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_444 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_443, /*hidden argument*/NULL);
-		if (!L_444)
+		bool L_461 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_460, /*hidden argument*/NULL);
+		if (!L_461)
 		{
-			goto IL_1179;
+			goto IL_1209;
 		}
 	}
 	{
-		float L_445 = __this->get_stamina_9();
-		if ((!(((float)L_445) > ((float)(0.0f)))))
+		float L_462 = __this->get_stamina_9();
+		if ((!(((float)L_462) > ((float)(0.0f)))))
 		{
-			goto IL_106d;
+			goto IL_10fd;
 		}
 	}
 	{
 		PlayerController_Run_m2787509846(__this, /*hidden argument*/NULL);
 	}
 
-IL_106d:
-	{
-		float L_446 = __this->get_stamina_9();
-		if ((!(((float)L_446) == ((float)(0.0f)))))
-		{
-			goto IL_1089;
-		}
-	}
-	{
-		float L_447 = __this->get_walkSpeed_13();
-		__this->set_speed_8(L_447);
-	}
-
-IL_1089:
-	{
-		float L_448 = __this->get_verticalMove_63();
-		if ((((float)L_448) == ((float)(0.0f))))
-		{
-			goto IL_112d;
-		}
-	}
-	{
-		float L_449 = __this->get_stamina_9();
-		if ((!(((float)L_449) > ((float)(0.0f)))))
-		{
-			goto IL_112d;
-		}
-	}
-	{
-		bool L_450 = __this->get_isStimulant_75();
-		if (L_450)
-		{
-			goto IL_112d;
-		}
-	}
-	{
-		float L_451 = __this->get_stamina_9();
-		V_15 = L_451;
-		float L_452 = __this->get_stamina_9();
-		__this->set_stamina_9(((float)il2cpp_codegen_subtract((float)L_452, (float)(0.75f))));
-		float L_453 = __this->get_speed_8();
-		float L_454 = __this->get_walkSpeed_13();
-		if ((!(((float)L_453) > ((float)L_454))))
-		{
-			goto IL_10ff;
-		}
-	}
-	{
-		float L_455 = __this->get_speed_8();
-		float L_456 = __this->get_speed_8();
-		float L_457 = __this->get_stamina_9();
-		__this->set_speed_8(((float)il2cpp_codegen_subtract((float)L_455, (float)((float)((float)L_456/(float)((float)il2cpp_codegen_multiply((float)(8.0f), (float)L_457)))))));
-	}
-
-IL_10ff:
-	{
-		GameObject_t1113636619 * L_458 = __this->get_staminaObject_12();
-		NullCheck(L_458);
-		Image_t2670269651 * L_459 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_458, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
-		float L_460 = V_15;
-		float L_461 = __this->get_stamina_9();
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_462 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, ((float)((float)L_460/(float)(100.0f))), ((float)((float)L_461/(float)(100.0f))), (0.1f), /*hidden argument*/NULL);
-		NullCheck(L_459);
-		Image_set_fillAmount_m3737925590(L_459, L_462, /*hidden argument*/NULL);
-	}
-
-IL_112d:
+IL_10fd:
 	{
 		float L_463 = __this->get_stamina_9();
-		if ((!(((float)L_463) < ((float)(0.0f)))))
+		if ((!(((float)L_463) == ((float)(0.0f)))))
 		{
-			goto IL_1154;
+			goto IL_1119;
 		}
 	}
 	{
-		__this->set_stamina_9((0.0f));
 		float L_464 = __this->get_walkSpeed_13();
 		__this->set_speed_8(L_464);
 	}
 
-IL_1154:
+IL_1119:
 	{
-		Camera_t4157153871 * L_465 = __this->get_camObject_17();
-		NullCheck(L_465);
-		float L_466 = Camera_get_fieldOfView_m1018585504(L_465, /*hidden argument*/NULL);
-		if ((!(((float)L_466) > ((float)(50.0f)))))
+		float L_465 = __this->get_verticalMove_63();
+		if ((((float)L_465) == ((float)(0.0f))))
 		{
-			goto IL_1179;
+			goto IL_11bd;
 		}
 	}
 	{
-		Camera_t4157153871 * L_467 = __this->get_camObject_17();
-		NullCheck(L_467);
-		Camera_set_fieldOfView_m1438246590(L_467, (50.0f), /*hidden argument*/NULL);
+		float L_466 = __this->get_stamina_9();
+		if ((!(((float)L_466) > ((float)(0.0f)))))
+		{
+			goto IL_11bd;
+		}
+	}
+	{
+		bool L_467 = __this->get_isStimulant_75();
+		if (L_467)
+		{
+			goto IL_11bd;
+		}
+	}
+	{
+		float L_468 = __this->get_stamina_9();
+		V_15 = L_468;
+		float L_469 = __this->get_stamina_9();
+		__this->set_stamina_9(((float)il2cpp_codegen_subtract((float)L_469, (float)(0.75f))));
+		float L_470 = __this->get_speed_8();
+		float L_471 = __this->get_walkSpeed_13();
+		if ((!(((float)L_470) > ((float)L_471))))
+		{
+			goto IL_118f;
+		}
+	}
+	{
+		float L_472 = __this->get_speed_8();
+		float L_473 = __this->get_speed_8();
+		float L_474 = __this->get_stamina_9();
+		__this->set_speed_8(((float)il2cpp_codegen_subtract((float)L_472, (float)((float)((float)L_473/(float)((float)il2cpp_codegen_multiply((float)(8.0f), (float)L_474)))))));
 	}
 
-IL_1179:
+IL_118f:
 	{
-		String_t* L_468 = __this->get_VITA_50();
-		int32_t L_469 = __this->get_RTRIG_56();
-		int32_t L_470 = L_469;
-		RuntimeObject * L_471 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_470);
-		String_t* L_472 = String_Concat_m904156431(NULL /*static, unused*/, L_468, L_471, /*hidden argument*/NULL);
-		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_473 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_472, /*hidden argument*/NULL);
-		if (!L_473)
+		GameObject_t1113636619 * L_475 = __this->get_staminaObject_12();
+		NullCheck(L_475);
+		Image_t2670269651 * L_476 = GameObject_GetComponent_TisImage_t2670269651_m2486712510(L_475, /*hidden argument*/GameObject_GetComponent_TisImage_t2670269651_m2486712510_RuntimeMethod_var);
+		float L_477 = V_15;
+		float L_478 = __this->get_stamina_9();
+		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
+		float L_479 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, ((float)((float)L_477/(float)(100.0f))), ((float)((float)L_478/(float)(100.0f))), (0.1f), /*hidden argument*/NULL);
+		NullCheck(L_476);
+		Image_set_fillAmount_m3737925590(L_476, L_479, /*hidden argument*/NULL);
+	}
+
+IL_11bd:
+	{
+		float L_480 = __this->get_stamina_9();
+		if ((!(((float)L_480) < ((float)(0.0f)))))
 		{
-			goto IL_12e7;
+			goto IL_11e4;
 		}
 	}
 	{
-		float L_474 = __this->get_stamina_9();
-		if ((!(((float)L_474) > ((float)(0.0f)))))
+		__this->set_stamina_9((0.0f));
+		float L_481 = __this->get_walkSpeed_13();
+		__this->set_speed_8(L_481);
+	}
+
+IL_11e4:
+	{
+		Camera_t4157153871 * L_482 = __this->get_camObject_17();
+		NullCheck(L_482);
+		float L_483 = Camera_get_fieldOfView_m1018585504(L_482, /*hidden argument*/NULL);
+		if ((!(((float)L_483) > ((float)(50.0f)))))
 		{
-			goto IL_12e7;
+			goto IL_1209;
+		}
+	}
+	{
+		Camera_t4157153871 * L_484 = __this->get_camObject_17();
+		NullCheck(L_484);
+		Camera_set_fieldOfView_m1438246590(L_484, (50.0f), /*hidden argument*/NULL);
+	}
+
+IL_1209:
+	{
+		String_t* L_485 = __this->get_VITA_50();
+		int32_t L_486 = __this->get_RTRIG_56();
+		int32_t L_487 = L_486;
+		RuntimeObject * L_488 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_487);
+		String_t* L_489 = String_Concat_m904156431(NULL /*static, unused*/, L_485, L_488, /*hidden argument*/NULL);
+		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
+		bool L_490 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_489, /*hidden argument*/NULL);
+		if (!L_490)
+		{
+			goto IL_1377;
+		}
+	}
+	{
+		float L_491 = __this->get_stamina_9();
+		if ((!(((float)L_491) > ((float)(0.0f)))))
+		{
+			goto IL_1377;
 		}
 	}
 	{
 		__this->set_isRunning_73((bool)1);
 		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		bool L_475 = __this->get_isCharging_77();
-		if (!L_475)
+		bool L_492 = __this->get_isCharging_77();
+		if (!L_492)
 		{
-			goto IL_11ec;
+			goto IL_127c;
 		}
 	}
 	{
-		float L_476 = __this->get_flashlightCharge_41();
-		__this->set_currentCharge_88(L_476);
-		float L_477 = __this->get_currentCharge_88();
-		float L_478 = __this->get_flashlightCharge_41();
-		RuntimeObject* L_479 = PlayerController_rechargeFlashlight_m3593985256(__this, L_477, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_478)), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_479, /*hidden argument*/NULL);
+		float L_493 = __this->get_flashlightCharge_41();
+		__this->set_currentCharge_88(L_493);
+		float L_494 = __this->get_currentCharge_88();
+		float L_495 = __this->get_flashlightCharge_41();
+		RuntimeObject* L_496 = PlayerController_rechargeFlashlight_m3593985256(__this, L_494, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_495)), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_496, /*hidden argument*/NULL);
 	}
 
-IL_11ec:
+IL_127c:
 	{
-		bool L_480 = __this->get_isStimulant_75();
-		if (!L_480)
+		bool L_497 = __this->get_isStimulant_75();
+		if (!L_497)
 		{
-			goto IL_1226;
+			goto IL_12b6;
 		}
 	}
 	{
-		float L_481 = __this->get_cooldownValue_81();
-		float L_482 = __this->get_stimCooldown_11();
-		if ((!(((float)L_481) <= ((float)L_482))))
+		float L_498 = __this->get_cooldownValue_81();
+		float L_499 = __this->get_stimCooldown_11();
+		if ((!(((float)L_498) <= ((float)L_499))))
 		{
-			goto IL_1226;
+			goto IL_12b6;
 		}
 	}
 	{
-		float L_483 = __this->get_cooldownValue_81();
-		float L_484 = __this->get_cooldownValue_81();
-		RuntimeObject* L_485 = PlayerController_countdownStimulant_m1716973018(__this, L_483, (0.0f), L_484, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_485, /*hidden argument*/NULL);
+		float L_500 = __this->get_cooldownValue_81();
+		float L_501 = __this->get_cooldownValue_81();
+		RuntimeObject* L_502 = PlayerController_countdownStimulant_m1716973018(__this, L_500, (0.0f), L_501, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_502, /*hidden argument*/NULL);
 	}
 
-IL_1226:
+IL_12b6:
 	{
 		__this->set_speed_8((5.0f));
-		GameObject_t1113636619 * L_486 = __this->get_lightRig_23();
-		NullCheck(L_486);
-		Transform_t3600365921 * L_487 = GameObject_get_transform_m1369836730(L_486, /*hidden argument*/NULL);
-		NullCheck(L_487);
-		Vector3_t3722313464  L_488 = Transform_get_localPosition_m4234289348(L_487, /*hidden argument*/NULL);
-		__this->set_savedPosition_68(L_488);
-		GameObject_t1113636619 * L_489 = __this->get_lightRig_23();
-		NullCheck(L_489);
-		Transform_t3600365921 * L_490 = GameObject_get_transform_m1369836730(L_489, /*hidden argument*/NULL);
-		NullCheck(L_490);
-		Quaternion_t2301928331  L_491 = Transform_get_localRotation_m3487911431(L_490, /*hidden argument*/NULL);
-		__this->set_savedRotation_67(L_491);
-		GameObject_t1113636619 * L_492 = __this->get_lightRig_23();
-		NullCheck(L_492);
-		Transform_t3600365921 * L_493 = GameObject_get_transform_m1369836730(L_492, /*hidden argument*/NULL);
-		Transform_t3600365921 * L_494 = __this->get_handRig_26();
-		NullCheck(L_493);
-		Transform_set_parent_m786917804(L_493, L_494, /*hidden argument*/NULL);
-		SkinnedMeshRenderer_t245602842 * L_495 = __this->get_skinnedRenderer_70();
-		NullCheck(L_495);
-		Material_t340375123 * L_496 = Renderer_get_material_m4171603682(L_495, /*hidden argument*/NULL);
-		NullCheck(L_496);
-		float L_497 = Material_GetFloat_m2210875428(L_496, _stringLiteral3019159792, /*hidden argument*/NULL);
-		__this->set_walkStart_71(L_497);
-		float L_498 = __this->get_lerpRate_47();
-		RuntimeObject* L_499 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_498, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_499, /*hidden argument*/NULL);
-		CanvasGroup_t4083511760 * L_500 = __this->get_UICanvasGroup_87();
-		NullCheck(L_500);
-		float L_501 = CanvasGroup_get_alpha_m2918269489(L_500, /*hidden argument*/NULL);
-		if ((((float)L_501) == ((float)(1.0f))))
+		GameObject_t1113636619 * L_503 = __this->get_lightRig_23();
+		NullCheck(L_503);
+		Transform_t3600365921 * L_504 = GameObject_get_transform_m1369836730(L_503, /*hidden argument*/NULL);
+		NullCheck(L_504);
+		Vector3_t3722313464  L_505 = Transform_get_localPosition_m4234289348(L_504, /*hidden argument*/NULL);
+		__this->set_savedPosition_68(L_505);
+		GameObject_t1113636619 * L_506 = __this->get_lightRig_23();
+		NullCheck(L_506);
+		Transform_t3600365921 * L_507 = GameObject_get_transform_m1369836730(L_506, /*hidden argument*/NULL);
+		NullCheck(L_507);
+		Quaternion_t2301928331  L_508 = Transform_get_localRotation_m3487911431(L_507, /*hidden argument*/NULL);
+		__this->set_savedRotation_67(L_508);
+		GameObject_t1113636619 * L_509 = __this->get_lightRig_23();
+		NullCheck(L_509);
+		Transform_t3600365921 * L_510 = GameObject_get_transform_m1369836730(L_509, /*hidden argument*/NULL);
+		Transform_t3600365921 * L_511 = __this->get_handRig_26();
+		NullCheck(L_510);
+		Transform_set_parent_m786917804(L_510, L_511, /*hidden argument*/NULL);
+		SkinnedMeshRenderer_t245602842 * L_512 = __this->get_skinnedRenderer_70();
+		NullCheck(L_512);
+		Material_t340375123 * L_513 = Renderer_get_material_m4171603682(L_512, /*hidden argument*/NULL);
+		NullCheck(L_513);
+		float L_514 = Material_GetFloat_m2210875428(L_513, _stringLiteral3019159792, /*hidden argument*/NULL);
+		__this->set_walkStart_71(L_514);
+		float L_515 = __this->get_lerpRate_47();
+		RuntimeObject* L_516 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_515, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_516, /*hidden argument*/NULL);
+		CanvasGroup_t4083511760 * L_517 = __this->get_UICanvasGroup_87();
+		NullCheck(L_517);
+		float L_518 = CanvasGroup_get_alpha_m2918269489(L_517, /*hidden argument*/NULL);
+		if ((((float)L_518) == ((float)(1.0f))))
 		{
-			goto IL_12e7;
+			goto IL_1377;
 		}
 	}
 	{
-		CanvasGroup_t4083511760 * L_502 = __this->get_UICanvasGroup_87();
-		NullCheck(L_502);
-		float L_503 = CanvasGroup_get_alpha_m2918269489(L_502, /*hidden argument*/NULL);
-		RuntimeObject* L_504 = PlayerController_fadeAlpha_m1570045651(__this, L_503, (1.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_504, /*hidden argument*/NULL);
+		CanvasGroup_t4083511760 * L_519 = __this->get_UICanvasGroup_87();
+		NullCheck(L_519);
+		float L_520 = CanvasGroup_get_alpha_m2918269489(L_519, /*hidden argument*/NULL);
+		RuntimeObject* L_521 = PlayerController_fadeAlpha_m1570045651(__this, L_520, (1.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_521, /*hidden argument*/NULL);
 	}
 
-IL_12e7:
+IL_1377:
 	{
-		String_t* L_505 = __this->get_VITA_50();
-		int32_t L_506 = __this->get_RTRIG_56();
-		int32_t L_507 = L_506;
-		RuntimeObject * L_508 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_507);
-		String_t* L_509 = String_Concat_m904156431(NULL /*static, unused*/, L_505, L_508, /*hidden argument*/NULL);
+		String_t* L_522 = __this->get_VITA_50();
+		int32_t L_523 = __this->get_RTRIG_56();
+		int32_t L_524 = L_523;
+		RuntimeObject * L_525 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_524);
+		String_t* L_526 = String_Concat_m904156431(NULL /*static, unused*/, L_522, L_525, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_510 = Input_GetKeyUp_m3609240977(NULL /*static, unused*/, L_509, /*hidden argument*/NULL);
-		if (!L_510)
+		bool L_527 = Input_GetKeyUp_m3609240977(NULL /*static, unused*/, L_526, /*hidden argument*/NULL);
+		if (!L_527)
 		{
-			goto IL_14b2;
+			goto IL_1542;
 		}
 	}
 	{
 		__this->set_isRunning_73((bool)0);
 		MonoBehaviour_StopAllCoroutines_m3328507247(__this, /*hidden argument*/NULL);
-		bool L_511 = __this->get_isCharging_77();
-		if (!L_511)
+		bool L_528 = __this->get_isCharging_77();
+		if (!L_528)
 		{
-			goto IL_134a;
+			goto IL_13da;
 		}
 	}
 	{
-		float L_512 = __this->get_flashlightCharge_41();
-		__this->set_currentCharge_88(L_512);
-		float L_513 = __this->get_currentCharge_88();
-		float L_514 = __this->get_flashlightCharge_41();
-		RuntimeObject* L_515 = PlayerController_rechargeFlashlight_m3593985256(__this, L_513, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_514)), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_515, /*hidden argument*/NULL);
+		float L_529 = __this->get_flashlightCharge_41();
+		__this->set_currentCharge_88(L_529);
+		float L_530 = __this->get_currentCharge_88();
+		float L_531 = __this->get_flashlightCharge_41();
+		RuntimeObject* L_532 = PlayerController_rechargeFlashlight_m3593985256(__this, L_530, ((float)il2cpp_codegen_multiply((float)(10.0f), (float)L_531)), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_532, /*hidden argument*/NULL);
 	}
 
-IL_134a:
+IL_13da:
 	{
-		bool L_516 = __this->get_isStimulant_75();
-		if (!L_516)
+		bool L_533 = __this->get_isStimulant_75();
+		if (!L_533)
 		{
-			goto IL_1384;
+			goto IL_1414;
 		}
 	}
 	{
-		float L_517 = __this->get_cooldownValue_81();
-		float L_518 = __this->get_stimCooldown_11();
-		if ((!(((float)L_517) <= ((float)L_518))))
+		float L_534 = __this->get_cooldownValue_81();
+		float L_535 = __this->get_stimCooldown_11();
+		if ((!(((float)L_534) <= ((float)L_535))))
 		{
-			goto IL_1384;
+			goto IL_1414;
 		}
 	}
 	{
-		float L_519 = __this->get_cooldownValue_81();
-		float L_520 = __this->get_cooldownValue_81();
-		RuntimeObject* L_521 = PlayerController_countdownStimulant_m1716973018(__this, L_519, (0.0f), L_520, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_521, /*hidden argument*/NULL);
+		float L_536 = __this->get_cooldownValue_81();
+		float L_537 = __this->get_cooldownValue_81();
+		RuntimeObject* L_538 = PlayerController_countdownStimulant_m1716973018(__this, L_536, (0.0f), L_537, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_538, /*hidden argument*/NULL);
 	}
 
-IL_1384:
+IL_1414:
 	{
-		float L_522 = __this->get_walkSpeed_13();
-		__this->set_speed_8(L_522);
-		float L_523 = __this->get_stamina_9();
-		float L_524 = __this->get_stamina_9();
-		RuntimeObject* L_525 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_523)), L_524, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_525, /*hidden argument*/NULL);
-		SkinnedMeshRenderer_t245602842 * L_526 = __this->get_skinnedRenderer_70();
-		NullCheck(L_526);
-		Material_t340375123 * L_527 = Renderer_get_material_m4171603682(L_526, /*hidden argument*/NULL);
-		NullCheck(L_527);
-		float L_528 = Material_GetFloat_m2210875428(L_527, _stringLiteral3019159792, /*hidden argument*/NULL);
-		__this->set_walkStart_71(L_528);
+		float L_539 = __this->get_walkSpeed_13();
+		__this->set_speed_8(L_539);
+		float L_540 = __this->get_stamina_9();
+		float L_541 = __this->get_stamina_9();
+		RuntimeObject* L_542 = PlayerController_rechargeStamina_m3497757412(__this, ((float)il2cpp_codegen_subtract((float)(100.0f), (float)L_540)), L_541, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_542, /*hidden argument*/NULL);
+		SkinnedMeshRenderer_t245602842 * L_543 = __this->get_skinnedRenderer_70();
+		NullCheck(L_543);
+		Material_t340375123 * L_544 = Renderer_get_material_m4171603682(L_543, /*hidden argument*/NULL);
+		NullCheck(L_544);
+		float L_545 = Material_GetFloat_m2210875428(L_544, _stringLiteral3019159792, /*hidden argument*/NULL);
+		__this->set_walkStart_71(L_545);
 		__this->set_lerpRate_47((0.55f));
-		float L_529 = __this->get_lerpRate_47();
-		RuntimeObject* L_530 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_529, /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_530, /*hidden argument*/NULL);
-		Animator_t434523843 * L_531 = __this->get_animator_14();
-		NullCheck(L_531);
-		Animator_SetBool_m234840832(L_531, _stringLiteral3507175561, (bool)0, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_532 = __this->get_lightRig_23();
-		NullCheck(L_532);
-		Transform_t3600365921 * L_533 = GameObject_get_transform_m1369836730(L_532, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_534 = __this->get_lightRoot_31();
-		NullCheck(L_534);
-		Transform_t3600365921 * L_535 = GameObject_get_transform_m1369836730(L_534, /*hidden argument*/NULL);
-		NullCheck(L_533);
-		Transform_set_parent_m786917804(L_533, L_535, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_536 = __this->get_lightRig_23();
-		NullCheck(L_536);
-		Transform_t3600365921 * L_537 = GameObject_get_transform_m1369836730(L_536, /*hidden argument*/NULL);
-		Quaternion_t2301928331  L_538 = __this->get_savedRotation_67();
-		NullCheck(L_537);
-		Transform_set_localRotation_m19445462(L_537, L_538, /*hidden argument*/NULL);
-		GameObject_t1113636619 * L_539 = __this->get_lightRig_23();
-		NullCheck(L_539);
-		Transform_t3600365921 * L_540 = GameObject_get_transform_m1369836730(L_539, /*hidden argument*/NULL);
-		Vector3_t3722313464  L_541 = __this->get_savedPosition_68();
-		NullCheck(L_540);
-		Transform_set_localPosition_m4128471975(L_540, L_541, /*hidden argument*/NULL);
+		float L_546 = __this->get_lerpRate_47();
+		RuntimeObject* L_547 = PlayerController_walkLerp_m930614238(__this, (0.0f), (1.0f), L_546, /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_547, /*hidden argument*/NULL);
+		Animator_t434523843 * L_548 = __this->get_animator_14();
+		NullCheck(L_548);
+		Animator_SetBool_m234840832(L_548, _stringLiteral3507175561, (bool)0, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_549 = __this->get_lightRig_23();
+		NullCheck(L_549);
+		Transform_t3600365921 * L_550 = GameObject_get_transform_m1369836730(L_549, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_551 = __this->get_lightRoot_31();
+		NullCheck(L_551);
+		Transform_t3600365921 * L_552 = GameObject_get_transform_m1369836730(L_551, /*hidden argument*/NULL);
+		NullCheck(L_550);
+		Transform_set_parent_m786917804(L_550, L_552, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_553 = __this->get_lightRig_23();
+		NullCheck(L_553);
+		Transform_t3600365921 * L_554 = GameObject_get_transform_m1369836730(L_553, /*hidden argument*/NULL);
+		Quaternion_t2301928331  L_555 = __this->get_savedRotation_67();
+		NullCheck(L_554);
+		Transform_set_localRotation_m19445462(L_554, L_555, /*hidden argument*/NULL);
+		GameObject_t1113636619 * L_556 = __this->get_lightRig_23();
+		NullCheck(L_556);
+		Transform_t3600365921 * L_557 = GameObject_get_transform_m1369836730(L_556, /*hidden argument*/NULL);
+		Vector3_t3722313464  L_558 = __this->get_savedPosition_68();
+		NullCheck(L_557);
+		Transform_set_localPosition_m4128471975(L_557, L_558, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(PlayerController_t2064355688_il2cpp_TypeInfo_var);
 		((PlayerController_t2064355688_StaticFields*)il2cpp_codegen_static_fields_for(PlayerController_t2064355688_il2cpp_TypeInfo_var))->set_delayButton_80((bool)0);
-		CanvasGroup_t4083511760 * L_542 = __this->get_UICanvasGroup_87();
-		NullCheck(L_542);
-		float L_543 = CanvasGroup_get_alpha_m2918269489(L_542, /*hidden argument*/NULL);
-		if ((((float)L_543) == ((float)(0.0f))))
+		CanvasGroup_t4083511760 * L_559 = __this->get_UICanvasGroup_87();
+		NullCheck(L_559);
+		float L_560 = CanvasGroup_get_alpha_m2918269489(L_559, /*hidden argument*/NULL);
+		if ((((float)L_560) == ((float)(0.0f))))
 		{
-			goto IL_14b2;
+			goto IL_1542;
 		}
 	}
 	{
-		float L_544 = __this->get_stamina_9();
-		if ((!(((float)L_544) >= ((float)(95.0f)))))
+		float L_561 = __this->get_stamina_9();
+		if ((!(((float)L_561) >= ((float)(95.0f)))))
 		{
-			goto IL_14b2;
+			goto IL_1542;
 		}
 	}
 	{
-		bool L_545 = __this->get_isStimulant_75();
-		if (L_545)
+		bool L_562 = __this->get_isStimulant_75();
+		if (L_562)
 		{
-			goto IL_14b2;
+			goto IL_1542;
 		}
 	}
 	{
-		bool L_546 = __this->get_isCharging_77();
-		if (L_546)
+		bool L_563 = __this->get_isCharging_77();
+		if (L_563)
 		{
-			goto IL_14b2;
+			goto IL_1542;
 		}
 	}
 	{
-		CanvasGroup_t4083511760 * L_547 = __this->get_UICanvasGroup_87();
-		NullCheck(L_547);
-		float L_548 = CanvasGroup_get_alpha_m2918269489(L_547, /*hidden argument*/NULL);
-		RuntimeObject* L_549 = PlayerController_fadeAlpha_m1570045651(__this, L_548, (0.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_549, /*hidden argument*/NULL);
+		CanvasGroup_t4083511760 * L_564 = __this->get_UICanvasGroup_87();
+		NullCheck(L_564);
+		float L_565 = CanvasGroup_get_alpha_m2918269489(L_564, /*hidden argument*/NULL);
+		RuntimeObject* L_566 = PlayerController_fadeAlpha_m1570045651(__this, L_565, (0.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_566, /*hidden argument*/NULL);
 	}
 
-IL_14b2:
+IL_1542:
 	{
-		String_t* L_550 = __this->get_VITA_50();
-		int32_t L_551 = __this->get_RTRIG_56();
-		int32_t L_552 = L_551;
-		RuntimeObject * L_553 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_552);
-		String_t* L_554 = String_Concat_m904156431(NULL /*static, unused*/, L_550, L_553, /*hidden argument*/NULL);
+		String_t* L_567 = __this->get_VITA_50();
+		int32_t L_568 = __this->get_RTRIG_56();
+		int32_t L_569 = L_568;
+		RuntimeObject * L_570 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_569);
+		String_t* L_571 = String_Concat_m904156431(NULL /*static, unused*/, L_567, L_570, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_555 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_554, /*hidden argument*/NULL);
-		if (L_555)
+		bool L_572 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_571, /*hidden argument*/NULL);
+		if (L_572)
 		{
-			goto IL_160c;
+			goto IL_169c;
 		}
 	}
 	{
-		String_t* L_556 = __this->get_VITA_50();
-		int32_t L_557 = __this->get_LTRIG_55();
-		int32_t L_558 = L_557;
-		RuntimeObject * L_559 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_558);
-		String_t* L_560 = String_Concat_m904156431(NULL /*static, unused*/, L_556, L_559, /*hidden argument*/NULL);
+		String_t* L_573 = __this->get_VITA_50();
+		int32_t L_574 = __this->get_LTRIG_55();
+		int32_t L_575 = L_574;
+		RuntimeObject * L_576 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_575);
+		String_t* L_577 = String_Concat_m904156431(NULL /*static, unused*/, L_573, L_576, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_561 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_560, /*hidden argument*/NULL);
-		if (L_561)
+		bool L_578 = Input_GetKey_m3868879071(NULL /*static, unused*/, L_577, /*hidden argument*/NULL);
+		if (L_578)
 		{
-			goto IL_160c;
+			goto IL_169c;
 		}
 	}
 	{
-		String_t* L_562 = __this->get_VITA_50();
-		int32_t L_563 = __this->get_SQUARE_53();
-		int32_t L_564 = L_563;
-		RuntimeObject * L_565 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_564);
-		String_t* L_566 = String_Concat_m904156431(NULL /*static, unused*/, L_562, L_565, /*hidden argument*/NULL);
+		String_t* L_579 = __this->get_VITA_50();
+		int32_t L_580 = __this->get_SQUARE_53();
+		int32_t L_581 = L_580;
+		RuntimeObject * L_582 = Box(Int32_t2950945753_il2cpp_TypeInfo_var, &L_581);
+		String_t* L_583 = String_Concat_m904156431(NULL /*static, unused*/, L_579, L_582, /*hidden argument*/NULL);
 		IL2CPP_RUNTIME_CLASS_INIT(Input_t1431474628_il2cpp_TypeInfo_var);
-		bool L_567 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_566, /*hidden argument*/NULL);
-		if (L_567)
+		bool L_584 = Input_GetKeyDown_m2928138282(NULL /*static, unused*/, L_583, /*hidden argument*/NULL);
+		if (L_584)
 		{
-			goto IL_160c;
+			goto IL_169c;
 		}
 	}
 	{
-		Camera_t4157153871 * L_568 = __this->get_camObject_17();
-		NullCheck(L_568);
-		float L_569 = Camera_get_fieldOfView_m1018585504(L_568, /*hidden argument*/NULL);
-		if ((!(((float)L_569) > ((float)(40.0f)))))
+		Camera_t4157153871 * L_585 = __this->get_camObject_17();
+		NullCheck(L_585);
+		float L_586 = Camera_get_fieldOfView_m1018585504(L_585, /*hidden argument*/NULL);
+		if ((!(((float)L_586) > ((float)(40.0f)))))
 		{
-			goto IL_155e;
+			goto IL_15ee;
 		}
 	}
 	{
-		Camera_t4157153871 * L_570 = __this->get_camObject_17();
-		NullCheck(L_570);
-		float L_571 = Camera_get_fieldOfView_m1018585504(L_570, /*hidden argument*/NULL);
-		if ((((float)L_571) == ((float)(40.0f))))
+		Camera_t4157153871 * L_587 = __this->get_camObject_17();
+		NullCheck(L_587);
+		float L_588 = Camera_get_fieldOfView_m1018585504(L_587, /*hidden argument*/NULL);
+		if ((((float)L_588) == ((float)(40.0f))))
 		{
-			goto IL_155e;
+			goto IL_15ee;
 		}
 	}
 	{
-		Camera_t4157153871 * L_572 = __this->get_camObject_17();
-		Camera_t4157153871 * L_573 = __this->get_camObject_17();
-		NullCheck(L_573);
-		float L_574 = Camera_get_fieldOfView_m1018585504(L_573, /*hidden argument*/NULL);
-		float L_575 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_572);
-		Camera_set_fieldOfView_m1438246590(L_572, ((float)il2cpp_codegen_subtract((float)L_574, (float)((float)il2cpp_codegen_multiply((float)L_575, (float)(32.0f))))), /*hidden argument*/NULL);
-	}
-
-IL_155e:
-	{
-		Camera_t4157153871 * L_576 = __this->get_camObject_17();
-		NullCheck(L_576);
-		float L_577 = Camera_get_fieldOfView_m1018585504(L_576, /*hidden argument*/NULL);
-		if ((!(((float)L_577) < ((float)(40.0f)))))
-		{
-			goto IL_15aa;
-		}
-	}
-	{
-		Camera_t4157153871 * L_578 = __this->get_camObject_17();
-		NullCheck(L_578);
-		float L_579 = Camera_get_fieldOfView_m1018585504(L_578, /*hidden argument*/NULL);
-		if ((((float)L_579) == ((float)(40.0f))))
-		{
-			goto IL_15aa;
-		}
-	}
-	{
-		Camera_t4157153871 * L_580 = __this->get_camObject_17();
-		Camera_t4157153871 * L_581 = __this->get_camObject_17();
-		NullCheck(L_581);
-		float L_582 = Camera_get_fieldOfView_m1018585504(L_581, /*hidden argument*/NULL);
-		float L_583 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		NullCheck(L_580);
-		Camera_set_fieldOfView_m1438246590(L_580, ((float)il2cpp_codegen_add((float)L_582, (float)((float)il2cpp_codegen_multiply((float)L_583, (float)(32.0f))))), /*hidden argument*/NULL);
-	}
-
-IL_15aa:
-	{
-		CanvasGroup_t4083511760 * L_584 = __this->get_UICanvasGroup_87();
-		NullCheck(L_584);
-		float L_585 = CanvasGroup_get_alpha_m2918269489(L_584, /*hidden argument*/NULL);
-		if ((((float)L_585) == ((float)(0.0f))))
-		{
-			goto IL_160c;
-		}
-	}
-	{
-		float L_586 = __this->get_stamina_9();
-		if ((!(((float)L_586) >= ((float)(95.0f)))))
-		{
-			goto IL_160c;
-		}
-	}
-	{
-		bool L_587 = __this->get_isStimulant_75();
-		if (L_587)
-		{
-			goto IL_160c;
-		}
-	}
-	{
-		bool L_588 = __this->get_isCharging_77();
-		if (L_588)
-		{
-			goto IL_160c;
-		}
-	}
-	{
-		CanvasGroup_t4083511760 * L_589 = __this->get_UICanvasGroup_87();
+		Camera_t4157153871 * L_589 = __this->get_camObject_17();
+		Camera_t4157153871 * L_590 = __this->get_camObject_17();
+		NullCheck(L_590);
+		float L_591 = Camera_get_fieldOfView_m1018585504(L_590, /*hidden argument*/NULL);
+		float L_592 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
 		NullCheck(L_589);
-		float L_590 = CanvasGroup_get_alpha_m2918269489(L_589, /*hidden argument*/NULL);
-		RuntimeObject* L_591 = PlayerController_fadeAlpha_m1570045651(__this, L_590, (0.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
-		MonoBehaviour_StartCoroutine_m3411253000(__this, L_591, /*hidden argument*/NULL);
+		Camera_set_fieldOfView_m1438246590(L_589, ((float)il2cpp_codegen_subtract((float)L_591, (float)((float)il2cpp_codegen_multiply((float)L_592, (float)(32.0f))))), /*hidden argument*/NULL);
 	}
 
-IL_160c:
+IL_15ee:
+	{
+		Camera_t4157153871 * L_593 = __this->get_camObject_17();
+		NullCheck(L_593);
+		float L_594 = Camera_get_fieldOfView_m1018585504(L_593, /*hidden argument*/NULL);
+		if ((!(((float)L_594) < ((float)(40.0f)))))
+		{
+			goto IL_163a;
+		}
+	}
+	{
+		Camera_t4157153871 * L_595 = __this->get_camObject_17();
+		NullCheck(L_595);
+		float L_596 = Camera_get_fieldOfView_m1018585504(L_595, /*hidden argument*/NULL);
+		if ((((float)L_596) == ((float)(40.0f))))
+		{
+			goto IL_163a;
+		}
+	}
+	{
+		Camera_t4157153871 * L_597 = __this->get_camObject_17();
+		Camera_t4157153871 * L_598 = __this->get_camObject_17();
+		NullCheck(L_598);
+		float L_599 = Camera_get_fieldOfView_m1018585504(L_598, /*hidden argument*/NULL);
+		float L_600 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
+		NullCheck(L_597);
+		Camera_set_fieldOfView_m1438246590(L_597, ((float)il2cpp_codegen_add((float)L_599, (float)((float)il2cpp_codegen_multiply((float)L_600, (float)(32.0f))))), /*hidden argument*/NULL);
+	}
+
+IL_163a:
+	{
+		CanvasGroup_t4083511760 * L_601 = __this->get_UICanvasGroup_87();
+		NullCheck(L_601);
+		float L_602 = CanvasGroup_get_alpha_m2918269489(L_601, /*hidden argument*/NULL);
+		if ((((float)L_602) == ((float)(0.0f))))
+		{
+			goto IL_169c;
+		}
+	}
+	{
+		float L_603 = __this->get_stamina_9();
+		if ((!(((float)L_603) >= ((float)(95.0f)))))
+		{
+			goto IL_169c;
+		}
+	}
+	{
+		bool L_604 = __this->get_isStimulant_75();
+		if (L_604)
+		{
+			goto IL_169c;
+		}
+	}
+	{
+		bool L_605 = __this->get_isCharging_77();
+		if (L_605)
+		{
+			goto IL_169c;
+		}
+	}
+	{
+		CanvasGroup_t4083511760 * L_606 = __this->get_UICanvasGroup_87();
+		NullCheck(L_606);
+		float L_607 = CanvasGroup_get_alpha_m2918269489(L_606, /*hidden argument*/NULL);
+		RuntimeObject* L_608 = PlayerController_fadeAlpha_m1570045651(__this, L_607, (0.0f), (0.5f), (0.0f), /*hidden argument*/NULL);
+		MonoBehaviour_StartCoroutine_m3411253000(__this, L_608, /*hidden argument*/NULL);
+	}
+
+IL_169c:
 	{
 		return;
 	}
@@ -61637,166 +61713,6 @@ extern "C" IL2CPP_METHOD_ATTR void U3ClerpCamU3Ec__Iterator4_Reset_m2580473112 (
 		NotSupportedException_t1314879016 * L_0 = (NotSupportedException_t1314879016 *)il2cpp_codegen_object_new(NotSupportedException_t1314879016_il2cpp_TypeInfo_var);
 		NotSupportedException__ctor_m2730133172(L_0, /*hidden argument*/NULL);
 		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, U3ClerpCamU3Ec__Iterator4_Reset_m2580473112_RuntimeMethod_var);
-	}
-}
-#ifdef __clang__
-#pragma clang diagnostic pop
-#endif
-#ifdef __clang__
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Winvalid-offsetof"
-#pragma clang diagnostic ignored "-Wunused-variable"
-#endif
-// System.Void PlayerController/<lerpFocalLength>c__IteratorC::.ctor()
-extern "C" IL2CPP_METHOD_ATTR void U3ClerpFocalLengthU3Ec__IteratorC__ctor_m3772706424 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
-{
-	{
-		Object__ctor_m297566312(__this, /*hidden argument*/NULL);
-		return;
-	}
-}
-// System.Boolean PlayerController/<lerpFocalLength>c__IteratorC::MoveNext()
-extern "C" IL2CPP_METHOD_ATTR bool U3ClerpFocalLengthU3Ec__IteratorC_MoveNext_m707934386 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (U3ClerpFocalLengthU3Ec__IteratorC_MoveNext_m707934386_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	uint32_t V_0 = 0;
-	{
-		int32_t L_0 = __this->get_U24PC_8();
-		V_0 = L_0;
-		__this->set_U24PC_8((-1));
-		uint32_t L_1 = V_0;
-		switch (L_1)
-		{
-			case 0:
-			{
-				goto IL_0021;
-			}
-			case 1:
-			{
-				goto IL_00a3;
-			}
-		}
-	}
-	{
-		goto IL_00d6;
-	}
-
-IL_0021:
-	{
-		__this->set_U3CtimeU3E__0_0((0.0f));
-		goto IL_00a3;
-	}
-
-IL_0031:
-	{
-		float L_2 = __this->get_startValue_2();
-		float L_3 = __this->get_endValue_3();
-		float L_4 = __this->get_U3CtimeU3E__0_0();
-		float L_5 = __this->get_duration_1();
-		IL2CPP_RUNTIME_CLASS_INIT(Mathf_t3464937446_il2cpp_TypeInfo_var);
-		float L_6 = Mathf_Lerp_m1004423579(NULL /*static, unused*/, L_2, L_3, ((float)((float)L_4/(float)((float)((float)L_5/(float)(4.0f))))), /*hidden argument*/NULL);
-		__this->set_U3CcurrentValueU3E__1_4(L_6);
-		PlayerController_t2064355688 * L_7 = __this->get_U24this_5();
-		NullCheck(L_7);
-		Transform_t3600365921 * L_8 = L_7->get_Camera_16();
-		NullCheck(L_8);
-		Bokeh_t660694511 * L_9 = Component_GetComponent_TisBokeh_t660694511_m1119545058(L_8, /*hidden argument*/Component_GetComponent_TisBokeh_t660694511_m1119545058_RuntimeMethod_var);
-		float L_10 = __this->get_U3CcurrentValueU3E__1_4();
-		NullCheck(L_9);
-		Bokeh_set_focalLength_m2677680673(L_9, L_10, /*hidden argument*/NULL);
-		float L_11 = __this->get_U3CtimeU3E__0_0();
-		float L_12 = Time_get_deltaTime_m372706562(NULL /*static, unused*/, /*hidden argument*/NULL);
-		__this->set_U3CtimeU3E__0_0(((float)il2cpp_codegen_add((float)L_11, (float)L_12)));
-		__this->set_U24current_6(NULL);
-		bool L_13 = __this->get_U24disposing_7();
-		if (L_13)
-		{
-			goto IL_009e;
-		}
-	}
-	{
-		__this->set_U24PC_8(1);
-	}
-
-IL_009e:
-	{
-		goto IL_00d8;
-	}
-
-IL_00a3:
-	{
-		float L_14 = __this->get_U3CtimeU3E__0_0();
-		float L_15 = __this->get_duration_1();
-		if ((((float)L_14) < ((float)L_15)))
-		{
-			goto IL_0031;
-		}
-	}
-	{
-		PlayerController_t2064355688 * L_16 = __this->get_U24this_5();
-		NullCheck(L_16);
-		Transform_t3600365921 * L_17 = L_16->get_Camera_16();
-		NullCheck(L_17);
-		Bokeh_t660694511 * L_18 = Component_GetComponent_TisBokeh_t660694511_m1119545058(L_17, /*hidden argument*/Component_GetComponent_TisBokeh_t660694511_m1119545058_RuntimeMethod_var);
-		float L_19 = __this->get_endValue_3();
-		NullCheck(L_18);
-		Bokeh_set_focalLength_m2677680673(L_18, L_19, /*hidden argument*/NULL);
-		__this->set_U24PC_8((-1));
-	}
-
-IL_00d6:
-	{
-		return (bool)0;
-	}
-
-IL_00d8:
-	{
-		return (bool)1;
-	}
-}
-// System.Object PlayerController/<lerpFocalLength>c__IteratorC::System.Collections.Generic.IEnumerator<object>.get_Current()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3ClerpFocalLengthU3Ec__IteratorC_System_Collections_Generic_IEnumeratorU3CobjectU3E_get_Current_m3585430506 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
-{
-	{
-		RuntimeObject * L_0 = __this->get_U24current_6();
-		return L_0;
-	}
-}
-// System.Object PlayerController/<lerpFocalLength>c__IteratorC::System.Collections.IEnumerator.get_Current()
-extern "C" IL2CPP_METHOD_ATTR RuntimeObject * U3ClerpFocalLengthU3Ec__IteratorC_System_Collections_IEnumerator_get_Current_m1836840896 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
-{
-	{
-		RuntimeObject * L_0 = __this->get_U24current_6();
-		return L_0;
-	}
-}
-// System.Void PlayerController/<lerpFocalLength>c__IteratorC::Dispose()
-extern "C" IL2CPP_METHOD_ATTR void U3ClerpFocalLengthU3Ec__IteratorC_Dispose_m1069663603 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
-{
-	{
-		__this->set_U24disposing_7((bool)1);
-		__this->set_U24PC_8((-1));
-		return;
-	}
-}
-// System.Void PlayerController/<lerpFocalLength>c__IteratorC::Reset()
-extern "C" IL2CPP_METHOD_ATTR void U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711 (U3ClerpFocalLengthU3Ec__IteratorC_t1187840523 * __this, const RuntimeMethod* method)
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_method (U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_MetadataUsageId);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		NotSupportedException_t1314879016 * L_0 = (NotSupportedException_t1314879016 *)il2cpp_codegen_object_new(NotSupportedException_t1314879016_il2cpp_TypeInfo_var);
-		NotSupportedException__ctor_m2730133172(L_0, /*hidden argument*/NULL);
-		IL2CPP_RAISE_MANAGED_EXCEPTION(L_0, NULL, U3ClerpFocalLengthU3Ec__IteratorC_Reset_m2170215711_RuntimeMethod_var);
 	}
 }
 #ifdef __clang__

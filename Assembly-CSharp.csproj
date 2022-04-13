@@ -264,10 +264,10 @@
      <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
      <None Include="Assets\Addons\CrepuscularRays\CrepuscularRayShader.shader" />
      <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardMeta_VC.cginc" />
-     <None Include="Assets\_www.unityassetcollection.com.txt" />
      <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC.shader" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
+     <None Include="Assets\CodeEnchanter\EnchanterOptions.txt" />
      <None Include="Assets\Addons\FastSSAO\FastSSAO.shader" />
      <None Include="Assets\Shader\PostProcess\2xSAI.shader" />
      <None Include="Assets\Shader\Light &amp; Shadow\Rain_Distortion.shader" />
@@ -289,6 +289,7 @@
      <None Include="Assets\Shader\Vertex\VertexLightmapCommon.cginc" />
      <None Include="Assets\Addons\Bloom (Titles)\Shaders\BloomDisplay.shader" />
      <None Include="Assets\Addons\KinoFog\Kino\Fog\Shader\Fog.shader" />
+     <None Include="Assets\_www.unityassetcollection.com.txt" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardConfig.cginc" />
      <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
      <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandard.shader" />
@@ -300,6 +301,7 @@
      <None Include="Assets\Addons\Shaders\debris.shader" />
      <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
      <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Soft.shader" />
+     <None Include="Assets\CodeEnchanter\README.txt" />
      <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCoreForward_VC.cginc" />
      <None Include="Assets\Shader\Standard Mobile\UnityStandardInput_VC.cginc" />
      <None Include="Assets\Addons\Shaders\tube.shader" />
@@ -609,6 +611,12 @@
  </Reference>
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
+ </Reference>
+ <Reference Include="EnchanterCore">
+ <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCore.dll</HintPath>
+ </Reference>
+ <Reference Include="EnchanterCommon">
+ <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCommon.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

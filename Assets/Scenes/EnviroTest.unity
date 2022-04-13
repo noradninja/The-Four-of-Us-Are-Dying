@@ -2679,7 +2679,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enableInternalResolution: 1
   renderResolution: 3
-  screenResolution: 1
+  screenResolution: 2
   filterMode: 1
 --- !u!114 &121908228
 MonoBehaviour:
@@ -2735,7 +2735,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: d381d4349e5cfc24c93bb6280e373058, type: 2}
   Sharpness: 3
-  Threshold: 0.25
+  Threshold: 0.125
 --- !u!114 &121908234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26563,7 +26563,6 @@ GameObject:
   - component: {fileID: 636066620}
   - component: {fileID: 636066622}
   - component: {fileID: 636066621}
-  - component: {fileID: 636066623}
   m_Layer: 13
   m_Name: Molded_Plastic
   m_TagString: Untagged
@@ -26629,17 +26628,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 636066619}
   m_Mesh: {fileID: 4300000, guid: 67ea3e22f7af9764794d56b8997d5980, type: 3}
---- !u!114 &636066623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 636066619}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &637780641
 GameObject:
   m_ObjectHideFlags: 0
@@ -28995,7 +28983,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &749364769
 Transform:
   m_ObjectHideFlags: 0
@@ -29160,8 +29148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mapCamera: {fileID: 759713698}
-  minZoom: 11.5
-  maxZoom: 29.5
+  minZoom: 11.75
+  maxZoom: 30.125
   pos: {x: 0, y: 0, z: 0}
   mapArrow: {fileID: 1677715860}
   mapContainer: {fileID: 1727078097}
@@ -29189,7 +29177,7 @@ Camera:
   far clip plane: 3.25
   field of view: 40
   orthographic: 1
-  orthographic size: 11.5
+  orthographic size: 11.75
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -47511,6 +47499,11 @@ Prefab:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114178868024331436, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_ScreenMatchMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3d4c910dd150dc4ba1816870bb7f398, type: 2}
   m_IsPrefabAsset: 0
@@ -62809,7 +62802,7 @@ MonoBehaviour:
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 960, y: 544}
-  m_ScreenMatchMode: 0
+  m_ScreenMatchMode: 2
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96

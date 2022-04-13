@@ -30,32 +30,34 @@ public Color lerpColor;
 	}
 	
 	public void Update () {
-		currentUpdateTime += Time.deltaTime;
-		
-		if (currentUpdateTime >= step){
-			currentUpdateTime = 0f;
-		}
-		else {
-			currentUpdateTime += 0.1f;
-		}
-
-			audioSource.clip.GetData(clipSampleData, audioSource.timeSamples);
-			oldClipLoudness = clipLoudness;
-			clipLoudness = 0f;
-			clipLoudnessB = 0f;
-			foreach (var sample in clipSampleData){
-				if (Math.Abs(sample) > 0.1f){
-					clipLoudness += Math.Abs(sample);
-				}
-			}
-			clipLoudness /= sampleDataLength;
-			clipLoudness *= scaleFactor;
-			clipLoudness += 0.75f;
+		if(!PauseManager.isPaused && !Inventory_Screen_Manager.inventoryOn){
+			currentUpdateTime += Time.deltaTime;
 			
-			clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + UnityEngine.Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
-			skyBox.SetFloat("_Exposure", clipLoudness);
-			lerpColor.a = clipLoudnessB/10;
-			glowMat.SetColor("_TintColor", lerpColor);
+			if (currentUpdateTime >= step){
+				currentUpdateTime = 0f;
+			}
+			else {
+				currentUpdateTime += 0.1f;
+			}
+
+				audioSource.clip.GetData(clipSampleData, audioSource.timeSamples);
+				oldClipLoudness = clipLoudness;
+				clipLoudness = 0f;
+				clipLoudnessB = 0f;
+				foreach (var sample in clipSampleData){
+					if (Math.Abs(sample) > 0.1f){
+						clipLoudness += Math.Abs(sample);
+					}
+				}
+				clipLoudness /= sampleDataLength;
+				clipLoudness *= scaleFactor;
+				clipLoudness += 0.75f;
+				
+				clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + UnityEngine.Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
+				skyBox.SetFloat("_Exposure", clipLoudness);
+				lerpColor.a = clipLoudnessB/10;
+				glowMat.SetColor("_TintColor", lerpColor);
+			}
 		}
 	}
  

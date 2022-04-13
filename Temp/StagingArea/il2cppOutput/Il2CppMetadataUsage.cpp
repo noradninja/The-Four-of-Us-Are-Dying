@@ -2809,6 +2809,7 @@ const RuntimeMethod* GameObject_GetComponent_TisObjectImporter_t330720501_m12425
 const RuntimeMethod* GameObject_GetComponent_TisPathSettings_t1004671762_m2551787434_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisObjectMaterialLinks_t2334331831_m3081270083_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603_RuntimeMethod_var;
+const RuntimeMethod* GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisFastSSAO_t1400243781_m1663729539_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisItem_Enumerator_t3915226614_m1353644618_RuntimeMethod_var;
 const RuntimeMethod* GameObject_GetComponent_TisBokeh_t660694511_m969703322_RuntimeMethod_var;
@@ -3106,26 +3107,26 @@ const RuntimeMethod* SimpleCollator_GetTailContraction_m2107754083_RuntimeMethod
 const RuntimeMethod* U3CU3Ec_U3CAuthenticateU3Eb__1_0_m1309887775_RuntimeMethod_var;
 const RuntimeMethod* Kernel_LeftShift_m4140742987_RuntimeMethod_var;
 const RuntimeMethod* Kernel_LeftShift_m3302851050_RuntimeMethod_var;
-const RuntimeMethod* Kernel_RightShift_m2207393597_RuntimeMethod_var;
 const RuntimeMethod* Kernel_RightShift_m3246168448_RuntimeMethod_var;
-const RuntimeMethod* Kernel_modInverse_m3523342258_RuntimeMethod_var;
+const RuntimeMethod* Kernel_RightShift_m2207393597_RuntimeMethod_var;
 const RuntimeMethod* Kernel_modInverse_m652700340_RuntimeMethod_var;
+const RuntimeMethod* Kernel_modInverse_m3523342258_RuntimeMethod_var;
 const RuntimeMethod* ModulusRing_Difference_m1345688434_RuntimeMethod_var;
 const RuntimeMethod* ModulusRing_Difference_m3686091506_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Implicit_m2847009755_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Implicit_m2547142909_RuntimeMethod_var;
-const RuntimeMethod* BigInteger_op_Multiply_m3801644593_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Multiply_m3683746602_RuntimeMethod_var;
+const RuntimeMethod* BigInteger_op_Multiply_m3801644593_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Multiply_m3854773313_RuntimeMethod_var;
-const RuntimeMethod* BigInteger_op_Subtraction_m4245834512_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_op_Subtraction_m1575155386_RuntimeMethod_var;
+const RuntimeMethod* BigInteger_op_Subtraction_m4245834512_RuntimeMethod_var;
 const RuntimeMethod* CFNetwork_GetProxiesForAutoConfigurationScript_m5223155_RuntimeMethod_var;
 const RuntimeMethod* CFNetwork_GetProxiesForAutoConfigurationScript_m571709647_RuntimeMethod_var;
 const RuntimeMethod* CFNetwork_GetProxiesForURL_m699197090_RuntimeMethod_var;
 const RuntimeMethod* CFNetwork_GetProxiesForUri_m1791810095_RuntimeMethod_var;
 const RuntimeMethod* MobileAuthenticatedStream_ProcessHandshake_m1385946050_RuntimeMethod_var;
-const RuntimeMethod* ASN1Convert_FromOid_m3844102704_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_FromOid_m3740816339_RuntimeMethod_var;
+const RuntimeMethod* ASN1Convert_FromOid_m3844102704_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_FromUnsignedBigInteger_m1312950810_RuntimeMethod_var;
 const RuntimeMethod* MonoTlsProviderFactory_GetProvider_m35375509_RuntimeMethod_var;
 const RuntimeMethod* MonoTlsProviderFactory_LookupProvider_m1821132006_RuntimeMethod_var;
@@ -3159,10 +3160,10 @@ const RuntimeMethod* PolyfewRuntime_U3CCombineMeshesInGameObjectU3Em__8_m2926097
 const RuntimeMethod* PolyfewRuntime_U3CConvertSkinnedMeshesFromRenderersU3Em__F_m321113221_RuntimeMethod_var;
 const RuntimeMethod* PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__D_m4211490578_RuntimeMethod_var;
 const RuntimeMethod* PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__E_m3449519289_RuntimeMethod_var;
-const RuntimeMethod* BigInteger_TestBit_m1507066813_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_TestBit_m2798226118_RuntimeMethod_var;
-const RuntimeMethod* PrimalityTests_RabinMillerTest_m1471415870_RuntimeMethod_var;
+const RuntimeMethod* BigInteger_TestBit_m1507066813_RuntimeMethod_var;
 const RuntimeMethod* PrimalityTests_RabinMillerTest_m2544317101_RuntimeMethod_var;
+const RuntimeMethod* PrimalityTests_RabinMillerTest_m1471415870_RuntimeMethod_var;
 const RuntimeMethod* CFWebProxy_IsBypassed_m1139341593_RuntimeMethod_var;
 const RuntimeMethod* MobileAuthenticatedStream_InternalWrite_m3406118459_RuntimeMethod_var;
 const RuntimeMethod* U3CU3Ec__DisplayClass5_0_U3CMonoToPublicU3Eb__0_m1672356517_RuntimeMethod_var;
@@ -4461,8 +4462,8 @@ const RuntimeMethod* U3CU3Ec__DisplayClass66_0_U3CInnerReadU3Eb__0_m1392690406_R
 const RuntimeMethod* ASN1Convert_ToInt32_m2228176117_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_ToInt32_m254930636_RuntimeMethod_var;
 const RuntimeMethod* ARC4Managed_TransformBlock_m581621139_RuntimeMethod_var;
-const RuntimeMethod* RSAManaged_get_KeySize_m1441482916_RuntimeMethod_var;
 const RuntimeMethod* RSAManaged_get_KeySize_m1420503080_RuntimeMethod_var;
+const RuntimeMethod* RSAManaged_get_KeySize_m1441482916_RuntimeMethod_var;
 const RuntimeMethod* SymmetricTransform_InternalTransformBlock_m946892271_RuntimeMethod_var;
 const RuntimeMethod* SymmetricTransform_TransformBlock_m2339552481_RuntimeMethod_var;
 const RuntimeMethod* X509CertificateCollection_Add_m3136524580_RuntimeMethod_var;
@@ -5698,8 +5699,8 @@ const RuntimeMethod* X509Certificate_get_DSA_m1760272844_RuntimeMethod_var;
 const RuntimeMethod* PublicKey_DecodeDSA_m3490622362_RuntimeMethod_var;
 const RuntimeMethod* DSAManaged_ExportParameters_m1426347745_RuntimeMethod_var;
 const RuntimeMethod* DSACryptoServiceProvider_ExportParameters_m591135777_RuntimeMethod_var;
-const RuntimeMethod* PKCS1_CreateFromName_m700794140_RuntimeMethod_var;
 const RuntimeMethod* PKCS1_CreateFromName_m146696614_RuntimeMethod_var;
+const RuntimeMethod* PKCS1_CreateFromName_m700794140_RuntimeMethod_var;
 const RuntimeMethod* AesCryptoServiceProvider_CreateDecryptor_m1328793350_RuntimeMethod_var;
 const RuntimeMethod* AesCryptoServiceProvider_CreateEncryptor_m1407541527_RuntimeMethod_var;
 const RuntimeMethod* AesManaged_CreateDecryptor_m692040246_RuntimeMethod_var;
@@ -5773,11 +5774,11 @@ const RuntimeMethod* Vector4_get_Item_m2380866393_RuntimeMethod_var;
 const RuntimeMethod* YogaNode_BaselineInternal_m3366972940_RuntimeMethod_var;
 const RuntimeMethod* KeyHandler_GetRootFromDir_m1404311037_RuntimeMethod_var;
 const RuntimeMethod* RegistryKey_GetHiveName_m2271341117_RuntimeMethod_var;
-const RuntimeMethod* BigInteger_ToString_m3475000413_RuntimeMethod_var;
 const RuntimeMethod* BigInteger_ToString_m1181683046_RuntimeMethod_var;
+const RuntimeMethod* BigInteger_ToString_m3475000413_RuntimeMethod_var;
 const RuntimeMethod* RuntimeMarshal_PtrToUtf8String_m504390466_RuntimeMethod_var;
-const RuntimeMethod* ASN1Convert_ToOid_m4290825381_RuntimeMethod_var;
 const RuntimeMethod* ASN1Convert_ToOid_m1223840396_RuntimeMethod_var;
+const RuntimeMethod* ASN1Convert_ToOid_m4290825381_RuntimeMethod_var;
 const RuntimeMethod* KeyPairPersistence_get_MachinePath_m3812267291_RuntimeMethod_var;
 const RuntimeMethod* KeyPairPersistence_get_UserPath_m610275969_RuntimeMethod_var;
 const RuntimeMethod* RSAManaged_ToXmlString_m645792083_RuntimeMethod_var;
@@ -6298,8 +6299,8 @@ const RuntimeMethod* MobileAuthenticatedStream_U3CInnerWriteU3Eb__67_0_m11009697
 const RuntimeMethod* MobileAuthenticatedStream_CheckThrow_m3982772620_RuntimeMethod_var;
 const RuntimeMethod* MobileAuthenticatedStream_set_Position_m2903160421_RuntimeMethod_var;
 const RuntimeMethod* MonoTlsProviderFactory_InitializeInternal_m2925452808_RuntimeMethod_var;
-const RuntimeMethod* ASN1__ctor_m1601690794_RuntimeMethod_var;
 const RuntimeMethod* ASN1__ctor_m1219137533_RuntimeMethod_var;
+const RuntimeMethod* ASN1__ctor_m1601690794_RuntimeMethod_var;
 const RuntimeMethod* ARC4Managed_CheckInput_m49728936_RuntimeMethod_var;
 const RuntimeMethod* ARC4Managed_set_Key_m1669311750_RuntimeMethod_var;
 const RuntimeMethod* DSAManaged_ImportParameters_m2247591247_RuntimeMethod_var;
@@ -6316,28 +6317,28 @@ const RuntimeMethod* SymmetricTransform_CheckInput_m1829858759_RuntimeMethod_var
 const RuntimeMethod* SymmetricTransform_OFB_m3842617151_RuntimeMethod_var;
 const RuntimeMethod* SymmetricTransform_ThrowBadPaddingException_m2926778011_RuntimeMethod_var;
 const RuntimeMethod* SymmetricTransform_Transform_m3073016850_RuntimeMethod_var;
-const RuntimeMethod* ContentInfo__ctor_m2639021892_RuntimeMethod_var;
 const RuntimeMethod* ContentInfo__ctor_m3397951412_RuntimeMethod_var;
-const RuntimeMethod* EncryptedData__ctor_m2497911783_RuntimeMethod_var;
+const RuntimeMethod* ContentInfo__ctor_m2639021892_RuntimeMethod_var;
 const RuntimeMethod* EncryptedData__ctor_m4001546383_RuntimeMethod_var;
+const RuntimeMethod* EncryptedData__ctor_m2497911783_RuntimeMethod_var;
 const RuntimeMethod* ChallengeResponse2_Compute_m1395485354_RuntimeMethod_var;
 const RuntimeMethod* ChallengeResponse_set_Challenge_m2001764172_RuntimeMethod_var;
 const RuntimeMethod* ChallengeResponse_set_Password_m644923800_RuntimeMethod_var;
 const RuntimeMethod* MessageBase_Decode_m2327798753_RuntimeMethod_var;
-const RuntimeMethod* PKCS12_AddPrivateKey_m1877554254_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_AddPrivateKey_m1542850936_RuntimeMethod_var;
+const RuntimeMethod* PKCS12_AddPrivateKey_m1877554254_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_Decode_m163534693_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_Decode_m1913457787_RuntimeMethod_var;
-const RuntimeMethod* PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var;
 const RuntimeMethod* PKCS12_ReadSafeBag_m1585166574_RuntimeMethod_var;
+const RuntimeMethod* PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate__ctor_m2595927506_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate__ctor_m3656389950_RuntimeMethod_var;
-const RuntimeMethod* X509Certificate_Parse_m1106379228_RuntimeMethod_var;
 const RuntimeMethod* X509Certificate_Parse_m54358579_RuntimeMethod_var;
-const RuntimeMethod* X509Extension__ctor_m710637961_RuntimeMethod_var;
+const RuntimeMethod* X509Certificate_Parse_m1106379228_RuntimeMethod_var;
 const RuntimeMethod* X509Extension__ctor_m1750445243_RuntimeMethod_var;
-const RuntimeMethod* X509ExtensionCollection__ctor_m551870633_RuntimeMethod_var;
+const RuntimeMethod* X509Extension__ctor_m710637961_RuntimeMethod_var;
 const RuntimeMethod* X509ExtensionCollection__ctor_m3315097415_RuntimeMethod_var;
+const RuntimeMethod* X509ExtensionCollection__ctor_m551870633_RuntimeMethod_var;
 const RuntimeMethod* Debug_CheckAndThrow_m3340652565_RuntimeMethod_var;
 const RuntimeMethod* Debug_CheckAndThrow_m568412774_RuntimeMethod_var;
 const RuntimeMethod* UnityTlsContext_CertificateCallback_m2074768585_RuntimeMethod_var;
@@ -16411,7 +16412,7 @@ String_t* _stringLiteral3770758299;
 String_t* _stringLiteral1214352242;
 String_t* _stringLiteral3926843441;
 String_t* _stringLiteral1527136891;
-extern void** const g_MetadataUsages[16392] = 
+extern void** const g_MetadataUsages[16393] = 
 {
 	(void**)(&KeyHandler_t326058990_0_0_0_var),
 	(void**)(&ExceptionU5BU5D_t2535001212_0_0_0_var),
@@ -19203,6 +19204,7 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&GameObject_GetComponent_TisPathSettings_t1004671762_m2551787434_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisObjectMaterialLinks_t2334331831_m3081270083_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisCrepuscular_t186719810_m1562546603_RuntimeMethod_var),
+	(void**)(&GameObject_GetComponent_TisFXAA_t264094441_m3608635218_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisFastSSAO_t1400243781_m1663729539_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisItem_Enumerator_t3915226614_m1353644618_RuntimeMethod_var),
 	(void**)(&GameObject_GetComponent_TisBokeh_t660694511_m969703322_RuntimeMethod_var),
@@ -19500,26 +19502,26 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&U3CU3Ec_U3CAuthenticateU3Eb__1_0_m1309887775_RuntimeMethod_var),
 	(void**)(&Kernel_LeftShift_m4140742987_RuntimeMethod_var),
 	(void**)(&Kernel_LeftShift_m3302851050_RuntimeMethod_var),
-	(void**)(&Kernel_RightShift_m2207393597_RuntimeMethod_var),
 	(void**)(&Kernel_RightShift_m3246168448_RuntimeMethod_var),
-	(void**)(&Kernel_modInverse_m3523342258_RuntimeMethod_var),
+	(void**)(&Kernel_RightShift_m2207393597_RuntimeMethod_var),
 	(void**)(&Kernel_modInverse_m652700340_RuntimeMethod_var),
+	(void**)(&Kernel_modInverse_m3523342258_RuntimeMethod_var),
 	(void**)(&ModulusRing_Difference_m1345688434_RuntimeMethod_var),
 	(void**)(&ModulusRing_Difference_m3686091506_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Implicit_m2847009755_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Implicit_m2547142909_RuntimeMethod_var),
-	(void**)(&BigInteger_op_Multiply_m3801644593_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Multiply_m3683746602_RuntimeMethod_var),
+	(void**)(&BigInteger_op_Multiply_m3801644593_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Multiply_m3854773313_RuntimeMethod_var),
-	(void**)(&BigInteger_op_Subtraction_m4245834512_RuntimeMethod_var),
 	(void**)(&BigInteger_op_Subtraction_m1575155386_RuntimeMethod_var),
+	(void**)(&BigInteger_op_Subtraction_m4245834512_RuntimeMethod_var),
 	(void**)(&CFNetwork_GetProxiesForAutoConfigurationScript_m5223155_RuntimeMethod_var),
 	(void**)(&CFNetwork_GetProxiesForAutoConfigurationScript_m571709647_RuntimeMethod_var),
 	(void**)(&CFNetwork_GetProxiesForURL_m699197090_RuntimeMethod_var),
 	(void**)(&CFNetwork_GetProxiesForUri_m1791810095_RuntimeMethod_var),
 	(void**)(&MobileAuthenticatedStream_ProcessHandshake_m1385946050_RuntimeMethod_var),
-	(void**)(&ASN1Convert_FromOid_m3844102704_RuntimeMethod_var),
 	(void**)(&ASN1Convert_FromOid_m3740816339_RuntimeMethod_var),
+	(void**)(&ASN1Convert_FromOid_m3844102704_RuntimeMethod_var),
 	(void**)(&ASN1Convert_FromUnsignedBigInteger_m1312950810_RuntimeMethod_var),
 	(void**)(&MonoTlsProviderFactory_GetProvider_m35375509_RuntimeMethod_var),
 	(void**)(&MonoTlsProviderFactory_LookupProvider_m1821132006_RuntimeMethod_var),
@@ -19553,10 +19555,10 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&PolyfewRuntime_U3CConvertSkinnedMeshesFromRenderersU3Em__F_m321113221_RuntimeMethod_var),
 	(void**)(&PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__D_m4211490578_RuntimeMethod_var),
 	(void**)(&PolyfewRuntime_U3CConvertSkinnedMeshesInGameObjectU3Em__E_m3449519289_RuntimeMethod_var),
-	(void**)(&BigInteger_TestBit_m1507066813_RuntimeMethod_var),
 	(void**)(&BigInteger_TestBit_m2798226118_RuntimeMethod_var),
-	(void**)(&PrimalityTests_RabinMillerTest_m1471415870_RuntimeMethod_var),
+	(void**)(&BigInteger_TestBit_m1507066813_RuntimeMethod_var),
 	(void**)(&PrimalityTests_RabinMillerTest_m2544317101_RuntimeMethod_var),
+	(void**)(&PrimalityTests_RabinMillerTest_m1471415870_RuntimeMethod_var),
 	(void**)(&CFWebProxy_IsBypassed_m1139341593_RuntimeMethod_var),
 	(void**)(&MobileAuthenticatedStream_InternalWrite_m3406118459_RuntimeMethod_var),
 	(void**)(&U3CU3Ec__DisplayClass5_0_U3CMonoToPublicU3Eb__0_m1672356517_RuntimeMethod_var),
@@ -20855,8 +20857,8 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&ASN1Convert_ToInt32_m2228176117_RuntimeMethod_var),
 	(void**)(&ASN1Convert_ToInt32_m254930636_RuntimeMethod_var),
 	(void**)(&ARC4Managed_TransformBlock_m581621139_RuntimeMethod_var),
-	(void**)(&RSAManaged_get_KeySize_m1441482916_RuntimeMethod_var),
 	(void**)(&RSAManaged_get_KeySize_m1420503080_RuntimeMethod_var),
+	(void**)(&RSAManaged_get_KeySize_m1441482916_RuntimeMethod_var),
 	(void**)(&SymmetricTransform_InternalTransformBlock_m946892271_RuntimeMethod_var),
 	(void**)(&SymmetricTransform_TransformBlock_m2339552481_RuntimeMethod_var),
 	(void**)(&X509CertificateCollection_Add_m3136524580_RuntimeMethod_var),
@@ -22092,8 +22094,8 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&PublicKey_DecodeDSA_m3490622362_RuntimeMethod_var),
 	(void**)(&DSAManaged_ExportParameters_m1426347745_RuntimeMethod_var),
 	(void**)(&DSACryptoServiceProvider_ExportParameters_m591135777_RuntimeMethod_var),
-	(void**)(&PKCS1_CreateFromName_m700794140_RuntimeMethod_var),
 	(void**)(&PKCS1_CreateFromName_m146696614_RuntimeMethod_var),
+	(void**)(&PKCS1_CreateFromName_m700794140_RuntimeMethod_var),
 	(void**)(&AesCryptoServiceProvider_CreateDecryptor_m1328793350_RuntimeMethod_var),
 	(void**)(&AesCryptoServiceProvider_CreateEncryptor_m1407541527_RuntimeMethod_var),
 	(void**)(&AesManaged_CreateDecryptor_m692040246_RuntimeMethod_var),
@@ -22167,11 +22169,11 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&YogaNode_BaselineInternal_m3366972940_RuntimeMethod_var),
 	(void**)(&KeyHandler_GetRootFromDir_m1404311037_RuntimeMethod_var),
 	(void**)(&RegistryKey_GetHiveName_m2271341117_RuntimeMethod_var),
-	(void**)(&BigInteger_ToString_m3475000413_RuntimeMethod_var),
 	(void**)(&BigInteger_ToString_m1181683046_RuntimeMethod_var),
+	(void**)(&BigInteger_ToString_m3475000413_RuntimeMethod_var),
 	(void**)(&RuntimeMarshal_PtrToUtf8String_m504390466_RuntimeMethod_var),
-	(void**)(&ASN1Convert_ToOid_m4290825381_RuntimeMethod_var),
 	(void**)(&ASN1Convert_ToOid_m1223840396_RuntimeMethod_var),
+	(void**)(&ASN1Convert_ToOid_m4290825381_RuntimeMethod_var),
 	(void**)(&KeyPairPersistence_get_MachinePath_m3812267291_RuntimeMethod_var),
 	(void**)(&KeyPairPersistence_get_UserPath_m610275969_RuntimeMethod_var),
 	(void**)(&RSAManaged_ToXmlString_m645792083_RuntimeMethod_var),
@@ -22692,8 +22694,8 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&MobileAuthenticatedStream_CheckThrow_m3982772620_RuntimeMethod_var),
 	(void**)(&MobileAuthenticatedStream_set_Position_m2903160421_RuntimeMethod_var),
 	(void**)(&MonoTlsProviderFactory_InitializeInternal_m2925452808_RuntimeMethod_var),
-	(void**)(&ASN1__ctor_m1601690794_RuntimeMethod_var),
 	(void**)(&ASN1__ctor_m1219137533_RuntimeMethod_var),
+	(void**)(&ASN1__ctor_m1601690794_RuntimeMethod_var),
 	(void**)(&ARC4Managed_CheckInput_m49728936_RuntimeMethod_var),
 	(void**)(&ARC4Managed_set_Key_m1669311750_RuntimeMethod_var),
 	(void**)(&DSAManaged_ImportParameters_m2247591247_RuntimeMethod_var),
@@ -22710,28 +22712,28 @@ extern void** const g_MetadataUsages[16392] =
 	(void**)(&SymmetricTransform_OFB_m3842617151_RuntimeMethod_var),
 	(void**)(&SymmetricTransform_ThrowBadPaddingException_m2926778011_RuntimeMethod_var),
 	(void**)(&SymmetricTransform_Transform_m3073016850_RuntimeMethod_var),
-	(void**)(&ContentInfo__ctor_m2639021892_RuntimeMethod_var),
 	(void**)(&ContentInfo__ctor_m3397951412_RuntimeMethod_var),
-	(void**)(&EncryptedData__ctor_m2497911783_RuntimeMethod_var),
+	(void**)(&ContentInfo__ctor_m2639021892_RuntimeMethod_var),
 	(void**)(&EncryptedData__ctor_m4001546383_RuntimeMethod_var),
+	(void**)(&EncryptedData__ctor_m2497911783_RuntimeMethod_var),
 	(void**)(&ChallengeResponse2_Compute_m1395485354_RuntimeMethod_var),
 	(void**)(&ChallengeResponse_set_Challenge_m2001764172_RuntimeMethod_var),
 	(void**)(&ChallengeResponse_set_Password_m644923800_RuntimeMethod_var),
 	(void**)(&MessageBase_Decode_m2327798753_RuntimeMethod_var),
-	(void**)(&PKCS12_AddPrivateKey_m1877554254_RuntimeMethod_var),
 	(void**)(&PKCS12_AddPrivateKey_m1542850936_RuntimeMethod_var),
+	(void**)(&PKCS12_AddPrivateKey_m1877554254_RuntimeMethod_var),
 	(void**)(&PKCS12_Decode_m163534693_RuntimeMethod_var),
 	(void**)(&PKCS12_Decode_m1913457787_RuntimeMethod_var),
-	(void**)(&PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var),
 	(void**)(&PKCS12_ReadSafeBag_m1585166574_RuntimeMethod_var),
+	(void**)(&PKCS12_ReadSafeBag_m3435973087_RuntimeMethod_var),
 	(void**)(&X509Certificate__ctor_m2595927506_RuntimeMethod_var),
 	(void**)(&X509Certificate__ctor_m3656389950_RuntimeMethod_var),
-	(void**)(&X509Certificate_Parse_m1106379228_RuntimeMethod_var),
 	(void**)(&X509Certificate_Parse_m54358579_RuntimeMethod_var),
-	(void**)(&X509Extension__ctor_m710637961_RuntimeMethod_var),
+	(void**)(&X509Certificate_Parse_m1106379228_RuntimeMethod_var),
 	(void**)(&X509Extension__ctor_m1750445243_RuntimeMethod_var),
-	(void**)(&X509ExtensionCollection__ctor_m551870633_RuntimeMethod_var),
+	(void**)(&X509Extension__ctor_m710637961_RuntimeMethod_var),
 	(void**)(&X509ExtensionCollection__ctor_m3315097415_RuntimeMethod_var),
+	(void**)(&X509ExtensionCollection__ctor_m551870633_RuntimeMethod_var),
 	(void**)(&Debug_CheckAndThrow_m3340652565_RuntimeMethod_var),
 	(void**)(&Debug_CheckAndThrow_m568412774_RuntimeMethod_var),
 	(void**)(&UnityTlsContext_CertificateCallback_m2074768585_RuntimeMethod_var),

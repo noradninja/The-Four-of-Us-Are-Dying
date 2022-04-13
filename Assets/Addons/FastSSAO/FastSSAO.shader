@@ -119,17 +119,17 @@
 			float2 ray =  i.uv1.zw / depth;
 			float difference = depth - SAMPLE_DEPTH(saturate(i.uv.xy + sign(dot(ray, normal.xy)) * ray));
 			float occlusion = step(0.02h, difference) * (1.0h - smoothstep(0.02h, _Area, difference));
-#if !defined(FAST)
-			ray = i.uv1.xy / depth;
-			difference = depth - SAMPLE_DEPTH(saturate(i.uv.xy + sign(dot(ray, normal.xy)) * ray));
-			occlusion += step(0.02h, difference) * (1.0h - smoothstep(0.02h, _Area, difference));
+// #if !defined(FAST)
+// 			ray = i.uv1.xy / depth;
+// 			difference = depth - SAMPLE_DEPTH(saturate(i.uv.xy + sign(dot(ray, normal.xy)) * ray));
+// 			occlusion += step(0.02h, difference) * (1.0h - smoothstep(0.02h, _Area, difference));
 
-			ray =  i.uv2.xy / depth;
-			difference = depth - SAMPLE_DEPTH(saturate(i.uv.xy + sign(dot(ray, normal.xy)) * ray));
-			occlusion += step(0.02h, difference) * (1.0h - smoothstep(0.02h, _Area, difference));
+// 			ray =  i.uv2.xy / depth;
+// 			difference = depth - SAMPLE_DEPTH(saturate(i.uv.xy + sign(dot(ray, normal.xy)) * ray));
+// 			occlusion += step(0.02h, difference) * (1.0h - smoothstep(0.02h, _Area, difference));
 
-			return 1.0h - _Intensity * occlusion * 0.3333h;
-#endif
+// 			return 1.0h - _Intensity * occlusion * 0.3333h;
+// #endif
 			return 1.0h - _Intensity * occlusion;
 		}
 
@@ -137,11 +137,11 @@
 		{
 			UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 			fixed4 col = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv);
-			// col.r *= 0.5h;
-			// col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.xy).r * 0.125h;
-			// col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.xw).r * 0.125h;
-			// col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.zy).r * 0.125h;
-			// col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.zw).r * 0.125h;
+			col.r *= 0.5h;
+			col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.xy).r * 0.125h;
+			col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.xw).r * 0.125h;
+			col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.zy).r * 0.125h;
+			col.r += UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, i.uv1.zw).r * 0.125h;
 			return col;
 		}
 

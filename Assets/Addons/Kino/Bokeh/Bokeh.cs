@@ -147,7 +147,7 @@ namespace Kino
             _material.SetFloat("_MaxCoC", maxCoC);
             _material.SetFloat("_RcpMaxCoC", 1 / maxCoC);
 
-            var rcpAspect = (float)source.height / source.width;
+            var rcpAspect = (float)(source.height/2) / (source.width/2);
             _material.SetFloat("_RcpAspect", rcpAspect);
         }
 
@@ -201,8 +201,8 @@ namespace Kino
                 return;
             }
 
-            var width = source.width;
-            var height = source.height;
+            var width = source.width/2;
+            var height = source.height/2;
             var format = RenderTextureFormat.ARGBHalf;
 
             SetUpShaderParameters(source);
