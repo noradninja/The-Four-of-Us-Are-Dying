@@ -13,11 +13,8 @@
 	half _Sharpness;
 	half4 _MainTex_TexelSize;
 
-	#ifdef UNITY_COLORSPACE_GAMMA
 	#define lum half3(0.22h, 0.707h, 0.071h)
-	#else 
-	#define lum half3(0.0396819152h, 0.45802179h, 0.00609653955h)
-	#endif
+	
 
 	struct appdata {
 		half4 vertex : POSITION;
@@ -36,9 +33,9 @@
 	v2f vert(appdata v)
 	{
 		v2f o;
-		UNITY_SETUP_INSTANCE_ID(v);
+	
 		UNITY_INITIALIZE_OUTPUT(v2f, o);
-		UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+		
 		o.pos = UnityObjectToClipPos(v.vertex);
 		o.uv = v.uv;
 		half2 offset = _MainTex_TexelSize.xy * 0.5h;
@@ -49,13 +46,13 @@
 
 	half4 frag(v2f i) : SV_Target
 	{
-		UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
+		
 
 		half3 col = UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoTransformScreenSpaceTex(i.uv)).rgb;
 		half gr = dot(col, lum);
 		half gtl = dot(UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoTransformScreenSpaceTex(i.uv1.xy)).rgb, lum);
 		half gbl = dot(UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoTransformScreenSpaceTex(i.uv1.xw)).rgb, lum);
-		half gtr = dot(UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoTransformScreenSpaceTex(i.uv1.zy)).rgb, lum) + 0.0026041667h;
+		half gtr = dot(UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoTransformScreenSpaceTex(i.uv1.zy)).rgb, lum);
 		half gbr = dot(UNITY_SAMPLE_SCREENSPACE_TEXTURE(_MainTex, UnityStereoTransformScreenSpaceTex(i.uv1.zw)).rgb, lum);
 
 		half gmax = max(max(gtr, gbr), max(gtl, gbl));
@@ -95,7 +92,7 @@
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag
-			#pragma fragmentoption ARB_precision_hint_fastest
+			#pragma target 3.0
 			ENDCG
 		}
 	}

@@ -7,6 +7,7 @@
 		_leaves_wiggle_disp ("Leaves Wiggle Displacement", float) = 0.07
         _leaves_wiggle_speed ("Leaves Wiggle Speed", float) = 0.01
 		_influence ("Influence", range(0,1)) = 1
+		_Time ("Time", Vector) =(0,0,0,0)
 		[Toggle(AMBIENT_ON)] _AmbientOn("Ambient Lighting", Float) = 0
 	}
 

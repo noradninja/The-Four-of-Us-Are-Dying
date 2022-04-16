@@ -248,14 +248,14 @@ public class PlayerController : MonoBehaviour
 ///////////////////////////DPad//////////////////////////////////////
 
 //Meds
-        if (Input.GetKeyDown(VITA + UP) && InventoryManager.medCount > 0){  
+        if (Input.GetKeyDown($"{VITA}{UP}") && InventoryManager.medCount > 0){  
             if (InventoryManager.playerHealth < 100){
                 InventoryManager.medCount -= 1;
                 healMe();
             }
         }
 //Stimutacs
-        if (Input.GetKeyDown(VITA + DOWN) && InventoryManager.stimCount > 0 && !isStimulant){
+        if (Input.GetKeyDown($"{VITA}{DOWN}") && InventoryManager.stimCount > 0 && !isStimulant){
             InventoryManager.stimCount -= 1;
             stamina = 100f;
             staminaObject.GetComponent<Image>().fillAmount = 1.0f;
@@ -268,14 +268,14 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
         //toggle overlay
-        if (Input.GetKeyDown(VITA + LEFT) && !delayButton){
+        if (Input.GetKeyDown($"{VITA}{LEFT}") && !delayButton){
             if (perfOverlay.activeSelf){
                 perfOverlay.SetActive(false);
             }
             else perfOverlay.SetActive(true);
         }
 
-        if (Input.GetKeyDown(VITA + RIGHT)){//} && !delayButton){
+        if (Input.GetKeyDown($"{VITA}{RIGHT}")){//} && !delayButton){
            //enable/disable SSAO and UI text
             if (SSAOScript.GetComponent<FXAA>().enabled){
                 // SSAOScript.GetComponent<FastSSAO>().enabled = false;
@@ -302,7 +302,7 @@ public class PlayerController : MonoBehaviour
 ///////////////////////////Face Buttons//////////////////////////////////////
 
 //turn the flashlight on and off if we have it
-        if (Input.GetKeyDown(VITA + TRIANGLE)  && !delayButton && hasFlashlight && flashlightCharge > 0.05f && !Input.GetKey(VITA + LTRIG))
+        if (Input.GetKeyDown($"{VITA}{TRIANGLE}")  && !delayButton && hasFlashlight && flashlightCharge > 0.05f && !Input.GetKey(VITA + LTRIG))
         {   
             if (flashlightOff){
                 flashlightOff = false;
@@ -314,7 +314,7 @@ public class PlayerController : MonoBehaviour
 
 
 //if we add batteries
-        if (Input.GetKeyDown(VITA + SQUARE)  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
+        if (Input.GetKeyDown($"{VITA}{SQUARE}")  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
         {  
             StopAllCoroutines(); 
             float currentIntensity = flashlight.intensity;
@@ -364,7 +364,7 @@ public class PlayerController : MonoBehaviour
             // }
         }
 //if we add battery while 'firing' flashlight
-        if (Input.GetKeyDown(VITA + SQUARE)  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
+        if (Input.GetKeyDown($"{VITA}{SQUARE}")  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
         {   
             StopAllCoroutines();
             currentCharge = flashlightCharge;
@@ -412,7 +412,7 @@ public class PlayerController : MonoBehaviour
         }
 
 //Map
-        if (Input.GetKeyDown(VITA + CIRCLE))
+        if (Input.GetKeyDown($"{VITA}{CIRCLE}"))
         {
             if(!isMap && !delayButton){
                 mapCamera.SetActive(true);
@@ -428,7 +428,7 @@ public class PlayerController : MonoBehaviour
         }
 
 //quick turnaround- when we hit Cross and down on the left stick at the same time   
-        if (Input.GetKeyDown(VITA + CROSS) && verticalMove > 0 && !delayButton){ 
+        if (Input.GetKeyDown($"{VITA}{CROSS}") && verticalMove > 0 && !delayButton){ 
             delayButton = true;
             Vector3 playerRotation =  transform.eulerAngles; //store our rotation
             Vector3 neededRotation = new Vector3 (  transform.eulerAngles.x,
@@ -440,7 +440,7 @@ public class PlayerController : MonoBehaviour
 ///////////////////////////LTRIG//////////////////////////////////////
 
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
-        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightDisabled)
+        if (Input.GetKeyDown($"{VITA}{LTRIG}") && hasFlashlight && flashlightDisabled)
         {   
             //flashlightCharge = 0;
             isCharging = false;
@@ -461,7 +461,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(walkLerp(0, 1,  lerpRate));
         }
 //if battery is not dead, and we hit the L trigger
-        if (Input.GetKeyDown(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f 
+        if (Input.GetKeyDown($"{VITA}{LTRIG}") && hasFlashlight && flashlightCharge > 0.05f 
             && !flashlightDisabled && !flashlightOff)
         {   
             lightFocusing = true;
@@ -477,7 +477,7 @@ public class PlayerController : MonoBehaviour
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
             }
-            if (!Input.GetKey(VITA + RTRIG)){
+            if (!Input.GetKey($"{VITA}{RTRIG}")){
                 StartCoroutine(rechargeStamina(((100-stamina)), stamina));
             }
             //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
@@ -492,14 +492,14 @@ public class PlayerController : MonoBehaviour
         
         }
 //change FOV while we hold the L trigger
-        if (Input.GetKey(VITA + LTRIG) && hasFlashlight && flashlightCharge > 0.05f 
+        if (Input.GetKey($"{VITA}{LTRIG}") && hasFlashlight && flashlightCharge > 0.05f 
         && !flashlightDisabled && !flashlightOff)
         {
             Focus();
             if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
         }
 //reset the flashlight and camera when we release the L trigger
-        if (Input.GetKeyUp(VITA + LTRIG) && hasFlashlight)
+        if (Input.GetKeyUp($"{VITA}{LTRIG}") && hasFlashlight)
         {   
            
             StopAllCoroutines();
@@ -537,7 +537,7 @@ public class PlayerController : MonoBehaviour
         }
     
         ///////////////////////////RTRIG////////////////////////////////////// 
-        if (Input.GetKey(VITA + RTRIG))
+        if (Input.GetKey($"{VITA}{RTRIG}"))
         {
             if (stamina > 0f){ 
                     Run(); //RUN, FORREST, RUN
@@ -562,7 +562,7 @@ public class PlayerController : MonoBehaviour
 
             if (camObject.fieldOfView > 50) camObject.fieldOfView = 50; //limit fov change  
         }
-        if (Input.GetKeyDown(VITA + RTRIG) && stamina > 0f)
+        if (Input.GetKeyDown($"{VITA}{RTRIG}") && stamina > 0f)
         {   
             isRunning = true;
             StopAllCoroutines();
@@ -585,7 +585,7 @@ public class PlayerController : MonoBehaviour
             }
             
         }
-        if (Input.GetKeyUp(VITA + RTRIG))
+        if (Input.GetKeyUp($"{VITA}{RTRIG}"))
         {   
             isRunning = false;
             StopAllCoroutines();
@@ -610,7 +610,7 @@ public class PlayerController : MonoBehaviour
                 StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
             }
         }
-        if (!Input.GetKey(VITA + RTRIG) && (!Input.GetKey(VITA + LTRIG)) && (!Input.GetKeyDown(VITA + SQUARE)))
+        if (!Input.GetKey($"{VITA}{RTRIG}") && (!Input.GetKey($"{VITA}{LTRIG}")) && (!Input.GetKeyDown($"{VITA}{SQUARE}")))
         {
             if (camObject.fieldOfView > 40 && camObject.fieldOfView != 40){
                 camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
@@ -747,7 +747,7 @@ public class PlayerController : MonoBehaviour
     private void Run()
     {
         if (stamina > 30f){ 
-            Debug.Log("You're holding down run!");
+            // //Debug.Log("You're holding down run!");
             camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
             if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
                 animator.SetBool("isRunning", true);
@@ -757,7 +757,7 @@ public class PlayerController : MonoBehaviour
             }
         }
         if (stamina <= 30f){ 
-            Debug.Log("You're very tired!");
+            // //Debug.Log("You're very tired!");
             camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
             if (animator.GetBool("isRunning") == true  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
                 animator.SetBool("isRunning", false);
@@ -785,7 +785,7 @@ public class PlayerController : MonoBehaviour
 
     private void Focus()
     {
-        //Debug.Log("You're holding down the focus button!");
+        ////Debug.Log("You're holding down the focus button!");
         camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32; //zoom in
 
         // animator.SetBool("isRunning", false);

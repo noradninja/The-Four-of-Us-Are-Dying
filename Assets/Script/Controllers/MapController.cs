@@ -45,7 +45,7 @@ public class MapController : MonoBehaviour {
 		// }  
 
 		//map zoom with arrow keys for testing
-		if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(VITA + LEFT)){
+		if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey("joystick button 11")){
 			if(mapCamera.orthographicSize < maxZoom){
 				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
 				//keep apparent scale and position the same
@@ -54,7 +54,7 @@ public class MapController : MonoBehaviour {
 				
 			}
 		}
-		if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(VITA + RIGHT)){
+		if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey("joystick button 9")){
 			if(mapCamera.orthographicSize > minZoom){
 			mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
 			//keep apparent scale and position the same

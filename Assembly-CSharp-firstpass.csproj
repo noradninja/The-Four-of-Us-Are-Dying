@@ -392,11 +392,50 @@
  <Reference Include="UnityEngine.StandardEvents">
  <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
- <Reference Include="EnchanterCore">
- <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCore.dll</HintPath>
+ <Reference Include="Microsoft.CodeAnalysis.Workspaces">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
  </Reference>
- <Reference Include="EnchanterCommon">
- <HintPath>C:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Assets/CodeEnchanter/Plugins/EnchanterCommon.dll</HintPath>
+ <Reference Include="System.Collections.Immutable">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Collections.Immutable.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Threading.Tasks.Extensions">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CodeAnalysis.CSharp">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Composition.Runtime">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Runtime.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CodeAnalysis.Scripting">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Scripting.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Reflection.Metadata">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Reflection.Metadata.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Composition.Convention">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Convention.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Composition.Hosting">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Hosting.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Composition.TypedParts">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.TypedParts.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Composition.AttributedModel">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.AttributedModel.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CodeAnalysis">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
+ </Reference>
+ <Reference Include="System.Runtime.Loader">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Runtime.Loader.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
+ </Reference>
+ <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
+ <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

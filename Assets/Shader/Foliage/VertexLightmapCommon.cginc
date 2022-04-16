@@ -15,7 +15,7 @@
 #define USING_FOG (defined(FOG_LINEAR) || defined(FOG_EXP) || defined(FOG_EXP2))
 // ES2.0 can not do loops with non-constant-expression iteration counts :(
 #if defined(SHADER_API_GLES)
-#define LIGHT_LOOP_LIMIT 8
+#define LIGHT_LOOP_LIMIT 8.0h
 #else
 #define LIGHT_LOOP_LIMIT unity_VertexLightParams.x
 #endif
@@ -24,32 +24,32 @@
 half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 
 	half3 dirToLight = unity_LightPosition[idx].xyz;
-	half att = 1.0;
+	half att = 1.0h;
 
 	#if defined(POINT) || defined(SPOT)
 		dirToLight -= eyePosition * unity_LightPosition[idx].w;
 		
 		// distance attenuation
 		half distSqr = dot(dirToLight, dirToLight);
-		att /= (1.0 + unity_LightAtten[idx].z * distSqr);
+		att /= (1.0h + unity_LightAtten[idx].z * distSqr);
 
-		if (unity_LightPosition[idx].w != 0 &&
+		if (unity_LightPosition[idx].w != 0.0h &&
 			distSqr > unity_LightAtten[idx].w) 
-			att = 0.0; // set to 0 if outside of range
+			att = 0.0h; // set to 0 if outside of range
 
 		dirToLight *= rsqrt(distSqr);
 
 	#if defined(SPOT)
 		// spot angle attenuation
-		half rho = max(dot(dirToLight, unity_SpotDirection[idx].xyz), 0.0);
+		half rho = max(dot(dirToLight, unity_SpotDirection[idx].xyz), 0.0h);
 		half spotAtt = (rho - unity_LightAtten[idx].x) * unity_LightAtten[idx].y;
 		att *= saturate(spotAtt);
 	#endif
 
 	#endif
-		att *= 0.5; // passed v light colors are 2x brighter than what used to be v FFP
+		att *= 0.5h; // passed v light colors are 2x brighter than what used to be v FFP
 
-		half NdotL = max(dot(eyeNormal, dirToLight), 0.0);
+		half NdotL = max(dot(eyeNormal, dirToLight), 0.0h);
 		
 		// diffuse
 		half3 color = att * NdotL * unity_LightColor[idx].rgb;
@@ -96,9 +96,10 @@ struct v2f {
 v2f vert(appdata v) {
 
 	v2f o;
+	UNITY_INITIALIZE_OUTPUT(v2f, o);
 
-	half3 worldPos = mul (unity_ObjectToWorld, half4(v.pos, 1) ).xyz;
-	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1) ).xyz;
+	half3 worldPos = mul (unity_ObjectToWorld, half4(v.pos, 1.0h) ).xyz;
+	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1.0h) ).xyz;
 	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
  	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
  	half rimWidth = 1;
@@ -118,7 +119,7 @@ v2f vert(appdata v) {
 	for (int il = 0; il < LIGHT_LOOP_LIMIT; ++il) {
 		color.rgb += computeOneLight(il, eyePos, eyeNormal);
 	}
-	color.rgb += smoothstep(1 - rimWidth, 1.0, dotProduct) * .15f;
+	color.rgb += smoothstep(0.0h, 1.0h, dotProduct) * 0.15h;
 	o.color = saturate(color);
 		
 	// compute texture coordinates
@@ -146,7 +147,7 @@ fixed4 frag(v2f v) : SV_Target {
 		half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
 
 	#if CUSTOM_LIGHTMAPPED == 1
-		half4 lighting = (lightmap * 0.25f) + posLighting;
+		half4 lighting = (lightmap * 0.25h) + posLighting;
 	#endif
 
 	#else

@@ -377,3 +377,6 @@ eb565135f5b2f106ea4734c3cad2730e Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 e958cc1ee46a616a6e0cde964bfe9918 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 aae9893fc05b6c8cba8317ed327be0c4 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
 9fcb2fae12c9a885e572f33731d12a60 Assembly-CSharp.dll:.Res
+486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.InputManager
+88a7f8c179c639926fd4f3810e0e9f90 Assembly-CSharp.dll:.LevelLightmapData
+f279745939dfc36ca4c22afa419c3e09 Assembly-CSharp.dll:.LightingScenarioSwitcher

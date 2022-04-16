@@ -1,8 +1,0 @@
-{
-"_IsPreCompiling":true,
-"_IsPostCompiling":true,
-"_IsLoggingToFile":true,
-"_LogFileName":"EnchanterLog.txt",
-"_IsLoggingAll":false,
-"_IsCheckingRedistributables":true
-}
