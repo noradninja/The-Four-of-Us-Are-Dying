@@ -99,7 +99,7 @@ private const string joystick1 = "joystick 1 button ";
 			if (loaderEnabled == false && optionEnabled == false && menuEnabled == true){
 				timer = timer += 0.01f;
 				//Decrement slot by -1 if you press up
-				if (Input.GetKeyDown (joystick1 + UP)){
+				if (Input.GetKeyDown ($"{joystick1}{UP}")){
 					//audioSource.PlayOneShot(clipList[2]);
 					if (selectedSlot == 0){
 						//set slot to 2 if you are at slot 1 to wrap selection
@@ -113,7 +113,7 @@ private const string joystick1 = "joystick 1 button ";
 				}
 				
 				//Increment slot by +1 if you press down
-				if (Input.GetKeyDown (joystick1 + DOWN)){
+				if (Input.GetKeyDown ($"{joystick1}{DOWN}")){
 					//audioSource.PlayOneShot(clipList[3]);
 					if (selectedSlot == 2){
 						//set slot to 1 if you are at slot 2 to wrap selection
@@ -126,7 +126,7 @@ private const string joystick1 = "joystick 1 button ";
 					//animateButtons();
 				}
 		
-				if (Input.GetKeyDown (joystick1 + CROSS)){
+				if (Input.GetKeyDown ($"{joystick1}{CROSS}")){
 					//audioSource.PlayOneShot(clipList[0]);
 					if (selectedSlot == 0){
 						//menuEnabled = false;
@@ -162,53 +162,64 @@ private const string joystick1 = "joystick 1 button ";
 
 //this method checks which slot is currently selected and changes the colors of all the slots to give you a hilight 
 //on the selected slot
-	void setColor(){
-		
-		if (selectedSlot==1){
-			slot0.color = baseColor;
-			slot1.color = hilightColor;
-			slot2.color = baseColor;
-		}
-		else if (selectedSlot==2){
-			slot0.color = baseColor;
-			slot1.color = baseColor;
-			slot2.color = hilightColor;
-		}
-			else if (selectedSlot==0){
-			slot0.color = hilightColor;
-			slot1.color = baseColor;
-			slot2.color = baseColor;
+	void setColor()
+	{
+		switch (selectedSlot)
+		{
+			case 1:
+				slot0.color = baseColor;
+				slot1.color = hilightColor;
+				slot2.color = baseColor;
+				break;
+			case 2:
+				slot0.color = baseColor;
+				slot1.color = baseColor;
+				slot2.color = hilightColor;
+				break;
+			case 0:
+				slot0.color = hilightColor;
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				break;
 		}
 	}
 
-	void selectColor(){
-			if (selectedSlot==1){
-			slot0.color = baseColor;
-			slot1.color = selectedColor;
-			slot2.color = baseColor;
-		}
-		else if (selectedSlot==2){
-			slot0.color = baseColor;
-			slot1.color = baseColor;
-			slot2.color = selectedColor;
-		}
-			else if (selectedSlot==0){
-			slot0.color = selectedColor;
-			slot1.color = baseColor;
-			slot2.color = baseColor;
+	void selectColor()
+	{
+		switch (selectedSlot)
+		{
+			case 1:
+				slot0.color = baseColor;
+				slot1.color = selectedColor;
+				slot2.color = baseColor;
+				break;
+			case 2:
+				slot0.color = baseColor;
+				slot1.color = baseColor;
+				slot2.color = selectedColor;
+				break;
+			case 0:
+				slot0.color = selectedColor;
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				break;
 		}
 	}
 	void animateButtons(){
-		if (selectedSlot == 1){
-			currentSelection = GameObject.Find("Options");
-			//anim. =currentSelection.GetComponent<Animation>();
-			//anim.PLay("Menu_Bounce_Legacy");
+		switch (selectedSlot)
+		{
+			case 1:
+				currentSelection = GameObject.Find("Options");
+				//anim. =currentSelection.GetComponent<Animation>();
+				//anim.PLay("Menu_Bounce_Legacy");
+				break;
+			case 2:
+				currentSelection = GameObject.Find("Load_Game");
+				//anim. =currentSelection.GetComponent<Animation>();
+				//anim.PLay("Menu_Bounce_Legacy");
+				break;
 		}
-		if (selectedSlot == 2){
-			currentSelection = GameObject.Find("Load_Game");
-			//anim. =currentSelection.GetComponent<Animation>();
-			//anim.PLay("Menu_Bounce_Legacy");
-		}
+
 		if (selectedSlot != 1 && selectedSlot !=2){
 			currentSelection = GameObject.Find("New_Game");
 			//anim. =currentSelection.GetComponent<Animation>();

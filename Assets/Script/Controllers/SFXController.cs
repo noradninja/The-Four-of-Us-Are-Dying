@@ -10,7 +10,7 @@ public class SFXController : MonoBehaviour {
 	public AudioClip[] roadSounds;
 	public AudioClip[] currentClips;
 	public float distance = 0.055f;
-	public RaycastHit hit;
+	private RaycastHit hit;
 	private int i;
 	private int maskValue;
 
@@ -22,10 +22,9 @@ public class SFXController : MonoBehaviour {
 		}
 		else{
 			maskValue = (LayerMask.GetMask("Road"));
-			if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)){
-				Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
-				currentClips = roadSounds;
-			}
+			if (!Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)) return;
+			Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
+			currentClips = roadSounds;
 		}
 	}
 

@@ -52,15 +52,17 @@ public class Item_Enumerator : MonoBehaviour {
 	private string tempText;
 	private Dictionary<string, string> itemTexts;
 
-	public int GetFirstDigit(int number) {
- 	 	if ( number < 10 ) {
-    		return number;
-  		}
- 	return GetFirstDigit ( (number - (number % 10)) / 10);
+	private int GetFirstDigit(int number)
+	{
+		while (true)
+		{
+			if (number < 10) return number;
+			number = (number - (number % 10)) / 10;
+		}
 	}
 
 	// Use this for initialization
-	void Start ()
+	private void Start ()
     {
 		
 		if (Application.isEditor){
@@ -75,7 +77,7 @@ public class Item_Enumerator : MonoBehaviour {
         itemTexts.Add("health", "antiseptic");
      	itemTexts.Add("stims", "stimulants");	
 	///////////////////////////////////////////////////////////////////////////////
-	batteryText.text = string.Format("{0:D2}", InventoryManager.batteryCount);
+	batteryText.text = $"{InventoryManager.batteryCount:D2}";
 
 	////Check lists to see if we are in it; if not, destroy
 		// Meds
@@ -107,20 +109,20 @@ public class Item_Enumerator : MonoBehaviour {
 
     // Update is called once per frame
     void Update (){
-		if (Input.GetKeyDown(joystick1 + CROSS) && dialogBG.color == dialogOn && isActiveObject){
+		if (Input.GetKeyDown($"{joystick1}{CROSS}") && dialogBG.color == dialogOn && isActiveObject){
 		
 			switch (thisItem){
 
 				case pickupItem.flashlight :
-					PlayerController.hasFlashlight = true;
-					PlayerController.flashlightOff = false;
+					PlayerController.HasFlashlight = true;
+					PlayerController.FlashlightOff = false;
 					Destroy(targetObject);
 				break;
 
 				case pickupItem.battery :
 					print("That's a battery");
 					InventoryManager.batteryCount += 2;
-					string currentCount = string.Format("{0:D2}", InventoryManager.batteryCount);
+					string currentCount = $"{InventoryManager.batteryCount:D2}";
 					batteryText.text = currentCount;
 					Destroy(targetObject);
 				break;
@@ -144,36 +146,36 @@ public class Item_Enumerator : MonoBehaviour {
 					Destroy(targetObject);
 				break;
 			}
-			ClearOSD();
+			ClearOsd();
 		}
 		
 	}
 
-	void OnGUI (){
+    private void OnGUI (){
 		if (isActiveObject){
             SetPosition();
         }
     }
 
-    void OnTriggerEnter (Collider col){
+    private void OnTriggerEnter (Collider col)
+    {
+	    if (col != player) return;
+	    SetPosition();
+	    isActiveObject = true;
+	    iconImage.color = iconVisible;
+	    OSDText.color = colorOn;
+	    dialogBG.color = dialogOn;
+	    itemTexts.TryGetValue(thisItem.ToString(), out tempText);
+	    OSDText.text = ("Press X to pick up " +  tempText + ".");
+    }
+
+    private void OnTriggerExit (Collider col){
 		if(col == player){
-			SetPosition();
-			isActiveObject = true;
-            iconImage.color = iconVisible;
-            OSDText.color = colorOn;
-            dialogBG.color = dialogOn;
-			itemTexts.TryGetValue(thisItem.ToString(), out tempText);
-            OSDText.text = ("Press X to pick up " +  tempText + ".");
-		
-		}
-	}
-	void OnTriggerExit (Collider col){
-		if(col == player){
-            ClearOSD();
+            ClearOsd();
         }
     }
 
-    private void ClearOSD() //restores OSD to default and resets isActiveObject flag
+    private void ClearOsd() //restores OSD to default and resets isActiveObject flag
     {
         iconImage.color = colorOff;
         OSDText.color = colorOff;

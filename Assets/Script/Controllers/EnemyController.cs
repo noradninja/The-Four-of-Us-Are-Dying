@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class EnemyController : MonoBehaviour {
-	public enum enemyState {
+	public enum EnemyState {
 		idle,
 		alert,
 		looking,
@@ -45,7 +45,7 @@ public class EnemyController : MonoBehaviour {
 	public bool isPlayerNear = false;
 	public bool canSeePlayer = false;
 	[Header("Behavior")]
-	public enemyState behaviorState;
+	public EnemyState behaviorState;
 	public float alertDelay = 1.5f;
 	public float lookDelay = 1.5f;
 	public bool alerted = false;
@@ -54,32 +54,30 @@ public class EnemyController : MonoBehaviour {
 	public bool isPlayerRunning;
 	public bool flashlightDisabled;
 	public Vector3 randomCircle;
-	
-	
-	
+	private static readonly int IsAttacking = Animator.StringToHash("isAttacking");
 
 
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		startingPosition = transform.position;
 		enemyAnimator = GetComponent<Animator>();
 		RandomizePoint();
 	}
 		
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 		distanceToPlayer = Vector3.Distance(player.transform.position, this.transform.position);
-		flashlightDisabled = PlayerController.flashlightOff; 
+		flashlightDisabled = PlayerController.FlashlightOff; 
 		isPlayerRunning = player.GetComponent<PlayerController>().isRunning;
 		
 		if (distanceToPlayer < viewRadius){
 			//isPlayerNear = true;
-			behaviorState = enemyState.alert;
+			behaviorState = EnemyState.alert;
 			//isPlayerNear = true;
 		}
 
 		if (distanceToPlayer <= 1.5f){
-			behaviorState = enemyState.attack;
+			behaviorState = EnemyState.attack;
 		}
 		
 	
@@ -119,27 +117,27 @@ public class EnemyController : MonoBehaviour {
     {
         switch (behaviorState)
         {
-            case enemyState.idle:
+            case EnemyState.idle:
                 //play idle animation
                 break;
 
-            case enemyState.alert:
+            case EnemyState.alert:
                 FaceTarget(player);
                 break;
 			
-			case enemyState.looking:
+			case EnemyState.looking:
 
 			break;
 
-            case enemyState.chase:
+            case EnemyState.chase:
                 //chase player
                 break;
 
-            case enemyState.attack:
+            case EnemyState.attack:
                 //attack player
                 break;
 
-            case enemyState.dodge:
+            case EnemyState.dodge:
                 //dodge player attack
                 break;
         }
@@ -149,27 +147,27 @@ public class EnemyController : MonoBehaviour {
     {
         switch (behaviorState)
         {
-            case enemyState.idle:
+            case EnemyState.idle:
                 //play idle animation
                 break;
 
-            case enemyState.alert:
+            case EnemyState.alert:
                 FaceTarget(player);
                 break;
 
-			case enemyState.looking:
+			case EnemyState.looking:
 
 			break;
 
-            case enemyState.chase:
+            case EnemyState.chase:
                 //chase player
                 break;
 
-            case enemyState.attack:
+            case EnemyState.attack:
                 //attack player
                 break;
 
-            case enemyState.dodge:
+            case EnemyState.dodge:
                 //dodge player attack
                 break;
         }
@@ -179,14 +177,14 @@ public class EnemyController : MonoBehaviour {
     {
         switch (behaviorState)
         {
-            case enemyState.idle:
+            case EnemyState.idle:
 				if (!canSeePlayer){
 					if (!lookingForPlayer){
-						behaviorState = enemyState.looking;
+						behaviorState = EnemyState.looking;
 					}
 				}
 				if (canSeePlayer){
-					behaviorState = enemyState.alert;
+					behaviorState = EnemyState.alert;
 				}
                 if (player.GetComponent<PlayerController>().currentTarget == targetPoint)
                 {
@@ -194,12 +192,12 @@ public class EnemyController : MonoBehaviour {
                 }
                 // player.GetComponent<PlayerController>().lightMovement = true;
 				isPlayerNear = false;
-                if (enemyAnimator.GetBool("isAttacking") == true){
-					enemyAnimator.SetBool("isAttacking", false);
+                if (enemyAnimator.GetBool(IsAttacking) == true){
+					enemyAnimator.SetBool(IsAttacking, false);
 				}
 				break;
 
-            case enemyState.alert:
+            case EnemyState.alert:
 				if (!alerted){
 					// StopAllCoroutines();
 					if (!flashlightDisabled){ 
@@ -231,21 +229,21 @@ public class EnemyController : MonoBehaviour {
 								meshAgent.SetDestination(player.transform.position);
 								FaceTarget(player);
 						}
-						if (enemyAnimator.GetBool("isAttacking") == true){
-								enemyAnimator.SetBool("isAttacking", false);
+						if (enemyAnimator.GetBool(IsAttacking) == true){
+								enemyAnimator.SetBool(IsAttacking, false);
 						}
 					}
 				}
 				if (!isPlayerNear){
 						lookingForPlayer = false;
-						behaviorState = enemyState.looking;
+						behaviorState = EnemyState.looking;
 				}
-				if (enemyAnimator.GetBool("isAttacking") == true){
-					enemyAnimator.SetBool("isAttacking", false);
+				if (enemyAnimator.GetBool(IsAttacking) == true){
+					enemyAnimator.SetBool(IsAttacking, false);
 				}              
                 break;
 
-			case enemyState.looking:
+			case EnemyState.looking:
 				roaming = false;
 				alerted = false;
 				player.GetComponent<PlayerController>().lightMovement = true;
@@ -257,21 +255,21 @@ public class EnemyController : MonoBehaviour {
 				if (!lookingForPlayer){
 					Look();
 				}
-				if (enemyAnimator.GetBool("isAttacking") == true){
-					enemyAnimator.SetBool("isAttacking", false);
+				if (enemyAnimator.GetBool(IsAttacking) == true){
+					enemyAnimator.SetBool(IsAttacking, false);
 				}
-			break;
+				break;
 
-			case enemyState.roaming:
+			case EnemyState.roaming:
 					lookingForPlayer = false;
 					alerted = false;
 					RoamAround();
-				if (enemyAnimator.GetBool("isAttacking") == true){
-					enemyAnimator.SetBool("isAttacking", false);
+				if (enemyAnimator.GetBool(IsAttacking) == true){
+					enemyAnimator.SetBool(IsAttacking, false);
 				}
-			break;
+					break;
 
-            case enemyState.chase:
+            case EnemyState.chase:
 			lookingForPlayer = false;
 			roaming = false;
 			alerted = false;
@@ -282,18 +280,18 @@ public class EnemyController : MonoBehaviour {
 				player.GetComponent<PlayerController>().currentTarget = targetPoint;
 				// player.GetComponent<PlayerController>().lightMovement = false;
 			}
-			if (enemyAnimator.GetBool("isAttacking") == true){
-					enemyAnimator.SetBool("isAttacking", false);
+			if (enemyAnimator.GetBool(IsAttacking) == true){
+					enemyAnimator.SetBool(IsAttacking, false);
 			}
 			break;
 
-            case enemyState.attack:
+            case EnemyState.attack:
 				lookingForPlayer = false;
 				roaming = false;
 				alerted = false;
                 //attack player
-				if (enemyAnimator.GetBool("isAttacking") == false){
-					enemyAnimator.SetBool("isAttacking", true);
+				if (enemyAnimator.GetBool(IsAttacking) == false){
+					enemyAnimator.SetBool(IsAttacking, true);
 				}
 				meshAgent.SetDestination(player.transform.position);
 				FaceTarget(player);
@@ -301,7 +299,7 @@ public class EnemyController : MonoBehaviour {
 				// player.GetComponent<PlayerController>().lightMovement = false;
 			break;
 
-            case enemyState.dodge:
+            case EnemyState.dodge:
                 //dodge player attack
 			break;
         }
@@ -325,15 +323,14 @@ public class EnemyController : MonoBehaviour {
 		rangeChecks = Physics.OverlapSphere(transform.position, viewRadius, targetMask);
 
 		if (rangeChecks.Length !=0){
-			Transform target = rangeChecks[0].transform;
-			Vector3 directionToTarget = (target.position - transform.position).normalized;
+			var target = rangeChecks[0].transform;
+			var directionToTarget = (target.position - transform.position).normalized;
 
-			if (Vector3.Angle(transform.forward, directionToTarget) < fovAngle /2){
-				float distanceToTarget = Vector3.Distance(transform.position, target.position);
-				if(!Physics.Raycast(transform.position, directionToTarget, distanceToTarget, obstructionMask))
-					canSeePlayer = true;
-				else
-					canSeePlayer = false;
+			if (Vector3.Angle(transform.forward, directionToTarget) < fovAngle /2)
+			{
+				var position = transform.position;
+				var distanceToTarget = Vector3.Distance(position, target.position);
+				canSeePlayer = !Physics.Raycast(position, directionToTarget, distanceToTarget, obstructionMask);
 			}
 			else 
 				canSeePlayer = false;
@@ -342,7 +339,7 @@ public class EnemyController : MonoBehaviour {
 			canSeePlayer = false;
 	}
 	private IEnumerator AlertTimer(float duration){
-		WaitForSecondsRealtime wait = new WaitForSecondsRealtime(duration);
+		var wait = new WaitForSecondsRealtime(duration);
 		yield return wait;
 		alerted = true;
 		isPlayerNear = true;
@@ -356,46 +353,47 @@ public class EnemyController : MonoBehaviour {
 
 	private IEnumerator LookWait(float duration){
 		//print ("Enter");
-		WaitForSecondsRealtime wait = new WaitForSecondsRealtime(duration);
+		var wait = new WaitForSecondsRealtime(duration);
 		yield return wait;
 		//print ("Exit after " + duration + " seconds.");
 		RandomizePoint();
-		behaviorState = enemyState.roaming;
+		behaviorState = EnemyState.roaming;
 	}
 
-	private void RandomizePoint(){
-		
+	private void RandomizePoint()
+	{
+		while (true)
+		{
+			randomCircle = new Vector3(Random.insideUnitCircle.x * viewRadius, 0, (Random.insideUnitCircle.y) * viewRadius);
+			var point = randomPointObject.transform.position + randomCircle;
+			var walkMask = 1 << NavMesh.GetAreaFromName("Walkable");
+			NavMeshHit hit;
+			if (NavMesh.SamplePosition(point, out hit, 0.15f, walkMask)) //is the point within 0.25 units of a NavMesh surface
+			{
+				onMesh = true;
+				randomPointObject.transform.position = point;
+			}
+			else
+			{
+				onMesh = false;
+				continue;
+			}
 
-		randomCircle = new Vector3(Random.insideUnitCircle.x * viewRadius, 0, (Random.insideUnitCircle.y) * viewRadius);
-		Vector3 point = randomPointObject.transform.position + randomCircle;
-		int walkMask = 1 << NavMesh.GetAreaFromName("Walkable");
-		NavMeshHit hit;
-		if (NavMesh.SamplePosition(point, out hit, 0.15f, walkMask)) //is the point within 0.25 units of a NavMesh surface
-		{
-			onMesh = true;
-			randomPointObject.transform.position = point;
-		}
-		else
-		{
-			onMesh = false;
-			RandomizePoint(); //regenerate the waypoint because it's off/too far from the navmesh
+			break;
 		}
 	}
+
 	private void RoamAround(){
 		lookingForPlayer = false;
 		roaming = true;
 		meshAgent.SetDestination(randomPointObject.transform.position);
 		FaceTarget(randomPointObject);
 		// // Check if we've reached the destination
-		if (!meshAgent.pathPending)
+		if (meshAgent.pathPending) return;
+		if (!(meshAgent.remainingDistance <= meshAgent.stoppingDistance)) return;
+		if (meshAgent.velocity.sqrMagnitude <= 0.025f)
 		{
-			if (meshAgent.remainingDistance <= meshAgent.stoppingDistance)
-			{
-				if (meshAgent.velocity.sqrMagnitude <= 0.025f)
-				{
-					behaviorState = enemyState.looking;
-				}
-			}
+			behaviorState = EnemyState.looking;
 		}
 	}
 }

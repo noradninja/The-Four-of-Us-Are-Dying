@@ -54,18 +54,17 @@ private  string joystick1 = "joystick 1 button ";
 	void Start () {
 		//set the color of the initially selected slot
 		setColor();
-		if (Application.isEditor){
-        //because the DS3 registers the buttons differently in Windows
-            TRIANGLE = 0;
-            CIRCLE = 1;
-            CROSS = 2;
-            SQUARE = 3;
-            START = 8;
-            SELECT = 9;
-            //these are mapped to L3/R3 because the fucking dpad is a set of axes in Windows ఠ ͟ಠ
-            UP = 10;
-            DOWN = 11;
-        }
+		if (!Application.isEditor) return;
+		//because the DS3 registers the buttons differently in Windows
+		TRIANGLE = 0;
+		CIRCLE = 1;
+		CROSS = 2;
+		SQUARE = 3;
+		START = 8;
+		SELECT = 9;
+		//these are mapped to L3/R3 because the fucking dpad is a set of axes in Windows ఠ ͟ಠ
+		UP = 10;
+		DOWN = 11;
 		//EventManager.GetComponent<SaveSerial>();
 		//clipList = audioManager.GetComponent<AudioManager>().SFXList;
 	}
@@ -85,13 +84,13 @@ void Update () {
 		}
 		if (dialogCanvas.alpha == 0){
 				dialogEnabled = false;
-				saveManager.GetComponent<LoadManager_Inputs>().setColor();
+				saveManager.GetComponent<LoadManager_Inputs>().SetColor();
 				setColor();
-			}
+		}
 		//change button color when we choose an option
 		if (saverCanvas.alpha > 0){
-				selectColor();
-				saverEnabled = true;	
+			selectColor();
+			saverEnabled = true;	
 		}
 		if (optionCanvas.alpha > 0){
 			selectColor();
@@ -102,7 +101,7 @@ void Update () {
 		}
 		if ((PauseManager.isPaused) == true){
 			PlayerController.delayButton = true;
-			if (Input.GetKeyDown (joystick1 + CIRCLE) && !dialogEnabled && !delayTimer){
+			if (Input.GetKeyDown ($"{joystick1}{CIRCLE}") && !dialogEnabled && !delayTimer){
 				if (optionEnabled){
 					StartCoroutine(FadeScreen(1, 0 , 0.0F));
 					selectedCanvas = mainMenuCanvas;
@@ -118,75 +117,76 @@ void Update () {
 				if (mainMenuEnabled){
 					StartCoroutine(FadeScreen(1, 0 , 0.5F));
 					PauseManager.isPaused = false;
-					StartCoroutine(PlayerController.buttonDelayTimer(0.5f));
+					StartCoroutine(PlayerController.ButtonDelayTimer(0.5f));
 				}
 				
 			}
 			if (optionEnabled == false && saverEnabled == false && dialogEnabled == false){
 				mainMenuEnabled = true;
 				timer = timer += 0.01f;
-				if (timer > delay){
-					//Decrement slot by -1 if you press up
-					if (Input.GetKeyDown (joystick1 + UP)){
-						//audioSource.PlayOneShot(clipList[2]);
-						if (selectedSlot > 1){
-							//set slot to 2 if you are at slot 1 to wrap selection
-							selectedSlot -= 1;
-						}
-						//decrement the slot for each up press
-						else if (selectedSlot == 1){
-							//set slot to 1 if you are at slot 2 to wrap selection
-							selectedSlot = 3;
-						}
-						//set the color of the selected slot
-						setColor();
-						//animateButtons();
+				if (!(timer > delay)) return;
+				//Decrement slot by -1 if you press up
+				if (Input.GetKeyDown ($"{joystick1}{UP}")){
+					//audioSource.PlayOneShot(clipList[2]);
+					if (selectedSlot > 1){
+						//set slot to 2 if you are at slot 1 to wrap selection
+						selectedSlot -= 1;
 					}
-					
-					//Increment slot by +1 if you press down
-					if (Input.GetKeyDown (joystick1 + DOWN)){
-						//audioSource.PlayOneShot(clipList[3]);
-						if (selectedSlot < 3){
-							//set slot to 1 if you are at slot 2 to wrap selection
-							selectedSlot += 1;
-						}
-						//increment the slot by 1 for each down press
-						else if (selectedSlot == 3){
-							//set slot to 1 if you are at slot 2 to wrap selection
-							selectedSlot = 1;
-						}
-						//set the color of the selected slot
-						setColor();
-						//animateButtons();
+					//decrement the slot for each up press
+					else if (selectedSlot == 1){
+						//set slot to 1 if you are at slot 2 to wrap selection
+						selectedSlot = 3;
 					}
+					//set the color of the selected slot
+					setColor();
+					//animateButtons();
+				}
 					
-					if (Input.GetKeyDown (joystick1 + CROSS) && saverEnabled == false && optionEnabled == false && dialogEnabled == false){
+				//Increment slot by +1 if you press down
+				if (Input.GetKeyDown ($"{joystick1}{DOWN}")){
+					//audioSource.PlayOneShot(clipList[3]);
+					if (selectedSlot < 3){
+						//set slot to 1 if you are at slot 2 to wrap selection
+						selectedSlot += 1;
+					}
+					//increment the slot by 1 for each down press
+					else if (selectedSlot == 3){
+						//set slot to 1 if you are at slot 2 to wrap selection
+						selectedSlot = 1;
+					}
+					//set the color of the selected slot
+					setColor();
+					//animateButtons();
+				}
+					
+				if (Input.GetKeyDown ($"{joystick1}{CROSS}") && saverEnabled == false && optionEnabled == false && dialogEnabled == false){
 	
-						if (selectedSlot == 1){
+					switch (selectedSlot)
+					{
+						case 1:
 							selectedCanvas = faderCanvas;
 							timer = 0.0f;
 							StartCoroutine(FadeScreen(0, 1 , 0.25F));
-						}
-						if (selectedSlot == 2){
+							break;
+						case 2:
 							//animateButtons();
 							selectedCanvas = saverCanvas;
 							timer = 0.0f;
 							StartCoroutine(FadeScreen(0, 1 , 0.0F));
-						}
-						if (selectedSlot == 3){
+							break;
+						case 3:
 							//animateButtons();
 							selectedCanvas = optionCanvas;
 							timer = 0.0f;
 							StartCoroutine(FadeScreen(0, 1 , 0.0F));
-						}
-						
+							break;
 					}
-
-				}	
+						
+				}
 			}
 			else mainMenuEnabled = false;
 		}
-	}		
+}		
 
 
 //this method checks which slot is currently selected and changes the colors of all the slots to give you a hilight 
@@ -236,27 +236,31 @@ void Update () {
 			slot3.color = baseColor;
 		}
 	}
-		void animateButtons(){
-		if (selectedSlot == 2){
-			currentSelection = GameObject.Find("Options");
-			previousSelection = GameObject.Find("New_Game");
-			// anim = currentSelection.GetComponent<Animator>();
-			// anim.SetTrigger("MakeBounce");
-			// previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
-		}
-			// else anim.SetTrigger("SteadyState");
-		
-		if (selectedSlot == 1){
-			currentSelection = GameObject.Find("New_Game");
-			previousSelection = GameObject.Find("Options");
-			// anim = currentSelection.GetComponent<Animator>();
-			// anim.SetTrigger("MakeBounce");
-			// previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
-		}
-		// else anim.SetTrigger("SteadyState");
-	}
+		void animateButtons()
+		{
+			switch (selectedSlot)
+			{
+				case 2:
+					currentSelection = GameObject.Find("Options");
+					previousSelection = GameObject.Find("New_Game");
+					// anim = currentSelection.GetComponent<Animator>();
+					// anim.SetTrigger("MakeBounce");
+					// previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
+					break;
+				// else anim.SetTrigger("SteadyState");
+				case 1:
+					currentSelection = GameObject.Find("New_Game");
+					previousSelection = GameObject.Find("Options");
+					// anim = currentSelection.GetComponent<Animator>();
+					// anim.SetTrigger("MakeBounce");
+					// previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
+					break;
+			}
 
-	public IEnumerator FadeScreen(float startValue, float targetValue, float duration) {
+			// else anim.SetTrigger("SteadyState");
+		}
+
+		private IEnumerator FadeScreen(float startValue, float targetValue, float duration) {
         float fadeTime = 0;
 		//fade out the loadscreen canvas group
         while (fadeTime < duration)

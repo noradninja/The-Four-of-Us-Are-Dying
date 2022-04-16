@@ -49,6 +49,8 @@ private const string joystick1 = "joystick 1 button ";
 	public GameObject previousSelection;
 	public Animator anim;
 	public bool optionEnabled;
+	private static readonly int MakeBounce = Animator.StringToHash("MakeBounce");
+	private static readonly int SteadyState = Animator.StringToHash("SteadyState");
 
 	// Use this for initialization
 	void Start () {
@@ -92,113 +94,132 @@ private const string joystick1 = "joystick 1 button ";
 			timer = timer += 0.01f;
 		if (timer > delay){
 			//Decrement slot by -1 if you press up
-			if (Input.GetKeyDown (joystick1 + UP)){
-				//audioSource.PlayOneShot(clipList[2]);
-				if (selectedSlot == 1){
-					previousSlot = selectedSlot;
-					//set slot to 3 if you are at slot 1 to wrap selection
-					selectedSlot = 3;
+			if (Input.GetKeyDown ($"{joystick1}{UP}"))
+			{
+				switch (selectedSlot)
+				{
+					//audioSource.PlayOneShot(clipList[2]);
+					case 1:
+						previousSlot = selectedSlot;
+						//set slot to 3 if you are at slot 1 to wrap selection
+						selectedSlot = 3;
+						break;
+					case 2:
+						previousSlot = selectedSlot;
+						//set slot to 3 if you are at slot 1 to wrap selection
+						selectedSlot = 1;
+						break;
+					case 3:
+						previousSlot = selectedSlot;
+						//set slot to 3 if you are at slot 1 to wrap selection
+						selectedSlot = 2;
+						break;
 				}
-				else if (selectedSlot == 2){
-					previousSlot = selectedSlot;
-					//set slot to 3 if you are at slot 1 to wrap selection
-					selectedSlot = 1;
-				}
-				else if (selectedSlot == 3){
-					previousSlot = selectedSlot;
-					//set slot to 3 if you are at slot 1 to wrap selection
-					selectedSlot = 2;
-				}
+
 				//set the color of the selected slot
 				setColor();
 				//animateButtons();
 			}
 			
 			//Increment slot by +1 if you press down
-			if (Input.GetKeyDown (joystick1 + DOWN)){
-				//audioSource.PlayOneShot(clipList[3]);
-				if (selectedSlot == 3){
-					//set slot to 1 if you are at slot 3 to wrap selection
-					previousSlot = selectedSlot;
-					selectedSlot = 1;
+			if (Input.GetKeyDown ($"{joystick1}{DOWN}"))
+			{
+				switch (selectedSlot)
+				{
+					//audioSource.PlayOneShot(clipList[3]);
+					case 3:
+						//set slot to 1 if you are at slot 3 to wrap selection
+						previousSlot = selectedSlot;
+						selectedSlot = 1;
+						break;
+					case 2:
+						//set slot to 1 if you are at slot 3 to wrap selection
+						previousSlot = selectedSlot;
+						selectedSlot = 3;
+						break;
+					case 1:
+						//set slot to 1 if you are at slot 3 to wrap selection
+						previousSlot = selectedSlot;
+						selectedSlot = 2;
+						break;
 				}
-				else if (selectedSlot == 2){
-					//set slot to 1 if you are at slot 3 to wrap selection
-					previousSlot = selectedSlot;
-					selectedSlot = 3;
-				}
-				else if (selectedSlot == 1){
-					//set slot to 1 if you are at slot 3 to wrap selection
-					previousSlot = selectedSlot;
-					selectedSlot = 2;
-				}
-			
+
 				//set the color of the selected slot
 				setColor();
 				//animateButtons();
 			}
 
 			}
-			if (Input.GetKeyDown (joystick1 + LEFT)){
-				//audioSource.PlayOneShot(clipList[3]);
-				if (selectedSlot == 1){
-					BGMLevel.fillAmount -= 0.1f;
-					BGMToSave = BGMLevel.fillAmount;
-					bgmSource.volume = BGMLevel.fillAmount;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					PlayerPrefs.SetFloat("SavedBGM", BGMToSave);
+			if (Input.GetKeyDown ($"{joystick1}{LEFT}")){
+				switch (selectedSlot)
+				{
+					//audioSource.PlayOneShot(clipList[3]);
+					case 1:
+						BGMLevel.fillAmount -= 0.1f;
+						BGMToSave = BGMLevel.fillAmount;
+						bgmSource.volume = BGMLevel.fillAmount;
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedBGM", BGMToSave);
+						break;
+					case 2:
+					{
+						SFXLevel.fillAmount -= 0.1f;
+						SFXToSave = SFXLevel.fillAmount;
+						sfxSource.volume = SFXLevel.fillAmount;
+						if (SceneManager.GetActiveScene().name != "Title"){
+							ambientSource.volume = SFXLevel.fillAmount;
+							thunderStormSource.volume = SFXLevel.fillAmount * 0.75f;
+							rainSource.volume = SFXLevel.fillAmount * 0.65f;
+						}
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
+						break;
+					}
+					case 3:
+					{
+						if (sensitivity > 0.05f){
+							sensitivityLevel.fillAmount -= 0.05f;
+						} 
+						sensitivity = sensitivityLevel.fillAmount;
+						SensitivityToSave = sensitivityLevel.fillAmount;
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
+						break;
+					}
 				}
-				if (selectedSlot == 2){
-					SFXLevel.fillAmount -= 0.1f;
-					SFXToSave = SFXLevel.fillAmount;
-					sfxSource.volume = SFXLevel.fillAmount;
-					if (SceneManager.GetActiveScene().name != "Title"){
+
+				PlayerPrefs.Save();
+			}
+			if (Input.GetKeyDown ($"{joystick1}{RIGHT}")){
+				switch (selectedSlot)
+				{
+					//audioSource.PlayOneShot(clipList[2]);
+					case 1:
+						BGMLevel.fillAmount += 0.1f;
+						bgmSource.volume = BGMLevel.fillAmount;
+						BGMToSave = BGMLevel.fillAmount;
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedBGM", BGMToSave);
+						break;
+					case 2:
+						SFXLevel.fillAmount += 0.1f;
+						SFXToSave = SFXLevel.fillAmount;
+						sfxSource.volume = SFXLevel.fillAmount;
 						ambientSource.volume = SFXLevel.fillAmount;
 						thunderStormSource.volume = SFXLevel.fillAmount * 0.75f;
 						rainSource.volume = SFXLevel.fillAmount * 0.65f;
-					}
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
+						break;
+					case 3:
+						sensitivityLevel.fillAmount += 0.05f;
+						sensitivity = sensitivityLevel.fillAmount;
+						SensitivityToSave = sensitivityLevel.fillAmount*1.5f;
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
+						break;
 				}
-				if (selectedSlot == 3){
-					if (sensitivity > 0.05f){
-						sensitivityLevel.fillAmount -= 0.05f;
-					} 
-					sensitivity = sensitivityLevel.fillAmount;
-					SensitivityToSave = sensitivityLevel.fillAmount;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
-					
-				}
-				PlayerPrefs.Save();
-			}
-			if (Input.GetKeyDown (joystick1 + RIGHT)){
-				//audioSource.PlayOneShot(clipList[2]);
-				if (selectedSlot == 1){
-					BGMLevel.fillAmount += 0.1f;
-					bgmSource.volume = BGMLevel.fillAmount;
-					BGMToSave = BGMLevel.fillAmount;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					PlayerPrefs.SetFloat("SavedBGM", BGMToSave);
-					
-				}
-				if (selectedSlot == 2){
-					SFXLevel.fillAmount += 0.1f;
-					SFXToSave = SFXLevel.fillAmount;
-					sfxSource.volume = SFXLevel.fillAmount;
-					ambientSource.volume = SFXLevel.fillAmount;
-					thunderStormSource.volume = SFXLevel.fillAmount * 0.75f;
-					rainSource.volume = SFXLevel.fillAmount * 0.65f;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
-				}
-				if (selectedSlot == 3){
-					sensitivityLevel.fillAmount += 0.05f;
-					sensitivity = sensitivityLevel.fillAmount;
-					SensitivityToSave = sensitivityLevel.fillAmount*1.5f;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
-				}
+
 				PlayerPrefs.Save();
 			}	
 		}
@@ -207,45 +228,51 @@ private const string joystick1 = "joystick 1 button ";
 
 //this method checks which slot is currently selected and changes the colors of all the slots to give you a hilight 
 //on the selected slot
-	void setColor(){
-		
-		if (selectedSlot==1){
-			slot1.color = hilightColor;
-			slot2.color = baseColor;
-			slot3.color = baseColor;
-		}
-		if (selectedSlot==2){
-			slot1.color = baseColor;
-			slot2.color = hilightColor;
-			slot3.color = baseColor;
-		}
-		else if (selectedSlot==3){
-			slot1.color = baseColor;
-			slot2.color = baseColor;
-			slot3.color = hilightColor;
+	void setColor()
+	{
+		switch (selectedSlot)
+		{
+			case 1:
+				slot1.color = hilightColor;
+				slot2.color = baseColor;
+				slot3.color = baseColor;
+				break;
+			case 2:
+				slot1.color = baseColor;
+				slot2.color = hilightColor;
+				slot3.color = baseColor;
+				break;
+			case 3:
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				slot3.color = hilightColor;
+				break;
 		}
 	}
 	void animateButtons(){
-		if (selectedSlot == 1){
-			currentSelection = GameObject.Find("Item_1");
-			previousSelection = GameObject.Find("Item_" + previousSlot);
-			anim = currentSelection.GetComponent<Animator>();
-			anim.SetTrigger("MakeBounce");
-			previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
+		switch (selectedSlot)
+		{
+			case 1:
+				currentSelection = GameObject.Find("Item_1");
+				previousSelection = GameObject.Find("Item_" + previousSlot);
+				anim = currentSelection.GetComponent<Animator>();
+				anim.SetTrigger(MakeBounce);
+				previousSelection.GetComponent<Animator>().SetTrigger(SteadyState);
+				break;
+			case 2:
+				currentSelection = GameObject.Find("Item_2");
+				previousSelection = GameObject.Find("Item_" + previousSlot);
+				anim = currentSelection.GetComponent<Animator>();
+				anim.SetTrigger(MakeBounce);
+				previousSelection.GetComponent<Animator>().SetTrigger(SteadyState);
+				break;
+			case 3:
+				currentSelection = GameObject.Find("Item_3");
+				previousSelection = GameObject.Find("Item_" + previousSlot);
+				anim = currentSelection.GetComponent<Animator>();
+				anim.SetTrigger(MakeBounce);
+				previousSelection.GetComponent<Animator>().SetTrigger(SteadyState);
+				break;
 		}
-		if (selectedSlot == 2){
-			currentSelection = GameObject.Find("Item_2");
-			previousSelection = GameObject.Find("Item_" + previousSlot);
-			anim = currentSelection.GetComponent<Animator>();
-			anim.SetTrigger("MakeBounce");
-			previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
-		}
-		if (selectedSlot == 3){
-			currentSelection = GameObject.Find("Item_3");
-			previousSelection = GameObject.Find("Item_" + previousSlot);
-			anim = currentSelection.GetComponent<Animator>();
-			anim.SetTrigger("MakeBounce");
-			previousSelection.GetComponent<Animator>().SetTrigger("SteadyState");
-		}	
 	}
 }

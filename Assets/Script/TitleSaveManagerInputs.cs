@@ -61,20 +61,11 @@ public class TitleSaveManagerInputs : MonoBehaviour {
 		//EventManager.GetComponent<SaveSerial>();
 		//clipList = audioManager.GetComponent<AudioManager>().SFXList;
 		//if we have saved before we stored a short date/time, get those to label slots in loader
-			if (PlayerPrefs.HasKey("Slot1")){
-			slot1Text.text = PlayerPrefs.GetString("Slot1");
-			}
-			else slot1Text.text = slot1String;
+			slot1Text.text = PlayerPrefs.HasKey("Slot1") ? PlayerPrefs.GetString("Slot1") : slot1String;
 
-			if (PlayerPrefs.HasKey("Slot2")){
-			slot2Text.text = PlayerPrefs.GetString("Slot2");
-			}
-			else slot2Text.text = slot2String;
+			slot2Text.text = PlayerPrefs.HasKey("Slot2") ? PlayerPrefs.GetString("Slot2") : slot2String;
 
-			if (PlayerPrefs.HasKey("Slot3")){
-			slot3Text.text = PlayerPrefs.GetString("Slot3");
-			}
-			else slot3Text.text = slot3String;
+			slot3Text.text = PlayerPrefs.HasKey("Slot3") ? PlayerPrefs.GetString("Slot3") : slot3String;
 	}
 	
 	// Update is called once per frame
@@ -82,152 +73,168 @@ public class TitleSaveManagerInputs : MonoBehaviour {
 		if (menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false ){
 			menuManager.GetComponent<StartMenuManagerInputs>().delayTimer = false;
 		}
-		if ((menuManager.GetComponent<StartMenuManagerInputs>().loaderEnabled == true)){
+
+		if ((menuManager.GetComponent<StartMenuManagerInputs>().loaderEnabled != true)) return;
 		timer = timer += 0.01f;
-		if (timer > delay){
-			if (selectedSlot == 1){
-			currentSelection = GameObject.Find("Slot_1");
+		if (!(timer > delay)) return;
+		switch (selectedSlot)
+		{
+			case 1:
+				currentSelection = GameObject.Find("Slot_1");
+				break;
+			case 2:
+				currentSelection = GameObject.Find("Slot_2");
+				break;
 		}
-		if (selectedSlot == 2){
-			currentSelection = GameObject.Find("Slot_2");
-		}
+
 		if (selectedSlot != 1 && selectedSlot !=2){
 			currentSelection = GameObject.Find("Slot_3");
 		}	
-			//Decrement slot by -1 if you press up
-			if (Input.GetKeyDown (joystick1 + UP) && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
-				//audioSource.PlayOneShot(clipList[2]);
-				if (selectedSlot == 1){
-					//set slot to 3 if you are at slot 1 to wrap selection
-					selectedSlot = 3;
-				}
-				//decrement the slot for each up press
-				else selectedSlot -=1;
-				//set the color of the selected slot
-				setColor();
-				//animateButtons();
+		//Decrement slot by -1 if you press up
+		if (Input.GetKeyDown ($"{joystick1}{UP}") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
+			//audioSource.PlayOneShot(clipList[2]);
+			if (selectedSlot == 1){
+				//set slot to 3 if you are at slot 1 to wrap selection
+				selectedSlot = 3;
 			}
+			//decrement the slot for each up press
+			else selectedSlot -=1;
+			//set the color of the selected slot
+			setColor();
+			//animateButtons();
+		}
 			
-			//Increment slot by +1 if you press down
-			if (Input.GetKeyDown (joystick1 + DOWN) && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
-				//audioSource.PlayOneShot(clipList[3]);
-				if (selectedSlot == 3){
-					//set slot to 1 if you are at slot 3 to wrap selection
-					selectedSlot = 1;
-				}
-				//increment the slot by 1 for each down press
-				else selectedSlot +=1;
-				//set the color of the selected slot
-				setColor();
-				//animateButtons();
+		//Increment slot by +1 if you press down
+		if (Input.GetKeyDown ($"{joystick1}{DOWN}") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
+			//audioSource.PlayOneShot(clipList[3]);
+			if (selectedSlot == 3){
+				//set slot to 1 if you are at slot 3 to wrap selection
+				selectedSlot = 1;
 			}
-			//here we are checking to see if the loader dialog is up, and if the selected slot has data- if the text for the slot is "No Data" we won't pull up the confirm dialog
-			if (Input.GetKeyDown (joystick1 + CROSS) && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false && currentSelection.transform.GetChild(0).GetComponent<Text>().text != "No Data"){
-				setLoadedColor();
-				loadDialogGroup.alpha = 1;
-				//anim. =GameObject.Find ("Confirmation_Load_Dialog").GetComponent<Animation>();
-				//anim.PLay("Menu_Bounce_Legacy");
-				menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled= true;
-				StartCoroutine(DialogHandler());
-				//audioSource.PlayOneShot(clipList[0]);
-				PauseManager.isPaused = true;
+			//increment the slot by 1 for each down press
+			else selectedSlot +=1;
+			//set the color of the selected slot
+			setColor();
+			//animateButtons();
+		}
+		//here we are checking to see if the loader dialog is up, and if the selected slot has data- if the text for the slot is "No Data" we won't pull up the confirm dialog
+		if (Input.GetKeyDown ($"{joystick1}{CROSS}") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false && currentSelection.transform.GetChild(0).GetComponent<Text>().text != "No Data"){
+			setLoadedColor();
+			loadDialogGroup.alpha = 1;
+			//anim. =GameObject.Find ("Confirmation_Load_Dialog").GetComponent<Animation>();
+			//anim.PLay("Menu_Bounce_Legacy");
+			menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled= true;
+			StartCoroutine(DialogHandler());
+			//audioSource.PlayOneShot(clipList[0]);
+			PauseManager.isPaused = true;
+		}
+		if (Input.GetKeyDown ($"{joystick1}{CROSS}") ){
+			//play an error sound if we try to load data from an empty slot
+			if (currentSelection.transform.GetChild(0).GetComponent<Text>().text == "No Data"){
+				//audioSource.PlayOneShot(clipList[12]);
 			}
-			if (Input.GetKeyDown (joystick1 + CROSS) ){
-				//play an error sound if we try to load data from an empty slot
-				if (currentSelection.transform.GetChild(0).GetComponent<Text>().text == "No Data"){
-					//audioSource.PlayOneShot(clipList[12]);
-				}
-				if (currentSelection.transform.GetChild(0).GetComponent<Text>().text != "No Data"  && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == true){
+			if (currentSelection.transform.GetChild(0).GetComponent<Text>().text != "No Data"  && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == true){
 				//Attempt to load file
 				PauseManager.isPaused = false;
 				BroadcastMessage("Load");
-				}
-				//Load the stage saved in the file if hasLoaded is true
-				if (EventManager.GetComponent<SaveSerial>().hasLoaded == true && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == true && menuManager.GetComponent<StartMenuManagerInputs>().delayTimer == true){
-					StartCoroutine(StartLoad());
-					setColor();
-					menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled = false;
-					menuManager.GetComponent<StartMenuManagerInputs>().delayTimer = false;
-					loadDialogGroup.alpha = 0;
-					//audioSource.PlayOneShot(clipList[0]);
-				}
 			}
-			//check if we are actually loading a level to avoid spamming the console with nullrefs 
-			if (loading==true){
-				//Store the load progress
+			//Load the stage saved in the file if hasLoaded is true
+			if (EventManager.GetComponent<SaveSerial>().hasLoaded == true && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == true && menuManager.GetComponent<StartMenuManagerInputs>().delayTimer == true){
+				StartCoroutine(StartLoad());
+				setColor();
+				menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled = false;
+				menuManager.GetComponent<StartMenuManagerInputs>().delayTimer = false;
+				loadDialogGroup.alpha = 0;
+				//audioSource.PlayOneShot(clipList[0]);
+			}
+		}
+		//check if we are actually loading a level to avoid spamming the console with nullrefs 
+		if (loading==true){
+			//Store the load progress
 			loadProgress = loadingOperation.progress;
-			}
-		}	
+		}
 	}
-}
 
 //this method checks which slot is currently selected and changes the colors of all the slots to give you a hilight 
 //on the selected slot
-	public void setColor(){
-		
-		if (selectedSlot==1){
-			slot1.color = hilightColor;
-			slot2.color = baseColor;
-			slot3.color = baseColor;
-		}
-		else if (selectedSlot==2){
-			slot1.color = baseColor;
-			slot2.color = hilightColor;
-			slot3.color = baseColor;
-		}
-		else if (selectedSlot==3){
-			slot1.color = baseColor;
-			slot2.color = baseColor;
-			slot3.color = hilightColor;
+	public void setColor()
+	{
+		switch (selectedSlot)
+		{
+			case 1:
+				slot1.color = hilightColor;
+				slot2.color = baseColor;
+				slot3.color = baseColor;
+				break;
+			case 2:
+				slot1.color = baseColor;
+				slot2.color = hilightColor;
+				slot3.color = baseColor;
+				break;
+			case 3:
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				slot3.color = hilightColor;
+				break;
 		}
 	}
-	void setLoadedColor(){
-		
-		if (selectedSlot==1){
-			slot1.color = loadedColor;
-			slot2.color = baseColor;
-			slot3.color = baseColor;
+	void setLoadedColor()
+	{
+		switch (selectedSlot)
+		{
+			case 1:
+				slot1.color = loadedColor;
+				slot2.color = baseColor;
+				slot3.color = baseColor;
+				break;
+			case 2:
+				slot1.color = baseColor;
+				slot2.color = loadedColor;
+				slot3.color = baseColor;
+				break;
+			case 3:
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				slot3.color = loadedColor;
+				break;
 		}
-		else if (selectedSlot==2){
-			slot1.color = baseColor;
-			slot2.color = loadedColor;
-			slot3.color = baseColor;
-		}
-		else if (selectedSlot==3){
-			slot1.color = baseColor;
-			slot2.color = baseColor;
-			slot3.color = loadedColor;
-		}	
 	}
-	void setSavedColor(){
-		
-		if (selectedSlot==1){
-			slot1.color = savedColor;
-			slot2.color = baseColor;
-			slot3.color = baseColor;
-		}
-		else if (selectedSlot==2){
-			slot1.color = baseColor;
-			slot2.color = savedColor;
-			slot3.color = baseColor;
-		}
-		else if (selectedSlot==3){
-			slot1.color = baseColor;
-			slot2.color = baseColor;
-			slot3.color = savedColor;
+	void setSavedColor()
+	{
+		switch (selectedSlot)
+		{
+			case 1:
+				slot1.color = savedColor;
+				slot2.color = baseColor;
+				slot3.color = baseColor;
+				break;
+			case 2:
+				slot1.color = baseColor;
+				slot2.color = savedColor;
+				slot3.color = baseColor;
+				break;
+			case 3:
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				slot3.color = savedColor;
+				break;
 		}
 	}
 	void animateButtons(){
-		if (selectedSlot == 1){
-			currentSelection = GameObject.Find("Slot_1");
-			//anim. =currentSelection.GetComponent<Animation>();
-			//anim.PLay("Menu_Bounce_Legacy");
+		switch (selectedSlot)
+		{
+			case 1:
+				currentSelection = GameObject.Find("Slot_1");
+				//anim. =currentSelection.GetComponent<Animation>();
+				//anim.PLay("Menu_Bounce_Legacy");
+				break;
+			case 2:
+				currentSelection = GameObject.Find("Slot_2");
+				//anim. =currentSelection.GetComponent<Animation>();
+				//anim.PLay("Menu_Bounce_Legacy");
+				break;
 		}
-		if (selectedSlot == 2){
-			currentSelection = GameObject.Find("Slot_2");
-			//anim. =currentSelection.GetComponent<Animation>();
-			//anim.PLay("Menu_Bounce_Legacy");
-		}
+
 		if (selectedSlot != 1 && selectedSlot !=2){
 			currentSelection = GameObject.Find("Slot_3");
 			//anim. =currentSelection.GetComponent<Animation>();

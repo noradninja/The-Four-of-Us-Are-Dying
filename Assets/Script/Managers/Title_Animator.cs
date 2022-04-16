@@ -23,32 +23,31 @@ public float fillDelay;
 	// Use this for initialization
 	void Start () {
 		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
-		StartCoroutine(delay(1, 0, 3.0f));
+		StartCoroutine(Delay(1, 0, 3.0f));
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		
-	}
-	IEnumerator delay(float startValue, float endValue, float duration){
-		float time = 0.0f;
+
+	private IEnumerator Delay(float startValue, float endValue, float duration){
+		var time = 0.0f;
 		
 		while (time < duration){
 			time += Time.deltaTime;
         	yield return null;
 		}
 		time = duration;
-		StartCoroutine(fade2(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay2));
+		StartCoroutine(Fade2(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay2));
 		while (time < duration + 0.75f){
 			time += Time.deltaTime;
         	yield return null;
 		}
 		time = duration+ 0.75f;
-		StartCoroutine(wipe(1, 0, fillDelay));
+		StartCoroutine(Wipe(1, 0, fillDelay));
 	}
-		IEnumerator wipe(float startValue, float endValue, float duration){
-		float time = 0.0f;
-		StartCoroutine(fade(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay));
+
+	private IEnumerator Wipe(float startValue, float endValue, float duration){
+		var time = 0.0f;
+		StartCoroutine(Fade(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay));
 		while (time < duration){
 			fillAmount = Mathf.Lerp (startValue, endValue, time/duration);
 			fillImage.fillAmount = fillAmount;
@@ -57,10 +56,11 @@ public float fillDelay;
 		}
 		fillImage.fillAmount = endValue;
 		fillImage.gameObject.SetActive(false);
-		StartCoroutine(fade3(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay3));	
+		StartCoroutine(Fade3(new Color(0,0,0,1),new Color (0,0,0,0) , fadeDelay3));	
 	}
-	IEnumerator fade(Color startValue, Color endValue, float duration){
-		float time = 0.0f;
+
+	private IEnumerator Fade(Color startValue, Color endValue, float duration){
+		var time = 0.0f;
 		while (time < duration){
 			fadeImage.color = Color.Lerp (startValue, endValue, time/duration);
 			time += Time.deltaTime;
@@ -69,8 +69,9 @@ public float fillDelay;
 		fadeImage.color = endValue;
 		fadeImage.gameObject.SetActive(false);
 	}
-	IEnumerator fade2(Color startValue, Color endValue, float duration){
-		float time = 0.0f;
+
+	private IEnumerator Fade2(Color startValue, Color endValue, float duration){
+		var time = 0.0f;
 		while (time < duration){
 			fadeImage2.color = Color.Lerp (startValue, endValue, time/duration);
 			time += Time.deltaTime;
@@ -79,8 +80,9 @@ public float fillDelay;
 		fadeImage2.color = endValue;
 		fadeImage2.gameObject.SetActive(false);
 	}
-	IEnumerator fade3(Color startValue, Color endValue, float duration){
-			float time = 0.0f;
+
+	private IEnumerator Fade3(Color startValue, Color endValue, float duration){
+			var time = 0.0f;
 			while (time < duration){
 				fadeImage3.color = Color.Lerp (startValue, endValue, time/duration);
 				time += Time.deltaTime;

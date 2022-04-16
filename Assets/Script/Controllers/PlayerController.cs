@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,15 +18,15 @@ public class PlayerController : MonoBehaviour
     }
    
     public CharacterController characterController;
-    public static bool hasFlashlight = false;
-    public static bool flashlightOff = true;
+    public static bool HasFlashlight = false;
+    public static bool FlashlightOff = true;
     public float health;
     public float speed = 3;
     public float stamina = 100f;
     public float rechargeDelay;
     public float stimCooldown = 0f;
     public GameObject staminaObject;
-    private float walkSpeed;
+    private float _walkSpeed;
     public Animator animator;
     
     // camera and rotation
@@ -62,15 +63,15 @@ public class PlayerController : MonoBehaviour
    
     public TextMeshProUGUI batteryText;
   
-    public GameObject SSAOScript;
-    public GameObject BokehScript;
+    [FormerlySerializedAs("SSAOScript")] public GameObject ssaoScript;
+    [FormerlySerializedAs("BokehScript")] public GameObject bokehScript;
     public GameObject enabledText;
     public float lerpRate = 1.0f;
  
     
     // gravity
-    private float gravity = 9.87f;
-    private float verticalSpeed = 0;
+    private readonly float gravity = 9.87f;
+    private float _verticalSpeed = 0;
 
     //private vars
     private  string VITA = "joystick button ";
@@ -120,16 +121,20 @@ public class PlayerController : MonoBehaviour
     public GameObject perfOverlay;
     public CanvasGroup UICanvasGroup;
     public float currentCharge;
-   
+    private static readonly int CrossFade = Shader.PropertyToID("_CrossFade");
+    private static readonly int IsRunning = Animator.StringToHash("isRunning");
+    private static readonly int IsWalking = Animator.StringToHash("isWalking");
+    private static readonly int IsIdle = Animator.StringToHash("isIdle");
+    private static readonly int IsGrab = Animator.StringToHash("isGrab");
+    private static readonly int PainValue = Shader.PropertyToID("_PainValue");
 
 
-    
-      private void Awake()
+    private void Awake()
     {
         PauseManager.isPaused = false;
         delayButton = false;
         if (Application.isEditor){
-        //because the DS3 registers the buttons differently in Windows
+            //because the DS3 registers the buttons differently in Windows
             TRIANGLE = 0;
             CIRCLE = 1;
             CROSS = 2;
@@ -148,17 +153,17 @@ public class PlayerController : MonoBehaviour
         //LODGroup.crossFadeAnimationDuration = 0.25f;
         animator.SetBool("isGrab", false);
         
-        cameraRig = Camera.transform.parent.transform; //get the transform of the righ the camera is a child to
-        walkSpeed = speed;
+        cameraRig = Camera.transform.parent.transform; //get the transform of the right the camera is a child to
+        _walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
         cooldownValue = stimCooldown;
-         if (SSAOScript.GetComponent<FastSSAO>().enabled == false){      
-            SSAOScript.GetComponent<FastSSAO>().enabled = true;
-            BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
+         if (ssaoScript.GetComponent<FastSSAO>().enabled == false){      
+            ssaoScript.GetComponent<FastSSAO>().enabled = true;
+            bokehScript.GetComponent<Kino.Bokeh>().enabled = true;
             // SSAOScript.GetComponent<SAI2x>().enabled = true;
-            SSAOScript.GetComponent<FXAA>().enabled = true;
-            SSAOScript.GetComponent<Crepuscular>().enabled = true;
-            SSAOScript.GetComponent<Kino.Fog>().enabled = true;
+            ssaoScript.GetComponent<FXAA>().enabled = true;
+            ssaoScript.GetComponent<Crepuscular>().enabled = true;
+            ssaoScript.GetComponent<Kino.Fog>().enabled = true;
             enabledText.GetComponent<Text>().color = Color.green;
             enabledText.GetComponent<Text>().text = ("Enabled");
          }
@@ -175,20 +180,21 @@ public class PlayerController : MonoBehaviour
     
     
         if (verticalMove != 0 || horizontalRotation !=0){
-        walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
             if (walkStart == 0f){   
-                StartCoroutine(walkLerp(0, 1,  lerpRate));
+                StartCoroutine(WalkLerp(0, 1,  lerpRate));
             }    
         }
         if (lightFocusing && currentTarget != null){
             if (currentTarget.GetComponentInParent<EnemyController>().isPlayerNear == true) lightMovement = false;
                  //rotate player
-        Vector3 dir = currentTarget.transform.position - transform.position;
+                 var position = currentTarget.transform.position;
+                 Vector3 dir = position - transform.position;
                 Quaternion lookRotation = Quaternion.LookRotation(dir);
                 Vector3 rotation = Quaternion.Lerp(transform.rotation, lookRotation, Time.deltaTime * 14f).eulerAngles;
                 transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
         //rotate flashlight
-         Vector3 lightdir = currentTarget.transform.position - lightRoot.transform.position;
+         Vector3 lightdir = position - lightRoot.transform.position;
                 Quaternion lightlookRotation = Quaternion.LookRotation(lightdir);
                 //lightRoot.transform.Rotate(0,-horizontalCamRotation*(lookSensitivity*2),verticalCamRotation*lookSensitivity);
                 Vector3 lightrotation = Quaternion.Lerp(lightRoot.transform.rotation, lightlookRotation, Time.deltaTime * 21f).eulerAngles;
@@ -204,17 +210,17 @@ public class PlayerController : MonoBehaviour
             flashlightDisabled = true;
             flashlightCharge = 0;
         }
-        if (!hasFlashlight) //no flashlight
+        if (!HasFlashlight) //no flashlight
         {   
             lightObject.SetActive(false);
             lightRig.SetActive(false);
         }
-        if (hasFlashlight && flashlightOff) //have flashlight but it's off
+        if (HasFlashlight && FlashlightOff) //have flashlight but it's off
         {
             lightObject.SetActive(true); 
             lightRig.SetActive(false);
         }
-        if (hasFlashlight && !flashlightOff) //have flashlight and it's on
+        if (HasFlashlight && !FlashlightOff) //have flashlight and it's on
         {
             lightObject.SetActive(true);
             lightRig.SetActive(true);
@@ -237,7 +243,7 @@ public class PlayerController : MonoBehaviour
                     PauseManager.isPaused = false;
             }
             delayButton = true;
-            StartCoroutine(buttonDelayTimer(0.5f));
+            StartCoroutine(ButtonDelayTimer(0.5f));
         }
 //select
         if (Input.GetKeyDown(VITA + SELECT))
@@ -251,7 +257,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown($"{VITA}{UP}") && InventoryManager.medCount > 0){  
             if (InventoryManager.playerHealth < 100){
                 InventoryManager.medCount -= 1;
-                healMe();
+                HealMe();
             }
         }
 //Stimutacs
@@ -261,27 +267,25 @@ public class PlayerController : MonoBehaviour
             staminaObject.GetComponent<Image>().fillAmount = 1.0f;
             isStimulant = true;
              //start stim cooldown timer
-            if (animator.GetBool("isRunning")){
+            if (animator.GetBool(IsRunning)){
                 speed = 5f;
             }
-            StartCoroutine(countdownStimulant(10, 0, stimCooldown));
-            StartCoroutine(walkLerp(0, 1,  lerpRate));
+            StartCoroutine(CountdownStimulant(10, 0, stimCooldown));
+            StartCoroutine(WalkLerp(0, 1,  lerpRate));
         }
         //toggle overlay
-        if (Input.GetKeyDown($"{VITA}{LEFT}") && !delayButton){
-            if (perfOverlay.activeSelf){
-                perfOverlay.SetActive(false);
-            }
-            else perfOverlay.SetActive(true);
+        if (Input.GetKeyDown($"{VITA}{LEFT}") && !delayButton)
+        {
+            perfOverlay.SetActive(!perfOverlay.activeSelf);
         }
 
         if (Input.GetKeyDown($"{VITA}{RIGHT}")){//} && !delayButton){
            //enable/disable SSAO and UI text
-            if (SSAOScript.GetComponent<FXAA>().enabled){
+            if (ssaoScript.GetComponent<FXAA>().enabled){
                 // SSAOScript.GetComponent<FastSSAO>().enabled = false;
                 // BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
                 // SSAOScript.GetComponent<Crepuscular>().enabled = false;
-                SSAOScript.GetComponent<FXAA>().enabled = false;
+                ssaoScript.GetComponent<FXAA>().enabled = false;
                 enabledText.GetComponent<Text>().color = Color.red;
                 enabledText.GetComponent<Text>().text = ("Disabled");
             }
@@ -289,60 +293,56 @@ public class PlayerController : MonoBehaviour
                 // SSAOScript.GetComponent<FastSSAO>().enabled = true;
                 // BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
                 // SSAOScript.GetComponent<Crepuscular>().enabled = true;
-                SSAOScript.GetComponent<FXAA>().enabled = true;
+                ssaoScript.GetComponent<FXAA>().enabled = true;
                 enabledText.GetComponent<Text>().color = Color.green;
                 enabledText.GetComponent<Text>().text = ("Enabled");
             }
-        //     if(SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution){
-        //         SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution = false;
-        //    } 
-        //    else SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution = true;
+            //     if(SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution){
+            //         SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution = false;
+            //    } 
+            //    else SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution = true;
         }
 
 ///////////////////////////Face Buttons//////////////////////////////////////
 
 //turn the flashlight on and off if we have it
-        if (Input.GetKeyDown($"{VITA}{TRIANGLE}")  && !delayButton && hasFlashlight && flashlightCharge > 0.05f && !Input.GetKey(VITA + LTRIG))
+        if (Input.GetKeyDown($"{VITA}{TRIANGLE}")  && !delayButton && HasFlashlight && flashlightCharge > 0.05f && !Input.GetKey(VITA + LTRIG))
         {   
-            if (flashlightOff){
-                flashlightOff = false;
-            }
-            else flashlightOff = true;
+            FlashlightOff = !FlashlightOff;
             delayButton = true;
-            StartCoroutine(buttonDelayTimer(0.25f));
+            StartCoroutine(ButtonDelayTimer(0.25f));
         }
 
 
 //if we add batteries
-        if (Input.GetKeyDown($"{VITA}{SQUARE}")  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
+        if (Input.GetKeyDown($"{VITA}{SQUARE}")  && !delayButton && HasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetKey(VITA + LTRIG))
         {  
             StopAllCoroutines(); 
-            float currentIntensity = flashlight.intensity;
-            Color currentColor = lightBeam.material.color;
+            var currentIntensity = flashlight.intensity;
+            var currentColor = lightBeam.material.color;
         if (flashlightCharge < 1.0f){
             InventoryManager.batteryCount -= 1;
         //add to charge and set progress bar based on charge amount
             flashlightCharge += 0.5f;
                 if(flashlight.intensity < 10){ //to rain the light intensity to 10
-                    float currentEmpty = (10 - flashlight.intensity);
-                    flashlight.intensity += currentEmpty - 5.0f;
+                    var intensity = flashlight.intensity;
+                    var currentEmpty = (10 - intensity);
+                    intensity += currentEmpty - 5.0f;
+                    flashlight.intensity = intensity;
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
             //change text formatting based on number of characters
-                if (InventoryManager.batteryCount < 10){
-                    batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
-                }
-                else batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
+                batteryText.text = ($"{InventoryManager.batteryCount:D2}");
             //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
                     currentCharge = flashlightCharge;
             // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
                     if (isStimulant && cooldownValue <= stimCooldown){
-                        StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                        StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
                     }
-                    if (!Input.GetKey(VITA + RTRIG)){
-                        StartCoroutine(rechargeStamina(((100-stamina)), stamina));
+                    if (!Input.GetKey($"{VITA}{RTRIG}")){
+                        StartCoroutine(RechargeStamina(((100-stamina)), stamina));
                     }
                    
                     StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
@@ -350,64 +350,61 @@ public class PlayerController : MonoBehaviour
                 }
                 if (isCharging){
                     currentCharge = flashlightCharge;
-                    StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+                    StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
                 }
             }
             delayButton = true;
-            StartCoroutine(buttonDelayTimer(0.25f));
+            StartCoroutine(ButtonDelayTimer(0.25f));
            
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
             // if (UICanvasGroup.alpha == 0){
             //     StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
             // }
         }
 //if we add battery while 'firing' flashlight
-        if (Input.GetKeyDown($"{VITA}{SQUARE}")  && !delayButton && hasFlashlight && InventoryManager.batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !flashlightOff)
+        if (Input.GetKeyDown($"{VITA}{SQUARE}")  && !delayButton && HasFlashlight && InventoryManager.batteryCount > 0 && Input.GetKey(VITA + LTRIG) && !FlashlightOff)
         {   
             StopAllCoroutines();
             currentCharge = flashlightCharge;
            // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
-            if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
+            if (!Input.GetKey($"{VITA}{RTRIG}")){
+                StartCoroutine(RechargeStamina(((100-stamina)), stamina));
             }
             StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, lightDuration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
             if (flashlightCharge < 1.0f){
-            InventoryManager.batteryCount -= 1;
-            //add to charge and set progress bar based on charge amount
-            flashlightCharge += 0.5f;
+                InventoryManager.batteryCount -= 1;
+                //add to charge and set progress bar based on charge amount
+                flashlightCharge += 0.5f;
                 if(flashlight.intensity < 10){
-                flashlight.intensity = flashlight.intensity + 5.0f;
+                    flashlight.intensity = flashlight.intensity + 5.0f;
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
-            //change text formatting based on number of characters
-                  if (InventoryManager.batteryCount < 10){
-                    batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
-                }
-                else batteryText.text = (string.Format("{0:D2}", InventoryManager.batteryCount));
-            //are we out of power and adding battery?   
+                //change text formatting based on number of characters
+                batteryText.text = $"{InventoryManager.batteryCount:D2}";
+                //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
                     currentCharge = flashlightCharge;
-            //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+                    //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
                     if (isStimulant && cooldownValue <= stimCooldown){
-                        StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                        StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
                     }
                     StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
                     flashlightDisabled = false;
                     if (!Input.GetKey(VITA + RTRIG)){
-                        StartCoroutine(rechargeStamina(((100-stamina)), stamina));
+                        StartCoroutine(RechargeStamina(((100-stamina)), stamina));
                     }
                 }
             }
             delayButton = true;
-            StartCoroutine(buttonDelayTimer(0.25f));
+            StartCoroutine(ButtonDelayTimer(0.25f));
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
         }
 
@@ -417,30 +414,30 @@ public class PlayerController : MonoBehaviour
             if(!isMap && !delayButton){
                 mapCamera.SetActive(true);
                 delayButton = true;
-                StartCoroutine(fade(mapPanel, 0, 1, 0.5f));
-                StartCoroutine(buttonDelayTimer(0.5f));
+                StartCoroutine(Fade(mapPanel, 0, 1, 0.5f));
+                StartCoroutine(ButtonDelayTimer(0.5f));
             }
             else if(isMap && !delayButton){
                 delayButton = true;
-                StartCoroutine(fade(mapPanel, 1, 0, 0.5f));
-                StartCoroutine(buttonDelayTimer(0.5f));
+                StartCoroutine(Fade(mapPanel, 1, 0, 0.5f));
+                StartCoroutine(ButtonDelayTimer(0.5f));
             }
         }
 
 //quick turnaround- when we hit Cross and down on the left stick at the same time   
         if (Input.GetKeyDown($"{VITA}{CROSS}") && verticalMove > 0 && !delayButton){ 
             delayButton = true;
-            Vector3 playerRotation =  transform.eulerAngles; //store our rotation
-            Vector3 neededRotation = new Vector3 (  transform.eulerAngles.x,
-                                                    (transform.eulerAngles.y + 180f),
-                                                    transform.eulerAngles.z); //calc new rotation
-            StartCoroutine(quickTurn(playerRotation, neededRotation, 1.5f));
+            var eulerAngles = transform.eulerAngles;
+            var neededRotation = new Vector3 (  eulerAngles.x,
+                                                    (eulerAngles.y + 180f),
+                                                    eulerAngles.z); //calc new rotation
+            StartCoroutine(QuickTurn(eulerAngles, neededRotation, 1.5f));
         }
 
 ///////////////////////////LTRIG//////////////////////////////////////
 
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
-        if (Input.GetKeyDown($"{VITA}{LTRIG}") && hasFlashlight && flashlightDisabled)
+        if (Input.GetKeyDown($"{VITA}{LTRIG}") && HasFlashlight && flashlightDisabled)
         {   
             //flashlightCharge = 0;
             isCharging = false;
@@ -450,19 +447,19 @@ public class PlayerController : MonoBehaviour
             // currentCharge = flashlightCharge;
             // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
-            if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
+            if (!Input.GetKey($"{VITA}{RTRIG}")){
+                StartCoroutine(RechargeStamina(((100-stamina)), stamina));
             }
-             StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
-                                                5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
+            StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
+                5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
             flashlightDisabled = true;
-            StartCoroutine(walkLerp(0, 1,  lerpRate));
+            StartCoroutine(WalkLerp(0, 1,  lerpRate));
         }
 //if battery is not dead, and we hit the L trigger
-        if (Input.GetKeyDown($"{VITA}{LTRIG}") && hasFlashlight && flashlightCharge > 0.05f 
-            && !flashlightDisabled && !flashlightOff)
+        if (Input.GetKeyDown($"{VITA}{LTRIG}") && HasFlashlight && flashlightCharge > 0.05f 
+            && !flashlightDisabled && !FlashlightOff)
         {   
             lightFocusing = true;
             if (currentTarget != null) lightMovement = false;
@@ -475,31 +472,31 @@ public class PlayerController : MonoBehaviour
             // currentCharge = flashlightCharge;
             // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
             if (!Input.GetKey($"{VITA}{RTRIG}")){
-                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
+                StartCoroutine(RechargeStamina(((100-stamina)), stamina));
             }
             //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
                                                 flashlight.intensity, 20, 40, 25, 0.08f, 0.040f)); // 'fire' light
-            StartCoroutine(walkLerp(0, 1,  lerpRate));
-            if (!isStimulant) StartCoroutine(lerpFocalLength(0.115f, 0.125f, 0.5f, 0.5f, 0.5f));
+            StartCoroutine(WalkLerp(0, 1,  lerpRate));
+            if (!isStimulant) StartCoroutine(LerpFocalLength(0.115f, 0.125f, 0.5f, 0.5f, 0.5f));
             
-            if (UICanvasGroup.alpha != 1){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
+            if (UICanvasGroup.alpha < 1){
+                StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
             }
         
         }
 //change FOV while we hold the L trigger
-        if (Input.GetKey($"{VITA}{LTRIG}") && hasFlashlight && flashlightCharge > 0.05f 
-        && !flashlightDisabled && !flashlightOff)
+        if (Input.GetKey($"{VITA}{LTRIG}") && HasFlashlight && flashlightCharge > 0.05f 
+        && !flashlightDisabled && !FlashlightOff)
         {
             Focus();
             if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
         }
 //reset the flashlight and camera when we release the L trigger
-        if (Input.GetKeyUp($"{VITA}{LTRIG}") && hasFlashlight)
+        if (Input.GetKeyUp($"{VITA}{LTRIG}") && HasFlashlight)
         {   
            
             StopAllCoroutines();
@@ -507,16 +504,16 @@ public class PlayerController : MonoBehaviour
             //currentTarget = null;
             
             if(!isCharging){
-                StartCoroutine(rechargeFlashlight (currentCharge,  10f));
+                StartCoroutine(RechargeFlashlight (currentCharge,  10f));
             }
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
             if (UICanvasGroup.alpha != 0 && stamina >= 95.0f  && !isStimulant && !isCharging){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
+                StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
             }
-            if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
+            if (!Input.GetKey($"{VITA}{RTRIG}")){
+                StartCoroutine(RechargeStamina(((100-stamina)), stamina));
             }
             if (!flashlightDisabled){
                 float currentIntensity = flashlight.intensity;
@@ -530,9 +527,9 @@ public class PlayerController : MonoBehaviour
             lightMovement = true;
             endLightRotation =  lightRoot.transform.localRotation;
             lightRoot.transform.localRotation = storedLightRotation;
-            StartCoroutine(walkLerp(0, 1,  lerpRate));     
-            StartCoroutine(lerpCam(0.5f));  
-            if (!isStimulant) StartCoroutine(lerpFocalLength(0.125f,0.115f, 0.5f, 0.5f, 0.5f));
+            StartCoroutine(WalkLerp(0, 1,  lerpRate));     
+            StartCoroutine(LerpCam(0.5f));  
+            if (!isStimulant) StartCoroutine(LerpFocalLength(0.125f,0.115f, 0.5f, 0.5f, 0.5f));
     
         }
     
@@ -544,12 +541,12 @@ public class PlayerController : MonoBehaviour
             }
           
             if (stamina == 0f){
-                speed = walkSpeed;
+                speed = _walkSpeed;
             }
             if (verticalMove != 0 && stamina > 0f && !isStimulant){
-                float oldStamina = stamina;
+                var oldStamina = stamina;
                 stamina -= 0.75f; //full is 100
-                if (speed > walkSpeed){ //speed starts at 5
+                if (speed > _walkSpeed){ //speed starts at 5
                     speed -= (speed / (8 * stamina)); //speed loss falls off as you lose stamina and slow down  
                 }
                 staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp((oldStamina/100), (stamina/100), 0.1f);
@@ -557,7 +554,7 @@ public class PlayerController : MonoBehaviour
           
             if (stamina < 0){
                 stamina = 0;
-                speed = walkSpeed;
+                speed = _walkSpeed;
             }
 
             if (camObject.fieldOfView > 50) camObject.fieldOfView = 50; //limit fov change  
@@ -568,20 +565,20 @@ public class PlayerController : MonoBehaviour
             StopAllCoroutines();
             if (isCharging){
                 currentCharge = flashlightCharge;
-                StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+                StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
             }
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
             
             speed = 5f;
             savedPosition = lightRig.transform.localPosition;
             savedRotation = lightRig.transform.localRotation;
             lightRig.transform.parent = handRig; 
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
-            StartCoroutine(walkLerp(0, 1,  lerpRate));
-            if (UICanvasGroup.alpha != 1){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
+            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
+            StartCoroutine(WalkLerp(0, 1,  lerpRate));
+            if (UICanvasGroup.alpha < 1){
+                StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
             }
             
         }
@@ -591,35 +588,35 @@ public class PlayerController : MonoBehaviour
             StopAllCoroutines();
             if (isCharging){
                 currentCharge = flashlightCharge;
-                StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+                StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
             }
             if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(countdownStimulant(cooldownValue, 0, cooldownValue));
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
-            speed = walkSpeed;
-            StartCoroutine(rechargeStamina(((100-stamina)), stamina));
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            speed = _walkSpeed;
+            StartCoroutine(RechargeStamina(((100-stamina)), stamina));
+            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
             lerpRate = 0.55f;
-            StartCoroutine(walkLerp(0, 1,  lerpRate));   
-            animator.SetBool("isRunning", false);
+            StartCoroutine(WalkLerp(0, 1,  lerpRate));   
+            animator.SetBool(IsRunning, false);
             lightRig.transform.parent = lightRoot.transform;
             lightRig.transform.localRotation = savedRotation;
             lightRig.transform.localPosition = savedPosition;
             delayButton = false;
             if (UICanvasGroup.alpha != 0 && stamina >= 95.0f  && !isStimulant && !isCharging){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
+                StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
             }
         }
         if (!Input.GetKey($"{VITA}{RTRIG}") && (!Input.GetKey($"{VITA}{LTRIG}")) && (!Input.GetKeyDown($"{VITA}{SQUARE}")))
         {
-            if (camObject.fieldOfView > 40 && camObject.fieldOfView != 40){
+            if (camObject.fieldOfView > 40){
                 camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
             }
-            if (camObject.fieldOfView < 40 && camObject.fieldOfView != 40){
+            if (camObject.fieldOfView < 40){
                 camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32;
             }
             if (UICanvasGroup.alpha != 0 && stamina >= 95.0f && !isStimulant && !isCharging){
-                StartCoroutine(fadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
+                StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 0.0f, 0.5f, 0.0f));
             }
             // if (!isCharging && lightCharge != 100){
             //     currentCharge = flashlightCharge;
@@ -656,34 +653,34 @@ public class PlayerController : MonoBehaviour
         currentLightRotation.x = 0;
         currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 20, 120); //rain light left/right
         currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //rain light up/down
-        lightRig.transform.localRotation = Quaternion.Euler(currentLightRotation);
+        lightRig.transform.localRotation = Quaternion.Euler(currentLightRotation); 
     }
 
    
         
-        Vector3 currentRotation = Camera.localEulerAngles;
+    Vector3 currentRotation = Camera.localEulerAngles;
        
-        if (currentRotation.x > 180) currentRotation.x -= 360;
-        if (currentRotation.y > 180) currentRotation.y -= 360;
-        currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit); //rain camera up/down
-        currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //rain camera left/right
-        currentRotation.z = 0;
+    if (currentRotation.x > 180) currentRotation.x -= 360;
+    if (currentRotation.y > 180) currentRotation.y -= 360;
+    currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit); //rain camera up/down
+    currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //rain camera left/right
+    currentRotation.z = 0;
 
         
 
     //apply the rotations
-        Camera.localRotation = Quaternion.Euler(currentRotation);
+    Camera.localRotation = Quaternion.Euler(currentRotation);
        
      
-        if (animator.GetBool("isRunning") == false && animator.GetBool("isWalking") == false) {
-            if (horizontalRotation == 0 ||verticalMove == 0){
-                animator.SetBool("isIdle", true);
-            }
-            // if (horizontalRotation != 0 || verticalMove != 0){
-            //     animator.SetBool("isWalking", true);
-            //     animator.SetBool("isIdle", false);
-            // };
-        } 
+    if (animator.GetBool(IsRunning) == false && animator.GetBool(IsWalking) == false) {
+        if (horizontalRotation == 0 ||verticalMove == 0){
+            animator.SetBool(IsIdle, true);
+        }
+        // if (horizontalRotation != 0 || verticalMove != 0){
+        //     animator.SetBool("isWalking", true);
+        //     animator.SetBool("isIdle", false);
+        // };
+    } 
     }
 
     ///////////////////////////Methods//////////////////////////////////////
@@ -694,51 +691,51 @@ public class PlayerController : MonoBehaviour
         verticalMove = Input.GetAxis("Left Stick Vertical"); //player walk fwd/bkwd
 
         if (((verticalMove != 0 && (horizontalCamRotation == 0 && verticalCamRotation == 0))) 
-        && ((Camera.localEulerAngles.y >= 90.05f || Camera.localEulerAngles.y <= 89.95f) 
-        || (Camera.localEulerAngles.x <= 9.95f || Camera.localEulerAngles.x >= 10.05f)))
+            && ((Camera.localEulerAngles.y >= 90.05f || Camera.localEulerAngles.y <= 89.95f) 
+                || (Camera.localEulerAngles.x <= 9.95f || Camera.localEulerAngles.x >= 10.05f)))
         {
-            StartCoroutine(lerpCam(0.25f));
+            StartCoroutine(LerpCam(0.25f));
 
         }
         if (verticalMove != 0 || horizontalRotation !=0){
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
               
-                if (animator.GetBool("isWalking") == true){ 
-                    lerpRate = 0.55f;
-                    isWalking = true;
+            if (animator.GetBool(IsWalking) == true){ 
+                lerpRate = 0.55f;
+                isWalking = true;
                 if (walkStart == 0f){
-                    StartCoroutine(walkLerp(0, 1,  lerpRate));
+                    StartCoroutine(WalkLerp(0, 1,  lerpRate));
                 }
             }    
         }
-    //apply gravity to player
-        if (characterController.isGrounded) verticalSpeed = 0;
-        else verticalSpeed -= gravity * Time.deltaTime;
+        //apply gravity to player
+        if (characterController.isGrounded) _verticalSpeed = 0;
+        else _verticalSpeed -= gravity * Time.deltaTime;
 
-    //apply forward/backward/gravity movement  
-        Vector3 gravityMove = new Vector3(0, verticalSpeed, 0);  
-        Vector3 move = new Vector3(0,0,0);
+        //apply forward/backward/gravity movement  
+        var gravityMove = new Vector3(0, _verticalSpeed, 0);  
+        Vector3 move;
         if (lightMovement){
             move = transform.forward * -verticalMove + transform.right * 0;
         }
         else move = transform.forward * -verticalMove + transform.right * horizontalRotation;
         characterController.Move(speed * Time.deltaTime * move + gravityMove * Time.deltaTime);
-        if (animator.GetBool("isRunning") == false ) {
-            animator.SetBool("isWalking", verticalMove != 0 || horizontalRotation !=0);
-            animator.SetBool("isIdle", false);
-              walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+        if (animator.GetBool(IsRunning) == false ) {
+            animator.SetBool(IsWalking, verticalMove != 0 || horizontalRotation !=0);
+            animator.SetBool(IsIdle, false);
+            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
               
-                if (animator.GetBool("isWalking") == true){ 
-                    lerpRate = 0.55f;
+            if (animator.GetBool(IsWalking) == true){ 
+                lerpRate = 0.55f;
                 if (walkStart == 0f){
-                    StartCoroutine(walkLerp(0, 1,  lerpRate));
+                    StartCoroutine(WalkLerp(0, 1,  lerpRate));
                 }
             }    
 
                 
         } 
-        if (!animator.GetBool("isWalking") && !animator.GetBool("isRunning")){
-            animator.SetBool("isIdle", verticalMove == 0);
+        if (!animator.GetBool(IsWalking) && !animator.GetBool(IsRunning)){
+            animator.SetBool(IsIdle, verticalMove == 0);
             isWalking = false;
         }
          
@@ -749,37 +746,37 @@ public class PlayerController : MonoBehaviour
         if (stamina > 30f){ 
             // //Debug.Log("You're holding down run!");
             camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
-            if (animator.GetBool("isRunning") == false  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
-                animator.SetBool("isRunning", true);
-                animator.SetBool("isWalking", false);  
+            if (animator.GetBool(IsRunning) == false  && animator.GetBool(IsGrab) == false &&  verticalMove != 0) {
+                animator.SetBool(IsRunning, true);
+                animator.SetBool(IsWalking, false);  
                 lerpRate = 0.275f;     
-                StartCoroutine(walkLerp(0, 1, lerpRate));
+                StartCoroutine(WalkLerp(0, 1, lerpRate));
             }
         }
         if (stamina <= 30f){ 
             // //Debug.Log("You're very tired!");
             camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32; //zoom out
-            if (animator.GetBool("isRunning") == true  && animator.GetBool("isGrab") == false &&  verticalMove != 0) {
-                animator.SetBool("isRunning", false);
-                animator.SetBool("isWalking", true);  
-                walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            if (animator.GetBool(IsRunning) == true  && animator.GetBool(IsGrab) == false &&  verticalMove != 0) {
+                animator.SetBool(IsRunning, false);
+                animator.SetBool(IsWalking, true);  
+                walkStart = skinnedRenderer.material.GetFloat(CrossFade);
                 lerpRate = 0.55f;
                 if (walkStart == 0f){
-                    StartCoroutine(walkLerp(0, 1,  lerpRate));
+                    StartCoroutine(WalkLerp(0, 1,  lerpRate));
                 }
             }
         }
 
 
         if (verticalMove == 0 && horizontalRotation == 0){
-            animator.SetBool("isRunning", false);
-            animator.SetBool("isWalking", false);
-            animator.SetBool("isIdle", true);
+            animator.SetBool(IsRunning, false);
+            animator.SetBool(IsWalking, false);
+            animator.SetBool(IsIdle, true);
         }
         else if (verticalMove == 0 && horizontalRotation != 0){
-            animator.SetBool("isRunning", false);
-            animator.SetBool("isWalking", true);
-            animator.SetBool("isIdle", false);
+            animator.SetBool(IsRunning, false);
+            animator.SetBool(IsWalking, true);
+            animator.SetBool(IsIdle, false);
         }
     }
 
@@ -792,20 +789,21 @@ public class PlayerController : MonoBehaviour
         // animator.SetBool("isWalking", true); 
 
     }
-    public void healMe()
+
+    private void HealMe()
     {
-        float startHealth = InventoryManager.playerHealth/100;
-        float endHealth = Mathf.Clamp01 (startHealth + 0.5f);
-        StartCoroutine(healLerp(startHealth, endHealth, 0.125f));
+        var startHealth = InventoryManager.playerHealth/100;
+        var endHealth = Mathf.Clamp01 (startHealth + 0.5f);
+        StartCoroutine(HealLerp(startHealth, endHealth, 0.125f));
     }
 
 
 ///////////////////////////Enumerators//////////////////////////////////////
-    IEnumerator healLerp (float startValue, float endValue, float duration){
+    private IEnumerator HealLerp (float startValue, float endValue, float duration){
         float time = 0;
         while (time <= duration){
-            float swap = Mathf.Lerp(startValue, endValue, time/duration);
-            skinnedRenderer.material.SetFloat("_PainValue", swap);
+            var swap = Mathf.Lerp(startValue, endValue, time/duration);
+            skinnedRenderer.material.SetFloat(PainValue, swap);
             time += Time.deltaTime;
             yield return null;  
         }
@@ -816,31 +814,31 @@ public class PlayerController : MonoBehaviour
         print (InventoryManager.playerHealth); 
     }
     // run lerp for normal map
-     IEnumerator walkLerp (float startValue, float endValue, float duration){
+    private IEnumerator WalkLerp (float startValue, float endValue, float duration){
         float time = 0;
         while (time <= duration){
             isLerping = true;
             float swap = Mathf.Lerp(startValue, endValue, time/duration);
-            skinnedRenderer.material.SetFloat("_CrossFade", swap);
+            skinnedRenderer.material.SetFloat(CrossFade, swap);
             time += Time.deltaTime;
             yield return null;  
         }
-        skinnedRenderer.material.SetFloat("_CrossFade", 1);
+        skinnedRenderer.material.SetFloat(CrossFade, 1);
         time = 0;
         while (time <= duration){
             isLerping = true;
             float swap = Mathf.Lerp(endValue, startValue, time/duration);
-            skinnedRenderer.material.SetFloat("_CrossFade", swap);
+            skinnedRenderer.material.SetFloat(CrossFade, swap);
             time += Time.deltaTime;
             yield return null;  
         }
-        skinnedRenderer.material.SetFloat("_CrossFade", 0);
+        skinnedRenderer.material.SetFloat(CrossFade, 0);
         isLerping = false; 
     }
 
-    IEnumerator FadeLightDynamicInput (Color startColor, Color endColor, float duration, float startIntensity, float endIntensity, float startAngle, float endAngle, float startSize, float endSize){
-    float time = 0;
-    Vector3 coneScale = lightShaft.transform.localScale;
+    private IEnumerator FadeLightDynamicInput (Color startColor, Color endColor, float duration, float startIntensity, float endIntensity, float startAngle, float endAngle, float startSize, float endSize){
+        float time = 0;
+        var coneScale = lightShaft.transform.localScale;
         while (time <= duration){
             lightBeam.material.color = Color.Lerp(startColor, new Color (endColor.r, endColor.g, endColor.b, endColor.a * flashlightCharge), time/(duration/50)); //lerp the colors from dark to light
             lightHaze.material.color = Color.Lerp(startColor, new Color (endColor.r, endColor.g, endColor.b, endColor.a * flashlightCharge), time/(duration/50)); //lerp the colors from dark to light
@@ -848,19 +846,20 @@ public class PlayerController : MonoBehaviour
             flashlight.spotAngle = Mathf.Lerp(startAngle,endAngle,time/(duration/50));
             vertlight.intensity = Mathf.Lerp(startIntensity,endIntensity * flashlightCharge,time/(duration/50));
             vertlight.spotAngle = Mathf.Lerp(startAngle,endAngle,time/(duration/50));
-            float scalar = Mathf.Lerp(startSize,endSize,time/(duration/50));
+            var scalar = Mathf.Lerp(startSize,endSize,time/(duration/50));
             lightShaft.transform.localScale = new Vector3(scalar, lightShaft.transform.localScale.y ,scalar);
             if (startIntensity <= endIntensity){
-                float currentCharge = flashlightCharge;
+                var currentCharge = flashlightCharge;
                 lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 0, time/(duration));
             }
             time += Time.deltaTime;
             yield return null;
         }
     }
-    IEnumerator FadeLightStaticInput (Color startColor, Color endColor, float duration, float startIntensity, float endIntensity, float startAngle, float endAngle, float startSize, float endSize){
-    float time = 0;
-    Vector3 coneScale = lightShaft.transform.localScale;
+
+    private IEnumerator FadeLightStaticInput (Color startColor, Color endColor, float duration, float startIntensity, float endIntensity, float startAngle, float endAngle, float startSize, float endSize){
+        float time = 0;
+        var coneScale = lightShaft.transform.localScale;
         while (time <= duration){
             lightBeam.material.color = Color.Lerp(startColor, endColor, time/(duration/2)); //lerp the colors from dark to light
             lightHaze.material.color = Color.Lerp(startColor, endColor, time/(duration/2)); //lerp the colors from dark to light
@@ -868,31 +867,29 @@ public class PlayerController : MonoBehaviour
             flashlight.spotAngle = Mathf.Lerp(startAngle,endAngle,time/(duration/2));
             vertlight.intensity = Mathf.Lerp(startIntensity,endIntensity,time/(duration/2));
             vertlight.spotAngle = Mathf.Lerp(startAngle,endAngle,time/(duration/2));
-            float scalar = Mathf.Lerp(startSize,endSize,time/(duration/2));
+            var scalar = Mathf.Lerp(startSize,endSize,time/(duration/2));
             lightShaft.transform.localScale = new Vector3(scalar, lightShaft.transform.localScale.y ,scalar);
             time += Time.deltaTime;
             yield return null;
         }
     }
 
-    IEnumerator lerpCam(float duration){
+    private IEnumerator LerpCam(float duration){
         float time = 0;
-        float newY = 0;
-        float newX = 0;
-        float newZL = 0;
-        float newYL = 0;
-        float currentY = Camera.localEulerAngles.y;
-        float currentX = Camera.localEulerAngles.x;
-        float lightCurrentZ = lightRig.transform.localEulerAngles.z;
-        float lightCurrentY = lightRig.transform.localEulerAngles.y;
+        var localEulerAngles = Camera.localEulerAngles;
+        var currentY = localEulerAngles.y;
+        var currentX = localEulerAngles.x;
+        var eulerAngles = lightRig.transform.localEulerAngles;
+        var lightCurrentZ = eulerAngles.z;
+        var lightCurrentY = eulerAngles.y;
        
         print("lerpCam");
         
         while (time < duration){
-            newY = Mathf.Lerp(currentY, 90, time/duration);
-            newX = Mathf.Lerp(currentX, 10, time/duration);
-            newYL = Mathf.Lerp(lightCurrentY, 75, time/duration);
-            newZL = Mathf.Lerp(lightCurrentZ, 184, time/duration);
+            var newY = Mathf.Lerp(currentY, 90, time/duration);
+            var newX = Mathf.Lerp(currentX, 10, time/duration);
+            var newYL = Mathf.Lerp(lightCurrentY, 75, time/duration);
+            var newZL = Mathf.Lerp(lightCurrentZ, 184, time/duration);
 
             if (newY > 89.95 && newY < 90.05) newY = 90;
             if (newX > 9.95f && newX < 10.05f) newX = 10;
@@ -909,67 +906,75 @@ public class PlayerController : MonoBehaviour
             yield return null;
         }
         if (verticalMove != 0 || horizontalRotation !=0){
-            walkStart = skinnedRenderer.material.GetFloat("_CrossFade");
+            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
             if (walkStart == 0f){   
-                StartCoroutine(walkLerp(0, 1,  lerpRate));
+                StartCoroutine(WalkLerp(0, 1,  lerpRate));
             }    
         }
     }
-    IEnumerator fade(RawImage fadeObject, float startValue, float endValue, float duration){
-		float time = 0.0f;
-		while (time < duration){
-			fadeObject.color = Color.Lerp (new Color(1,1,1,startValue), new Color(1,1,1,endValue), time/duration);
-			time += Time.deltaTime;
-        	yield return null;
-		}
-		fadeObject.color = new Color (1,1,1,endValue);
-        if (isPaused){
-            isPaused = false;
-        }
-        else if (!isPaused){
-            isPaused = true;
-        }
-        if (isMap){
-            isMap = false;
-            mapCamera.SetActive(false);
-        }
-        else if (!isMap){
-            isMap = true;
-        }
-	}
 
-IEnumerator fadeAlpha (float startValue, float endValue, float duration, float waitTime){
+    private IEnumerator Fade(RawImage fadeObject, float startValue, float endValue, float duration){
+        var time = 0.0f;
+        while (time < duration){
+            fadeObject.color = Color.Lerp (new Color(1,1,1,startValue), new Color(1,1,1,endValue), time/duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        fadeObject.color = new Color (1,1,1,endValue);
+        switch (isPaused)
+        {
+            case true:
+                isPaused = false;
+                break;
+            case false:
+                isPaused = true;
+                break;
+        }
+        switch (isMap)
+        {
+            case true:
+                isMap = false;
+                mapCamera.SetActive(false);
+                break;
+            case false:
+                isMap = true;
+                break;
+        }
+    }
+
+    private IEnumerator FadeAlpha (float startValue, float endValue, float duration, float waitTime){
         yield return new WaitForSeconds(waitTime);
         float time = 0;
         while (time <= duration){
-            float swap = Mathf.Lerp(startValue, endValue, time/duration);
+            var swap = Mathf.Lerp(startValue, endValue, time/duration);
             UICanvasGroup.alpha = swap;
             time += Time.deltaTime;
             yield return null;  
         }
         UICanvasGroup.alpha = endValue;
     }
- 
- IEnumerator countdownStimulant(float startVal, float endVal, float duration){
+
+    private IEnumerator CountdownStimulant(float startVal, float endVal, float duration){
         if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.115f){
-            StartCoroutine(lerpFocalLength (0.115f, 0.140f, 1.0f, 0.15f, 2.0f));
+            StartCoroutine(LerpFocalLength (0.115f, 0.140f, 1.0f, 0.15f, 2.0f));
         }
         float time = 0.0f;
-            while (time < duration){
-                cooldownValue = Mathf.Lerp (startVal, endVal, time/duration);
-                time += Time.deltaTime;
-                yield return null;
-            }
-            cooldownValue = 0;
-            cooldownValue = stimCooldown;
-            StartCoroutine(lerpFocalLength(0.140f, 0.115f, 0.5f, 0.20f, 2.0f));
-            if (!Input.GetKey(VITA + RTRIG)){
-                StartCoroutine(rechargeStamina(((100-stamina)), stamina));
-            }
-            isStimulant = false;           
+        while (time < duration){
+            cooldownValue = Mathf.Lerp (startVal, endVal, time/duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        cooldownValue = 0;
+        cooldownValue = stimCooldown;
+        StartCoroutine(LerpFocalLength(0.140f, 0.115f, 0.5f, 0.20f, 2.0f));
+        if (!Input.GetKey(VITA + RTRIG)){
+            StartCoroutine(RechargeStamina(((100-stamina)), stamina));
+        }
+        isStimulant = false;           
     }
-    IEnumerator rechargeStamina(float duration, float currentStamina){
-        float time = 0.0f;
+
+    private IEnumerator RechargeStamina(float duration, float currentStamina){
+        var time = 0.0f;
         //yield return new WaitForSeconds(2f); //delay before charge happens
         while (time < duration){
             if (stamina > 97){
@@ -983,7 +988,8 @@ IEnumerator fadeAlpha (float startValue, float endValue, float duration, float w
         }
         stamina = 100f;
     }
-      IEnumerator rechargeFlashlight(float currentCharge, float duration){
+
+    private IEnumerator RechargeFlashlight(float currentCharge, float duration){
         float time = 0.0f;
         isCharging = true;
         //yield return new WaitForSeconds(2f); //delay before charge happens
@@ -1001,59 +1007,60 @@ IEnumerator fadeAlpha (float startValue, float endValue, float duration, float w
         isCharging = false;
         flashlightDisabled = false;
   
-        float currentIntensity = flashlight.intensity;
-        float currentAngle = flashlight.spotAngle;
-        float currentSize = lightShaft.transform.localScale.x;
-        Color currentColor = lightBeam.material.color;
+        var currentIntensity = flashlight.intensity;
+        var currentAngle = flashlight.spotAngle;
+        var currentSize = lightShaft.transform.localScale.x;
+        var currentColor = lightBeam.material.color;
         StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
-                                            currentAngle, 40, currentSize, 0.08f));
-        StartCoroutine(walkLerp(0, 1,  lerpRate));
+            currentAngle, 40, currentSize, 0.08f));
+        StartCoroutine(WalkLerp(0, 1,  lerpRate));
             
     }
-   public static IEnumerator buttonDelayTimer(float delay){
+    public static IEnumerator ButtonDelayTimer(float delay){
         yield return new WaitForSeconds(delay);
         delayButton = false;
     }
 
-    IEnumerator quickTurn(Vector3 playerRotation, Vector3 fullTurn, float duration){
-        float time = 0.0f;
-            while (time < duration){
-                playerRotation = Vector3.Lerp (playerRotation, fullTurn, time/duration);
-                transform.eulerAngles = playerRotation;
-                time += Time.deltaTime;
-                yield return null;
-            }
-            transform.eulerAngles = fullTurn;//finalize rotation
-            yield return new WaitForSeconds(1.675f);
-            delayButton = false;
+    private IEnumerator QuickTurn(Vector3 playerRotation, Vector3 fullTurn, float duration){
+        var time = 0.0f;
+        while (time < duration){
+            playerRotation = Vector3.Lerp (playerRotation, fullTurn, time/duration);
+            transform.eulerAngles = playerRotation;
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.eulerAngles = fullTurn;//finalize rotation
+        yield return new WaitForSeconds(1.675f);
+        delayButton = false;
     }
 
-    IEnumerator lerpFocalLength (float startValue, float endValue, float endBloom, float endThreshold, float duration){
-       float time = 0.0f;
-            while (time < duration){
-                //float currentBloom = Camera.GetComponent<FastMobileBloom>().intensity;
-               // float currentThreshold = Camera.GetComponent<FastMobileBloom>().threshold;
-                float currentValue = Mathf.Lerp (startValue, endValue, time/(duration/4));
-                //float bloomIntensity = Mathf.Lerp (currentBloom, endBloom, time/(duration/2));
-                //float bloomThreshold = Mathf.Lerp (currentThreshold, endThreshold, time/duration);
-                Camera.GetComponent<Kino.Bokeh>().focalLength = currentValue;
-                //Camera.GetComponent<FastMobileBloom>().intensity = bloomIntensity;
-               // Camera.GetComponent<FastMobileBloom>().threshold = bloomThreshold;
-                time += Time.deltaTime;
-                yield return null;
-            }
+    private IEnumerator LerpFocalLength (float startValue, float endValue, float endBloom, float endThreshold, float duration){
+        var time = 0.0f;
+        while (time < duration){
+            //float currentBloom = Camera.GetComponent<FastMobileBloom>().intensity;
+            // float currentThreshold = Camera.GetComponent<FastMobileBloom>().threshold;
+            var currentValue = Mathf.Lerp (startValue, endValue, time/(duration/4));
+            //float bloomIntensity = Mathf.Lerp (currentBloom, endBloom, time/(duration/2));
+            //float bloomThreshold = Mathf.Lerp (currentThreshold, endThreshold, time/duration);
+            Camera.GetComponent<Kino.Bokeh>().focalLength = currentValue;
+            //Camera.GetComponent<FastMobileBloom>().intensity = bloomIntensity;
+            // Camera.GetComponent<FastMobileBloom>().threshold = bloomThreshold;
+            time += Time.deltaTime;
+            yield return null;
+        }
         Camera.GetComponent<Kino.Bokeh>().focalLength = endValue;
     }
-    IEnumerator FadeScreen(float targetValue, float duration) {
-        float startValue = pausePanel.alpha;
+
+    private IEnumerator FadeScreen(float targetValue, float duration) {
+        var startValue = pausePanel.alpha;
         float fadeTime = 0;
-		//fade out the loadscreen canvas group
+        //fade out the loadscreen canvas group
         while (fadeTime < duration)
         {
             pausePanel.alpha = Mathf.Lerp(startValue, targetValue, fadeTime / duration);
             fadeTime += Time.deltaTime;
             yield return null;
         }
-		pausePanel.alpha = targetValue;
-	}
+        pausePanel.alpha = targetValue;
+    }
 }

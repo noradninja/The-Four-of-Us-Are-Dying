@@ -6,9 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 
 public class LoadScreen : MonoBehaviour {
-	
-
-	public AsyncOperation loadingOperation;
+	private AsyncOperation loadingOperation;
 	private bool loading = false;
 	
 	public CanvasGroup canvasGroup;
@@ -39,22 +37,21 @@ public class LoadScreen : MonoBehaviour {
 			StartCoroutine(FadeLoadingScreen(1,2));
 		}
 		//check if we are actually loading a level to avoid spamming the console with nullrefs 
-		if (loading == true){
-			//store current fill amount
-			originalValue = progressCounterLeft.fillAmount;
-			//Store the load progress
-			loadProgress = loadingOperation.progress;
-			//Change progress counter based on load progress, now with smooth animation between value changes
-			progressCounterLeft.fillAmount = Mathf.Lerp(originalValue, 1-(loadProgress/0.9f), 0.1f);
-			//progressCounterRight.fillAmount = Mathf.Lerp(originalValue, loadProgress/0.9f, 0.1f);
-			//after loadProgress hits 0.9, start fading routine
-			if (loadProgress >=0.9f){
-				canLoad = true;
-			}
+		if (loading != true) return;
+		//store current fill amount
+		originalValue = progressCounterLeft.fillAmount;
+		//Store the load progress
+		loadProgress = loadingOperation.progress;
+		//Change progress counter based on load progress, now with smooth animation between value changes
+		progressCounterLeft.fillAmount = Mathf.Lerp(originalValue, 1-(loadProgress/0.9f), 0.1f);
+		//progressCounterRight.fillAmount = Mathf.Lerp(originalValue, loadProgress/0.9f, 0.1f);
+		//after loadProgress hits 0.9, start fading routine
+		if (loadProgress >=0.9f){
+			canLoad = true;
 		}
 	}
 
-   public IEnumerator StartLoad()
+	private IEnumerator StartLoad()
     {
 		loading = true;
 		//load the level, but don't activate it yet
@@ -69,9 +66,9 @@ public class LoadScreen : MonoBehaviour {
 		
     }
 
-	IEnumerator FadeLoadingScreen(float targetValue, float duration)
+	private IEnumerator FadeLoadingScreen(float targetValue, float duration)
     {
-        float startValue = canvasGroup.alpha;
+        var startValue = canvasGroup.alpha;
         float time = 0;
 
 		//fade out the loadscreen canvas group
@@ -86,10 +83,9 @@ public class LoadScreen : MonoBehaviour {
 		progressCounterLeft.fillAmount = 0;
 		loadingOperation.allowSceneActivation = true;
 		//if loading is done, activate the level and unload the loader
-		if(loadingOperation.isDone) {
-			SceneManager.SetActiveScene(SceneManager.GetSceneByName(SetScenes.sceneToLoad));
-			SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("LoadScreen"));
-		}
+		if (!loadingOperation.isDone) yield break;
+		SceneManager.SetActiveScene(SceneManager.GetSceneByName(SetScenes.sceneToLoad));
+		SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName("LoadScreen"));
     }
 }			
 

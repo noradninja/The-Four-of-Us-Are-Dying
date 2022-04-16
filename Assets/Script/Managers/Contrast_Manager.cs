@@ -20,8 +20,10 @@ public class Contrast_Manager : MonoBehaviour
 
     private float toMaxAbs;
     private float toAbs;
+    private static readonly int Exposure = Shader.PropertyToID("_Exposure");
+    private static readonly int TintColor = Shader.PropertyToID("_TintColor");
 
-	// Start is called before the first frame update
+    // Start is called before the first frame update
 	public void Start()
     {
       tintColor = new Color(0f,0f,0f,0f);
@@ -30,12 +32,13 @@ public class Contrast_Manager : MonoBehaviour
 	// Update is called once per frame
 	public void Update()
     {
-        contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat("_Exposure")-0.75f);
+        contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat(Exposure)-0.75f);
         Remap(contrastValue, 0f, 1.0f, 0f, maxShadowAmount);
         tintColor.a = contrastValue;
-        contrastMaterial.SetColor("_TintColor", tintColor);    
+        contrastMaterial.SetColor(TintColor, tintColor);    
     }
-     public void Remap (float from, float fromMin, float fromMax, float toMin,  float toMax)
+
+    private void Remap (float from, float fromMin, float fromMax, float toMin,  float toMax)
     {
         fromAbs  =  from - fromMin;
         fromMaxAbs = fromMax - fromMin;      

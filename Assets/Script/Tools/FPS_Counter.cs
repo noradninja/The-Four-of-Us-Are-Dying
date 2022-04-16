@@ -47,39 +47,44 @@ void Start(){
             //Display the fps/ms and round to n decimals
             fpsText.text = (Mathf.Clamp(Mathf.RoundToInt(averageFPS),0,99).ToString("F0") + " FPS Average / " + 
                                         msFrame.ToString("F2") + " ms/frame over " + frameRange/30 + " second(s)");
-            if(!Application.isEditor) {
-		
-                float VRAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryCDRAM();
-                decimal VRAMFree = Math.Round((decimal)(VRAMValue/1000000), 2);
-                decimal calcVRAM = (((128-VRAMFree)/128)*100);
-                decimal percentVRAM = Math.Round((decimal)calcVRAM ,2);
+            switch (Application.isEditor)
+            {
+	            case false:
+	            {
+		            float VRAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryCDRAM();
+		            decimal VRAMFree = Math.Round((decimal)(VRAMValue/1000000), 2);
+		            decimal calcVRAM = (((128-VRAMFree)/128)*100);
+		            decimal percentVRAM = Math.Round((decimal)calcVRAM ,2);
                 
-                float RAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryLPDDR();
-                decimal RAMFree = Math.Round((decimal)(RAMValue/1000000), 2);
-                decimal calcRAM = (((512-RAMFree)/512)*100);
-                decimal percentRAM = Math.Round((decimal)calcRAM ,2);
+		            float RAMValue = UnityEngine.PSVita.Diagnostics.GetFreeMemoryLPDDR();
+		            decimal RAMFree = Math.Round((decimal)(RAMValue/1000000), 2);
+		            decimal calcRAM = (((512-RAMFree)/512)*100);
+		            decimal percentRAM = Math.Round((decimal)calcRAM ,2);
 
-                vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
-                ramText.text = ("RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
-                if (percentVRAM >= 75){
-                    vramText.color = Color.red;
-                }
-                else if(percentVRAM < 75 && percentVRAM > 50){
-                    vramText.color = Color.yellow;
-                }
-                else vramText.color = Color.green;
+		            vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
+		            ramText.text = ("RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
+		            if (percentVRAM >= 75){
+			            vramText.color = Color.red;
+		            }
+		            else if(percentVRAM < 75 && percentVRAM > 50){
+			            vramText.color = Color.yellow;
+		            }
+		            else vramText.color = Color.green;
 
-                if (percentRAM >= 75){
-                    ramText.color = Color.red;
-                }
-                else if(percentRAM < 75 && percentRAM > 50){
-                    ramText.color = Color.yellow;
-                }
-                else ramText.color = Color.green;
-            }
-            if(Application.isEditor) {
-                vramText.text = ("VRAM: Unavailable");
-                ramText.text = ("RAM: Unavailable");
+		            if (percentRAM >= 75){
+			            ramText.color = Color.red;
+		            }
+		            else if(percentRAM < 75 && percentRAM > 50){
+			            ramText.color = Color.yellow;
+		            }
+		            else ramText.color = Color.green;
+
+		            break;
+	            }
+	            case true:
+		            vramText.text = ("VRAM: Unavailable");
+		            ramText.text = ("RAM: Unavailable");
+		            break;
             }
         }
         

@@ -39,16 +39,12 @@ void Start() {
 	}
 }
 
- void Update() {
-	
-	if (SetScenes.currentScene == "Title"){
-		slotSelector = saveManager.GetComponent<LoadManager_Inputs>().selectedSlot;
-	}
-	else slotSelector = saveManager.GetComponent<SaveManager_Inputs>().selectedSlot;	
+ void Update()
+ {
+	 slotSelector = SetScenes.currentScene == "Title" ? saveManager.GetComponent<LoadManager_Inputs>().selectedSlot : saveManager.GetComponent<SaveManager_Inputs>().selectedSlot;
 	 //set save file name based on the slot selected so we know which file we are loading/saving
 	saveFileName = (savePrefix + slotSelector + ".sav");
-	
-}
+ }
 	
 //this is the class we are using to store our data we want to save
 [System.Serializable]
@@ -81,43 +77,48 @@ public void Save()
 		lwList.Clear();
 		lwList.AddRange(GameObject.FindGameObjectsWithTag("Light"));
 
-		BinaryFormatter bf = new BinaryFormatter(); 
-		FileStream file = File.Create(dataPath + saveFileName); 
-		SaveData data = new SaveData();
+		var bf = new BinaryFormatter(); 
+		var file = File.Create(dataPath + saveFileName);
+		var position = player.transform.position;
+		var rotation = player.transform.rotation;
+		var data = new SaveData
+		{
+			//data needed for reloading on game load
+			savedLevel = levelToSave,
+			playerPosition =
+			{
+				[0] = position.x,
+				[1] = position.y,
+				[2] = position.z
+			},
+			playerRotation =
+			{
+				[0] = rotation.eulerAngles.x,
+				[1] = rotation.eulerAngles.y,
+				[2] = rotation.eulerAngles.z
+			},
+			playerBatteries = InventoryManager.batteryCount,
+			playerMedkits = InventoryManager.medCount,
+			playerStimulants = InventoryManager.stimCount,
+			playerHealth = player.GetComponent<PlayerController>().health
+		};
 
-	//data needed for reloading on game load
-		data.savedLevel = levelToSave;
-
-		data.playerPosition[0] = player.transform.position.x;
-		data.playerPosition[1] = player.transform.position.y;
-		data.playerPosition[2] = player.transform.position.z;
-
-		data.playerRotation[0] = player.transform.rotation.eulerAngles.x;
-		data.playerRotation[1] = player.transform.rotation.eulerAngles.y;
-		data.playerRotation[2] = player.transform.rotation.eulerAngles.z;
-
-		data.playerBatteries = InventoryManager.batteryCount;
-		data.playerMedkits = InventoryManager.medCount;
-		data.playerStimulants = InventoryManager.stimCount;
-
-		data.playerHealth = player.GetComponent<PlayerController>().health;
-		 
 		// //spin through list data to store identifiers
 		
 		//meds
-		for (int i = 0; i < medList.Count; i++){
+		for (var i = 0; i < medList.Count; i++){
 			data.collectedMeds.Add(medList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
 		}
 		//batteries
-		for (int i = 0; i < battList.Count; i++){
+		for (var i = 0; i < battList.Count; i++){
 			data.collectedBattery.Add(battList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
 		}
 		//light weapons
-		for (int i = 0; i < lwList.Count; i++){
+		for (var i = 0; i < lwList.Count; i++){
 			data.collectedLightWep.Add(lwList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
 		}
 		//heavy weapons
-		for (int i = 0; i < hwList.Count; i++){
+		for (var i = 0; i < hwList.Count; i++){
 			data.collectedHvyWep.Add(hwList[i].gameObject.GetComponent<Item_Enumerator>().identifier);
 		}
 		
@@ -132,9 +133,9 @@ public void Load()
 	{
 		if (File.Exists(dataPath + saveFileName))
 		{
-			BinaryFormatter bf = new BinaryFormatter();
-			FileStream file =  File.Open(dataPath + saveFileName, FileMode.Open);
-			SaveData data = (SaveData)bf.Deserialize(file);
+			var bf = new BinaryFormatter();
+			var file =  File.Open(dataPath + saveFileName, FileMode.Open);
+			var data = (SaveData)bf.Deserialize(file);
 			file.Close();
 			levelToSave = data.savedLevel;
 

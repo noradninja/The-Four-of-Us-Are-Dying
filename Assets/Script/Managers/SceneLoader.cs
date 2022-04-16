@@ -79,10 +79,9 @@ public class SceneLoader : MonoBehaviour {
 		//activate the scene
 		loadingOperation.allowSceneActivation = true;
 		//if loading is done, activate the level and unload the loader
-		if(loadingOperation.isDone) {
-			SceneManager.SetActiveScene(SceneManager.GetSceneByName(SetScenes.sceneToLoad));
-			SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(SetScenes.sceneToUnload));
-		}
-    
+		if (!loadingOperation.isDone) yield break;
+		SceneManager.SetActiveScene(SceneManager.GetSceneByName(SetScenes.sceneToLoad));
+		SceneManager.UnloadSceneAsync(SceneManager.GetSceneByName(SetScenes.sceneToUnload));
+
     }
 }			

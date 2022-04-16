@@ -56,10 +56,10 @@ public class MapController : MonoBehaviour {
 		}
 		if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey("joystick button 9")){
 			if(mapCamera.orthographicSize > minZoom){
-			mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
-			//keep apparent scale and position the same
-			mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-												new Vector3(2.27f, 2.27f ,2.27f), 0.125f);
+				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
+				//keep apparent scale and position the same
+				mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
+					new Vector3(2.27f, 2.27f ,2.27f), 0.125f);
 			
 			}
 		}
@@ -68,34 +68,30 @@ public class MapController : MonoBehaviour {
 		if (Input.touchCount==2 && Input.GetTouch(0).phase == TouchPhase.Moved && Input.GetTouch(1).phase == TouchPhase.Moved){
 			midPoint = new Vector2(((Input.GetTouch(0).position.x + Input.GetTouch(1).position.x)/2), 
 									((Input.GetTouch(0).position.y + Input.GetTouch(1).position.y)/2));
-			midPoint = Camera.main.ScreenToWorldPoint(midPoint);
-			
+			if (Camera.main != null) midPoint = Camera.main.ScreenToWorldPoint(midPoint);
+
 			currentDistance = Input.GetTouch(0).position - Input.GetTouch(1).position; //current distance between finger touches
 			previousDistance = ((Input.GetTouch(0).position - Input.GetTouch(0).deltaPosition) - 
 								(Input.GetTouch(1).position - Input.GetTouch(1).deltaPosition)); //difference in previous locations using delta positions
-			float touchDelta = currentDistance.magnitude - previousDistance.magnitude;
+			var touchDelta = currentDistance.magnitude - previousDistance.magnitude;
 			
 			// Zoom out
 			if(touchDelta<0)
 			{
-				if(mapCamera.orthographicSize <= maxZoom){
+				if (!(mapCamera.orthographicSize <= maxZoom)) return;
 				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
 				//keep apparent scale and position the same
 				mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-													new Vector3(5.81875f, 5.81875f, 5.81875f), 0.125f);
-											
-				}
+					new Vector3(5.81875f, 5.81875f, 5.81875f), 0.125f);
 			}
 			//Zoom in
 			else if(touchDelta>0)
 			{
-				if(mapCamera.orthographicSize >= minZoom){
+				if (!(mapCamera.orthographicSize >= minZoom)) return;
 				mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
 				//keep apparent scale and position the same
 				mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-													new Vector3(2.27f, 2.27f ,2.27f), 0.125f);
-				
-				}
+					new Vector3(2.27f, 2.27f ,2.27f), 0.125f);
 			}
 		}
 	}

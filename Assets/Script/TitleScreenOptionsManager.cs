@@ -67,13 +67,13 @@ private const string joystick1 = "joystick 1 button ";
 	}
 	
 	// Update is called once per frame
-	void Update () {
-	
-		if ((menuManager.GetComponent<StartMenuManagerInputs>().optionEnabled == true)){
-			timer = timer += 0.01f;
+	void Update ()
+	{
+		if ((menuManager.GetComponent<StartMenuManagerInputs>().optionEnabled != true)) return;
+		timer = timer += 0.01f;
 		if (timer > delay){
 			//Decrement slot by -1 if you press up
-			if (Input.GetKeyDown (joystick1 + UP)){
+			if (Input.GetKeyDown ($"{joystick1}{UP}")){
 				//audioSource.PlayOneShot(clipList[2]);
 				if (selectedSlot == 1){
 					//set slot to 3 if you are at slot 1 to wrap selection
@@ -86,7 +86,7 @@ private const string joystick1 = "joystick 1 button ";
 			}
 			
 			//Increment slot by +1 if you press down
-			if (Input.GetKeyDown (joystick1 + DOWN)){
+			if (Input.GetKeyDown ($"{joystick1}{DOWN}")){
 				//audioSource.PlayOneShot(clipList[3]);
 				if (selectedSlot == 3){
 					//set slot to 2 if you are at slot 1 to wrap selection
@@ -99,96 +99,110 @@ private const string joystick1 = "joystick 1 button ";
 				//animateButtons();
 			}
 
-			}
-			if (Input.GetKeyDown (joystick1 + LEFT)){
-				//audioSource.PlayOneShot(clipList[3]);
-				if (selectedSlot == 1){
-					BGMLevel.fillAmount -= 0.1f;
-					BGMToSave = BGMLevel.fillAmount;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-				}
-				if (selectedSlot == 2){
-					SFXLevel.fillAmount -= 0.1f;
-					SFXToSave = SFXLevel.fillAmount;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-				}
-				if (selectedSlot == 3){
-					sensitivityLevel.fillAmount -= 0.05f;
-					SensitivityToSave = sensitivityLevel.fillAmount*1.5f;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-				}
-			}
-			if (Input.GetKeyDown (joystick1 + RIGHT)){
-				//audioSource.PlayOneShot(clipList[2]);
-				if (selectedSlot == 1){
-					BGMLevel.fillAmount += 0.1f;
-					BGMToSave = BGMLevel.fillAmount;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					
-				}
-				if (selectedSlot == 2){
-					SFXLevel.fillAmount += 0.1f;
-					SFXToSave = SFXLevel.fillAmount;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-				}
-				if (selectedSlot == 3){
-					sensitivityLevel.fillAmount += 0.05f;
-					SensitivityToSave = sensitivityLevel.fillAmount*1.5f;
-					PlayerPrefs.SetInt("SavedOnce", 1);
-					
-				}
-			}
-			PlayerPrefs.SetFloat("SavedBGM", BGMToSave);
-			PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
-			PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
 		}
+		if (Input.GetKeyDown ($"{joystick1}{LEFT}")){
+			//audioSource.PlayOneShot(clipList[3]);
+			if (selectedSlot == 1){
+				BGMLevel.fillAmount -= 0.1f;
+				BGMToSave = BGMLevel.fillAmount;
+				PlayerPrefs.SetInt("SavedOnce", 1);
+			}
+			if (selectedSlot == 2){
+				SFXLevel.fillAmount -= 0.1f;
+				SFXToSave = SFXLevel.fillAmount;
+				PlayerPrefs.SetInt("SavedOnce", 1);
+			}
+			if (selectedSlot == 3){
+				sensitivityLevel.fillAmount -= 0.05f;
+				SensitivityToSave = sensitivityLevel.fillAmount*1.5f;
+				PlayerPrefs.SetInt("SavedOnce", 1);
+			}
+		}
+		if (Input.GetKeyDown ($"{joystick1}{RIGHT}")){
+			//audioSource.PlayOneShot(clipList[2]);
+			if (selectedSlot == 1){
+				BGMLevel.fillAmount += 0.1f;
+				BGMToSave = BGMLevel.fillAmount;
+				PlayerPrefs.SetInt("SavedOnce", 1);
+					
+			}
+			if (selectedSlot == 2){
+				SFXLevel.fillAmount += 0.1f;
+				SFXToSave = SFXLevel.fillAmount;
+				PlayerPrefs.SetInt("SavedOnce", 1);
+			}
+			if (selectedSlot == 3){
+				sensitivityLevel.fillAmount += 0.05f;
+				SensitivityToSave = sensitivityLevel.fillAmount*1.5f;
+				PlayerPrefs.SetInt("SavedOnce", 1);
+					
+			}
+		}
+		PlayerPrefs.SetFloat("SavedBGM", BGMToSave);
+		PlayerPrefs.SetFloat("SavedSFX", SFXToSave);
+		PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
 	}		
 
 
 //this method checks which slot is currently selected and changes the colors of all the slots to give you a hilight 
 //on the selected slot
-	void setColor(){
-		
-		if (selectedSlot==1){
-			slot1.color = hilightColor;
-			slot2.color = baseColor;
-			slot3.color = baseColor;
-		}
-		if (selectedSlot==2){
-			slot1.color = baseColor;
-			slot2.color = hilightColor;
-			slot3.color = baseColor;
-		}
-		else if (selectedSlot==3){
-			slot1.color = baseColor;
-			slot2.color = baseColor;
-			slot3.color = hilightColor;
+	void setColor()
+	{
+		switch (selectedSlot)
+		{
+			case 1:
+				slot1.color = hilightColor;
+				slot2.color = baseColor;
+				slot3.color = baseColor;
+				break;
+			case 2:
+				slot1.color = baseColor;
+				slot2.color = hilightColor;
+				slot3.color = baseColor;
+				break;
+			case 3:
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				slot3.color = hilightColor;
+				break;
 		}
 	}
 		void animateButtons(){
-		if (selectedSlot == 3){
-			currentSelection = GameObject.Find("Sensitivity_Text");
-			//anim. =currentSelection.GetComponent<Animation>();
-			//anim.PLay("Menu_Bounce_Legacy");
-			if (anim.IsPlaying("Menu_Bounce_Legacy")){
-				print("Playing Sensitivity");
+		switch (selectedSlot)
+		{
+			case 3:
+			{
+				currentSelection = GameObject.Find("Sensitivity_Text");
+				//anim. =currentSelection.GetComponent<Animation>();
+				//anim.PLay("Menu_Bounce_Legacy");
+				if (anim.IsPlaying("Menu_Bounce_Legacy")){
+					print("Playing Sensitivity");
+				}
+
+				break;
+			}
+			case 2:
+			{
+				currentSelection = GameObject.Find("SFX_Text");
+				//anim. =currentSelection.GetComponent<Animation>();
+				//anim.PLay("Menu_Bounce_Legacy");
+				if (anim.IsPlaying("Menu_Bounce_Legacy")){
+					print("Playing SFX");
+				}
+
+				break;
+			}
+			case 1:
+			{
+				currentSelection = GameObject.Find("BGM_Text");
+				//anim. =currentSelection.GetComponent<Animation>();
+				//anim.PLay("Menu_Bounce_Legacy");
+				if (anim.IsPlaying("Menu_Bounce_Legacy")){
+					print("Playing BGM");
+				}
+
+				break;
 			}
 		}
-		if (selectedSlot == 2){
-			currentSelection = GameObject.Find("SFX_Text");
-			//anim. =currentSelection.GetComponent<Animation>();
-			//anim.PLay("Menu_Bounce_Legacy");
-			if (anim.IsPlaying("Menu_Bounce_Legacy")){
-				print("Playing SFX");
-			}
 		}
-		if (selectedSlot == 1){
-			currentSelection = GameObject.Find("BGM_Text");
-			//anim. =currentSelection.GetComponent<Animation>();
-			//anim.PLay("Menu_Bounce_Legacy");
-			if (anim.IsPlaying("Menu_Bounce_Legacy")){
-				print("Playing BGM");
-			}
-		}
-	}
 }

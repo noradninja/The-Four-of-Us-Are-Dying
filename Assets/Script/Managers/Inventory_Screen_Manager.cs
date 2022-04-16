@@ -17,7 +17,7 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	private float time;
 
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		inventoryOn = false;
 		inventoryMat.color = new Color (1,1,1, 0);
 		inventoryCam.SetActive(false);
@@ -28,38 +28,38 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	private void Update () {
 	
 		//this is for in-editor testing
 		if (Application.isEditor){
 			if (Input.GetKeyDown(KeyCode.Space) && !delayButton && !PlayerController.isMap){
 				if (!inventoryOn){
-					StartCoroutine(crossFade(0, 1, 0.5f));
+					StartCoroutine(CrossFade(0, 1, 0.5f));
 					inventoryOn = true;
 					delayButton = true;
-            		StartCoroutine(buttonDelayTimer(0.5f));
+            		StartCoroutine(ButtonDelayTimer(0.5f));
 				}
 				else if (inventoryOn && !delayButton && !PlayerController.isMap){
-					StartCoroutine(crossFade(1, 0, 0.5f));
+					StartCoroutine(CrossFade(1, 0, 0.5f));
 					inventoryOn = false;
 					delayButton = true;
-            		StartCoroutine(buttonDelayTimer(0.5f));
+            		StartCoroutine(ButtonDelayTimer(0.5f));
 				}
 			}
 		}
 		//this is for PSTV	
 		if (Input.GetKeyDown(VITA + SELECT) && !delayButton && !PlayerController.isMap){
 			if (!inventoryOn){
-				StartCoroutine(crossFade(0, 1, 0.5f));
+				StartCoroutine(CrossFade(0, 1, 0.5f));
 				inventoryOn = true;
 				delayButton = true;
-				StartCoroutine(buttonDelayTimer(0.5f));
+				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (inventoryOn && !delayButton && !PlayerController.isMap){
-				StartCoroutine(crossFade(1, 0, 0.5f));
+				StartCoroutine(CrossFade(1, 0, 0.5f));
 				inventoryOn = false;
 				delayButton = true;
-				StartCoroutine(buttonDelayTimer(0.5f));
+				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 		}
 		
@@ -69,35 +69,34 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 			if (touch.fingerId == 0){
 				if (Input.GetTouch(0).phase == TouchPhase.Began){
 					if (!inventoryOn && !delayButton && !PlayerController.isMap){
-						StartCoroutine(crossFade(0, 1, 0.5f));
+						StartCoroutine(CrossFade(0, 1, 0.5f));
 						inventoryOn = true;
 						delayButton = true;
-            			StartCoroutine(buttonDelayTimer(0.5f));
+            			StartCoroutine(ButtonDelayTimer(0.5f));
 					}
 					else if (inventoryOn && !delayButton && !PlayerController.isMap){
-						StartCoroutine(crossFade(1, 0, 0.5f));
+						StartCoroutine(CrossFade(1, 0, 0.5f));
 						inventoryOn = false;
 						delayButton = true;
-            			StartCoroutine(buttonDelayTimer(0.5f));
+            			StartCoroutine(ButtonDelayTimer(0.5f));
 					}
 				}
 			}
 		}
 
-		if (inventoryOn){
-			if (battText.text != string.Format("{0:D2}", InventoryManager.batteryCount)){
-				battText.text = string.Format("{0:D2}", InventoryManager.batteryCount);
-			}
-			if (medText.text != string.Format("{0:D2}", InventoryManager.medCount)){
-				medText.text = string.Format("{0:D2}", InventoryManager.medCount);
-			}
-			if (stimText.text != string.Format("{0:D2}", InventoryManager.stimCount)){
-				stimText.text = string.Format("{0:D2}", InventoryManager.stimCount);
-			}
+		if (!inventoryOn) return;
+		if (battText.text != $"{InventoryManager.batteryCount:D2}"){
+			battText.text = $"{InventoryManager.batteryCount:D2}";
+		}
+		if (medText.text != $"{InventoryManager.medCount:D2}"){
+			medText.text = $"{InventoryManager.medCount:D2}";
+		}
+		if (stimText.text != $"{InventoryManager.stimCount:D2}"){
+			stimText.text = $"{InventoryManager.stimCount:D2}";
 		}
 	}
 
-	IEnumerator crossFade (float startValue, float endValue, float duration){
+	private IEnumerator CrossFade (float startValue, float endValue, float duration){
 		time = 0.0f;
 		if (inventoryCam.activeSelf == false){
 			inventoryCam.SetActive(true);
@@ -111,10 +110,11 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 		inventoryMat.color = new Color (1,1,1, endValue);
 		if (inventoryMat.color.a <= 0){
 			inventoryCam.SetActive(false);
-			print("Inventory Cam disabled");
+			//print("Inventory Cam disabled");
 		}
 	}
-	IEnumerator buttonDelayTimer(float delay){
+
+	private IEnumerator ButtonDelayTimer(float delay){
 		yield return new WaitForSeconds(delay);
 		delayButton = false;
     }

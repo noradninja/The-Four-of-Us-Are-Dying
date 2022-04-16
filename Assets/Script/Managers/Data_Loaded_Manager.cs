@@ -14,13 +14,16 @@ public class Data_Loaded_Manager : MonoBehaviour {
 	public AudioSource thunderStormSource;
 	public AudioSource rainSource;
 	public Image SFXLevel;
+
+	private static readonly int PainValue = Shader.PropertyToID("_PainValue");
+
 	// Use this for initialization
-	void Start () {
+	private void Start () {
 		if (PlayerPrefs.GetInt("hasLoadedFile")==1){
 //player
 			player.transform.position = SetScenes.playerPosition;
 			player.transform.rotation = SetScenes.playerRotation;
-			playerBody.material.SetFloat("_PainValue", (SetScenes.playerHealth * 0.01f));
+			playerBody.material.SetFloat(PainValue, (SetScenes.playerHealth * 0.01f));
 //Inventory
 			InventoryManager.playerHealth = SetScenes.playerHealth;
 			InventoryManager.batteryCount = SetScenes.playerBatteries;
@@ -46,9 +49,9 @@ public class Data_Loaded_Manager : MonoBehaviour {
 		}
 		OptionsManagerInputs.GetComponent<OptionsManagerInputs>().SensitivityToSave =  PlayerPrefs.GetFloat("SavedSensitivity");	
 		}
-	PlayerPrefs.SetInt("hasLoadedFile",0);
-	PlayerPrefs.Save();
-	PauseManager.isPaused = false;	
+		PlayerPrefs.SetInt("hasLoadedFile",0);
+		PlayerPrefs.Save();
+		PauseManager.isPaused = false;	
 	}
 
 }
