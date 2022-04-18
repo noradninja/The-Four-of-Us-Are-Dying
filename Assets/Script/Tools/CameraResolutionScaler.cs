@@ -20,7 +20,7 @@ public class CameraResolutionScaler : MonoBehaviour
 		PSP
 	}
 	public bool enableInternalResolution = true;
-	public internalResolution renderResolution;
+	public internalResolution InternalResolution;
 	private float renderDivisor;
 	private int width;
 	private int height;
@@ -71,9 +71,6 @@ public class CameraResolutionScaler : MonoBehaviour
 			QualitySettings.vSyncCount = 0;	
 		}
 	}
-	void Update(){
-	
-	}
 	void OnDestroy ()
 	{
 		camera.rect = originalRect;
@@ -82,9 +79,9 @@ public class CameraResolutionScaler : MonoBehaviour
 	void OnPreRender ()
 	{
 		if (enableInternalResolution){
-			switch (renderResolution){
+			switch (InternalResolution){
 				case internalResolution.Full:
-							width = 960;
+							width = 980;
 							height = 544;	
 							renderDivisor = 1;
 						break;
@@ -94,7 +91,7 @@ public class CameraResolutionScaler : MonoBehaviour
 							renderDivisor = 1.334f;
 						break;
 						case internalResolution.Low:
-							width = 640 ;
+							width = 640;
 							height = 368;
 							renderDivisor = 1.5f;
 						break;

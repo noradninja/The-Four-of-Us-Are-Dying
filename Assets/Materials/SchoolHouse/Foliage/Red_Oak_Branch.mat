@@ -273,7 +273,7 @@ Material:
     - _Cull: 0
     - _CullMode: 0
     - _CustomColorAmount: 0
-    - _Cutoff: 0.33
+    - _Cutoff: 0.5
     - _Cutout: 0
     - _DarknessOnSundown: 1
     - _DesaturateTranslucency: 0
@@ -620,6 +620,7 @@ Material:
     - _SpecColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
     - _SpecularTone: {r: 0.50978994, g: 0.5329642, b: 0.6037736, a: 0}
     - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Time: {r: 0, g: 0, b: 0, a: 0}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
     - _TranslucencyColor: {r: 0.50978994, g: 0.5329642, b: 0.6037736, a: 0}

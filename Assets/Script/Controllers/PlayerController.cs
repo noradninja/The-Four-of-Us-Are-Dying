@@ -481,7 +481,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
                                                 flashlight.intensity, 20, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(WalkLerp(0, 1,  lerpRate));
-            if (!isStimulant) StartCoroutine(LerpFocalLength(0.115f, 0.125f, 0.5f, 0.5f, 0.5f));
+            if (!isStimulant) StartCoroutine(LerpFocalLength(0.087f, 0.095f, 0.5f, 0.5f, 0.5f));
             
             if (UICanvasGroup.alpha < 1){
                 StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
@@ -529,7 +529,7 @@ public class PlayerController : MonoBehaviour
             lightRoot.transform.localRotation = storedLightRotation;
             StartCoroutine(WalkLerp(0, 1,  lerpRate));     
             StartCoroutine(LerpCam(0.5f));  
-            if (!isStimulant) StartCoroutine(LerpFocalLength(0.125f,0.115f, 0.5f, 0.5f, 0.5f));
+            if (!isStimulant) StartCoroutine(LerpFocalLength(0.125f,0.087f, 0.5f, 0.5f, 0.5f));
     
         }
     
@@ -955,8 +955,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private IEnumerator CountdownStimulant(float startVal, float endVal, float duration){
-        if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.115f){
-            StartCoroutine(LerpFocalLength (0.115f, 0.140f, 1.0f, 0.15f, 2.0f));
+        if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.855f){
+            StartCoroutine(LerpFocalLength (0.087f, 0.095f, 1.0f, 0.15f, 2.0f));
         }
         float time = 0.0f;
         while (time < duration){
@@ -966,7 +966,7 @@ public class PlayerController : MonoBehaviour
         }
         cooldownValue = 0;
         cooldownValue = stimCooldown;
-        StartCoroutine(LerpFocalLength(0.140f, 0.115f, 0.5f, 0.20f, 2.0f));
+        StartCoroutine(LerpFocalLength(0.095f, 0.087f, 0.5f, 0.20f, 2.0f));
         if (!Input.GetKey(VITA + RTRIG)){
             StartCoroutine(RechargeStamina(((100-stamina)), stamina));
         }

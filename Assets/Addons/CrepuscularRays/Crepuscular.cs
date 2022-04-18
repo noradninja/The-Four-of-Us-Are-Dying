@@ -14,7 +14,9 @@ public class Crepuscular : MonoBehaviour
 	public int blurSize = 3;
 	[Range(1, 16)]
 	public int resolutionDivisor = 1;
-	
+
+	private static readonly int LightPos = Shader.PropertyToID("_LightPos");
+	private static readonly int Parameter = Shader.PropertyToID("_Parameter");
 
 
 	// Start is called before the first frame update
@@ -23,11 +25,11 @@ public class Crepuscular : MonoBehaviour
       
     }
 
-	//[ImageEffectOpaque]
+	// [ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
-		var blurTex = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /resolutionDivisor), Mathf.RoundToInt(Screen.height /resolutionDivisor), 0, source.format);
-		material.SetVector("_LightPos", GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward)); 
+		var blurTex = RenderTexture.GetTemporary(Mathf.RoundToInt(128), Mathf.RoundToInt(128), 0, source.format);
+		material.SetVector(LightPos, GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward)); 
 		Graphics.Blit(source, blurTex, material, 0);
 		material.SetTexture(blurTexString, blurTex);
 
@@ -35,17 +37,17 @@ public class Crepuscular : MonoBehaviour
 	if (blurSize > 0){
 		for(int i = 0; i < 1; i++) {
                 float iterationOffs = (i*1.0f);
-                material.SetVector ("_Parameter", new Vector4 (blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
+                material.SetVector (Parameter, new Vector4 (blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
 
                 // vertical blur
-                RenderTexture rt2 = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /resolutionDivisor), Mathf.RoundToInt(Screen.height /resolutionDivisor), 0, source.format);
+                RenderTexture rt2 = RenderTexture.GetTemporary(Mathf.RoundToInt(128), Mathf.RoundToInt(128), 0, source.format);
                 rt2.filterMode = FilterMode.Bilinear;
                 Graphics.Blit (blurTex, rt2, material, 1);
                 RenderTexture.ReleaseTemporary (blurTex);
                 blurTex = rt2;
 
                 // horizontal blur
-                rt2 = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /resolutionDivisor), Mathf.RoundToInt(Screen.height /resolutionDivisor), 0, source.format);
+                rt2 = RenderTexture.GetTemporary(Mathf.RoundToInt(128), Mathf.RoundToInt(128), 0, source.format);
                 rt2.filterMode = FilterMode.Bilinear;
                 Graphics.Blit (blurTex, rt2, material, 2);
                 RenderTexture.ReleaseTemporary (blurTex);

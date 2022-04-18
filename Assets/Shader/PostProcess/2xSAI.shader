@@ -42,7 +42,7 @@
 				v2f o;
 				o.vertex = UnityObjectToClipPos(v.vertex);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				half2 offset = _MainTex_TexelSize.xy * 0.5h;
+				const half2 offset = _MainTex_TexelSize.xy * 0.5h;
 				o.uv1 = half4(v.uv + offset, v.uv + offset);
 				return o;
 			}

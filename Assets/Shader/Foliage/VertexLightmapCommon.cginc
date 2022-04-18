@@ -49,10 +49,10 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 	#endif
 		att *= 0.5h; // passed v light colors are 2x brighter than what used to be v FFP
 
-		half NdotL = max(dot(eyeNormal, dirToLight), 0.0h);
+	const half NdotL = max(dot(eyeNormal, dirToLight), 0.0h);
 		
 		// diffuse
-		half3 color = att * NdotL * unity_LightColor[idx].rgb;
+	const half3 color = att * NdotL * unity_LightColor[idx].rgb;
 
 		return min(color, 1.0);
 }
@@ -99,10 +99,10 @@ v2f vert(appdata v) {
 	UNITY_INITIALIZE_OUTPUT(v2f, o);
 
 	half3 worldPos = mul (unity_ObjectToWorld, half4(v.pos, 1.0h) ).xyz;
-	half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1.0h) ).xyz;
-	half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
- 	half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
- 	half rimWidth = 1;
+	const half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1.0h) ).xyz;
+	const half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
+	const half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
+ 	
 
 	//Leaf Movement and Wiggle
 	( (v.pos.x += cos(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
@@ -140,29 +140,27 @@ v2f vert(appdata v) {
 
 // fragment shader
 fixed4 frag(v2f v) : SV_Target {
-
-	half4 posLighting = v.color;
+	const half4 posLighting = v.color;
 	UNITY_EXTRACT_FOG(v);
 	#if defined(CUSTOM_LIGHTMAPPED)
-		half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
+	const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
 
 	#if CUSTOM_LIGHTMAPPED == 1
-		half4 lighting = (lightmap * 0.25h) + posLighting;
+	const half4 lighting = (lightmap * 0.25h) + posLighting;
 	#endif
 
 	#else
-		half4 lighting = posLighting;
+	const half4 lighting = posLighting;
 	#endif
-	
-		half4 diffuse = tex2D(_MainTex, v.uv0.xy);
+
+	const half4 diffuse = tex2D(_MainTex, v.uv0.xy);
 		half4 col = (diffuse * lighting);
 
-		col.a = diffuse.a;
 		clip(col.a - _Cutoff);	
+		#if USING_FOG
+        	UNITY_APPLY_FOG(v.fogCoord, col);
+    	#endif
 	
-	#if USING_FOG
-		UNITY_APPLY_FOG(v.fogCoord, col);
-	#endif
 		
 	
 	return col;
