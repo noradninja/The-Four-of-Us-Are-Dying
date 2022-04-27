@@ -175,8 +175,9 @@ Shader "Lighting/Crepuscular Rays" {
 				fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 sample = tex2D(_BlurTex, i.uv);
 				fixed contrast = _Contrast;
-				//add our ray greyscale samples at + 50% brightness to the main image 
-				return  (((col) + (sample * 0.55h))- 0.5h) * contrast + 0.5h;
+				sample = sample.r + sample.g + sample.b;
+				//add our ray greyscale samples at - 25% brightness to the main image 
+				return  (((col) + (sample * 0.25h))- 0.5h) * contrast + 0.5h;
 			}
 		ENDCG
 
@@ -184,7 +185,7 @@ Shader "Lighting/Crepuscular Rays" {
 	SubShader {
 		ZTest Always
 		Cull Off
-		//0- Calculate low resolution rays
+		//0- calculate low resolution rays
 		Pass { 
 				CGPROGRAM
 				#pragma vertex vert
@@ -201,7 +202,7 @@ Shader "Lighting/Crepuscular Rays" {
 				ENDCG
 			}	
 			
-		//2- Horizontal Blur
+		//2- horizontal Blur
 		Pass {		
 				CGPROGRAM	
 				#pragma vertex vertBlurHorizontalSGX
@@ -209,7 +210,7 @@ Shader "Lighting/Crepuscular Rays" {
 				#pragma fragmentoption ARB_precision_hint_fastest
 				ENDCG
 			}
-		Pass //3- Composition 
+		Pass //3- composition 
 		{
 			CGPROGRAM
 			#pragma vertex vertFinal

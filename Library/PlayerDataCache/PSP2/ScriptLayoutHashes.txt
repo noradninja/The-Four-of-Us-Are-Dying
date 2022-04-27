@@ -351,7 +351,7 @@ bd57674768d88af20344e9f680801c2d Assembly-CSharp-firstpass.dll:UnityStandardAsse
 df03e2ffa8b3251f71a6c2235d50c66b Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Fisheye
 c1791db8df7a6d30dc3a3e487bced78b Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.PostProcessVolume
 7c997acc7f9930bd5f16c49cff4a6b10 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerCanvas
-d6f4cbd161842673a9249be63221877c Assembly-CSharp.dll:.CameraResolutionScaler
+4eb5de138e4f216a193682f6b4949553 Assembly-CSharp.dll:.CameraResolutionScaler
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TeleType
 58b80cf56079b9b2c86ad9aaede3dca8 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
 7a1ff18e15d0a860ac99542974a3cbd5 Unity.Postprocessing.Runtime.dll:UnityEngine.Rendering.PostProcessing.Grain
@@ -380,3 +380,4 @@ eb565135f5b2f106ea4734c3cad2730e Unity.RenderPipelines.Core.Runtime.dll:UnityEng
 22d012272156bc74a9b9b7425ffabdd9 Assembly-CSharp.dll:.SceneLoader
 e958cc1ee46a616a6e0cde964bfe9918 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerContainer
 aae9893fc05b6c8cba8317ed327be0c4 Unity.RenderPipelines.Core.Runtime.dll:UnityEngine.Experimental.Rendering.UI.DebugUIHandlerIndirectFloatField
+139acdf6b51d7a443ef5cd79400c8774 Assembly-CSharp.dll:.CameraResolutionSetter

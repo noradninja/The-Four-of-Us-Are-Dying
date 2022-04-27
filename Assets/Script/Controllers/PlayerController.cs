@@ -406,6 +406,10 @@ public class PlayerController : MonoBehaviour
             if (isStimulant && cooldownValue <= stimCooldown){
                 StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
             }
+            StartCoroutine(WalkLerp(0, 1,  lerpRate));
+            if(isCharging){
+                StartCoroutine(RechargeFlashlight (currentCharge,  10f));
+            }
         }
 
 //Map
@@ -493,7 +497,7 @@ public class PlayerController : MonoBehaviour
         && !flashlightDisabled && !FlashlightOff)
         {
             Focus();
-            if (camObject.fieldOfView < 30) camObject.fieldOfView = 30; //limit fov change 
+            if (camObject.fieldOfView < 28) camObject.fieldOfView = 28; //limit fov change 
         }
 //reset the flashlight and camera when we release the L trigger
         if (Input.GetKeyUp($"{VITA}{LTRIG}") && HasFlashlight)
@@ -609,10 +613,10 @@ public class PlayerController : MonoBehaviour
         }
         if (!Input.GetKey($"{VITA}{RTRIG}") && (!Input.GetKey($"{VITA}{LTRIG}")) && (!Input.GetKeyDown($"{VITA}{SQUARE}")))
         {
-            if (camObject.fieldOfView > 40){
+            if (camObject.fieldOfView > 35f){
                 camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
             }
-            if (camObject.fieldOfView < 40){
+            if (camObject.fieldOfView < 35f){
                 camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32;
             }
             if (UICanvasGroup.alpha != 0 && stamina >= 95.0f && !isStimulant && !isCharging){
@@ -632,55 +636,55 @@ public class PlayerController : MonoBehaviour
     {
         horizontalRotation = Input.GetAxis("Left Stick Horizontal") * OptionsManagerInputs.sensitivity; //turn
 
-    if (Application.isEditor){ //this is here because the DS3 uses different input axes for the right stick
-        horizontalCamRotation = Input.GetAxis("DS3Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
-        verticalCamRotation = Input.GetAxis("DS3Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
-       
-    }
-    else {
-        horizontalCamRotation = Input.GetAxis("Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
-        verticalCamRotation = Input.GetAxis("Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
-    }
-    if (lightMovement){
-        transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
-        mapIndicator.transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
-        Camera.Rotate(verticalCamRotation*lookSensitivity/2,horizontalCamRotation*lookSensitivity/2,0);
-        lightRig.transform.Rotate(0,-horizontalCamRotation*(lookSensitivity*2),verticalCamRotation*lookSensitivity);
-        Vector3 currentLightRotation = lightRig.transform.localEulerAngles;
-    if (currentLightRotation.y > 180) {
-        currentLightRotation.y -= 360;
-    }
+        if (Application.isEditor){ //this is here because the DS3 uses different input axes for the right stick
+            horizontalCamRotation = Input.GetAxis("DS3Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
+            verticalCamRotation = Input.GetAxis("DS3Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
+           
+        }
+        else {
+            horizontalCamRotation = Input.GetAxis("Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
+            verticalCamRotation = Input.GetAxis("Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
+        }
+        if (lightMovement){
+            transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
+            mapIndicator.transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
+            Camera.Rotate(verticalCamRotation*lookSensitivity/2,horizontalCamRotation*lookSensitivity/2,0);
+            lightRig.transform.Rotate(0,-horizontalCamRotation*(lookSensitivity*2),verticalCamRotation*lookSensitivity);
+            Vector3 currentLightRotation = lightRig.transform.localEulerAngles;
+        if (currentLightRotation.y > 180) {
+            currentLightRotation.y -= 360;
+        }
         currentLightRotation.x = 0;
         currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 20, 120); //rain light left/right
         currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //rain light up/down
         lightRig.transform.localRotation = Quaternion.Euler(currentLightRotation); 
-    }
+        }
 
    
         
-    Vector3 currentRotation = Camera.localEulerAngles;
+        Vector3 currentRotation = Camera.localEulerAngles;
        
-    if (currentRotation.x > 180) currentRotation.x -= 360;
-    if (currentRotation.y > 180) currentRotation.y -= 360;
-    currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit); //rain camera up/down
-    currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //rain camera left/right
-    currentRotation.z = 0;
+        if (currentRotation.x > 180) currentRotation.x -= 360;
+        if (currentRotation.y > 180) currentRotation.y -= 360;
+        currentRotation.x = Mathf.Clamp(currentRotation.x, upLimit, downLimit); //rain camera up/down
+        currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //rain camera left/right
+        currentRotation.z = 0;
 
         
 
-    //apply the rotations
-    Camera.localRotation = Quaternion.Euler(currentRotation);
+        //apply the rotations
+        Camera.localRotation = Quaternion.Euler(currentRotation);
        
      
-    if (animator.GetBool(IsRunning) == false && animator.GetBool(IsWalking) == false) {
-        if (horizontalRotation == 0 ||verticalMove == 0){
-            animator.SetBool(IsIdle, true);
-        }
-        // if (horizontalRotation != 0 || verticalMove != 0){
-        //     animator.SetBool("isWalking", true);
-        //     animator.SetBool("isIdle", false);
-        // };
-    } 
+        if (animator.GetBool(IsRunning) == false && animator.GetBool(IsWalking) == false) {
+            if (horizontalRotation == 0 ||verticalMove == 0){
+                animator.SetBool(IsIdle, true);
+            }
+            // if (horizontalRotation != 0 || verticalMove != 0){
+            //     animator.SetBool("isWalking", true);
+            //     animator.SetBool("isIdle", false);
+            // };
+        } 
     }
 
     ///////////////////////////Methods//////////////////////////////////////

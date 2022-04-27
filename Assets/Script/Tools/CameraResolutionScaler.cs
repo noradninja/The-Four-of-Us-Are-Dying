@@ -1,125 +1,128 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.PSVita;
-using UnityEngine.UI;
+﻿using UnityEngine;
+
 [ExecuteInEditMode]
 
 // Add this to your main camera//////////////////////////////////////////////////////////////////////////////////////////////
 public class CameraResolutionScaler : MonoBehaviour
 {
-	public enum internalResolution{
-		[Tooltip ("960x544")]
-		Full,
-		[Tooltip ("720x408")]
-		Mid,
-		[Tooltip ("640x363")]
-		Low,
-		[Tooltip ("480x272")]
-		PSP
-	}
-	public bool enableInternalResolution = true;
-	public internalResolution InternalResolution;
-	private float renderDivisor;
-	private int width;
-	private int height;
-	private new Camera camera;
-	private RenderTexture renderTex;
-	RenderTexture GetTemporaryTexture(int width, int height) {
-						RenderTexture temporaryTexture = RenderTexture.GetTemporary(width, height);
-						temporaryTexture.wrapMode = TextureWrapMode.Clamp;
-						temporaryTexture.anisoLevel = 0;
-						temporaryTexture.filterMode = filterMode;
+    public enum currentResolution
+    {
+        [Tooltip("960x544")] Full,
+        [Tooltip("720x408")] Mid,
+        [Tooltip("640x363")] Low,
+        [Tooltip("480x272")] PSP
+    }
 
-						return temporaryTexture;
-					}
-	private Rect originalRect;
-	private Rect scaledRect;
-	public enum currentResolution{
-		[Tooltip ("960x544")]
-		Full,
-		[Tooltip ("720x408")]
-		Mid,
-		[Tooltip ("640x363")]
-		Low,
-		[Tooltip ("480x272")]
-		PSP
-	}
-	public currentResolution screenResolution;
-	public FilterMode filterMode = FilterMode.Trilinear;
-	void Awake(){
-		camera = this.GetComponent<Camera>();
-		if(!Application.isEditor) {
-					
-				switch (screenResolution){
-					case currentResolution.Full:
-						Screen.SetResolution(960, 544, true, 30);	
-					break;
-					case currentResolution.Mid:
-						Screen.SetResolution(720, 408, true, 30);
-					break;
-					case currentResolution.Low:
-						Screen.SetResolution(640, 368, true, 30);
-					break;
-					case currentResolution.PSP:
-					Screen.SetResolution(480, 272, true, 30);
-					break;
-				}
-		}
-		else {
-			QualitySettings.vSyncCount = 0;	
-		}
-	}
-	void OnDestroy ()
-	{
-		camera.rect = originalRect;
-	}
+    public enum internalResolution
+    {
+        [Tooltip("960x544")] Full,
+        [Tooltip("720x408")] Mid,
+        [Tooltip("640x363")] Low,
+        [Tooltip("480x272")] PSP
+    }
 
-	void OnPreRender ()
-	{
-		if (enableInternalResolution){
-			switch (InternalResolution){
-				case internalResolution.Full:
-							width = 980;
-							height = 544;	
-							renderDivisor = 1;
-						break;
-						case internalResolution.Mid:
-							width = 720;
-							height = 408;
-							renderDivisor = 1.334f;
-						break;
-						case internalResolution.Low:
-							width = 640;
-							height = 368;
-							renderDivisor = 1.5f;
-						break;
-						case internalResolution.PSP:
-							width = 480;
-							height = 272;
-							renderDivisor = 2f;
-						break;
-			}
-			originalRect = camera.rect;
-			scaledRect.Set(originalRect.x, originalRect.y, originalRect.width / renderDivisor, originalRect.height / renderDivisor);
-			camera.rect = scaledRect;
-		}
-	}
+    public bool enableInternalResolution = true;
+    public internalResolution InternalResolution;
+    public currentResolution screenResolution;
+    public FilterMode filterMode = FilterMode.Trilinear;
+    private new Camera camera;
+    private int height;
+    private Rect originalRect;
+    private float renderDivisor;
+    private RenderTexture renderTex;
+    private Rect scaledRect;
+    private int width;
 
-	void OnRenderImage (RenderTexture src, RenderTexture dest)
-	{
-		if (enableInternalResolution){
-			renderTex = GetTemporaryTexture(width, height);
-			camera.rect = originalRect;
-			src.filterMode = filterMode;
+    private void Awake()
+    {
+        camera = GetComponent<Camera>();
+       
+        if (!Application.isEditor)
+            switch (screenResolution)
+            {
+                case currentResolution.Full:
+                    Screen.SetResolution(960, 544, true, 60);
+                    Application.targetFrameRate = 20;
+                    break;
+                case currentResolution.Mid:
+                    Screen.SetResolution(720, 408, true, 60);
+                    Application.targetFrameRate = 20;
+                    break;
+                case currentResolution.Low:
+                    Screen.SetResolution(640, 368, true, 60);
+                    Application.targetFrameRate = 20;
+                    break;
+                case currentResolution.PSP:
+                    Screen.SetResolution(480, 272, true, 60);
+                    Application.targetFrameRate = 20;
+                    break;
+            }
+        else
+            Application.targetFrameRate = 60;
+    }
 
-			Graphics.Blit(src, renderTex);
-			Graphics.Blit(renderTex, dest);
-			RenderTexture.ReleaseTemporary(renderTex);
-		}
-		else{
-			Graphics.Blit(src, dest);
-		}
-	}
+    private void OnDestroy()
+    {
+        camera.rect = originalRect;
+    }
+
+    private void OnPreRender()
+    {
+        if (enableInternalResolution)
+        {
+            switch (InternalResolution)
+            {
+                case internalResolution.Full:
+                    width = 980;
+                    height = 544;
+                    renderDivisor = 1;
+                    break;
+                case internalResolution.Mid:
+                    width = 720;
+                    height = 408;
+                    renderDivisor = 1.334f;
+                    break;
+                case internalResolution.Low:
+                    width = 640;
+                    height = 368;
+                    renderDivisor = 1.5f;
+                    break;
+                case internalResolution.PSP:
+                    width = 480;
+                    height = 272;
+                    renderDivisor = 1.9f; //this gives us a slightly smaller 400x227 resolution for output
+                    break;
+            }
+
+            originalRect = camera.rect;
+            scaledRect.Set(originalRect.x, originalRect.y, originalRect.width / renderDivisor,
+                originalRect.height / renderDivisor);
+            camera.rect = scaledRect;
+        }
+    }
+
+    private void OnRenderImage(RenderTexture src, RenderTexture dest)
+    {
+        if (!enableInternalResolution) Graphics.Blit(src, dest);
+        else
+        {
+            renderTex = GetTemporaryTexture(width, height);
+            camera.rect = originalRect;
+            src.filterMode = filterMode;
+
+            Graphics.Blit(src, renderTex);
+            Graphics.Blit(renderTex, dest);
+            RenderTexture.ReleaseTemporary(renderTex);
+        }
+    }
+
+    private RenderTexture GetTemporaryTexture(int width, int height)
+    {
+        var temporaryTexture = RenderTexture.GetTemporary(width, height);
+        temporaryTexture.wrapMode = TextureWrapMode.Clamp;
+        temporaryTexture.anisoLevel = 0;
+        temporaryTexture.filterMode = filterMode;
+
+        return temporaryTexture;
+    }
 }

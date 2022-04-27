@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Shadows Only American Elm
   m_Shader: {fileID: 4800000, guid: afaf8c3efa8828742b0a141cef124c83, type: 3}
-  m_ShaderKeywords: GEOM_TYPE_LEAF SHADOWED_RIM _ALPHAPREMULTIPLY_ON _ALPHATEST_ON
-    _GLOSSYREFLECTIONS_OFF _WINDQUALITY_NONE
+  m_ShaderKeywords: GEOM_TYPE_LEAF SHADOWED_RIM _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
+    _NORMALMAP _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -578,15 +578,15 @@ Material:
     - _b_influence: 0.1
     - _branches_disp: 0
     - _influence: 0.095
-    - _leaves_wiggle_disp: 0.3
-    - _leaves_wiggle_speed: 0.0125
+    - _leaves_wiggle_disp: 0.15
+    - _leaves_wiggle_speed: 0.025
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0
     - _tree_sway_speed: 0
     - _tree_sway_stutter: 0
     - _tree_sway_stutter_influence: 0
-    - _wind_size: 50
+    - _wind_size: 8.8
     m_Colors:
     - _Albedo: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -637,4 +637,4 @@ Material:
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
     - _WindScale: {r: 1, g: 1, b: 1, a: 1}
     - _WindSpeed: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 0.5, g: 1, b: 0.5, a: 0}
+    - _wind_dir: {r: -1, g: 1, b: -1, a: 1}

@@ -29,7 +29,7 @@ QualitySettings:
     vSyncCount: 0
     lodBias: 1
     maximumLODLevel: 0
-    streamingMipmapsActive: 1
+    streamingMipmapsActive: 0
     streamingMipmapsAddAllCameras: 1
     streamingMipmapsMemoryBudget: 128
     streamingMipmapsRenderersPerFrame: 128
@@ -41,6 +41,4 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms:
     - Standalone
-  m_PerPlatformDefaultQuality:
-    PSP2: 0
-    Standalone: 0
+  m_PerPlatformDefaultQuality: {}

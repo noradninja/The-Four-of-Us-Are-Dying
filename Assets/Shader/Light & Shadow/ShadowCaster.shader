@@ -12,19 +12,22 @@ Shader "Vita/Shadow Only"
 		_leaves_wiggle_disp ("Leaves Wiggle Displacement", float) = 0.07
         _leaves_wiggle_speed ("Leaves Wiggle Speed", float) = 0.01
 		_influence ("Influence", range(0,1)) = 1
+		_Clip ("Alpha Clip", range(0,1)) = 0
 	}
 	
 	SubShader 
 	{
-	Tags { "Queue"="Transparent" } 
-		Cull Off	
+	Tags { "Queue"="AlphaTest" "IgnoreProjector"="True" "RenderType"="TransparentCutout" } //I know this is weird but it's a workaround for the Vita
+		LOD 80
+		ZWrite On
+		Cull Off
+		Blend One OneMinusSrcAlpha //because we are going to clip at the end	
 		// Pass to render object as a shadow caster
 		Pass { 
         Name "ShadowCaster"
         Tags { "LightMode" = "ShadowCaster" }
 
         Fog {Mode Off}
-        ZWrite On //ZTest Less
         Offset 1, 1
 
         CGPROGRAM
@@ -42,6 +45,7 @@ Shader "Vita/Shadow Only"
 		half _leaves_wiggle_disp;
 		half _leaves_wiggle_speed;
 		half _influence;
+        
 		//end wind variables section
 		struct appdata {
 			half3 vertex : POSITION;
@@ -61,7 +65,7 @@ Shader "Vita/Shadow Only"
 
 			( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
 			(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-			(v.vertex.z += cos(_Time.z * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) ); //z
+			(v.vertex.z += sin(cos(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
             //end leaf movement section
 			o.uv = v.texcoord;
             TRANSFER_SHADOW_CASTER(o)
@@ -69,10 +73,11 @@ Shader "Vita/Shadow Only"
         return o;
         }
 
+        half _Clip;
         float4 frag( v2f i ) : COLOR
         {
             fixed4 c = tex2D (_MainTex, i.uv);
-            clip(c.a - 0.33);
+            clip(c.a - _Clip);
             SHADOW_CASTER_FRAGMENT(i)
         }
         ENDCG

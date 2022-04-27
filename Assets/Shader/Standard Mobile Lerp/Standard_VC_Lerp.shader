@@ -78,7 +78,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZWrite [_ZWrite]
             Cull [_Cull]
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.0
 
             // -------------------------------------
 
@@ -117,7 +117,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZTest LEqual
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.0
 
             // -------------------------------------
 
@@ -151,7 +151,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZWrite On ZTest LEqual
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.0
 
             // -------------------------------------
 
@@ -181,7 +181,7 @@ Shader "Vita/Standard Mobile Lerp"
             Tags { "LightMode" = "Deferred" }
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.0
             #pragma exclude_renderers nomrt
 
 
@@ -251,7 +251,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZWrite [_ZWrite]
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.0
 
             #pragma shader_feature _NORMALMAP
             #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
@@ -287,7 +287,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZTest LEqual
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.0
 
             #pragma shader_feature _NORMALMAP
             #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
@@ -317,7 +317,7 @@ Shader "Vita/Standard Mobile Lerp"
             ZWrite On ZTest LEqual
 
             CGPROGRAM
-            #pragma target 2.0
+            #pragma target 3.0
 
             #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
             #pragma shader_feature _METALLICGLOSSMAP
@@ -360,5 +360,5 @@ Shader "Vita/Standard Mobile Lerp"
 
 
     //FallBack "VertexLit"
-   // CustomEditor "Standard_VCShaderGUI_Lerp"
+   CustomEditor "Standard_VCShaderGUI_Lerp"
 }
