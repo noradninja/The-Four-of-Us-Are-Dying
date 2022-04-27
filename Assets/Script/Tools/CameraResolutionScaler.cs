@@ -42,19 +42,15 @@ public class CameraResolutionScaler : MonoBehaviour
             {
                 case currentResolution.Full:
                     Screen.SetResolution(960, 544, true, 60);
-                    Application.targetFrameRate = 20;
                     break;
                 case currentResolution.Mid:
                     Screen.SetResolution(720, 408, true, 60);
-                    Application.targetFrameRate = 20;
                     break;
                 case currentResolution.Low:
                     Screen.SetResolution(640, 368, true, 60);
-                    Application.targetFrameRate = 20;
                     break;
                 case currentResolution.PSP:
                     Screen.SetResolution(480, 272, true, 60);
-                    Application.targetFrameRate = 20;
                     break;
             }
         else
@@ -73,7 +69,7 @@ public class CameraResolutionScaler : MonoBehaviour
             switch (InternalResolution)
             {
                 case internalResolution.Full:
-                    width = 980;
+                    width = 960;
                     height = 544;
                     renderDivisor = 1;
                     break;
@@ -85,12 +81,12 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.Low:
                     width = 640;
                     height = 368;
-                    renderDivisor = 1.5f;
+                    renderDivisor = 2f;
                     break;
                 case internalResolution.PSP:
                     width = 480;
                     height = 272;
-                    renderDivisor = 1.9f; //this gives us a slightly smaller 400x227 resolution for output
+                    renderDivisor = 1f; //this gives us a slightly smaller 400x227 resolution for output
                     break;
             }
 
@@ -101,20 +97,20 @@ public class CameraResolutionScaler : MonoBehaviour
         }
     }
 
-    private void OnRenderImage(RenderTexture src, RenderTexture dest)
-    {
-        if (!enableInternalResolution) Graphics.Blit(src, dest);
-        else
-        {
-            renderTex = GetTemporaryTexture(width, height);
-            camera.rect = originalRect;
-            src.filterMode = filterMode;
-
-            Graphics.Blit(src, renderTex);
-            Graphics.Blit(renderTex, dest);
-            RenderTexture.ReleaseTemporary(renderTex);
-        }
-    }
+    // private void OnRenderImage(RenderTexture src, RenderTexture dest)
+    // {
+    //     if (!enableInternalResolution) Graphics.Blit(src, dest);
+    //     else
+    //     {
+    //         renderTex = GetTemporaryTexture(width, height);
+    //         camera.rect = originalRect;
+    //         src.filterMode = filterMode;
+    //
+    //         Graphics.Blit(src, renderTex);
+    //         Graphics.Blit(renderTex, dest);
+    //         RenderTexture.ReleaseTemporary(renderTex);
+    //     }
+    // }
 
     private RenderTexture GetTemporaryTexture(int width, int height)
     {

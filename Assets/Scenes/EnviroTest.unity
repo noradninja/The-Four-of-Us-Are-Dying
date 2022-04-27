@@ -1884,9 +1884,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fae5e112b4074dbbb579d2561fa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableInternalResolution: 1
+  enableInternalResolution: 0
   InternalResolution: 3
-  screenResolution: 2
+  screenResolution: 3
   filterMode: 0
 --- !u!114 &121908228
 MonoBehaviour:
