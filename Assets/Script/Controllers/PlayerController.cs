@@ -497,7 +497,7 @@ public class PlayerController : MonoBehaviour
         && !flashlightDisabled && !FlashlightOff)
         {
             Focus();
-            if (camObject.fieldOfView < 28) camObject.fieldOfView = 28; //limit fov change 
+            if (camObject.fieldOfView < 26) camObject.fieldOfView = 26; //limit fov change 
         }
 //reset the flashlight and camera when we release the L trigger
         if (Input.GetKeyUp($"{VITA}{LTRIG}") && HasFlashlight)
@@ -613,10 +613,10 @@ public class PlayerController : MonoBehaviour
         }
         if (!Input.GetKey($"{VITA}{RTRIG}") && (!Input.GetKey($"{VITA}{LTRIG}")) && (!Input.GetKeyDown($"{VITA}{SQUARE}")))
         {
-            if (camObject.fieldOfView > 35f){
+            if (camObject.fieldOfView > 32f){
                 camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
             }
-            if (camObject.fieldOfView < 35f){
+            if (camObject.fieldOfView < 32f){
                 camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32;
             }
             if (UICanvasGroup.alpha != 0 && stamina >= 95.0f && !isStimulant && !isCharging){

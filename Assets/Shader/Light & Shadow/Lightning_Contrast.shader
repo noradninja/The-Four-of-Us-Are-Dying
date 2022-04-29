@@ -10,7 +10,7 @@
 		Stencil{
 			Ref [_StencilRef]
 			Comp Equal
-			Pass Replace
+			Pass Keep
 		}
 		Tags { "Queue" = "Transparent" "IgnoreProjector" = "True"}
 		// No culling or depth

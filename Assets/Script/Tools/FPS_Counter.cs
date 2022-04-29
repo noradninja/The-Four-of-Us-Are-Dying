@@ -10,10 +10,6 @@ public class FPS_Counter : MonoBehaviour {
 	public Text fpsText;
     public int frameRange = 60;
     public float updateInterval = 0.5f;
-    public int maxFPS;
-    public int minFPS;
-    float accum = 0.0f;
-    int frames = 0;
     float timeleft;
     int[] fpsBuffer;
 	int fpsBufferIndex;
@@ -32,9 +28,7 @@ void Start(){
     void Update()
     {
         timeleft -= Time.unscaledDeltaTime;
-        accum += Time.timeScale / Time.unscaledDeltaTime;
-        ++frames;
-      
+
         // Interval ended - update GUI text and start new interval
         if (timeleft <= 0.0)
         {
@@ -42,11 +36,9 @@ void Start(){
            // averageFPS = (accum / frames);
 			msFrame = (1/averageFPS) * 1000; //get ms/frame
             timeleft = updateInterval;
-            accum = 0.0f;
-            frames = 0;
             //Display the fps/ms and round to n decimals
             fpsText.text = (Mathf.Clamp(Mathf.RoundToInt(averageFPS),0,99).ToString("F0") + " FPS Average / " + 
-                                        msFrame.ToString("F2") + " ms/frame over " + frameRange/30 + " second(s)");
+                                        msFrame.ToString("F2") + " ms/frame");
             switch (Application.isEditor)
             {
 	            case false:
@@ -61,13 +53,13 @@ void Start(){
 		            decimal calcRAM = (((512-RAMFree)/512)*100);
 		            decimal percentRAM = Math.Round((decimal)calcRAM ,2);
 
-		            vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
-		            ramText.text = ("RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
+		            vramText.text = ("VRAM: " + VRAMFree + "MB Free- " + percentVRAM + "% Used");
+		            ramText.text = ("RAM: " + RAMFree + "MB Free- "+ percentRAM + "% Used");
 		            if (percentVRAM >= 75){
 			            vramText.color = Color.red;
 		            }
 		            else if(percentVRAM < 75 && percentVRAM > 50){
-			            vramText.color = Color.yellow;
+			            vramText.color = Color.white;
 		            }
 		            else vramText.color = Color.green;
 
@@ -75,7 +67,7 @@ void Start(){
 			            ramText.color = Color.red;
 		            }
 		            else if(percentRAM < 75 && percentRAM > 50){
-			            ramText.color = Color.yellow;
+			            ramText.color = Color.white;
 		            }
 		            else ramText.color = Color.green;
 
@@ -97,9 +89,10 @@ void Start(){
 		if (Mathf.RoundToInt(averageFPS) >= 30.00f){
 			fpsText.color = Color.green;
 		}
-		else if (Mathf.RoundToInt(averageFPS) < 30.00f) {
+		else if (Mathf.RoundToInt(averageFPS) < 25.00f) {
 			fpsText.color = Color.red;
 		}
+		else fpsText.color = Color.white;
     }
     void InitializeBuffer () {
 		if (frameRange <= 0) {
@@ -130,8 +123,6 @@ void Start(){
 		}
 		averageFPS = sum / frameRange;
         averageFPS += 1; //fix for off by one error cause I am fucking lazy
-		maxFPS = highest;
-		minFPS = lowest;
     }
     
 }

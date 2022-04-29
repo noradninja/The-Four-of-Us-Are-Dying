@@ -11,7 +11,7 @@ QualitySettings:
     pixelLightCount: 2
     shadows: 1
     shadowResolution: 0
-    shadowProjection: 1
+    shadowProjection: 0
     shadowCascades: 1
     shadowDistance: 6
     shadowNearPlaneOffset: 0.1
@@ -29,14 +29,14 @@ QualitySettings:
     vSyncCount: 0
     lodBias: 1
     maximumLODLevel: 0
-    streamingMipmapsActive: 0
+    streamingMipmapsActive: 1
     streamingMipmapsAddAllCameras: 1
     streamingMipmapsMemoryBudget: 128
     streamingMipmapsRenderersPerFrame: 128
     streamingMipmapsMaxLevelReduction: 1
     streamingMipmapsMaxFileIORequests: 128
     particleRaycastBudget: 512
-    asyncUploadTimeSlice: 11
+    asyncUploadTimeSlice: 16
     asyncUploadBufferSize: 3
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms:

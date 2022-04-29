@@ -1340,8 +1340,6 @@ MonoBehaviour:
   fpsText: {fileID: 105125784}
   frameRange: 30
   updateInterval: 0.05
-  maxFPS: 0
-  minFPS: 0
   averageFPS: 0
   msFrame: 0
   vramText: {fileID: 1481050169}
@@ -1837,7 +1835,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.5
+  near clip plane: 0.01
   far clip plane: 14
   field of view: 35
   orthographic: 0
@@ -1884,9 +1882,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b15fae5e112b4074dbbb579d2561fa1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableInternalResolution: 0
+  enableInternalResolution: 1
   InternalResolution: 3
-  screenResolution: 3
+  screenResolution: 2
   filterMode: 0
 --- !u!114 &121908228
 MonoBehaviour:
@@ -1983,14 +1981,14 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df10d082291c18b449171f04cd8b5cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   contrastMaterial: {fileID: 2100000, guid: 06d01fb1c58e2364a9d74dd07bb97203, type: 2}
   skyboxMaterial: {fileID: 2100000, guid: a4d8809d9d08cc24d9f0208c935d75eb, type: 2}
-  contrastValue: 0.033985615
+  contrastValue: 0
   maxShadowAmount: 0.05
   tintColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &126963333
@@ -6616,7 +6614,6 @@ GameObject:
   - component: {fileID: 446414586}
   - component: {fileID: 446414589}
   - component: {fileID: 446414587}
-  - component: {fileID: 446414588}
   m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
@@ -6651,17 +6648,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   resolution: 64
   thisLight: {fileID: 446414589}
---- !u!114 &446414588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 446414585}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!108 &446414589
 Light:
   m_ObjectHideFlags: 0
@@ -9010,7 +8996,6 @@ GameObject:
   - component: {fileID: 618167704}
   - component: {fileID: 618167703}
   - component: {fileID: 618167702}
-  - component: {fileID: 618167705}
   m_Layer: 10
   m_Name: Spot Light
   m_TagString: Untagged
@@ -9029,7 +9014,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26dc97c53c1f0564b9e0d61b0eefd665, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  resolution: 128
+  resolution: 64
   thisLight: {fileID: 618167703}
 --- !u!108 &618167703
 Light:
@@ -9059,7 +9044,7 @@ Light:
   m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 1651511
+    m_Bits: 1651221
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
@@ -9082,17 +9067,6 @@ Transform:
   m_Father: {fileID: 1953679438}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -12.580001, y: -287.76, z: 88.079}
---- !u!114 &618167705
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 618167701}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &619680636
 GameObject:
   m_ObjectHideFlags: 0
@@ -12445,7 +12419,7 @@ MonoBehaviour:
   parentRootComponent: {fileID: 1740707297}
   selfRenderer: {fileID: 797209490}
   showGizmo: 1
-  showGizmoSelected: 0
+  showGizmoSelected: 1
   isPartVolume: 0
   isSubdividedPart: 0
   isCalculated: 0
@@ -14060,7 +14034,7 @@ MonoBehaviour:
   distanceFromGeometry: 0
   pressed: 0
   magicLightProbes: {fileID: 0}
-  combined: 0
+  combined: 1
   targetProbeGroup: {fileID: 925815014}
   warningShow: 0
 --- !u!220 &925815014
@@ -18254,7 +18228,6 @@ GameObject:
   - component: {fileID: 1208534569}
   - component: {fileID: 1208534568}
   - component: {fileID: 1208534567}
-  - component: {fileID: 1208534571}
   m_Layer: 19
   m_Name: Decal C
   m_TagString: Untagged
@@ -18335,17 +18308,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &1208534571
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1208534566}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1208852277
 GameObject:
   m_ObjectHideFlags: 0
@@ -23557,7 +23519,7 @@ GameObject:
   - component: {fileID: 1550034750}
   - component: {fileID: 1550034752}
   m_Layer: 0
-  m_Name: Fill_Light_Mixed
+  m_Name: Fill_Light_RT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29428,7 +29390,7 @@ MonoBehaviour:
   lastCornersDetectionThresholdMax: 5
   lastMaxProbesInVolume: 10000
   maxProbesInVolume: 10000
-  defaultMaxProbesCount: 0
+  defaultMaxProbesCount: 10000
   lastVolumeSpacing: 0.4
   lastVolumeSpacingMin: 0.4
   lastVolumeSpacingMax: 5
@@ -29445,7 +29407,7 @@ MonoBehaviour:
   collisionDetectionRadius: 0.1
   saveProbesNearbyGeometry: 1
   cornerProbesSpacing: 0.5
-  nearbyGeometryDetectionRadius: 0.5
+  nearbyGeometryDetectionRadius: 0.6
   nearbyGeometryDetectionRadiusMin: 0
   nearbyGeometryDetectionRadiusMax: 0
   distanceFromNearbyGeometry: 0.1
@@ -29485,7 +29447,7 @@ MonoBehaviour:
   lastEquivalentVolumeFillingRate: 0
   lastUnlitVolumeFillingRate: 0
   lastFreeVolumeFillingRate: 0
-  lastCornerProbesSpacing: 0
+  lastCornerProbesSpacing: 0.5
   lastDistanceFromGeometry: 0
   debugMode: 0
   debugObjectScale: 0.1
@@ -31278,12 +31240,12 @@ Prefab:
     - target: {fileID: 108864759843816864, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 1588225
+      value: 1057792
       objectReference: {fileID: 0}
     - target: {fileID: 108118637916027536, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 1588225
+      value: 1057792
       objectReference: {fileID: 0}
     - target: {fileID: 108593279032388292, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
@@ -31297,6 +31259,16 @@ Prefab:
     - target: {fileID: 1607934499298728, guid: 3074ae5d034113449a1dac4553b684e8, type: 2}
       propertyPath: m_StaticEditorFlags
       value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114496050817168538, guid: 3074ae5d034113449a1dac4553b684e8,
+        type: 2}
+      propertyPath: resolution
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 108406716307935654, guid: 3074ae5d034113449a1dac4553b684e8,
+        type: 2}
+      propertyPath: m_Shadows.m_Resolution
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114717108812227434, guid: 3074ae5d034113449a1dac4553b684e8, type: 2}
@@ -32989,6 +32961,22 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: fa65eb37d795fd7448b1c836a3a090ee,
     type: 3}
   m_PrefabInternal: {fileID: 2144670972}
+--- !u!1 &1943444084 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1214192506048716, guid: 3074ae5d034113449a1dac4553b684e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1809631193}
+--- !u!114 &1943444089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1943444084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1947181143
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Maple_Bush_bark
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _FRESNELMODEL_SCHLICK _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _GLOSSYREFLECTIONS_OFF
-    _METALLICGLOSSMAP _NORMALDISTMODEL_BLINNPHONG _NORMALMAP _SMITHGEOSHADOWMODEL_NONE
+  m_ShaderKeywords: _FRESNELMODEL_SCHLICK _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _METALLICGLOSSMAP
+    _NORMALDISTMODEL_BLINNPHONG _NORMALMAP _SMITHGEOSHADOWMODEL_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -222,7 +222,7 @@ Material:
     - _GeoShadowModel: 0
     - _GlossMapScale: 0.25
     - _Glossiness: 0.05
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
     - _IntensityVC: 0
     - _IntersectFold: 0
     - _IntersectThreshold: 1

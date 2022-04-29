@@ -81,13 +81,14 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.Low:
                     width = 640;
                     height = 368;
-                    renderDivisor = 2f;
+                    renderDivisor = 1.5f;
                     break;
                 case internalResolution.PSP:
                     width = 480;
                     height = 272;
-                    renderDivisor = 1f; //this gives us a slightly smaller 400x227 resolution for output
-                    break;
+                    renderDivisor = 1.85f; //this gives us a slightly
+                                            //smaller 346 x 199 resolution for output
+                    break;                  //we use FXAA to make up for this; it's faster 
             }
 
             originalRect = camera.rect;
@@ -97,20 +98,20 @@ public class CameraResolutionScaler : MonoBehaviour
         }
     }
 
-    // private void OnRenderImage(RenderTexture src, RenderTexture dest)
-    // {
-    //     if (!enableInternalResolution) Graphics.Blit(src, dest);
-    //     else
-    //     {
-    //         renderTex = GetTemporaryTexture(width, height);
-    //         camera.rect = originalRect;
-    //         src.filterMode = filterMode;
-    //
-    //         Graphics.Blit(src, renderTex);
-    //         Graphics.Blit(renderTex, dest);
-    //         RenderTexture.ReleaseTemporary(renderTex);
-    //     }
-    // }
+    private void OnRenderImage(RenderTexture src, RenderTexture dest)
+    {
+        if (!enableInternalResolution) Graphics.Blit(src, dest);
+        else
+        {
+            renderTex = GetTemporaryTexture(width, height);
+            camera.rect = originalRect;
+            src.filterMode = filterMode;
+    
+            Graphics.Blit(src, renderTex);
+            Graphics.Blit(renderTex, dest);
+            RenderTexture.ReleaseTemporary(renderTex);
+        }
+    }
 
     private RenderTexture GetTemporaryTexture(int width, int height)
     {
