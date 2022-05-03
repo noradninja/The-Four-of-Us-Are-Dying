@@ -40,7 +40,7 @@ public class Crepuscular : MonoBehaviour
                 material.SetVector (Parameter, new Vector4 (blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
 
                 // vertical blur
-                RenderTexture rt2 = RenderTexture.GetTemporary(128, 64, 0, source.format);
+                RenderTexture rt2 = RenderTexture.GetTemporary(128, 128, 0, source.format);
                 rt2.filterMode = FilterMode.Bilinear;
                 Graphics.Blit (blurTex, rt2, material, 1);
                 RenderTexture.ReleaseTemporary (blurTex);

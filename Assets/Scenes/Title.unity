@@ -521,7 +521,6 @@ GameObject:
   - component: {fileID: 420257349}
   - component: {fileID: 420257348}
   - component: {fileID: 420257351}
-  - component: {fileID: 420257352}
   - component: {fileID: 420257354}
   m_Layer: 0
   m_Name: Main Camera
@@ -608,21 +607,6 @@ MonoBehaviour:
   intensity: 3.4
   threshold: 0.3
   softKnee: 0
---- !u!114 &420257352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 420257347}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b15fae5e112b4074dbbb579d2561fa1b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  enableInternalResolution: 1
-  renderResolution: 0
-  screenResolution: 0
-  filterMode: 1
 --- !u!114 &420257354
 MonoBehaviour:
   m_ObjectHideFlags: 0

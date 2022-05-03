@@ -365,9 +365,6 @@
     <Reference Include="UnityEditor.Purchasing">
       <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
-    <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.core@3.0.0-preview/CoreRP/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/josh/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
     </Reference>

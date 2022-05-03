@@ -77,23 +77,28 @@ Shader "Lighting/Crepuscular Rays" {
 
 				// get our y vector direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
-				if (light.y < 0){
+				if (light.y < -0.1h){
 					deltaTexCoord = (i.uv + light.xy);
 				}
 				
-				if (light.y > 0){
+				if (light.y > 0.1h){
 					deltaTexCoord = (i.uv - light.xy);
+				}
+
+				if (light.y > -0.1h && light.y < 0.1h)
+				{
+					deltaTexCoord = (i.uv);
 				}
 			
 				
 				// Divide by number of samples and scale by control factor.
-				deltaTexCoord *= 1.0f / _NumSamples * _Density;
+				deltaTexCoord *= 1.0h / _NumSamples * _Density;
 				// Store initial sample.
 				half2 uv = i.uv;
 				half3 color = tex2D(_MainTex, uv);
 				//half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 				// Set up illumination decay factor.
-				half illuminationDecay = 1.0f;
+				half illuminationDecay = 1.0h;
 				// Evaluate summation from Equation 3 NUM_SAMPLES iterations.
 				for (int i = 0; i < _NumSamples; i++)
 				{
@@ -104,7 +109,7 @@ Shader "Lighting/Crepuscular Rays" {
 					//half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 					// Apply sample attenuation scale/decay factors.
 					sample *= illuminationDecay * (_Weight/ _NumSamples*4);
-					sample *= 5;
+					sample *= 4;
 					// Accumulate combined color.
 					color += sample;
 					// Update exponential decay factor.
@@ -113,7 +118,7 @@ Shader "Lighting/Crepuscular Rays" {
 				//drop color
 				//color = (color.r + color.g + color.b)/3;
 				// Output final color with a further scale control factor.
-				return max(half4(color * _Exposure, 1), 0.125f);
+				return max(half4(color * _Exposure, 1), 0.15h);
 			}
 /////////////// SGX Horizontal Blur /////////////////////////////		
 		v2f_withBlurCoordsSGX vertBlurHorizontalSGX (appdata_img v)
@@ -177,7 +182,7 @@ Shader "Lighting/Crepuscular Rays" {
 				fixed contrast = _Contrast;
 				sample = sample.r + sample.g + sample.b;
 				//add our ray greyscale samples at - 25% brightness to the main image 
-				return  (((col) + (sample * 0.25h))- 0.5h) * contrast + 0.5h;
+				return  (((col) + (sample * 0.4h))- 0.5h) * contrast + 0.325h;
 			}
 		ENDCG
 

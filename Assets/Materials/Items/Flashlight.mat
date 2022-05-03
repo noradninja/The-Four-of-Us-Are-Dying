@@ -8,7 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Flashlight
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _EMISSION _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+  m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED GSAA _BAKERY_NONE
+    _EMISSION _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,6 +25,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _BumpMap2:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DDetailsMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DDetailsNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DFG:
+        m_Texture: {fileID: 2800000, guid: 32061de8f9d4b5f4a85fa77fc6db8332, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -42,8 +55,20 @@ Material:
         m_Texture: {fileID: 2800000, guid: 1d38a532a1f8d8d4f9f3a8e7169eacad, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emissive:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Height:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 615bb631bc30a654b8e93c3250aea405, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -62,29 +87,126 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RNM0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RNM1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RNM2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Specular:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
+    - BAKERY: 0
+    - DETAILS_MODE: 0
+    - UI_AdvancedHeader: 0
+    - UI_BakeryHeader: 0
+    - UI_ChannelSelector: 0
+    - UI_DPlanarAxisSelector: 0
+    - UI_DetailAlbedoNote: 0
+    - UI_DetailSmoothNote: 0
+    - UI_DetailsMapNote: 0
+    - UI_DetailsMapNoteSeparate: 0
+    - UI_FaderHeader: 0
+    - UI_ForceBoxProjectionNote: 0
+    - UI_GSAAHeader: 0
+    - UI_GSAANote: 0
+    - UI_IgnoreMaskNote: 0
+    - UI_InternalsHeader: 0
+    - UI_LightmappingHeader: 0
+    - UI_MainHeader: 1
+    - UI_MetallicRemap: 0
+    - UI_ParallaxHeader: 0
+    - UI_PlanarAxisSelector: 0
+    - UI_SmoothnessRemap: 0
+    - _AOChannel: 1
+    - _AlbedoChannel: 0
+    - _BakedSpacular: 1
+    - _Bakery: 0
+    - _BakeryEnabled: 0
+    - _BakerySHNonLinear: 0
+    - _Bicubic: 0
     - _Bump2Scale: 1
     - _BumpScale: 2
+    - _BumpShadowHardness: 50
+    - _BumpShadowHeightScale: 0.2
     - _CrossFade: 0
     - _Cull: 2
+    - _CullMode: 2
+    - _Culling: 2
     - _Cutoff: 0.5
+    - _DAlbedoScale: 1
+    - _DDetailsMapRef1: 0
+    - _DDetailsMapRef2: 0
+    - _DIgnoreMask: 0
+    - _DMappingSpace: 0
+    - _DNormalFlipY: 0
+    - _DNormalScale: 1
+    - _DPlanarAxisX: 0
+    - _DPlanarAxisY: 2
+    - _DSmoothScale: 1
+    - _DUVChannel: 0
+    - _DetailAsTintMask: 0
+    - _DetailMaskChannel: 2
     - _DetailNormalMapScale: 1
+    - _DetailsOverlay: 0
     - _DstBlend: 0
+    - _EmissionChannel: 0
+    - _EmissionEnabled: 0
+    - _EmissiveBright: 0
+    - _EnableGSAA: 1
+    - _EnableParallax: 0
+    - _ExposureOcclusion: 0.2
+    - _FlipBumpY: 0
+    - _ForceBoxProject: 0
+    - _GSAAThreshold: 0.1
+    - _GSAAVariance: 0.05
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HeightRefPlane: 0.5
+    - _HeightScale: 0.006
+    - _HeightStepsMax: 16
+    - _HeightStepsMin: 8
     - _IntensityVC: 1
+    - _LTCGI: 0
+    - _LightmapSpecular: 1
+    - _LightmapSpecularMaxSmoothness: 1
+    - _MappingSpace: 0
+    - _MetalChannel: 0
     - _Metallic: 0
     - _Mode: 0
+    - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _PainValue: 1
     - _Parallax: 0.02
+    - _PlanarAxisX: 0
+    - _PlanarAxisY: 2
+    - _RoughnessMode: 0
+    - _Shininess: 1
+    - _SmoothChannel: 3
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
+    - _SpecOcclusion: 0.5
     - _SpecularHighlights: 1
+    - _SpecularRoughnessMod: 1
+    - _Specularity: 2
     - _SrcBlend: 1
     - _StencilRef: 1
     - _UVSec: 0
     - _ZWrite: 1
+    - _specularAntiAliasingThreshold: 0.25
+    - _specularAntiAliasingVariance: 0.15
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MetallicRemap: {r: 0, g: 1, b: 0, a: 1}
+    - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}

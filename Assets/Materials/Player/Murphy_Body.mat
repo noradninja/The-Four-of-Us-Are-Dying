@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Murphy_Body
   m_Shader: {fileID: 4800000, guid: 8a0a4e7f5be03ac46bc1d4a23d357436, type: 3}
-  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+  m_ShaderKeywords: _METALLICGLOSSMAP _METALLICSPECGLOSSMAP _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -42,6 +42,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 73a302eb2a96fe64b993bf89a7d4601a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Emissive:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 7744df182688bb145bf30a5e3cafb12e, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -62,6 +66,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Specular:
+        m_Texture: {fileID: 2800000, guid: b8811c3fc53298d48bfc5ef9c3c22d89, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Bump2Scale: 1
     - _BumpScale: 1
@@ -72,6 +80,7 @@ Material:
     - _DetailMask: 1
     - _DetailNormalMapScale: 5
     - _DstBlend: 0
+    - _EmissiveBright: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.125
     - _GlossyReflections: 1
@@ -81,11 +90,14 @@ Material:
     - _OcclusionStrength: 0
     - _PainValue: 0.1
     - _Parallax: 0.08
+    - _Shininess: 0.258
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _Specularity: 0.767
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}

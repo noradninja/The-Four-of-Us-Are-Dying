@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Japanese_Maple_Bark 1
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _FRESNELMODEL_SCHLICK _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _METALLICGLOSSMAP
-    _NORMALDISTMODEL_BLINNPHONG _SMITHGEOSHADOWMODEL_NONE
+  m_ShaderKeywords: _BAKERY_NONE _FRESNELMODEL_SCHLICK _GEOSHADOWMODEL_ASHIKHMINSHIRLEY
+    _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALDISTMODEL_BLINNPHONG _SMITHGEOSHADOWMODEL_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -29,6 +29,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Control:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DFG:
+        m_Texture: {fileID: 2800000, guid: 15666b1e4a43bd44ab4d0fde9f680eb1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -151,6 +155,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RNM0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RNM1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RNM2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _ReflectTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -179,9 +195,12 @@ Material:
     - _AlphaClip: 0
     - _AlphaMapType: 999
     - _Anisotropic: 0
+    - _Bakery: 0
     - _Blend: 0
     - _Bump2Scale: 1
     - _BumpScale: 2
+    - _BumpShadowHardness: 50
+    - _BumpShadowHeightScale: 0.2
     - _ColorAmplify: 1
     - _ControlScriptFlag: 0
     - _CrossFade: 0
@@ -216,6 +235,7 @@ Material:
     - _EmissionAffectObject: 1
     - _EmissionFold: 0
     - _EmissionToggle: 0
+    - _ExposureOcclusion: 0.2
     - _FogOffset: 0
     - _FogToggle: 1
     - _FresnelModel: 0
@@ -228,6 +248,7 @@ Material:
     - _IntersectThreshold: 1
     - _IntersectToggle: 0
     - _Ior: 1.5
+    - _LTCGI: 0
     - _Layer0AOScale: 1
     - _Layer0AnimActive: 0
     - _Layer0AnimCellEnd: 0
@@ -360,6 +381,8 @@ Material:
     - _LightFold: 1
     - _LightMode: 1
     - _LightProbes: 0
+    - _LightmapSpecular: 1
+    - _LightmapSpecularMaxSmoothness: 1
     - _ManualControl: 0
     - _Metallic: 0
     - _Metallic0: 0
@@ -371,6 +394,7 @@ Material:
     - _MoveUVToggle: 0
     - _MyCullMode: 2
     - _NormalDistModel: 0
+    - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _OptionsFold: 1
     - _PainValue: 1
@@ -438,6 +462,8 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
+    - _specularAntiAliasingThreshold: 0.25
+    - _specularAntiAliasingVariance: 0.15
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBack: {r: 1, g: 1, b: 1, a: 1}
