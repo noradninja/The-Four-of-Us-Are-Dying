@@ -6,8 +6,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whinarn.UnityMeshSimplifier
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AltGUI", "AltGUI.csproj", "{4C8FECEB-B6B5-5CE4-DFB2-82766D00D025}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{B2EE2F83-8646-1C88-1D3C-E549ADF300C2}"
@@ -32,10 +30,6 @@ Global
 		{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C8FECEB-B6B5-5CE4-DFB2-82766D00D025}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4C8FECEB-B6B5-5CE4-DFB2-82766D00D025}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4C8FECEB-B6B5-5CE4-DFB2-82766D00D025}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4C8FECEB-B6B5-5CE4-DFB2-82766D00D025}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU

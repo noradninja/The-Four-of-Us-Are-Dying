@@ -36,25 +36,34 @@ public class CameraResolutionScaler : MonoBehaviour
     private void Awake()
     {
         camera = GetComponent<Camera>();
-       
+
         if (!Application.isEditor)
             switch (screenResolution)
             {
                 case currentResolution.Full:
-                    Screen.SetResolution(960, 544, true, 60);
+                    Screen.SetResolution(960, 544, true);
+                    QualitySettings.vSyncCount = 30;
+                    //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Mid:
-                    Screen.SetResolution(720, 408, true, 60);
+                    Screen.SetResolution(720, 408, true);
+                    QualitySettings.vSyncCount = 30;
+                    //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Low:
-                    Screen.SetResolution(640, 368, true, 60);
+                    Screen.SetResolution(640, 368, true);
+                    QualitySettings.vSyncCount = 30;
+                    //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.PSP:
-                    Screen.SetResolution(480, 272, true, 60);
+                    Screen.SetResolution(480, 272, true);
+                    QualitySettings.vSyncCount = 30;
+                    //Application.targetFrameRate = 25;
                     break;
             }
         else
-            Application.targetFrameRate = 60;
+            QualitySettings.vSyncCount = 60;
+            //Application.targetFrameRate = 25;
     }
 
     private void OnDestroy()
@@ -79,14 +88,14 @@ public class CameraResolutionScaler : MonoBehaviour
                     renderDivisor = 1.334f;
                     break;
                 case internalResolution.Low:
-                    width = 640;
-                    height = 368;
-                    renderDivisor = 1.5f;
+                    width = 512;
+                    height = 256;
+                    renderDivisor = 2f;
                     break;
                 case internalResolution.PSP:
                     width = 480;
                     height = 272;
-                    renderDivisor = 2f; //this gives us a slightly smaller 400x227 resolution for output
+                    renderDivisor = 2f; //this gives us a slightly smaller 348x200 resolution for output
                     break;
             }
 
@@ -118,6 +127,7 @@ public class CameraResolutionScaler : MonoBehaviour
         temporaryTexture.wrapMode = TextureWrapMode.Clamp;
         temporaryTexture.anisoLevel = 0;
         temporaryTexture.filterMode = filterMode;
+        //temporaryTexture.useMipMap = false;
 
         return temporaryTexture;
     }

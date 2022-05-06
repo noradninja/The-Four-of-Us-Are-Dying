@@ -764,10 +764,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AltGUI.csproj">
-      <Project>{4C8FECEB-B6B5-5CE4-DFB2-82766D00D025}</Project>
-      <Name>AltGUI</Name>
-    </ProjectReference>
     <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
       <Project>{125B9EB7-2796-10F2-223B-39B2BFB911FA}</Project>
       <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>

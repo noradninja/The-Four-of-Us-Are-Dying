@@ -28,7 +28,7 @@ public class Crepuscular : MonoBehaviour
 	//[ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
-		var blurTex = RenderTexture.GetTemporary(Mathf.RoundToInt(128), Mathf.RoundToInt(128), 0, source.format);
+		var blurTex = RenderTexture.GetTemporary(256, 128, 0, source.format);
 		material.SetVector(LightPos, GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward)); 
 		Graphics.Blit(source, blurTex, material, 0);
 		material.SetTexture(blurTexString, blurTex);
@@ -40,14 +40,14 @@ public class Crepuscular : MonoBehaviour
                 material.SetVector (Parameter, new Vector4 (blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
 
                 // vertical blur
-                RenderTexture rt2 = RenderTexture.GetTemporary(128, 128, 0, source.format);
+                RenderTexture rt2 = RenderTexture.GetTemporary(256, 128, 0, source.format);
                 rt2.filterMode = FilterMode.Bilinear;
                 Graphics.Blit (blurTex, rt2, material, 1);
                 RenderTexture.ReleaseTemporary (blurTex);
                 blurTex = rt2;
 
                 // horizontal blur
-                rt2 = RenderTexture.GetTemporary(Mathf.RoundToInt(128), Mathf.RoundToInt(128), 0, source.format);
+                rt2 = RenderTexture.GetTemporary(256, 128, 0, source.format);
                 rt2.filterMode = FilterMode.Bilinear;
                 Graphics.Blit (blurTex, rt2, material, 2);
                 RenderTexture.ReleaseTemporary (blurTex);
