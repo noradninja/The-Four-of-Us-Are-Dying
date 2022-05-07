@@ -36,7 +36,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma fragment frag_Prefilter
             #pragma multi_compile _ UNITY_COLORSPACE_GAMMA
@@ -48,7 +48,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma fragment frag_Blur
             #define KERNEL_SMALL
@@ -59,7 +59,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma fragment frag_Blur
             #define KERNEL_MEDIUM
@@ -70,7 +70,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma fragment frag_Blur
             #define KERNEL_LARGE
@@ -81,7 +81,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma fragment frag_Blur
             #define KERNEL_VERYLARGE
@@ -92,7 +92,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma fragment frag_Blur2
             #include "Composition.cginc"
@@ -102,7 +102,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma multi_compile _ UNITY_COLORSPACE_GAMMA
             #pragma fragment frag_Composition
@@ -113,7 +113,7 @@ Shader "Hidden/Kino/Bokeh"
         {
             ZTest Always Cull Off ZWrite Off
             CGPROGRAM
-            #pragma target 3.0
+            #pragma target 2.0
             #pragma vertex vert
             #pragma fragment frag_CoC
             #include "Debug.cginc"

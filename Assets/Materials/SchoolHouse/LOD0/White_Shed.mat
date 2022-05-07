@@ -243,7 +243,7 @@ Material:
     - _Bicubic: 0
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 1
+    - _BumpScale: -2
     - _BumpShadowHardness: 60.9
     - _BumpShadowHeightScale: 0.5
     - _ColorAmplify: 1
@@ -302,7 +302,7 @@ Material:
     - _ForceBoxProject: 0
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
-    - _GlossMapScale: 0.115
+    - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5

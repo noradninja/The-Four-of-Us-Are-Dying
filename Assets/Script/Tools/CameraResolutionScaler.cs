@@ -42,27 +42,27 @@ public class CameraResolutionScaler : MonoBehaviour
             {
                 case currentResolution.Full:
                     Screen.SetResolution(960, 544, true);
-                    QualitySettings.vSyncCount = 30;
+                    QualitySettings.vSyncCount = 2;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Mid:
                     Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 30;
+                    QualitySettings.vSyncCount = 2;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Low:
                     Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 30;
+                    QualitySettings.vSyncCount = 2;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.PSP:
                     Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 30;
+                    QualitySettings.vSyncCount = 2;
                     //Application.targetFrameRate = 25;
                     break;
             }
         else
-            QualitySettings.vSyncCount = 60;
+            QualitySettings.vSyncCount = 1;
             //Application.targetFrameRate = 25;
     }
 

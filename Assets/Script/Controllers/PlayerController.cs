@@ -959,8 +959,8 @@ public class PlayerController : MonoBehaviour
     }
 
     private IEnumerator CountdownStimulant(float startVal, float endVal, float duration){
-        if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.855f){
-            StartCoroutine(LerpFocalLength (0.087f, 0.095f, 1.0f, 0.15f, 2.0f));
+        if (Camera.GetComponent<Kino.Bokeh>().focalLength <= 0.90f){
+            StartCoroutine(LerpFocalLength (0.090f, 0.125f, 1.0f, 0.15f, 2.0f));
         }
         float time = 0.0f;
         while (time < duration){
@@ -970,7 +970,7 @@ public class PlayerController : MonoBehaviour
         }
         cooldownValue = 0;
         cooldownValue = stimCooldown;
-        StartCoroutine(LerpFocalLength(0.095f, 0.087f, 0.5f, 0.20f, 2.0f));
+        StartCoroutine(LerpFocalLength(0.125f, 0.090f, 0.5f, 0.20f, 2.0f));
         if (!Input.GetKey(VITA + RTRIG)){
             StartCoroutine(RechargeStamina(((100-stamina)), stamina));
         }

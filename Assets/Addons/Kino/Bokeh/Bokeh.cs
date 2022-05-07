@@ -1,4 +1,4 @@
-﻿//
+﻿ //
 // Kino/Bokeh - Depth of field effect
 //
 // Copyright (C) 2016 Unity Technologies
@@ -202,8 +202,8 @@ namespace Kino
                 return;
             }
 
-            var width = 128;
-            var height = 128;
+            var width = 64;
+            var height = 64;
             var format = RenderTextureFormat.ARGBHalf;
 
             SetUpShaderParameters(source);
