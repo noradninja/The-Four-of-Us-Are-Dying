@@ -74,6 +74,13 @@ ModelImporter:
     100136: mixamorig:RightHandRing2
     100138: mixamorig:RightHandRing3
     100140: mixamorig:RightHandRing4
+    100142: Body
+    100144: Bottoms
+    100146: Eyelashes
+    100148: Eyes
+    100150: Hair
+    100152: Shoes
+    100154: Tops
     400000: charles01_hair02_au_d_mat_INST__LOD1
     400002: charles01_hands01_au_d_mat_INST_LOD1
     400004: charles01_head01_au_d_mat_INST_LOD1
@@ -145,16 +152,31 @@ ModelImporter:
     400136: mixamorig:RightHandRing2
     400138: mixamorig:RightHandRing3
     400140: mixamorig:RightHandRing4
+    400142: Body
+    400144: Bottoms
+    400146: Eyelashes
+    400148: Eyes
+    400150: Hair
+    400152: Shoes
+    400154: Tops
     2100000: charles_body01_ai_mat_INST
     2100002: charles01_hands01_au_d_mat_INST
     2100004: charles01_head01_au_d_mat_INST
     2100006: eye01_brown_an_mat_INST
     2100008: charles01_hair02_au_d_mat_INST_
+    2100010: No Name
     4300000: charles_body01_ai_mat_INST_LOD1
     4300002: charles01_hands01_au_d_mat_INST_LOD1
     4300004: charles01_head01_au_d_mat_INST_LOD1
     4300006: eye01_brown_an_mat_INST_LOD1
     4300008: charles01_hair02_au_d_mat_INST__LOD1
+    4300010: Body
+    4300012: Eyes
+    4300014: Eyelashes
+    4300016: Bottoms
+    4300018: Shoes
+    4300020: Hair
+    4300022: Tops
     7400000: Walk
     9500000: //RootNode
     13700000: charles01_hair02_au_d_mat_INST__LOD1
@@ -162,6 +184,13 @@ ModelImporter:
     13700004: charles01_head01_au_d_mat_INST_LOD1
     13700006: charles_body01_ai_mat_INST_LOD1
     13700008: eye01_brown_an_mat_INST_LOD1
+    13700010: Body
+    13700012: Bottoms
+    13700014: Eyelashes
+    13700016: Eyes
+    13700018: Hair
+    13700020: Shoes
+    13700022: Tops
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
