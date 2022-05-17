@@ -34,15 +34,15 @@ static const half2 kDiskKernel[1] = { half2(0, 0) };
 #if defined(KERNEL_SMALL)
 
 // rings = 1
-// points per ring = 2
-static const int kSampleCount = 6;
+// points per ring = 3
+static const int kSampleCount = 3;
 static const half2 kDiskKernel[kSampleCount] = {
     half2(0,0),
     half2(0.54545456,0),
     half2(0.16855472,0.5187581),
-    half2(-0.44128203,0.3206101),
-    half2(-0.48051673,0.2314047),
-    half2(-0.48051673,-0.23140468),
+    // half2(-0.44128203,0.3206101),
+    // half2(-0.48051673,0.2314047),
+    // half2(-0.48051673,-0.23140468),
 };
 
 #endif

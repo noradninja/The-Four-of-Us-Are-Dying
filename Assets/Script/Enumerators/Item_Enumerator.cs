@@ -109,7 +109,7 @@ public class Item_Enumerator : MonoBehaviour {
 
     // Update is called once per frame
     void Update (){
-		if (Input.GetKeyDown($"{joystick1}{CROSS}") && dialogBG.color == dialogOn && isActiveObject){
+		if (Input.GetButtonDown("Cross") && dialogBG.color == dialogOn && isActiveObject){
 		
 			switch (thisItem){
 
@@ -120,7 +120,7 @@ public class Item_Enumerator : MonoBehaviour {
 				break;
 
 				case pickupItem.battery :
-					print("That's a battery");
+					// print("That's a battery");
 					InventoryManager.batteryCount += 2;
 					string currentCount = $"{InventoryManager.batteryCount:D2}";
 					batteryText.text = currentCount;
@@ -128,20 +128,20 @@ public class Item_Enumerator : MonoBehaviour {
 				break;
 
 				case pickupItem.key :
-					print("That's a key");
+					// print("That's a key");
 					//do key shit here
 					InventoryManager.keyCount += 1;
 					Destroy(targetObject);				
 				break;
 
 				case pickupItem.health :
-					print("That's a medkit");
+					// print("That's a medkit");
 					InventoryManager.medCount += 1;
 					Destroy(targetObject);
 				break;
 
 				case pickupItem.stims :
-					print("That's a stimulant");
+					// print("That's a stimulant");
 					InventoryManager.stimCount += 1;
 					Destroy(targetObject);
 				break;

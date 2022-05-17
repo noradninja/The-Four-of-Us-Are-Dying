@@ -126,7 +126,7 @@ Material:
     - _Cull: 2
     - _CullMode: 2
     - _Culling: 2
-    - _Cutoff: 0.25
+    - _Cutoff: 0.2
     - _DAlbedoScale: 1
     - _DDetailsMapRef1: 0
     - _DDetailsMapRef2: 0
@@ -152,7 +152,7 @@ Material:
     - _ForceBoxProject: 0
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
-    - _GlossMapScale: 0.75
+    - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5

@@ -11,8 +11,8 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 	public GameObject inventoryCam;
 	public static bool inventoryOn = false;
 	public bool delayButton = false;
-	private  string VITA = "joystick button ";
-    private  int SELECT = 6;
+	// private  string VITA = "joystick button ";
+ //    private  int SELECT = 6;
 	private float tempAlpha;
 	private float time;
 
@@ -21,10 +21,10 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 		inventoryOn = false;
 		inventoryMat.color = new Color (1,1,1, 0);
 		inventoryCam.SetActive(false);
-		if (Application.isEditor){
-			//because the DS3 registers the buttons differently in Windows 
-			SELECT = 9;
-        }
+		// if (Application.isEditor){
+		// 	//because the DS3 registers the buttons differently in Windows 
+		// 	SELECT = 9;
+  //       }
 	}
 	
 	// Update is called once per frame
@@ -48,7 +48,7 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 			}
 		}
 		//this is for PSTV	
-		if (Input.GetKeyDown(VITA + SELECT) && !delayButton && !PlayerController.isMap){
+		if (Input.GetButtonDown("Select") && !delayButton && !PlayerController.isMap){
 			if (!inventoryOn){
 				StartCoroutine(CrossFade(0, 1, 0.5f));
 				inventoryOn = true;

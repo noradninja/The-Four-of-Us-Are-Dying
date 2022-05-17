@@ -42,27 +42,27 @@ public class CameraResolutionScaler : MonoBehaviour
             {
                 case currentResolution.Full:
                     Screen.SetResolution(960, 544, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Mid:
                     Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Low:
                     Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.PSP:
                     Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     //Application.targetFrameRate = 25;
                     break;
             }
-        else
-            QualitySettings.vSyncCount = 1;
+        else 
+            QualitySettings.vSyncCount = 0;
             //Application.targetFrameRate = 25;
     }
 
@@ -88,14 +88,14 @@ public class CameraResolutionScaler : MonoBehaviour
                     renderDivisor = 1.334f;
                     break;
                 case internalResolution.Low:
-                    width = 512;
-                    height = 256;
-                    renderDivisor = 2f;
+                    width = 640;
+                    height = 368;
+                    renderDivisor = 1.5f;
                     break;
                 case internalResolution.PSP:
                     width = 480;
                     height = 272;
-                    renderDivisor = 2f; //this gives us a slightly smaller 348x200 resolution for output
+                    renderDivisor = 1.94f;
                     break;
             }
 
