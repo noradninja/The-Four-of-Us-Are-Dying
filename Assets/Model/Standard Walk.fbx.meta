@@ -3,22 +3,22 @@ guid: 2ab09992104d00c45a452400848c92b1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: charles01_hair02_au_d_mat_INST__LOD1
-    100002: charles01_hands01_au_d_mat_INST_LOD1
-    100004: charles01_head01_au_d_mat_INST_LOD1
-    100006: charles_body01_ai_mat_INST_LOD1
-    100008: eye01_brown_an_mat_INST_LOD1
-    100010: mixamorig:Head
-    100012: mixamorig:HeadTop_End
-    100014: mixamorig:Hips
-    100016: mixamorig:LeftArm
-    100018: mixamorig:LeftFoot
-    100020: mixamorig:LeftForeArm
-    100022: mixamorig:LeftHand
-    100024: mixamorig:LeftHandIndex1
-    100026: mixamorig:LeftHandIndex2
-    100028: mixamorig:LeftHandIndex3
-    100030: mixamorig:LeftHandIndex4
+    100000: default
+    100002: mixamorig:Head
+    100004: mixamorig:HeadTop_End
+    100006: mixamorig:Hips
+    100008: mixamorig:LeftArm
+    100010: mixamorig:LeftFoot
+    100012: mixamorig:LeftForeArm
+    100014: mixamorig:LeftHand
+    100016: mixamorig:LeftHandIndex1
+    100018: mixamorig:LeftHandIndex2
+    100020: mixamorig:LeftHandIndex3
+    100022: mixamorig:LeftHandIndex4
+    100024: mixamorig:LeftHandRing1
+    100026: mixamorig:LeftHandRing2
+    100028: mixamorig:LeftHandRing3
+    100030: mixamorig:LeftHandRing4
     100032: mixamorig:LeftHandThumb1
     100034: mixamorig:LeftHandThumb2
     100036: mixamorig:LeftHandThumb3
@@ -37,66 +37,42 @@ ModelImporter:
     100062: mixamorig:RightHandIndex2
     100064: mixamorig:RightHandIndex3
     100066: mixamorig:RightHandIndex4
-    100068: mixamorig:RightHandThumb1
-    100070: mixamorig:RightHandThumb2
-    100072: mixamorig:RightHandThumb3
-    100074: mixamorig:RightHandThumb4
-    100076: mixamorig:RightLeg
-    100078: mixamorig:RightShoulder
-    100080: mixamorig:RightToe_End
-    100082: mixamorig:RightToeBase
-    100084: mixamorig:RightUpLeg
-    100086: mixamorig:Spine
-    100088: mixamorig:Spine1
-    100090: mixamorig:Spine2
-    100092: //RootNode
-    100094: mixamorig:LeftHandMiddle1
-    100096: mixamorig:LeftHandMiddle2
-    100098: mixamorig:LeftHandMiddle3
-    100100: mixamorig:LeftHandMiddle4
-    100102: mixamorig:LeftHandPinky1
-    100104: mixamorig:LeftHandPinky2
-    100106: mixamorig:LeftHandPinky3
-    100108: mixamorig:LeftHandPinky4
-    100110: mixamorig:LeftHandRing1
-    100112: mixamorig:LeftHandRing2
-    100114: mixamorig:LeftHandRing3
-    100116: mixamorig:LeftHandRing4
-    100118: mixamorig:RightHandMiddle1
-    100120: mixamorig:RightHandMiddle2
-    100122: mixamorig:RightHandMiddle3
-    100124: mixamorig:RightHandMiddle4
-    100126: mixamorig:RightHandPinky1
-    100128: mixamorig:RightHandPinky2
-    100130: mixamorig:RightHandPinky3
-    100132: mixamorig:RightHandPinky4
-    100134: mixamorig:RightHandRing1
-    100136: mixamorig:RightHandRing2
-    100138: mixamorig:RightHandRing3
-    100140: mixamorig:RightHandRing4
-    100142: Body
-    100144: Bottoms
-    100146: Eyelashes
-    100148: Eyes
-    100150: Hair
-    100152: Shoes
-    100154: Tops
-    400000: charles01_hair02_au_d_mat_INST__LOD1
-    400002: charles01_hands01_au_d_mat_INST_LOD1
-    400004: charles01_head01_au_d_mat_INST_LOD1
-    400006: charles_body01_ai_mat_INST_LOD1
-    400008: eye01_brown_an_mat_INST_LOD1
-    400010: mixamorig:Head
-    400012: mixamorig:HeadTop_End
-    400014: mixamorig:Hips
-    400016: mixamorig:LeftArm
-    400018: mixamorig:LeftFoot
-    400020: mixamorig:LeftForeArm
-    400022: mixamorig:LeftHand
-    400024: mixamorig:LeftHandIndex1
-    400026: mixamorig:LeftHandIndex2
-    400028: mixamorig:LeftHandIndex3
-    400030: mixamorig:LeftHandIndex4
+    100068: mixamorig:RightHandRing1
+    100070: mixamorig:RightHandRing2
+    100072: mixamorig:RightHandRing3
+    100074: mixamorig:RightHandRing4
+    100076: mixamorig:RightHandThumb1
+    100078: mixamorig:RightHandThumb2
+    100080: mixamorig:RightHandThumb3
+    100082: mixamorig:RightHandThumb4
+    100084: mixamorig:RightLeg
+    100086: mixamorig:RightShoulder
+    100088: mixamorig:RightToe_End
+    100090: mixamorig:RightToeBase
+    100092: mixamorig:RightUpLeg
+    100094: mixamorig:Spine
+    100096: mixamorig:Spine1
+    100098: mixamorig:Spine2
+    100100: Scientist_Male_Hair
+    100102: Scientist_Male_Head_Hands
+    100104: Scientist_Male_Torso
+    100106: //RootNode
+    400000: default
+    400002: mixamorig:Head
+    400004: mixamorig:HeadTop_End
+    400006: mixamorig:Hips
+    400008: mixamorig:LeftArm
+    400010: mixamorig:LeftFoot
+    400012: mixamorig:LeftForeArm
+    400014: mixamorig:LeftHand
+    400016: mixamorig:LeftHandIndex1
+    400018: mixamorig:LeftHandIndex2
+    400020: mixamorig:LeftHandIndex3
+    400022: mixamorig:LeftHandIndex4
+    400024: mixamorig:LeftHandRing1
+    400026: mixamorig:LeftHandRing2
+    400028: mixamorig:LeftHandRing3
+    400030: mixamorig:LeftHandRing4
     400032: mixamorig:LeftHandThumb1
     400034: mixamorig:LeftHandThumb2
     400036: mixamorig:LeftHandThumb3
@@ -115,82 +91,38 @@ ModelImporter:
     400062: mixamorig:RightHandIndex2
     400064: mixamorig:RightHandIndex3
     400066: mixamorig:RightHandIndex4
-    400068: mixamorig:RightHandThumb1
-    400070: mixamorig:RightHandThumb2
-    400072: mixamorig:RightHandThumb3
-    400074: mixamorig:RightHandThumb4
-    400076: mixamorig:RightLeg
-    400078: mixamorig:RightShoulder
-    400080: mixamorig:RightToe_End
-    400082: mixamorig:RightToeBase
-    400084: mixamorig:RightUpLeg
-    400086: mixamorig:Spine
-    400088: mixamorig:Spine1
-    400090: mixamorig:Spine2
-    400092: //RootNode
-    400094: mixamorig:LeftHandMiddle1
-    400096: mixamorig:LeftHandMiddle2
-    400098: mixamorig:LeftHandMiddle3
-    400100: mixamorig:LeftHandMiddle4
-    400102: mixamorig:LeftHandPinky1
-    400104: mixamorig:LeftHandPinky2
-    400106: mixamorig:LeftHandPinky3
-    400108: mixamorig:LeftHandPinky4
-    400110: mixamorig:LeftHandRing1
-    400112: mixamorig:LeftHandRing2
-    400114: mixamorig:LeftHandRing3
-    400116: mixamorig:LeftHandRing4
-    400118: mixamorig:RightHandMiddle1
-    400120: mixamorig:RightHandMiddle2
-    400122: mixamorig:RightHandMiddle3
-    400124: mixamorig:RightHandMiddle4
-    400126: mixamorig:RightHandPinky1
-    400128: mixamorig:RightHandPinky2
-    400130: mixamorig:RightHandPinky3
-    400132: mixamorig:RightHandPinky4
-    400134: mixamorig:RightHandRing1
-    400136: mixamorig:RightHandRing2
-    400138: mixamorig:RightHandRing3
-    400140: mixamorig:RightHandRing4
-    400142: Body
-    400144: Bottoms
-    400146: Eyelashes
-    400148: Eyes
-    400150: Hair
-    400152: Shoes
-    400154: Tops
-    2100000: charles_body01_ai_mat_INST
-    2100002: charles01_hands01_au_d_mat_INST
-    2100004: charles01_head01_au_d_mat_INST
-    2100006: eye01_brown_an_mat_INST
-    2100008: charles01_hair02_au_d_mat_INST_
-    2100010: No Name
-    4300000: charles_body01_ai_mat_INST_LOD1
-    4300002: charles01_hands01_au_d_mat_INST_LOD1
-    4300004: charles01_head01_au_d_mat_INST_LOD1
-    4300006: eye01_brown_an_mat_INST_LOD1
-    4300008: charles01_hair02_au_d_mat_INST__LOD1
-    4300010: Body
-    4300012: Eyes
-    4300014: Eyelashes
-    4300016: Bottoms
-    4300018: Shoes
-    4300020: Hair
-    4300022: Tops
-    7400000: Walk
+    400068: mixamorig:RightHandRing1
+    400070: mixamorig:RightHandRing2
+    400072: mixamorig:RightHandRing3
+    400074: mixamorig:RightHandRing4
+    400076: mixamorig:RightHandThumb1
+    400078: mixamorig:RightHandThumb2
+    400080: mixamorig:RightHandThumb3
+    400082: mixamorig:RightHandThumb4
+    400084: mixamorig:RightLeg
+    400086: mixamorig:RightShoulder
+    400088: mixamorig:RightToe_End
+    400090: mixamorig:RightToeBase
+    400092: mixamorig:RightUpLeg
+    400094: mixamorig:Spine
+    400096: mixamorig:Spine1
+    400098: mixamorig:Spine2
+    400100: Scientist_Male_Hair
+    400102: Scientist_Male_Head_Hands
+    400104: Scientist_Male_Torso
+    400106: //RootNode
+    2100000: No Name
+    2300000: default
+    3300000: default
+    4300000: default
+    4300002: Scientist_Male_Hair
+    4300004: Scientist_Male_Head_Hands
+    4300006: Scientist_Male_Torso
+    7400000: mixamo.com
     9500000: //RootNode
-    13700000: charles01_hair02_au_d_mat_INST__LOD1
-    13700002: charles01_hands01_au_d_mat_INST_LOD1
-    13700004: charles01_head01_au_d_mat_INST_LOD1
-    13700006: charles_body01_ai_mat_INST_LOD1
-    13700008: eye01_brown_an_mat_INST_LOD1
-    13700010: Body
-    13700012: Bottoms
-    13700014: Eyelashes
-    13700016: Eyes
-    13700018: Hair
-    13700020: Shoes
-    13700022: Tops
+    13700000: Scientist_Male_Hair
+    13700002: Scientist_Male_Head_Hands
+    13700004: Scientist_Male_Torso
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -212,7 +144,7 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 3
+    animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -221,7 +153,7 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Walk
+      name: mixamo.com
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 35
@@ -232,7 +164,7 @@ ModelImporter:
       loop: 0
       hasAdditiveReferencePose: 0
       loopTime: 1
-      loopBlend: 0
+      loopBlend: 1
       loopBlendOrientation: 0
       loopBlendPositionY: 0
       loopBlendPositionXZ: 0
@@ -252,7 +184,7 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 2
+    meshCompression: 0
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 1
@@ -274,9 +206,9 @@ ModelImporter:
     previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
-    normalSmoothAngle: 120
+    normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 0
+    tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0

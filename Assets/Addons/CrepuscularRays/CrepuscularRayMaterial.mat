@@ -35,7 +35,7 @@ Material:
     - _Decay: 0.792
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.066
+    - _Density: 0.033
     - _Exposure: 0.075
     - _NumSamples: 10
     - _Parameter: 5

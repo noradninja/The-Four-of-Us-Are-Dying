@@ -12,18 +12,28 @@ public class SFXController : MonoBehaviour {
 	public float distance = 0.055f;
 	private RaycastHit hit;
 	private int i;
+	private int tick;
 	private int maskValue;
 
-	public void FixedUpdate(){
+	private void Update()
+	{
+		if (tick == 10)
+		{
+			every10FrameUpdate();//TODO: write this so its a subscriber fired event so we can ditch Update()
+			tick = 0;
+		}
+		else tick++;
+	}
+	public void every10FrameUpdate(){
 		maskValue = (LayerMask.GetMask("Ground"));
 		if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)){
-			Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
+			//Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
 			currentClips = grassSounds;
 		}
 		else{
 			maskValue = (LayerMask.GetMask("Road"));
 			if (!Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)) return;
-			Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
+		//	Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
 			currentClips = roadSounds;
 		}
 	}

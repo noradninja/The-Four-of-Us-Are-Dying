@@ -88,12 +88,6 @@
     <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PolyfewMenu.cs" />
     <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PopupToggleTemplate.cs" />
     <Compile Include="Assets\Addons\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
-    <Compile Include="Assets\MT Assets\Skinned Mesh Combiner\Editor\Anima2D.cs" />
-    <Compile Include="Assets\MT Assets\Skinned Mesh Combiner\Editor\CurrentSRP.cs" />
-    <Compile Include="Assets\MT Assets\Skinned Mesh Combiner\Editor\Datasets\SmLayersOrdenerPreferences.cs" />
-    <Compile Include="Assets\MT Assets\Skinned Mesh Combiner\Editor\Greetings.cs" />
-    <Compile Include="Assets\MT Assets\Skinned Mesh Combiner\Editor\Menu.cs" />
-    <Compile Include="Assets\MT Assets\Skinned Mesh Combiner\Editor\SpriteMeshesLayersOrdener.cs" />
     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
     <Compile Include="Assets\Script\Editor\FOV_Render.cs" />
     <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
