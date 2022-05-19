@@ -42,22 +42,22 @@ public class CameraResolutionScaler : MonoBehaviour
             {
                 case currentResolution.Full:
                     Screen.SetResolution(960, 544, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 0;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Mid:
                     Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 0;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.Low:
                     Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 0;
                     //Application.targetFrameRate = 25;
                     break;
                 case currentResolution.PSP:
                     Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 0;
                     //Application.targetFrameRate = 25;
                     break;
             }
@@ -85,7 +85,7 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.Mid:
                     width = 720;
                     height = 408;
-                    renderDivisor = 1.334f;
+                    renderDivisor = 1.3948f;
                     break;
                 case internalResolution.Low:
                     width = 640;
@@ -95,7 +95,7 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.PSP:
                     width = 480;
                     height = 272;
-                    renderDivisor =2.25f;
+                    renderDivisor =1.4315f;
                     break;
             }
 
@@ -123,7 +123,7 @@ public class CameraResolutionScaler : MonoBehaviour
 
     private RenderTexture GetTemporaryTexture(int width, int height)
     {
-        var temporaryTexture = RenderTexture.GetTemporary(width, height);
+        var temporaryTexture = RenderTexture.GetTemporary(480, 272);
         temporaryTexture.wrapMode = TextureWrapMode.Clamp;
         temporaryTexture.anisoLevel = 0;
         temporaryTexture.filterMode = filterMode;
