@@ -95,7 +95,7 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.PSP:
                     width = 480;
                     height = 272;
-                    renderDivisor = 1.94f;
+                    renderDivisor =2.25f;
                     break;
             }
 

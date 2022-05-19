@@ -13,6 +13,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	public bool enableCulling = true;
 	private float distance;
 	private Vector3 viewPos;
+	private Vector3 thisPos;
+	private Vector3 playerPos;
 	private int tick = 0;
 	private Renderer thisRenderer;
 	private Camera mainCam;
@@ -38,7 +40,9 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
 	private void HalfUpdate()
 	{
-		distance = Vector3.Distance(this.transform.position, player.transform.position);//how far are we from the player
+		thisPos = new Vector3(this.transform.position.x, 0f, this.transform.position.z);
+		playerPos = new Vector3(player.transform.position.x, 0f, player.transform.position.z);
+		distance = Vector3.Distance(thisPos, playerPos);//how far are we from the player
 		viewPos = mainCam.WorldToViewportPoint(this.transform.position);//where are we located in relation to the camera frustrum
 		if (enableShaderLOD) //check if we enabled this; if not skip to culling
 		{
@@ -69,11 +73,12 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 				thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
 			}
 		}
-		//we are implementing frustrum culling ourselves here, because Unity's occlusion culling method is RAM hungry
-		//if the object is past the far clip plane
-		//or out of the view frustrum plus a 0.25 unit pad, disable it's renderer so we arent even considering sending it to the GPU
+		//we are implementing fonrt/back frustrum culling ourselves here,
+		//because Unity's occlusion culling method is RAM hungry
+		//if the object is past the far clip plane or behind us
+		// disable it's renderer so we arent even considering sending it to the GPU
 		if (!enableCulling) return;
-		if (distance >= mainCam.farClipPlane || viewPos.z < 0)
+		if (distance >= mainCam.farClipPlane || viewPos.z < -0.25f)
 		{
 			thisRenderer.enabled = false;
 		}

@@ -92,6 +92,7 @@
     <Compile Include="Assets\Script\Editor\FOV_Render.cs" />
     <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
     <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI_Lerp.cs" />
+    <Compile Include="Assets\UnityCompileInBackground\Editor\UnityCompileInBackground.cs" />
     <Compile Include="Assets\VitaFTPI\Editor\UploadBuild.cs" />
     <Compile Include="Assets\VitaFTPI\Editor\UploadData.cs" />
     <Compile Include="Assets\VitaFTPI\Editor\VitaFTPOptions.cs" />
