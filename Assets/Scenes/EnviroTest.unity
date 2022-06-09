@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
   m_Sun: {fileID: 489463878}
-  m_IndirectSpecularColor: {r: 0.17716897, g: 0.18979314, b: 0.26987517, a: 1}
+  m_IndirectSpecularColor: {r: 0.17990556, g: 0.1926024, b: 0.27327442, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9253,6 +9253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 652633788}
   - component: {fileID: 652633789}
+  - component: {fileID: 652633790}
   m_Layer: 10
   m_Name: Spot Light Foliage ONLY
   m_TagString: Untagged
@@ -9310,6 +9311,17 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &652633790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652633787}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &657100281 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: e60204dec94382143834c21e10b6d5d2,
@@ -12133,17 +12145,6 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
---- !u!114 &883349541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 883349534}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &886072610
 GameObject:
   m_ObjectHideFlags: 0
@@ -24677,12 +24678,12 @@ Prefab:
     - target: {fileID: 108864759843816864, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_RenderMode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 108118637916027536, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_RenderMode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1214192506048716, guid: 3074ae5d034113449a1dac4553b684e8, type: 2}
       propertyPath: m_StaticEditorFlags
@@ -24705,7 +24706,7 @@ Prefab:
     - target: {fileID: 108864759843816864, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 1588225
+      value: 1588224
       objectReference: {fileID: 0}
     - target: {fileID: 108118637916027536, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
@@ -24728,12 +24729,12 @@ Prefab:
     - target: {fileID: 108864759843816864, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_Intensity
-      value: 16
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 108118637916027536, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_Intensity
-      value: 16
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114717108812227434, guid: 3074ae5d034113449a1dac4553b684e8, type: 2}
@@ -25623,7 +25624,6 @@ GameObject:
   - component: {fileID: 1891936584}
   - component: {fileID: 1891936583}
   - component: {fileID: 1891936585}
-  - component: {fileID: 1891936586}
   - component: {fileID: 1891936587}
   m_Layer: 0
   m_Name: Tree 5
@@ -25703,17 +25703,6 @@ CapsuleCollider:
   m_Height: 0.15
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0.05}
---- !u!114 &1891936586
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1891936581}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1891936587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26174,17 +26163,6 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
---- !u!114 &1942387776
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1942387771}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1949391003
 GameObject:
   m_ObjectHideFlags: 0

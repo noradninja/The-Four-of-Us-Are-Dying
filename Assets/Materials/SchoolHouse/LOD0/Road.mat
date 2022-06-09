@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: ac4c6f8bb6f43f948a25964f69a22147, type: 3}
+        m_Scale: {x: 1, y: 4}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -143,6 +147,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 14ac2ab5860d3a1499905b59df3c3fca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetalnessMap:
+        m_Texture: {fileID: 2800000, guid: 14ac2ab5860d3a1499905b59df3c3fca, type: 3}
+        m_Scale: {x: 1, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 2aef5c515fdaf4444b2f54b5b850f2be, type: 3}
+        m_Scale: {x: 1, y: 4}
+        m_Offset: {x: 0, y: 0}
     - _Normal0:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -241,7 +253,7 @@ Material:
     - _Bicubic: 0
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 1
+    - _BumpScale: 2
     - _BumpShadowHardness: 60.9
     - _BumpShadowHeightScale: 0.5
     - _ColorAmplify: 1
@@ -454,6 +466,7 @@ Material:
     - _Metallic1: 0
     - _Metallic2: 0
     - _Metallic3: 0
+    - _Metalness: 0.5
     - _Mode: 0
     - _MoveSpeed: 1
     - _MoveUVToggle: 0
@@ -474,6 +487,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
+    - _Roughness: 0
     - _RoughnessMode: 0
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
@@ -562,4 +576,5 @@ Material:
     - _RimOptions: {r: 0.1, g: 0.5, b: 1, a: 0}
     - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}

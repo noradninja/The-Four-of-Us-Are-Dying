@@ -157,6 +157,14 @@ Material:
         m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetalnessMap:
+        m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 9c8dda3900ae3dd4eb768c62ffcb4f39, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal0:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -590,4 +598,5 @@ Material:
     - _RimOptions: {r: 0.1, g: 0.5, b: 1, a: 0}
     - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}

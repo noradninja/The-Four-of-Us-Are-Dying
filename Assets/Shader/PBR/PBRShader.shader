@@ -1,172 +1,443 @@
-﻿Shader "Vita/PBRShader"
+﻿// Upgrade NOTE: commented out 'float4 unity_LightmapST', a built-in variable
+// Upgrade NOTE: commented out 'sampler2D unity_Lightmap', a built-in variable
+
+// Upgrade NOTE: replaced tex2D unity_Lightmap with UNITY_SAMPLE_TEX2D
+
+// Upgrade NOTE: commented out 'fixed4 unity_LightmapST', a built-in variable
+
+// Upgrade NOTE: commented out 'fixed4 unity_LightmapST', a built-in variable
+
+// Upgrade NOTE: commented out 'fixed4 unity_LightmapST', a built-in variable
+// Upgrade NOTE: replaced tex2D unity_Lightmap with UNITY_SAMPLE_TEX2D
+
+Shader "Vita/PBRShader"
 {
-    Properties
-    {
-        _MainTex ("Albedo Map", 2D) = "white" {}
-        _NormalMap ("Normal Map", 2D) = "bump" {}
-        _MOARMap ("Metal(R) Occlusion(G) Alpha(B) Rough(A) Map", 2D) = "black" {}
-//        _MOARMap ("Roughness Map", 2D) = "black" {}
-//        _OcclusionMap ("Occlusion Map", 2D) = "white" {}
+Properties
+{
+    _Albedo("Albedo", 2D) = "white" {}
+_MetalnessMap("MOAR Map", 2D) = "white" {}
+_Normal("NormalMap", 2D) = "white" {}
+_BumpScale("Scale", Range(-2.0, 2.0)) = 1
 
-        _AlbedoColor ("Albedo Color", Color) = (1.0, 1.0, 1.0, 1.0)
-        _FresnelColor ("Fresnel Color (F0)", Color) = (1.0, 1.0, 1.0, 1.0)
+_Metalness("Metalness", Range(0.0, 1)) = 0.5
+_Roughness("Roughness", Range(0.0, 1)) = 1
 
-        _Roughness ("Roughness", Range(0,1)) = 0
-        _Metalness ("Metalness", Range(0,1)) = 0
-        _Anisotropy ("Anisotropy", Range(0,1)) = 0
-    }
-    SubShader
-    {
-        Tags { "RenderType"="Opaque" }
+_Specular("Specular", Color) = (1,1,1,1)
+}
+SubShader
+{
+    LOD 100
+    Pass
+{
+    Tags{
+    "RenderType" = "Opaque"
+    "LightMode" = "ForwardBase"
+}
+CGPROGRAM
+#pragma vertex vert
+#pragma fragment frag
+#pragma target 3.0
+#pragma multi_compile LIGHTMAP_ON LIGHTMAP_OFF
+#pragma multi_compile_fwdbase
+#include "UnityCG.cginc"
+#include "AutoLight.cginc"
+#include "UnityPBSLighting.cginc"
+struct appdata
+{
+    fixed4 vertex : POSITION;
+    fixed2 uv : TEXCOORD0;
+    fixed2 uv1 : TEXCOORD1;
+    fixed3 normal : NORMAL;
+    fixed4 tangent : TANGENT;//切线方向
+};
 
-        Pass
-        {
-            // For directional light
-            Tags { "LightMode"="ForwardBase" }
+//顶点着色器输出
+struct v2f
+{
+    fixed4 vertex : SV_POSITION;
+    fixed2 uv : TEXCOORD0;
+    fixed2 uv1 : TEXCOORD6;
+    fixed4 TtoW0 : TEXCOORD1;
+    fixed4 TtoW1 : TEXCOORD2;
+    fixed4 TtoW2 : TEXCOORD3;
+    LIGHTING_COORDS(4,5)
+};
+// These are prepopulated by Unity
+// sampler2D unity_Lightmap;
+// float4 unity_LightmapST;
+sampler2D _Albedo;
+sampler2D _Normal;
+sampler2D _MetalnessMap;
+fixed _BumpScale;
 
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #pragma multi_compile_fwdbase
-            #pragma target 2.0
+fixed _Metalness;
+fixed _Roughness;
 
-            #include "UnityCG.cginc"
-            #include "AutoLight.cginc"
-            #include "Lighting.cginc"
-            #include "PBRLib.cginc"
+fixed _key;
 
-            #define ENV_MAP_MIP_LVL 14
+fixed3 _Specular;
+samplerCUBE _Cubemap;
 
-            struct v_in 
-            {
-                half4 position : POSITION;
-                half3 normal : NORMAL;
-                half2 uv : TEXCOORD0;
-                half4 tangent: TANGENT;
-            };
+fixed4 _Albedo_ST;
 
-            struct v_out 
-            {
-                half4 position : SV_POSITION;
-                half2 uv : TEXCOORD0;
-                half3 normal : TEXCOORD1;
-                half3 tangent: TEXCOORD2;
-                half3 bitangent: TEXCOORD3;
-                half3 worldPos : TEXCOORD4;
 
-                half3 tangentLocal: TEXCOORD5;
-                half3 bitangentLocal: TEXCOORD6;
-            };
+//定义顶点着色器
+v2f vert(appdata v)
+{
+    v2f o;
 
-            sampler2D _MainTex;
-            sampler2D _NormalMap;
-            sampler2D _MOARMap;
-            //sampler2D_half _OcclusionMap;
+    o.vertex = UnityObjectToClipPos(v.vertex);
+    o.uv = TRANSFORM_TEX(v.uv, _Albedo);
+    fixed3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+    fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);
+    fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);
+    fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w;//计算世界坐标系下的副切线方向
+    //转换矩阵本身也包含信息如：worldpos
+    //切线到世界坐标的转换矩阵
+    o.TtoW0 = fixed4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);
+    o.TtoW1 = fixed4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);
+    o.TtoW2 = fixed4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);
+    o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+    TRANSFER_VERTEX_TO_FRAGMENT(o);
+    return o;
+}
 
-            half3 _AlbedoColor;
-            half3 _FresnelColor;
+//计算法线分布函数D（法向量，半角向量，粗糙度）
+fixed DistributionGGX(fixed3 N, fixed3 H, fixed roughness)
+{
+fixed a = roughness * roughness;
+fixed a2 = a * a;
+fixed NdotH = max(dot(N, H), 0.0);
+fixed NdotH2 = NdotH*NdotH;
 
-            half _Roughness;
-            half _Metalness;
-            half _Anisotropy;
+fixed nom = a2;//分子
+fixed denom = (NdotH2 * (a2 - 1.0) + 1.0);
+denom = UNITY_PI * denom * denom;//分母
 
-            v_out vert (v_in v) 
-            {
-                v_out o;           
-                o.uv = v.uv;
-                o.position = UnityObjectToClipPos(v.position);
-                o.worldPos = mul(unity_ObjectToWorld, v.position);
+return nom / denom;
+}
 
-                // Normal mapping parameters
-                o.tangent = normalize(mul(unity_ObjectToWorld, v.tangent).xyz);
-                o.normal = normalize(UnityObjectToWorldNormal(v.normal));
-                o.bitangent = normalize(cross(o.normal, o.tangent.xyz));
+//计算几何遮蔽函数G1（向量与法向量夹角值，粗糙度）
+fixed GeometrySchlickGGX(fixed NdotV, fixed roughness)
+{
+fixed r = (roughness + 1.0);
+fixed k = (r * r) / 8.0;
 
-                o.tangentLocal = v.tangent;
-                o.bitangentLocal = normalize(cross(v.normal, o.tangentLocal));
-                return o;
-            }
+fixed nom = NdotV;
+fixed denom = NdotV * (1.0 - k) + k;
 
-            half4 frag (v_out i) : SV_Target
-            {
-                if (_WorldSpaceLightPos0.w == 1)
-                    return half4(0.0, 0.0, 0.0, 0.0);
+return nom / denom;
+}
 
-                // Just for mapping the 2d texture onto a sphere
-                half2 uv = i.uv;
-                
-                // VECTORS
+//计算双向几何遮蔽函数G（法向量，视线方向，入射方向，粗糙度）
+fixed GeometrySmith(fixed3 N, fixed3 V, fixed3 L, fixed roughness)
+{
+fixed NdotV = max(dot(N, V), 0.0);
+fixed NdotL = max(dot(N, L), 0.0);
+fixed ggx2 = GeometrySchlickGGX(NdotV, roughness);
+fixed ggx1 = GeometrySchlickGGX(NdotL, roughness);
 
-                // Assuming this pass goes only for directional lights
-                half3 lightVec =  normalize(_WorldSpaceLightPos0.xyz);
+return ggx1 * ggx2;
+}
 
-                half3 viewVec = normalize(_WorldSpaceCameraPos.xyz - i.worldPos);
-                half3 halfVec = normalize(lightVec + viewVec);
+//计算菲涅尔方程F（法向量与视线方向的夹角，法向量与视线方向夹角为90度时的反射率）
+fixed3 fresnelSchlick(fixed3 N, fixed3 V, fixed3 F0)
+{
+    fixed cosTheta = max(dot(N, V), 0.0);
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 10.0);
+}
 
-                // Calculate the tangent matrix if normal mapping is applied
-                half3x3 tangentMatrix = transpose(half3x3(i.tangent, i.bitangent, i.normal));
-                half3 normal = mul(tangentMatrix, tex2D(_NormalMap, uv).xyz * 2 - 1);
+//定义片段着色器
+fixed4 frag(v2f i) : SV_Target
+{
+    fixed3 worldPos = fixed3(i.TtoW0.w, i.TtoW1.w, i.TtoW2.w);//获取世界坐标
 
-                half3 reflectVec = -reflect(viewVec, normal);
+    fixed4 albedo = tex2D(_Albedo, i.uv);//采样固有色贴图
 
-                // DOT PRODUCTS
-                half NdotL = max(dot(i.normal, lightVec), 0.0);
-                half NdotH = max(dot(i.normal, halfVec), 0.0);
-                half HdotV = max(dot(halfVec, viewVec), 0.0);
-                half NdotV = max(dot(i.normal, viewVec), 0.0);
-                half HdotT = dot(halfVec, i.tangentLocal);
-                half HdotB = dot(halfVec, i.bitangentLocal);
 
-                // TEXTURE SAMPLES
-                half3 albedo = tex2D(_MainTex, uv);
+//获得切线坐标下的法线
+    fixed3 normal = UnpackScaleNormal((tex2D(_Normal, i.uv)), _BumpScale);
+////应用缩放，并计算出z分量的值
+ //   normal.xyz *= _BumpScale;
+//    normal.z = sqrt(1.0 - saturate(dot(normal.xy, normal.xy)));
+////将法线转换到世界坐标
+//    normal = normalize(fixed3(dot(i.TtoW0.xyz, normal), dot(i.TtoW1.xyz, normal), dot(i.TtoW2.xyz, normal)));
+//
+//    normal = normalize(fixed3(i.TtoW0.z, i.TtoW1.z, i.TtoW2.z));
 
-                // PBR PARAMETERS
-                
-                // This assumes that the maximum param is right if both are supplied (range and map)
-                //extract 0-1 values from packed map
-                half roughness = saturate(max(_Roughness + EPS, tex2D(_MOARMap, uv)).a);
-                half metalness = saturate(max(_Metalness + EPS, tex2D(_MOARMap, uv)).r);
-                half occlusion = saturate(tex2D(_MOARMap, uv).g);
 
-                half3 F0 = lerp(half3(0.04, 0.04, 0.04), _FresnelColor * albedo, metalness);
+    fixed4 Metalness = tex2D(_MetalnessMap, i.uv).r;//采样金属度贴图
+    _Metalness *= Metalness;
+    fixed4 Roughness = tex2D(_MetalnessMap, i.uv).a;//采样金属度贴图
+    _Roughness *= Roughness;
+    fixed3 viewDir = normalize(UnityWorldSpaceViewDir(worldPos));//视角方向
 
-                half D = trowbridgeReitzNDF(NdotH, roughness);
-                D = trowbridgeReitzAnisotropicNDF(NdotH, roughness, _Anisotropy, HdotT, HdotB);
-                half3 F = fresnel(F0, NdotV, roughness);
-                half G = schlickBeckmannGAF(NdotV, roughness) * schlickBeckmannGAF(NdotL, roughness);
+//fixed3 lightDir = normalize(_WorldSpaceLightPos0.xyz);//灯光方向
+    fixed3 lightDir = normalize(UnityWorldSpaceLightDir(worldPos));
 
-                // DIRECT LIGHTING
+    fixed3 fixedDir = normalize(viewDir + lightDir);//fixed方向
 
-                // Normals from normal map
-                half lambertDirect = max(dot(normal, lightVec), 0.0);
+    fixed3 reflectDir = normalize(reflect(-viewDir,normal));//反射方向
+    fixed3 reflection = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0,reflectDir,_Roughness * 5).rgb;//反射目标
 
-                half3 directRadiance = _LightColor0.rgb * occlusion;
+    fixed NDF = DistributionGGX(normal, fixedDir, _Roughness);//Cook-Torrance 的d项
 
-                // INDIRECT LIGHTING
-                half3 diffuseIrradiance = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, normal, UNITY_SPECCUBE_LOD_STEPS).rgb * occlusion;
-                half3 specularIrradiance = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, reflectVec, roughness * UNITY_SPECCUBE_LOD_STEPS).rgb * occlusion;
+    fixed G = GeometrySmith(normal, viewDir, lightDir, _Roughness);//Cook-Torrance 的g项
 
-                // DIFFUSE COMPONENT
-                half3 diffuseDirectTerm = lambertDiffuse(albedo) * (1 - F) * (1 - metalness) * _AlbedoColor;
-                
-                // SPECULAR COMPONENT
-                half3 specularDirectTerm = G * D * F / (4 * NdotV * NdotL + EPS);
+    fixed3 F0 = lerp(fixed3(0.04, 0.04, 0.04), albedo, _Metalness);//金属与非金属的区别
+    fixed3 fresnel = fresnelSchlick(normal, viewDir, F0);//菲涅尔项
 
-                // DIRECT BRDF OUTPUT
-                half3 brdfDirectOutput = (diffuseDirectTerm + specularDirectTerm) * lambertDirect * directRadiance;
+    fixed3 specular = NDF * G * fresnel / (4.0 * max(dot(normal, viewDir), 0.0) * max(dot(normal, lightDir), 0.0) + 0.001);//镜面反射部分 ps：+0.001是为了防止除零错误
 
-                // Add constant ambient (to boost the lighting, only temporary)
-                half3 ambientDiffuse = diffuseIrradiance * lambertDiffuse(albedo) * (1 - F) * (1 - metalness);
+    specular += lerp(specular,reflection,fresnel);
 
-                // For now the ambient specular looks quite okay, but it isn't physically correct
-                // TODO: try importance sampling the NDF from the environment map (just for testing & performance measuring)
-                // TODO: implement the split-sum approximation (UE4 paper)
-                half3 ambientSpecular = specularIrradiance * F;
+    fixed3 kD = (1.0 - fresnel) * (1.0 - Metalness);//漫反射比例
 
-                return half4(gammaCorrection(brdfDirectOutput + ambientDiffuse + ambientSpecular), tex2D(_MOARMap, uv).b);
-            }
-            ENDCG
-        }
-    }
+    fixed4 sh = fixed4(ShadeSH9(fixed4(normal,1)),1.0);
+
+    fixed3 Final = (kD + albedo + specular) * _LightColor0.xyz * (max(dot(normal, lightDir), 0.0) + 0.25);//镜面反射及diffuse部分整合
+    Final *= DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1));
+    return  fixed4(Final,1.0) + 0.5h * sh * albedo;//补个环境反射的光
+}
+ENDCG
+}
+
+//Additive pass
+Pass
+{
+    Tags{
+    "RenderType" = "Opaque"
+    "LightMode" = "ForwardAdd"
+}
+Blend One One
+CGPROGRAM
+#pragma vertex vert
+#pragma fragment frag
+#pragma multi_compile LIGHTMAP_ON LIGHTMAP_OFF
+#pragma multi_compile_fwdadd_fullshadows
+#include "UnityCG.cginc"
+#include "AutoLight.cginc"
+#include "UnityPBSLighting.cginc"
+struct appdata
+{
+    fixed4 vertex : POSITION;
+    fixed2 uv : TEXCOORD0;
+    fixed2 uv1 : TEXCOORD1;
+    fixed3 normal : NORMAL;
+    fixed4 tangent : TANGENT;//切线方向
+};
+
+//顶点着色器输出
+struct v2f
+{
+    fixed4 vertex : SV_POSITION;
+    fixed2 uv : TEXCOORD0;
+    fixed2 uv1 : TEXCOORD6;
+    fixed4 TtoW0 : TEXCOORD1;
+    fixed4 TtoW1 : TEXCOORD2;
+    fixed4 TtoW2 : TEXCOORD3;
+    LIGHTING_COORDS(4,5)
+};
+
+sampler2D _Albedo;
+sampler2D _Normal;
+sampler2D _MetalnessMap;
+fixed _BumpScale;
+
+fixed _Metalness;
+fixed _Roughness;
+
+fixed _key;
+
+fixed3 _Specular;
+samplerCUBE _Cubemap;
+
+fixed4 _Albedo_ST;
+
+
+v2f vert(appdata v)
+{
+    v2f o;
+
+    o.vertex = UnityObjectToClipPos(v.vertex);
+    o.uv = TRANSFORM_TEX(v.uv, _Albedo);
+    fixed3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+    fixed3 worldNormal = UnityObjectToWorldNormal(v.normal);
+    fixed3 worldTangent = UnityObjectToWorldDir(v.tangent.xyz);
+    fixed3 worldBinormal = cross(worldNormal, worldTangent) * v.tangent.w;
+    //转换矩阵本身也包含信息如：worldpos
+    //切线到世界坐标的 转换矩阵
+    o.TtoW0 = fixed4(worldTangent.x, worldBinormal.x, worldNormal.x, worldPos.x);
+    o.TtoW1 = fixed4(worldTangent.y, worldBinormal.y, worldNormal.y, worldPos.y);
+    o.TtoW2 = fixed4(worldTangent.z, worldBinormal.z, worldNormal.z, worldPos.z);
+    TRANSFER_SHADOW(o);
+    return o;
+}
+
+fixed DistributionGGX(fixed3 N, fixed3 H, fixed roughness)
+{
+fixed a = roughness*roughness;
+fixed a2 = a*a;
+fixed NdotH = max(dot(N, H), 0.0);
+fixed NdotH2 = NdotH*NdotH;
+
+fixed nom = a2;
+fixed denom = (NdotH2 * (a2 - 1.0) + 1.0);
+denom = UNITY_PI * denom * denom;
+
+return nom / denom;
+}
+
+fixed GeometrySchlickGGX(fixed NdotV, fixed roughness)
+{
+fixed r = (roughness + 1.0);
+fixed k = (r*r) / 8.0;
+
+fixed nom = NdotV;
+fixed denom = NdotV * (1.0 - k) + k;
+
+return nom / denom;
+}
+
+fixed GeometrySmith(fixed3 N, fixed3 V, fixed3 L, fixed roughness)
+{
+fixed NdotV = max(dot(N, V), 0.0);
+fixed NdotL = max(dot(N, L), 0.0);
+fixed ggx2 = GeometrySchlickGGX(NdotV, roughness);
+fixed ggx1 = GeometrySchlickGGX(NdotL, roughness);
+
+return ggx1 * ggx2;
+}
+
+//计算菲涅尔方程F（法向量与视线方向的夹角，法向量与视线方向夹角为90度时的反射率）
+fixed3 fresnelSchlick(fixed3 N, fixed3 V, fixed3 F0)
+{
+    fixed cosTheta = max(dot(N, V), 0.0);
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta,10.0);
+}
+
+
+fixed4 frag(v2f i) : SV_Target
+{
+    fixed shadow = SHADOW_ATTENUATION(i);
+    fixed3 worldPos = fixed3(i.TtoW0.w, i.TtoW1.w, i.TtoW2.w);
+
+    fixed4 albedo = tex2D(_Albedo, i.uv);//采样固有色贴图
+
+//获得切线坐标下的法线
+    fixed3 normal = UnpackScaleNormal((tex2D(_Normal, i.uv)), _BumpScale);
+//    normal.z = sqrt(1.0 - saturate(dot(normal.xy, normal.xy)));
+////将法线转换到世界坐标
+//    normal = normalize(fixed3(dot(i.TtoW0.xyz, normal), dot(i.TtoW1.xyz, normal), dot(i.TtoW2.xyz, normal)));
+//
+//    normal = normalize(fixed3(i.TtoW0.z, i.TtoW1.z, i.TtoW2.z));
+
+    fixed4 Metalness = tex2D(_MetalnessMap, i.uv).r;//采样金属度贴图
+    _Metalness *= Metalness;
+    fixed4 Roughness = tex2D(_MetalnessMap, i.uv).a;//采样金属度贴图
+    _Roughness *= Roughness;
+    fixed3 viewDir = normalize(UnityWorldSpaceViewDir(worldPos));//视角方向
+
+    #if defined(POINT) || defined(POINT_COOKIE) || defined(SPOT)
+    fixed3 lightDir = normalize(_WorldSpaceLightPos0.xyz - worldPos);
+    #else
+    fixed3 lightDir  = _WorldSpaceLightPos0.xyz;
+    #endif
+
+
+//    #ifndef USING_LIGHT_MULTI_COMPILE
+//    fixed atten = 1.0;
+//    #else
+//    fixed atten = 1.0 / (length(_WorldSpaceLightPos0.xyz - worldPos));
+//    #endif
+//fixed3 lightCoord = mul(unity_WorldToLight, fixed4(worldPos, 1)).xyz;
+    fixed3 lightVec = _WorldSpaceLightPos0.xyz - worldPos;
+    #if defined (POINT)
+    fixed3 lightCoord = mul(unity_WorldToLight, fixed4(worldPos, 1)).xyz;
+    fixed atten = tex2D(_LightTexture0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+    #elif defined (SPOT)
+    fixed4 lightCoord = mul(unity_WorldToLight, fixed4(worldPos, 1));
+    fixed atten = (lightCoord.z > 0) * tex2D(_LightTexture0, lightCoord.xy / lightCoord.w + 0.5).w * tex2D(_LightTextureB0, dot(lightCoord, lightCoord).rr).UNITY_ATTEN_CHANNEL;
+    #else
+    fixed atten = 1.0;
+    #endif
+
+
+    fixed3 fixedDir = normalize(viewDir + lightDir);//fixed方向
+
+    fixed3 reflectDir = normalize(reflect(-viewDir,normal));//反射方向
+    fixed3 reflection = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0,reflectDir,_Roughness * 5).rgb;//反射目标
+
+    fixed3 F0 = lerp(fixed3(0.04,0.04,0.04), albedo, _Metalness);//金属与非金属的区别
+    fixed3 fresnel = fresnelSchlick(normal, viewDir, F0);//菲涅尔项
+
+    fixed NDF = DistributionGGX(normal, fixedDir, _Roughness);//Cook-Torrance 的d项
+
+    fixed G = GeometrySmith(normal, viewDir, lightDir, _Roughness);//Cook-Torrance 的g项
+
+    fixed3 specular = NDF * G * fresnel / (4.0 * max(dot(normal, viewDir), 0.0) * max(dot(normal, lightDir), 0.0) + 0.001);//反射部分 ps：+0.001是为了防止除零错误
+
+    specular += lerp(specular,reflection,fresnel);
+
+    fixed3 kD = (1.0 - fresnel) * (1.0 - Metalness);//漫反射比例
+
+//fixed4 sh = fixed4(ShadeSH9(fixed4(normal,1)),1.0);
+
+    fixed3 Final = (kD + albedo + specular) * shadow * atten/4 * _LightColor0.xyz * (max(dot(normal, lightDir), 0.0));//反射及diffuse部分整合
+//    Final *= DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1));
+    return  fixed4(Final,1.0);//补个环境反射的光
+}
+    ENDCG
+}
+// ------------------------------------------------------------------
+//  Shadow rendering pass
+Pass {
+    Name "ShadowCaster"
+    Tags { "LightMode" = "ShadowCaster" }
+
+ZWrite On ZTest LEqual
+
+CGPROGRAM
+#pragma target 3.0
+
+#pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+#pragma shader_feature _METALLICGLOSSMAP
+#pragma shader_feature _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+#pragma skip_variants SHADOWS_SOFT
+#pragma multi_compile_shadowcaster
+
+#pragma vertex vertShadowCaster
+#pragma fragment fragShadowCaster
+
+#include "UnityStandardShadow.cginc"
+
+ENDCG
+}
+
+// ------------------------------------------------------------------
+// Extracts information for lightmapping, GI (emission, albedo, ...)
+// This pass it not used during regular rendering.
+//Pass
+//{
+//    Name "META"
+//    Tags { "LightMode"="Meta" }
+//
+//Cull Off
+//
+//CGPROGRAM
+//#pragma vertex vert_meta
+//#pragma fragment frag_meta
+//
+//#pragma shader_feature _EMISSION
+//#pragma shader_feature _METALLICGLOSSMAP
+//#pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+//#pragma shader_feature ___ _DETAIL_MULX2
+//#pragma shader_feature EDITOR_VISUALIZATION
+//
+//#include "UnityStandardMeta.cginc"
+//ENDCG
+//}
+
+}
     FallBack "Standard"
 }

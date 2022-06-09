@@ -19,6 +19,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _Albedo:
+        m_Texture: {fileID: 2800000, guid: 6814726837251c847aca6f777f175ed7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -72,6 +76,14 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetalnessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -182,6 +194,7 @@ Material:
     - _MappingSpace: 0
     - _MetalChannel: 0
     - _Metallic: 0.25
+    - _Metalness: 0
     - _Mode: 0
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
@@ -189,6 +202,7 @@ Material:
     - _Parallax: 0.02
     - _PlanarAxisX: 0
     - _PlanarAxisY: 2
+    - _Roughness: 0.5
     - _RoughnessMode: 0
     - _Shininess: 0
     - _SmoothChannel: 3
@@ -210,3 +224,4 @@ Material:
     - _MetallicRemap: {r: 0, g: 1, b: 0, a: 1}
     - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}

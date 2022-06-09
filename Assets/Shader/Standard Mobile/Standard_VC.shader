@@ -61,7 +61,7 @@ Shader "Vita/Standard Mobile"
     {
         Tags { "RenderType"="Opaque"}
         LOD 300
-
+        
 
         // ------------------------------------------------------------------
         //  Base forward pass (directional light, emission, lightmaps, ...)
