@@ -278,6 +278,7 @@
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
     <None Include="Assets\Addons\Shader Forge\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Addons\CrepuscularRays\CrepuscularRayShader.shader" />
+    <None Include="Assets\Shader\PBR\PBR BlinnPhong.shader" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC.shader" />
     <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />

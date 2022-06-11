@@ -36,7 +36,7 @@ RenderSettings:
   m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
-  m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
+  m_CustomReflection: {fileID: 8900000, guid: 9e779846761102147bc882fb85de8067, type: 3}
   m_Sun: {fileID: 489463878}
   m_IndirectSpecularColor: {r: 0.17990556, g: 0.1926024, b: 0.27327442, a: 1}
   m_UseRadianceAmbientProbe: 0
@@ -57,7 +57,7 @@ LightmapSettings:
   m_LightmapEditorSettings:
     serializedVersion: 10
     m_Resolution: 15
-    m_BakeResolution: 20
+    m_BakeResolution: 25
     m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 0.1
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGather: 1
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
-    m_ReflectionCompression: 2
+    m_ReflectionCompression: 0
     m_MixedBakeMode: 1
     m_BakeBackend: 1
     m_PVRSampling: 1
@@ -82,7 +82,7 @@ LightmapSettings:
     m_PVRFilterTypeIndirect: 2
     m_PVRFilterTypeAO: 2
     m_PVRFilteringMode: 0
-    m_PVRCulling: 0
+    m_PVRCulling: 1
     m_PVRFilteringGaussRadiusDirect: 1
     m_PVRFilteringGaussRadiusIndirect: 3
     m_PVRFilteringGaussRadiusAO: 2
@@ -4082,12 +4082,13 @@ GameObject:
   - component: {fileID: 284095804}
   - component: {fileID: 284095803}
   - component: {fileID: 284095802}
+  - component: {fileID: 284095806}
   m_Layer: 19
   m_Name: Decal H
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &284095802
 MonoBehaviour:
@@ -4162,6 +4163,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+--- !u!114 &284095806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 284095801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &284740574
 Prefab:
   m_ObjectHideFlags: 0
@@ -4657,17 +4669,6 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 0
---- !u!114 &316819311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 316819304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &320533433
 GameObject:
   m_ObjectHideFlags: 0
@@ -8291,7 +8292,6 @@ GameObject:
   - component: {fileID: 599919339}
   - component: {fileID: 599919341}
   - component: {fileID: 599919340}
-  - component: {fileID: 599919342}
   - component: {fileID: 599919343}
   m_Layer: 11
   m_Name: Leaves_2
@@ -8358,17 +8358,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 599919338}
   m_Mesh: {fileID: 4300000, guid: db1f1ee0392c5574c9d6b2dec0b46a43, type: 2}
---- !u!114 &599919342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 599919338}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &599919343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9631,12 +9620,13 @@ GameObject:
   - component: {fileID: 673224508}
   - component: {fileID: 673224507}
   - component: {fileID: 673224506}
+  - component: {fileID: 673224510}
   m_Layer: 19
   m_Name: Decal E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &673224506
 MonoBehaviour:
@@ -9711,6 +9701,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &673224510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 673224505}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &691281003
 GameObject:
   m_ObjectHideFlags: 0
@@ -10576,12 +10577,13 @@ GameObject:
   - component: {fileID: 735223504}
   - component: {fileID: 735223503}
   - component: {fileID: 735223502}
+  - component: {fileID: 735223506}
   m_Layer: 19
   m_Name: Decal D
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &735223502
 MonoBehaviour:
@@ -10656,6 +10658,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 90.00001, y: 90, z: 90}
+--- !u!114 &735223506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 735223501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &737695297
 GameObject:
   m_ObjectHideFlags: 0
@@ -12239,7 +12252,6 @@ GameObject:
   - component: {fileID: 886134663}
   - component: {fileID: 886134662}
   - component: {fileID: 886134661}
-  - component: {fileID: 886134664}
   m_Layer: 12
   m_Name: Grass (1)
   m_TagString: Untagged
@@ -12319,17 +12331,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 886134659}
   m_Mesh: {fileID: 4300044, guid: 779311d29d22a0943b2a2b2b02324960, type: 3}
---- !u!114 &886134664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 886134659}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &890892131 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100008, guid: fa65eb37d795fd7448b1c836a3a090ee,
@@ -15477,22 +15478,6 @@ Transform:
   m_Father: {fileID: 401726256}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1166176995 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1082622284431840, guid: 3074ae5d034113449a1dac4553b684e8,
-    type: 2}
-  m_PrefabInternal: {fileID: 1809631193}
---- !u!114 &1166177000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1166176995}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1172178525
 GameObject:
   m_ObjectHideFlags: 0
@@ -16110,7 +16095,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &1208534567
 MonoBehaviour:
@@ -19526,7 +19511,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &1475357444
 MonoBehaviour:
@@ -19946,7 +19931,6 @@ GameObject:
   - component: {fileID: 1485858298}
   - component: {fileID: 1485858300}
   - component: {fileID: 1485858299}
-  - component: {fileID: 1485858302}
   - component: {fileID: 1485858301}
   m_Layer: 11
   m_Name: Leaves_2 5
@@ -20028,17 +20012,6 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
---- !u!114 &1485858302
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1485858297}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1490393795
 GameObject:
   m_ObjectHideFlags: 0
@@ -21327,17 +21300,6 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
---- !u!114 &1585945220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1585945215}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1590774918
 GameObject:
   m_ObjectHideFlags: 0
@@ -21788,7 +21750,6 @@ GameObject:
   - component: {fileID: 1612193907}
   - component: {fileID: 1612193909}
   - component: {fileID: 1612193908}
-  - component: {fileID: 1612193910}
   - component: {fileID: 1612193911}
   m_Layer: 11
   m_Name: Leaves_1 5
@@ -21855,17 +21816,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1612193906}
   m_Mesh: {fileID: 4300000, guid: 8420b23b2675a0546ad83afb2bfca5ee, type: 2}
---- !u!114 &1612193910
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1612193906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1612193911
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22035,7 +21985,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &1633340225
 MonoBehaviour:
@@ -22322,12 +22272,13 @@ GameObject:
   - component: {fileID: 1655480492}
   - component: {fileID: 1655480491}
   - component: {fileID: 1655480490}
+  - component: {fileID: 1655480494}
   m_Layer: 19
   m_Name: Decal G
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &1655480490
 MonoBehaviour:
@@ -22402,6 +22353,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &1655480494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1655480489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1660759609
 GameObject:
   m_ObjectHideFlags: 0
@@ -24706,7 +24668,7 @@ Prefab:
     - target: {fileID: 108864759843816864, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
       propertyPath: m_CullingMask.m_Bits
-      value: 1588224
+      value: 1588225
       objectReference: {fileID: 0}
     - target: {fileID: 108118637916027536, guid: 3074ae5d034113449a1dac4553b684e8,
         type: 2}
@@ -26665,7 +26627,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 126
+  m_StaticEditorFlags: 127
   m_IsActive: 1
 --- !u!114 &1977694564
 MonoBehaviour:

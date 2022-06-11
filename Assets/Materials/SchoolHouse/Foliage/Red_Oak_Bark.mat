@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Red_Oak_Bark
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
+  m_Shader: {fileID: 4800000, guid: 471682325fc3fb84d9be78d7fd9d0ba9, type: 3}
   m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _BAKERY_NONE _FRESNELMODEL_SCHLICK
     _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _GLOSSYREFLECTIONS_OFF _LIGHTMAPSPECULAR _METALLICGLOSSMAP
     _NORMALDISTMODEL_BLINNPHONG _NORMALMAP _SMITHGEOSHADOWMODEL_NONE _SPECGLOSSMAP
@@ -255,7 +255,7 @@ Material:
     - _Bicubic: 0
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: -2
+    - _BumpScale: 1
     - _BumpShadowHardness: 50
     - _BumpShadowHeightScale: 0.2
     - _ColorAmplify: 1
@@ -321,7 +321,7 @@ Material:
     - _GSAAVariance: 0
     - _GeoShadowModel: 0
     - _GlossMapScale: 0.25
-    - _Glossiness: 0.05
+    - _Glossiness: 1
     - _GlossyReflections: 0
     - _HeightRefPlane: 0.5
     - _HeightScale: 0.006
@@ -470,12 +470,12 @@ Material:
     - _ManualControl: 0
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0
+    - _Metallic: 0.5
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
     - _Metallic3: 0
-    - _Metalness: 0
+    - _Metalness: 1
     - _Mode: 0
     - _MoveSpeed: 1
     - _MoveUVToggle: 0
@@ -497,7 +497,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
-    - _Roughness: 0
+    - _Roughness: 0.03
     - _RoughnessMode: 1
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1

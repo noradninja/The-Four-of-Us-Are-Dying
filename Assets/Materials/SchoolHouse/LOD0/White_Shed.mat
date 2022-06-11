@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: White_Shed
-  m_Shader: {fileID: 4800000, guid: b72fe08754806fc45af46ec2081f8a44, type: 3}
+  m_Shader: {fileID: 4800000, guid: 471682325fc3fb84d9be78d7fd9d0ba9, type: 3}
   m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
     SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON
     SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4
@@ -252,6 +252,7 @@ Material:
     - _AlbedoChannel: 0
     - _AlphaClip: 0
     - _AlphaMapType: 999
+    - _Anisotropic: 0
     - _BakedSpacular: 1
     - _Bakery: 0
     - _BakeryEnabled: 0
@@ -304,6 +305,10 @@ Material:
     - _DistortVertWave: 0
     - _DstBlend: 0
     - _DstBlendAddPass: 1
+    - _ENABLE_D: 0
+    - _ENABLE_F: 0
+    - _ENABLE_G: 0
+    - _ENABLE_NDF: 0
     - _EmissionAffectObject: 1
     - _EmissionChannel: 0
     - _EmissionEnabled: 0
@@ -316,10 +321,12 @@ Material:
     - _FogOffset: 0
     - _FogToggle: 1
     - _ForceBoxProject: 0
+    - _FresnelModel: 0
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
+    - _GeoShadowModel: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.25
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5
     - _HeightScale: 0.006
@@ -329,6 +336,7 @@ Material:
     - _IntersectFold: 0
     - _IntersectThreshold: 1
     - _IntersectToggle: 0
+    - _Ior: 1.5
     - _LTCGI: 0
     - _Layer0AOScale: 1
     - _Layer0AnimActive: 0
@@ -467,16 +475,17 @@ Material:
     - _ManualControl: 0
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
     - _Metallic3: 0
-    - _Metalness: 0
+    - _Metalness: 1
     - _Mode: 0
     - _MoveSpeed: 1
     - _MoveUVToggle: 0
     - _MyCullMode: 2
+    - _NormalDistModel: 0
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _OptionsFold: 1
@@ -493,7 +502,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
-    - _Roughness: 0
+    - _Roughness: 1
     - _RoughnessMode: 0
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
@@ -519,6 +528,7 @@ Material:
     - _ScanlineWidthVert: 0.5
     - _ScrollU: 0
     - _ScrollV: 0
+    - _SmithGeoShadowModel: 0
     - _SmoothChannel: 3
     - _Smoothness: 0.883
     - _Smoothness0: 1
@@ -529,6 +539,8 @@ Material:
     - _SpecOcclusion: 0.5
     - _SpecularHighlights: 1
     - _SpecularMapType: 999
+    - _SpecularPower: 1
+    - _SpecularRange: 0
     - _SpecularRoughnessMod: 1
     - _SrcBlend: 1
     - _SrcBlendAddPass: 1
@@ -545,6 +557,7 @@ Material:
     - _TranslucentThickness: 1
     - _TranslucentToggle: 0
     - _UVSec: 0
+    - _UnityLightingContribution: 1
     - _VertexColorMode: 0
     - _WorkflowMode: 1
     - _WrapAmount: 0
@@ -584,4 +597,5 @@ Material:
     - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
