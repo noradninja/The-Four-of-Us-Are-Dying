@@ -7,14 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Road_Decals
-  m_Shader: {fileID: 4800000, guid: 471682325fc3fb84d9be78d7fd9d0ba9, type: 3}
+  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED _ALPHAPREMULTIPLY_ON _ALPHATEST_ON
     _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -128,7 +129,7 @@ Material:
     - _BakeryEnabled: 0
     - _BakerySHNonLinear: 0
     - _Bicubic: 0
-    - _BumpScale: 2
+    - _BumpScale: 1.5
     - _BumpShadowHardness: 50
     - _BumpShadowHeightScale: 0.2
     - _Cull: 2
@@ -148,7 +149,7 @@ Material:
     - _DUVChannel: 0
     - _DetailAsTintMask: 0
     - _DetailMaskChannel: 2
-    - _DetailNormalMapScale: 1
+    - _DetailNormalMapScale: 0
     - _DetailsOverlay: 0
     - _DstBlend: 0
     - _ENABLE_D: 0

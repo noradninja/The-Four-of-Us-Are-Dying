@@ -91,7 +91,7 @@ public class TitleSaveManagerInputs : MonoBehaviour {
 			currentSelection = GameObject.Find("Slot_3");
 		}	
 		//Decrement slot by -1 if you press up
-		if (Input.GetKeyDown ($"{joystick1}{UP}") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
+		if (Input.GetButtonDown ("Up") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
 			//audioSource.PlayOneShot(clipList[2]);
 			if (selectedSlot == 1){
 				//set slot to 3 if you are at slot 1 to wrap selection
@@ -105,7 +105,7 @@ public class TitleSaveManagerInputs : MonoBehaviour {
 		}
 			
 		//Increment slot by +1 if you press down
-		if (Input.GetKeyDown ($"{joystick1}{DOWN}") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
+		if (Input.GetButtonDown ("Down") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false){
 			//audioSource.PlayOneShot(clipList[3]);
 			if (selectedSlot == 3){
 				//set slot to 1 if you are at slot 3 to wrap selection
@@ -118,7 +118,7 @@ public class TitleSaveManagerInputs : MonoBehaviour {
 			//animateButtons();
 		}
 		//here we are checking to see if the loader dialog is up, and if the selected slot has data- if the text for the slot is "No Data" we won't pull up the confirm dialog
-		if (Input.GetKeyDown ($"{joystick1}{CROSS}") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false && currentSelection.transform.GetChild(0).GetComponent<Text>().text != "No Data"){
+		if (Input.GetButtonDown ("Cross") && menuManager.GetComponent<StartMenuManagerInputs>().loadDialogEnabled == false && currentSelection.transform.GetChild(0).GetComponent<Text>().text != "No Data"){
 			setLoadedColor();
 			loadDialogGroup.alpha = 1;
 			//anim. =GameObject.Find ("Confirmation_Load_Dialog").GetComponent<Animation>();
@@ -128,7 +128,7 @@ public class TitleSaveManagerInputs : MonoBehaviour {
 			//audioSource.PlayOneShot(clipList[0]);
 			PauseManager.isPaused = true;
 		}
-		if (Input.GetKeyDown ($"{joystick1}{CROSS}") ){
+		if (Input.GetButtonDown ("Cross") ){
 			//play an error sound if we try to load data from an empty slot
 			if (currentSelection.transform.GetChild(0).GetComponent<Text>().text == "No Data"){
 				//audioSource.PlayOneShot(clipList[12]);

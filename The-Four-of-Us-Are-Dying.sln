@@ -2,15 +2,11 @@
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{7468F13A-8E8F-4268-D418-946C1DFCE404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whinarn.UnityMeshSimplifier.Runtime", "Whinarn.UnityMeshSimplifier.Runtime.csproj", "{125B9EB7-2796-10F2-223B-39B2BFB911FA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-firstpass", "Assembly-CSharp-firstpass.csproj", "{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{B2EE2F83-8646-1C88-1D3C-E549ADF300C2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Whinarn.UnityMeshSimplifier.Editor", "Whinarn.UnityMeshSimplifier.Editor.csproj", "{6A4DCA01-D810-725F-FB11-7397923B3C9F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,10 +18,6 @@ Global
 		{7468F13A-8E8F-4268-D418-946C1DFCE404}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7468F13A-8E8F-4268-D418-946C1DFCE404}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7468F13A-8E8F-4268-D418-946C1DFCE404}.Release|Any CPU.Build.0 = Release|Any CPU
-		{125B9EB7-2796-10F2-223B-39B2BFB911FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{125B9EB7-2796-10F2-223B-39B2BFB911FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{125B9EB7-2796-10F2-223B-39B2BFB911FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{125B9EB7-2796-10F2-223B-39B2BFB911FA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,10 +30,6 @@ Global
 		{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6A4DCA01-D810-725F-FB11-7397923B3C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6A4DCA01-D810-725F-FB11-7397923B3C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6A4DCA01-D810-725F-FB11-7397923B3C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6A4DCA01-D810-725F-FB11-7397923B3C9F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

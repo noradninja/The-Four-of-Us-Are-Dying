@@ -85,14 +85,14 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 		}
 
 		if (!inventoryOn) return;
-		if (battText.text != $"{InventoryManager.batteryCount:D2}"){
-			battText.text = $"{InventoryManager.batteryCount:D2}";
+		if (battText.text !=InventoryManager.batteryCount.ToString()){
+			battText.text =InventoryManager.batteryCount.ToString();
 		}
-		if (medText.text != $"{InventoryManager.medCount:D2}"){
-			medText.text = $"{InventoryManager.medCount:D2}";
+		if (medText.text !=InventoryManager.medCount.ToString()){
+			medText.text =InventoryManager.medCount.ToString();
 		}
-		if (stimText.text != $"{InventoryManager.stimCount:D2}"){
-			stimText.text = $"{InventoryManager.stimCount:D2}";
+		if (stimText.text !=InventoryManager.stimCount.ToString()){
+			stimText.text =InventoryManager.stimCount.ToString();
 		}
 	}
 

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: White_Shed
-  m_Shader: {fileID: 4800000, guid: 471682325fc3fb84d9be78d7fd9d0ba9, type: 3}
+  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
     SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON
     SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4
@@ -21,7 +21,19 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AOTex:
+        m_Texture: {fileID: 2800000, guid: ad7d9a5b07eab5e44b8c5dbfb3008cc8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Albedo:
+        m_Texture: {fileID: 2800000, guid: b09b40fc509cbe24a8a9e4f98dfac98e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BRDFLUTTex:
+        m_Texture: {fileID: 2800000, guid: 8314f72805434aa4392926700e9909a4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColorTex:
         m_Texture: {fileID: 2800000, guid: b09b40fc509cbe24a8a9e4f98dfac98e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -63,6 +75,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EnvCubeMap:
+        m_Texture: {fileID: 8900000, guid: 9e779846761102147bc882fb85de8067, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _GIAlbedoTex:
@@ -153,6 +173,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: ad7d9a5b07eab5e44b8c5dbfb3008cc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MetallicTex:
+        m_Texture: {fileID: 2800000, guid: ad7d9a5b07eab5e44b8c5dbfb3008cc8, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MetalnessMap:
         m_Texture: {fileID: 2800000, guid: ad7d9a5b07eab5e44b8c5dbfb3008cc8, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -175,6 +199,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Normal3:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 565823903ef0a5e4c8c3ebb425ee2d78, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalTex:
+        m_Texture: {fileID: 2800000, guid: 2a0fe49b19bb8434eadaa7c0e142da3b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -203,6 +235,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _ReflectTex:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RoughnessMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RoughnessTex:
+        m_Texture: {fileID: 2800000, guid: ad7d9a5b07eab5e44b8c5dbfb3008cc8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SpecGlossMap:
@@ -253,6 +293,7 @@ Material:
     - _AlphaClip: 0
     - _AlphaMapType: 999
     - _Anisotropic: 0
+    - _Anisotropy: 0
     - _BakedSpacular: 1
     - _Bakery: 0
     - _BakeryEnabled: 0
@@ -565,9 +606,12 @@ Material:
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
     m_Colors:
+    - _AlbedoColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBack: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FresnelColor: {r: 1, g: 1, b: 1, a: 1}
     - _GIAlbedoColor: {r: 1, g: 1, b: 1, a: 1}
     - _IntersectColor: {r: 1, g: 1, b: 1, a: 1}
     - _Layer0Color: {r: 1, g: 1, b: 1, a: 1}

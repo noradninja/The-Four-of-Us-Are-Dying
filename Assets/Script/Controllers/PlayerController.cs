@@ -332,7 +332,7 @@ public class PlayerController : MonoBehaviour
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
             //change text formatting based on number of characters
-                batteryText.text = ($"{InventoryManager.batteryCount:D2}");
+                batteryText.text = InventoryManager.batteryCount.ToString();
             //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
@@ -385,7 +385,7 @@ public class PlayerController : MonoBehaviour
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
                 //change text formatting based on number of characters
-                batteryText.text = $"{InventoryManager.batteryCount:D2}";
+                batteryText.text = InventoryManager.batteryCount.ToString();
                 //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();

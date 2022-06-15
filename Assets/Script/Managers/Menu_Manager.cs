@@ -102,7 +102,7 @@ private  string joystick1 = "joystick 1 button ";
 
 		if ((PauseManager.isPaused) != true) return;
 		PlayerController.delayButton = true;
-		if (Input.GetKeyDown ($"{joystick1}{CIRCLE}") && !dialogEnabled && !delayTimer){
+		if (Input.GetButtonDown ("Circle") && !dialogEnabled && !delayTimer){
 			if (optionEnabled){
 				StartCoroutine(FadeScreen(0 , 0.0F));
 			}
@@ -125,7 +125,7 @@ private  string joystick1 = "joystick 1 button ";
 			timer = timer += 0.01f;
 			if (!(timer > delay)) return;
 			//Decrement slot by -1 if you press up
-			if (Input.GetKeyDown ($"{joystick1}{UP}")){
+			if (Input.GetButtonDown ("Up")){
 				//audioSource.PlayOneShot(clipList[2]);
 				if (selectedSlot > 1){
 					//set slot to 2 if you are at slot 1 to wrap selection
@@ -142,7 +142,7 @@ private  string joystick1 = "joystick 1 button ";
 			}
 					
 			//Increment slot by +1 if you press down
-			if (Input.GetKeyDown ($"{joystick1}{DOWN}")){
+			if (Input.GetButtonDown ("Down")){
 				//audioSource.PlayOneShot(clipList[3]);
 				if (selectedSlot < 3){
 					//set slot to 1 if you are at slot 2 to wrap selection
@@ -158,7 +158,7 @@ private  string joystick1 = "joystick 1 button ";
 				//animateButtons();
 			}
 
-			if (!Input.GetKeyDown($"{joystick1}{CROSS}") || saverEnabled != false || optionEnabled != false ||
+			if (!Input.GetButtonDown("Cross") || saverEnabled != false || optionEnabled != false ||
 			    dialogEnabled != false) return;
 			if (SetScenes.currentScene == "Title")
 			{

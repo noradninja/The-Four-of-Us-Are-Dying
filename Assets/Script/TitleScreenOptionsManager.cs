@@ -73,7 +73,7 @@ private const string joystick1 = "joystick 1 button ";
 		timer = timer += 0.01f;
 		if (timer > delay){
 			//Decrement slot by -1 if you press up
-			if (Input.GetKeyDown ($"{joystick1}{UP}")){
+			if (Input.GetButtonDown ("Up")){
 				//audioSource.PlayOneShot(clipList[2]);
 				if (selectedSlot == 1){
 					//set slot to 3 if you are at slot 1 to wrap selection
@@ -86,7 +86,7 @@ private const string joystick1 = "joystick 1 button ";
 			}
 			
 			//Increment slot by +1 if you press down
-			if (Input.GetKeyDown ($"{joystick1}{DOWN}")){
+			if (Input.GetButtonDown ("Down")){
 				//audioSource.PlayOneShot(clipList[3]);
 				if (selectedSlot == 3){
 					//set slot to 2 if you are at slot 1 to wrap selection
@@ -100,7 +100,7 @@ private const string joystick1 = "joystick 1 button ";
 			}
 
 		}
-		if (Input.GetKeyDown ($"{joystick1}{LEFT}")){
+		if (Input.GetButtonDown ("Left")){
 			//audioSource.PlayOneShot(clipList[3]);
 			if (selectedSlot == 1){
 				BGMLevel.fillAmount -= 0.1f;
@@ -118,7 +118,7 @@ private const string joystick1 = "joystick 1 button ";
 				PlayerPrefs.SetInt("SavedOnce", 1);
 			}
 		}
-		if (Input.GetKeyDown ($"{joystick1}{RIGHT}")){
+		if (Input.GetButtonDown ("Right")){
 			//audioSource.PlayOneShot(clipList[2]);
 			if (selectedSlot == 1){
 				BGMLevel.fillAmount += 0.1f;
