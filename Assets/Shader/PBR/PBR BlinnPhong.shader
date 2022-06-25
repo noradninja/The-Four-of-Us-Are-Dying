@@ -7,8 +7,8 @@ Properties {
 	_BumpScale("Scale", Range(-2.0, 2.0)) = 1
 	_Color ("Main Color", Color) = (1,1,1,1)                    //diffuse Color
 	_SpecularColor ("Specular Color", Color) = (1,1,1,1)        //Specular Color (Not Used)
-	_Glossiness("Smoothness",Range(0,1)) = 1                    //My Smoothness
-	_Metallic("Metalness",Range(0.5,1)) = 0                    //My Metal Value      
+	_Glossiness("Smoothness",Range(0,0.99)) = 1                    //My Smoothness
+	_Metallic("Metalness",Range(0.0,1)) = 0                    //My Metal Value      
 
 }
 SubShader {
@@ -48,56 +48,36 @@ half4 _MainTex_ST;
 
 //Functions
 
-//NDF- Gaussian
-half GaussianNormalDistribution(half roughness, half NdotH)
+half G1V(half NdotV, half k)
 {
-	half roughnessSqr = roughness*roughness;
-	half thetaH = acos(NdotH);
-	return exp(-thetaH*thetaH/roughnessSqr);
+	return 1.0/(NdotV*(1.0-k)+k);
 }
 
-//GSF- Cook-Torrance
-half CookTorrenceGeometricShadowingFunction (half NdotL, half NdotV,
-half VdotH, half NdotH){
-	half Gs = min(1.0, min(2*NdotH*NdotV / VdotH,
-	2*NdotH*NdotL / VdotH));
-	return  (Gs);
-}
-
-//Unity GI data
-UnityGI GetUnityGI(half3 lightColor, half3 lightDirection, half3 normalDirection,half3 viewDirection,
-half3 viewReflectDirection, half attenuation, half roughness, half3 worldPos){
-	//Unity light Setup ::
-	UnityLight light;
-	light.color = lightColor;
-	light.dir = lightDirection;
-	light.ndotl = max(0.0h,dot( normalDirection, lightDirection));
-	UnityGIInput d;
-	d.light = light;
-	d.worldPos = worldPos;
-	d.worldViewDir = viewDirection;
-	d.atten = attenuation;
-	d.ambient = 0.0h;
-	d.probeHDR[0] = unity_SpecCube0_HDR;
-	d.probeHDR[1] = unity_SpecCube1_HDR;
+half SpecGGX(half3 NdotL, half3 NdotH, half3 NdotV, half3 LdotH, half roughness, half F0 )
+{
+	half SqrRoughness = roughness*roughness;
 	
-	#if defined(UNITY_SPECCUBE_BLENDING) || defined(UNITY_SPECCUBE_BOX_PROJECTION)
-	d.boxMin[0] = unity_SpecCube0_BoxMin; // .w holds lerp value for blending
-	#endif
-	#ifdef UNITY_SPECCUBE_BOX_PROJECTION
-	d.boxMax[0] = unity_SpecCube0_BoxMax;
-	d.probePosition[0] = unity_SpecCube0_ProbePosition;
-	d.boxMax[1] = unity_SpecCube1_BoxMax;
-	d.boxMin[1] = unity_SpecCube1_BoxMin;
-	d.probePosition[1] = unity_SpecCube1_ProbePosition;
-	#endif
+	// Geom term
+	half RoughnessPow4 = SqrRoughness*SqrRoughness;
+	half pi = 3.14159;
+	half denom = NdotH * NdotH *(RoughnessPow4-1.0) + 0.6;
+	half D = RoughnessPow4/(pi * denom * denom);
 
-	Unity_GlossyEnvironmentData ugls_en_data;
-	ugls_en_data.roughness = roughness;
-	ugls_en_data.reflUVW = viewReflectDirection;
-	UnityGI gi = UnityGlobalIllumination(d, 1.0h, normalDirection, ugls_en_data );
-	return gi;
+	// Fresnel term 
+	half LdotH5 = 1.0-LdotH;
+	LdotH5 = LdotH5*LdotH5*LdotH5*LdotH5*LdotH5;
+	half F = F0 + (1.0-F0)*(LdotH5);
+
+	// Vis term 
+	half k = SqrRoughness/2.0;
+	half Vis = G1V(NdotL,k)*G1V(NdotV,k);
+
+	half specular = NdotL * D * F * Vis;
+
+	return specular;
 }
+
+
 
 struct VertexInput {
 	half4 vertex : POSITION;       //local vertex position
@@ -140,7 +120,8 @@ VertexOutput vertbase (VertexInput v) {
 half4 fragbase(VertexOutput i) : COLOR {
 
 // direction calculations
-	half3 normalDirection = i.normalDir;
+	fixed3 normal = UnpackScaleNormal((tex2D(_Normal, i.uv0)), _BumpScale);
+	half3 normalDirection = i.normalDir * normal;
 	half3 lightDirection = normalize(lerp(_WorldSpaceLightPos0.xyz, _WorldSpaceLightPos0.xyz 
 																	- i.posWorld.xyz,_WorldSpaceLightPos0.w));
 
@@ -152,6 +133,7 @@ half4 fragbase(VertexOutput i) : COLOR {
 	half NdotH = max(0.0,dot(normalDirection, halfDirection));
 	half NdotV = max(0.0,dot(normalDirection, viewDirection));
 	half VdotH = max(0.0,dot(viewDirection, halfDirection));
+	half LdotH = max(0.0, dot(lightDirection, halfDirection));
 
 	half attenuation = LIGHT_ATTENUATION(i);
 	half3 attenColor = attenuation * _LightColor0.rgb;
@@ -162,40 +144,61 @@ half4 fragbase(VertexOutput i) : COLOR {
 	half occlusion = tex2D(_MetalnessMap, i.uv0).g;
 	half roughness = 1- (_Glossiness * _Glossiness);   // 1 - smoothness*smoothness
 	roughness = roughness * roughness;
-
-	half3 baseFresnel =  (1 - saturate(dot(normalDirection, viewDirection))); // per vert fresnel
-	half3 Fresnel = Pow4(baseFresnel) * occlusion;
-
-
-	half3 specColor = lerp(diffuseColor, _SpecularColor.rgb, Fresnel) * occlusion;
-
 	half4 reflectionSample = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0,viewReflectDirection, roughness * 10);
 	half3 reflection = DecodeHDR (reflectionSample, unity_SpecCube0_HDR);
-	reflection *= metalness;
+	metalness = (metalness * roughness * reflection);
+	//reflection = reflection/8;
+
+// Compute light contribution
+	half Diffuse = NdotL;
+//SpecGGX(half3 NdotL, half3 NdotH, half3 NdotV, half3 LdotH, half roughness, half F0 )
+	half Spec = SpecGGX(NdotL, NdotH, NdotV, LdotH, roughness, metalness);
+
+// Fresnel
+	half3 baseFresnel =  (1 - saturate(dot(normalDirection, viewDirection))); // per vert fresnel
+	half3 Fresnel = Pow4(baseFresnel);
+
+//NdotV = pow(1.0-NdotV,5.0);
+//	half Fresnel = metalness + (1.0-metalness)*(NdotV);
+
+// Tint lights
+	half3 SpecColor = Spec *  _LightColor0.rgb;
+	half3 DiffColor = diffuseColor * _LightColor0.rgb;
+
 
 //PRB Functs
-	half3 NDF = specColor;
-	NDF *= GaussianNormalDistribution(roughness, NdotH); // Gaussian NDF
-
-	half GSF = 1;
-	GSF *= CookTorrenceGeometricShadowingFunction (NdotL, NdotV, VdotH, NdotH); // Cook-Torrence NDF
+//	half3 NDF = SpecColor;
+//	NDF *= GaussianNormalDistribution(roughness, NdotH); // Gaussian NDF
+//
+//	half GSF = 1;
+//	GSF *= CookTorrenceGeometricShadowingFunction (NdotL, NdotV, VdotH, NdotH); // Cook-Torrence NDF
 
 //PBR
-	half3 specularity = (NDF * GSF) /4.0* ((  NdotL * NdotV));
-	half3 lightingModel = ((diffuseColor + specularity + reflection) + Fresnel);
+	half3 specularity = 1;
+	half4 sh = half4(ShadeSH9(half4(normal,1)),1.0);
+	half3 lightSum =  max(((DiffColor + SpecColor)*(1.0-half3(0.4, 0.4, 0.4)) ),half3(0.0,0.0,0.0));
+
+
+	half3 lightingModel = ((SpecColor + DiffColor) + (Fresnel * reflection)) * 0.65;
 	lightingModel += NdotL;
 	half3 contrib;
 //	#if defined(LIGHTMAP_ON)
 	half3 lm =  DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1));
-	contrib = lm * occlusion;
+	//contrib = lm * occlusion;
 //	#else
-//	half4 sh = half4(ShadeSH9(half4(normal,1)),1.0);
-//	contrib = sh;// * Occlusion;
-//	#endif
-	half4 finalDiffuse = half4(lightingModel * contrib,1);
 
+	contrib = sh;// * Occlusion;
+//	#endif
+	half4 finalDiffuse = half4(lightingModel,1);
+	
 	UNITY_APPLY_FOG(i.fogCoord, finalDiffuse);// apply fog
-	//return half4(lightingModel,1);
+//	return half4(DiffColor,1);
+	return half4(SpecColor + DiffColor + (Fresnel * reflection),1) * (NdotL) ;
+//	return half4(SpecColor  + (Fresnel + metalness) + DiffColor,1);
+//	return half4(lightSum + (Fresnel * reflection * sh),1);
+//	return half4 (lightSum,1);
+//	return half4(SpecColor,1);
+
 	return finalDiffuse;
 }
 ENDCG
@@ -203,3 +206,136 @@ ENDCG
 	}
 	Fallback "Standard"
 }
+/*
+const half cDetailNormalPower = 0.3;
+
+half3 gv3View = half3(0.0,0.0,-1.0);
+half3 gv3LightDir = half3(0.0,0.0,-1.0);
+half3  _LightColor0.rgb = half3(1.0,1.0,1.0);
+
+
+half G1V(half NdotV, half k)
+{
+	return 1.0/(NdotV*(1.0-k)+k);
+}
+
+half SpecGGX(half3 N, half3 V, half3 L, half roughness, half F0 )
+{
+	half SqrRoughness = roughness*roughness;
+
+	half3 H = normalize(V+L);
+
+	half NdotL = clamp(dot(N,L),0.0,1.0);
+	half NdotV = clamp(dot(N,V),0.0,1.0);
+	half NdotH = clamp(dot(N,H),0.0,1.0);
+	half LdotH = clamp(dot(L,H),0.0,1.0);
+
+	// Geom term
+	half RoughnessPow4 = SqrRoughness*SqrRoughness;
+	half pi = 3.14159;
+	half denom = NdotH * NdotH *(RoughnessPow4-1.0) + 1.0;
+	half D = RoughnessPow4/(pi * denom * denom);
+
+	// Fresnel term 
+	half LdotH5 = 1.0-LdotH;
+    LdotH5 = LdotH5*LdotH5*LdotH5*LdotH5*LdotH5;
+	half F = F0 + (1.0-F0)*(LdotH5);
+
+	// Vis term 
+	half k = SqrRoughness/2.0;
+	half Vis = G1V(NdotL,k)*G1V(NdotV,k);
+
+	half specular = NdotL * D * F * Vis;
+    
+	return specular;
+}
+
+half3 GetGIReflexion(in half3 Normal, in half Roughness)
+{
+    half3 R0 = texture (iChannel1,reflect(-Normal,gv3View) ).rgb;
+    half3 R1 = texture (iChannel2,reflect(-Normal,gv3View) ).rgb;
+    return mix ( R0, R1, Roughness );
+}
+
+half3 Sphere( in vec2 uv, in vec2 center, in half radius, in half roughness, in half metalness )
+{        
+    vec2 delta = center-uv;
+    
+    half l = dot ( delta, delta);     
+    
+    half sqrRadius = radius*radius;
+        
+    l = ((sqrRadius - l) / sqrRadius);
+    l = max ( l, 0.0 );     
+    
+    half IsInSphere = 1.0-step(l,0.0);
+    delta = delta;
+    
+    // Compute normal
+    half3 normal = half3(delta.xy/radius,radius-sqrt(l));
+    normal = normalize ( normal );   
+    
+    // Generate UV from normal
+    vec2 texUV = normal.xy/normal.z;    
+    texUV = texUV+vec2(0.5,0.5);        
+    half3 textureColor = texture(iChannel0,texUV).rgb;
+    
+    // Use albedo R as a tangent space normal map
+    normal.xyz += textureColor.r * cDetailNormalPower;
+    normal = normalize ( normal );    
+
+    // Compute light contribution
+    half Diffuse = dot ( normal, gv3LightDir );
+    half Spec = SpecGGX(normal,gv3View,gv3LightDir,roughness,metalness);
+     
+    // Fresnel
+    half NdotV = clamp(dot(normal,gv3View),0.0,1.0);
+	NdotV = pow(1.0-NdotV,5.0);    
+	half Fresnel = metalness + (1.0-metalness)*(NdotV);
+
+    // Tint lights
+    half3 SpecColor = Spec *  _LightColor0.rgb;
+    half3 DiffColor = Diffuse *  _LightColor0.rgb * (1.0 - Fresnel);
+    
+    // Add GI
+    const half	cAmbientMin = 0.04;    
+    half		ambient = cAmbientMin * (IsInSphere);    
+    half3		ColorAmbient = half3(ambient,ambient,ambient);
+    half3		GIReflexion = GetGIReflexion ( normal, roughness );
+    
+    
+    ColorAmbient = GIReflexion * cAmbientMin;
+        
+    half3 lightSum = max(((DiffColor + SpecColor)*(1.0-cAmbientMin) ),half3(0.0,0.0,0.0));
+       
+    return ( lightSum + ColorAmbient + ( Fresnel * GIReflexion ) ) * IsInSphere;
+      
+}
+
+void mainImage( out vec4 fragColor, in vec2 fragCoord )
+{	    
+    // Compute normalized UV
+    vec2 uv = fragCoord.xy / iResolution.xy;    
+    // Adapt coord to aspect ratio
+    uv = uv * vec2(1.0,iResolution.y/iResolution.x);
+    
+    
+    // Rotate light
+    gv3LightDir = half3(sin(iTime),cos(iTime)+0.2,cos(iTime));
+    gv3LightDir = normalize (gv3LightDir);
+        
+    // Compute all spheres lighting
+    half3 color = half3(0.0,0.0,0.0);	
+    for ( half Roughness=0.05; Roughness<1.0; Roughness+=0.1)
+    {
+        for ( half metalness=0.05; metalness<1.0; metalness+=0.1)
+        {
+            const half Radius = 0.04;
+            color += Sphere ( uv,vec2( Roughness , metalness*0.8 ), Radius, Roughness, metalness );
+        }
+    }    
+    
+    
+	fragColor = vec4 (color,1.0);
+}
+*/

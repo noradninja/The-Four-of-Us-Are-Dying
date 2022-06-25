@@ -81,27 +81,19 @@ public void Save()
 		var file = File.Create(dataPath + saveFileName);
 		var position = player.transform.position;
 		var rotation = player.transform.rotation;
-		var data = new SaveData
-		{
-			//data needed for reloading on game load
-			savedLevel = levelToSave,
-			playerPosition =
-			{
-				[0] = position.x,
-				[1] = position.y,
-				[2] = position.z
-			},
-			playerRotation =
-			{
-				[0] = rotation.eulerAngles.x,
-				[1] = rotation.eulerAngles.y,
-				[2] = rotation.eulerAngles.z
-			},
-			playerBatteries = InventoryManager.batteryCount,
-			playerMedkits = InventoryManager.medCount,
-			playerStimulants = InventoryManager.stimCount,
-			playerHealth = player.GetComponent<PlayerController>().health
-		};
+		var data = new SaveData();
+		//data needed for reloading on game load
+		data.savedLevel = levelToSave;
+		data.playerPosition[0] = position.x;
+		data.playerPosition[1] = position.y;
+		data.playerPosition[2] = position.z;
+		data.playerRotation[0] = rotation.eulerAngles.x;
+		data.playerRotation[1] = rotation.eulerAngles.y;
+		data.playerRotation[2] = rotation.eulerAngles.z;
+		data.playerBatteries = InventoryManager.batteryCount;
+		data.playerMedkits = InventoryManager.medCount;
+		data.playerStimulants = InventoryManager.stimCount;
+		data.playerHealth = player.GetComponent<PlayerController>().health;
 
 		// //spin through list data to store identifiers
 		

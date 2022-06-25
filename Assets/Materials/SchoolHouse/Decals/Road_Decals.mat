@@ -129,7 +129,7 @@ Material:
     - _BakeryEnabled: 0
     - _BakerySHNonLinear: 0
     - _Bicubic: 0
-    - _BumpScale: 2
+    - _BumpScale: 1.5
     - _BumpShadowHardness: 50
     - _BumpShadowHeightScale: 0.2
     - _Cull: 2
@@ -149,7 +149,7 @@ Material:
     - _DUVChannel: 0
     - _DetailAsTintMask: 0
     - _DetailMaskChannel: 2
-    - _DetailNormalMapScale: 1
+    - _DetailNormalMapScale: 0
     - _DetailsOverlay: 0
     - _DstBlend: 0
     - _ENABLE_D: 0

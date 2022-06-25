@@ -77,7 +77,7 @@ public class Item_Enumerator : MonoBehaviour {
         itemTexts.Add("health", "antiseptic");
      	itemTexts.Add("stims", "stimulants");	
 	///////////////////////////////////////////////////////////////////////////////
-	batteryText.text = $"{InventoryManager.batteryCount:D2}";
+	batteryText.text =InventoryManager.batteryCount.ToString();
 
 	////Check lists to see if we are in it; if not, destroy
 		// Meds
@@ -122,7 +122,7 @@ public class Item_Enumerator : MonoBehaviour {
 				case pickupItem.battery :
 					// print("That's a battery");
 					InventoryManager.batteryCount += 2;
-					string currentCount = $"{InventoryManager.batteryCount:D2}";
+					string currentCount =InventoryManager.batteryCount.ToString();
 					batteryText.text = currentCount;
 					Destroy(targetObject);
 				break;

@@ -107,7 +107,7 @@ public class LoadManager_Inputs : MonoBehaviour {
 		currentSelection = GameObject.Find("Slot_3");
 	}	
 	//Decrement slot by -1 if you press up
-	if (Input.GetKeyDown ($"{joystick1}{UP}")){
+	if (Input.GetButtonDown ("Up")){
 		//audioSource.PlayOneShot(clipList[2]);
 		if (selectedSlot == 1){
 			previousSlot = selectedSlot;
@@ -135,7 +135,7 @@ public class LoadManager_Inputs : MonoBehaviour {
 	}
 			
 	//Increment slot by +1 if you press down
-	if (Input.GetKeyDown (joystick1 + DOWN)){
+	if (Input.GetButtonDown ("Down")){
 		//audioSource.PlayOneShot(clipList[3]);
 		if (selectedSlot == 3){
 			//set slot to 1 if you are at slot 3 to wrap selection
@@ -161,7 +161,7 @@ public class LoadManager_Inputs : MonoBehaviour {
 		AnimateButtons();
 	}
 	//here we are checking to see if the loader dialog is up, and if the selected slot has data- if the text for the slot is "No Data" we won't pull up the confirm dialog
-	if (Input.GetKeyDown ($"{joystick1}{CROSS}") && menuManager.GetComponent<Title_Menu_Manager>().dialogEnabled == false){
+	if (Input.GetButtonDown ("Cross") && menuManager.GetComponent<Title_Menu_Manager>().dialogEnabled == false){
 		SetLoadedColor();
 		loadDialogGroup.alpha = 1;
 		//anmi =GameObject.Find ("Confirmation_Load_Dialog").GetComponent<Animator>();
@@ -170,7 +170,7 @@ public class LoadManager_Inputs : MonoBehaviour {
 		StartCoroutine(DialogHandler());
 		//audioSource.PlayOneShot(clipList[0]);
 	}
-	if (Input.GetKeyDown ($"{joystick1}{CROSS}") && menuManager.GetComponent<Title_Menu_Manager>().delayTimer == true){
+	if (Input.GetButtonDown ("Cross") && menuManager.GetComponent<Title_Menu_Manager>().delayTimer == true){
 		
 		if (menuManager.GetComponent<Title_Menu_Manager>().dialogEnabled == true){
 				
@@ -181,7 +181,7 @@ public class LoadManager_Inputs : MonoBehaviour {
 			//anim.SetTrigger("SteadyState");
 		}
 	}
-	if (Input.GetKeyDown ($"{joystick1}{CIRCLE}") &&  menuManager.GetComponent<Title_Menu_Manager>().dialogEnabled == true){
+	if (Input.GetButtonDown ("Circle") &&  menuManager.GetComponent<Title_Menu_Manager>().dialogEnabled == true){
 		SetColor();
 		loadDialogGroup.alpha = 0;
 		StartCoroutine(DialogHandler());
