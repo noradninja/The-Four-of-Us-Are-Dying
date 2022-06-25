@@ -45,8 +45,10 @@ void Start(){
             accum = 0.0f;
             frames = 0;
             //Display the fps/ms and round to n decimals
-            fpsText.text = (Mathf.Clamp(Mathf.RoundToInt(averageFPS),0,99).ToString("F0") + " FPS Average / " + 
-                                        msFrame.ToString("F2") + " ms/frame over " + frameRange/30 + " second(s)");
+            fpsText.text = (Mathf.Clamp(Mathf.RoundToInt(averageFPS),0,60).ToString("F0") + 
+										" FPS Average / " + msFrame.ToString("F2") + " ms/frame" + 
+										Environment.NewLine + "Max (Lifetime): " + maxFPS + " / Min (Prev sec): " +
+										minFPS);
             switch (Application.isEditor)
             {
 	            case false:
@@ -127,11 +129,15 @@ void Start(){
 			if (fps < lowest) {
 				lowest = fps;
 			}
+			minFPS = lowest;
 		}
 		averageFPS = sum / frameRange;
         averageFPS += 1; //fix for off by one error cause I am fucking lazy
-		maxFPS = highest;
-		minFPS = lowest;
+
+		if (highest > maxFPS)
+		{
+			maxFPS = highest;	
+		}
     }
     
 }

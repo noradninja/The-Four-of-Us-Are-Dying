@@ -17,7 +17,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
   </PropertyGroup>
@@ -169,6 +169,16 @@
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\BatchPrepareObjectsForDynamicBatching\MB_BatchPrepareObjectsForDynamicBatchingDescription.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\PrepareObjectsForDynamicBatching\MB_PrepareObjectsForDynamicBatchingDescription.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneDynamicAddDelete\MB_DynamicAddDeleteExample.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_Example.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleMover.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SceneRuntimeExample\MB_ExampleSkinnedMeshDescription.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SkinnedMeshRenderer\MB_SkinnedMeshSceneController.cs" />
+    <Compile Include="Assets\MeshBaker\Examples\SwitchBakedObjectsTexture\MB_SwitchBakedObjectsTexture.cs" />
     <Compile Include="Assets\RainMaker\Prefab\BaseRainScript.cs" />
     <Compile Include="Assets\RainMaker\Prefab\RainCollision.cs" />
     <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
@@ -257,6 +267,7 @@
     <None Include="Assets\Addons\FastMobileBloom\readme.txt" />
     <None Include="Assets\Shader\Foliage\Vertex Color.shader" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardMeta_VC.cginc" />
+    <None Include="Assets\Shader\PBR\AllPBRMethods.shader" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForwardSimple_VC.cginc" />
     <None Include="Assets\Addons\Shaders\trail.shader" />
     <None Include="Assets\Addons\Shaders\spark.shader" />
@@ -283,6 +294,7 @@
     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC.shader" />
     <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
     <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
+    <None Include="Assets\MeshBaker\Examples\Shaders\TestTextureArrays.shader" />
     <None Include="Assets\Shader\Invisible.shader" />
     <None Include="Assets\Il2cppConfig.txt" />
     <None Include="Assets\Addons\FastSSAO\FastSSAO.shader" />
@@ -316,6 +328,7 @@
     <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardConfig.cginc" />
     <None Include="Assets\Shader\SF Shaders\PBR_Test.shader" />
     <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
+    <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
     <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandard.shader" />
     <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardShadow.cginc" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
@@ -341,6 +354,7 @@
     <None Include="Assets\Addons\Shaders\beam2.shader" />
     <None Include="Assets\Addons\Lightbeam\Documentation\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
+    <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Composition.cginc" />
@@ -362,8 +376,10 @@
     <None Include="Assets\Addons\Ultra Skybox Fog\Manual.txt" />
     <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardMeta.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\MeshBaker\Release Notes.txt" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicMeta.cginc" />
     <None Include="Assets\Shader\Standard Mobile\Standard_VC_No_Fog.shader" />
+    <None Include="Assets\MeshBaker\MeshBakerWorkingFolder\DONT_DELETE.txt" />
     <None Include="Assets\Addons\Shaders\sight.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail.shader" />
@@ -402,6 +418,7 @@
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardInput_VC.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Shader\Light &amp; Shadow\ShadowCaster.shader" />
+    <None Include="Assets\MeshBaker\README.txt" />
     <None Include="Assets\Addons\Shaders\explosion.shader" />
     <None Include="Assets\Addons\Shaders\tubeLum.shader" />
     <None Include="Assets\Addons\Shader Forge\TesterManual.txt" />
@@ -413,6 +430,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Shader\Standard Mobile Lerp\Standard_VC_Lerp.shader" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Textures\Readme.txt" />
+    <None Include="Assets\MeshBaker\Resources\Shaders\AlbedoShader.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Addons\Shaders\NewUnlitShader.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForwardSimple.cginc" />
@@ -1033,6 +1051,14 @@
     <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
       <Project>{6A4DCA01-D810-725F-FB11-7397923B3C9F}</Project>
       <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="MeshBakerCore.csproj">
+      <Project>{4C5698EE-81EB-E5C6-B575-91BBC677C043}</Project>
+      <Name>MeshBakerCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="MeshBakerEditor.csproj">
+      <Project>{492C1E7D-CB20-759D-89A1-3F76DEF70D38}</Project>
+      <Name>MeshBakerEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

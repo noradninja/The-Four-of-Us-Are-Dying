@@ -77,12 +77,12 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 		//because Unity's occlusion culling method is RAM hungry
 		//if the object is past the far clip plane or behind us
 		// disable it's renderer so we arent even considering sending it to the GPU
-		if (!enableCulling) return;
-		if (distance >= mainCam.farClipPlane || viewPos.z < -0.25f)
-		{
-			thisRenderer.enabled = false;
-		}
-		else thisRenderer.enabled = true;
+		// if (!enableCulling) return;
+		// if (distance >= mainCam.farClipPlane || viewPos.z < -0.25f)
+		// {
+		// 	thisRenderer.enabled = false;
+		// }
+		// else thisRenderer.enabled = true;
 	}
 	
 }
