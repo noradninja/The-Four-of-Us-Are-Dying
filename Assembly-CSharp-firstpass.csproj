@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,7 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -170,9 +170,6 @@
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -363,59 +360,14 @@
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Scripting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Scripting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Workspaces">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Collections.Immutable.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.AttributedModel">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.AttributedModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Convention">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Convention.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Hosting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Hosting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Runtime">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.TypedParts">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.TypedParts.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Reflection.Metadata.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Loader">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Runtime.Loader.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
@@ -767,14 +719,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
-      <Project>{125B9EB7-2796-10F2-223B-39B2BFB911FA}</Project>
-      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
-      <Project>{6A4DCA01-D810-725F-FB11-7397923B3C9F}</Project>
-      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
-    </ProjectReference>
     <ProjectReference Include="MeshBakerCore.csproj">
       <Project>{4C5698EE-81EB-E5C6-B575-91BBC677C043}</Project>
       <Name>MeshBakerCore</Name>

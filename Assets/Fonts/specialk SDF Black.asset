@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: specialk SDF Black
   m_EditorClassIdentifier: 
-  hashCode: 2052183643
+  hashCode: 1869235164
   material: {fileID: 21883486504406164}
   materialHashCode: 120099824
   fontAssetType: 1
@@ -929,23 +929,19 @@ MonoBehaviour:
       yAdvance: 0
     xOffset: 0
   fallbackFontAssets: []
-  m_CreationSettings:
-    sourceFontFileName: 
-    sourceFontFileGUID: 5eb020d46ec4d5d4aa9e940b1f5f8461
-    pointSizeSamplingMode: 0
-    pointSize: 203
-    padding: 5
-    packingMode: 0
-    atlasWidth: 1024
-    atlasHeight: 1024
-    characterSetSelectionMode: 0
-    characterSequence: 32 - 126, 160, 8203, 8230, 9633
-    referencedFontAssetGUID: 
-    referencedTextAssetGUID: 
+  fontCreationSettings:
+    fontSourcePath: 
+    fontSizingMode: 0
+    fontSize: 0
+    fontPadding: 0
+    fontPackingMode: 0
+    fontAtlasWidth: 0
+    fontAtlasHeight: 0
+    fontCharacterSet: 0
     fontStyle: 0
-    fontStyleModifier: 2
-    renderMode: 6
-    includeFontFeatures: 1
+    fontStlyeModifier: 0
+    fontRenderMode: 0
+    fontKerning: 0
   fontWeights:
   - regularTypeface: {fileID: 0}
     italicTypeface: {fileID: 0}
@@ -1042,8 +1038,8 @@ Material:
     - _ScaleRatioA: 0.26143792
     - _ScaleRatioB: 0.26041666
     - _ScaleRatioC: 0
-    - _ScaleX: 1
-    - _ScaleY: 1
+    - _ScaleX: 3
+    - _ScaleY: 1.25
     - _ShaderFlags: 0
     - _SpecularPower: 2
     - _Stencil: 0

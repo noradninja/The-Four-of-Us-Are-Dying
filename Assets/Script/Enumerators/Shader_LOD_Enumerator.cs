@@ -15,7 +15,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	private Vector3 viewPos;
 	private Vector3 thisPos;
 	private Vector3 playerPos;
-	private int tick = 0;
+	public static int tick = 0;
 	private Renderer thisRenderer;
 	private Camera mainCam;
 
@@ -28,17 +28,17 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	//TODO: write this so its a subscriber fired event so we don't need this logic running on every object, cause that's fucking smart
 	private void Update()
 	{
-		//is it an odd frame
-		if (tick != 2)
+		// we only need to do *whatever* 2/4 times a frame, depending on refresh rate
+		if (tick != 15)
 			tick++;
-		else //it's an even frame
+		else 
 		{
-			HalfUpdate();
+			TickUpdate();
 			tick = 0;
 		}
 	}
 
-	private void HalfUpdate()
+	private void TickUpdate()
 	{
 		thisPos = new Vector3(this.transform.position.x, 0f, this.transform.position.z);
 		playerPos = new Vector3(player.transform.position.x, 0f, player.transform.position.z);

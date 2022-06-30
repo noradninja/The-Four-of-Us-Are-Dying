@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,7 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -65,28 +65,6 @@
     <Compile Include="Assets\Addons\KinoFog\Kino\Fog\Editor\FogEditor.cs" />
     <Compile Include="Assets\Addons\Lightbeam\Scripts\Editor\LightbeamEditor.cs" />
     <Compile Include="Assets\Addons\LightmapSwitchingTool\Editor\LightingScenariosInspector.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\DependencyChecker.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\GeneralMethods.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPCombinedMeshEditor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPCombinedVolumeEditor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPEditor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPInfoWindow.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPLightEditor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPManager.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPQuickEditingEditor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPTooltipManager.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPUpdater.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPUtilities.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLPVolumeEditor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Editor\MLSForceNoProbesEditor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Extensions\Editor\ClosestPoint.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Extensions\Editor\ShowOnlyDrawer.cs" />
-    <Compile Include="Assets\Addons\PolyFew\BatchFewShader\Editor\BatchFewShaderGUI.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\DecoratorEditor.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\InspectorAttacher.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\InspectorDrawer.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PolyfewMenu.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Editor\PopupToggleTemplate.cs" />
     <Compile Include="Assets\Addons\Prefab Brush\Scripts\Editor\PrefabBrush.cs" />
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Editor\Code\_ConnectionGroups\SF_NodeConnectionGroup.cs" />
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Editor\Code\_ConnectionGroups\SFNCG_Append.cs" />
@@ -286,6 +264,19 @@
     <Compile Include="Assets\Script\Editor\FOV_Render.cs" />
     <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
     <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI_Lerp.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\AccordionElementEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\BezierLineRendererEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\BoxSliderEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\CanvasGroupActivator.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\CUIBezierCurveEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\CUIGraphicEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\CUIImageEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\CUITextEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\NonDrawingGraphicEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\ReadOnlyDrawer.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\TextPicEditor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\uGUITools.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Editor\UIExtensionsMenuOptions.cs" />
     <Compile Include="Assets\VitaFTPI\Editor\UploadBuild.cs" />
     <Compile Include="Assets\VitaFTPI\Editor\UploadData.cs" />
     <Compile Include="Assets\VitaFTPI\Editor\VitaFTPOptions.cs" />
@@ -481,9 +472,6 @@
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -689,9 +677,6 @@
     <Reference Include="UnityEditor.Timeline">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.TreeEditor">
-      <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.Networking">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
     </Reference>
@@ -703,12 +688,6 @@
     </Reference>
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.HoloLens">
-      <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
@@ -740,53 +719,11 @@
     <Reference Include="UnityEditor.Analytics">
       <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/Editor/UnityEditor.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Scripting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Scripting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Workspaces">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Collections.Immutable.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.AttributedModel">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.AttributedModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Convention">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Convention.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Hosting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Hosting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Runtime">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.TypedParts">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.TypedParts.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Reflection.Metadata.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Loader">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Runtime.Loader.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Purchasing">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.3/Editor/UnityEditor.Purchasing.dll</HintPath>
+      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/Editor/UnityEditor.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
@@ -1158,14 +1095,6 @@
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
       <Project>{BDB19C1A-7FBA-19F3-0928-A4F0996DDCFC}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
-      <Project>{125B9EB7-2796-10F2-223B-39B2BFB911FA}</Project>
-      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
-      <Project>{6A4DCA01-D810-725F-FB11-7397923B3C9F}</Project>
-      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MeshBakerCore.csproj">
       <Project>{4C5698EE-81EB-E5C6-B575-91BBC677C043}</Project>

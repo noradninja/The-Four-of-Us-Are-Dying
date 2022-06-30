@@ -60,14 +60,14 @@ half4 frag_Prefilter(v2f i) : SV_Target
     // Premultiply CoC to reduce background bleeding.
     half4 weights = saturate(abs(cocs) * _RcpMaxCoC);
 
-#if defined(PREFILTER_LUMA_WEIGHT)
-    // Apply luma weights to reduce flickering.
-    // Inspired by goo.gl/j1fhLe goo.gl/mfuZ4h
-    weights.x *= 1 / (max3(c0) + 1);
-    weights.y *= 1 / (max3(c1) + 1);
-    weights.z *= 1 / (max3(c2) + 1);
-    weights.w *= 1 / (max3(c3) + 1);
-#endif
+// #if defined(PREFILTER_LUMA_WEIGHT)
+//     // Apply luma weights to reduce flickering.
+//     // Inspired by goo.gl/j1fhLe goo.gl/mfuZ4h
+//     weights.x *= 1 / (max3(c0) + 1);
+//     weights.y *= 1 / (max3(c1) + 1);
+//     weights.z *= 1 / (max3(c2) + 1);
+//     weights.w *= 1 / (max3(c3) + 1);
+// #endif
 
     // Weighted average of the color samples
     half3 avg = c0 * weights.x + c1 * weights.y + c2 * weights.z + c3 * weights.w;

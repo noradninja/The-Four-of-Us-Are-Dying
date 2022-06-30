@@ -1,4 +1,4 @@
-
+#if UNITY_EDITOR
 namespace DecalSystem {
     using System.Collections;
     using System.Collections.Generic;
@@ -32,9 +32,8 @@ namespace DecalSystem {
             }
         }
 
-    #if UNITY_EDITOR
+
         [MenuItem( "GameObject/Decal" )]
-    #endif
         internal static void Create() {
             new GameObject( "Decal", typeof( Decal ), typeof( MeshFilter ), typeof( MeshRenderer ) ).isStatic = true;
         }
@@ -67,14 +66,14 @@ namespace DecalSystem {
 
 
         void OnDrawGizmosSelected() {
-            // Gizmos.matrix = transform.localToWorldMatrix;
-            // Gizmos.color = Color.green;
-            // Gizmos.DrawWireCube( Vector3.zero, Vector3.one );
+            Gizmos.matrix = transform.localToWorldMatrix;
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube( Vector3.zero, Vector3.one );
 
-            // var bounds = DecalUtils.GetBounds( this );
-            // Gizmos.matrix = Matrix4x4.identity;
-            // Gizmos.color = Color.white;
-            // Gizmos.DrawWireCube( bounds.center, bounds.size + Vector3.one * 0.01f );
+            var bounds = DecalUtils.GetBounds( this );
+            Gizmos.matrix = Matrix4x4.identity;
+            Gizmos.color = Color.white;
+            Gizmos.DrawWireCube( bounds.center, bounds.size + Vector3.one * 0.01f );
 
             //Gizmos.matrix = transform.localToWorldMatrix;
             //Gizmos.color = Color.yellow;
@@ -90,11 +89,12 @@ namespace DecalSystem {
 
 
         public void BuildAndSetDirty() {
-        //     if (Sprite) DecalUtils.FixRatio( this, ref oldScale );
-        //     DecalBuilder.Build( this );
-        //     DecalUtils.SetDirty( this );
+            if (Sprite) DecalUtils.FixRatio( this, ref oldScale );
+            DecalBuilder.Build( this );
+            DecalUtils.SetDirty( this );
         }
 
 
     }
 }
+#endif

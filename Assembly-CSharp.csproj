@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,7 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -72,6 +72,9 @@
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\TerrainUtils.cs" />
     <Compile Include="Assets\Addons\FastMobileBloom\FastMobileBloom.cs" />
     <Compile Include="Assets\Addons\FastSSAO\FastSSAO.cs" />
+    <Compile Include="Assets\Addons\FpsGraphAnalyzer\Demo\Scripts\AmountSlider.cs" />
+    <Compile Include="Assets\Addons\FpsGraphAnalyzer\Demo\Scripts\DemoManager.cs" />
+    <Compile Include="Assets\Addons\FpsGraphAnalyzer\Scripts\LineGenerator.cs" />
     <Compile Include="Assets\Addons\FXAA\FXAA.cs" />
     <Compile Include="Assets\Addons\Kino\Bokeh\Bokeh.cs" />
     <Compile Include="Assets\Addons\KinoFog\Kino\Fog\Fog.cs" />
@@ -82,93 +85,13 @@
     <Compile Include="Assets\Addons\Lightbeam\Scripts\LightbeamSettings.cs" />
     <Compile Include="Assets\Addons\LightmapSwitchingTool\LevelLightmapData.cs" />
     <Compile Include="Assets\Addons\LightmapSwitchingTool\Scripts\LightingScenarioSwitcher.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Examples\Scripts\PingPong.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Examples\Scripts\Rotator.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Extensions\FloatEqualsApproximatelyExtention.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Extensions\MLPDataSaver.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Extensions\ShowOnlyAttribute.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Extensions\TransformExtensions.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MagicLightProbes.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPCombinedMesh.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPCombinedVolume.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPForceNoProbes.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPForceSaveProbes.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPLight.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPPoint.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPPointData.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPPortal.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPQuickEditing.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPTracePoint.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\MLPVolume.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CalculateLightIntensity.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CheckForLightLeakAreas.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CheckNearbyGeometry.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CheckVisibility.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CullByHeight.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CullByLightIntensity.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CullGeometryCollisions.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\CullingByEquivalentColor.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\DublicateVertical.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\EquivalentProbesOptimization.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\FillVolume.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\FindAreasAtShadingBorders.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\FindClosestPoints.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\FindGeometryEdges.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\FindGeometryIntersections.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\FindOutOfRangeAreas.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\FindOutOfRangePoins.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\PartialVolumeFilling.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\RemoveUnusedPoints.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\SetDistanceFromGeometry.cs" />
-    <Compile Include="Assets\Addons\Magic Light Probes\Passes\StoreNearLights.cs" />
-    <Compile Include="Assets\Addons\PolyFew\demo\Scripts\FlyCamera.cs" />
-    <Compile Include="Assets\Addons\PolyFew\demo\Scripts\PolygonReduction.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\AttributesImage.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\CombiningInformation.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\DataContainer.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\EditorCoroutineExtensions.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\EditorCoroutines.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\Extensions.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\HandleControlsUtility.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\JsonUtilityArrays.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\MaterialCombiner.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\ObjectMaterialLinks.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\PolyFewHost.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\PolyFewResetter.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\PrivateValueAccessor.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\RefreshEnforcer.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\SerializableDictionary.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\NonEditor-Scripts\UtilityServices.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Runtime\MeshCombiner.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Runtime\PolyfewRuntime.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Runtime\SystemServices.cs" />
-    <Compile Include="Assets\Addons\PolyFew\Scripts\Runtime\UtilityServicesRuntime.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\DataSet.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\MaterialData.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\ModelUtil.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\ObjectBuilder.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Dataset\Triangulator.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\EditorUtil.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\ImportOptions.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Loaders\Loader.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Loaders\LoaderObj.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\Loaders\TextureLoader.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\LoadingProgress.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\MathData\Triangle.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\MathData\Vertex.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\MathUtility.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\MathUtil\Triangulation.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\ModelImportInfo.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\MultiObjectImporter.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\ObjectImporter.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\ObjectImporterUI.cs" />
-    <Compile Include="Assets\Addons\PolyFew\ThirdParty\AsImpL\Scripts\PathSettings.cs" />
     <Compile Include="Assets\Addons\Prefab Brush\Scripts\PB_Enums.cs" />
     <Compile Include="Assets\Addons\Prefab Brush\Scripts\PB_PrefabData.cs" />
     <Compile Include="Assets\Addons\Prefab Brush\Scripts\PB_SaveObject.cs" />
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Scripts\EditorLabel.cs" />
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Scripts\EnableCameraDepthInForward.cs" />
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Scripts\SoftNormalsToVertexColor.cs" />
+    <Compile Include="Assets\LineGraph\Script\LineGraphManager.cs" />
     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
     <Compile Include="Assets\MeshBaker\Examples\BatchPrepareObjectsForDynamicBatching\MB_BatchPrepareObjectsForDynamicBatchingDescription.cs" />
     <Compile Include="Assets\MeshBaker\Examples\CharacterCustomization\MB_SwapShirts.cs" />
@@ -223,6 +146,7 @@
     <Compile Include="Assets\Script\Tools\Res.cs" />
     <Compile Include="Assets\Script\Tools\Rotate_Object.cs" />
     <Compile Include="Assets\Script\Tools\SetShadowResolution.cs" />
+    <Compile Include="Assets\Script\Tools\UILineRenderer.cs" />
     <Compile Include="Assets\Script\UI\FadeIn.cs" />
     <Compile Include="Assets\Script\UI\FadeInWithCross.cs" />
     <Compile Include="Assets\Script\UI\Fadeout.cs" />
@@ -261,6 +185,171 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\ComboBox\ComboBoxChanged.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_Image.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\Cooldown\CooldownEffect_SAUIM.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\01_Basic\Example01CellDto.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\01_Basic\Example01Scene.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\01_Basic\Example01ScrollView.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\01_Basic\Example01ScrollViewCell.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\02_CellEventHandling\Example02CellDto.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\02_CellEventHandling\Example02Scene.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\02_CellEventHandling\Example02ScrollView.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\02_CellEventHandling\Example02ScrollViewCell.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\02_CellEventHandling\Example02ScrollViewContext.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\03_InfiniteScroll\Example03CellDto.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\03_InfiniteScroll\Example03Scene.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\03_InfiniteScroll\Example03ScrollView.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\03_InfiniteScroll\Example03ScrollViewCell.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\FancyScrollView\03_InfiniteScroll\Example03ScrollViewContext.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\HSS-VSS-ScrollSnap\PaginationScript.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\HSS-VSS-ScrollSnap\UpdateScrollSnap.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\MenuExample\Scripts\Menus\AwesomeMenu.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\MenuExample\Scripts\Menus\GameMenu.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\MenuExample\Scripts\Menus\MainMenu.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\MenuExample\Scripts\Menus\OptionsMenu.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\MenuExample\Scripts\Menus\PauseMenu.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\RadialSlider\UpdateRadialValue.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\TextEffects\AnimateEffects.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\TextEffects\testHref.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\UILineRenderer\LineRendererOrbit.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\UILineRenderer\TestAddingPoints.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Examples\UIVerticalScrollerDemo\Scripts\ScrollingCalendar.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\Accordion\Accordion.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\Accordion\AccordionElement.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\Accordion\Tweening\FloatTween.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\Accordion\Tweening\ITweenValue.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\Accordion\Tweening\TweenRunner.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\BoxSlider.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorImage.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorLabel.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorPickerControl.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorPickerPresets.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorPickerTester.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorSlider.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorSliderImage.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\ColorValues.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\Events\ColorChangedEvent.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\Events\HSVChangedEvent.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\HexColorField.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\HSVUtil.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\SVBoxSlider.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ColorPicker\TiltWindow.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ComboBox\AutoCompleteComboBox.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ComboBox\ComboBox.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ComboBox\DropDownList.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ComboBox\DropDownListButton.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ComboBox\DropDownListItem.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\CooldownButton.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\InputFocus.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\MultiTouchScrollRect.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\RadialSlider.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ReorderableList\ReorderableList.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ReorderableList\ReorderableListContent.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ReorderableList\ReorderableListDebug.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\ReorderableList\ReorderableListElement.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\RescalingPanels\RescaleDragPanel.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\RescalingPanels\RescalePanel.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\RescalingPanels\ResizePanel.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\SegmentedControl.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\SelectionBox\ExampleSelectable.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\SelectionBox\IBoxSelectable.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\SelectionBox\SelectionBox.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\Stepper.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\TextPic.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Controls\UI_Knob.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\BestFitOutline.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\CurlyUI\CUIBezierCurve.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\CurlyUI\CUIGraphic.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\CurlyUI\CUIImage.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\CurlyUI\CUIMisc.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\CurlyUI\CUIText.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\CurvedText.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\CylinderText.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\Gradient.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\Gradient2.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\LetterSpacing.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\MonoSpacing.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\NicerOutline.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\RaycastMask.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShaderEffects\UIAdditiveEffect.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShaderEffects\UIImageCrop.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShaderEffects\UILinearDodgeEffect.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShaderEffects\UIMultiplyEffect.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShaderEffects\UIScreenEffect.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShaderEffects\UISoftAdditiveEffect.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShineEffect.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\ShineEffector.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\SoftMaskScript.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\UIFlippable.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Effects\UIParticleSystem.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\InputModules\AimerInputModule.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\InputModules\GamePadInputModule.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\CurvedLayout.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\FancyScrollView.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\FancyScrollViewCell.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\FlowLayoutGroup.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\HorizontalScrollSnap.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\IScrollSnap.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\RadialLayout.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\ScrollPositionController.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\ScrollSnap.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\ScrollSnapBase.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\ScrollSnapScrollbarHelper.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\TableLayoutGroup.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\TileSizeFitter.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\UIVerticalScroller.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Layout\VerticalScrollSnap.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\MenuSystem\Menu.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\MenuSystem\MenuManager.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\MenuSystem\SimpleMenu.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\DiamondGraph.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\UICircle.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\UICornerCut.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\UIGridRenderer.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\UILineRenderer.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\UILineTextureRenderer.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\UIPolygon.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Primitives\UIPrimitiveBase.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\TabNavigationHelper.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\ToolTips\BoundTooltip\BoundTooltipItem.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\ToolTips\BoundTooltip\BoundTooltipTrigger.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\ToolTips\HoverTooltip.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\ToolTips\ToolTip.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\UIWindowBase.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\BezierPath.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\CableCurve.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\Circle.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\CLZF2.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\DragCorrector.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ExtensionsToggle.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ExtensionsToggleGroup.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\InputFieldEnterSubmit.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\NonDrawingGraphic.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\PaginationManager.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\PPIViewer.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ReadOnlyAttribute.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ReturnKeyTriggersButton.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ScrollConflictManager.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ScrollRectEx.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ScrollRectExtensions.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ScrollRectLinker.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\ScrollRectTweener.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\SelectableScaler.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\SetPropertyUtility.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\switchToRectTransform.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\TestCompression.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UI_InfiniteScroll.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UI_ScrollRectOcclusion.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UI_TweenScale.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UIExtensionMethods.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UIHighlightable.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UILineConnector.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UIScrollToSelection.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UIScrollToSelectionXY.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\Utilities\UISelectableExtension.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\VR Extensions\VRCursor.cs" />
+    <Compile Include="Assets\unity-ui-extensions\Scripts\VR Extensions\VRInputModule.cs" />
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCoreForwardSimple_VC.cginc" />
     <None Include="Assets\GlassBumpEffect\Shaders\GlassStainedBumpDistort_Orthographic.shader" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\DiskKernel.cginc" />
@@ -272,6 +361,7 @@
     <None Include="Assets\Addons\Shaders\trail.shader" />
     <None Include="Assets\Addons\Shaders\spark.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UIAdditive.shader" />
     <None Include="Assets\Shader\Vertex\VertexLightmap.shader" />
     <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail_Soft.shader" />
     <None Include="Assets\Addons\FXAA\FXAA.shader" />
@@ -279,12 +369,11 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCore_VC.cginc" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardUtils.cginc" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Debug.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Skybox.shader" />
     <None Include="Assets\Shader\Foliage\VertexLightmap.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle AddSmooth.shader" />
     <None Include="Assets\___www.unityassetcollection.com___.txt" />
-    <None Include="Assets\Addons\Magic Light Probes\Docs\README.txt" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Shaders\UltraSkyboxFog.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
     <None Include="Assets\Addons\Shader Forge\ProjectSettings\ProjectVersion.txt" />
@@ -292,19 +381,18 @@
     <None Include="Assets\Shader\PBR\PBR BlinnPhong.shader" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC.shader" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
     <None Include="Assets\MeshBaker\Examples\Shaders\TestTextureArrays.shader" />
     <None Include="Assets\Shader\Invisible.shader" />
     <None Include="Assets\Il2cppConfig.txt" />
     <None Include="Assets\Addons\FastSSAO\FastSSAO.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Premultiply Blend.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UISoftAdditive.shader" />
     <None Include="Assets\Shader\PostProcess\2xSAI.shader" />
     <None Include="Assets\Shader\Light &amp; Shadow\Rain_Distortion.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Readme.txt" />
     <None Include="Assets\Addons\Bloom (Titles)\Shaders\Bloom.shader" />
     <None Include="Assets\Addons\FastMobileBloom\FastMobileBloom.shader" />
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardInput_VC.cginc" />
-    <None Include="Assets\Addons\Magic Light Probes\Shaders\MLPVolumeBounds.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\Addons\CrepuscularRays\Readme.txt" />
     <None Include="Assets\Shader\PBR\PBRLib.cginc" />
@@ -312,6 +400,8 @@
     <None Include="Assets\Shader\SSS\SSS_Fast_Clip.shader" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardCore_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCoreForward_VC.cginc" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UIParticleHidden.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\SoftMaskShader.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicBRDF.cginc" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\DiskBlur.cginc" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
@@ -325,27 +415,25 @@
     <None Include="Assets\Addons\Bloom (Titles)\Shaders\BloomDisplay.shader" />
     <None Include="Assets\Addons\KinoFog\Kino\Fog\Shader\Fog.shader" />
     <None Include="Assets\_www.unityassetcollection.com.txt" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardConfig.cginc" />
     <None Include="Assets\Shader\SF Shaders\PBR_Test.shader" />
     <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
     <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\BatchFewStandard.shader" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardShadow.cginc" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardInput.cginc" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Add.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForward.cginc" />
     <None Include="Assets\Shader\Foliage\VertexLightmapCommon.cginc" />
     <None Include="Assets\Shader\PBR\PBRShader.shader" />
     <None Include="Assets\Addons\Shaders\zako.shader" />
     <None Include="Assets\Addons\Shaders\debris.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Multiply.shader" />
     <None Include="Assets\RainMaker\Prefab\RainShader.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Alpha Blend.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\Parallax.shader" />
     <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Soft.shader" />
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCoreForward_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardInput_VC.cginc" />
     <None Include="Assets\Addons\Shaders\tube.shader" />
     <None Include="Assets\Shader\Foliage\VertexLightmapCommon_LOD.cginc" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardCore.cginc" />
     <None Include="Assets\Addons\Shaders\font.shader" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForward_VC.cginc" />
     <None Include="Assets\Addons\LightmapSwitchingTool\Scenes\NewUnlitShader.shader" />
@@ -355,6 +443,7 @@
     <None Include="Assets\Addons\Lightbeam\Documentation\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
     <None Include="Assets\MeshBaker\Resources\Shaders\NormalMapShader.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UIImageCrop.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\LightWrapping.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Composition.cginc" />
@@ -364,29 +453,29 @@
     <None Include="Assets\Addons\Shaders\simple.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Addons\Shaders\aura.shader" />
-    <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\CalculateProbeSpacing.compute" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UILinearDodge.shader" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCore_VC.cginc" />
-    <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\RecalculateVolumeFilling.compute" />
     <None Include="Assets\Shader\Foliage\Diffuse_Additive_Color.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle VertexLit Blended.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Anton OFL.txt" />
     <None Include="Assets\Shader\Dither\Dither.shader" />
     <None Include="Assets\Shader\Tests\DepthClipTest.shader" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle AddMultiply.shader" />
     <None Include="Assets\Addons\Shaders\beam.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Manual.txt" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardMeta.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\MeshBaker\Release Notes.txt" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicMeta.cginc" />
     <None Include="Assets\Shader\Standard Mobile\Standard_VC_No_Fog.shader" />
     <None Include="Assets\MeshBaker\MeshBakerWorkingFolder\DONT_DELETE.txt" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Blend.shader" />
     <None Include="Assets\Addons\Shaders\sight.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
     <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast_Clip VertexLit.shader" />
     <None Include="Assets\VitaFTPI\LastBuildDir.txt" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\TessellationDisplacement.shader" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForwardSimple.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\Shader\Light &amp; Shadow\Lightbeam Inside.shader" />
@@ -394,16 +483,15 @@
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicInput.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UIMultiply.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\Tiles.shader" />
     <None Include="Assets\Shader\BRDF_Lookup.shader" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Prefilter.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Shader\Tests\Test.shader" />
     <None Include="Assets\Addons\Shaders\beam_old.shader" />
-    <None Include="Assets\Addons\Magic Light Probes\Passes\Compute Shaders\CalculateDistanceFromGeometry.compute" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCommon.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Lightning_Contrast.shader" />
-    <None Include="Assets\Addons\Magic Light Probes\Shaders\MLPVolumeBounds 1.shader" />
     <None Include="Assets\RainMaker\Readme.txt" />
     <None Include="Assets\Shader\PBR\UnityMetaPass.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
@@ -424,7 +512,7 @@
     <None Include="Assets\Addons\Shader Forge\TesterManual.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC_No_Fog.shader" />
-    <None Include="Assets\Addons\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForward.cginc" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UIScreen.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCore.cginc" />
     <None Include="Assets\Shader\Vertex\Diffuse_Additive_Color.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
@@ -434,6 +522,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Addons\Shaders\NewUnlitShader.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForwardSimple.cginc" />
+    <None Include="Assets\unity-ui-extensions\Shaders\UI Particle MultiplyDouble.shader" />
     <None Include="Assets\Addons\Shaders\blit.shader" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
@@ -443,9 +532,6 @@
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.ShaderGraph.Editor">
-      <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>D:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
@@ -636,59 +722,14 @@
     <Reference Include="UnityEngine.GoogleAudioSpatializer">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.HoloLens">
-      <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Scripting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Scripting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Scripting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Scripting.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Workspaces">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Collections.Immutable.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.AttributedModel">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.AttributedModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Convention">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Convention.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Hosting">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Hosting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Runtime">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.TypedParts">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Composition.TypedParts.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Reflection.Metadata.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Runtime.Loader">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Runtime.Loader.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Threading.Tasks.Extensions">
-      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.code-analysis@0.1.2-preview/Plugins/System.Threading.Tasks.Extensions.dll</HintPath>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.purchasing@2.0.1/UnityEngine.Purchasing.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.StandardEvents">
       <HintPath>C:/Users/NoradNinja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.13/UnityEngine.StandardEvents.dll</HintPath>
@@ -1043,14 +1084,6 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{C4A5947B-42E7-F9F7-B931-B80EB261EFA3}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
-    </ProjectReference>
-    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
-      <Project>{125B9EB7-2796-10F2-223B-39B2BFB911FA}</Project>
-      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
-    </ProjectReference>
-    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
-      <Project>{6A4DCA01-D810-725F-FB11-7397923B3C9F}</Project>
-      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MeshBakerCore.csproj">
       <Project>{4C5698EE-81EB-E5C6-B575-91BBC677C043}</Project>

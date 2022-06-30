@@ -119,6 +119,7 @@ public class PlayerController : MonoBehaviour
 
     //overlay
     public GameObject perfOverlay;
+    public GameObject fpsOverlay;
     public CanvasGroup UICanvasGroup;
     public float currentCharge;
     private static readonly int CrossFade = Shader.PropertyToID("_CrossFade");
@@ -164,8 +165,8 @@ public class PlayerController : MonoBehaviour
             ssaoScript.GetComponent<FXAA>().enabled = true;
             ssaoScript.GetComponent<Crepuscular>().enabled = true;
             ssaoScript.GetComponent<Kino.Fog>().enabled = true;
-            enabledText.GetComponent<Text>().color = Color.green;
-            enabledText.GetComponent<Text>().text = ("Enabled");
+            // enabledText.GetComponent<Text>().color = Color.green;
+            // enabledText.GetComponent<Text>().text = ("Enabled");
          }
     }
 
@@ -246,9 +247,9 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(ButtonDelayTimer(0.5f));
         }
 //Select
-        if (Input.GetButtonDown("Select"))
+        if (Input.GetButtonDown("Select")|| GetDeviceModel.currentDeviceModel == "Playstation Vita TV")
         {   
-          
+          //do PSTV stuff here
         }
 
 ///////////////////////////DPad//////////////////////////////////////
@@ -277,6 +278,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Left") && !delayButton)
         {
             perfOverlay.SetActive(!perfOverlay.activeSelf);
+            fpsOverlay.SetActive(!fpsOverlay.activeSelf);
         }
 
         if (Input.GetButtonDown("Right")){//} && !delayButton){
@@ -294,8 +296,8 @@ public class PlayerController : MonoBehaviour
                 // BokehScript.GetComponent<Kino.Bokeh>().enabled = true;
                 // SSAOScript.GetComponent<Crepuscular>().enabled = true;
                 ssaoScript.GetComponent<FXAA>().enabled = true;
-                enabledText.GetComponent<Text>().color = Color.green;
-                enabledText.GetComponent<Text>().text = ("Enabled");
+                // enabledText.GetComponent<Text>().color = Color.green;
+                // enabledText.GetComponent<Text>().text = ("Enabled");
             }
             //     if(SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution){
             //         SSAOScript.GetComponent<CameraResolutionScaler>().enableInternalResolution = false;
@@ -332,7 +334,7 @@ public class PlayerController : MonoBehaviour
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
             //change text formatting based on number of characters
-                batteryText.text = InventoryManager.batteryCount.ToString();
+                batteryText.text = InventoryManager.batteryCount.ToString("D2");
             //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
@@ -385,7 +387,7 @@ public class PlayerController : MonoBehaviour
                 }
                 lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
                 //change text formatting based on number of characters
-                batteryText.text = InventoryManager.batteryCount.ToString();
+                batteryText.text = InventoryManager.batteryCount.ToString("D2");
                 //are we out of power and adding battery?   
                 if (flashlightDisabled){
                     StopAllCoroutines();
@@ -438,8 +440,6 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(QuickTurn(eulerAngles, neededRotation, 1.5f));
         }
 
-///////////////////////////LTRIG//////////////////////////////////////
-
 //if battery is dead, flicker the light breifly to indicate you should reload flashlight
         if (Input.GetButtonDown("LTRIG") && HasFlashlight && flashlightDisabled)
         {   
@@ -483,7 +483,7 @@ public class PlayerController : MonoBehaviour
             }
             //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
             StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
-                                                flashlight.intensity, 20, 40, 25, 0.08f, 0.040f)); // 'fire' light
+                                                flashlight.intensity, 40, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(WalkLerp(0, 1,  lerpRate));
             if (!isStimulant) StartCoroutine(LerpFocalLength(0.087f, 0.095f, 0.5f, 0.5f, 0.5f));
             
@@ -524,7 +524,7 @@ public class PlayerController : MonoBehaviour
                 float currentAngle = flashlight.spotAngle;
                 float currentSize = lightShaft.transform.localScale.x;
                 Color currentColor = lightBeam.material.color;
-                StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5, 
+                StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 10, 
                                                     currentAngle, 40, currentSize, 0.08f));
             }
             lightFocusing = false;
@@ -566,14 +566,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("RTRIG") && stamina > 0f)
         {   
             isRunning = true;
-            StopAllCoroutines();
-            if (isCharging){
-                currentCharge = flashlightCharge;
-                StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
-            }
-            if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
-            }
+           
+            // if (isCharging){
+            //     currentCharge = flashlightCharge;
+            //     StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
+            // }
+            // if (isStimulant && cooldownValue <= stimCooldown){
+            //     StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+            // }
             
             speed = 5f;
             savedPosition = lightRig.transform.localPosition;
@@ -630,6 +630,7 @@ public class PlayerController : MonoBehaviour
         }
    
     }
+
 
     ///////////////////////////Joysticks//////////////////////////////////////
     private void Rotate()

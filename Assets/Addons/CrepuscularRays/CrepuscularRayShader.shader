@@ -2,6 +2,7 @@
 
 
 Shader "Lighting/Crepuscular Rays" {
+	
 	Properties{
 		_MainTex("Base (RGB)", 2D) = "white" {}
 		_BlurTex("BlurTex (RGB)", 2D) = "white" {}
@@ -12,6 +13,7 @@ Shader "Lighting/Crepuscular Rays" {
 		_Exposure("Exposure", Range(0, 1)) = 1.0
 		//_Parameter("Kernel Offset", Range(0, 5)) = 1.0
 		_Contrast("Contrast", Range(1, 5)) = 1.0
+		[IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
 		
 		}
 		CGINCLUDE
@@ -31,7 +33,9 @@ Shader "Lighting/Crepuscular Rays" {
 		uniform half4 _Parameter;
 		uniform half4 _MainTex_TexelSize;
 		half4 _MainTex_ST;
+		
 
+		
 		struct appdata
 		{
 			float4 pos : POSITION;
@@ -217,7 +221,7 @@ Shader "Lighting/Crepuscular Rays" {
 			}
 		Pass //3- composition 
 		{
-			CGPROGRAM
+        	CGPROGRAM
 			#pragma vertex vertFinal
 			#pragma fragment fragFinal
 			#pragma fragmentoption ARB_precision_hint_fastest

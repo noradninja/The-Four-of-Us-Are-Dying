@@ -17,7 +17,7 @@ public class FPS_Counter : MonoBehaviour {
     float timeleft;
     int[] fpsBuffer;
 	int fpsBufferIndex;
-    public float averageFPS;
+    public static float averageFPS;
 	public float msFrame;
     public Text vramText;
 	public Text ramText;
@@ -47,7 +47,7 @@ void Start(){
             //Display the fps/ms and round to n decimals
             fpsText.text = (Mathf.Clamp(Mathf.RoundToInt(averageFPS),0,60).ToString("F0") + 
 										" FPS Average / " + msFrame.ToString("F2") + " ms/frame" + 
-										Environment.NewLine + "Max (Lifetime): " + maxFPS + " / Min (Prev sec): " +
+										Environment.NewLine + "Max (Life): " + maxFPS + " / Min (Prev sec): " +
 										minFPS);
             switch (Application.isEditor)
             {
@@ -62,9 +62,12 @@ void Start(){
 		            decimal RAMFree = Math.Round((decimal)(RAMValue/1000000), 2);
 		            decimal calcRAM = (((512-RAMFree)/512)*100);
 		            decimal percentRAM = Math.Round((decimal)calcRAM ,2);
-
-		            vramText.text = ("VRAM: " + VRAMFree + "MB Free / 128MB- " + percentVRAM + "% Used");
-		            ramText.text = ("RAM: " + RAMFree + "MB Free / 512MB- "+ percentRAM + "% Used");
+					
+		            //refresh values on screen
+		            vramText.text = ("VRAM: " + VRAMFree + "MB Free");
+		            ramText.text = ("RAM: " + RAMFree + "MB Free");
+		            
+		            //change VRAM/RAM colors
 		            if (percentVRAM >= 75){
 			            vramText.color = Color.red;
 		            }
@@ -80,7 +83,15 @@ void Start(){
 			            ramText.color = Color.yellow;
 		            }
 		            else ramText.color = Color.green;
-
+		            
+		            //change FPS colors 
+		            if (Mathf.RoundToInt(averageFPS) > 27.00f){
+			            fpsText.color = Color.green;
+		            }
+		            else if (Mathf.RoundToInt(averageFPS) <= 27.00f) {
+			            fpsText.color = Color.red;
+		            }
+		            
 		            break;
 	            }
 	            case true:
@@ -96,12 +107,7 @@ void Start(){
 		UpdateBuffer();
 		CalculateFPS();
 
-		if (Mathf.RoundToInt(averageFPS) >= 30.00f){
-			fpsText.color = Color.green;
-		}
-		else if (Mathf.RoundToInt(averageFPS) < 30.00f) {
-			fpsText.color = Color.red;
-		}
+	
     }
     void InitializeBuffer () {
 		if (frameRange <= 0) {
