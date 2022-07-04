@@ -6530,7 +6530,7 @@ MonoBehaviour:
   thunderStormSource: {fileID: 1742728651}
   rainSource: {fileID: 454705688}
   SFXLevel: {fileID: 1521253583}
-  mainCam: {fileID: 0}
+  mainCam: {fileID: 121908225}
 --- !u!4 &422521462
 Transform:
   m_ObjectHideFlags: 0
