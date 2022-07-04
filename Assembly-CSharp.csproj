@@ -131,6 +131,7 @@
     <Compile Include="Assets\Script\Managers\SetScenes.cs" />
     <Compile Include="Assets\Script\Managers\Title_Animator.cs" />
     <Compile Include="Assets\Script\Managers\Title_Menu_Manager.cs" />
+    <Compile Include="Assets\Script\PostProcess\Gamma.cs" />
     <Compile Include="Assets\Script\PostProcess\SAI2x.cs" />
     <Compile Include="Assets\Script\StartMenuManagerInputs.cs" />
     <Compile Include="Assets\Script\TitleSaveManagerInputs.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="Assets\Script\Tools\CameraFacingBillboard.cs" />
     <Compile Include="Assets\Script\Tools\CameraResolutionScaler.cs" />
     <Compile Include="Assets\Script\Tools\CameraResolutionSetter.cs" />
+    <Compile Include="Assets\Script\Tools\ExtensionMethods.cs" />
     <Compile Include="Assets\Script\Tools\FPS_Counter.cs" />
     <Compile Include="Assets\Script\Tools\GC_Manager.cs" />
     <Compile Include="Assets\Script\Tools\GetDeviceModel.cs" />
@@ -369,7 +371,9 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCore_VC.cginc" />
+    <None Include="Assets\Shader\Standard Full\UnityStandardCore_VC.cginc" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Debug.cginc" />
+    <None Include="Assets\Shader\Standard Full\UnityStandardCoreForwardSimple_VC.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Skybox.shader" />
     <None Include="Assets\Shader\Foliage\VertexLightmap.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle AddSmooth.shader" />
@@ -381,6 +385,7 @@
     <None Include="Assets\Shader\PBR\PBR BlinnPhong.shader" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC.shader" />
+    <None Include="Assets\Shader\Standard Full\UnityStandardCoreForward_VC.cginc" />
     <None Include="Assets\MeshBaker\Examples\Shaders\TestTextureArrays.shader" />
     <None Include="Assets\Shader\Invisible.shader" />
     <None Include="Assets\Il2cppConfig.txt" />
@@ -403,6 +408,7 @@
     <None Include="Assets\unity-ui-extensions\Shaders\UIParticleHidden.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\SoftMaskShader.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicBRDF.cginc" />
+    <None Include="Assets\Shader\Standard Full\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\DiskBlur.cginc" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\Vegetation.shader" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardUtils_VC.cginc" />
@@ -472,6 +478,8 @@
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Blend.shader" />
     <None Include="Assets\Addons\Shaders\sight.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\VertexColorRounding.shader" />
+    <None Include="Assets\Shader\Standard Full\Standard_VC_No_Fog.shader" />
+    <None Include="Assets\Shader\Standard Full\UnityStandardUtils_VC.cginc" />
     <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast_Clip VertexLit.shader" />
     <None Include="Assets\VitaFTPI\LastBuildDir.txt" />
@@ -489,9 +497,11 @@
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Prefilter.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\Shader\Tests\Test.shader" />
+    <None Include="Assets\Shader\Standard Full\Standard_VC.shader" />
     <None Include="Assets\Addons\Shaders\beam_old.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCommon.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Lightning_Contrast.shader" />
+    <None Include="Assets\Shader\Standard Full\UnityStandardInput_VC.cginc" />
     <None Include="Assets\RainMaker\Readme.txt" />
     <None Include="Assets\Shader\PBR\UnityMetaPass.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />

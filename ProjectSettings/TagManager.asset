@@ -14,6 +14,7 @@ TagManager:
   - Battery
   - Heavy
   - Light
+  - Water_Decals
   layers:
   - Default
   - TransparentFX
@@ -36,7 +37,7 @@ TagManager:
   - Map_Overlay
   - Road
   - Enemy
-  - 
+  - Water_Decals
   - 
   - 
   - 

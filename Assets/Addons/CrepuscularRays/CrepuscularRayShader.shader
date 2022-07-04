@@ -74,10 +74,10 @@ Shader "Lighting/Crepuscular Rays" {
 				// Calculate vector from pixel to light source in screen space.
 				half4 light = half4(_LightPos.xyz,1);
 				half2 deltaTexCoord = (0,0);
-				
-				if (_LightPos.y > 7){
-					light = half4(_LightPos.x, 7, _LightPos.z,1);
-				}
+// 				
+// 				if (_LightPos.y >= 15){
+// 					light = half4(_LightPos.x, 15, _LightPos.z,1);
+// 				}
 
 				// get our y vector direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
@@ -89,10 +89,10 @@ Shader "Lighting/Crepuscular Rays" {
 					deltaTexCoord = (i.uv - light.xy);
 				}
 
-				if (light.y > -0.1h && light.y < 0.1h)
-				{
-					deltaTexCoord = (i.uv);
-				}
+// 				if (light.y > 10.0h || light.y < -10.0h)
+// 				{
+// 					deltaTexCoord = half2(i.uv);
+// 				}
 			
 				
 				// Divide by number of samples and scale by control factor.

@@ -85,7 +85,7 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.Mid:
                     width = 720;
                     height = 408;
-                    renderDivisor = 1.412f;
+                    renderDivisor = 1.334f;
                     break;
                 case internalResolution.Low:
                     width = 640;

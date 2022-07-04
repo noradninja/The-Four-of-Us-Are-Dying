@@ -288,8 +288,8 @@ public class PlayerController : MonoBehaviour
                 // BokehScript.GetComponent<Kino.Bokeh>().enabled = false;
                 // SSAOScript.GetComponent<Crepuscular>().enabled = false;
                 ssaoScript.GetComponent<FXAA>().enabled = false;
-                enabledText.GetComponent<Text>().color = Color.red;
-                enabledText.GetComponent<Text>().text = ("Disabled");
+                // enabledText.GetComponent<Text>().color = Color.red;
+                // enabledText.GetComponent<Text>().text = ("Disabled");
             }
             else {
                 // SSAOScript.GetComponent<FastSSAO>().enabled = true;

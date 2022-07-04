@@ -1,0 +1,202 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d41887b1546f5c44ab54e7e65aad3bc, type: 3}
+  m_Name: Shadows
+  m_EditorClassIdentifier: 
+  version: 3252
+  resultType: 0
+  materialsAndUVRects:
+  - material: {fileID: 2100000, guid: 903de08ab95471141bb6191a34dd3591, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.0078125
+      y: 0.0078125
+      width: 0.3046875
+      height: 0.4921875
+    srcObjName: Branch 2
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.46493295
+      y: 0.0010566658
+      width: 0.6165645
+      height: 0.98851085
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 903de08ab95471141bb6191a34dd3591, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5859375
+      y: 0.0078125
+      width: 0.234375
+      height: 0.234375
+    srcObjName: Leaves_1 2
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -0.00566712
+      y: 0.020862447
+      width: 0.51093984
+      height: 0.47065416
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 903de08ab95471141bb6191a34dd3591, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.328125
+      y: 0.2578125
+      width: 0.2421875
+      height: 0.2265625
+    srcObjName: Leaves_2 2
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0
+      y: 0.5024438
+      width: 0.4916911
+      height: 0.46334308
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 277503241aa3b594ab20a13a3dd66b22, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.5859375
+      y: 0.2578125
+      width: 0.2265625
+      height: 0.21875
+    srcObjName: Leaves_1 5
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.019550342
+      y: 0.51124144
+      width: 0.4584555
+      height: 0.44770283
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: d8b3571c1963b704babdd0a8ef958d97, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.328125
+      y: 0.0078125
+      width: 0.2421875
+      height: 0.234375
+    srcObjName: Leaves_1 1
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: 0.028347997
+      y: 0.038123168
+      width: 0.485826
+      height: 0.47214076
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  - material: {fileID: 2100000, guid: 5e63c6a0457303444b42cd3a97bd8942, type: 2}
+    atlasRect:
+      serializedVersion: 2
+      x: 0.0078125
+      y: 0.515625
+      width: 0.2734375
+      height: 0.265625
+    srcObjName: Leaves_1
+    textureArraySliceIdx: -1
+    allPropsUseSameTiling: 1
+    allPropsUseSameTiling_sourceMaterialTiling:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 1
+      height: 1
+    allPropsUseSameTiling_samplingEncapsulatinRect:
+      serializedVersion: 2
+      x: -0.0038540317
+      y: 0.43505627
+      width: 0.55170286
+      height: 0.5379716
+    propsUseDifferntTiling_srcUVsamplingRect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    tilingTreatment: 1
+  resultMaterials:
+  - combinedMaterial: {fileID: 2100000, guid: a7243ef7ae4bf1d4b9c895434e8535a6, type: 2}
+    considerMeshUVs: 1
+    sourceMaterials:
+    - {fileID: 2100000, guid: 903de08ab95471141bb6191a34dd3591, type: 2}
+    - {fileID: 2100000, guid: 903de08ab95471141bb6191a34dd3591, type: 2}
+    - {fileID: 2100000, guid: 903de08ab95471141bb6191a34dd3591, type: 2}
+    - {fileID: 2100000, guid: 277503241aa3b594ab20a13a3dd66b22, type: 2}
+    - {fileID: 2100000, guid: d8b3571c1963b704babdd0a8ef958d97, type: 2}
+    - {fileID: 2100000, guid: 5e63c6a0457303444b42cd3a97bd8942, type: 2}
+  resultMaterialsTexArray: []
+  doMultiMaterial: 0

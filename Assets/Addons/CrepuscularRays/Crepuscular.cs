@@ -15,7 +15,9 @@ public class Crepuscular : MonoBehaviour
 	[Range(1, 16)]
 	public int resolutionDivisor = 1;
 
-	private static readonly int LightPos = Shader.PropertyToID("_LightPos");
+	public static readonly int LightPos = Shader.PropertyToID("_LightPos");
+
+	public Vector4 lightVector;
 	private static readonly int Parameter = Shader.PropertyToID("_Parameter");
 
 
@@ -29,7 +31,8 @@ public class Crepuscular : MonoBehaviour
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		var blurTex = RenderTexture.GetTemporary(128, 64, 0, source.format);
-		material.SetVector(LightPos, GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward)); 
+		lightVector =GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward);
+		material.SetVector(LightPos, lightVector); 
 		Graphics.Blit(source, blurTex, material, 0);
 		material.SetTexture(blurTexString, blurTex);
 

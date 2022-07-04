@@ -14,6 +14,7 @@ public class Data_Loaded_Manager : MonoBehaviour {
 	public AudioSource thunderStormSource;
 	public AudioSource rainSource;
 	public Image SFXLevel;
+	public Camera mainCam;
 
 	private static readonly int PainValue = Shader.PropertyToID("_PainValue");
 
@@ -46,6 +47,14 @@ public class Data_Loaded_Manager : MonoBehaviour {
 			ambientSource.volume = 1f;
 			thunderStormSource.volume =  1f;
 			rainSource.volume = 0.6f;
+		}
+
+		if (PlayerPrefs.HasKey("SavedGamma"))
+		{
+			float gamma = PlayerPrefs.GetFloat("SavedGamma");
+			mainCam.GetComponent<Gamma>().gamma = gamma; //apply saved gamma value
+			OptionsManagerInputs.GetComponent<OptionsManagerInputs>().gammaLevel.fillAmount = 
+			gamma.RemapClamped( 1.0f, 1.5f, 0,1 ); //remap gamma values to 0-1 so slider matches
 		}
 		OptionsManagerInputs.GetComponent<OptionsManagerInputs>().SensitivityToSave =  PlayerPrefs.GetFloat("SavedSensitivity");	
 		}

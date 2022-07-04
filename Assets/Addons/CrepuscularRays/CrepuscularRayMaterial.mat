@@ -35,12 +35,12 @@ Material:
     - _Decay: 0.8
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.033
+    - _Density: 0.04
     - _Exposure: 0.075
     - _NumSamples: 16
     - _Parameter: 5
     - _Spread: 1
     - _StencilRef: 0
     - _ThresholdParams: 0.25
-    - _Weight: 1.75
+    - _Weight: 2
     m_Colors: []

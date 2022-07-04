@@ -19,12 +19,13 @@ private const string joystick1 = "joystick 1 button ";
 	private const int LEFT = 11;
 
 	public int selectedSlot = 1;
-	public int previousSlot = 3;
+	public int previousSlot = 4;
 	public Color baseColor;
 	public Color hilightColor;
 	public TextMeshProUGUI slot1;
 	public TextMeshProUGUI slot2;
 	public TextMeshProUGUI slot3;
+	public TextMeshProUGUI slot4;
 	
 	public GameObject menuManager;
 	
@@ -32,12 +33,14 @@ private const string joystick1 = "joystick 1 button ";
 	public Image BGMLevel;
 	public Image SFXLevel;
 	public Image sensitivityLevel;
+	public Image gammaLevel;
 
 	public float timer = 0.0f;
 	private float delay = 0.1f;
 	public float BGMToSave = 1.0f;
 	public float SFXToSave = 1.0f;
 	public float SensitivityToSave = 1.0f;
+	public float GammaToSave = 0.5f;
 	public List<AudioClip> clipList;
 	public AudioSource sfxSource;
 	public AudioSource bgmSource;
@@ -45,6 +48,7 @@ private const string joystick1 = "joystick 1 button ";
 	public AudioSource thunderStormSource;
 	public AudioSource rainSource;
 	public static float sensitivity = 1.0f;
+	public static float gamma = 1.25f;
 	public GameObject currentSelection;
 	public GameObject previousSelection;
 	public Animator anim;
@@ -101,18 +105,20 @@ private const string joystick1 = "joystick 1 button ";
 					//audioSource.PlayOneShot(clipList[2]);
 					case 1:
 						previousSlot = selectedSlot;
-						//set slot to 3 if you are at slot 1 to wrap selection
-						selectedSlot = 3;
+						//set slot to 4 if you are at slot 1 to wrap selection
+						selectedSlot = 4;
 						break;
 					case 2:
 						previousSlot = selectedSlot;
-						//set slot to 3 if you are at slot 1 to wrap selection
 						selectedSlot = 1;
 						break;
 					case 3:
 						previousSlot = selectedSlot;
-						//set slot to 3 if you are at slot 1 to wrap selection
 						selectedSlot = 2;
+						break;
+					case 4:
+						previousSlot = selectedSlot;
+						selectedSlot = 3;
 						break;
 				}
 
@@ -127,10 +133,14 @@ private const string joystick1 = "joystick 1 button ";
 				switch (selectedSlot)
 				{
 					//audioSource.PlayOneShot(clipList[3]);
-					case 3:
-						//set slot to 1 if you are at slot 3 to wrap selection
+					case 4:
+						//set slot to 1 if you are at slot 4 to wrap selection
 						previousSlot = selectedSlot;
 						selectedSlot = 1;
+						break;
+					case 3:
+						previousSlot = selectedSlot;
+						selectedSlot = 4;
 						break;
 					case 2:
 						//set slot to 1 if you are at slot 3 to wrap selection
@@ -186,6 +196,18 @@ private const string joystick1 = "joystick 1 button ";
 						PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
 						break;
 					}
+					case 4:
+					{
+					
+						if (gamma > 1.0f){
+							gamma  -= 0.25f;
+						} 
+						gammaLevel.fillAmount = gamma.RemapClamped( 1.0f, 1.5f, 0,1 );
+						GammaToSave = gamma;
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedGamma", GammaToSave);
+						break;	
+					}
 				}
 
 				PlayerPrefs.Save();
@@ -218,6 +240,13 @@ private const string joystick1 = "joystick 1 button ";
 						PlayerPrefs.SetInt("SavedOnce", 1);
 						PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
 						break;
+					case 4:
+						gamma += 0.25f;
+						gammaLevel.fillAmount = gamma.RemapClamped( 1.0f, 1.5f, 0,1 );
+						GammaToSave = gamma;
+						PlayerPrefs.SetInt("SavedOnce", 1);
+						PlayerPrefs.SetFloat("SavedGamma", GammaToSave);
+						break;
 				}
 
 				PlayerPrefs.Save();
@@ -236,16 +265,25 @@ private const string joystick1 = "joystick 1 button ";
 				slot1.color = hilightColor;
 				slot2.color = baseColor;
 				slot3.color = baseColor;
+				slot4.color = baseColor;
 				break;
 			case 2:
 				slot1.color = baseColor;
 				slot2.color = hilightColor;
 				slot3.color = baseColor;
+				slot4.color = baseColor;
 				break;
 			case 3:
 				slot1.color = baseColor;
 				slot2.color = baseColor;
 				slot3.color = hilightColor;
+				slot4.color = baseColor;
+				break;
+			case 4:
+				slot1.color = baseColor;
+				slot2.color = baseColor;
+				slot3.color = baseColor;
+				slot4.color = hilightColor;
 				break;
 		}
 	}
