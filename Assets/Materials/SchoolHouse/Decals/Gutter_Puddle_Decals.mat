@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Gutter_Puddle_Decals
+  m_Shader: {fileID: 4800000, guid: 047b3c0bd20aff3439f808e295337ccc, type: 3}
+  m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED _ALPHABLEND_ON _BAKERY_NONE _LIGHTMAPSPECULAR
+    _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3000
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 768fa469bdce74c4984c44cbb180b832, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DDetailsMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DDetailsNormal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DFG:
+        m_Texture: {fileID: 2800000, guid: 32061de8f9d4b5f4a85fa77fc6db8332, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Height:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 046296f2930264946817713b3db37511, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MaskMap:
+        m_Texture: {fileID: 2800000, guid: ab29086983f4c0d4485744d72eb44bb6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 2800000, guid: 9a6700cec5b1b6a4283b5c5839da8b28, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetalnessMap:
+        m_Texture: {fileID: 2800000, guid: ab29086983f4c0d4485744d72eb44bb6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 2800000, guid: 48a2677bf688148439d7aee95bbf904c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RNM0:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RNM1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RNM2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - BAKERY: 0
+    - DETAILS_MODE: 0
+    - UI_AdvancedHeader: 0
+    - UI_BakeryHeader: 0
+    - UI_ChannelSelector: 0
+    - UI_DPlanarAxisSelector: 0
+    - UI_DetailAlbedoNote: 0
+    - UI_DetailSmoothNote: 0
+    - UI_DetailsMapNote: 0
+    - UI_DetailsMapNoteSeparate: 0
+    - UI_FaderHeader: 0
+    - UI_ForceBoxProjectionNote: 0
+    - UI_GSAAHeader: 0
+    - UI_GSAANote: 0
+    - UI_GlassHeader: 0
+    - UI_IgnoreMaskNote: 0
+    - UI_InternalsHeader: 0
+    - UI_LightmappingHeader: 0
+    - UI_MainHeader: 1
+    - UI_MetallicRemap: 0
+    - UI_ParallaxHeader: 0
+    - UI_PlanarAxisSelector: 0
+    - UI_SmoothnessRemap: 0
+    - _AOChannel: 1
+    - _AlbedoChannel: 0
+    - _AlphaToMask: 0
+    - _Anisotropic: 0
+    - _BakedSpacular: 0
+    - _Bakery: 0
+    - _BakeryEnabled: 0
+    - _BakerySHNonLinear: 0
+    - _Bicubic: 0
+    - _BumpScale: 0.02
+    - _BumpShadowHardness: 50
+    - _BumpShadowHeightScale: 0.2
+    - _Cull: 0
+    - _CullMode: 2
+    - _Culling: 2
+    - _Cutoff: 0.001
+    - _DAlbedoScale: 1
+    - _DDetailsMapRef1: 0
+    - _DDetailsMapRef2: 0
+    - _DIgnoreMask: 0
+    - _DMappingSpace: 0
+    - _DNormalFlipY: 0
+    - _DNormalScale: 1
+    - _DPlanarAxisX: 0
+    - _DPlanarAxisY: 2
+    - _DSmoothScale: 1
+    - _DUVChannel: 0
+    - _DetailAsTintMask: 0
+    - _DetailMaskChannel: 2
+    - _DetailNormalMapScale: 0
+    - _DetailsOverlay: 0
+    - _DstBlend: 10
+    - _ENABLE_D: 0
+    - _ENABLE_F: 0
+    - _ENABLE_G: 0
+    - _ENABLE_NDF: 0
+    - _EmissionChannel: 0
+    - _EmissionEnabled: 0
+    - _EnableGSAA: 0
+    - _EnableParallax: 0
+    - _ExposureOcclusion: 0.2
+    - _FlipBumpY: 0
+    - _ForceBoxProject: 0
+    - _FresnelModel: 0
+    - _GSAAThreshold: 0
+    - _GSAAVariance: 0
+    - _GeoShadowModel: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 1
+    - _GlossyReflections: 1
+    - _HeightRefPlane: 0.5
+    - _HeightScale: 0.006
+    - _HeightStepsMax: 16
+    - _HeightStepsMin: 8
+    - _IntensityVC: 1
+    - _Ior: 1.5
+    - _LTCGI: 0
+    - _LightmapSpecular: 1
+    - _LightmapSpecularMaxSmoothness: 1
+    - _MappingSpace: 0
+    - _MetalChannel: 0
+    - _Metallic: 0
+    - _Metalness: 1
+    - _Mode: 2
+    - _NormalDistModel: 0
+    - _NormalMapShadows: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _PlanarAxisX: 0
+    - _PlanarAxisY: 2
+    - _Roughness: 1
+    - _RoughnessMode: 0
+    - _SmithGeoShadowModel: 0
+    - _SmoothChannel: 3
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecOcclusion: 0.5
+    - _SpecularHighlights: 1
+    - _SpecularPower: 1
+    - _SpecularRange: 0
+    - _SpecularRoughnessMod: 1
+    - _SrcBlend: 5
+    - _StencilRef: 1
+    - _UVSec: 0
+    - _UnityLightingContribution: 1
+    - _ZWrite: 0
+    - _specularAntiAliasingThreshold: 0.25
+    - _specularAntiAliasingVariance: 0.15
+    m_Colors:
+    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _EmissionColor: {r: 0.103333324, g: 0.116666645, b: 0.16, a: 1}
+    - _MetallicRemap: {r: 0, g: 1, b: 0, a: 1}
+    - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}
+    - _Specular: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}

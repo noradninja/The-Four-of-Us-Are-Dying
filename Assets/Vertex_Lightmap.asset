@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Vertex_Lightmap
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
+    second:
+      variants:
+      - keywords: SPOT
+        passType: 0
+      - keywords: POINT
+        passType: 0
+      - keywords: POINT SPOT
+        passType: 0
+      - keywords: FOG_LINEAR
+        passType: 0
+      - keywords: FOG_LINEAR SPOT
+        passType: 0
+      - keywords: FOG_LINEAR POINT
+        passType: 0
+      - keywords: FOG_LINEAR POINT SPOT
+        passType: 0
+      - keywords: AMBIENT_ON
+        passType: 0
+      - keywords: AMBIENT_ON SPOT
+        passType: 0
+      - keywords: AMBIENT_ON POINT
+        passType: 0
+      - keywords: AMBIENT_ON POINT SPOT
+        passType: 0
+      - keywords: AMBIENT_ON FOG_LINEAR
+        passType: 0
+      - keywords: AMBIENT_ON FOG_LINEAR SPOT
+        passType: 0
+      - keywords: AMBIENT_ON FOG_LINEAR POINT
+        passType: 0
+      - keywords: AMBIENT_ON FOG_LINEAR POINT SPOT
+        passType: 0

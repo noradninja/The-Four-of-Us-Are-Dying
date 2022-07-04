@@ -1,0 +1,4 @@
+﻿# build all the il2cpp code using new experimental thin lto mode 
+--compiler-flags=-Os -flto
+# pass special linker flags to the il2cpp building, e.g. for including additional libraries
+--linker-flags=--lto=thin -lc_lto
