@@ -53,6 +53,7 @@ private const string joystick1 = "joystick 1 button ";
 	public GameObject previousSelection;
 	public Animator anim;
 	public bool optionEnabled;
+	public Camera mainCam;
 	private static readonly int MakeBounce = Animator.StringToHash("MakeBounce");
 	private static readonly int SteadyState = Animator.StringToHash("SteadyState");
 
@@ -200,9 +201,10 @@ private const string joystick1 = "joystick 1 button ";
 					{
 					
 						if (gamma > 1.0f){
-							gamma  -= 0.25f;
+							gamma  -= 0.05f;
 						} 
 						gammaLevel.fillAmount = gamma.RemapClamped( 1.0f, 1.5f, 0,1 );
+						mainCam.GetComponent<Gamma>().gamma = gamma; //apply saved gamma value
 						GammaToSave = gamma;
 						PlayerPrefs.SetInt("SavedOnce", 1);
 						PlayerPrefs.SetFloat("SavedGamma", GammaToSave);
@@ -241,8 +243,9 @@ private const string joystick1 = "joystick 1 button ";
 						PlayerPrefs.SetFloat("SavedSensitivity", SensitivityToSave);
 						break;
 					case 4:
-						gamma += 0.25f;
+						gamma += 0.05f;
 						gammaLevel.fillAmount = gamma.RemapClamped( 1.0f, 1.5f, 0,1 );
+						mainCam.GetComponent<Gamma>().gamma = gamma; //apply saved gamma value
 						GammaToSave = gamma;
 						PlayerPrefs.SetInt("SavedOnce", 1);
 						PlayerPrefs.SetFloat("SavedGamma", GammaToSave);

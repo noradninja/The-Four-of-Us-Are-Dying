@@ -13,7 +13,7 @@ RenderTexture:
   m_DownscaleFallback: 0
   m_Width: 512
   m_Height: 256
-  m_AntiAliasing: 4
+  m_AntiAliasing: 2
   m_DepthFormat: 0
   m_ColorFormat: 4
   m_MipMap: 0
