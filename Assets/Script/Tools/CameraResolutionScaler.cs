@@ -32,7 +32,16 @@ public class CameraResolutionScaler : MonoBehaviour
     private RenderTexture renderTex;
     private Rect scaledRect;
     private int width;
-
+    
+    private RenderTexture GetTemporaryTexture(int width, int height) //set up our RT
+    {
+        var temporaryTexture = RenderTexture.GetTemporary(480, 272);
+        temporaryTexture.wrapMode = TextureWrapMode.Clamp;
+        temporaryTexture.anisoLevel = 0;
+        temporaryTexture.filterMode = filterMode;
+        return temporaryTexture;
+    }
+    
     private void Awake()
     {
         camera = GetComponent<Camera>();
@@ -40,30 +49,26 @@ public class CameraResolutionScaler : MonoBehaviour
         if (!Application.isEditor)
             switch (screenResolution)
             {
+                //set resolution and 30Hz vsync
                 case currentResolution.Full:
                     Screen.SetResolution(960, 544, true);
-                    QualitySettings.vSyncCount = 0;
-                    //Application.targetFrameRate = 25;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.Mid:
                     Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 0;
-                    //Application.targetFrameRate = 25;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.Low:
                     Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 0;
-                    //Application.targetFrameRate = 25;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.PSP:
                     Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 0;
-                    //Application.targetFrameRate = 25;
+                    QualitySettings.vSyncCount = 2;
                     break;
             }
-        else 
+        else //disable vsync in Editor
             QualitySettings.vSyncCount = 0;
-            //Application.targetFrameRate = 25;
     }
 
     private void OnDestroy()
@@ -75,7 +80,7 @@ public class CameraResolutionScaler : MonoBehaviour
     {
         if (enableInternalResolution)
         {
-            switch (InternalResolution)
+            switch (InternalResolution) //set up values for RT
             {
                 case internalResolution.Full:
                     width = 960;
@@ -100,35 +105,24 @@ public class CameraResolutionScaler : MonoBehaviour
             }
 
             originalRect = camera.rect;
-            scaledRect.Set(originalRect.x, originalRect.y, originalRect.width / renderDivisor,
-                originalRect.height / renderDivisor);
-            camera.rect = scaledRect;
+            scaledRect.Set(originalRect.x, originalRect.y, 
+                            originalRect.width / renderDivisor,
+                            originalRect.height / renderDivisor);
+            camera.rect = scaledRect; //scale cam rect for RT
         }
     }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
-        if (!enableInternalResolution) Graphics.Blit(src, dest);
-        else
+        if (!enableInternalResolution) Graphics.Blit(src, dest); //just blit to screen if we arent scaling
+        else //create and blit RT for resolution scaling
         {
             renderTex = GetTemporaryTexture(width, height);
             camera.rect = originalRect;
             src.filterMode = filterMode;
-    
             Graphics.Blit(src, renderTex);
             Graphics.Blit(renderTex, dest);
             RenderTexture.ReleaseTemporary(renderTex);
         }
-    }
-
-    private RenderTexture GetTemporaryTexture(int width, int height)
-    {
-        var temporaryTexture = RenderTexture.GetTemporary(480, 272);
-        temporaryTexture.wrapMode = TextureWrapMode.Clamp;
-        temporaryTexture.anisoLevel = 0;
-        temporaryTexture.filterMode = filterMode;
-        //temporaryTexture.useMipMap = false;
-
-        return temporaryTexture;
     }
 }
