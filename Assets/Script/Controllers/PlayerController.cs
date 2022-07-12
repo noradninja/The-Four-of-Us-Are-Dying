@@ -170,6 +170,20 @@ public class PlayerController : MonoBehaviour
          }
     }
 
+    void Start()
+    {
+        VitaInputManager.Instance.OnCross += CrossEvent;
+        VitaInputManager.Instance.OnCrossDown += CrossDownEvent;
+        VitaInputManager.Instance.OnCrossUp += CrossUpEvent;
+    }
+
+    private void OnDisable()
+    {
+        VitaInputManager.Instance.OnCross -= CrossEvent;
+        VitaInputManager.Instance.OnCrossDown -= CrossDownEvent;
+        VitaInputManager.Instance.OnCrossUp -= CrossUpEvent;
+    }
+
     void Update()
     {  
         health = InventoryManager.playerHealth;
@@ -177,7 +191,7 @@ public class PlayerController : MonoBehaviour
         Move();
         Rotate();
         Flashlight();
-        Keys();
+    //    Keys();
     
     
         if (verticalMove != 0 || horizontalRotation !=0){
@@ -226,6 +240,21 @@ public class PlayerController : MonoBehaviour
             lightObject.SetActive(true);
             lightRig.SetActive(true);
         }
+    }
+
+    private void CrossEvent()
+    {
+        VitaDebug.Log("You're holding Cross");
+    }
+
+    private void CrossDownEvent()
+    {
+        VitaDebug.Log("You pressed Cross");
+    }
+
+    private void CrossUpEvent()
+    {
+        VitaDebug.Log("You released Cross");
     }
     private void Keys()
     {
