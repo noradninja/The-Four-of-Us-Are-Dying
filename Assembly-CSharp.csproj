@@ -107,6 +107,7 @@
     <Compile Include="Assets\RainMaker\Prefab\RainScript.cs" />
     <Compile Include="Assets\RainMaker\Prefab\RainScript2D.cs" />
     <Compile Include="Assets\Script\Controllers\EnemyController.cs" />
+    <Compile Include="Assets\Script\Controllers\FlashlightController.cs" />
     <Compile Include="Assets\Script\Controllers\MapController.cs" />
     <Compile Include="Assets\Script\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Script\Controllers\SFXController.cs" />
@@ -131,6 +132,7 @@
     <Compile Include="Assets\Script\Managers\SetScenes.cs" />
     <Compile Include="Assets\Script\Managers\Title_Animator.cs" />
     <Compile Include="Assets\Script\Managers\Title_Menu_Manager.cs" />
+    <Compile Include="Assets\Script\Managers\VitaInputManager.cs" />
     <Compile Include="Assets\Script\PostProcess\Gamma.cs" />
     <Compile Include="Assets\Script\PostProcess\SAI2x.cs" />
     <Compile Include="Assets\Script\StartMenuManagerInputs.cs" />
@@ -149,6 +151,7 @@
     <Compile Include="Assets\Script\Tools\Rotate_Object.cs" />
     <Compile Include="Assets\Script\Tools\SetShadowResolution.cs" />
     <Compile Include="Assets\Script\Tools\UILineRenderer.cs" />
+    <Compile Include="Assets\Script\Tools\VitaDebug.cs" />
     <Compile Include="Assets\Script\UI\FadeIn.cs" />
     <Compile Include="Assets\Script\UI\FadeInWithCross.cs" />
     <Compile Include="Assets\Script\UI\Fadeout.cs" />
