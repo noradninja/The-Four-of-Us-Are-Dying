@@ -3,26 +3,29 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class VitaInputManager : MonoBehaviour {
-	
-	//Singleton Pattern
-	private static VitaInputManager instance;
 
-	public static VitaInputManager Instance
-	{
-		get
+	#region SingletonSetup
+	
+		private static VitaInputManager instance;
+
+		public static VitaInputManager Instance
 		{
-			if (!instance)
+			get
 			{
-				instance = GameObject.FindObjectOfType(typeof(VitaInputManager)) as VitaInputManager;
 				if (!instance)
 				{
-					VitaDebug.Log("No active VitaInputManager script on any GameObject");
+					instance = GameObject.FindObjectOfType(typeof(VitaInputManager)) as VitaInputManager;
+					if (!instance)
+					{
+						VitaDebug.Log("No active VitaInputManager script on any GameObject");
+					}
 				}
-			}
 
-			return instance;
+				return instance;
+			}
 		}
-	}
+	
+	#endregion
 
 	#region Delegates
 
