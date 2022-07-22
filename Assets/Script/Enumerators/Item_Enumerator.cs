@@ -114,8 +114,8 @@ public class Item_Enumerator : MonoBehaviour {
 			switch (thisItem){
 
 				case pickupItem.flashlight :
-					PlayerController.HasFlashlight = true;
-					PlayerController.FlashlightOff = false;
+					FlashlightController.HasFlashlight = true;
+					FlashlightController.FlashlightOff = false;
 					Destroy(targetObject);
 				break;
 

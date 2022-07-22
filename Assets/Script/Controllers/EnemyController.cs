@@ -52,7 +52,7 @@ public class EnemyController : MonoBehaviour {
 	public bool lookingForPlayer = false;
 	public bool roaming = false;
 	public bool isPlayerRunning;
-	public bool flashlightDisabled;
+	public bool FlashlightDisabled;
 	public Vector3 randomCircle;
 	private static readonly int IsAttacking = Animator.StringToHash("isAttacking");
 
@@ -67,7 +67,7 @@ public class EnemyController : MonoBehaviour {
 	// Update is called once per frame
 	private void Update () {
 		distanceToPlayer = Vector3.Distance(player.transform.position, this.transform.position);
-		flashlightDisabled = PlayerController.FlashlightOff; 
+		FlashlightController.FlashlightDisabled = FlashlightController.FlashlightOff; 
 		isPlayerRunning = player.GetComponent<PlayerController>().isRunning;
 		
 		if (distanceToPlayer < viewRadius){
@@ -200,7 +200,7 @@ public class EnemyController : MonoBehaviour {
             case EnemyState.alert:
 				if (!alerted){
 					// StopAllCoroutines();
-					if (!flashlightDisabled){ 
+					if (!FlashlightController.FlashlightDisabled){ 
 						if (isPlayerRunning){
 							StartCoroutine(AlertTimer(alertDelay/3));
 						}
@@ -208,7 +208,7 @@ public class EnemyController : MonoBehaviour {
 							StartCoroutine(AlertTimer(alertDelay));	
 						}
 					}
-					else if (flashlightDisabled){
+					else if (FlashlightController.FlashlightDisabled){
 						if (isPlayerRunning){
 							StartCoroutine(AlertTimer(alertDelay/2));
 						}

@@ -14,8 +14,7 @@ using UnityEngine.Serialization;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController characterController;
-    public static bool HasFlashlight = false;
-    public static bool FlashlightOff = true;
+    public bool fadeDynamicRunning = false;
     public float health;
     public float speed = 3;
     public float stamina = 100f;
@@ -48,14 +47,14 @@ public class PlayerController : MonoBehaviour
     public GameObject currentTarget;
     public Quaternion storedLightRotation;
     public Quaternion endLightRotation;
-    public float lightCharge = 100f;
+   // public float lightCharge = 100f;
     public Color colorStart;
     public Color colorEnd;
     public Color colorTransparent;
     public float lightDuration = 1.0f;
     public float lookSensitivity = 5f;
     public float flashlightCharge = 1.0f;
-    public bool flashlightDisabled;
+    //public bool FlashlightController.FlashlightDisabled;
    
     public TextMeshProUGUI batteryText;
   
@@ -176,9 +175,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
-        VitaInputManager.Instance.OnCross -= CrossEvent;
-        VitaInputManager.Instance.OnCrossDown -= CrossDownEvent;
-        VitaInputManager.Instance.OnCrossUp -= CrossUpEvent;
+        // VitaInputManager.Instance.OnCross -= CrossEvent;
+        // VitaInputManager.Instance.OnCrossDown -= CrossDownEvent;
+        // VitaInputManager.Instance.OnCrossUp -= CrossUpEvent;
     }
 
     void Update()
@@ -222,20 +221,20 @@ public class PlayerController : MonoBehaviour
     {
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
         if (flashlightCharge <= 0.05f){
-            flashlightDisabled = true;
+           FlashlightController.FlashlightDisabled = true;
             flashlightCharge = 0;
         }
-        if (!HasFlashlight) //no flashlight
+        if (!FlashlightController.HasFlashlight) //no flashlight
         {   
             lightObject.SetActive(false);
             lightRig.SetActive(false);
         }
-        if (HasFlashlight && FlashlightOff) //have flashlight but it's off
+        if (FlashlightController.HasFlashlight && FlashlightController.FlashlightOff) //have flashlight but it's off
         {
             lightObject.SetActive(true); 
             lightRig.SetActive(false);
         }
-        if (HasFlashlight && !FlashlightOff) //have flashlight and it's on
+        if (FlashlightController.HasFlashlight && !FlashlightController.FlashlightOff) //have flashlight and it's on
         {
             lightObject.SetActive(true);
             lightRig.SetActive(true);
@@ -273,9 +272,9 @@ public class PlayerController : MonoBehaviour
     }
     private void TriangleDownEvent()
     {
-        if (!delayButton && HasFlashlight && flashlightCharge > 0.05f && !Input.GetButton("LTRIG"))
+        if (!delayButton && FlashlightController.HasFlashlight && flashlightCharge > 0.05f && !Input.GetButton("LTRIG"))
         {
-            FlashlightOff = !FlashlightOff;
+            FlashlightController.FlashlightOff = !FlashlightController.FlashlightOff;
             delayButton = true;
             StartCoroutine(ButtonDelayTimer(0.25f));
         }
@@ -293,99 +292,99 @@ public class PlayerController : MonoBehaviour
 
     private void SquareDownEvent()
     {
-        //we are adding a battery while the flashlight is not being fired
-        if (!delayButton && HasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetButton("LTRIG"))
-        {
-            StopAllCoroutines(); 
-            var currentIntensity = flashlight.intensity;
-            var currentColor = lightBeam.material.color;
-        if (flashlightCharge < 1.0f){
-            InventoryManager.batteryCount -= 1;
-        //add to charge and set progress bar based on charge amount
-            flashlightCharge += 0.5f;
-                if(flashlight.intensity < 10){ //to rain the light intensity to 10
-                    var intensity = flashlight.intensity;
-                    var currentEmpty = (10 - intensity);
-                    intensity += currentEmpty - 5.0f;
-                    flashlight.intensity = intensity;
-                }
-                lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
-            //change text formatting based on number of characters
-                batteryText.text = InventoryManager.batteryCount.ToString("D2");
-            //are we out of power and adding battery?   
-                if (flashlightDisabled){
-                    StopAllCoroutines();
-                    currentCharge = flashlightCharge;
-                    if (isStimulant && cooldownValue <= stimCooldown){
-                        StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
-                    }
-                    if (!Input.GetButton("RTRIG")){
-                        StartCoroutine(RechargeStamina(((100-stamina)), stamina));
-                    }
-                    StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
-                    flashlightDisabled = false;
-                }
-                if (isCharging){
-                    currentCharge = flashlightCharge;
-                    StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
-                }
-            }
-            delayButton = true;
-            StartCoroutine(ButtonDelayTimer(0.25f));
-           
-            if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
-            }
-        }
-        //we are adding a battery while the flashlight is being fired
-        if (!delayButton && HasFlashlight && InventoryManager.batteryCount > 0 && Input.GetButton("LTRIG") &&
-            !FlashlightOff)
-        {
-            StopAllCoroutines();
-            currentCharge = flashlightCharge;
-           // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
-            if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
-            }
-            if (!Input.GetButton("RTRIG")){
-                StartCoroutine(RechargeStamina(((100-stamina)), stamina));
-            }
-            StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, lightDuration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
-            if (flashlightCharge < 1.0f){
-                InventoryManager.batteryCount -= 1;
-                //add to charge and set progress bar based on charge amount
-                flashlightCharge += 0.5f;
-                if(flashlight.intensity < 10){
-                    flashlight.intensity = flashlight.intensity + 5.0f;
-                }
-                lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
-                //change text formatting based on number of characters
-                batteryText.text = InventoryManager.batteryCount.ToString("D2");
-                //are we out of power and adding battery?   
-                if (flashlightDisabled){
-                    StopAllCoroutines();
-                    currentCharge = flashlightCharge;
-                    //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
-                    if (isStimulant && cooldownValue <= stimCooldown){
-                        StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
-                    }
-                    StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
-                    flashlightDisabled = false;
-                    if (!Input.GetButton("RTRIG")){
-                        StartCoroutine(RechargeStamina(((100-stamina)), stamina));
-                    }
-                }
-            }
-            delayButton = true;
-            StartCoroutine(ButtonDelayTimer(0.25f));
-            if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
-            }
-            StartCoroutine(WalkLerp(0, 1,  lerpRate));
-            if(isCharging){
-                StartCoroutine(RechargeFlashlight (currentCharge,  10f));
-            }
-        }
+        // //we are adding a battery while the flashlight is not being fired
+        // if (!delayButton && FlashlightController.HasFlashlight && InventoryManager.batteryCount > 0 && !Input.GetButton("LTRIG"))
+        // {
+        //     StopAllCoroutines(); 
+        //     var currentIntensity = flashlight.intensity;
+        //     var currentColor = lightBeam.material.color;
+        // if (flashlightCharge < 1.0f){
+        //     InventoryManager.batteryCount -= 1;
+        // //add to charge and set progress bar based on charge amount
+        //     flashlightCharge += 0.5f;
+        //         if(flashlight.intensity < 10){ //to rain the light intensity to 10
+        //             var intensity = flashlight.intensity;
+        //             var currentEmpty = (10 - intensity);
+        //             intensity += currentEmpty - 5.0f;
+        //             flashlight.intensity = intensity;
+        //         }
+        //         lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
+        //     //change text formatting based on number of characters
+        //         batteryText.text = InventoryManager.batteryCount.ToString("D2");
+        //     //are we out of power and adding battery?   
+        //         if (FlashlightController.FlashlightDisabled){
+        //             StopAllCoroutines();
+        //             currentCharge = flashlightCharge;
+        //             if (isStimulant && cooldownValue <= stimCooldown){
+        //                 StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+        //             }
+        //             if (!Input.GetButton("RTRIG")){
+        //                 StartCoroutine(RechargeStamina(((100-stamina)), stamina));
+        //             }
+        //             StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
+        //            FlashlightController.FlashlightDisabled = false;
+        //         }
+        //         if (isCharging){
+        //             currentCharge = flashlightCharge;
+        //             StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
+        //         }
+        //     }
+        //     delayButton = true;
+        //     StartCoroutine(ButtonDelayTimer(0.25f));
+        //    
+        //     if (isStimulant && cooldownValue <= stimCooldown){
+        //         StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+        //     }
+        // }
+        // //we are adding a battery while the flashlight is being fired
+        // if (!delayButton && FlashlightController.HasFlashlight && InventoryManager.batteryCount > 0 && Input.GetButton("LTRIG") &&
+        //     !FlashlightController.FlashlightOff)
+        // {
+        //     StopAllCoroutines();
+        //     currentCharge = flashlightCharge;
+        //    // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+        //     if (isStimulant && cooldownValue <= stimCooldown){
+        //         StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+        //     }
+        //     if (!Input.GetButton("RTRIG")){
+        //         StartCoroutine(RechargeStamina(((100-stamina)), stamina));
+        //     }
+        //     StartCoroutine(FadeLightDynamicInput(lightBeam.material.color, colorEnd, lightDuration, flashlight.intensity, 60, 40, 25, 0.08f, 0.040f)); // 'fire' light
+        //     if (flashlightCharge < 1.0f){
+        //         InventoryManager.batteryCount -= 1;
+        //         //add to charge and set progress bar based on charge amount
+        //         flashlightCharge += 0.5f;
+        //         if(flashlight.intensity < 10){
+        //             flashlight.intensity = flashlight.intensity + 5.0f;
+        //         }
+        //         lightChargeObject.GetComponent<Image>().fillAmount = flashlightCharge;
+        //         //change text formatting based on number of characters
+        //         batteryText.text = InventoryManager.batteryCount.ToString("D2");
+        //         //are we out of power and adding battery?   
+        //         if (FlashlightController.FlashlightDisabled){
+        //             StopAllCoroutines();
+        //             currentCharge = flashlightCharge;
+        //             //StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
+        //             if (isStimulant && cooldownValue <= stimCooldown){
+        //                 StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+        //             }
+        //             StartCoroutine(FadeLightStaticInput(colorTransparent,  colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
+        //            FlashlightController.FlashlightDisabled = false;
+        //             if (!Input.GetButton("RTRIG")){
+        //                 StartCoroutine(RechargeStamina(((100-stamina)), stamina));
+        //             }
+        //         }
+        //     }
+        //     delayButton = true;
+        //     StartCoroutine(ButtonDelayTimer(0.25f));
+        //     if (isStimulant && cooldownValue <= stimCooldown){
+        //         StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+        //     }
+        //     StartCoroutine(WalkLerp(0, 1,  lerpRate));
+        //     if(isCharging){
+        //         StartCoroutine(RechargeFlashlight (currentCharge,  10f));
+        //     }
+        // }
         
     }
 
@@ -499,8 +498,9 @@ public class PlayerController : MonoBehaviour
 
     private void LTrigEvent()
     {
-        if (HasFlashlight && flashlightCharge > 0.05f //light is on and has some charge left
-                          && !flashlightDisabled && !FlashlightOff)
+        if (FlashlightController.HasFlashlight && flashlightCharge > 0.05f //light is on and has some charge left
+                          && !FlashlightController.FlashlightDisabled && !FlashlightController.FlashlightOff 
+                          && !fadeDynamicRunning)
         {
             lightFocusing = true;
             Focus();
@@ -510,8 +510,8 @@ public class PlayerController : MonoBehaviour
             storedLightRotation = lightRoot.transform.localRotation;
             float currentIntensity = flashlight.intensity;
             Color currentColor = lightBeam.material.color;
-            
-            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, lightDuration, 
+            StopAllCoroutines();
+            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, FlashlightController.lightDuration, 
                 flashlight.intensity, 40, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(WalkLerp(0, 1,  lerpRate));
             if (isStimulant && cooldownValue <= stimCooldown){
@@ -530,7 +530,7 @@ public class PlayerController : MonoBehaviour
 
     private void LTrigUpEvent()
     {
-        if (HasFlashlight)
+        if (FlashlightController.HasFlashlight)
         {
             StopAllCoroutines();
             currentCharge = flashlightCharge;
@@ -548,7 +548,7 @@ public class PlayerController : MonoBehaviour
             if (!Input.GetButton("RTRIG")){
                 StartCoroutine(RechargeStamina(((100-stamina)), stamina));
             }
-            if (!flashlightDisabled){
+            if (!FlashlightController.FlashlightDisabled){
                 float currentIntensity = flashlight.intensity;
                 float currentAngle = flashlight.spotAngle;
                 float currentSize = lightShaft.transform.localScale.x;
@@ -568,7 +568,7 @@ public class PlayerController : MonoBehaviour
 
     private void LTrigDownEvent()
     {
-        if (HasFlashlight && flashlightDisabled) //light is off b/c dead battery
+        if (FlashlightController.HasFlashlight && FlashlightController.FlashlightDisabled) //light is off b/c dead battery
         {
             isCharging = false;
             
@@ -899,6 +899,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator FadeLightDynamicInput (Color StartColor, Color endColor, float duration, float StartIntensity, float endIntensity, float StartAngle, float endAngle, float StartSize, float endSize){
         float time = 0;
+        fadeDynamicRunning = true;
         var coneScale = lightShaft.transform.localScale;
         while (time <= duration){
             lightBeam.material.color = Color.Lerp(StartColor, new Color (endColor.r, endColor.g, endColor.b, endColor.a * flashlightCharge), time/(duration/50)); //lerp the colors from dark to light
@@ -914,6 +915,7 @@ public class PlayerController : MonoBehaviour
             time += Time.deltaTime;
             yield return null;
         }
+        fadeDynamicRunning = false;
     }
 
     private IEnumerator FadeLightStaticInput (Color StartColor, Color endColor, float duration, float StartIntensity, float endIntensity, float StartAngle, float endAngle, float StartSize, float endSize){
@@ -1056,15 +1058,15 @@ public class PlayerController : MonoBehaviour
             // if (lightChargeObject.GetComponent<Image>().fillAmount > 0.97f){
             //     flashlightCharge = 1;
             // }
-            lightCharge = Mathf.Lerp (currentCharge, 100f, time / duration );
+           FlashlightController.lightCharge= Mathf.Lerp (currentCharge, 100f, time / duration );
             lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 1, time / duration);
             time += Time.deltaTime;
             yield return null;
         }
-        lightCharge = 100;
+       FlashlightController.lightCharge= 100;
         lightChargeObject.GetComponent<Image>().fillAmount = 1;
         isCharging = false;
-        flashlightDisabled = false;
+       FlashlightController.FlashlightDisabled = false;
   
         var currentIntensity = flashlight.intensity;
         var currentAngle = flashlight.spotAngle;

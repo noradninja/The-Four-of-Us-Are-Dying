@@ -9268,7 +9268,7 @@ GameObject:
   - component: {fileID: 618167703}
   - component: {fileID: 618167702}
   m_Layer: 10
-  m_Name: Spot Light
+  m_Name: Spot Light Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9926,7 +9926,7 @@ GameObject:
   - component: {fileID: 652633789}
   - component: {fileID: 652633790}
   m_Layer: 10
-  m_Name: Spot Light Foliage ONLY
+  m_Name: Spot Light Player Foliage ONLY
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12022,6 +12022,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 787849890}
+  fadeDynamicRunning: 0
   health: 0
   speed: 1.5
   stamina: 100
@@ -12049,14 +12050,12 @@ MonoBehaviour:
   currentTarget: {fileID: 0}
   storedLightRotation: {x: 0, y: 0, z: 0, w: 0}
   endLightRotation: {x: 0, y: 0, z: 0, w: 0}
-  lightCharge: 100
   colorStart: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.4}
   colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0.8509804}
   colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
   lightDuration: 300
   lookSensitivity: 14
   flashlightCharge: 1
-  flashlightDisabled: 0
   batteryText: {fileID: 717110221}
   ssaoScript: {fileID: 121908223}
   bokehScript: {fileID: 121908223}
@@ -13709,7 +13708,7 @@ MonoBehaviour:
   lookingForPlayer: 0
   roaming: 0
   isPlayerRunning: 0
-  flashlightDisabled: 0
+  FlashlightDisabled: 0
   randomCircle: {x: 0, y: 0, z: 0}
 --- !u!95 &949359333
 Animator:
@@ -17820,6 +17819,31 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 938e832954b3eca4bbdb801c8bf719ca,
     type: 3}
   m_PrefabInternal: {fileID: 90942850}
+--- !u!114 &1287205458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1287205453}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80881287fed6094b9cd17a887da54f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCharging: 0
+  lightRig: {fileID: 1953679437}
+  lightObject: {fileID: 1287205453}
+  lightChargeObject: {fileID: 913620391}
+  lightShaft: {fileID: 1272465636}
+  flashlight: {fileID: 618167703}
+  vertlight: {fileID: 652633789}
+  lightBeam: {fileID: 1438941432}
+  lightHaze: {fileID: 1539118455}
+  colorStart: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.4}
+  colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0.8509804}
+  colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
+  flashlightCharge: 1
+  batteryText: {fileID: 717110221}
 --- !u!1 &1287473956
 GameObject:
   m_ObjectHideFlags: 0
@@ -20011,7 +20035,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: bfbc69447cfb5d24dad1101cd16f90ea, type: 2}
     - target: {fileID: 100000, guid: 58ef40a2629a19741a579fc5a175ace1, type: 3}
       propertyPath: m_Name
-      value: PLayerLightShaft
+      value: PlayerLightShaft
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 58ef40a2629a19741a579fc5a175ace1, type: 3}
       propertyPath: m_CastShadows
