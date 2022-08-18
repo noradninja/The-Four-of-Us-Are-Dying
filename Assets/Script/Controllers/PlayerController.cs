@@ -499,8 +499,7 @@ public class PlayerController : MonoBehaviour
     private void LTrigEvent()
     {
         if (FlashlightController.HasFlashlight && flashlightCharge > 0.05f //light is on and has some charge left
-                          && !FlashlightController.FlashlightDisabled && !FlashlightController.FlashlightOff 
-                          && !fadeDynamicRunning)
+                          && !FlashlightController.FlashlightDisabled && !FlashlightController.FlashlightOff)
         {
             lightFocusing = true;
             Focus();
@@ -509,9 +508,10 @@ public class PlayerController : MonoBehaviour
             isCharging = false;
             storedLightRotation = lightRoot.transform.localRotation;
             float currentIntensity = flashlight.intensity;
+            float duration = FlashlightController.lightDuration;
             Color currentColor = lightBeam.material.color;
             StopAllCoroutines();
-            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, FlashlightController.lightDuration, 
+            StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, duration, 
                 flashlight.intensity, 40, 40, 25, 0.08f, 0.040f)); // 'fire' light
             StartCoroutine(WalkLerp(0, 1,  lerpRate));
             if (isStimulant && cooldownValue <= stimCooldown){
@@ -578,13 +578,13 @@ public class PlayerController : MonoBehaviour
                 5, 40, 40, 0.08f, 0.08f)); //fade in quick
             StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
                 5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
-            StartCoroutine(WalkLerp(0, 1,  lerpRate)); 
-            if (isStimulant && cooldownValue <= stimCooldown){
-                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
-            }
-            if (!Input.GetButton("RTRIG")){
-                StartCoroutine(RechargeStamina(((100-stamina)), stamina));
-            }
+        }
+        StartCoroutine(WalkLerp(0, 1,  lerpRate)); 
+        if (isStimulant && cooldownValue <= stimCooldown){
+            StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+        }
+        if (!Input.GetButton("RTRIG")){
+            StartCoroutine(RechargeStamina(((100-stamina)), stamina));
         }
     }
 

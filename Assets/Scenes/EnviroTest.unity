@@ -35,10 +35,10 @@ RenderSettings:
   m_DefaultReflectionMode: 1
   m_DefaultReflectionResolution: 256
   m_ReflectionBounces: 2
-  m_ReflectionIntensity: 0.5
+  m_ReflectionIntensity: 0.3
   m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
   m_Sun: {fileID: 489463878}
-  m_IndirectSpecularColor: {r: 0.2370308, g: 0.25571838, b: 0.3681427, a: 0.5}
+  m_IndirectSpecularColor: {r: 0.18104333, g: 0.19614813, b: 0.28701872, a: 0.3}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1928,7 +1928,6 @@ Transform:
   m_LocalScale: {x: 4.5454545, y: 4.5454545, z: 4.545454}
   m_Children:
   - {fileID: 663922318}
-  - {fileID: 255398539}
   - {fileID: 1949391004}
   - {fileID: 1550034750}
   m_Father: {fileID: 1468516126}
@@ -2066,7 +2065,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   useDepthCorrection: 0
-  gamma: 1.25
+  gamma: 1.125
   mode: 0
   updateTextures: 1
   colorCorrectionCurvesShader: {fileID: 4800000, guid: 62bcade1028c24ca1a39760ed84b9487,
@@ -2122,7 +2121,7 @@ MonoBehaviour:
   contrastMaterial: {fileID: 2100000, guid: 06d01fb1c58e2364a9d74dd07bb97203, type: 2}
   skyboxMaterial: {fileID: 2100000, guid: a4d8809d9d08cc24d9f0208c935d75eb, type: 2}
   contrastValue: 0.033985615
-  maxShadowAmount: 0.0325
+  maxShadowAmount: 0.065
   tintColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &126963333
 Prefab:
@@ -3593,78 +3592,6 @@ Transform:
   m_Father: {fileID: 69896462}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &255398535
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 255398539}
-  - component: {fileID: 255398538}
-  - component: {fileID: 255398537}
-  m_Layer: 0
-  m_Name: Lightning_Overlay_R
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!23 &255398537
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255398535}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 0
-  m_MotionVectors: 2
-  m_LightProbeUsage: 0
-  m_ReflectionProbeUsage: 0
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 2100000, guid: 29887e3fe8ea9154b949aec9dffd322f, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &255398538
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255398535}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &255398539
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 255398535}
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
-  m_LocalPosition: {x: 0.2, y: 0, z: 0.422}
-  m_LocalScale: {x: 0.5, y: 1.5, z: 0.45}
-  m_Children: []
-  m_Father: {fileID: 121908226}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
 --- !u!1 &257196999
 GameObject:
   m_ObjectHideFlags: 0
@@ -10121,7 +10048,7 @@ Transform:
   m_GameObject: {fileID: 663922314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.191, y: -0.001, z: 0.422}
-  m_LocalScale: {x: 0.5, y: 1.5, z: 0.45}
+  m_LocalScale: {x: 1.1625, y: 0.681225, z: 0.45}
   m_Children: []
   m_Father: {fileID: 121908226}
   m_RootOrder: 0
@@ -13575,6 +13502,67 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 64, y: 64}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &921099509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 921099511}
+  - component: {fileID: 921099510}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!215 &921099510
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921099509}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 0
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 512
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 10, y: 10, z: 10}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 15
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &921099511
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 921099509}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.85, y: -23.56256, z: -4.179273}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &941033213
 GameObject:
   m_ObjectHideFlags: 0
@@ -22164,7 +22152,7 @@ Transform:
   m_LocalScale: {x: 10.000014, y: 10.000017, z: 10}
   m_Children: []
   m_Father: {fileID: 121908226}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -2.5200002, y: 42.775, z: -105.115005}
 --- !u!108 &1550034752
 Light:
@@ -24206,6 +24194,7 @@ MonoBehaviour:
   clipLoudnessB: 0
   contrastHolder: 0
   lerpColor: {r: 0.067499995, g: 0.44249982, b: 0.48, a: 1}
+  enviroReflectivity: 0
 --- !u!4 &1742728653
 Transform:
   m_ObjectHideFlags: 0
@@ -27429,7 +27418,7 @@ Transform:
   m_LocalScale: {x: 0.74544317, y: 0.6664232, z: 0.5904501}
   m_Children: []
   m_Father: {fileID: 121908226}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &1949391005
 MeshRenderer:

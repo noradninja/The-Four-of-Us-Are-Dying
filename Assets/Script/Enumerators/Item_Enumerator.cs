@@ -116,6 +116,7 @@ public class Item_Enumerator : MonoBehaviour {
 				case pickupItem.flashlight :
 					FlashlightController.HasFlashlight = true;
 					FlashlightController.FlashlightOff = false;
+					FlashlightController.FlashlightDisabled = false;
 					Destroy(targetObject);
 				break;
 

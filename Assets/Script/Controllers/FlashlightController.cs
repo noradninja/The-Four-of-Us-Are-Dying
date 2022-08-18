@@ -26,7 +26,7 @@ public class FlashlightController : MonoBehaviour {
 	public Color colorEnd;
 	public Color colorTransparent;
 	//float
-	public static float lightDuration = 3000.0f;
+	public static float lightDuration = 300.0f;
 	public float flashlightCharge;
 	private float currentCharge;
 	public static float lightCharge = 100f;
