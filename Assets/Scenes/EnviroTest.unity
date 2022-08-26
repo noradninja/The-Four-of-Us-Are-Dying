@@ -1856,6 +1856,7 @@ GameObject:
   - component: {fileID: 121908231}
   - component: {fileID: 121908229}
   - component: {fileID: 121908228}
+  - component: {fileID: 121908236}
   - component: {fileID: 121908234}
   - component: {fileID: 121908235}
   - component: {fileID: 121908238}
@@ -1945,7 +1946,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableInternalResolution: 1
-  InternalResolution: 1
+  InternalResolution: 2
   screenResolution: 3
   filterMode: 0
 --- !u!114 &121908228
@@ -2087,7 +2088,7 @@ MonoBehaviour:
   mainLight: {fileID: 489463876}
   blurSize: 0
   resolutionDivisor: 12
-  lightVector: {x: -0.91532564, y: -1.3137296, z: -0.457093, w: 0}
+  lightVector: {x: -0.91486824, y: -1.3106592, z: -0.457093, w: 0}
 --- !u!114 &121908235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2107,6 +2108,62 @@ MonoBehaviour:
   _kernelSize: 0
   _visualize: 0
   _shader: {fileID: 4800000, guid: b99c58356816f7b46818fe7e788b2fa1, type: 3}
+--- !u!114 &121908236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 121908223}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee76f5c3ca2d994abac24ddcc0ef49c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CloudsMask:
+    serializedVersion: 2
+    m_Bits: 1048576
+  LightMask:
+    serializedVersion: 2
+    m_Bits: 0
+  WorldBlockingMask:
+    serializedVersion: 2
+    m_Bits: 11265
+  ResolutionDivider: 2
+  WorldDepthResolutionDivider: 2
+  DepthPrecision: 5
+  LateCut: 0
+  BlurRadius: 1.25
+  BlurQuality: 0
+  LateCutThreshohld: 0.5
+  LateCutPower: 3
+  UseDepthFiltering: 0
+  DepthFilteringPower: 0
+  UseNoise: 1
+  Noise: {fileID: 2800000, guid: ea4ad7e4f21a143478fefc813c9174ab, type: 3}
+  Wind: {x: -2.5, y: 2.5, z: 2.5}
+  NoiseScale: 0.125
+  DepthNoiseScale: 0.1
+  NormalNoisePower: 2.5
+  DepthNoisePower: 0.01
+  DisplacementNoisePower: 0.25
+  NoiseSinTimeScale: 0.15
+  DistanceToClouds: 9
+  Light: {fileID: 489463880}
+  UseRamp: 0
+  Ramp: {fileID: 0}
+  LightColor: {r: 0, g: 0, b: 0, a: 1}
+  ShadowColor: {r: 0.04, g: 0.04, b: 0.04, a: 1}
+  LightEnd: 1
+  HaloPower: 0
+  HaloDistance: 0.5
+  FallbackDistance: 0.01
+  blurFastShader: {fileID: 4800000, guid: 7ab901123de490e4bad21fdb835edd20, type: 3}
+  blurShader: {fileID: 4800000, guid: fd4453f270eb2734b886efe5223588ce, type: 3}
+  blurHQShader: {fileID: 4800000, guid: 22d75b161fbf2d14b9cd656fde6d05bd, type: 3}
+  depthBlurShader: {fileID: 4800000, guid: 86ffe5743a2c74741be2ae7d00c19d9b, type: 3}
+  depthShader: {fileID: 4800000, guid: 009f6c8cf8d3c144792d6321909e830c, type: 3}
+  cloudShader: {fileID: 4800000, guid: ddd68a53b8f487941ac09b4480974963, type: 3}
+  clearColorShader: {fileID: 4800000, guid: e8f3ce2cbe4971147b1b7f04b791e52a, type: 3}
 --- !u!114 &121908238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7238,6 +7295,11 @@ Light:
   m_CorrespondingSourceObject: {fileID: 108406716307935654, guid: 3074ae5d034113449a1dac4553b684e8,
     type: 2}
   m_PrefabInternal: {fileID: 1809631193}
+--- !u!4 &489463880 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4774486131889566, guid: 3074ae5d034113449a1dac4553b684e8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1809631193}
 --- !u!1 &492022050
 GameObject:
   m_ObjectHideFlags: 0
@@ -11514,7 +11576,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 749364768}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.172, y: -24.106, z: -7.39}
+  m_LocalPosition: {x: 5.747, y: -24.106, z: -4.153}
   m_LocalScale: {x: 0.48581642, y: 0.48581618, z: 0.48581642}
   m_Children:
   - {fileID: 949359334}
@@ -13725,7 +13787,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 949359329}
   m_LocalRotation: {x: -0, y: -0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.53, y: 0, z: -2.32}
+  m_LocalPosition: {x: 3.09, y: 0, z: -23.03}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 262256242}
@@ -24677,6 +24739,10 @@ Prefab:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 121908225}
+    - target: {fileID: 1939682925528110, guid: da90e913caf7fba4e8e30e926665c98d, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da90e913caf7fba4e8e30e926665c98d, type: 2}
   m_IsPrefabAsset: 0

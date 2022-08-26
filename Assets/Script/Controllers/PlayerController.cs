@@ -5,6 +5,7 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using TrueClouds;
 using UnityEngine.Serialization;
 
 //TODO: Extract flashlight handling and stamina handling to their own classes
@@ -173,7 +174,8 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    private void OnDisable()
+    // ReSharper disable once Unity.RedundantEventFunction
+    private void OnDisable() //this isnt redundant, ReSharper <-.<-
     {
         // VitaInputManager.Instance.OnCross -= CrossEvent;
         // VitaInputManager.Instance.OnCrossDown -= CrossDownEvent;
@@ -183,6 +185,24 @@ public class PlayerController : MonoBehaviour
     void Update()
     {  
         health = InventoryManager.playerHealth; //update health
+        //get touch input, and enable/disable the inventory screen
+        foreach (Touch touch in Input.touches) {
+            if (touch.fingerId == 0){
+                if (Input.GetTouch(0).phase == TouchPhase.Began)
+                {
+                    if (perfOverlay.activeSelf == false)
+                    {
+                        perfOverlay.SetActive(true);
+                        fpsOverlay.SetActive(true);
+                    }
+                    else
+                    {
+                        perfOverlay.SetActive(false);
+                        fpsOverlay.SetActive(false);
+                    }
+                }
+            }
+        }
         
         if(!PauseManager.isPaused){
             Move();
@@ -443,11 +463,12 @@ public class PlayerController : MonoBehaviour
 
     private void SelectEvent()
     {
-        if (GetDeviceModel.currentDeviceModel == "Playstation Vita TV")
-        {
-            //do PSTV stuff here
-        }
+         if (GetDeviceModel.currentDeviceModel == "Playstation Vita TV")
+         {
+             // do PSTV stuff here
+         }
     }
+    
     
     #endregion
 

@@ -52,23 +52,23 @@ public class CameraResolutionScaler : MonoBehaviour
                 //set resolution and 30Hz vsync
                 case currentResolution.Full:
                     Screen.SetResolution(960, 544, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
                 case currentResolution.Mid:
                     Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
                 case currentResolution.Low:
                     Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
                 case currentResolution.PSP:
                     Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
             }
         else //disable vsync in Editor
-            QualitySettings.vSyncCount = 1;
+            QualitySettings.vSyncCount = 0;
     }
 
     private void OnDestroy()

@@ -326,7 +326,7 @@ Material:
     - _ForceBoxProject: 0
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
-    - _GlossMapScale: 1
+    - _GlossMapScale: 0.8
     - _Glossiness: 0.3
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5
@@ -475,7 +475,7 @@ Material:
     - _ManualControl: 0
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0

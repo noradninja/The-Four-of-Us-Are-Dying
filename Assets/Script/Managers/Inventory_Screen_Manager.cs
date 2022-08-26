@@ -64,25 +64,7 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 		}
 		
 
-		//get touch input, and enable/disable the inventory screen
-		foreach (Touch touch in Input.touches) {
-			if (touch.fingerId == 0){
-				if (Input.GetTouch(0).phase == TouchPhase.Began){
-					if (!inventoryOn && !delayButton && !PlayerController.isMap){
-						StartCoroutine(CrossFade(0, 1, 0.5f));
-						inventoryOn = true;
-						delayButton = true;
-            			StartCoroutine(ButtonDelayTimer(0.5f));
-					}
-					else if (inventoryOn && !delayButton && !PlayerController.isMap){
-						StartCoroutine(CrossFade(1, 0, 0.5f));
-						inventoryOn = false;
-						delayButton = true;
-            			StartCoroutine(ButtonDelayTimer(0.5f));
-					}
-				}
-			}
-		}
+	
 
 		if (!inventoryOn) return;
 		if (battText.text !=InventoryManager.batteryCount.ToString()){
