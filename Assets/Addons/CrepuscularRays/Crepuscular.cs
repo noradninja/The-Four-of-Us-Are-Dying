@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(Camera)), ExecuteInEditMode]
+[RequireComponent(typeof(Camera))]
 [AddComponentMenu("Effects/Crepuscular Rays", -1)]
 public class Crepuscular : MonoBehaviour
 {
@@ -10,16 +10,16 @@ public class Crepuscular : MonoBehaviour
 	public Material material;
 	public GameObject mainLight;
 	static readonly int blurTexString = Shader.PropertyToID("_BlurTex");
+	static readonly int cosAngle = Shader.PropertyToID("_CosAngle");
 	[Range(0, 20)]
 	public int blurSize = 3;
 	[Range(1, 16)]
 	public int resolutionDivisor = 1;
 
 	public static readonly int LightPos = Shader.PropertyToID("_LightPos");
-	public float cosineAngle = 0;
 	public Vector4 lightVector;
 	private static readonly int Parameter = Shader.PropertyToID("_Parameter");
-
+	public float cosineAngle;
 
 	// Start is called before the first frame update
 	void Start()
@@ -29,7 +29,8 @@ public class Crepuscular : MonoBehaviour
 
 	void Update()
 	{
-		cosineAngle = material.GetFloat("_CosAngle");
+		var getAngle = material.GetFloat(cosAngle);
+		cosineAngle = getAngle;
 	}
 	//[ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
@@ -42,7 +43,6 @@ public class Crepuscular : MonoBehaviour
 		Graphics.Blit(source, blurTex, material, 0);
 		material.SetTexture(blurTexString, blurTex);
 		RenderTexture.ReleaseTemporary(stencilTex);
-		
 
 		float widthMod = 1.0f / resolutionDivisor;
 	if (blurSize > 0){

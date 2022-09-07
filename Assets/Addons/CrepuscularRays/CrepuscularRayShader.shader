@@ -12,9 +12,9 @@ Shader "Lighting/Crepuscular Rays" {
 		_Decay("Decay", Range(0, 1)) = 1.0
 		_Exposure("Exposure", Range(0, 1)) = 1.0
 		//_Parameter("Kernel Offset", Range(0, 5)) = 1.0
-		_Contrast("Contrast", Range(0, 5)) = 1.0
-		_Falloff("Falloff Scale", Range(1, 5)) = 1.0
-		_CosAngle("Angle", Float) = 0
+		_Contrast("Contrast", Range(1, 5)) = 1.0
+		_PerpendicularFalloff("Perpendicular Falloff Rate", Range(0.01, 1)) = 1.0
+		_CosAngle("Angle", Float) = 1
 		[IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
 		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
 	}
@@ -38,7 +38,7 @@ Shader "Lighting/Crepuscular Rays" {
 		half _LightY;
 		half _CosAngle;
 		half4 _TintColor;
-		half _Falloff;
+		half _PerpendicularFalloff;
 		
 
 		
@@ -193,8 +193,7 @@ Shader "Lighting/Crepuscular Rays" {
 			{
 				half4 light = half4(_LightPos.xyz,1);
 				half normalizedLightY = half((light.y + 1)/2);
-				_CosAngle = (1- abs(cos(light.xyz).z)) * 20 ;
-				fixed angle = cos(light.xyz).z;
+				_CosAngle = 1- abs(cos(light.z));
 				fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 sample = tex2D(_BlurTex, i.uv);
 				fixed contrast = _Contrast;
@@ -202,10 +201,10 @@ Shader "Lighting/Crepuscular Rays" {
 				sample /= 2.0h;
 				fixed4 finalSample = (((col) + (sample * 0.4h)) - 0.5h) * contrast + 0.445h; //final sampled color
 				fixed4 finalColor = (col + (col * 0.04h) - 0.01h); //final modulated base color
-				fixed4 outputColor;
+				fixed4 blitColor;
 				//add our ray greyscale samples at - 25% brightness to the main image
-				outputColor = lerp (finalSample, finalColor, 1-(_CosAngle * _Falloff));//lerp (finalColor + 0.25, finalColor + 0.035h, normalizedLightY);
-				return outputColor;
+				blitColor = lerp (finalSample, finalColor, 1-(_CosAngle / (_PerpendicularFalloff / 10) ) );//lerp (finalColor + 0.25, finalColor + 0.035h, normalizedLightY);
+				return blitColor;
 			}
 
 		//
@@ -215,4 +214,63 @@ Shader "Lighting/Crepuscular Rays" {
 				o.pos = UnityObjectToClipPos (v.pos);
 				o.uv = v.uv;
 				return o;
+		}
+		half4 fragStencil (v2f i) : SV_Target
+		{
+			fixed4 col = _TintColor;
+			return col;
+		}
 		
+		ENDCG
+	////// Passes /////////////////////////////////////////////////////
+	SubShader {
+		ZTest Always
+		Cull Off
+		//0- calculate low resolution rays
+		
+		Pass { 
+				CGPROGRAM
+				#pragma vertex vert
+				#pragma fragment frag
+				#pragma fragmentoption ARB_precision_hint_fastest
+				ENDCG
+			}
+			//2- vertical blur
+		Pass {
+				CGPROGRAM 
+				#pragma vertex vertBlurVerticalSGX
+				#pragma fragment fragBlurSGX
+				#pragma fragmentoption ARB_precision_hint_fastest
+				ENDCG
+			}	
+			
+		//3- horizontal Blur
+		Pass {		
+				CGPROGRAM	
+				#pragma vertex vertBlurHorizontalSGX
+				#pragma fragment fragBlurSGX
+				#pragma fragmentoption ARB_precision_hint_fastest
+				ENDCG
+			}
+		Pass //4- composition 
+		{
+        	CGPROGRAM
+			#pragma vertex vertFinal
+			#pragma fragment fragFinal
+			#pragma fragmentoption ARB_precision_hint_fastest
+			ENDCG
+		}
+		Pass { 
+		Stencil{
+			Ref [_StencilRef]
+			Comp Equal
+			Pass Keep
+		}
+				CGPROGRAM
+				#pragma vertex vertStencil
+				#pragma fragment fragStencil
+				#pragma fragmentoption ARB_precision_hint_fastest
+				ENDCG
+			}
+	}
+}

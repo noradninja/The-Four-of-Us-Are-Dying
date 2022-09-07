@@ -2066,7 +2066,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   useDepthCorrection: 0
-  gamma: 1.125
+  gamma: 1
   mode: 0
   updateTextures: 1
   colorCorrectionCurvesShader: {fileID: 4800000, guid: 62bcade1028c24ca1a39760ed84b9487,
@@ -2089,6 +2089,7 @@ MonoBehaviour:
   blurSize: 0
   resolutionDivisor: 12
   lightVector: {x: -0.91486824, y: -1.3106592, z: -0.457093, w: 0}
+  cosineAngle: 0
 --- !u!114 &121908235
 MonoBehaviour:
   m_ObjectHideFlags: 0
