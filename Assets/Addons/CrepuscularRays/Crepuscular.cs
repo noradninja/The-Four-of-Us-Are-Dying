@@ -16,7 +16,7 @@ public class Crepuscular : MonoBehaviour
 	public int resolutionDivisor = 1;
 
 	public static readonly int LightPos = Shader.PropertyToID("_LightPos");
-
+	public float cosineAngle = 0;
 	public Vector4 lightVector;
 	private static readonly int Parameter = Shader.PropertyToID("_Parameter");
 
@@ -27,14 +27,22 @@ public class Crepuscular : MonoBehaviour
       
     }
 
+	void Update()
+	{
+		cosineAngle = material.GetFloat("_CosAngle");
+	}
 	//[ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
+		RenderTexture stencilTex = RenderTexture.GetTemporary(256, 128, 0, source.format);
 		var blurTex = RenderTexture.GetTemporary(256, 128, 0, source.format);
 		lightVector =GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward);
 		material.SetVector(LightPos, lightVector); 
+		//Graphics.Blit(source, stencilTex, material, 0);
 		Graphics.Blit(source, blurTex, material, 0);
 		material.SetTexture(blurTexString, blurTex);
+		RenderTexture.ReleaseTemporary(stencilTex);
+		
 
 		float widthMod = 1.0f / resolutionDivisor;
 	if (blurSize > 0){
@@ -60,10 +68,4 @@ public class Crepuscular : MonoBehaviour
 		RenderTexture.ReleaseTemporary(blurTex);
 		Graphics.Blit(source, destination, material, 3);
 	}
-
-	// Update is called once per frame
-	void Update()
-    {
-        
-    }
 }

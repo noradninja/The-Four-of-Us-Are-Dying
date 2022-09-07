@@ -12,10 +12,12 @@ Shader "Lighting/Crepuscular Rays" {
 		_Decay("Decay", Range(0, 1)) = 1.0
 		_Exposure("Exposure", Range(0, 1)) = 1.0
 		//_Parameter("Kernel Offset", Range(0, 5)) = 1.0
-		_Contrast("Contrast", Range(1, 5)) = 1.0
+		_Contrast("Contrast", Range(0, 5)) = 1.0
+		_Falloff("Falloff Scale", Range(1, 5)) = 1.0
+		_CosAngle("Angle", Float) = 0
 		[IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
-		
-		}
+		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
+	}
 		CGINCLUDE
 		#include "UnityCG.cginc"
 		#pragma target 2.0
@@ -33,6 +35,10 @@ Shader "Lighting/Crepuscular Rays" {
 		uniform half4 _Parameter;
 		uniform half4 _MainTex_TexelSize;
 		half4 _MainTex_ST;
+		half _LightY;
+		half _CosAngle;
+		half4 _TintColor;
+		half _Falloff;
 		
 
 		
@@ -74,6 +80,7 @@ Shader "Lighting/Crepuscular Rays" {
 				// Calculate vector from pixel to light source in screen space.
 				half4 light = half4(_LightPos.xyz,1);
 				half2 deltaTexCoord = (0,0);
+				half normalizedLightY = normalize(light.y);
 // 				
 // 				if (_LightPos.y >= 15){
 // 					light = half4(_LightPos.x, 15, _LightPos.z,1);
@@ -81,11 +88,12 @@ Shader "Lighting/Crepuscular Rays" {
 
 				// get our y vector direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
-				if (light.y < -0.1h){
+				if (light.y < 0.5h){
 					deltaTexCoord = (i.uv + light.xy);
+				
 				}
 				
-				if (light.y > 0.1h){
+				if (light.y > 0.5h){
 					deltaTexCoord = (i.uv - light.xy);
 				}
 
@@ -113,7 +121,8 @@ Shader "Lighting/Crepuscular Rays" {
 					//half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 					// Apply sample attenuation scale/decay factors.
 					sample *= illuminationDecay * (_Weight/ _NumSamples*4);
-					sample *= 4;
+					sample *= 2;
+					
 					// Accumulate combined color.
 					color += sample;
 					// Update exponential decay factor.
@@ -122,7 +131,8 @@ Shader "Lighting/Crepuscular Rays" {
 				//drop color
 				//color = (color.r + color.g + color.b)/3;
 				// Output final color with a further scale control factor.
-				return max(half4(color * _Exposure, 1), 0.15h);
+				color *= normalizedLightY;
+				return (max(half4(color * _Exposure, 1), 0.15h));
 			}
 /////////////// SGX Horizontal Blur /////////////////////////////		
 		v2f_withBlurCoordsSGX vertBlurHorizontalSGX (appdata_img v)
@@ -181,51 +191,28 @@ Shader "Lighting/Crepuscular Rays" {
 			
 		half4 fragFinal(v2f i) : SV_Target
 			{
+				half4 light = half4(_LightPos.xyz,1);
+				half normalizedLightY = half((light.y + 1)/2);
+				_CosAngle = (1- abs(cos(light.xyz).z)) * 20 ;
+				fixed angle = cos(light.xyz).z;
 				fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 sample = tex2D(_BlurTex, i.uv);
 				fixed contrast = _Contrast;
 				sample = sample.r + sample.g + sample.b;
-				//add our ray greyscale samples at - 25% brightness to the main image 
-				return  (((col) + (sample * 0.4h))- 0.5h) * contrast + 0.325h;
+				sample /= 2.0h;
+				fixed4 finalSample = (((col) + (sample * 0.4h)) - 0.5h) * contrast + 0.445h; //final sampled color
+				fixed4 finalColor = (col + (col * 0.04h) - 0.01h); //final modulated base color
+				fixed4 outputColor;
+				//add our ray greyscale samples at - 25% brightness to the main image
+				outputColor = lerp (finalSample, finalColor, 1-(_CosAngle * _Falloff));//lerp (finalColor + 0.25, finalColor + 0.035h, normalizedLightY);
+				return outputColor;
 			}
-		ENDCG
 
-////// Passes /////////////////////////////////////////////////////
-	SubShader {
-		ZTest Always
-		Cull Off
-		//0- calculate low resolution rays
-		Pass { 
-				CGPROGRAM
-				#pragma vertex vert
-				#pragma fragment frag
-				#pragma fragmentoption ARB_precision_hint_fastest
-				ENDCG
-			}
-			//1- vertical blur
-		Pass {
-				CGPROGRAM 
-				#pragma vertex vertBlurVerticalSGX
-				#pragma fragment fragBlurSGX
-				#pragma fragmentoption ARB_precision_hint_fastest
-				ENDCG
-			}	
-			
-		//2- horizontal Blur
-		Pass {		
-				CGPROGRAM	
-				#pragma vertex vertBlurHorizontalSGX
-				#pragma fragment fragBlurSGX
-				#pragma fragmentoption ARB_precision_hint_fastest
-				ENDCG
-			}
-		Pass //3- composition 
+		//
+		v2f vertStencil(appdata v)
 		{
-        	CGPROGRAM
-			#pragma vertex vertFinal
-			#pragma fragment fragFinal
-			#pragma fragmentoption ARB_precision_hint_fastest
-			ENDCG
-		}
-	}
-}
+				v2f o;
+				o.pos = UnityObjectToClipPos (v.pos);
+				o.uv = v.uv;
+				return o;
+		

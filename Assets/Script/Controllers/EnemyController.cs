@@ -186,9 +186,9 @@ public class EnemyController : MonoBehaviour {
 				if (canSeePlayer){
 					behaviorState = EnemyState.alert;
 				}
-                if (player.GetComponent<PlayerController>().currentTarget == targetPoint)
+                if (PlayerController.currentTarget == targetPoint)
                 {
-                    player.GetComponent<PlayerController>().currentTarget = null;
+                    PlayerController.currentTarget = null;
                 }
                 // player.GetComponent<PlayerController>().lightMovement = true;
 				isPlayerNear = false;
@@ -223,7 +223,7 @@ public class EnemyController : MonoBehaviour {
 						lookingForPlayer = false;
 						FaceTarget(player);
 						StartCoroutine(FOVRoutine());
-						player.GetComponent<PlayerController>().currentTarget = targetPoint;
+						PlayerController.currentTarget = targetPoint;
 						// player.GetComponent<PlayerController>().lightMovement = false;
 						if (canSeePlayer){
 								meshAgent.SetDestination(player.transform.position);
@@ -248,8 +248,8 @@ public class EnemyController : MonoBehaviour {
 				alerted = false;
 				player.GetComponent<PlayerController>().lightMovement = true;
 				//only null if the player hasn't targeted another enemy since us
-				if (player.GetComponent<PlayerController>().currentTarget == targetPoint){ 
-					player.GetComponent<PlayerController>().currentTarget = null;
+				if (PlayerController.currentTarget == targetPoint){ 
+					PlayerController.currentTarget = null;
 				}
 
 				if (!lookingForPlayer){
@@ -277,7 +277,7 @@ public class EnemyController : MonoBehaviour {
 			if (canSeePlayer){
 				meshAgent.SetDestination(player.transform.position);
 				FaceTarget(player);
-				player.GetComponent<PlayerController>().currentTarget = targetPoint;
+				PlayerController.currentTarget = targetPoint;
 				// player.GetComponent<PlayerController>().lightMovement = false;
 			}
 			if (enemyAnimator.GetBool(IsAttacking) == true){
@@ -295,7 +295,7 @@ public class EnemyController : MonoBehaviour {
 				}
 				meshAgent.SetDestination(player.transform.position);
 				FaceTarget(player);
-				player.GetComponent<PlayerController>().currentTarget = targetPoint;
+				PlayerController.currentTarget = targetPoint;
 				// player.GetComponent<PlayerController>().lightMovement = false;
 			break;
 

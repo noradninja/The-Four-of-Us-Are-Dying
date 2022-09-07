@@ -11992,6 +11992,7 @@ GameObject:
   - component: {fileID: 787849890}
   - component: {fileID: 787849891}
   - component: {fileID: 787849889}
+  - component: {fileID: 787849894}
   m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
@@ -12036,11 +12037,10 @@ MonoBehaviour:
   lightHaze: {fileID: 1539118455}
   lightChargeObject: {fileID: 913620391}
   lightRoot: {fileID: 133598110}
-  currentTarget: {fileID: 0}
   storedLightRotation: {x: 0, y: 0, z: 0, w: 0}
   endLightRotation: {x: 0, y: 0, z: 0, w: 0}
   colorStart: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.4}
-  colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0.8509804}
+  colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0}
   colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
   lightDuration: 300
   lookSensitivity: 14
@@ -12054,7 +12054,6 @@ MonoBehaviour:
   lightFocusing: 0
   isRunning: 0
   isWalking: 0
-  isStimulant: 0
   isLerping: 0
   isCharging: 0
   lightMovement: 1
@@ -12141,6 +12140,38 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 1
+--- !u!114 &787849894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 787849888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80881287fed6094b9cd17a887da54f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isCharging: 0
+  camObject: {fileID: 121908225}
+  lightRoot: {fileID: 133598110}
+  lightRig: {fileID: 1953679437}
+  lightObject: {fileID: 1287205453}
+  lightChargeObject: {fileID: 913620391}
+  lightShaft: {fileID: 1272465636}
+  UICanvasGroup: {fileID: 1415299053}
+  playerObject: {fileID: 787849888}
+  currentTarget: {fileID: 0}
+  flashlight: {fileID: 618167703}
+  vertlight: {fileID: 652633789}
+  lightBeam: {fileID: 1438941432}
+  lightHaze: {fileID: 1539118455}
+  colorStart: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.4}
+  colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0}
+  colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
+  lightDuration: 300
+  currentCharge: 0
+  storedLightRotation: {x: 0, y: 0, z: 0, w: 0}
+  batteryText: {fileID: 717110221}
 --- !u!4 &787849895
 Transform:
   m_ObjectHideFlags: 0
@@ -17869,31 +17900,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 938e832954b3eca4bbdb801c8bf719ca,
     type: 3}
   m_PrefabInternal: {fileID: 90942850}
---- !u!114 &1287205458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1287205453}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d80881287fed6094b9cd17a887da54f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isCharging: 0
-  lightRig: {fileID: 1953679437}
-  lightObject: {fileID: 1287205453}
-  lightChargeObject: {fileID: 913620391}
-  lightShaft: {fileID: 1272465636}
-  flashlight: {fileID: 618167703}
-  vertlight: {fileID: 652633789}
-  lightBeam: {fileID: 1438941432}
-  lightHaze: {fileID: 1539118455}
-  colorStart: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.4}
-  colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0.8509804}
-  colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
-  flashlightCharge: 1
-  batteryText: {fileID: 717110221}
 --- !u!1 &1287473956
 GameObject:
   m_ObjectHideFlags: 0
