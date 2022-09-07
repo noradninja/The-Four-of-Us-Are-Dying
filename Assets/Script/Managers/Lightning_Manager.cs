@@ -55,7 +55,7 @@ public void Awake () {
 			}
 			clipLoudness /= sampleDataLength;
 			clipLoudness *= scaleFactor;
-			clipLoudness += 0.75f;
+			clipLoudness += 0.55f;
 				
 			clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + UnityEngine.Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
 			skyBox.SetFloat(Exposure, clipLoudness);

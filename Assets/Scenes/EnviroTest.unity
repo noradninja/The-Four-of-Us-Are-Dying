@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   mainLight: {fileID: 489463876}
-  blurSize: 0
+  blurSize: 3
   resolutionDivisor: 12
   lightVector: {x: -0.91486824, y: -1.3106592, z: -0.457093, w: 0}
   cosineAngle: 0

@@ -41,9 +41,9 @@ Material:
     - _LightY: 0
     - _NumSamples: 16
     - _Parameter: 5
-    - _PerpendicularFalloff: 0.75
+    - _PerpendicularFalloff: 0.6
     - _Spread: 1
-    - _StencilRef: 0
+    - _StencilRef: 255
     - _ThresholdParams: 0.25
     - _Weight: 1.75
     m_Colors:
