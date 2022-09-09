@@ -42,6 +42,7 @@ Shader "Vita/Standard Mobile Lerp"
         _DetailNormalMap("Normal Map", 2D) = "bump" {}
 
         [Enum(UV0,0,UV1,1)] _UVSec ("UV Set for secondary textures", Float) = 0
+        [IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
 
 
         // Blending state
@@ -52,6 +53,8 @@ Shader "Vita/Standard Mobile Lerp"
         
         _IntensityVC("Vertex Color Intensity", Range(0.0, 1.0)) = 1.0
     }
+    
+   
 
     CGINCLUDE
         #define UNITY_SETUP_BRDF_INPUT MetallicSetup
@@ -65,7 +68,8 @@ Shader "Vita/Standard Mobile Lerp"
     {
         Tags { "RenderType"="Opaque"}
         LOD 300
-
+        
+     
 
         // ------------------------------------------------------------------
         //  Base forward pass (directional light, emission, lightmaps, ...)
@@ -109,6 +113,11 @@ Shader "Vita/Standard Mobile Lerp"
         //  Additive forward pass (one light per pass)
         Pass
         {
+        Stencil{
+	        Ref [_StencilRef]
+            Comp Equal
+            Fail Keep
+        }
             Name "FORWARD_DELTA"
             Tags { "LightMode" = "ForwardAdd" }
             Blend [_SrcBlend] One
@@ -360,5 +369,5 @@ Shader "Vita/Standard Mobile Lerp"
 
 
     //FallBack "VertexLit"
-   CustomEditor "Standard_VCShaderGUI_Lerp"
+   //CustomEditor "Standard_VCShaderGUI_Lerp"
 }

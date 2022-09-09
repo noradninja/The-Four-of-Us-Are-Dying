@@ -203,7 +203,8 @@ private const string joystick1 = "joystick 1 button ";
 						if (gamma > 1.0f){
 							gamma  -= 0.05f;
 						} 
-						gammaLevel.fillAmount = gamma.RemapClamped( 1.0f, 1.5f, 0,1 );
+						//remap gamma values to 0-1 so slider matches
+						gammaLevel.fillAmount = ExtensionMethods.Math.RemapClamped(gamma,0.5f, 1.0f, 0,1); 
 						mainCam.GetComponent<Gamma>().gamma = gamma; //apply saved gamma value
 						GammaToSave = gamma;
 						PlayerPrefs.SetInt("SavedOnce", 1);
@@ -244,7 +245,8 @@ private const string joystick1 = "joystick 1 button ";
 						break;
 					case 4:
 						gamma += 0.05f;
-						gammaLevel.fillAmount = gamma.RemapClamped( 1.0f, 1.5f, 0,1 );
+						//remap gamma values to 0-1 so slider matches
+						gammaLevel.fillAmount = ExtensionMethods.Math.RemapClamped(gamma,0.5f, 1.0f, 0,1); 
 						mainCam.GetComponent<Gamma>().gamma = gamma; //apply saved gamma value
 						GammaToSave = gamma;
 						PlayerPrefs.SetInt("SavedOnce", 1);

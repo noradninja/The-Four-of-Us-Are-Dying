@@ -63,6 +63,7 @@
     <Compile Include="Assets\Addons\Bloom (Titles)\Scripts\RenderTextureExtensions.cs" />
     <Compile Include="Assets\Addons\Bloom (Titles)\Scripts\RenderTextureUtils.cs" />
     <Compile Include="Assets\Addons\CrepuscularRays\Crepuscular.cs" />
+    <Compile Include="Assets\Addons\CrepuscularRays\Crepuscupular_Setup.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Decal.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\DecalBuilder.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\DecalUtils.cs" />
@@ -113,6 +114,7 @@
     <Compile Include="Assets\Script\Controllers\SFXController.cs" />
     <Compile Include="Assets\Script\Enumerators\Item_Enumerator.cs" />
     <Compile Include="Assets\Script\Enumerators\Shader_LOD_Enumerator.cs" />
+    <Compile Include="Assets\Script\ExtensionMethods\Math.cs" />
     <Compile Include="Assets\Script\Managers\ClearPlayerPrefs.cs" />
     <Compile Include="Assets\Script\Managers\Contrast_Manager.cs" />
     <Compile Include="Assets\Script\Managers\Data_Loaded_Manager.cs" />
@@ -142,7 +144,6 @@
     <Compile Include="Assets\Script\Tools\CameraFacingBillboard.cs" />
     <Compile Include="Assets\Script\Tools\CameraResolutionScaler.cs" />
     <Compile Include="Assets\Script\Tools\CameraResolutionSetter.cs" />
-    <Compile Include="Assets\Script\Tools\ExtensionMethods.cs" />
     <Compile Include="Assets\Script\Tools\FPS_Counter.cs" />
     <Compile Include="Assets\Script\Tools\GC_Manager.cs" />
     <Compile Include="Assets\Script\Tools\GetDeviceModel.cs" />
@@ -395,6 +396,7 @@
     <None Include="Assets\TrueClouds\Resources\Shaders\BlurFast.shader" />
     <None Include="Assets\Addons\Shader Forge\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Addons\CrepuscularRays\CrepuscularRayShader.shader" />
+    <None Include="Assets\Shader\Light &amp; Shadow\Crepuscupular_Setup.shader" />
     <None Include="Assets\Shader\PBR\PBR BlinnPhong.shader" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile UV mult\Standard_VC.shader" />

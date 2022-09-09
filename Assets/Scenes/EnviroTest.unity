@@ -2086,8 +2086,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   mainLight: {fileID: 489463876}
-  blurSize: 3
-  resolutionDivisor: 12
+  stencilRT: {fileID: 0}
+  blurSize: 2
+  resolutionDivisor: 2
   lightVector: {x: -0.91486824, y: -1.3106592, z: -0.457093, w: 0}
   cosineAngle: 0
 --- !u!114 &121908235
@@ -24261,8 +24262,6 @@ MonoBehaviour:
   clipLoudness: 0
   oldClipLoudness: 0
   clipLoudnessB: 0
-  contrastHolder: 0
-  lerpColor: {r: 0.067499995, g: 0.44249982, b: 0.48, a: 1}
   enviroReflectivity: 0
 --- !u!4 &1742728653
 Transform:

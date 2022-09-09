@@ -18,19 +18,15 @@ public float clipLoudness;
 public float oldClipLoudness;
 public float clipLoudnessB;
 private float[] clipSampleData;
-private float currentUpdateTime = 0f;
-public float contrastHolder;
-public Color lerpColor;
+private float currentUpdateTime;
 public float enviroReflectivity;
-private static readonly int TintColor = Shader.PropertyToID("_TintColor");
 private static readonly int Contrast = Shader.PropertyToID("_Contrast");
 private static readonly int Exposure = Shader.PropertyToID("_Exposure");
 
 
 public void Awake () {
 		clipSampleData = new float[sampleDataLength];
-		// lerpColor = glowMat.GetColor(TintColor);
-		contrastHolder = crepuscularMat.GetFloat(Contrast);
+		crepuscularMat.GetFloat(Contrast);
 	}
 	
 	public void Update () {
@@ -57,14 +53,13 @@ public void Awake () {
 			clipLoudness *= scaleFactor;
 			clipLoudness += 0.55f;
 				
-			clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + UnityEngine.Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
-			skyBox.SetFloat(Exposure, clipLoudness);
-			//lerpColor.a = clipLoudnessB/10;
-			//glowMat.SetColor(TintColor, lerpColor);
+			
 			enviroReflectivity = clipLoudness;
 			RenderSettings.reflectionIntensity = 
-				enviroReflectivity.RemapClamped(0.75f,1.1f, 
-										0.3f, 0.8f);
+				ExtensionMethods.Math.Remap(enviroReflectivity, 0.55f,1.1f,0.3f, 0.65f);
+			skyBox.SetFloat(Exposure, 
+						ExtensionMethods.Math.Remap(enviroReflectivity, 0.55f,0.8f,
+													0.55f, 0.9f));
 		}
 	}
 	}

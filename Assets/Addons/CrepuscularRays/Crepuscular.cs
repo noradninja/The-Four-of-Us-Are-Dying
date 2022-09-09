@@ -9,6 +9,7 @@ public class Crepuscular : MonoBehaviour
 
 	public Material material;
 	public GameObject mainLight;
+	public RenderTexture stencilRT;
 	static readonly int blurTexString = Shader.PropertyToID("_BlurTex");
 	static readonly int cosAngle = Shader.PropertyToID("_CosAngle");
 	[Range(0, 20)]
@@ -35,14 +36,11 @@ public class Crepuscular : MonoBehaviour
 	//[ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
-		RenderTexture stencilTex = RenderTexture.GetTemporary(256, 128, 0, source.format);
 		var blurTex = RenderTexture.GetTemporary(256, 128, 0, source.format);
 		lightVector =GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward);
-		material.SetVector(LightPos, lightVector); 
-		//Graphics.Blit(source, stencilTex, material, 0);
+		material.SetVector(LightPos, lightVector);
 		Graphics.Blit(source, blurTex, material, 0);
 		material.SetTexture(blurTexString, blurTex);
-		RenderTexture.ReleaseTemporary(stencilTex);
 
 		float widthMod = 1.0f / resolutionDivisor;
 	if (blurSize > 0){

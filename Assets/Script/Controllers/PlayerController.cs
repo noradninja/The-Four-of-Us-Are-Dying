@@ -193,24 +193,24 @@ public class PlayerController : MonoBehaviour
     {
         isCharging = FlashlightController.chargeCheck;
         health = InventoryManager.playerHealth; //update health
-        //get touch input, and enable/disable the inventory screen
-        // foreach (Touch touch in Input.touches) {
-        //     if (touch.fingerId == 0){
-        //         if (Input.GetTouch(0).phase == TouchPhase.Began)
-        //         {
-        //             if (perfOverlay.activeSelf == false)
-        //             {
-        //                 perfOverlay.SetActive(true);
-        //                 fpsOverlay.SetActive(true);
-        //             }
-        //             else
-        //             {
-        //                 perfOverlay.SetActive(false);
-        //                 fpsOverlay.SetActive(false);
-        //             }
-        //         }
-        //     }
-        // }
+        //get touch input, and enable/disable the perf overlay
+        foreach (Touch touch in Input.touches) {
+            if (touch.fingerId == 0){
+                if (Input.GetTouch(0).phase == TouchPhase.Began)
+                {
+                    if (perfOverlay.activeSelf == false)
+                    {
+                        perfOverlay.SetActive(true);
+                        fpsOverlay.SetActive(true);
+                    }
+                    else
+                    {
+                        perfOverlay.SetActive(false);
+                        fpsOverlay.SetActive(false);
+                    }
+                }
+            }
+        }
         
         if(!PauseManager.isPaused){
             Move();

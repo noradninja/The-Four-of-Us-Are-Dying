@@ -32,22 +32,9 @@ public class Contrast_Manager : MonoBehaviour
 	// Update is called once per frame
 	public void Update()
     {
-        contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat(Exposure)-0.75f);
-        Remap(contrastValue, 0f, 1.0f, 0f, maxShadowAmount);
+        contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat(Exposure)-0.55f);
+        contrastValue = ExtensionMethods.Math.Remap(contrastValue, 0f, 1.0f, 0f, maxShadowAmount);
         tintColor.a = contrastValue;
         contrastMaterial.SetColor(TintColor, tintColor);    
-    }
-
-    private void Remap (float from, float fromMin, float fromMax, float toMin,  float toMax)
-    {
-        fromAbs  =  from - fromMin;
-        fromMaxAbs = fromMax - fromMin;      
-       
-        normal = fromAbs / fromMaxAbs;
- 
-        toMaxAbs = toMax - toMin;
-        toAbs = toMaxAbs * normal;
- 
-        contrastValue = toAbs + toMin;
     }
 }

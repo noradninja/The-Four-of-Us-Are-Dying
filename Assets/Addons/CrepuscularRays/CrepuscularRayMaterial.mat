@@ -33,18 +33,18 @@ Material:
     m_Floats:
     - _Contrast: 1.13
     - _CosAngle: 0
-    - _Decay: 0.9
+    - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.175
-    - _Exposure: 0.1
+    - _Density: 0.2
+    - _Exposure: 0.075
     - _LightY: 0
-    - _NumSamples: 16
+    - _NumSamples: 24
     - _Parameter: 5
-    - _PerpendicularFalloff: 0.6
+    - _PerpendicularFalloff: 0.222
     - _Spread: 1
-    - _StencilRef: 255
+    - _StencilRef: 0
     - _ThresholdParams: 0.25
-    - _Weight: 1.75
+    - _Weight: 0.9
     m_Colors:
-    - _TintColor: {r: 0.3069768, g: 0, b: 1, a: 1}
+    - _TintColor: {r: 0, g: 0, b: 0, a: 1}

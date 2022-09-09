@@ -54,7 +54,8 @@ public class Data_Loaded_Manager : MonoBehaviour {
 			float gamma = PlayerPrefs.GetFloat("SavedGamma");
 			mainCam.GetComponent<Gamma>().gamma = gamma; //apply saved gamma value
 			OptionsManagerInputs.GetComponent<OptionsManagerInputs>().gammaLevel.fillAmount = 
-			gamma.RemapClamped( 1.0f, 1.5f, 0,1 ); //remap gamma values to 0-1 so slider matches
+			ExtensionMethods.Math.RemapClamped(gamma,0.5f, 1.0f, 0,1); //remap gamma values to 0-1 so slider matches
+			
 		}
 		OptionsManagerInputs.GetComponent<OptionsManagerInputs>().SensitivityToSave =  PlayerPrefs.GetFloat("SavedSensitivity");	
 		}
