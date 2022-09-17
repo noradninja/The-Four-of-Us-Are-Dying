@@ -6822,7 +6822,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.5849056, g: 0.46630082, b: 0.35039157, a: 1}
-  m_Intensity: 15
+  m_Intensity: 2.5
   m_Range: 3
   m_SpotAngle: 45
   m_CookieSize: 10
@@ -9288,7 +9288,7 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 0.5943396, g: 0.43594247, b: 0.27754536, a: 1}
-  m_Intensity: 10
+  m_Intensity: 2.5
   m_Range: 5
   m_SpotAngle: 45
   m_CookieSize: 10
@@ -12171,7 +12171,7 @@ MonoBehaviour:
   colorEnd: {r: 0.9811321, g: 0.81459486, b: 0.54147387, a: 0}
   colorTransparent: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0}
   lightDuration: 300
-  currentCharge: 0
+  currentCharge: 1
   storedLightRotation: {x: 0, y: 0, z: 0, w: 0}
   batteryText: {fileID: 717110221}
 --- !u!4 &787849895

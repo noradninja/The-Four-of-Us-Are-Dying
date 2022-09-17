@@ -236,6 +236,12 @@ public class PlayerController : MonoBehaviour
                 transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
               
             }
+            if (isStimulant && cooldownValue <= stimCooldown){
+                StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
+            }
+            if (!Input.GetButton("RTRIG")){
+            	StartCoroutine(RechargeStamina(((100-stamina)), stamina));
+            }	
         }
         
     }
@@ -575,6 +581,7 @@ public class PlayerController : MonoBehaviour
 
     private void RTrigEvent()
     {
+        
         if (stamina > 0f){ 
             Run(); //RUN, FORREST, RUN
         }
@@ -582,7 +589,7 @@ public class PlayerController : MonoBehaviour
         if (stamina == 0f){
             speed = _walkSpeed;
         }
-        if (verticalMove != 0 && stamina > 0f && !isStimulant){
+        if (verticalMove != 0 && stamina  != 0f && !isStimulant){
             var oldStamina = stamina;
             stamina -= 0.75f; //full is 100
             if (speed > _walkSpeed){ //speed Starts at 5
@@ -602,7 +609,7 @@ public class PlayerController : MonoBehaviour
     private void RTrigUpEvent()
     {
         isRunning = false;
-        // StopAllCoroutines();
+        StopAllCoroutines();
         // if (isCharging){
         //     currentCharge = flashlightCharge;
         //     StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
@@ -630,7 +637,7 @@ public class PlayerController : MonoBehaviour
         if (stamina > 0)
         {
             isRunning = true;
-            // StopAllCoroutines();
+             StopAllCoroutines();
             //  if (isCharging){
             //     currentCharge = flashlightCharge;
             //    StartCoroutine(RechargeFlashlight (currentCharge,  10f * flashlightCharge));
@@ -644,6 +651,7 @@ public class PlayerController : MonoBehaviour
             savedRotation = lightRig.transform.localRotation;
             lightRig.transform.parent = handRig; 
             walkStart = skinnedRenderer.material.GetFloat(CrossFade);
+            //StopAllCoroutines();
             StartCoroutine(WalkLerp(0, 1,  lerpRate));
             if (UICanvasGroup.alpha < 1){
                 StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));

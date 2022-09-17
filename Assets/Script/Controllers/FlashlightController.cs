@@ -36,7 +36,7 @@ public class FlashlightController : MonoBehaviour {
 	public Color colorTransparent;
 	//float
 	public float lightDuration = 300.0f;
-	public float currentCharge;
+	public float currentCharge = 1.0f;
 	public Quaternion storedLightRotation;
 	
 	//UI
@@ -117,12 +117,6 @@ public class FlashlightController : MonoBehaviour {
 			if (currentTarget != null) lightMovement = false;
 			isCharging = false;
 			storedLightRotation = lightRoot.transform.localRotation;
-			float currentIntensity = flashlight.intensity;
-			float duration = lightDuration;
-			Color currentColor = lightBeam.material.color;
-			StopAllCoroutines();
-			StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, duration, 
-				currentIntensity, 20, 40, 25, 0.08f, 0.040f)); // 'fire' light
 			// StartCoroutine(WalkLerp(0, 1,  lerpRate));
 			// if (isStimulant && cooldownValue <= stimCooldown){
 			// 	StartCoroutine(CountdownStimulant(cooldownValue, 0, cooldownValue));
@@ -177,7 +171,7 @@ public class FlashlightController : MonoBehaviour {
 	private void LTrigDownEvent()
 	{
 		isCharging = false;
-		//StopAllCoroutines();
+		StopAllCoroutines();
 		if (HasFlashlight && FlashlightDisabled) //light is off b/c dead battery
 		{
 	
@@ -185,6 +179,17 @@ public class FlashlightController : MonoBehaviour {
 				5, 40, 40, 0.08f, 0.08f)); //fade in quick
 			StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
 				5, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
+		}
+		else if (HasFlashlight && !FlashlightDisabled)
+		{
+			//StopAllCoroutines();
+			float currentIntensity = flashlight.intensity;
+			float currentAngle = flashlight.spotAngle;
+			float currentSize = lightShaft.transform.localScale.x;
+			Color currentColor = lightBeam.material.color;
+			float duration = lightDuration;
+			StartCoroutine(FadeLightDynamicInput(currentColor, colorEnd, duration, 
+				currentIntensity, 10, 40, 25, 0.08f, 0.040f)); // 'fire' light
 		}
 		// StartCoroutine(WalkLerp(0, 1,  lerpRate)); 
 		// if (isStimulant && cooldownValue <= stimCooldown){
@@ -226,8 +231,7 @@ public class FlashlightController : MonoBehaviour {
 				//are we out of power and adding battery?   
 				if (FlashlightDisabled)
 				{
-					//StopAllCoroutines();
-				//	currentCharge = flashlightCharge;
+					//currentCharge = flashlightCharge;
 
 					StartCoroutine(
 						FadeLightStaticInput(colorTransparent, colorStart, 0.25f, 0, 5, 40, 40, 0.08f, 0.08f));
@@ -236,7 +240,7 @@ public class FlashlightController : MonoBehaviour {
 
 				if (isCharging)
 				{
-				//	currentCharge = flashlightCharge;
+					//currentCharge = flashlightCharge;
 					StartCoroutine(RechargeFlashlight(currentCharge, 10f));
 				}
 			}
@@ -375,18 +379,20 @@ public class FlashlightController : MonoBehaviour {
 		float StartIntensity, float endIntensity, float StartAngle, float endAngle,
 		float StartSize, float endSize){
 		float time = 0;
-		var coneScale = lightShaft.transform.localScale;
+		//var currentCharge = this.currentCharge; 
 		while (time <= duration){
-			lightBeam.material.color = Color.Lerp(StartColor, new Color (endColor.r, endColor.g, endColor.b, endColor.a * currentCharge), time/(duration/50)); //lerp the colors from dark to light
-			lightHaze.material.color = Color.Lerp(StartColor, new Color (endColor.r, endColor.g, endColor.b, endColor.a * currentCharge), time/(duration/50)); //lerp the colors from dark to light
+			lightBeam.material.color = Color.Lerp(StartColor, new Color 
+													(endColor.r, endColor.g, endColor.b, endColor.a * currentCharge), time/(duration/50)); //lerp the colors from dark to light
+			lightHaze.material.color = Color.Lerp(StartColor, new Color 
+													(endColor.r, endColor.g, endColor.b, endColor.a * currentCharge), time/(duration/50)); //lerp the colors from dark to light
 			flashlight.intensity = Mathf.Lerp(StartIntensity ,endIntensity * currentCharge,time/(duration/50));
 			flashlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/50));
 			vertlight.intensity = Mathf.Lerp(StartIntensity,endIntensity * currentCharge,time/(duration/50));
 			vertlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/50));
 			var scalar = Mathf.Lerp(StartSize,endSize,time/(duration/50));
-			currentCharge = Mathf.Lerp(currentCharge, 0, time / (duration / 50));
+			currentCharge = Mathf.Lerp(currentCharge, 0, time / (duration/2));
 			lightShaft.transform.localScale = new Vector3(scalar, lightShaft.transform.localScale.y ,scalar);
-			lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 0, time/(duration));
+			lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 0, time/(duration/2));
 			time += Time.deltaTime;
 			yield return null;
 		}
@@ -415,7 +421,7 @@ public class FlashlightController : MonoBehaviour {
 		var currentSize = lightShaft.transform.localScale.x;
 		var currentColor = lightBeam.material.color;
 		StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, 
-			currentIntensity, 5, currentAngle, 40,
+			currentIntensity, 2.5f, currentAngle, 40,
 			currentSize, 0.08f));
 	}
 

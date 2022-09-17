@@ -37,14 +37,14 @@ Material:
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
     - _Density: 0.2
-    - _Exposure: 0.075
+    - _Exposure: 0.07
     - _LightY: 0
     - _NumSamples: 24
     - _Parameter: 5
-    - _PerpendicularFalloff: 0.222
+    - _PerpendicularFalloff: 1
     - _Spread: 1
     - _StencilRef: 0
     - _ThresholdParams: 0.25
-    - _Weight: 0.9
+    - _Weight: 1.25
     m_Colors:
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}
