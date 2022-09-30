@@ -390,9 +390,9 @@ public class FlashlightController : MonoBehaviour {
 			vertlight.intensity = Mathf.Lerp(StartIntensity,endIntensity * currentCharge,time/(duration/50));
 			vertlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/50));
 			var scalar = Mathf.Lerp(StartSize,endSize,time/(duration/50));
-			currentCharge = Mathf.Lerp(currentCharge, 0, time / (duration/2));
+			currentCharge = Mathf.Lerp(currentCharge, 0, time / (duration));
 			lightShaft.transform.localScale = new Vector3(scalar, lightShaft.transform.localScale.y ,scalar);
-			lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 0, time/(duration/2));
+			lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 0, time/(duration));
 			time += Time.deltaTime;
 			yield return null;
 		}
