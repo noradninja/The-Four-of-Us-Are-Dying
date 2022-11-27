@@ -57,9 +57,10 @@ public void Awake () {
 			clipLoudness += 0.75f;
 				
 			clipLoudnessB = Mathf.Lerp(oldClipLoudness, (clipLoudness/2) + UnityEngine.Random.Range(0.1f,0.3f)-0.75F, currentUpdateTime);
-			skyBox.SetFloat(Exposure, clipLoudness);
+			skyBox.SetFloat(Exposure, clipLoudness/1.85f);
 			lerpColor.a = clipLoudnessB/10;
-			glowMat.SetColor(TintColor, lerpColor);
+			RenderSettings.reflectionIntensity = clipLoudnessB;
+			//glowMat.SetColor(TintColor, lerpColor);
 		}
 	}
 	}

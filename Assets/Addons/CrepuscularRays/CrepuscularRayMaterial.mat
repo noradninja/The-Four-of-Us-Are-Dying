@@ -32,15 +32,18 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Contrast: 1.125
-    - _Decay: 0.8
+    - _CosAngle: 1
+    - _Decay: 0.875
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.04
-    - _Exposure: 0.075
-    - _NumSamples: 16
+    - _Density: 0.3
+    - _Exposure: 0.12
+    - _NumSamples: 32
     - _Parameter: 5
+    - _PerpendicularFalloff: 0.15
     - _Spread: 1
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _Weight: 2
-    m_Colors: []
+    m_Colors:
+    - _TintColor: {r: 1, g: 1, b: 1, a: 1}
