@@ -31,20 +31,20 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Contrast: 1.13
+    - _Contrast: 1.15
     - _CosAngle: 0
     - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.2
-    - _Exposure: 0.07
+    - _Density: 0.18
+    - _Exposure: 0.09
     - _LightY: 0
-    - _NumSamples: 24
+    - _NumSamples: 32
     - _Parameter: 5
-    - _PerpendicularFalloff: 1
+    - _PerpendicularFalloff: 0.825
     - _Spread: 1
     - _StencilRef: 0
     - _ThresholdParams: 0.25
-    - _Weight: 1.25
+    - _Weight: 0.95
     m_Colors:
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}

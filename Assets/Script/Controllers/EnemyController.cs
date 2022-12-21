@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour {
 	private void Update () {
 		distanceToPlayer = Vector3.Distance(player.transform.position, this.transform.position);
 		FlashlightController.FlashlightDisabled = FlashlightController.FlashlightOff; 
-		isPlayerRunning = player.GetComponent<PlayerController>().isRunning;
+		isPlayerRunning = PlayerController.isRunning;
 		
 		if (distanceToPlayer < viewRadius){
 			//isPlayerNear = true;
