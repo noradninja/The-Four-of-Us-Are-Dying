@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
     public bool isLerping;
     public bool isCharging;
     public static bool isMap;
-    public bool lightMovement = true;
+    public static bool lightMovement = true;
     public static bool delayButton = false;
     public float cooldownValue;
  
@@ -165,7 +165,6 @@ public class PlayerController : MonoBehaviour
 
         #region StartSelectEventSub
         VitaInputManager.Instance.OnStart += StartEvent;
-        VitaInputManager.Instance.OnSelect += SelectEvent;
         #endregion
 
         #region TriggerButtonEventSub
@@ -197,7 +196,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        isCharging = FlashlightController.chargeCheck;
+        isCharging = FlashlightController.chargeCheck; isCharging = FlashlightController.chargeCheck;
         health = InventoryManager.playerHealth; //update health
         //get touch input, and enable/disable the perf overlay
         foreach (Touch touch in Input.touches) {
@@ -230,17 +229,19 @@ public class PlayerController : MonoBehaviour
                 }    
             }
             if (lightFocusing && currentTarget != null){
-                if (currentTarget.GetComponentInParent<EnemyController>().isPlayerNear == true) 
-                    lightMovement = false;
-                //rotate player
-                var position = currentTarget.transform.position;
-                Vector3 dir = position - transform.position;
-                Quaternion lookRotation = Quaternion.LookRotation(dir);
-                Vector3 rotation = Quaternion.Lerp(transform.rotation, 
-                                                    lookRotation, 
-                                                    Time.deltaTime * 14f).eulerAngles;
-                transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
-              
+                if (currentTarget.GetComponentInParent<EnemyController>().isPlayerNear == true)
+                {
+                    //lightMovement = false;
+                    //rotate player
+                    var position = currentTarget.transform.position;
+                    Vector3 dir = position - transform.position;
+                    Quaternion lookRotation = Quaternion.LookRotation(dir);
+                    Vector3 rotation = Quaternion.Lerp(transform.rotation,
+                        lookRotation,
+                        Time.deltaTime * 14f).eulerAngles;
+                    transform.rotation = Quaternion.Euler(0f, rotation.y, 0f);
+                }
+
             }
             if (isStimulant && cooldownValue <= stimCooldown){
                 stimsRoutine = 
@@ -296,7 +297,7 @@ public class PlayerController : MonoBehaviour
             delayButton = true;
             StartCoroutine(Fade(mapPanel, 0, 1, 0.5f));
             StartCoroutine(ButtonDelayTimer(0.5f));
-        }
+        }        
         else if(isMap && !delayButton){
             delayButton = true;
             StartCoroutine(Fade(mapPanel, 1, 0, 0.5f));
@@ -331,17 +332,7 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(ButtonDelayTimer(0.5f));
         }
     }
-
-    private void SelectEvent()
-    {
-         if (GetDeviceModel.currentDeviceModel == "Playstation Vita TV")
-         {
-             // do PSTV stuff here
-         }
-    }
-    
-    
-    #endregion
+   #endregion
 
     #region DpadButtonEvents
 
@@ -368,7 +359,7 @@ public class PlayerController : MonoBehaviour
             //Start stim cooldown timer, change walklerp speed- this coroutine will go away
             //when I set it up to be driven by animation events instead
             StartCoroutine(CountdownStimulant(10, 0, stimCooldown));
-            StartCoroutine(WalkLerp(0, 1,  lerpRate));
+            //StartCoroutine(WalkLerp(0, 1,  lerpRate));
         }
     }
     private void DpadLeftKeyDownEvent()
@@ -379,7 +370,7 @@ public class PlayerController : MonoBehaviour
 
     private void DpadRightKeyDownEvent()
     {
-        
+        //cycle rendertextures on script on camera
     }
     #endregion
 
@@ -441,7 +432,7 @@ public class PlayerController : MonoBehaviour
                 alphaRoutine = FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f);
                 StartCoroutine(alphaRoutine);
         }
-        StopCoroutine(walkRoutine);
+        if (walkRoutine != null) StopCoroutine(walkRoutine);
         //if (alphaRoutine != null) StopCoroutine(alphaRoutine);
         if (chargeRoutine != null) StopCoroutine(chargeRoutine);
         if (stamina > 0)
@@ -458,8 +449,8 @@ public class PlayerController : MonoBehaviour
     #endregion
     private void Keys()
     {
-    if (!Input.GetButton("RTRIG") && (!Input.GetButton("LTRIG")) && (!Input.GetButtonDown("Square")))
-        {
+        if (!Input.GetButton("RTRIG") && (!Input.GetButton("LTRIG")) && 
+            (!Input.GetButtonDown("Square"))){
             if (camObject.fieldOfView > 35f){
                 camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
             }
@@ -568,7 +559,7 @@ public class PlayerController : MonoBehaviour
 
         //apply forward/backward/gravity movement  
         var gravityMove = new Vector3(0, _verticalSpeed, 0);  
-        Vector3 move;
+        Vector3 move = new Vector3(0,0,0);
         if (lightMovement){
             move = transform.forward * -verticalMove + transform.right * 0;
         }

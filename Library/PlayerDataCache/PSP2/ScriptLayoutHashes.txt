@@ -259,7 +259,7 @@ ad0314990426787b37b677bd355c2e7f Assembly-CSharp.dll:.Crepuscular
 1f61edfe517b8d06543d754e4efa6bc5 Assembly-CSharp.dll:.SaveManager_Inputs
 9e59333ee21918ae86c942ae068b20df Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.Example01ScrollViewCell
 5a30dcba633479bbe906094a1c92d1e5 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.PauseMenu
-b3fb155ab921ca39eb76c7fbe4ea1a01 Assembly-CSharp.dll:.FlashlightController
+59fdf842ed05986cc459d9db319f24c7 Assembly-CSharp.dll:.FlashlightController
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.PostEffectsBase
 e7053bcfba687d0cb4c7b5e2630bcc9b Assembly-CSharp.dll:UnityEngine.UI.Extensions.HoverTooltip
 972e942b5504730c420608e716424f28 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIScrollToSelectionXY
@@ -339,7 +339,7 @@ e46113951763d45502a1260c6ea4c4e8 Unity.TextMeshPro.dll:TMPro.TMP_FontAsset
 93c79d9898c96227c3913847eb39db63 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
 d315386302caddeaaad4961b9b324239 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ContrastEnhance
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_A
-7d754c82f50454247f9c1fe6cbcc4b5b Assembly-CSharp.dll:.PlayerController
+0b86d6af3785ba6030fba94fef02c246 Assembly-CSharp.dll:.PlayerController
 d914da9b985e4c6d27b0c3af59f4587e Assembly-CSharp.dll:.CloudsGenerator
 754f0663dd705e4b3aef7448726edb66 Assembly-CSharp.dll:.MB_DynamicAddDeleteExample
 64f7cf5e9537067742e880dff3771e89 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.LineRendererOrbit

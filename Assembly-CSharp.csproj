@@ -147,6 +147,7 @@
     <Compile Include="Assets\Script\Tools\FPS_Counter.cs" />
     <Compile Include="Assets\Script\Tools\GC_Manager.cs" />
     <Compile Include="Assets\Script\Tools\GetDeviceModel.cs" />
+    <Compile Include="Assets\Script\Tools\Overlay_Cycler.cs" />
     <Compile Include="Assets\Script\Tools\PostProcessingManager.cs" />
     <Compile Include="Assets\Script\Tools\Res.cs" />
     <Compile Include="Assets\Script\Tools\Rotate_Object.cs" />

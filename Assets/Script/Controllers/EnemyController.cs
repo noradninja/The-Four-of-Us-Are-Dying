@@ -246,7 +246,7 @@ public class EnemyController : MonoBehaviour {
 			case EnemyState.looking:
 				roaming = false;
 				alerted = false;
-				player.GetComponent<PlayerController>().lightMovement = true;
+				PlayerController.lightMovement = true;
 				//only null if the player hasn't targeted another enemy since us
 				if (PlayerController.currentTarget == targetPoint){ 
 					PlayerController.currentTarget = null;

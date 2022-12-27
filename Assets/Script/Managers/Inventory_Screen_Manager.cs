@@ -48,20 +48,20 @@ public class Inventory_Screen_Manager : MonoBehaviour {
 			}
 		}
 		//this is for PSTV	
-		if (Input.GetButtonDown("Select") && !delayButton && !PlayerController.isMap){
-			if (!inventoryOn){
-				StartCoroutine(CrossFade(0, 1, 0.5f));
-				inventoryOn = true;
-				delayButton = true;
-				StartCoroutine(ButtonDelayTimer(0.5f));
-			}
-			else if (inventoryOn && !delayButton && !PlayerController.isMap){
-				StartCoroutine(CrossFade(1, 0, 0.5f));
-				inventoryOn = false;
-				delayButton = true;
-				StartCoroutine(ButtonDelayTimer(0.5f));
-			}
-		}
+		// if (Input.GetButtonDown("Select") && !delayButton && !PlayerController.isMap){
+		// 	if (!inventoryOn){
+		// 		StartCoroutine(CrossFade(0, 1, 0.5f));
+		// 		inventoryOn = true;
+		// 		delayButton = true;
+		// 		StartCoroutine(ButtonDelayTimer(0.5f));
+		// 	}
+		// 	else if (inventoryOn && !delayButton && !PlayerController.isMap){
+		// 		StartCoroutine(CrossFade(1, 0, 0.5f));
+		// 		inventoryOn = false;
+		// 		delayButton = true;
+		// 		StartCoroutine(ButtonDelayTimer(0.5f));
+		// 	}
+		// }
 		
 
 	

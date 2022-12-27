@@ -366,8 +366,8 @@ Material:
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
     - _GeoShadowModel: 0
-    - _GlossMapScale: 1
-    - _Glossiness: 0.25
+    - _GlossMapScale: 0.5
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5
     - _HeightScale: 0.006

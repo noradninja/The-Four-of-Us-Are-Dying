@@ -52,8 +52,8 @@
 				// sample the texture
 				half4 col = tex2D(_MainTex, i.uv);
 				half2 texsize = Vector(_TextureSize.x, _TextureSize.y,0,0).xy;
-				half dx = pow(texsize.x, -1.0h) * 0.6h;
-				half dy = pow(texsize.y, -1.0h) * 0.6h;
+				half dx = pow(texsize.x, -1.0h) * 0.5h;
+				half dy = pow(texsize.y, -1.0h) * 0.5h;
 				half3 dt = half3(1.0h,1.0h,1.0h);
 
 				half3 c00 = tex2D(_MainTex, i.uv1 + half2(-dx, -dy)).xyz;
