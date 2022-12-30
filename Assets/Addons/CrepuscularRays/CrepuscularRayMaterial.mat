@@ -36,10 +36,10 @@ Material:
     - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.18
+    - _Density: 0.13
     - _Exposure: 0.09
     - _LightY: 0
-    - _NumSamples: 32
+    - _NumSamples: 12
     - _Parameter: 5
     - _PerpendicularFalloff: 0.825
     - _Spread: 1

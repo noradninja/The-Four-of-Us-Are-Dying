@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Kino;
 using UnityEngine;
 using UnityStandardAssets.ImageEffects;
+using UnityEngine.UI;
 
 public class Overlay_Cycler : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class Overlay_Cycler : MonoBehaviour
 	public GameObject lightningManager;
 	public GameObject rainParticles;
 	public GameObject splashParticles;
+	public Text postText;
 	public enum cycleState
 	{
 		rawRender,
@@ -42,42 +44,50 @@ public class Overlay_Cycler : MonoBehaviour
 			if (currentOverlay == cycleState.combined)
 			{
 				currentOverlay = cycleState.rawRender;
+				postText.text = "Raw Render";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.rawRender)
 			{
 				currentOverlay = cycleState.combinedOcclusion;
+				postText.text = "Raw + Ambient Occlusion";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.combinedOcclusion)
 			{
 				currentOverlay = cycleState.godRays;
+				postText.text = "Raw + Ambient Occlusion + Crepuscular";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.godRays)
 			{
 				currentOverlay = cycleState.bokeh;
+				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.bokeh)
 			{
 				currentOverlay = cycleState.lightningFlash;
+				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.lightningFlash)
 			{
 				currentOverlay = cycleState.lightningContrast;
+				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.lightningContrast)
 			{
 				currentOverlay = cycleState.sai2x;
+				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI";
+
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
@@ -85,12 +95,15 @@ public class Overlay_Cycler : MonoBehaviour
 
 			{
 				currentOverlay = cycleState.grain;
+				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI + Grain";
+
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.grain)
 			{
 				currentOverlay = cycleState.combined;
+				postText.text = "Full Render";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
@@ -112,27 +125,27 @@ public class Overlay_Cycler : MonoBehaviour
 				mainCamera.GetComponent<FastSSAO>().enabled = true; //disable SSAO
 				break;
 			case cycleState.godRays:
-				mainCamera.GetComponent<FastSSAO>().enabled = false; //disable SSAO
+				// mainCamera.GetComponent<FastSSAO>().enabled = false; //disable SSAO
 				mainCamera.GetComponent<Crepuscular>().enabled = true; //disable godrays
 				break;
 			case cycleState.bokeh:
-				mainCamera.GetComponent<Crepuscular>().enabled = false; //disable godrays
+				// mainCamera.GetComponent<Crepuscular>().enabled = false; //disable godrays
 				mainCamera.GetComponent<Bokeh>().enabled = true; //disable bokeh
 				break;
 			case cycleState.lightningFlash:
-				mainCamera.GetComponent<Bokeh>().enabled = false; //disable bokeh
+				// mainCamera.GetComponent<Bokeh>().enabled = false; //disable bokeh
 				lightningManager.GetComponent<Lightning_Manager>().enabled = true; //disable lightning
 				break;
 			case cycleState.lightningContrast:
 				mainCamera.GetComponent<Contrast_Manager>().enabled = true; //disable lightning contrast
 				break;
 			case cycleState.sai2x:
-				lightningManager.GetComponent<Lightning_Manager>().enabled = false; //disable lightning
-				mainCamera.GetComponent<Contrast_Manager>().enabled = false; //disable lightning contrast
+				// lightningManager.GetComponent<Lightning_Manager>().enabled = false; //disable lightning
+				// mainCamera.GetComponent<Contrast_Manager>().enabled = false; //disable lightning contrast
 				mainCamera.GetComponent<FXAA>().enabled = true; //disable AA
 				break;
 			case cycleState.grain:
-				mainCamera.GetComponent<FXAA>().enabled = false; //disable AA
+				// mainCamera.GetComponent<FXAA>().enabled = false; //disable AA
 				mainCamera.GetComponent<NoiseAndGrain>().enabled = true; //disable grain
 				break;
 			case cycleState.combined:

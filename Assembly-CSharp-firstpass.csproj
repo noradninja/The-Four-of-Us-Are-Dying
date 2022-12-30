@@ -730,6 +730,14 @@
       <Project>{492C1E7D-CB20-759D-89A1-3F76DEF70D38}</Project>
       <Name>MeshBakerEditor</Name>
     </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{125B9EB7-2796-10F2-223B-39B2BFB911FA}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{6A4DCA01-D810-725F-FB11-7397923B3C9F}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
