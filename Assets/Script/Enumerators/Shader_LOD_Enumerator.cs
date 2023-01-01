@@ -184,6 +184,6 @@ public class GetChildByName : MonoBehaviour
 		Transform[] ts = gameObjectToCheck.transform.GetComponentsInChildren<Transform>();
 		foreach (Transform t in ts) if (t.gameObject.name == nameToLookFor) return t.gameObject;
 		return null;
-	}
+	} 
 }
 

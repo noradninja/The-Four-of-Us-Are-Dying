@@ -48,6 +48,9 @@ public class FlashlightController : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+	HasFlashlight = false;
+	FlashlightOff = false;
+	FlashlightDisabled = true;
 		//event subs for
 		//L Trigger for firing
 		VitaInputManager.Instance.OnLTrig += LTrigEvent;
@@ -97,7 +100,7 @@ public class FlashlightController : MonoBehaviour {
 			lightObject.SetActive(false);
 			lightRig.SetActive(false);
 		}
-		if (HasFlashlight && FlashlightOff) //have flashlight but it's off
+		if (HasFlashlight && FlashlightOff && !FlashlightDisabled) //have flashlight but it's off
 		{
 			lightObject.SetActive(true); 
 			lightRig.SetActive(false);
@@ -108,7 +111,7 @@ public class FlashlightController : MonoBehaviour {
 			lightRig.SetActive(true);
 		}
 
-		if (FlashlightDisabled)
+		if (FlashlightDisabled && HasFlashlight)
 		{
 			lightObject.SetActive(true); 
 			lightRig.SetActive(false);
@@ -181,7 +184,7 @@ public class FlashlightController : MonoBehaviour {
 			StartCoroutine(FadeLightStaticInput(colorStart, colorTransparent,  0.25f, 
 				10, 0, 40, 40, 0.08f, 0.08f)); //fade out quick
 		}
-		else if (HasFlashlight && !FlashlightDisabled && currentCharge >= 0.5f)
+		else if (HasFlashlight && !FlashlightDisabled && currentCharge >= 0.05f)
 		{
 			
 			float currentIntensity = flashlight.intensity;
@@ -371,6 +374,7 @@ public class FlashlightController : MonoBehaviour {
 	
 		lightChargeObject.GetComponent<Image>().fillAmount = 1;
 		isCharging = false;
+		FlashlightDisabled = false;
 		
 		
 		
