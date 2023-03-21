@@ -2,11 +2,9 @@
 
 // Upgrade NOTE: replaced tex2D unity_Lightmap with UNITY_SAMPLE_TEX2D
 
-Shader "Vita/Diffuse(Additive Color)" {
+Shader "BlackOnly" {
 Properties {
-    _Color ("Main Color", Color) = (1,1,1,1)
-    _MainTex ("Base (RGB)", 2D) = "white" {}
-    _LightMap ("Lightmap (RGB)", 2D) = "black" {}
+    _Color ("Main Color", Color) = (0,0,0,1)
 }
 
 SubShader {
@@ -18,15 +16,12 @@ struct Input {
   float2 uv_MainTex;
   float2 uv2;
 };
-sampler2D_half _MainTex;
-// half4 unity_LightmapST;
+
 fixed4 _Color;
 void surf (Input IN, inout SurfaceOutput o)
 {
-  o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
-  half3 lm = (DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, IN.uv2_LightMap)));
-  o.Emission = lm.rgb + _Color * o.Albedo.rgb;
-  o.Alpha = _Color.a;
+  o.Albedo = _Color.rgb;
+
 }
 ENDCG
 }

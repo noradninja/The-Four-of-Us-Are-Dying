@@ -1571,6 +1571,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &105661753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1832,6 +1833,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &115809729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2848,6 +2850,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &165607577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3172,6 +3175,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &176588516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3755,6 +3759,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &257954323
 GameObject:
   m_ObjectHideFlags: 0
@@ -4067,6 +4072,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &265201238
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4597,6 +4603,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &309702689
 GameObject:
   m_ObjectHideFlags: 0
@@ -4763,6 +4770,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &316819304 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: fa65eb37d795fd7448b1c836a3a090ee,
@@ -4809,6 +4817,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 0
+  replacementMaterial: {fileID: 0}
 --- !u!1 &320533433
 GameObject:
   m_ObjectHideFlags: 0
@@ -4928,6 +4937,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &320546897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5452,6 +5462,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &366311497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5685,6 +5696,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &377627806
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7185,6 +7197,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &480707910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7595,6 +7608,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &510550054
 GameObject:
   m_ObjectHideFlags: 0
@@ -7877,6 +7891,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &520215582
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7992,6 +8007,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &524350612
 GameObject:
   m_ObjectHideFlags: 0
@@ -8127,6 +8143,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &543687145
 GameObject:
   m_ObjectHideFlags: 0
@@ -8483,6 +8500,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &568854858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9056,6 +9074,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &611722931
 GameObject:
   m_ObjectHideFlags: 0
@@ -9160,6 +9179,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &613628264
 GameObject:
   m_ObjectHideFlags: 0
@@ -10945,6 +10965,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &717110219
 GameObject:
   m_ObjectHideFlags: 0
@@ -11194,6 +11215,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &717354674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12287,6 +12309,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!4 &791939302 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 7ce8dd73f7dd4d947891321fc951f879,
@@ -13174,10 +13197,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 787849888}
   LOD_distance:
-  - 3.5
   - 4
+  - 5
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &886072610
 GameObject:
   m_ObjectHideFlags: 0
@@ -13370,9 +13394,10 @@ MonoBehaviour:
   player: {fileID: 787849888}
   LOD_distance:
   - 3.5
-  - 4
+  - 5.25
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!43 &911327046
 Mesh:
   m_ObjectHideFlags: 0
@@ -13944,6 +13969,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &960500164
 GameObject:
   m_ObjectHideFlags: 0
@@ -14716,6 +14742,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!43 &999194393
 Mesh:
   m_ObjectHideFlags: 0
@@ -15007,6 +15034,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 0
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1020317138
 GameObject:
   m_ObjectHideFlags: 0
@@ -15173,6 +15201,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1025284522
 GameObject:
   m_ObjectHideFlags: 0
@@ -15361,6 +15390,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1037177756
 GameObject:
   m_ObjectHideFlags: 0
@@ -15990,6 +16020,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1110259621
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16107,6 +16138,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1120093141
 GameObject:
   m_ObjectHideFlags: 0
@@ -16452,6 +16484,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1165341143
 GameObject:
   m_ObjectHideFlags: 0
@@ -16693,6 +16726,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1189811400
 GameObject:
   m_ObjectHideFlags: 0
@@ -17300,6 +17334,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1210847144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17560,6 +17595,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1255864573
 GameObject:
   m_ObjectHideFlags: 0
@@ -18188,6 +18224,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1304939744
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18370,6 +18407,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1313022464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19248,6 +19286,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1423133505 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1540435977836996, guid: a3d4c910dd150dc4ba1816870bb7f398,
@@ -19372,6 +19411,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1428597301
 GameObject:
   m_ObjectHideFlags: 0
@@ -19492,6 +19532,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1432111092
 GameObject:
   m_ObjectHideFlags: 0
@@ -19584,6 +19625,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1435929691
 GameObject:
   m_ObjectHideFlags: 0
@@ -19886,6 +19928,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1448604701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20032,6 +20075,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1001 &1461692811
 Prefab:
   m_ObjectHideFlags: 0
@@ -20475,6 +20519,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1471542189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20700,6 +20745,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1477174509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20957,6 +21003,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1485858297
 GameObject:
   m_ObjectHideFlags: 0
@@ -21049,6 +21096,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1490393795
 GameObject:
   m_ObjectHideFlags: 0
@@ -22448,6 +22496,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1590774918
 GameObject:
   m_ObjectHideFlags: 0
@@ -22658,6 +22707,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1597862952
 GameObject:
   m_ObjectHideFlags: 0
@@ -22766,6 +22816,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1597862958
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22882,6 +22933,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1612193906
 GameObject:
   m_ObjectHideFlags: 0
@@ -22974,6 +23026,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1618138805
 GameObject:
   m_ObjectHideFlags: 0
@@ -23112,6 +23165,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1633340224
 GameObject:
   m_ObjectHideFlags: 0
@@ -23331,6 +23385,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1635050443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23792,6 +23847,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 0
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1697496803
 GameObject:
   m_ObjectHideFlags: 0
@@ -25354,6 +25410,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &1794307337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25839,6 +25896,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1816428191
 GameObject:
   m_ObjectHideFlags: 0
@@ -26327,6 +26385,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!43 &1863925400
 Mesh:
   m_ObjectHideFlags: 0
@@ -26864,6 +26923,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1894802909
 GameObject:
   m_ObjectHideFlags: 0
@@ -27462,6 +27522,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1949391003
 GameObject:
   m_ObjectHideFlags: 0
@@ -28076,6 +28137,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!1 &1991059219
 GameObject:
   m_ObjectHideFlags: 0
@@ -29550,6 +29612,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &2072416536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29897,6 +29960,7 @@ MonoBehaviour:
   LOD_distance: []
   enableShaderLOD: 0
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &2126123560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30172,6 +30236,7 @@ MonoBehaviour:
   - 4
   enableShaderLOD: 1
   enableCulling: 1
+  replacementMaterial: {fileID: 0}
 --- !u!114 &2134664015
 MonoBehaviour:
   m_ObjectHideFlags: 0

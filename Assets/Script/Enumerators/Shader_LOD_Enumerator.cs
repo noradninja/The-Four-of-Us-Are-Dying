@@ -11,6 +11,9 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	public float[] LOD_distance;
 	public bool enableShaderLOD = true;
 	public bool enableCulling = true;
+	public Material replacementMaterial;
+	
+	private Material originalMaterial;
 	private float distance;
 	private Vector3 viewPos;
 	private Vector3 thisPos;
@@ -23,6 +26,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	{
 		thisRenderer = this.GetComponent<Renderer>();
 		mainCam = Camera.main;
+		originalMaterial = thisRenderer.sharedMaterial;
+		replacementMaterial = new Material(Shader.Find ("BlackOnly"));
 	}
 	// Update is called once per frame
 	//TODO: write this so its a subscriber fired event so we don't need this logic running on every object, cause that's fucking smart
@@ -52,16 +57,21 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
 				Resources.UnloadUnusedAssets(); //unload normal map
 			}
-			if (distance == LOD_distance[1]) //second LOD
+			if (distance >= LOD_distance[1]) //second LOD
 			{
-				//drop MOAR map
-				thisRenderer.sharedMaterial.DisableKeyword("_METALLICGLOSSMAP"); 
-				thisRenderer.sharedMaterial.DisableKeyword("_SPECGLOSSMAP");
-				Resources.UnloadUnusedAssets(); //unload MOAR map
+				if (thisRenderer.sharedMaterial != replacementMaterial)
+				{
+					thisRenderer.sharedMaterial = replacementMaterial;
+					if (thisRenderer.sharedMaterial == replacementMaterial)
+						print("Material swapped on " + thisRenderer.name);
+				}
+
+				Resources.UnloadUnusedAssets(); //unload
 			}
 
 			if (distance < LOD_distance[1] && distance > LOD_distance[0]) //transition back to second LOD
 			{
+				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				//enable MOAR map keywords
 				thisRenderer.sharedMaterial.EnableKeyword("_METALLICGLOSSMAP"); 
 				thisRenderer.sharedMaterial.EnableKeyword("_SPECGLOSSMAP"); 
@@ -69,6 +79,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
 			if (distance < LOD_distance[0]) //no LOD
 			{
+				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normal map
 				thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
 			}
