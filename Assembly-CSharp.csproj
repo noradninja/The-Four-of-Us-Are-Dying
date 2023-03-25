@@ -481,6 +481,7 @@
     <None Include="Assets\Addons\Shaders\simple.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Addons\Shaders\aura.shader" />
+    <None Include="Assets\Shader\Vertex\Black_Only.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UILinearDodge.shader" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCore_VC.cginc" />
     <None Include="Assets\Shader\Foliage\Diffuse_Additive_Color.shader" />
@@ -553,7 +554,6 @@
     <None Include="Assets\TrueClouds\Resources\Shaders\Light\CloudsTintAdditiveTwosided.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UIScreen.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCore.cginc" />
-    <None Include="Assets\Shader\Vertex\Diffuse_Additive_Color.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Shader\Standard Mobile Lerp\Standard_VC_Lerp.shader" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Textures\Readme.txt" />

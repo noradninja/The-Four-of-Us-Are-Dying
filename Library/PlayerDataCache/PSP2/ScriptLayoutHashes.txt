@@ -1,6 +1,6 @@
 PSP2
 PlayerPath?
-D:/PSVITA/Builds/TFoUAD
+C:/PSVITA/Builds/TFoUAD
 SceneListBegin?
 Assets/Scenes/Title.unity
 Assets/Scenes/LoadScreen.unity
@@ -35,7 +35,7 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 cafe34666744094f2aef4f686779b868 Assembly-CSharp.dll:.FXAA
 90a88ac083dc36e170322468bac7e33c Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.UpdateRadialValue
 51c7f2da0e648ac14d16777ffbf26e8e Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ImageEffectBase
-9fc365d70368b80460f394c094e7f778 Assembly-CSharp.dll:.Shader_LOD_Enumerator
+4f7fe5329cd04e29c1c4c3a1e4b0714b Assembly-CSharp.dll:.Shader_LOD_Enumerator
 837aa3445eed47dd2a01ef9e615116e0 Assembly-CSharp.dll:.FPS_Counter
 d4bb4b82edd6583fb3ed02ce19889d5f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BlurOptimized
 4076cc969ce586df3f32a5f3a66a0900 Assembly-CSharp.dll:DigitalRuby.RainMaker.RainScript
