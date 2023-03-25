@@ -355,5 +355,5 @@ Shader "Vita/Standard Mobile (No Fog)"
 
 
     //FallBack "VertexLit"
-    CustomEditor "Standard_VCShaderGUI"
+    //CustomEditor "Standard_VCShaderGUI"
 }

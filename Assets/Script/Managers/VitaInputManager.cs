@@ -209,6 +209,38 @@ public class VitaInputManager : MonoBehaviour {
 			}
 			
 		#endregion
+		
+		#region Dpad
+			//add code here
+			if (Input.GetButtonDown("Up"))
+			{
+				if (OnDpadUp != null)
+				{
+					OnDpadUp();
+				}
+			}
+			if (Input.GetButtonDown("Down"))
+			{
+				if (OnDpadDown != null)
+				{
+					OnDpadDown();
+				}
+			}
+			if (Input.GetButtonDown("Left"))
+			{
+				if (OnDpadLeft != null)
+				{
+					OnDpadLeft();
+				}
+			}
+			if (Input.GetButtonDown("Right"))
+			{
+				if (OnDpadRight != null)
+				{
+					OnDpadRight();
+				}
+			}
+		#endregion
 
 		#region Triggers
 

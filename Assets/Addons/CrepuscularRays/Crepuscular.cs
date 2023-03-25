@@ -28,7 +28,7 @@ public class Crepuscular : MonoBehaviour
       
     }
 
-	void Update()
+	void Update() 
 	{
 		var getAngle = material.GetFloat(cosAngle);
 		cosineAngle = getAngle;

@@ -59,7 +59,7 @@ public void Awake () {
 				ExtensionMethods.Math.Remap(enviroReflectivity, 0.55f,1.1f,0.3f, 0.65f);
 			skyBox.SetFloat(Exposure, 
 						ExtensionMethods.Math.Remap(enviroReflectivity, 0.55f,0.8f,
-													0.55f, 0.9f));
+													0.55f, 0.85f));
 		}
 	}
 	}

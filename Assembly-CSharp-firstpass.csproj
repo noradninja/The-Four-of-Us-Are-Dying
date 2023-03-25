@@ -722,9 +722,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
+      <Project>{125B9EB7-2796-10F2-223B-39B2BFB911FA}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
+    </ProjectReference>
     <ProjectReference Include="MeshBakerCore.csproj">
       <Project>{EE219FC9-EE47-929F-60E9-4F12F796A060}</Project>
       <Name>MeshBakerCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="Whinarn.UnityMeshSimplifier.Editor.csproj">
+      <Project>{6A4DCA01-D810-725F-FB11-7397923B3C9F}</Project>
+      <Name>Whinarn.UnityMeshSimplifier.Editor</Name>
     </ProjectReference>
     <ProjectReference Include="MeshBakerEditor.csproj">
       <Project>{A13BED61-3E70-D958-1E94-45A69466733A}</Project>

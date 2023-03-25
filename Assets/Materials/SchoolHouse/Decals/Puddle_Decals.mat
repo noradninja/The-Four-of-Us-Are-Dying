@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Puddle_Decals
-  m_Shader: {fileID: 4800000, guid: 047b3c0bd20aff3439f808e295337ccc, type: 3}
+  m_Shader: {fileID: 4800000, guid: 189d778a2d8f05d4681878f40329821a, type: 3}
   m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED _ALPHABLEND_ON _BAKERY_NONE _LIGHTMAPSPECULAR
     _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: 2449
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:

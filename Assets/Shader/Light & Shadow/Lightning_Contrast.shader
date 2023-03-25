@@ -4,6 +4,7 @@
 	{
 		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
 		[IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
+		[FloatRange] _Range ("Range", Range(0.1,2)) = 1.0
 	}
 	SubShader
 	{
@@ -48,11 +49,12 @@
 			}
 			
 			fixed4 _TintColor;
+			float _Range;
 			UNITY_DECLARE_DEPTH_TEXTURE(_CameraDepthTexture);
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
-				fixed4 col = _TintColor * sceneZ;
+				fixed4 col = _TintColor * ((sceneZ -0.35f)*(pow(_Range, 2)));
 				return col;
 			}
 			ENDCG
