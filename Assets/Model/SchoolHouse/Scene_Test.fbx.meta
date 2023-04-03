@@ -206,6 +206,19 @@ ModelImporter:
     100400: polySurface554
     100402: polySurface555
     100404: transform1
+    100406: transform10
+    100408: transform11
+    100410: transform12
+    100412: transform13
+    100414: transform14
+    100416: transform2
+    100418: transform3
+    100420: transform4
+    100422: transform5
+    100424: transform6
+    100426: transform7
+    100428: transform8
+    100430: transform9
     400000: Ambient_Light
     400002: American_Elm
     400004: Bounce_Light
@@ -409,6 +422,19 @@ ModelImporter:
     400400: polySurface554
     400402: polySurface555
     400404: transform1
+    400406: transform10
+    400408: transform11
+    400410: transform12
+    400412: transform13
+    400414: transform14
+    400416: transform2
+    400418: transform3
+    400420: transform4
+    400422: transform5
+    400424: transform6
+    400426: transform7
+    400428: transform8
+    400430: transform9
     2100000: James_Pants
     2100002: James_Head
     2100004: James_Jacket

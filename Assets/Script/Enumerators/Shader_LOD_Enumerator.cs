@@ -10,9 +10,11 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	public GameObject player;
 	public float[] LOD_distance;
 	public bool enableShaderLOD = true;
+	public bool isFoliage;
 	public bool enableCulling = true;
 	public Material replacementMaterial;
 	public Texture albedoTex;
+	public Texture MOARTex;
 	private Material originalMaterial;
 	public float distance;
 	private Vector3 viewPos;
@@ -29,9 +31,22 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 		mainCam = Camera.main;
 		originalMaterial = thisRenderer.sharedMaterial;
 		albedoTex = originalMaterial.mainTexture;
+		
 		//assign materials and textures for later use
-		replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
+		if (isFoliage)//grab the textures we need from the old mat, disable leaf wiggle
+		{
+			replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
+			MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
+			replacementMaterial.SetTexture("_MOAR", MOARTex);
+			replacementMaterial.SetFloat("_LeavesOn", 0);
+		}
+		else
+		{
+			replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
+		}
 		replacementMaterial.mainTexture = albedoTex;
+		replacementMaterial.SetColor("_Color", Color.grey);
+		replacementMaterial.SetTextureScale("_MainTex", new Vector2(2,2));
 	}
 
 	// Update is called once per frame
@@ -39,7 +54,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	private void Update()
 	{
 		// we only need to do *whatever* 2/4 times a frame, depending on refresh rate
-		if (tick != 3)
+		if (tick != 6)
 			tick++;
 		else 
 		{
@@ -50,18 +65,21 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
 	private void TickUpdate()
 	{
-		thisPos = new Vector3(this.transform.position.x, 0f, this.transform.position.z);
-		//playerPos = new Vector3(player.transform.position.x, 0f, player.transform.position.z);
+		thisPos = this.transform.position;
+		playerPos = player.transform.position;
 
-		viewPos = mainCam.WorldToViewportPoint(this.transform.position);//where are we located in relation to the camera frustrum
+		//viewPos = mainCam.WorldToViewportPoint(this.transform.position);//where are we located in relation to the camera frustrum
 		//playerPos = new Vector3(viewPos.x, 0f, viewPos.z);
-		distance = Vector3.Distance(thisPos, viewPos);//how far are we from the player
+		
+		//rewrite below with pythagoreas
+		
+		distance = Vector3.Distance(thisPos, playerPos);//how far are we from the player
 		if (enableShaderLOD) //check if we enabled this; if not skip to culling
 		{
 			if (distance < LOD_distance[0]) //no LOD- enable all maps/shadowcasting
 			{
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-				thisRenderer.sharedMaterial.EnableKeyword("_METALLICGLOSSMAP");
+				thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP");
 				thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
 			}
 			
@@ -70,7 +88,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-				Resources.UnloadUnusedAssets(); //unload normal map
+				//Resources.UnloadUnusedAssets(); //unload normal map
 			}
 
 			if (distance > LOD_distance[1]) //second LOD- fog shadow only
@@ -82,14 +100,14 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 						print("Material swapped on " + thisRenderer.name);
 				}
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-				Resources.UnloadUnusedAssets(); //unload
+				//Resources.UnloadUnusedAssets(); //unload
 			}
 			if (distance < 0)
 			{
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-				Resources.UnloadUnusedAssets(); //unload normal map
+				//Resources.UnloadUnusedAssets(); //unload normal map
 			}
 
 			// if (distance <= LOD_distance[1] && distance > LOD_distance[0]) //transition to first LOD- drop all secondary maps/shadowcasting

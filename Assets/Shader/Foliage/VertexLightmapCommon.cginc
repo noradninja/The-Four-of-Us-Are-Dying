@@ -60,6 +60,7 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 // uniforms
 int4 unity_VertexLightParams; // x: light count, y: zero, z: one (y/z needed by d3d9 vs loop instruction)
 sampler2D _MainTex;
+sampler2D _MOAR;
 half4 _MainTex_ST;
 half _Cutoff;
 half4 _wind_dir;
@@ -67,6 +68,7 @@ half _wind_size;
 half _leaves_wiggle_disp;
 half _leaves_wiggle_speed;
 half _influence;
+bool _LeavesOn;
 
 
 // pos shader input data
@@ -103,12 +105,13 @@ v2f vert(appdata v) {
 	const half3 eyeNormal = normalize(mul( (half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
 	const half dotProduct = 1 - saturate ( dot(v.normal, eyeNormal) );
  	
-
+if(_LeavesOn)
+{
 	//Leaf Movement and Wiggle
 	( (v.pos.x += cos(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
 	(v.pos.y += sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
 	(v.pos.z += sin(cos(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
-                    
+}              
 	// pos lighting
 	half4 color = half4(0, 0, 0, 1);
 
@@ -155,8 +158,17 @@ fixed4 frag(v2f v) : SV_Target {
 
 	const half4 diffuse = tex2D(_MainTex, v.uv0.xy);
 		half4 col = (diffuse * lighting);
-
-		clip(col.a - _Cutoff);	
+	#if defined (ALPHA_ON)
+		{
+		fixed4 texcol = tex2D( _MainTex, v.uv0.xy);
+		clip( texcol.a - _Cutoff );
+		}
+	#else
+{
+	fixed4 texcol = tex2D( _MOAR, v.uv0.xy*8);
+	clip( texcol.a - _Cutoff );
+}
+	#endif
 		#if USING_FOG
         	UNITY_APPLY_FOG(v.fogCoord, col);
     	#endif

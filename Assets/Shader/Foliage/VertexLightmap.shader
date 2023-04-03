@@ -1,6 +1,7 @@
 ﻿Shader "Vita/Lightmapped Vertlit Wind Foliage" {
 	Properties {
 		_MainTex("Base (RGB)", 2D) = "white" { }
+		_MOAR("MOAR (RGBA)", 2D) = "white" { }
 		_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
 		_wind_dir ("Wind Direction", Vector) = (0.5,0.05,0.5,0)
         _wind_size ("Wind Wave Size", range(5,50)) = 15
@@ -8,6 +9,8 @@
         _leaves_wiggle_speed ("Leaves Wiggle Speed", float) = 0.01
 		_influence ("Influence", range(0,1)) = 1
 		_Time ("Time", Vector) =(0,0,0,0)
+		[Toggle(ALPHA_ON)] _AlphaOn("Seperate Alpha", Float) = 1
+		[Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 1
 		[Toggle(AMBIENT_ON)] _AmbientOn("Ambient Lighting", Float) = 0
 	}
 
@@ -106,6 +109,7 @@
 			{
 				v2f o;
 				half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
+				
 				//Leaf Movement and Wiggle
 				( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
 				(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
@@ -120,12 +124,22 @@
 			}
 
 			uniform sampler2D _MainTex;
+            uniform sampler2D _MOAR;
 			uniform fixed _Cutoff;
 
 			float4 frag( v2f i ) : SV_Target
 			{
-				fixed4 texcol = tex2D( _MainTex, i.uv );
-				clip( texcol.a - _Cutoff );
+				#if !defined (ALPHA_ON)
+				{
+					fixed4 texcol = tex2D( _MainTex, i.uv );
+					clip( texcol.a - _Cutoff );
+				}
+				#else
+				{
+					fixed4 texcol = tex2D( _MOAR, i.uv );
+					clip( texcol.a - _Cutoff );
+				}
+				#endif
 
 				SHADOW_CASTER_FRAGMENT(i);
 			}
