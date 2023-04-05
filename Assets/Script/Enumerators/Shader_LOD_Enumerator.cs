@@ -32,28 +32,35 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 		originalMaterial = thisRenderer.sharedMaterial;
 		albedoTex = originalMaterial.mainTexture;
 		
-		//assign materials and textures for later use
+		//assign materials if not assigned already, and textures for later use
 		if (isFoliage)//grab the textures we need from the old mat, disable leaf wiggle
 		{
-			replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
+			if (replacementMaterial == null)
+			{
+				replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
+			}
+
 			MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
 			replacementMaterial.SetTexture("_MOAR", MOARTex);
 			replacementMaterial.SetFloat("_LeavesOn", 0);
+			replacementMaterial.SetTextureScale("_MainTex", new Vector2(2,2));
+			// replacementMaterial.SetColor("_Color", Color.grey);
+
 		}
-		else
+		else 
 		{
-			replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
+			if (replacementMaterial == null)
+				replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
 		}
 		replacementMaterial.mainTexture = albedoTex;
-		replacementMaterial.SetColor("_Color", Color.grey);
-		replacementMaterial.SetTextureScale("_MainTex", new Vector2(2,2));
+		
 	}
 
 	// Update is called once per frame
 	//TODO: write this so its a subscriber fired event so we don't need this logic running on every object, cause that's fucking smart
 	private void Update()
 	{
-		// we only need to do *whatever* 2/4 times a frame, depending on refresh rate
+		// we only need to do *whatever* n times a frame, depending on refresh rate
 		if (tick != 6)
 			tick++;
 		else 
@@ -102,13 +109,13 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
 				//Resources.UnloadUnusedAssets(); //unload
 			}
-			if (distance < 0)
-			{
-				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-				thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
-				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-				//Resources.UnloadUnusedAssets(); //unload normal map
-			}
+			// if (distance < 0)
+			// {
+			// 	if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
+			// 	thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
+			// 	thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+			// 	//Resources.UnloadUnusedAssets(); //unload normal map
+			// }
 
 			// if (distance <= LOD_distance[1] && distance > LOD_distance[0]) //transition to first LOD- drop all secondary maps/shadowcasting
 			// {

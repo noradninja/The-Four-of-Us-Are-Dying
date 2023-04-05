@@ -31,17 +31,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Contrast: 1.15
+    - _Contrast: 1.125
     - _CosAngle: 0
     - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.1
-    - _Exposure: 0.1
+    - _Density: 0.167
+    - _Exposure: 0.096
     - _LightY: 0
-    - _NumSamples: 8
+    - _NumSamples: 20
     - _Parameter: 5
-    - _PerpendicularFalloff: 0.825
+    - _PerpendicularFalloff: 0.697
     - _Spread: 1
     - _StencilRef: 0
     - _ThresholdParams: 0.25

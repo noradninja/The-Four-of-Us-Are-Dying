@@ -8,12 +8,12 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Shadows Only Red Oak
   m_Shader: {fileID: 4800000, guid: afaf8c3efa8828742b0a141cef124c83, type: 3}
-  m_ShaderKeywords: GEOM_TYPE_LEAF SHADOWED_RIM _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
+  m_ShaderKeywords: GEOM_TYPE_LEAF SHADOWED_RIM WIGGLE_ON _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
     _NORMALMAP _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: 3000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -75,10 +75,10 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _influence: 0.095
-    - _leaves_wiggle_disp: 0.15
-    - _leaves_wiggle_speed: 0.025
-    - _wind_size: 8.8
+    - _influence: 0.04
+    - _leaves_wiggle_disp: 0.25
+    - _leaves_wiggle_speed: 0.11
+    - _wind_size: 50
     m_Colors:
     - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0.023529412, g: 0.023529412, b: 0.023529412, a: 1}

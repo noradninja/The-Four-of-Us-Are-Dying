@@ -33,7 +33,7 @@ public class Contrast_Manager : MonoBehaviour
 	public void Update()
     {
         contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat(Exposure)-0.55f);
-        contrastValue = ExtensionMethods.Math.Remap(contrastValue, 0f, 1.0f, 0f, maxShadowAmount/10);
+        contrastValue = ExtensionMethods.Math.Remap(contrastValue, 0f, 1.0f, 0f, maxShadowAmount/2);
         tintColor.a = contrastValue;
         contrastMaterial.SetColor(TintColor, tintColor);    
     }

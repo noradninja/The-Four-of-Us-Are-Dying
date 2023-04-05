@@ -68,7 +68,8 @@ half _wind_size;
 half _leaves_wiggle_disp;
 half _leaves_wiggle_speed;
 half _influence;
-bool _LeavesOn;
+half _LeavesOn;
+half _AlphaOn;
 
 
 // pos shader input data
@@ -158,17 +159,17 @@ fixed4 frag(v2f v) : SV_Target {
 
 	const half4 diffuse = tex2D(_MainTex, v.uv0.xy);
 		half4 col = (diffuse * lighting);
-	#if defined (ALPHA_ON)
+	if(!_AlphaOn)
 		{
 		fixed4 texcol = tex2D( _MainTex, v.uv0.xy);
 		clip( texcol.a - _Cutoff );
 		}
-	#else
+	else
 {
 	fixed4 texcol = tex2D( _MOAR, v.uv0.xy*8);
 	clip( texcol.a - _Cutoff );
 }
-	#endif
+
 		#if USING_FOG
         	UNITY_APPLY_FOG(v.fogCoord, col);
     	#endif

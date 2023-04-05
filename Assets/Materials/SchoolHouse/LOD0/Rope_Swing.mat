@@ -117,6 +117,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOAR:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 50651787fa7c33848bb22a4844f8823d, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -176,6 +180,7 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaMapType: 999
+    - _AlphaOn: 0
     - _AmbientOn: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -348,6 +353,7 @@ Material:
     - _Layer3ScrollV: 0
     - _Layer3Toggle: 0
     - _Layer3UV2: 0
+    - _LeavesOn: 1
     - _LightFold: 1
     - _LightMode: 1
     - _LightProbes: 0
@@ -425,9 +431,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.1
-    - _leaves_wiggle_disp: 0.1
-    - _leaves_wiggle_speed: 0.05
+    - _influence: 0.269
+    - _leaves_wiggle_disp: 0.0075
+    - _leaves_wiggle_speed: 0.2
     - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -460,6 +466,6 @@ Material:
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimOptions: {r: 0.1, g: 0.5, b: 1, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Time: {r: 0, g: 0, b: 0, a: 0}
+    - _Time: {r: 2, g: 0, b: 4, a: 8}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 0.5, g: 0.05, b: 0.5, a: 0}
+    - _wind_dir: {r: 2, g: 0, b: 2, a: 10}

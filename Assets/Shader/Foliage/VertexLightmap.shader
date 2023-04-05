@@ -104,17 +104,19 @@
 			half _leaves_wiggle_disp;
 			half _leaves_wiggle_speed;
 			half _influence;
+            half _LeavesOn;
 
 			v2f vert( appdata v )
 			{
 				v2f o;
 				half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
-				
-				//Leaf Movement and Wiggle
-				( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-				(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-				(v.vertex.z += sin(cos(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence)) ); //z
-								
+				if(_LeavesOn)
+					{
+						//Leaf Movement and Wiggle
+						( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
+						(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
+						(v.vertex.z += sin(cos(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence)) ); //z
+					}			
 
 				UNITY_SETUP_INSTANCE_ID(v);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
@@ -126,20 +128,20 @@
 			uniform sampler2D _MainTex;
             uniform sampler2D _MOAR;
 			uniform fixed _Cutoff;
+            float _AlphaOn;
 
 			float4 frag( v2f i ) : SV_Target
 			{
-				#if !defined (ALPHA_ON)
+				if (!_AlphaOn)
 				{
 					fixed4 texcol = tex2D( _MainTex, i.uv );
 					clip( texcol.a - _Cutoff );
 				}
-				#else
+				else
 				{
 					fixed4 texcol = tex2D( _MOAR, i.uv );
 					clip( texcol.a - _Cutoff );
 				}
-				#endif
 
 				SHADOW_CASTER_FRAGMENT(i);
 			}

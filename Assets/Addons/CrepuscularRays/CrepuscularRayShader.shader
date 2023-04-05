@@ -108,7 +108,7 @@ Shader "Lighting/Crepuscular Rays" {
 				// Store initial sample.
 				half2 uv = i.uv;
 				half3 color = tex2D(_MainTex, uv);
-				//half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
+				//half color = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 				// Set up illumination decay factor.
 				half illuminationDecay = 1.0h;
 				// Evaluate summation from Equation 3 NUM_SAMPLES iterations.
@@ -118,9 +118,9 @@ Shader "Lighting/Crepuscular Rays" {
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
 					half3 sample = tex2D(_MainTex, uv);
-					//half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
+					half depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 					// Apply sample attenuation scale/decay factors.
-					sample *= illuminationDecay * (_Weight/ _NumSamples*4);
+					sample *= illuminationDecay * (_Weight/ _NumSamples*4)*depth;
 					sample *= 2;
 					
 					// Accumulate combined color.
