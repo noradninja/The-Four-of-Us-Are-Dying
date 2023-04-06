@@ -83,14 +83,14 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 		distance = Vector3.Distance(thisPos, playerPos);//how far are we from the player
 		if (enableShaderLOD) //check if we enabled this; if not skip to culling
 		{
-			if (distance < LOD_distance[0]) //no LOD- enable all maps/shadowcasting
+			if (distance <= LOD_distance[0]) //no LOD- enable all maps/shadowcasting
 			{
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP");
 				thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
 			}
 			
-			if (distance >= LOD_distance[0] && distance <= LOD_distance[1]) //first LOD 
+			if (distance > LOD_distance[0] && distance <= LOD_distance[1]) //first LOD 
 			{
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
@@ -103,9 +103,9 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 				if (thisRenderer.sharedMaterial != replacementMaterial)
 				{
 					thisRenderer.sharedMaterial = replacementMaterial;
-					if (thisRenderer.sharedMaterial == replacementMaterial)
-						print("Material swapped on " + thisRenderer.name);
+					print("Material swapped on " + thisRenderer.name);
 				}
+				
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
 				//Resources.UnloadUnusedAssets(); //unload
 			}
