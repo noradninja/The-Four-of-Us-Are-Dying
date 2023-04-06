@@ -37,6 +37,7 @@ public class Crepuscular : MonoBehaviour
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{
 		var blurTex = RenderTexture.GetTemporary(128, 128, 0, source.format);
+		//blurTex.filterMode = FilterMode.Point;
 		lightVector =GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward);
 		material.SetVector(LightPos, lightVector);
 		Graphics.Blit(source, blurTex, material, 0);
@@ -50,14 +51,14 @@ public class Crepuscular : MonoBehaviour
 
                 // vertical blur
                 RenderTexture rt2 = RenderTexture.GetTemporary(128, 128, 0, source.format);
-                rt2.filterMode = FilterMode.Bilinear;
+                rt2.filterMode = FilterMode.Point;
                 Graphics.Blit (blurTex, rt2, material, 1);
                 RenderTexture.ReleaseTemporary (blurTex);
                 blurTex = rt2;
 
                 // horizontal blur
                 rt2 = RenderTexture.GetTemporary(128, 128, 0, source.format);
-                rt2.filterMode = FilterMode.Bilinear;
+                rt2.filterMode = FilterMode.Point;
                 Graphics.Blit (blurTex, rt2, material, 2);
                 RenderTexture.ReleaseTemporary (blurTex);
                 blurTex = rt2;
