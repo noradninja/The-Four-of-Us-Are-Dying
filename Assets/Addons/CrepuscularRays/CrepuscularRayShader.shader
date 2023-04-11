@@ -117,10 +117,10 @@ Shader "Lighting/Crepuscular Rays" {
 					// Step sample location along ray.
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
-					half3 sample = tex2D(_MainTex, uv);
-					const half3 depth = Linear01Depth(tex2D(_CameraDepthTexture, uv));
+					float sample = tex2D(_MainTex, uv);
+					const float depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 					// Apply sample attenuation scale/decay factors.
-					sample *= illuminationDecay * (_Weight/ _NumSamples*4)*depth;
+					sample *= (depth * 1.25f)*illuminationDecay * (_Weight/ _NumSamples*4);
 					sample *= 2;
 					
 					// Accumulate combined color.

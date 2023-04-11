@@ -582,9 +582,9 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.025
+    - _influence: 0.016431484
     - _leaves_wiggle_disp: 0.08
-    - _leaves_wiggle_speed: 0.34
+    - _leaves_wiggle_speed: 0.25
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0
@@ -635,7 +635,7 @@ Material:
     - _SpecColor: {r: 0.3207547, g: 0.3207547, b: 0.3207547, a: 1}
     - _SpecularTone: {r: 0.50978994, g: 0.5329642, b: 0.6037736, a: 0}
     - _SubsurfaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Time: {r: 1.38, g: 2.78, b: 2.12, a: 0}
+    - _Time: {r: 1.38, g: 2.78, b: 2.12, a: 3}
     - _Tint: {r: 1, g: 1, b: 1, a: 1}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}
     - _TranslucencyColor: {r: 0.50978994, g: 0.5329642, b: 0.6037736, a: 0}

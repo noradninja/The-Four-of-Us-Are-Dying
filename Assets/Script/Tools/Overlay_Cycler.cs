@@ -116,7 +116,7 @@ public class Overlay_Cycler : MonoBehaviour
 				mainCamera.GetComponent<FastSSAO>().enabled = false; //disable SSAO
 				mainCamera.GetComponent<Crepuscular>().enabled = false; //disable godrays
 				mainCamera.GetComponent<Bokeh>().enabled = false; //disable bokeh
-				lightningManager.GetComponent<Lightning_Manager>().enabled = false; //disable lightning
+				lightningManager.GetComponent<Weather_Manager>().enabled = false; //disable lightning
 				mainCamera.GetComponent<Contrast_Manager>().enabled = false; //disable lightning contrast
 				mainCamera.GetComponent<FXAA>().enabled = false; //disable AA
 				mainCamera.GetComponent<NoiseAndGrain>().enabled = false; //disable grain
@@ -134,13 +134,13 @@ public class Overlay_Cycler : MonoBehaviour
 				break;
 			case cycleState.lightningFlash:
 				// mainCamera.GetComponent<Bokeh>().enabled = false; //disable bokeh
-				lightningManager.GetComponent<Lightning_Manager>().enabled = true; //disable lightning
+				lightningManager.GetComponent<Weather_Manager>().enabled = true; //disable lightning
 				break;
 			case cycleState.lightningContrast:
 				mainCamera.GetComponent<Contrast_Manager>().enabled = true; //disable lightning contrast
 				break;
 			case cycleState.sai2x:
-				// lightningManager.GetComponent<Lightning_Manager>().enabled = false; //disable lightning
+				// lightningManager.GetComponent<Weather_Manager>().enabled = false; //disable lightning
 				// mainCamera.GetComponent<Contrast_Manager>().enabled = false; //disable lightning contrast
 				mainCamera.GetComponent<FXAA>().enabled = true; //disable AA
 				break;
@@ -152,7 +152,7 @@ public class Overlay_Cycler : MonoBehaviour
 				mainCamera.GetComponent<FastSSAO>().enabled = true; //disable SSAO
 				mainCamera.GetComponent<Crepuscular>().enabled = true; //disable godrays
 				mainCamera.GetComponent<Bokeh>().enabled = true; //disable bokeh
-				lightningManager.GetComponent<Lightning_Manager>().enabled = true; //disable lightning
+				lightningManager.GetComponent<Weather_Manager>().enabled = true; //disable lightning
 				mainCamera.GetComponent<Contrast_Manager>().enabled = true; //disable lightning contrast
 				mainCamera.GetComponent<FXAA>().enabled = true; //disable AA
 				mainCamera.GetComponent<NoiseAndGrain>().enabled = true; //disable grain

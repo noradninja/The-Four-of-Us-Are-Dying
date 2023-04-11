@@ -164,7 +164,6 @@
     <Compile Include="Assets\Script\Managers\InputManager.cs" />
     <Compile Include="Assets\Script\Managers\Inventory_Screen_Manager.cs" />
     <Compile Include="Assets\Script\Managers\InventoryManager.cs" />
-    <Compile Include="Assets\Script\Managers\Lightning_Manager.cs" />
     <Compile Include="Assets\Script\Managers\LoadManager_Inputs.cs" />
     <Compile Include="Assets\Script\Managers\LoadScreen.cs" />
     <Compile Include="Assets\Script\Managers\Menu_Manager.cs" />
@@ -178,6 +177,7 @@
     <Compile Include="Assets\Script\Managers\Title_Animator.cs" />
     <Compile Include="Assets\Script\Managers\Title_Menu_Manager.cs" />
     <Compile Include="Assets\Script\Managers\VitaInputManager.cs" />
+    <Compile Include="Assets\Script\Managers\Weather_Manager.cs" />
     <Compile Include="Assets\Script\PostProcess\Gamma.cs" />
     <Compile Include="Assets\Script\PostProcess\SAI2x.cs" />
     <Compile Include="Assets\Script\StartMenuManagerInputs.cs" />
@@ -466,6 +466,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TrueClouds\Resources\Shaders\Light\CloudsTintTransparentTwosided.shader" />
     <None Include="Assets\Addons\CrepuscularRays\Readme.txt" />
+    <None Include="Assets\Shader\PostProcess\EAAA.shader" />
     <None Include="Assets\Shader\PBR\PBRLib.cginc" />
     <None Include="Assets\Addons\Shaders\sprite.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast_Clip.shader" />
