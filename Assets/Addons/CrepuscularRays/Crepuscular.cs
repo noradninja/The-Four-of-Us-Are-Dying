@@ -12,6 +12,7 @@ public class Crepuscular : MonoBehaviour
 	public RenderTexture stencilRT;
 	static readonly int blurTexString = Shader.PropertyToID("_BlurTex");
 	static readonly int cosAngle = Shader.PropertyToID("_CosAngle");
+	static readonly int frameValue = Shader.PropertyToID("_FrameValue");
 	[Range(0, 20)]
 	public int blurSize = 3;
 	[Range(1, 16)]
@@ -22,17 +23,33 @@ public class Crepuscular : MonoBehaviour
 	private static readonly int Parameter = Shader.PropertyToID("_Parameter");
 	public float cosineAngle;
 
+	private int tick;
 	// Start is called before the first frame update
 	void Start()
     {
       
     }
 
-	void Update() 
+	void Update()
 	{
 		var getAngle = material.GetFloat(cosAngle);
 		cosineAngle = getAngle;
+		if (tick != 3)
+		{
+			material.SetFloat(frameValue, 1f);
+			tick++;
+		//print("Wait frame " + tick);
+		}
+		else
+
+		{
+			//print("Depth tick");
+			material.SetFloat(frameValue, 0f);
+			tick = 0;
+			
+		}
 	}
+	
 	//[ImageEffectOpaque]
 	private void OnRenderImage(RenderTexture source, RenderTexture destination)
 	{

@@ -11,12 +11,14 @@ Shader "Lighting/Crepuscular Rays" {
 		_Weight("Weight", Range(0, 2)) = 1.0
 		_Decay("Decay", Range(0, 1)) = 1.0
 		_Exposure("Exposure", Range(0, 1)) = 1.0
-		//_Parameter("Kernel Offset", Range(0, 5)) = 1.0
+		_Parameter("Kernel Offset", Range(0, 4)) = 1.0
 		_Contrast("Contrast", Range(1, 5)) = 1.0
 		_PerpendicularFalloff("Perpendicular Falloff Rate", Range(0.01, 1)) = 1.0
 		_CosAngle("Angle", Float) = 1
 		[IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
 		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
+		_FrameValue("Frame remainder", Float) = 0
+		[IntRange] _Frequency ("Frequency", Range(1,15)) = 1
 	}
 		CGINCLUDE
 		#include "UnityCG.cginc"
@@ -39,6 +41,8 @@ Shader "Lighting/Crepuscular Rays" {
 		half _CosAngle;
 		half4 _TintColor;
 		half _PerpendicularFalloff;
+		float _FrameValue = 0;
+		int _Frequency;
 		
 
 		
@@ -52,6 +56,7 @@ Shader "Lighting/Crepuscular Rays" {
 		{
 			float4 pos : SV_POSITION;
 			float2 uv  : TEXCOORD0;
+			float value : TEXOORD1;
 		};
 
 		struct v2f_withBlurCoordsSGX 
@@ -63,7 +68,11 @@ Shader "Lighting/Crepuscular Rays" {
 
 		static const half curve[7] = { 0.0205, 0.0855, 0.232, 0.324, 0.232, 0.0855, 0.0205 };  // gauss'ish blur weights
 		
-
+		float2 fmodulus(float2 a, float2 b)
+					{
+					  float2 c = frac(abs(a/b))*abs(b);
+					  return (a < 0) ? -c : c;   /* if ( a < 0 ) c = 0-c */
+					}
 
 ////////////// accumulator for rays  /////////////////
 		v2f vert( appdata v )
@@ -71,11 +80,12 @@ Shader "Lighting/Crepuscular Rays" {
 				v2f o;
 				o.pos = UnityObjectToClipPos (v.pos);
 				o.uv = v.uv;
+				o.value = _FrameValue;
 				return o;
 			}
 			
 			
-		half4 frag(v2f i) : COLOR
+		half4 frag(v2f f) : COLOR
 			{
 				// Calculate vector from pixel to light source in screen space.
 				half4 light = half4(_LightPos.xyz,1);
@@ -89,47 +99,58 @@ Shader "Lighting/Crepuscular Rays" {
 				// get our y vector direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
 				if (light.y < 0.5h){
-					deltaTexCoord = (i.uv + light.xy);
+					deltaTexCoord = (f.uv + light.xy);
 				
 				}
 				
 				if (light.y > 0.5h){
-					deltaTexCoord = (i.uv - light.xy);
+					deltaTexCoord = (f.uv - light.xy);
 				}
 
 // 				if (light.y > 10.0h || light.y < -10.0h)
 // 				{
-// 					deltaTexCoord = half2(i.uv);
+// 					deltaTexCoord = half2(f.uv);
 // 				}
 			
 				
 				// Divide by number of samples and scale by control factor.
 				deltaTexCoord *= 1.0h / _NumSamples * _Density;
 				// Store initial sample.
-				half2 uv = i.uv;
+				half2 uv = f.uv;
 				half3 color = tex2D(_MainTex, uv);
 				//half color = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 				// Set up illumination decay factor.
 				half illuminationDecay = 1.0h;
 				// Evaluate summation from Equation 3 NUM_SAMPLES iterations.
+				float depth;
+				
 				for (int i = 0; i < _NumSamples; i++)
 				{
 					// Step sample location along ray.
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
 					float sample = tex2D(_MainTex, uv);
-					const float depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
-					// Apply sample attenuation scale/decay factors.
-					sample *= (depth * 1.25f)*illuminationDecay * (_Weight/ _NumSamples*4);
-					sample *= 2;
+					float value = fmodulus(i,_Frequency);
+					
+					if (value != 0)
+					{
+						depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) * 1.25f;
+					
+					}
+					else
+					{
+						depth = 1.25f;
+				
+					}
+						// Apply sample attenuation scale/decay factors.
+					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
+					sample *= 2.5h;
 					
 					// Accumulate combined color.
 					color += sample;
 					// Update exponential decay factor.
 					illuminationDecay *= _Decay;
 				}
-				//drop color
-				//color = (color.r + color.g + color.b)/3;
 				// Output final color with a further scale control factor.
 				color *= normalizedLightY;
 				return (max(half4(color * _Exposure, 1), 0.15h));
