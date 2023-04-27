@@ -90,10 +90,16 @@ public class LineGenerator : MonoBehaviour
     {
         if (_canStart)
         {
+            if (tick != 15)
+                tick++;
+            else 
+            {
+                tick = 0;
+            }
             if (
-                    (Shader_LOD_Enumerator.tick == 4) || 
-                    (Shader_LOD_Enumerator.tick == 8) ||
-                    (Shader_LOD_Enumerator.tick == 12)
+                    (tick == 4) || 
+                    (tick == 8) ||
+                    (tick == 12)
                 )
             {
                 //Calculate FPS

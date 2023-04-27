@@ -5,7 +5,7 @@ OcclusionCullingSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_OcclusionBakeSettings:
-    smallestOccluder: 0.375
+    smallestOccluder: 2
     smallestHole: 0.1
     backfaceThreshold: 5
   m_SceneGUID: 00000000000000000000000000000000
@@ -7653,20 +7653,20 @@ MonoBehaviour:
       undoOperations: []
       redoOperations: []
     objectMeshPairs:
-      _Buckets: ffffffffffffffffffffffff
-      _HashCodes: 000000000000000000000000
-      _Next: 000000000000000000000000
-      _Count: 0
-      _Version: 0
+      _Buckets: ffffffff00000000ffffffff
+      _HashCodes: b0bf00000000000000000000
+      _Next: ffffffff0000000000000000
+      _Count: 1
+      _Version: 1
       _FreeList: -1
       _FreeCount: 0
       _Keys:
-      - {fileID: 0}
+      - {fileID: 165607572}
       - {fileID: 0}
       - {fileID: 0}
       _Values:
-      - attachedToMeshFilter: 0
-        mesh: {fileID: 0}
+      - attachedToMeshFilter: 1
+        mesh: {fileID: 4300010, guid: fa65eb37d795fd7448b1c836a3a090ee, type: 3}
       - attachedToMeshFilter: 0
         mesh: {fileID: 0}
       - attachedToMeshFilter: 0
@@ -7891,15 +7891,15 @@ MonoBehaviour:
     oldSphereScale: {x: 0, y: 0, z: 0}
     reductionStrength: 0
     reductionPending: 0
-    prevFeasibleTarget: {fileID: 0}
+    prevFeasibleTarget: {fileID: 165607572}
     runOnThreads: 0
-    triangleCount: 0
+    triangleCount: 100
     lastDrawer: {fileID: 0}
     foldoutAutoLOD: 0
     foldoutBatchFew: 0
     foldoutAutoLODMultiple: 0
-    objPositionPrevFrame: {x: 0, y: 0, z: 0}
-    objScalePrevFrame: {x: 0, y: 0, z: 0}
+    objPositionPrevFrame: {x: 1.663961, y: -23.443829, z: -1.5849495}
+    objScalePrevFrame: {x: 2, y: 2, z: 2}
     considerChildrenBatchFew: 1
     autoLODSavePath: 
     foldoutAdditionalOpts: 0

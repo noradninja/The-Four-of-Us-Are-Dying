@@ -8,136 +8,99 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 {
 
 	public GameObject player;
-	public float[] LOD_distance;
+	public float[] LOD_Distance;
 	public bool enableShaderLOD = true;
 	public bool isFoliage;
 	public bool enableCulling = true;
 	public Material replacementMaterial;
-	public Texture albedoTex;
-	public Texture MOARTex;
-	private Material originalMaterial;
 	public float distance;
+	[SerializeField]
+	private int tick;
+	[SerializeField]
+	private Texture albedoTex;
+	[SerializeField]
+	private Texture MOARTex;
+	[SerializeField]
+	private Material originalMaterial;
 	private Vector3 viewPos;
 	private Vector3 thisPos;
 	private Vector3 playerPos;
-	public static int tick = 0;
 	private Renderer thisRenderer;
-	private Camera mainCam;
+	
+	public enum LODState
+	{
+		Full,
+		Reduced,
+		VertexOnly
+	}
 
+	public LODState shaderLOD;
 	private void Start()
 	{
+		tick = 0;
 		//get needed components
 		thisRenderer = this.GetComponent<Renderer>();
-		mainCam = Camera.main;
 		originalMaterial = thisRenderer.sharedMaterial;
 		albedoTex = originalMaterial.mainTexture;
+		MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
 		
 		//assign materials if not assigned already, and textures for later use
 		if (isFoliage)//grab the textures we need from the old mat, disable leaf wiggle
 		{
-			if (replacementMaterial == null)
-			{
-				replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
-			}
-
-			MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
-			replacementMaterial.SetTexture("_MOAR", MOARTex);
+			if (replacementMaterial != null) return;
+			
+			replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
 			replacementMaterial.SetFloat("_LeavesOn", 0);
 			replacementMaterial.SetTextureScale("_MainTex", new Vector2(2,2));
-			// replacementMaterial.SetColor("_Color", Color.grey);
-
+			replacementMaterial.SetTexture("_MOAR", MOARTex);
 		}
-		else 
+		else
 		{
-			if (replacementMaterial == null)
-				replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
+			if (replacementMaterial != null) return;
+			replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
+			replacementMaterial.mainTexture = albedoTex;
 		}
-		replacementMaterial.mainTexture = albedoTex;
-		
 	}
-
-	// Update is called once per frame
-	//TODO: write this so its a subscriber fired event so we don't need this logic running on every object, cause that's fucking smart
 	private void Update()
 	{
-		// we only need to do *whatever* n times a frame, depending on refresh rate
-		if (tick != 6)
+		// we only need to do *whatever* FPS/tick times a frame, depending on refresh rate
+		if (tick != 5)
 			tick++;
 		else 
 		{
-			TickUpdate();
+			thisPos = this.transform.position;
+			playerPos = player.transform.position;
+			distance = Vector3.Distance(thisPos, playerPos);//how far are we from the player
 			tick = 0;
+			TickUpdate();
 		}
 	}
-
 	private void TickUpdate()
 	{
-		thisPos = this.transform.position;
-		playerPos = player.transform.position;
-
-		//viewPos = mainCam.WorldToViewportPoint(this.transform.position);//where are we located in relation to the camera frustrum
-		//playerPos = new Vector3(viewPos.x, 0f, viewPos.z);
-		
-		//rewrite below with pythagoreas
-		
-		distance = Vector3.Distance(thisPos, playerPos);//how far are we from the player
-		if (enableShaderLOD) //check if we enabled this; if not skip to culling
+		if (!enableShaderLOD) return; //check if we enabled this; if not, dump
+		if (distance <= LOD_Distance[1]) //set LODState here based on distance
 		{
-			if (distance <= LOD_distance[0]) //no LOD- enable all maps/shadowcasting
-			{
+			shaderLOD = distance <= LOD_Distance[0] ? LODState.Full : LODState.Reduced; //LOD0 if < [0] else LOD1
+		}
+		else shaderLOD = LODState.VertexOnly; //LOD2
+
+		switch (shaderLOD)
+		{
+			case LODState.Full:
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-				thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP");
+				thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
 				thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
-			}
-			
-			if (distance > LOD_distance[0] && distance <= LOD_distance[1]) //first LOD 
-			{
+				break;
+			case LODState.Reduced:
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-				//Resources.UnloadUnusedAssets(); //unload normal map
-			}
-
-			if (distance > LOD_distance[1]) //second LOD- fog shadow only
-			{
-				if (thisRenderer.sharedMaterial != replacementMaterial)
-				{
-					thisRenderer.sharedMaterial = replacementMaterial;
-					print("Material swapped on " + thisRenderer.name);
-				}
-				
+				break;
+			case LODState.VertexOnly:
+				thisRenderer.sharedMaterial = replacementMaterial;
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-				//Resources.UnloadUnusedAssets(); //unload
-			}
-			// if (distance < 0)
-			// {
-			// 	if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-			// 	thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
-			// 	thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-			// 	//Resources.UnloadUnusedAssets(); //unload normal map
-			// }
-
-			// if (distance <= LOD_distance[1] && distance > LOD_distance[0]) //transition to first LOD- drop all secondary maps/shadowcasting
-			// {
-			// 	if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-			// 	thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
-			// 	thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
-			// 	//disable MOAR map keywords
-			// 	thisRenderer.sharedMaterial.DisableKeyword("_METALLICGLOSSMAP"); 
-			// 	thisRenderer.sharedMaterial.DisableKeyword("_SPECGLOSSMAP"); 
-			// 	Resources.UnloadUnusedAssets(); //unload
-			// }
+				break;
 		}
-		//we are implementing fonrt/back frustrum culling ourselves here,
-		//because Unity's occlusion culling method is RAM hungry
-		//if the object is past the far clip plane or behind us
-		// disable it's renderer so we arent even considering sending it to the GPU
-		// if (!enableCulling) return;
-		// if (distance >= mainCam.farClipPlane || viewPos.z < -0.25f)
-		// {
-		// 	thisRenderer.enabled = false;
-		// }
-		// else thisRenderer.enabled = true;
+		
 	}
-	
 }

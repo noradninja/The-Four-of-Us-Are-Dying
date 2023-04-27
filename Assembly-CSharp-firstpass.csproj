@@ -722,9 +722,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="BakeryEditorAssembly.csproj">
+      <Project>{131EFAEC-3BEC-2193-F4B6-459B5469596A}</Project>
+      <Name>BakeryEditorAssembly</Name>
+    </ProjectReference>
     <ProjectReference Include="Whinarn.UnityMeshSimplifier.Runtime.csproj">
       <Project>{125B9EB7-2796-10F2-223B-39B2BFB911FA}</Project>
       <Name>Whinarn.UnityMeshSimplifier.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="BakeryRuntimeAssembly.csproj">
+      <Project>{94D1E383-1E8A-C1AA-BE9C-0EEB416B9D74}</Project>
+      <Name>BakeryRuntimeAssembly</Name>
     </ProjectReference>
     <ProjectReference Include="MeshBakerCore.csproj">
       <Project>{4C5698EE-81EB-E5C6-B575-91BBC677C043}</Project>
@@ -737,14 +745,6 @@
     <ProjectReference Include="MeshBakerEditor.csproj">
       <Project>{492C1E7D-CB20-759D-89A1-3F76DEF70D38}</Project>
       <Name>MeshBakerEditor</Name>
-    </ProjectReference>
-    <ProjectReference Include="BakeryEditorAssembly.csproj">
-      <Project>{131EFAEC-3BEC-2193-F4B6-459B5469596A}</Project>
-      <Name>BakeryEditorAssembly</Name>
-    </ProjectReference>
-    <ProjectReference Include="BakeryRuntimeAssembly.csproj">
-      <Project>{94D1E383-1E8A-C1AA-BE9C-0EEB416B9D74}</Project>
-      <Name>BakeryRuntimeAssembly</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
