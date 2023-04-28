@@ -14,7 +14,7 @@ public class Crepuscular : MonoBehaviour
 	static readonly int cosAngle = Shader.PropertyToID("_CosAngle");
 	static readonly int frameValue = Shader.PropertyToID("_FrameValue");
 	[Range(0, 20)]
-	public int blurSize = 3;
+	public float blurSize = 3;
 	[Range(1, 16)]
 	public int resolutionDivisor = 1;
 
@@ -68,14 +68,14 @@ public class Crepuscular : MonoBehaviour
 
                 // vertical blur
                 RenderTexture rt2 = RenderTexture.GetTemporary(128, 128, 0, source.format);
-                rt2.filterMode = FilterMode.Point;
+                rt2.filterMode = FilterMode.Bilinear;
                 Graphics.Blit (blurTex, rt2, material, 1);
                 RenderTexture.ReleaseTemporary (blurTex);
                 blurTex = rt2;
 
                 // horizontal blur
                 rt2 = RenderTexture.GetTemporary(128, 128, 0, source.format);
-                rt2.filterMode = FilterMode.Point;
+                rt2.filterMode = FilterMode.Bilinear;
                 Graphics.Blit (blurTex, rt2, material, 2);
                 RenderTexture.ReleaseTemporary (blurTex);
                 blurTex = rt2;

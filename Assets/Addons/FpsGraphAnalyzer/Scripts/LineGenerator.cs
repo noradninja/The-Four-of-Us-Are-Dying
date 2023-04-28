@@ -21,7 +21,7 @@ public class LineGenerator : MonoBehaviour
     private const float TOP_MAX_MARGIN_SCALE = 0.0f;
     private const float FPS_NORMAL = 30f;
     private const int MIN_SIZE = 16;
-
+    private int tick = 0;
     private int _amount = 100;
     private float _deltaTime = 0.0f;
     private string _fpsString = "";

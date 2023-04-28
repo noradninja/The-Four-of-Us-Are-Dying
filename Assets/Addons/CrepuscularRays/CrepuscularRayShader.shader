@@ -19,6 +19,7 @@ Shader "Lighting/Crepuscular Rays" {
 		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
 		_FrameValue("Frame remainder", Float) = 0
 		[IntRange] _Frequency ("Frequency", Range(1,15)) = 1
+		_fogInfluence("Fog Influence", Float) = 1
 	}
 		CGINCLUDE
 		#include "UnityCG.cginc"
@@ -43,6 +44,7 @@ Shader "Lighting/Crepuscular Rays" {
 		half _PerpendicularFalloff;
 		float _FrameValue = 0;
 		int _Frequency;
+		float _fogInfluence;
 		
 
 		
@@ -74,6 +76,15 @@ Shader "Lighting/Crepuscular Rays" {
 					  return (a < 0) ? -c : c;   /* if ( a < 0 ) c = 0-c */
 					}
 
+		float rand(float2 co)
+		{
+			float a = 12.9898;
+			float b = 78.233;
+			float c = 43758.5453;
+			float dt = dot(co.xy, float2(a, b));
+			float sn = fmodulus(dt, 3.14);
+			return frac(sin(sn) * c);
+		}
 ////////////// accumulator for rays  /////////////////
 		v2f vert( appdata v )
 			{
@@ -99,12 +110,12 @@ Shader "Lighting/Crepuscular Rays" {
 				// get our y vector direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
 				if (light.y < 0.5h){
-					deltaTexCoord = (f.uv + light.xy);
+					deltaTexCoord = half2(f.uv.x + light.x, f.uv.y - light.y);
 				
 				}
 				
 				if (light.y > 0.5h){
-					deltaTexCoord = (f.uv - light.xy);
+					deltaTexCoord = half2(f.uv.x - light.x, f.uv.y - light.y);
 				}
 
 // 				if (light.y > 10.0h || light.y < -10.0h)
@@ -123,26 +134,21 @@ Shader "Lighting/Crepuscular Rays" {
 				half illuminationDecay = 1.0h;
 				// Evaluate summation from Equation 3 NUM_SAMPLES iterations.
 				float depth;
-				
+				half rate = _Frequency;
 				for (int i = 0; i < _NumSamples; i++)
 				{
 					// Step sample location along ray.
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
 					float sample = tex2D(_MainTex, uv);
-					float value = fmodulus(i,_Frequency);
-					
-					if (value != 0)
+					float random = 0.0f;
+					float value = frac(i/rate);
+					if (value == 0)
 					{
 						depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) * 1.25f;
-					
 					}
-					else
-					{
-						depth = 1.25f;
-				
-					}
-						// Apply sample attenuation scale/decay factors.
+					else depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) + (rand(f.uv) * _fogInfluence);
+					// Apply sample attenuation scale/decay factors.
 					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
 					sample *= 2.5h;
 					
@@ -218,8 +224,8 @@ Shader "Lighting/Crepuscular Rays" {
 				const fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 sample = tex2D(_BlurTex, i.uv);
 				const fixed contrast = _Contrast;
-				sample = sample.r + sample.g + sample.b;
-				sample /= 2.0h;
+				//sample = sample.r + sample.g + sample.b;
+				//sample *= 2.0h;
 				const fixed4 finalSample = (((col) + (sample * 0.4h)) - 0.5h) * contrast + 0.445h; //final sampled color
 				const fixed4 finalColor = (col + (col * 0.04h) - 0.01h); //final modulated base color
 				//add our ray greyscale samples at - 25% brightness to the main image

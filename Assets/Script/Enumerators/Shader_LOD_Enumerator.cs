@@ -11,7 +11,6 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	public float[] LOD_Distance;
 	public bool enableShaderLOD = true;
 	public bool isFoliage;
-	public bool enableCulling = true;
 	public Material replacementMaterial;
 	public float distance;
 	[SerializeField]
@@ -48,7 +47,6 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 		if (isFoliage)//grab the textures we need from the old mat, disable leaf wiggle
 		{
 			if (replacementMaterial != null) return;
-			
 			replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
 			replacementMaterial.SetFloat("_LeavesOn", 0);
 			replacementMaterial.SetTextureScale("_MainTex", new Vector2(2,2));
@@ -60,7 +58,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 			replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
 			replacementMaterial.mainTexture = albedoTex;
 		}
-	}
+	} 
 	private void Update()
 	{
 		// we only need to do *whatever* FPS/tick times a frame, depending on refresh rate

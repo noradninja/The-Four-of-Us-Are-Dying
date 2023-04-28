@@ -156,6 +156,7 @@
     <Compile Include="Assets\Script\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Script\Controllers\SFXController.cs" />
     <Compile Include="Assets\Script\Enumerators\Item_Enumerator.cs" />
+    <Compile Include="Assets\Script\Enumerators\Render_Pipeline_Overlay.cs" />
     <Compile Include="Assets\Script\Enumerators\Shader_LOD_Enumerator.cs" />
     <Compile Include="Assets\Script\ExtensionMethods\Math.cs" />
     <Compile Include="Assets\Script\Managers\ClearPlayerPrefs.cs" />
@@ -236,6 +237,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
+    <Compile Include="Assets\Texture\Render Texture\Depth_Render.cs" />
     <Compile Include="Assets\TrueClouds\ExampleScenes\Scenes\Sky\CloudsGenerator.cs" />
     <Compile Include="Assets\TrueClouds\ExampleScenes\Scripts\FPS60.cs" />
     <Compile Include="Assets\TrueClouds\ExampleScenes\Scripts\FPSDisplay.cs" />
@@ -544,6 +546,7 @@
     <None Include="Assets\Shader\Tests\DepthClipTest.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle AddMultiply.shader" />
     <None Include="Assets\Addons\Shaders\beam.shader" />
+    <None Include="Assets\Texture\Render Texture\Depth_Shader.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Manual.txt" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardMeta.cginc" />
