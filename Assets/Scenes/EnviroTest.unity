@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.3
   m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
   m_Sun: {fileID: 489463878}
-  m_IndirectSpecularColor: {r: 0.09069783, g: 0.09862792, b: 0.14911947, a: 0.3}
+  m_IndirectSpecularColor: {r: 0.057127357, g: 0.062511496, b: 0.09783118, a: 0.3}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7213,9 +7213,9 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   mainLight: {fileID: 489463876}
   stencilRT: {fileID: 0}
-  blurSize: 0.35
+  blurSize: 1.125
   resolutionDivisor: 1
-  lightVector: {x: -0.13830876, y: 1.9303757, z: 0.6552575, w: 0}
+  lightVector: {x: -0.40543038, y: 2.1582067, z: 0.56660616, w: 0}
   cosineAngle: 0
 --- !u!114 &121908235
 MonoBehaviour:
@@ -59626,7 +59626,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _SkyExposure: 0.78306234
+    - _SkyExposure: 0.55462766
     m_Colors:
     - _FogColor: {r: 0, g: 0, b: 0, a: 1}
     - _SkyTint: {r: 0.21176472, g: 0.227451, b: 0.29411766, a: 1}

@@ -76,15 +76,26 @@ Shader "Lighting/Crepuscular Rays" {
 					  return (a < 0) ? -c : c;   /* if ( a < 0 ) c = 0-c */
 					}
 
-		float rand(float2 co)
-		{
-			float a = 12.9898;
-			float b = 78.233;
-			float c = 43758.5453;
-			float dt = dot(co.xy, float2(a, b));
-			float sn = fmodulus(dt, 3.14);
-			return frac(sin(sn) * c);
-		}
+	half rand(half2 co)
+			{
+			    const half a = 2.9898f;
+			    const half b = 78.233f;
+			    const half c = 28.5453f;
+			    const half dt = dot(co.xy ,half2(a,b));
+			    const half sn = cos(abs(dt/3.14f));
+			    return cos(frac(sin(sn) * c)* ((_Time.w * 3.f) * _fogInfluence));
+			}
+		float tx,ty;            // x,y waves phase
+		float2 SineWave( float2 p )
+			    {
+			    // convert Vertex position <-1,+1> to texture coordinate <0,1> and some shrinking so the effect dont overlap screen
+			    p.x=( 0.55*p.x)+0.5;
+			    p.y=(-0.55*p.y)+0.5;
+			    // wave distortion
+			    float x = sin( 25.0*p.y + 30.0*p.x + 6.28*tx) * 0.05;
+			    float y = sin( 25.0*p.y + 30.0*p.x + 6.28*ty) * 0.05;
+			    return float2(p.x+x, p.y+y);
+			    }
 ////////////// accumulator for rays  /////////////////
 		v2f vert( appdata v )
 			{
@@ -98,7 +109,7 @@ Shader "Lighting/Crepuscular Rays" {
 			
 		half4 frag(v2f f) : COLOR
 			{
-				// Calculate vector from pixel to light source in screen space.
+				// Calculate floattor from pixel to light source in screen space.
 				half4 light = half4(_LightPos.xyz,1);
 				half2 deltaTexCoord = (0,0);
 				const half normalizedLightY = normalize(light.y);
@@ -107,7 +118,7 @@ Shader "Lighting/Crepuscular Rays" {
 // 					light = half4(_LightPos.x, 15, _LightPos.z,1);
 // 				}
 
-				// get our y vector direction, and swap the direction the coordinates are plotted based on that
+				// get our y floattor direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation
 				if (light.y < 0.5h){
 					deltaTexCoord = half2(f.uv.x + light.x, f.uv.y - light.y);
@@ -127,27 +138,31 @@ Shader "Lighting/Crepuscular Rays" {
 				// Divide by number of samples and scale by control factor.
 				deltaTexCoord *= 1.0h / _NumSamples * _Density;
 				// Store initial sample.
+				half2 uv2 = f.uv + _CosTime.w;
 				half2 uv = f.uv;
 				half3 color = tex2D(_MainTex, uv);
+				
 				//half color = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 				// Set up illumination decay factor.
 				half illuminationDecay = 1.0h;
 				// Evaluate summation from Equation 3 NUM_SAMPLES iterations.
 				float depth;
 				half rate = _Frequency;
+				//float2 random = float2 ((sin(_Time.y)), (cos(_Time.y)));
 				for (int i = 0; i < _NumSamples; i++)
 				{
 					// Step sample location along ray.
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
 					float sample = tex2D(_MainTex, uv);
-					float random = 0.0f;
+					const half randomFactor = rand(uv.yx)*_fogInfluence;
 					float value = frac(i/rate);
-					if (value == 0)
+					
+					if (value != 0)
 					{
-						depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) * 1.25f;
+						depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) * 1.5f;
 					}
-					else depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) + (rand(f.uv) * _fogInfluence);
+					else depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) * randomFactor;
 					// Apply sample attenuation scale/decay factors.
 					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
 					sample *= 2.5h;
