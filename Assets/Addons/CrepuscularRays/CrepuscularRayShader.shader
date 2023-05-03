@@ -19,7 +19,8 @@ Shader "Lighting/Crepuscular Rays" {
 		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
 		_FrameValue("Frame remainder", Float) = 0
 		[IntRange] _Frequency ("Frequency", Range(1,15)) = 1
-		_fogInfluence("Fog Influence", Float) = 1
+		_fogInfluence("Fog Influence", Range(0,2)) = 0.5
+		_fogSpeed("Fog Speed", Float) = 10.0
 	}
 		CGINCLUDE
 		#include "UnityCG.cginc"
@@ -42,9 +43,9 @@ Shader "Lighting/Crepuscular Rays" {
 		half _CosAngle;
 		half4 _TintColor;
 		half _PerpendicularFalloff;
-		float _FrameValue = 0;
 		int _Frequency;
 		float _fogInfluence;
+		half _fogSpeed;
 		
 
 		
@@ -58,7 +59,6 @@ Shader "Lighting/Crepuscular Rays" {
 		{
 			float4 pos : SV_POSITION;
 			float2 uv  : TEXCOORD0;
-			float value : TEXOORD1;
 		};
 
 		struct v2f_withBlurCoordsSGX 
@@ -69,100 +69,61 @@ Shader "Lighting/Crepuscular Rays" {
 		};
 
 		static const half curve[7] = { 0.0205, 0.0855, 0.232, 0.324, 0.232, 0.0855, 0.0205 };  // gauss'ish blur weights
-		
-		float2 fmodulus(float2 a, float2 b)
-					{
-					  float2 c = frac(abs(a/b))*abs(b);
-					  return (a < 0) ? -c : c;   /* if ( a < 0 ) c = 0-c */
-					}
 
-	half rand(half2 co)
-			{
-			    const half a = 2.9898f;
-			    const half b = 78.233f;
-			    const half c = 28.5453f;
-			    const half dt = dot(co.xy ,half2(a,b));
-			    const half sn = cos(abs(dt/3.14f));
-			    return cos(frac(sin(sn) * c)* ((_Time.w * 3.f) * _fogInfluence));
-			}
-		float tx,ty;            // x,y waves phase
-		float2 SineWave( float2 p )
-			    {
-			    // convert Vertex position <-1,+1> to texture coordinate <0,1> and some shrinking so the effect dont overlap screen
-			    p.x=( 0.55*p.x)+0.5;
-			    p.y=(-0.55*p.y)+0.5;
-			    // wave distortion
-			    float x = sin( 25.0*p.y + 30.0*p.x + 6.28*tx) * 0.05;
-			    float y = sin( 25.0*p.y + 30.0*p.x + 6.28*ty) * 0.05;
-			    return float2(p.x+x, p.y+y);
-			    }
+		half rand(half2 co)
+				{
+				    const half a = 2.9898f;
+				    const half b = 78.233f;
+				    const half c = 28.5453f;
+				    const half dt = dot(co.xy ,half2(a,b));
+				    const half sn = cos(abs(dt/3.14f));
+				    return cos(frac(sin(sn) * c)* ((_Time.w * _fogSpeed) * _fogInfluence));
+				}	
 ////////////// accumulator for rays  /////////////////
 		v2f vert( appdata v )
 			{
 				v2f o;
 				o.pos = UnityObjectToClipPos (v.pos);
 				o.uv = v.uv;
-				o.value = _FrameValue;
 				return o;
 			}
 			
 			
-		half4 frag(v2f f) : COLOR
+		half4 frag(v2f i) : COLOR
 			{
 				// Calculate floattor from pixel to light source in screen space.
 				half4 light = half4(_LightPos.xyz,1);
-				half2 deltaTexCoord = (0,0);
-				const half normalizedLightY = normalize(light.y);
-// 				
-// 				if (_LightPos.y >= 15){
-// 					light = half4(_LightPos.x, 15, _LightPos.z,1);
-// 				}
+				half2 deltaTexCoord = half2 (0,0);
+				// get our y direction, and swap the direction the coordinates are plotted based on that
+				// so that it looks correct regardless of current camera rotation- we decompose this
+				//because it will not look right if we just add or subtract light.xy to i.uv
+				deltaTexCoord = half2(light.y < 0.0h ? half2(i.uv.x + light.x, i.uv.y + light.y) : half2(i.uv.x - light.x, i.uv.y - light.y));
 
-				// get our y floattor direction, and swap the direction the coordinates are plotted based on that
-				// so that it looks correct regardless of current camera rotation
-				if (light.y < 0.5h){
-					deltaTexCoord = half2(f.uv.x + light.x, f.uv.y - light.y);
-				
-				}
-				
-				if (light.y > 0.5h){
-					deltaTexCoord = half2(f.uv.x - light.x, f.uv.y - light.y);
-				}
-
-// 				if (light.y > 10.0h || light.y < -10.0h)
-// 				{
-// 					deltaTexCoord = half2(f.uv);
-// 				}
-			
-				
 				// Divide by number of samples and scale by control factor.
 				deltaTexCoord *= 1.0h / _NumSamples * _Density;
+				
 				// Store initial sample.
-				half2 uv2 = f.uv + _CosTime.w;
-				half2 uv = f.uv;
+				half2 uv = i.uv;
 				half3 color = tex2D(_MainTex, uv);
 				
-				//half color = Linear01Depth(tex2D(_CameraDepthTexture, uv).r);
 				// Set up illumination decay factor.
 				half illuminationDecay = 1.0h;
+				
 				// Evaluate summation from Equation 3 NUM_SAMPLES iterations.
 				float depth;
 				half rate = _Frequency;
-				//float2 random = float2 ((sin(_Time.y)), (cos(_Time.y)));
-				for (int i = 0; i < _NumSamples; i++)
+				
+				for (int i = 1; i < _NumSamples + 1; i++)
 				{
 					// Step sample location along ray.
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
 					float sample = tex2D(_MainTex, uv);
-					const half randomFactor = rand(uv.yx)*_fogInfluence;
+					half randomFactor = rand(uv.yx)*_fogInfluence * _Contrast;
 					float value = frac(i/rate);
-					
-					if (value != 0)
-					{
-						depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) * 1.5f;
-					}
-					else depth = Linear01Depth(tex2D(_CameraDepthTexture, uv).r) * randomFactor;
+					float cast = Linear01Depth(tex2D(_CameraDepthTexture, uv)).r;
+					//calc depth value
+					depth = float(value !=0 ? float(cast * 1.5f):float(cast * randomFactor));
 					// Apply sample attenuation scale/decay factors.
 					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
 					sample *= 2.5h;
@@ -173,7 +134,6 @@ Shader "Lighting/Crepuscular Rays" {
 					illuminationDecay *= _Decay;
 				}
 				// Output final color with a further scale control factor.
-				color *= normalizedLightY;
 				return (max(half4(color * _Exposure, 1), 0.15h));
 			}
 /////////////// SGX Horizontal Blur /////////////////////////////		
@@ -234,7 +194,6 @@ Shader "Lighting/Crepuscular Rays" {
 		half4 fragFinal(v2f i) : SV_Target
 			{
 				half4 light = half4(_LightPos.xyz,1);
-				half normalizedLightY = half((light.y + 1)/2);
 				_CosAngle = 1- abs(cos(light.z));
 				const fixed4 col = tex2D(_MainTex, i.uv);
 				fixed4 sample = tex2D(_BlurTex, i.uv);
@@ -244,7 +203,7 @@ Shader "Lighting/Crepuscular Rays" {
 				const fixed4 finalSample = (((col) + (sample * 0.4h)) - 0.5h) * contrast + 0.445h; //final sampled color
 				const fixed4 finalColor = (col + (col * 0.04h) - 0.01h); //final modulated base color
 				//add our ray greyscale samples at - 25% brightness to the main image
-				fixed4 blitColor = lerp(finalSample, finalColor, 1 - (_CosAngle / (_PerpendicularFalloff / 10)));//lerp (finalColor + 0.25, finalColor + 0.035h, normalizedLightY);
+				fixed4 blitColor = lerp(finalSample, finalColor, (1 - _CosAngle - _PerpendicularFalloff));//lerp (finalColor + 0.25, finalColor + 0.035h, normalizedLightY);
 				return blitColor;
 			}
 
