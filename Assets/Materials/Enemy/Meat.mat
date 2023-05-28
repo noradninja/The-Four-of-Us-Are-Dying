@@ -9,7 +9,7 @@ Material:
   m_Name: Meat
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED GSAA _BAKERY_NONE _EMISSION _LIGHTMAPSPECULAR
-    _METALLICGLOSSMAP _METALLICSPECGLOSSMAP _NORMALMAP _VERTEXCOLOR
+    _METALLICGLOSSMAP _METALLICSPECGLOSSMAP _NORMALMAP
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -166,7 +166,7 @@ Material:
     - _HeightScale: 0.006
     - _HeightStepsMax: 16
     - _HeightStepsMin: 8
-    - _IntensityVC: 1
+    - _IntensityVC: 0
     - _LTCGI: 0
     - _LightmapSpecular: 1
     - _LightmapSpecularMaxSmoothness: 1
@@ -197,7 +197,7 @@ Material:
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _MetallicRemap: {r: 0, g: 1, b: 0, a: 1}
     - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}

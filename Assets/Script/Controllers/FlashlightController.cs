@@ -135,9 +135,9 @@ public class FlashlightController : MonoBehaviour {
 			if (!PlayerController.isStimulant) LerpFocalLength(0.087f, 0.095f, 
 													0.5f, 0.5f, 0.5f);
             
-			if (UICanvasGroup.alpha < 1.0f){
-				StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
-			}
+			// if (UICanvasGroup.alpha < 1.0f){
+			// 	StartCoroutine(FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f));
+			// }
 		}
 	}
 

@@ -95,8 +95,6 @@ e90403eeda069970e0b9de1533de13a6 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 50b0b141074b216c8b53b1bd467f73c9 Unity.TextMeshPro.dll:TMPro.TMP_InputField
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityEngine.UI.Extensions.RaycastMask
 eac0877fbc8522a29213d1399409e516 Assembly-CSharp.dll:UnityEngine.UI.Extensions.HorizontalScrollSnap
-486cd95c82d8305219c352c06b776e1f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.CallbackExecutor
-486cd95c82d8305219c352c06b776e1f UnityEngine.Advertisements.dll:UnityEngine.Advertisements.Editor.Placeholder
 98c11146d6790e44d7be29e17d228514 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ShineEffect
 5a30dcba633479bbe906094a1c92d1e5 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.GameMenu
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:BrainFailProductions.PolyFew.AsImpL.TextureLoader
@@ -194,7 +192,7 @@ e70adf7d789392656ae13a2ea603dfe0 Assembly-CSharp-firstpass.dll:UnityStandardAsse
 026c3f781695a659e5401eedf7f945e6 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UI_ScrollRectOcclusion
 1871bd40a5ee88524e0578a728014498 Assembly-CSharp.dll:UnityEngine.UI.Extensions.MultiTouchScrollRect
 b2736facd8814c292a508064799c5647 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ComboBox
-2f7b4692e6534f60e98d4320e6ca1acc Assembly-CSharp.dll:.Weather_Manager
+9faee4f533b5059d9cce9b6a5d65c0e0 Assembly-CSharp.dll:.Weather_Manager
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 329fb2768d463d0a35e97b7eda8fbd8b BakeryRuntimeAssembly.dll:.BakerySkyLight
 5d1232361123c9a0fc135ff11ff59be3 Whinarn.UnityMeshSimplifier.Runtime.dll:UnityMeshSimplifier.LODGeneratorHelper
@@ -277,7 +275,7 @@ ce2206bd4ec4321174a95c1ad796562c Assembly-CSharp.dll:UnityEngine.UI.Extensions.T
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityEngine.UI.Extensions.ExampleSelectable
 486cd95c82d8305219c352c06b776e1f Unity.TextMeshPro.dll:TMPro.TMP_SpriteAnimator
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:BrainFailProductions.PolyFewRuntime.UtilityServicesRuntime
-ad0314990426787b37b677bd355c2e7f Assembly-CSharp.dll:.Crepuscular
+76180b840143d10906f6446958a2d1c7 Assembly-CSharp.dll:.Crepuscular
 1f61edfe517b8d06543d754e4efa6bc5 Assembly-CSharp.dll:.SaveManager_Inputs
 9e59333ee21918ae86c942ae068b20df Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.Example01ScrollViewCell
 5a30dcba633479bbe906094a1c92d1e5 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.PauseMenu
