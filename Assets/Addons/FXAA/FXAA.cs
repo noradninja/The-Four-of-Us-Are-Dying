@@ -6,7 +6,7 @@
 public class FXAA : MonoBehaviour
 {
     public Material material;
-
+    public RenderTexture rt;
     public float Sharpness = 4.0f;
     public float Threshold = 0.2f;
 
@@ -18,6 +18,7 @@ public class FXAA : MonoBehaviour
         material.SetFloat(sharpnessString, Sharpness);
         material.SetFloat(thresholdString, Threshold);
 
-        Graphics.Blit(source, destination, material);
+        Graphics.Blit(source, rt, material);
+        Graphics.Blit(rt, destination);
     }
 }

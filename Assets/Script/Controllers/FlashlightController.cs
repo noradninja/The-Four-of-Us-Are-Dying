@@ -153,7 +153,7 @@ public class FlashlightController : MonoBehaviour {
 				float currentAngle = flashlight.spotAngle;
 				float currentSize = lightShaft.transform.localScale.x;
 				Color currentColor = lightBeam.material.color;
-				lightRoutine = FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 5.0f,
+				lightRoutine = FadeLightStaticInput(currentColor, colorStart, 0.25f, currentIntensity, 7.0f,
 					currentAngle, 40, currentSize, 0.08f);
 				StartCoroutine(lightRoutine);
 				print("Fade Light up");
@@ -192,7 +192,7 @@ public class FlashlightController : MonoBehaviour {
 			float currentSize = lightShaft.transform.localScale.x;
 			Color currentColor = lightBeam.material.color;
 			float duration = lightDuration;
-			lightRoutine = FadeLightDynamicInput(currentColor, colorEnd, duration, 
+			lightRoutine = FadeLightDynamicInput(colorStart, colorEnd, duration, 
 				currentIntensity, 25, 40, 25, 0.08f, 0.040f); // 'fire' light
 			StartCoroutine(lightRoutine);
 			print("Fade Light Down");
@@ -226,7 +226,7 @@ public class FlashlightController : MonoBehaviour {
 		{
 			lightRoutine=
 			FadeLightStaticInput(lightBeam.material.color, colorStart, 
-					0.25f, flashlight.intensity, 5, 40, 40, 
+					0.25f, flashlight.intensity, 7.0f, 40, 40, 
 					0.08f, 0.08f);
 			FlashlightDisabled = false;
 			StartCoroutine(lightRoutine);
@@ -236,7 +236,7 @@ public class FlashlightController : MonoBehaviour {
 		if (!delayButton && HasFlashlight && !Input.GetButton("LTRIG") && !FlashlightDisabled)
 		{
 			lightRoutine =
-				FadeLightStaticInput(lightBeam.material.color, colorStart, 0.25f, flashlight.intensity, 5, 40, 40, 0.08f, 0.08f);
+				FadeLightStaticInput(lightBeam.material.color, colorStart, 0.25f, flashlight.intensity, 7.0f, 40, 40, 0.08f, 0.08f);
 			StartCoroutine(lightRoutine);
 			print("Fade Up on Battery");
 			delayButton = true;
@@ -247,7 +247,7 @@ public class FlashlightController : MonoBehaviour {
 		{
 			lightRoutine=
 			FadeLightDynamicInput(lightBeam.material.color, colorEnd, 
-				lightDuration, flashlight.intensity, 15, 40, 25, 
+				lightDuration, flashlight.intensity, 50, 40, 25, 
 				0.08f, 0.040f); // 'fire' light
 			StartCoroutine(lightRoutine);
 			print("Fade up on Battery while Alive");
@@ -383,7 +383,7 @@ public class FlashlightController : MonoBehaviour {
 		var currentSize = lightShaft.transform.localScale.x;
 		var currentColor = lightBeam.material.color;
 		StartCoroutine(FadeLightStaticInput(currentColor, colorStart, 0.25f, 
-			currentIntensity, 5.0f, currentAngle, 40,
+			currentIntensity, 7.0f, currentAngle, 40,
 			currentSize, 0.08f));
 		
 	}

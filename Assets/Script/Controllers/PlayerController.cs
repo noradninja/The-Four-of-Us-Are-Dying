@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
     //overlay
     public GameObject perfOverlay;
     public GameObject fpsOverlay;
+    public GameObject controlOverlay;
     public CanvasGroup UICanvasGroup;
     public float currentCharge;
     private static readonly int CrossFade = Shader.PropertyToID("_CrossFade");
@@ -201,18 +202,17 @@ public class PlayerController : MonoBehaviour
         //get touch input, and enable/disable the perf overlay
         foreach (Touch touch in Input.touches) {
             if (touch.fingerId == 0){
-                if (Input.GetTouch(0).phase == TouchPhase.Began)
+                if (Input.GetTouch(0).phase == TouchPhase.Ended)
                 {
-                    if (perfOverlay.activeSelf == false)
-                    {
-                        perfOverlay.SetActive(true);
-                        fpsOverlay.SetActive(true);
-                    }
-                    else
-                    {
-                        perfOverlay.SetActive(false);
-                        fpsOverlay.SetActive(false);
-                    }
+                    controlOverlay.SetActive(!controlOverlay.activeSelf); //toggle overlay
+                    // if (controlOverlay.activeSelf == false)
+                    // {
+                    //     controlOverlay.SetActive(true);
+                    // }
+                    // else
+                    // {
+                    //     controlOverlay.SetActive(false);
+                    // }
                 }
             }
         }
