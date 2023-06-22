@@ -441,6 +441,7 @@
     <None Include="Assets\___www.unityassetcollection.com___.txt" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Shaders\UltraSkyboxFog.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicLighting.cginc" />
+    <None Include="Assets\Texture\Render Texture\Depth_Shader.shader" />
     <None Include="Assets\TrueClouds\Resources\Shaders\BlurFast.shader" />
     <None Include="Assets\Addons\Shader Forge\ProjectSettings\ProjectVersion.txt" />
     <None Include="Assets\Addons\CrepuscularRays\CrepuscularRayShader.shader" />
@@ -468,7 +469,6 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TrueClouds\Resources\Shaders\Light\CloudsTintTransparentTwosided.shader" />
     <None Include="Assets\Addons\CrepuscularRays\Readme.txt" />
-    <None Include="Assets\Shader\PostProcess\EAAA.shader" />
     <None Include="Assets\Shader\PBR\PBRLib.cginc" />
     <None Include="Assets\Addons\Shaders\sprite.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast_Clip.shader" />
@@ -499,6 +499,7 @@
     <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
     <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
     <None Include="Assets\PolyFew\BatchFewShader\BatchFewStandard.shader" />
+    <None Include="Assets\Shader\PostProcess\EAAA.shader" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardShadow.cginc" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\Refraction.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Add.shader" />
@@ -546,7 +547,6 @@
     <None Include="Assets\Shader\Tests\DepthClipTest.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle AddMultiply.shader" />
     <None Include="Assets\Addons\Shaders\beam.shader" />
-    <None Include="Assets\Texture\Render Texture\Depth_Shader.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Bangers - OFL.txt" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Manual.txt" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardMeta.cginc" />
