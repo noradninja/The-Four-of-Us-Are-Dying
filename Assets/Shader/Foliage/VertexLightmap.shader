@@ -56,6 +56,19 @@
 			#pragma multi_compile __ POINT SPOT
 			#pragma multi_compile __ AMBIENT_ON
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
+			 #pragma shader_feature BAKERY_VERTEXLM
+            #pragma shader_feature BAKERY_VERTEXLMDIR
+            #pragma shader_feature BAKERY_VERTEXLMSH
+            #pragma shader_feature BAKERY_VERTEXLMMASK
+            #pragma shader_feature BAKERY_SH
+            #pragma shader_feature BAKERY_SHNONLINEAR
+            #pragma shader_feature BAKERY_RNM
+            #pragma shader_feature BAKERY_LMSPEC
+            #pragma shader_feature BAKERY_BICUBIC
+            #pragma shader_feature BAKERY_PROBESHNONLINEAR
+            #pragma shader_feature BAKERY_VOLUME
+            #pragma shader_feature BAKERY_COMPRESSED_VOLUME
+            #pragma shader_feature BAKERY_VOLROTATION
 			#define CUSTOM_LIGHTMAPPED 1 
 			#include "VertexLightmapCommon.cginc"
 			#include "UnityCG.cginc"
@@ -67,8 +80,30 @@
 	
 			ENDCG
 		}
+			 // ------------------------------------------------------------------
+	        // Extracts information for lightmapping, GI (emission, albedo, ...)
+	        // This pass it not used during regular rendering.
+	        Pass
+	        {
+	            Name "META"
+	            Tags { "LightMode"="Meta" }
 
-		Pass{
+	            Cull Off
+
+	            CGPROGRAM
+	            #pragma vertex vert_meta
+	            #pragma fragment frag_meta
+
+	            #pragma shader_feature _EMISSION
+	            #pragma shader_feature _METALLICGLOSSMAP
+	            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+	            #pragma shader_feature ___ _DETAIL_MULX2
+	            #pragma shader_feature EDITOR_VISUALIZATION
+
+	            #include "UnityStandardMeta.cginc"
+	            ENDCG
+	        }
+			Pass{
             Tags {"LightMode"="ShadowCaster"}
 
             CGPROGRAM

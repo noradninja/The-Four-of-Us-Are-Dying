@@ -55,8 +55,10 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 		else
 		{
 			if (replacementMaterial != null) return;
-			replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
-			replacementMaterial.mainTexture = albedoTex;
+			replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"))
+			{
+				mainTexture = albedoTex
+			};
 		}
 	} 
 	private void Update()

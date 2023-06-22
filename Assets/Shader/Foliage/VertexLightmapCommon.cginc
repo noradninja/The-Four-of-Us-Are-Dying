@@ -150,7 +150,7 @@ fixed4 frag(v2f v) : SV_Target {
 	const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
 
 	#if CUSTOM_LIGHTMAPPED == 1
-	const half4 lighting = (lightmap * 0.25h) + posLighting;
+	const half4 lighting = half4(lightmap.rgb * 0.25h,1) + posLighting;
 	#endif
 
 	#else
