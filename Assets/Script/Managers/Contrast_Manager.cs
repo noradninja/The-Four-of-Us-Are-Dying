@@ -26,7 +26,7 @@ public class Contrast_Manager : MonoBehaviour
     // Start is called before the first frame update
 	public void Start()
     {
-      tintColor = new Color(0f,0f,0f,0f);
+     // tintColor = new Color(0f,0f,0f,0f);
     }
 
 	// Update is called once per frame

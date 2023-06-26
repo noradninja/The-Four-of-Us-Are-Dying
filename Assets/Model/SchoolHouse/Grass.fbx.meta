@@ -141,13 +141,13 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["polySurface499","polySurface485","polySurface492","polySurface494","polySurface496","polySurface498","polySurface508","polySurface507","polySurface505","polySurface503","polySurface501","polySurface489","polySurface487","polySurface483","polySurface481"],"padding":[31,31,31,31,31,31,40,41,41,41,41,31,31,31,31],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["polySurface499","polySurface485","polySurface492","polySurface494","polySurface496","polySurface498","polySurface508","polySurface507","polySurface505","polySurface503","polySurface501","polySurface489","polySurface487","polySurface483","polySurface481"],"padding":[39,39,39,39,39,39,51,52,52,52,52,39,39,39,39],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 0
@@ -157,7 +157,7 @@ ModelImporter:
     generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
@@ -171,7 +171,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 0
+    tangentImportMode: 3
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0

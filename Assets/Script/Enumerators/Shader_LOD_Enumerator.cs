@@ -64,7 +64,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	private void Update()
 	{
 		// we only need to do *whatever* FPS/tick times a frame, depending on refresh rate
-		if (tick != 5)
+		if (tick != 3)
 			tick++;
 		else 
 		{
@@ -89,12 +89,17 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 			case LODState.Full:
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
-				thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
+				thisRenderer.sharedMaterial.SetFloat("_SpecularHighlights", 1.0f);
+				thisRenderer.sharedMaterial.SetFloat("_GlossyReflections", 1.0f);
+				if (!isFoliage || !this.CompareTag("Ground")) 
+					thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
 				break;
 			case LODState.Reduced:
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
 				thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+				thisRenderer.sharedMaterial.SetFloat("_SpecularHighlights", 0.0f);
+				thisRenderer.sharedMaterial.SetFloat("_GlossyReflections", 0.0f);
 				break;
 			case LODState.VertexOnly:
 				thisRenderer.sharedMaterial = replacementMaterial;

@@ -293,14 +293,14 @@ public class VitaInputManager : MonoBehaviour {
 
 		#region StartSelect
 
-			if (Input.GetButton("Start"))
+			if (Input.GetButtonDown("Start"))
 			{
 				if (OnStart != null)
 				{
 					OnStart();
 				}
 			}
-			if (Input.GetButton("Select"))
+			if (Input.GetButtonDown("Select"))
 			{
 				if (OnSelect != null)
 				{

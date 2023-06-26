@@ -22,7 +22,7 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   streamingMipmaps: 1
-  streamingMipmapsPriority: 2
+  streamingMipmapsPriority: 1
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0

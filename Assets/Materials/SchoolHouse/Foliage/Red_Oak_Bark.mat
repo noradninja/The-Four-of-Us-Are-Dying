@@ -322,7 +322,7 @@ Material:
     - _GeoShadowModel: 0
     - _GlossMapScale: 0.25
     - _Glossiness: 1
-    - _GlossyReflections: 1
+    - _GlossyReflections: 0
     - _HeightRefPlane: 0.5
     - _HeightScale: 0.006
     - _HeightStepsMax: 16
@@ -532,7 +532,7 @@ Material:
     - _Smoothness3: 1
     - _SmoothnessTextureChannel: 0
     - _SpecOcclusion: 0.5
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SpecularMapType: 999
     - _SpecularPower: 1
     - _SpecularRange: 0

@@ -151,7 +151,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 72fe0ed36fde3c24f898b1f24f2d257b, type: 3}
-        m_Scale: {x: 2, y: 2}
+        m_Scale: {x: 6, y: 6}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
@@ -579,7 +579,7 @@ Material:
     - _wind_size: 15
     m_Colors:
     - _Albedo: {r: 1, g: 0, b: 0, a: 1}
-    - _Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _ColorBack: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _IntersectColor: {r: 1, g: 1, b: 1, a: 1}

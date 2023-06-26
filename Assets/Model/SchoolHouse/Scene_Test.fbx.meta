@@ -994,7 +994,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Rope_Swing","Clothing_Poles","Lock","Lamp","Exterior","Building","Door","Tree","Framework","Sidewalk","Lines","Doorknob","Short_Fence","Lamp_Glass","Window","Woodpile","Deco","Plaque","polySurface391","Pole"],"padding":[114,126,256,188,12,37,86,37,41,92,243,256,129,256,139,103,25,256,13,93],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Rope_Swing","Clothing_Poles","Lock","Lamp","Exterior","Building","Door","Tree","Framework","Sidewalk","Lines","Doorknob","Short_Fence","Lamp_Glass","Window","Woodpile","Deco","Plaque","polySurface391","Pole"],"padding":[145,160,256,238,15,47,109,47,53,117,256,256,163,256,176,130,32,256,17,118],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

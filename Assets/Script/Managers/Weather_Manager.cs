@@ -98,7 +98,7 @@ public void Start ()
 			}
 			enviroReflectivity = clipLoudness;
 			RenderSettings.reflectionIntensity = 
-				ExtensionMethods.Math.Remap(enviroReflectivity, 0.55f,1.1f,0.5f, 2.0f);
+				ExtensionMethods.Math.Remap(enviroReflectivity, 0.55f,0.8f,0.55f, 1.0f);
 			skyBox.SetFloat(Exposure, 
 						ExtensionMethods.Math.Remap(enviroReflectivity, 0.55f,0.8f,
 													0.55f, 0.85f));

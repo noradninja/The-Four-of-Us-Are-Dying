@@ -125,7 +125,7 @@ Shader "Lighting/Crepuscular Rays" {
 					//calc depth value
 					depth = float(value !=0 ? float(cast * 1.5f):float(cast * randomFactor));
 					// Apply sample attenuation scale/decay factors.
-					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
+					sample *= illuminationDecay * (_Weight/ _NumSamples*6) * depth;
 					sample *= 2.5h;
 					
 					// Accumulate combined color.

@@ -166,6 +166,7 @@ public class PlayerController : MonoBehaviour
 
         #region StartSelectEventSub
         VitaInputManager.Instance.OnStart += StartEvent;
+        VitaInputManager.Instance.OnSelect += SelectEvent;
         #endregion
 
         #region TriggerButtonEventSub
@@ -204,7 +205,8 @@ public class PlayerController : MonoBehaviour
             if (touch.fingerId == 0){
                 if (Input.GetTouch(0).phase == TouchPhase.Ended)
                 {
-                    controlOverlay.SetActive(!controlOverlay.activeSelf); //toggle overlay
+                    perfOverlay.SetActive(!perfOverlay.activeSelf);
+                    fpsOverlay.SetActive(!fpsOverlay.activeSelf);
                     // if (controlOverlay.activeSelf == false)
                     // {
                     //     controlOverlay.SetActive(true);
@@ -328,6 +330,16 @@ public class PlayerController : MonoBehaviour
                 PauseManager.isPaused = false;
             }
 
+            delayButton = true;
+            StartCoroutine(ButtonDelayTimer(0.5f));
+        }
+    }
+
+    private void SelectEvent()
+    {
+        if (!delayButton)
+        {
+            controlOverlay.SetActive(!controlOverlay.activeSelf); //toggle overlay
             delayButton = true;
             StartCoroutine(ButtonDelayTimer(0.5f));
         }

@@ -79,7 +79,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["No_Parking_Sign","Interior_Beams","Board_Fence","Shed","R_Door","L_Door","Back_Roofing"],"padding":[256,30,51,13,51,50,56],"unwrapper":[0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["No_Parking_Sign","Interior_Beams","Board_Fence","Shed","R_Door","L_Door","Back_Roofing"],"padding":[256,38,64,16,65,63,71],"unwrapper":[1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 0
   meshes:

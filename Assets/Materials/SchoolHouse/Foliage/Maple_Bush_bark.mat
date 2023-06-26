@@ -10,7 +10,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _BAKERY_NONE _FRESNELMODEL_SCHLICK
     _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _GLOSSYREFLECTIONS_OFF _LIGHTMAPSPECULAR _METALLICGLOSSMAP
-    _NORMALDISTMODEL_BLINNPHONG _NORMALMAP _SMITHGEOSHADOWMODEL_NONE _SPECGLOSSMAP
+    _NORMALDISTMODEL_BLINNPHONG _SMITHGEOSHADOWMODEL_NONE _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -532,7 +532,7 @@ Material:
     - _Smoothness3: 1
     - _SmoothnessTextureChannel: 0
     - _SpecOcclusion: 0.5
-    - _SpecularHighlights: 1
+    - _SpecularHighlights: 0
     - _SpecularMapType: 999
     - _SpecularPower: 1
     - _SpecularRange: 0
