@@ -31,26 +31,26 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Contrast: 1.00525
+    - _Contrast: 1.25
     - _CosAngle: 0
     - _Decay: 0.925
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.146
+    - _Density: 0.125
     - _Exposure: 0.1
-    - _FrameValue: 0
+    - _FrameValue: 1
     - _Frequency: 3
     - _LightY: 0
-    - _NumSamples: 12
+    - _NumSamples: 9
     - _Parameter: 0
-    - _PerpendicularFalloff: 0.85
+    - _PerpendicularFalloff: 0.8
     - _Spread: 1
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _Weight: 2
-    - _fogInfluence: 1
-    - _fogSpeed: 10
+    - _fogInfluence: 1.4
+    - _fogSpeed: 1.75
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: -0.7126659, g: 2.7653115, b: 0.44578585, a: 0}
-    - _TintColor: {r: 0, g: 0, b: 0, a: 1}
+    - _LightPos: {r: -0.8642837, g: 2.826706, b: 0.42704916, a: 0}
+    - _TintColor: {r: 0.09407263, g: 0.10131127, b: 0.13207549, a: 1}

@@ -24,12 +24,8 @@ public class Contrast_Manager : MonoBehaviour
     private static readonly int TintColor = Shader.PropertyToID("_TintColor");
 
     // Start is called before the first frame update
-	public void Start()
-    {
-      tintColor = new Color(0f,0f,0f,0f);
-    }
 
-	// Update is called once per frame
+    // Update is called once per frame
 	public void Update()
     {
         contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat(Exposure)-0.55f);

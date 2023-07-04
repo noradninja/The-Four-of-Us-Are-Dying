@@ -44,7 +44,7 @@ namespace DecalSystem {
             if (Sprite && Material.mainTexture != Sprite.texture) Sprite = null;
 
             MaxAngle = Mathf.Clamp( MaxAngle, 1, 180 );
-            Offset = Mathf.Clamp( Offset, 0.005f, 0.05f );
+            Offset = Mathf.Clamp( Offset, 0.001f, 0.05f );
         }
 
         void Awake() {

@@ -100,6 +100,7 @@ public class PlayerController : MonoBehaviour
     //overlay
     public GameObject perfOverlay;
     public GameObject fpsOverlay;
+    public GameObject controlOverlay;
     public CanvasGroup UICanvasGroup;
     public float currentCharge;
     private static readonly int CrossFade = Shader.PropertyToID("_CrossFade");
@@ -165,6 +166,7 @@ public class PlayerController : MonoBehaviour
 
         #region StartSelectEventSub
         VitaInputManager.Instance.OnStart += StartEvent;
+        VitaInputManager.Instance.OnSelect += SelectEvent;
         #endregion
 
         #region TriggerButtonEventSub
@@ -201,18 +203,18 @@ public class PlayerController : MonoBehaviour
         //get touch input, and enable/disable the perf overlay
         foreach (Touch touch in Input.touches) {
             if (touch.fingerId == 0){
-                if (Input.GetTouch(0).phase == TouchPhase.Began)
+                if (Input.GetTouch(0).phase == TouchPhase.Ended)
                 {
-                    if (perfOverlay.activeSelf == false)
-                    {
-                        perfOverlay.SetActive(true);
-                        fpsOverlay.SetActive(true);
-                    }
-                    else
-                    {
-                        perfOverlay.SetActive(false);
-                        fpsOverlay.SetActive(false);
-                    }
+                    perfOverlay.SetActive(!perfOverlay.activeSelf);
+                    fpsOverlay.SetActive(!fpsOverlay.activeSelf);
+                    // if (controlOverlay.activeSelf == false)
+                    // {
+                    //     controlOverlay.SetActive(true);
+                    // }
+                    // else
+                    // {
+                    //     controlOverlay.SetActive(false);
+                    // }
                 }
             }
         }
@@ -332,6 +334,11 @@ public class PlayerController : MonoBehaviour
             StartCoroutine(ButtonDelayTimer(0.5f));
         }
     }
+
+    private void SelectEvent()
+    {
+        controlOverlay.SetActive(!controlOverlay.activeSelf); //toggle overlay
+    }
    #endregion
 
     #region DpadButtonEvents
@@ -370,7 +377,7 @@ public class PlayerController : MonoBehaviour
 
     private void DpadRightKeyDownEvent()
     {
-        //cycle rendertextures on script on camera
+ 
     }
     #endregion
 
@@ -426,12 +433,12 @@ public class PlayerController : MonoBehaviour
 
     private void RTrigDownEvent()
     {
-        if (UICanvasGroup.alpha < 1.0f)
-        {
-            if (alphaRoutine != null) StopCoroutine(alphaRoutine);
-                alphaRoutine = FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f);
-                StartCoroutine(alphaRoutine);
-        }
+        // if (UICanvasGroup.alpha < 1.0f)
+        // {
+        //     if (alphaRoutine != null) StopCoroutine(alphaRoutine);
+        //         alphaRoutine = FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f);
+        //         StartCoroutine(alphaRoutine);
+        // }
         if (walkRoutine != null) StopCoroutine(walkRoutine);
         //if (alphaRoutine != null) StopCoroutine(alphaRoutine);
         if (chargeRoutine != null) StopCoroutine(chargeRoutine);
@@ -693,7 +700,7 @@ public class PlayerController : MonoBehaviour
         var eulerAngles = lightRig.transform.localEulerAngles;
         var lightCurrentZ = eulerAngles.z;
         var lightCurrentY = eulerAngles.y;
-       
+
         print("lerpCam");
         
         while (time < duration){
@@ -701,6 +708,7 @@ public class PlayerController : MonoBehaviour
             var newX = Mathf.Lerp(currentX, 10, time/duration);
             var newYL = Mathf.Lerp(lightCurrentY, 75, time/duration);
             var newZL = Mathf.Lerp(lightCurrentZ, 184, time/duration);
+            var newXL = Mathf.Lerp(eulerAngles.z, 0, time/duration);
 
             if (newY > 89.95 && newY < 90.05) newY = 90;
             if (newX > 9.95f && newX < 10.05f) newX = 10;

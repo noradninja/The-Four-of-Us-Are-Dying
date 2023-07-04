@@ -8,10 +8,10 @@ QualitySettings:
   m_QualitySettings:
   - serializedVersion: 2
     name: Vita
-    pixelLightCount: 3
+    pixelLightCount: 2
     shadows: 1
     shadowResolution: 0
-    shadowProjection: 1
+    shadowProjection: 0
     shadowCascades: 1
     shadowDistance: 3.5
     shadowNearPlaneOffset: 0.1
@@ -31,7 +31,7 @@ QualitySettings:
     maximumLODLevel: 0
     streamingMipmapsActive: 1
     streamingMipmapsAddAllCameras: 1
-    streamingMipmapsMemoryBudget: 128
+    streamingMipmapsMemoryBudget: 96
     streamingMipmapsRenderersPerFrame: 128
     streamingMipmapsMaxLevelReduction: 1
     streamingMipmapsMaxFileIORequests: 128

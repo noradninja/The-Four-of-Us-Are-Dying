@@ -8,6 +8,7 @@ public class SFXController : MonoBehaviour {
 	public AudioClip audioClip;
 	public AudioClip[] grassSounds;
 	public AudioClip[] roadSounds;
+	public AudioClip[] wetRoadSounds;
 	public AudioClip[] currentClips;
 	public float distance = 0.055f;
 	private RaycastHit hit;
@@ -17,25 +18,32 @@ public class SFXController : MonoBehaviour {
 
 	private void Update()
 	{
-		if (tick == 10)
+		if (tick == 5)
 		{
-			every10FrameUpdate();//TODO: write this so its a subscriber fired event so we can ditch Update()
+			every5FrameUpdate();//TODO: write this so its a subscriber fired event so we can ditch Update()
 			tick = 0;
 		}
 		else tick++;
 	}
-	public void every10FrameUpdate(){
-		maskValue = (LayerMask.GetMask("Ground"));
-		if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)){
-			//Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
+	private void every5FrameUpdate(){
+
+		if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, 
+			    LayerMask.GetMask("Ground"))){
 			currentClips = grassSounds;
 		}
-		else{
-			maskValue = (LayerMask.GetMask("Road"));
-			if (!Physics.Raycast(transform.position, Vector3.down, out hit, distance, maskValue)) return;
-		//	Debug.DrawRay(transform.position, Vector3.down * distance, Color.yellow);
+		else if (Physics.Raycast(transform.position, Vector3.down, out hit, distance, 
+        			         LayerMask.GetMask("Water_Decals")))
+		{
+					//print("Water_Puddle");
+        			currentClips = wetRoadSounds;
+        }
+		else if (Physics.Raycast(transform.position, Vector3.down, out hit, distance,
+			         LayerMask.GetMask("Road")))
+		{
 			currentClips = roadSounds;
 		}
+		
+
 	}
 
 	private void footstepSound(){

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using UnityEditor;
+using UnityEngine;
 
 [ExecuteInEditMode]
 
@@ -45,8 +46,9 @@ public class CameraResolutionScaler : MonoBehaviour
     private void Awake()
     {
         camera = GetComponent<Camera>();
-
         if (!Application.isEditor)
+        {
+            //PlayerSettings.graphicsJobMode = GraphicsJobMode.Native;
             switch (screenResolution)
             {
                 //set resolution and 30Hz vsync
@@ -67,6 +69,7 @@ public class CameraResolutionScaler : MonoBehaviour
                     QualitySettings.vSyncCount = 1;
                     break;
             }
+        }
         else //disable vsync in Editor
             QualitySettings.vSyncCount = 0;
     }

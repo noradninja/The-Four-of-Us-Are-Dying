@@ -108,9 +108,9 @@ PlayerSettings:
   xboxOnePresentImmediateThreshold: 0
   switchQueueCommandMemory: 0
   videoMemoryForVertexBuffers: 0
-  psp2PowerMode: 2
+  psp2PowerMode: 1
   psp2AcquireBGM: 1
-  vulkanEnableSetSRGBWrite: 1
+  vulkanEnableSetSRGBWrite: 0
   vulkanUseSWCommandBuffers: 0
   m_SupportedAspectRatios:
     4:3: 1
@@ -319,7 +319,7 @@ PlayerSettings:
     m_EncodingQuality: 1
   m_BuildTargetGroupLightmapSettings:
   - m_BuildTarget: PSP2
-    m_TextureStreamingEnabled: 0
+    m_TextureStreamingEnabled: 1
     m_TextureStreamingPriority: 0
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
@@ -568,7 +568,7 @@ PlayerSettings:
   psp2TVDisableEmu: 1
   psp2AllowTwitterDialog: 1
   psp2Upgradable: 0
-  psp2HealthWarning: 1
+  psp2HealthWarning: 0
   psp2UseLibLocation: 0
   psp2InfoBarOnStartup: 0
   psp2InfoBarColor: 0

@@ -41,7 +41,9 @@ public class FlashlightController : MonoBehaviour {
 	
 	//UI
 	public TextMeshProUGUI batteryText;
-
+	//Audio
+	public AudioSource sfxSource;
+	public AudioClip[] flashlightClips;
 	public IEnumerator lightRoutine;
 	public IEnumerator chargeRoutine;
 	
@@ -72,10 +74,11 @@ public class FlashlightController : MonoBehaviour {
 		
 		
 		currentTarget = PlayerController.currentTarget;
-		if (currentCharge <= 0.05f){
+		if (currentCharge <= 0.001f){
 			FlashlightDisabled = true;
 			currentCharge = 0;
 			print("Flashlight Disabled");
+			sfxSource.Stop();
 		}
 		//lightFocusing = PlayerController.lightFocusing;
 		if (lightFocusing && currentTarget != null && !FlashlightDisabled)
@@ -159,7 +162,7 @@ public class FlashlightController : MonoBehaviour {
 				print("Fade Light up");
 			}
 			if(!isCharging){
-				chargeRoutine = RechargeFlashlight (currentCharge,  10f);
+				chargeRoutine = RechargeFlashlight (currentCharge,  20f);
 				StartCoroutine(chargeRoutine);
 				print("Charging");
 			}
@@ -167,7 +170,7 @@ public class FlashlightController : MonoBehaviour {
 			PlayerController.lightMovement = true;
 			//endLightRotation =  lightRoot.transform.localRotation;
 			lightRoot.transform.localRotation = storedLightRotation;
-
+			sfxSource.Stop();
 		}	
 	}
 
@@ -186,16 +189,18 @@ public class FlashlightController : MonoBehaviour {
 		}
 		else if (HasFlashlight && !FlashlightDisabled && currentCharge >= 0.05f)
 		{
-			
+			sfxSource.pitch = Random.Range (0.7f, 1.0f);
+			sfxSource.PlayOneShot(flashlightClips[2]);
 			float currentIntensity = flashlight.intensity;
 			float currentAngle = flashlight.spotAngle;
 			float currentSize = lightShaft.transform.localScale.x;
 			Color currentColor = lightBeam.material.color;
 			float duration = lightDuration;
 			lightRoutine = FadeLightDynamicInput(currentColor, colorEnd, duration, 
-				currentIntensity, 25, 40, 25, 0.08f, 0.040f); // 'fire' light
+				currentIntensity, 100, 40, 0, 0.08f, 0.0f); // 'fire' light
 			StartCoroutine(lightRoutine);
 			print("Fade Light Down");
+		
 		}
 		
 	}
@@ -267,6 +272,7 @@ public class FlashlightController : MonoBehaviour {
 	{
 		if (!delayButton && HasFlashlight && currentCharge > 0.05f && !Input.GetButton("LTRIG"))
 		{
+			sfxSource.PlayOneShot(FlashlightOff ? flashlightClips[0] : flashlightClips[1]);
 			FlashlightOff = !FlashlightOff;
 			delayButton = true;
 			StartCoroutine(ButtonDelayTimer(0.25f));
@@ -352,7 +358,7 @@ public class FlashlightController : MonoBehaviour {
 			vertlight.intensity = Mathf.Lerp(StartIntensity,endIntensity * currentCharge,time/(duration/50));
 			vertlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/50));
 			var scalar = Mathf.Lerp(StartSize,endSize,time/(duration/50));
-			currentCharge = Mathf.Lerp(currentCharge, 0, time / (duration));
+			currentCharge = Mathf.Lerp(currentCharge, 0, time / (duration*2));
 			lightShaft.transform.localScale = new Vector3(scalar, lightShaft.transform.localScale.y ,scalar);
 			lightChargeObject.GetComponent<Image>().fillAmount = Mathf.Lerp(currentCharge, 0, time/(duration));
 			time += Time.deltaTime;

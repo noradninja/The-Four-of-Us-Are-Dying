@@ -123,7 +123,7 @@ Shader "Lighting/Crepuscular Rays" {
 					float value = frac(i/rate);
 					float cast = Linear01Depth(tex2D(_CameraDepthTexture, uv)).r;
 					//calc depth value
-					depth = float(value !=0 ? float(cast * 1.5f):float(cast * randomFactor));
+					depth = float(value !=0 ? float(cast * 1.5f):float(cast * (1-randomFactor)));
 					// Apply sample attenuation scale/decay factors.
 					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
 					sample *= 2.5h;

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Rendering;
 
 // [ExecuteInEditMode]
@@ -25,6 +26,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	private Vector3 thisPos;
 	private Vector3 playerPos;
 	private Renderer thisRenderer;
+	public bool shadowCaster;
 	
 	public enum LODState
 	{
@@ -38,7 +40,6 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 	{
 		tick = 0;
 		//get needed components
-		thisRenderer = this.GetComponent<Renderer>();
 		originalMaterial = thisRenderer.sharedMaterial;
 		albedoTex = originalMaterial.mainTexture;
 		MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
@@ -58,11 +59,25 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 			replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
 			replacementMaterial.mainTexture = albedoTex;
 		}
-	} 
+	}
+
+	private void Awake()
+	{
+		thisRenderer = this.GetComponent<Renderer>();
+		if (thisRenderer.shadowCastingMode == ShadowCastingMode.On)
+		{
+			shadowCaster = true;
+		}
+		else
+		{
+			shadowCaster = false;
+		}
+	}
+
 	private void Update()
 	{
 		// we only need to do *whatever* FPS/tick times a frame, depending on refresh rate
-		if (tick != 5)
+		if (tick != 3)
 			tick++;
 		else 
 		{
@@ -87,7 +102,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 			case LODState.Full:
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
 				thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
-				thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
+				 if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
 				break;
 			case LODState.Reduced:
 				if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;

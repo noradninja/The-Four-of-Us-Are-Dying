@@ -61,7 +61,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 1, y: 4}
         m_Offset: {x: 0, y: 0}
     - _Height:
         m_Texture: {fileID: 0}
@@ -253,7 +253,7 @@ Material:
     - _Bicubic: 0
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 4
+    - _BumpScale: -2
     - _BumpShadowHardness: 60.9
     - _BumpShadowHeightScale: 0.5
     - _ColorAmplify: 1

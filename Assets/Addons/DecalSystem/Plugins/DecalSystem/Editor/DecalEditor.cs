@@ -32,7 +32,7 @@ namespace DecalSystem {
             EditorGUILayout.Separator();
             Target.LayerMask = GUIUtils.LayerMaskField( "Layer Mask", Target.LayerMask );
             Target.MaxAngle = EditorGUILayout.Slider( "Max Angle", Target.MaxAngle, 0, 180 );
-            Target.Offset = EditorGUILayout.Slider( "Offset", Target.Offset, 0.005f, 0.05f );
+            Target.Offset = EditorGUILayout.Slider( "Offset", Target.Offset, 0.001f, 0.05f );
 
 
             EditorGUILayout.Separator();

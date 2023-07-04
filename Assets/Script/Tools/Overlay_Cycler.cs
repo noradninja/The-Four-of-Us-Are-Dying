@@ -29,7 +29,7 @@ public class Overlay_Cycler : MonoBehaviour
 	public cycleState currentOverlay = cycleState.combined;
 	// Use this for initialization
 	void Start () {
-		VitaInputManager.Instance.OnSelect += SelectEvent;
+		VitaInputManager.Instance.OnDpadRight += DpadRightKeyDownEvent;
 	}
 	
 	// Update is called once per frame
@@ -37,7 +37,7 @@ public class Overlay_Cycler : MonoBehaviour
 		
 	}
 
-	private void SelectEvent()
+	private void DpadRightKeyDownEvent()
 	{
 		if (!delayButton)
 		{
@@ -51,42 +51,42 @@ public class Overlay_Cycler : MonoBehaviour
 			else if (currentOverlay == cycleState.rawRender)
 			{
 				currentOverlay = cycleState.combinedOcclusion;
-				postText.text = "Raw + Ambient Occlusion";
+				postText.text = "Raw + Occlusion";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.combinedOcclusion)
 			{
 				currentOverlay = cycleState.godRays;
-				postText.text = "Raw + Ambient Occlusion + Crepuscular";
+				postText.text = "Raw + Occlusion + Crepuscular";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.godRays)
 			{
 				currentOverlay = cycleState.bokeh;
-				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.bokeh)
 			{
 				currentOverlay = cycleState.lightningFlash;
-				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.lightningFlash)
 			{
 				currentOverlay = cycleState.lightningContrast;
-				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.lightningContrast)
 			{
 				currentOverlay = cycleState.sai2x;
-				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI";
 
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
@@ -95,7 +95,7 @@ public class Overlay_Cycler : MonoBehaviour
 
 			{
 				currentOverlay = cycleState.grain;
-				postText.text = "Raw + Ambient Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI + Grain";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI + Grain";
 
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
