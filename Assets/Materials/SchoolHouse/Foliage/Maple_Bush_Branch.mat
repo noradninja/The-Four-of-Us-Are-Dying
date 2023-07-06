@@ -12,7 +12,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -285,7 +285,7 @@ Material:
     - _Cull: 0
     - _CullMode: 0
     - _CustomColorAmount: 0
-    - _Cutoff: 0.175
+    - _Cutoff: 0
     - _Cutout: 0
     - _DarknessOnSundown: 1
     - _DesaturateTranslucency: 0
@@ -582,7 +582,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.063072145
+    - _influence: 0.031089567
     - _leaves_wiggle_disp: 0.08
     - _leaves_wiggle_speed: 0.25
     - _r_influence: 1
