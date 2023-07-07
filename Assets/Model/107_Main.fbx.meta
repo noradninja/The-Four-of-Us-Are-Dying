@@ -151,7 +151,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Trims_EXT_Transparent","Trims_EXT","Plaque","Glass","Exterior"],"padding":[85,18,256,34,8],"unwrapper":[0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -167,7 +168,7 @@ ModelImporter:
     generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
-    keepQuads: 0
+    keepQuads: 1
     weldVertices: 1
     preserveHierarchy: 0
     indexFormat: 0
@@ -181,7 +182,7 @@ ModelImporter:
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 1
     normalCalculationMode: 4
   importAnimation: 1
   copyAvatar: 0

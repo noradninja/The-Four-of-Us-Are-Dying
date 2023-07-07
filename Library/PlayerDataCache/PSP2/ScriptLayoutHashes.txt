@@ -518,3 +518,5 @@ c2be76183103889aa49c71a9d2cf30f7 MeshBakerCore.dll:DigitalOpus.MB.Core.MB_BlendS
 c4ef07ea8691cb21e6d62268442c68d6 Assembly-CSharp.dll:UnityEngine.UI.Extensions.SoftMaskScript
 201eb981a27cf5f96cc9b614cc9a0da8 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
+c87e48ae3216e23f70b30d90b4c79d74 Assembly-CSharp.dll:.Depth_Render
+ce4beb3d040966ff487793ca344419c6 Assembly-CSharp.dll:.Render_Pipeline_Overlay

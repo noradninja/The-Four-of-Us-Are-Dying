@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Exterior_Trims_LOD0
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP _SPECULAR_SETUP
+  m_ShaderKeywords: _METALLICGLOSSMAP _SPECGLOSSMAP _SPECULAR_SETUP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -124,7 +124,7 @@ Material:
     - _AlphaClip: 0
     - _AmbientOcclusionPower: 1
     - _Blend: 0
-    - _BumpScale: 1
+    - _BumpScale: 2
     - _Bumpiness: 0
     - _Cull: 2
     - _Cutoff: 0.5

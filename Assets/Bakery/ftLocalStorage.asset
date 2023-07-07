@@ -16,4 +16,5 @@ MonoBehaviour:
   - Assets/Model/SchoolHouse/White_Shed.fbx
   - Assets/Model/SchoolHouse/Scene_Test.fbx
   - Assets/Model/SchoolHouse/Grass.fbx
-  modifiedAssetPaddingHash: aaf8cc2e84c413dc3f625c6a1b88c5d2
+  - Assets/Model/107_Main.fbx
+  modifiedAssetPaddingHash: aaf8cc2e9350ba326af13d170ae4127e8569311e
