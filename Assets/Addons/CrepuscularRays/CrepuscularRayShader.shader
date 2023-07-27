@@ -21,6 +21,7 @@ Shader "Lighting/Crepuscular Rays" {
 		[IntRange] _Frequency ("Frequency", Range(1,15)) = 1
 		_fogInfluence("Fog Influence", Range(0,2)) = 0.5
 		_fogSpeed("Fog Speed", Float) = 10.0
+		[FloatRange] _Spread ("Spread", Range(1.0, 5.0)) = 1.0
 	}
 		CGINCLUDE
 		#include "UnityCG.cginc"
@@ -46,6 +47,7 @@ Shader "Lighting/Crepuscular Rays" {
 		int _Frequency;
 		float _fogInfluence;
 		half _fogSpeed;
+		half _Spread;
 		
 
 		
@@ -92,12 +94,17 @@ Shader "Lighting/Crepuscular Rays" {
 		half4 frag(v2f i) : COLOR
 			{
 				// Calculate floattor from pixel to light source in screen space.
+				half spread = _Spread;
 				half4 light = half4(_LightPos.xyz,1);
-				half2 deltaTexCoord = half2 (0,0);
 				// get our y direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation- we decompose this
 				//because it will not look right if we just add or subtract light.xy to i.uv
-				deltaTexCoord = half2(light.y < 0.0h ? half2(i.uv.x + light.x, i.uv.y + light.y) : half2(i.uv.x - light.x, i.uv.y - light.y));
+				half2 deltaTexCoord = half2(light.y < 0.0h ? half2((i.uv.x + light.x), (i.uv.y + light.y)) :
+									  half2((i.uv.x - light.x), (i.uv.y - light.y)));
+				/*
+				 * 	half2 deltaTexCoord = half2(light.y < 0.0h ? half2((i.uv.x + light.x) * spread, (i.uv.y + light.y) / spread) :
+									  half2((i.uv.x - light.x) / spread, (i.uv.y - light.y) * spread));
+				 */
 
 				// Divide by number of samples and scale by control factor.
 				deltaTexCoord *= 1.0h / _NumSamples * _Density;

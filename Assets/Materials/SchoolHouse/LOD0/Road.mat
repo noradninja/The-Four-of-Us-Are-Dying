@@ -312,7 +312,7 @@ Material:
     - _ForceBoxProject: 0
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
-    - _GlossMapScale: 0.75
+    - _GlossMapScale: 1
     - _Glossiness: 0.823
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5

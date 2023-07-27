@@ -33,16 +33,7 @@ public class CameraResolutionScaler : MonoBehaviour
     private RenderTexture renderTex;
     private Rect scaledRect;
     private int width;
-    
-    private RenderTexture GetTemporaryTexture(int width, int height) //set up our RT
-    {
-        var temporaryTexture = RenderTexture.GetTemporary(480, 272);
-        temporaryTexture.wrapMode = TextureWrapMode.Clamp;
-        temporaryTexture.anisoLevel = 0;
-        temporaryTexture.filterMode = filterMode;
-        return temporaryTexture;
-    }
-    
+
     private void Awake()
     {
         camera = GetComponent<Camera>();
@@ -54,24 +45,24 @@ public class CameraResolutionScaler : MonoBehaviour
                 //set resolution and 30Hz vsync
                 case currentResolution.Full:
                     Screen.SetResolution(960, 544, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.Mid:
                     Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.Low:
                     Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.PSP:
                     Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 2;
                     break;
             }
         }
         else //disable vsync in Editor
-            QualitySettings.vSyncCount = 0;
+            QualitySettings.vSyncCount = 2;
     }
 
     private void OnDestroy()
@@ -108,9 +99,9 @@ public class CameraResolutionScaler : MonoBehaviour
             }
 
             originalRect = camera.rect;
-            scaledRect.Set(originalRect.x, originalRect.y, 
-                            originalRect.width / renderDivisor,
-                            originalRect.height / renderDivisor);
+            scaledRect.Set(originalRect.x, originalRect.y,
+                originalRect.width / renderDivisor,
+                originalRect.height / renderDivisor);
             camera.rect = scaledRect; //scale cam rect for RT
         }
     }
@@ -127,5 +118,14 @@ public class CameraResolutionScaler : MonoBehaviour
             Graphics.Blit(renderTex, dest);
             RenderTexture.ReleaseTemporary(renderTex);
         }
+    }
+
+    private RenderTexture GetTemporaryTexture(int width, int height) //set up our RT
+    {
+        var temporaryTexture = RenderTexture.GetTemporary(480, 272);
+        temporaryTexture.wrapMode = TextureWrapMode.Clamp;
+        temporaryTexture.anisoLevel = 0;
+        temporaryTexture.filterMode = filterMode;
+        return temporaryTexture;
     }
 }

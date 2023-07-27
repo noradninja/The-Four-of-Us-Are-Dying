@@ -273,7 +273,7 @@ Material:
     - _Blend: 0
     - _BumpScale: 1
     - _ChannelFactor: 0.5
-    - _Clip: 0.5
+    - _Clip: 0.33
     - _ColorAmplify: 1
     - _ColorMapIntensity: 0.5
     - _ColorMapSizeWorld: 100
@@ -577,7 +577,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.24783741
+    - _influence: 0.2051231
     - _leaves_wiggle_disp: 0.25
     - _leaves_wiggle_speed: 0.11
     - _r_influence: 1
