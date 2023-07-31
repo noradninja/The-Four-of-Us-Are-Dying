@@ -54,7 +54,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     {
         tick = 0;
         //get needed components
-        originalMaterial = thisRenderer.sharedMaterial;
+        originalMaterial = thisRenderer.material;
         albedoTex = originalMaterial.mainTexture;
         MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
 
@@ -78,7 +78,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private void Update()
     {
         // we only need to do *whatever* FPS/tick times a frame, depending on refresh rate
-        if (tick != 30)
+        if (tick != 6)
             tick++;
         else
         {
@@ -106,17 +106,17 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         switch (shaderLOD)
         {
             case LODState.Full:
-                if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-                thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
+                //if (thisRenderer.material != originalMaterial) thisRenderer.material = originalMaterial;
+                thisRenderer.material.EnableKeyword("_NORMALMAP"); //enable normalmap
                 if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
                 break;
             case LODState.Reduced:
-                if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-                thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
+                if (thisRenderer.material != originalMaterial) thisRenderer.material = originalMaterial;
+                thisRenderer.material.DisableKeyword("_NORMALMAP"); //drop normalmap
                 thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
                 break;
             case LODState.VertexOnly:
-                thisRenderer.sharedMaterial = replacementMaterial;
+                thisRenderer.material = replacementMaterial;
                 thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
                 break;
         }

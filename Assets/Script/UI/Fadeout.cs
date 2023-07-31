@@ -25,6 +25,10 @@ public class Fadeout : MonoBehaviour {
 
 	IEnumerator fade(Color startValue, Color endValue, float duration){
 		float time = 0.0f;
+		if (delay > 0){
+		    yield return new WaitForSeconds(delay);
+		}
+		delay = 0;
 		while (time < duration){
 			fadeImage.color = Color.Lerp (startValue, endValue, time/duration);
 			time += Time.deltaTime;

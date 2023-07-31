@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Title_Animator : MonoBehaviour {
 
 public bool isEnabled = false;
+public float startDelay = 1.0f;
 public RawImage fadeImage;
 public float fadeAmount;
 public float fadeDelay;
@@ -23,7 +24,7 @@ public float fillDelay;
 	// Use this for initialization
 	void Start () {
 		//UnityEditor.EditorPrefs.SetBool("DeveloperMode", false);
-		StartCoroutine(Delay(1, 0, 3.0f));
+		StartCoroutine(Delay(1, 0, startDelay));
 	}
 	
 	// Update is called once per frame

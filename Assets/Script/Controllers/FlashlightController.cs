@@ -47,6 +47,10 @@ public class FlashlightController : MonoBehaviour {
 	public IEnumerator lightRoutine;
 	public IEnumerator chargeRoutine;
 	
+	//raycast
+	public RaycastHit hit;
+	public GameObject hitTarget;
+	public int currentTag;
 	
 	// Use this for initialization
 	void Start () {
@@ -71,10 +75,20 @@ public class FlashlightController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		
-		
+		// if (HasFlashlight && !FlashlightOff &&
+		//     Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward),
+		// 	    out hit, flashlight.GetComponent<Light>().range))
+		// {
+		// 	hitTarget = hit.transform.gameObject;
+		// 	currentTag = hitTarget.layer;
+		// 	if (currentTag != 12 && currentTag != 19)
+		// 	{
+		// 		hitTarget.layer = 22;	
+		// 	}  
+		// }
+		// else if(hitTarget != null) hitTarget.layer = currentTag;
 		currentTarget = PlayerController.currentTarget;
-		if (currentCharge <= 0.001f){
+		if (currentCharge <= 0.05f){
 			FlashlightDisabled = true;
 			currentCharge = 0;
 			print("Flashlight Disabled");
@@ -150,7 +164,7 @@ public class FlashlightController : MonoBehaviour {
 		{
 			if (lightRoutine != null) StopCoroutine(lightRoutine);
 			PlayerController.currentTarget = null;
-	
+			isCharging = true;
 			if (!FlashlightDisabled && currentCharge >= 0.05f){
 				float currentIntensity = flashlight.intensity;
 				float currentAngle = flashlight.spotAngle;
@@ -161,12 +175,10 @@ public class FlashlightController : MonoBehaviour {
 				StartCoroutine(lightRoutine);
 				print("Fade Light up");
 			}
-			if(!isCharging){
-				chargeRoutine = RechargeFlashlight (currentCharge,  20f);
+			chargeRoutine = RechargeFlashlight (currentCharge,  20f);
 				StartCoroutine(chargeRoutine);
 				print("Charging");
-			}
-			PlayerController.lightFocusing = false;
+				PlayerController.lightFocusing = false;
 			PlayerController.lightMovement = true;
 			//endLightRotation =  lightRoot.transform.localRotation;
 			lightRoot.transform.localRotation = storedLightRotation;
@@ -179,7 +191,7 @@ public class FlashlightController : MonoBehaviour {
 		isCharging = false;
 		if (lightRoutine != null) StopCoroutine(lightRoutine);
 		if (chargeRoutine != null) StopCoroutine(chargeRoutine);
-		if (HasFlashlight && FlashlightDisabled) //light is off b/c dead battery
+		if (HasFlashlight && currentCharge < 0.05f) //light is off b/c dead battery
 		{
 	
 			StartCoroutine(FadeLightStaticInput(colorTransparent, colorStart, 0.25f, 0, 
@@ -379,6 +391,7 @@ public class FlashlightController : MonoBehaviour {
 		}
 	
 		lightChargeObject.GetComponent<Image>().fillAmount = 1;
+		currentCharge = 1;
 		isCharging = false;
 		FlashlightDisabled = false;
 		

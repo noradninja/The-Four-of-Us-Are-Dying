@@ -465,7 +465,7 @@ MonoBehaviour:
   - Assets/Model/Map Geometry/Tree_Stand_Schoolhouse.fbx
   - Assets/Model/Map Geometry/Tree_Stand_Garage.fbx
   uvOverlapAssetList: 00000000ffffffff0101000001010000
-  xatlasWarningShown: 0
+  xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: Emulated (PSVita)
   runsNonRTX: 1
@@ -476,12 +476,12 @@ MonoBehaviour:
   alwaysEnableRTX: 0
   checkerPreviewOn: 0
   rtSceneViewPreviewOn: 0
-  renderSettingsBounces: 5
+  renderSettingsBounces: 3
   renderSettingsGISamples: 16
-  renderSettingsGIBackFaceWeight: 1
+  renderSettingsGIBackFaceWeight: 0
   renderSettingsTileSize: 1024
   renderSettingsPriority: 3
-  renderSettingsTexelsPerUnit: 57
+  renderSettingsTexelsPerUnit: 32
   renderSettingsForceRefresh: 1
   renderSettingsForceRebuildGeometry: 1
   renderSettingsPerformRendering: 1
@@ -495,13 +495,13 @@ MonoBehaviour:
   renderSettingsEncodeMode: 0
   renderSettingsOverwriteWarning: 0
   renderSettingsAutoAtlas: 1
-  renderSettingsUnwrapUVs: 1
+  renderSettingsUnwrapUVs: 0
   renderSettingsForceDisableUnwrapUVs: 0
   renderSettingsMaxAutoResolution: 1024
   renderSettingsMinAutoResolution: 16
-  renderSettingsUnloadScenes: 1
+  renderSettingsUnloadScenes: 0
   renderSettingsAdjustSamples: 1
-  renderSettingsGILODMode: 2
+  renderSettingsGILODMode: 0
   renderSettingsGILODModeEnabled: 0
   renderSettingsCheckOverlaps: 0
   renderSettingsSkipOutOfBoundsUVs: 1
@@ -526,24 +526,24 @@ MonoBehaviour:
   renderSettingsShowDirWarning: 1
   renderSettingsRenderDirMode: 1
   renderSettingsShowCheckerSettings: 1
-  renderSettingsSamplesWarning: 1
-  renderSettingsPrefabWarning: 1
+  renderSettingsSamplesWarning: 0
+  renderSettingsPrefabWarning: 0
   renderSettingsSplitByScene: 1
   renderSettingsUVPaddingMax: 0
   renderSettingsPostPacking: 1
   renderSettingsHoleFilling: 1
   renderSettingsBeepOnFinish: 0
   renderSettingsExportTerrainAsHeightmap: 0
-  renderSettingsRTXMode: 1
+  renderSettingsRTXMode: 0
   renderSettingsLightProbeMode: 1
   renderSettingsClientMode: 0
   renderSettingsServerAddress: 127.0.0.1
-  renderSettingsUnwrapper: 1
+  renderSettingsUnwrapper: 0
   renderSettingsDenoiserType: 5
   renderSettingsExportTerrainTrees: 0
   renderSettingsShowPerf: 1
   renderSettingsSampleDiv: 1
-  renderSettingsAtlasPacker: 1
+  renderSettingsAtlasPacker: 0
   renderSettingsBatchPoints: 1
   renderSettingsCompressVolumes: 0
   renderSettingsRTPVExport: 1

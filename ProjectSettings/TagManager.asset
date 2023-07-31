@@ -15,6 +15,7 @@ TagManager:
   - Heavy
   - Light
   - Water_Decals
+  - Cam
   layers:
   - Default
   - TransparentFX

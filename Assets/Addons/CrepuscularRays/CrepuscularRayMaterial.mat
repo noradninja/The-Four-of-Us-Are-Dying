@@ -30,13 +30,17 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _spotRT:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Contrast: 1.2
+    - _Contrast: 1.25
     - _CosAngle: 0
     - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.228
+    - _Density: 0.125
     - _Exposure: 0.1
     - _FrameValue: 0
     - _Frequency: 3
@@ -44,13 +48,14 @@ Material:
     - _NumSamples: 9
     - _Parameter: 0
     - _PerpendicularFalloff: 0.464
+    - _SpotDensity: 1
     - _Spread: 1.59
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _Weight: 2
-    - _fogInfluence: 2
-    - _fogSpeed: 1.75
+    - _fogInfluence: 1.75
+    - _fogSpeed: 1.5
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: -0.1945704, g: 1.960269, b: 0.6312705, a: 0}
+    - _LightPos: {r: -0.9148673, g: -1.313073, b: -0.45709333, a: 0}
     - _TintColor: {r: 0.09407263, g: 0.10131127, b: 0.13207549, a: 1}

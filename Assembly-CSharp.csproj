@@ -30,7 +30,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -39,7 +39,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -63,6 +63,7 @@
     <Compile Include="Assets\Addons\Bloom (Titles)\Scripts\RenderTextureExtensions.cs" />
     <Compile Include="Assets\Addons\Bloom (Titles)\Scripts\RenderTextureUtils.cs" />
     <Compile Include="Assets\Addons\CrepuscularRays\Crepuscular.cs" />
+    <Compile Include="Assets\Addons\CrepuscularRays\Crepuscular1.cs" />
     <Compile Include="Assets\Addons\CrepuscularRays\Crepuscupular_Setup.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Decal.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\DecalBuilder.cs" />
@@ -156,6 +157,7 @@
     <Compile Include="Assets\Script\Controllers\PlayerController.cs" />
     <Compile Include="Assets\Script\Controllers\SFXController.cs" />
     <Compile Include="Assets\Script\Enumerators\Item_Enumerator.cs" />
+    <Compile Include="Assets\Script\Enumerators\Light_LOD_Enumerator.cs" />
     <Compile Include="Assets\Script\Enumerators\Render_Pipeline_Overlay.cs" />
     <Compile Include="Assets\Script\Enumerators\Shader_LOD_Enumerator.cs" />
     <Compile Include="Assets\Script\ExtensionMethods\Math.cs" />
@@ -204,6 +206,8 @@
     <Compile Include="Assets\Script\UI\Fadeout.cs" />
     <Compile Include="Assets\Script\UI\UI_Fader.cs" />
     <Compile Include="Assets\Shader\Dither\DitherEffect.cs" />
+    <Compile Include="Assets\Specular Probes\SpecularProbeLight.cs" />
+    <Compile Include="Assets\Specular Probes\SpecularProbeRenderer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -585,6 +589,7 @@
     <None Include="Assets\TrueClouds\Resources\Shaders\Normal.shader" />
     <None Include="Assets\Shader\Standard Full\Standard_VC.shader" />
     <None Include="Assets\Addons\Shaders\beam_old.shader" />
+    <None Include="Assets\Addons\CrepuscularRays\CrepuscularRayShader 1.shader" />
     <None Include="Assets\TrueClouds\Resources\Shaders\Light\CloudsTintSubtractiveTwosided.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCommon.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Lightning_Contrast.shader" />

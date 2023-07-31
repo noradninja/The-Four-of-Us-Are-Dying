@@ -77,7 +77,7 @@ public class Item_Enumerator : MonoBehaviour {
         itemTexts.Add("health", "antiseptic");
      	itemTexts.Add("stims", "stimulants");	
 	///////////////////////////////////////////////////////////////////////////////
-	batteryText.text =InventoryManager.batteryCount.ToString();
+	//batteryText.text =InventoryManager.batteryCount.ToString();
 
 	////Check lists to see if we are in it; if not, destroy
 		// Meds

@@ -385,6 +385,11 @@ public class PlayerController : MonoBehaviour
 
     private void RTrigEvent()
     {
+        if (UICanvasGroup.alpha < 1.0f)
+        {
+            alphaRoutine = FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f);
+            StartCoroutine(alphaRoutine);
+        }
         
         if (stamina > 0f){ 
             Run(); //RUN, FORREST, RUN
@@ -433,12 +438,7 @@ public class PlayerController : MonoBehaviour
 
     private void RTrigDownEvent()
     {
-        // if (UICanvasGroup.alpha < 1.0f)
-        // {
-        //     if (alphaRoutine != null) StopCoroutine(alphaRoutine);
-        //         alphaRoutine = FadeAlpha(UICanvasGroup.alpha, 1.0f, 0.5f, 0.0f);
-        //         StartCoroutine(alphaRoutine);
-        // }
+        
         if (walkRoutine != null) StopCoroutine(walkRoutine);
         //if (alphaRoutine != null) StopCoroutine(alphaRoutine);
         if (chargeRoutine != null) StopCoroutine(chargeRoutine);

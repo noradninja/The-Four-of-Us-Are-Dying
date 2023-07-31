@@ -72,21 +72,21 @@ public class Overlay_Cycler : MonoBehaviour
 			else if (currentOverlay == cycleState.bokeh)
 			{
 				currentOverlay = cycleState.lightningFlash;
-				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.lightningFlash)
 			{
 				currentOverlay = cycleState.lightningContrast;
-				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning + Lightning Shadows";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}
 			else if (currentOverlay == cycleState.lightningContrast)
 			{
 				currentOverlay = cycleState.sai2x;
-				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning + Lightning Shadows + 2xSAI";
 
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
@@ -95,7 +95,7 @@ public class Overlay_Cycler : MonoBehaviour
 
 			{
 				currentOverlay = cycleState.grain;
-				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning Flash + Lightning Shadows + 2xSAI + Grain";
+				postText.text = "Raw + Occlusion + Crepuscular + Bokeh + Lightning + Lightning Shadows + 2xSAI + Grain";
 
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
@@ -103,7 +103,7 @@ public class Overlay_Cycler : MonoBehaviour
 			else if (currentOverlay == cycleState.grain)
 			{
 				currentOverlay = cycleState.combined;
-				postText.text = "Full Render";
+				postText.text = " ";
 				delayButton = true;
 				StartCoroutine(ButtonDelayTimer(0.5f));
 			}

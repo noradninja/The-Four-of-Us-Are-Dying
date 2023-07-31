@@ -9,8 +9,8 @@ Material:
   m_Name: Maple_Bush_bark
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _BAKERY_NONE _FRESNELMODEL_SCHLICK
-    _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _GLOSSYREFLECTIONS_OFF _LIGHTMAPSPECULAR _METALLICGLOSSMAP
-    _NORMALDISTMODEL_BLINNPHONG _NORMALMAP _SMITHGEOSHADOWMODEL_NONE _SPECGLOSSMAP
+    _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALDISTMODEL_BLINNPHONG
+    _NORMALMAP _SMITHGEOSHADOWMODEL_NONE _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -320,9 +320,9 @@ Material:
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
     - _GeoShadowModel: 0
-    - _GlossMapScale: 0.25
+    - _GlossMapScale: 1
     - _Glossiness: 0.05
-    - _GlossyReflections: 0
+    - _GlossyReflections: 1
     - _HeightRefPlane: 0.5
     - _HeightScale: 0.006
     - _HeightStepsMax: 16

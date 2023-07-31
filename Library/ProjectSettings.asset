@@ -108,9 +108,9 @@ PlayerSettings:
   xboxOnePresentImmediateThreshold: 0
   switchQueueCommandMemory: 0
   videoMemoryForVertexBuffers: 0
-  psp2PowerMode: 2
+  psp2PowerMode: 1
   psp2AcquireBGM: 1
-  vulkanEnableSetSRGBWrite: 1
+  vulkanEnableSetSRGBWrite: 0
   vulkanUseSWCommandBuffers: 0
   m_SupportedAspectRatios:
     4:3: 1
@@ -165,7 +165,7 @@ PlayerSettings:
   ForceSDCardPermission: 0
   CreateWallpaper: 0
   APKExpansionFiles: 0
-  keepLoadedShadersAlive: 1
+  keepLoadedShadersAlive: 0
   StripUnusedMeshComponents: 1
   VertexChannelCompressionMask: -1
   iPhoneSdkVersion: 988
@@ -319,7 +319,7 @@ PlayerSettings:
     m_EncodingQuality: 1
   m_BuildTargetGroupLightmapSettings:
   - m_BuildTarget: PSP2
-    m_TextureStreamingEnabled: 0
+    m_TextureStreamingEnabled: 1
     m_TextureStreamingPriority: 0
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
@@ -526,7 +526,7 @@ PlayerSettings:
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
   monoEnv: 
-  psp2Splashimage: {fileID: 2800000, guid: 5dbc8b45c5584b149bddbed51d5c5175, type: 3}
+  psp2Splashimage: {fileID: 2800000, guid: 87f6c6f2da70b934da0e32496749de08, type: 3}
   psp2NPTrophyPackPath: 
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12
@@ -538,7 +538,7 @@ PlayerSettings:
   psp2ParamSfxPath: 
   psp2ManualPath: 
   psp2LiveAreaGatePath: Assets/Texture/Sony UI/Gate.png
-  psp2LiveAreaBackroundPath: 
+  psp2LiveAreaBackroundPath: Assets/Texture/Sony UI/bg0.png
   psp2LiveAreaPath: 
   psp2LiveAreaTrialPath: 
   psp2PatchChangeInfoPath: 
@@ -568,7 +568,7 @@ PlayerSettings:
   psp2TVDisableEmu: 1
   psp2AllowTwitterDialog: 1
   psp2Upgradable: 0
-  psp2HealthWarning: 1
+  psp2HealthWarning: 0
   psp2UseLibLocation: 0
   psp2InfoBarOnStartup: 0
   psp2InfoBarColor: 0
@@ -608,7 +608,7 @@ PlayerSettings:
   il2cppCompilerConfiguration:
     PSP2: 1
   incrementalIl2cppBuild: {}
-  allowUnsafeCode: 0
+  allowUnsafeCode: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
   apiCompatibilityLevelPerPlatform:

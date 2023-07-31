@@ -11,8 +11,8 @@ CustomRenderTexture:
     Hash: 00000000000000000000000000000000
   m_ForcedFallbackFormat: 4
   m_DownscaleFallback: 0
-  m_Width: 480
-  m_Height: 272
+  m_Width: 128
+  m_Height: 128
   m_AntiAliasing: 1
   m_DepthFormat: 0
   m_ColorFormat: 0
@@ -36,13 +36,13 @@ CustomRenderTexture:
   m_InitMaterial: {fileID: 0}
   m_InitColor: {r: 1, g: 1, b: 1, a: 1}
   m_InitTexture: {fileID: 0}
-  m_UpdateMode: 2
-  m_InitializationMode: 2
+  m_UpdateMode: 1
+  m_InitializationMode: 1
   m_UpdateZoneSpace: 0
   m_CurrentUpdateZoneSpace: 0
   m_UpdateZones: []
   m_UpdatePeriod: 0
   m_ShaderPass: 0
   m_CubemapFaceMask: 4294967295
-  m_DoubleBuffered: 1
+  m_DoubleBuffered: 0
   m_WrapUpdateZones: 0
