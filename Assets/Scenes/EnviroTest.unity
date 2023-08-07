@@ -6958,9 +6958,9 @@ GameObject:
   - component: {fileID: 121908234}
   - component: {fileID: 121908235}
   - component: {fileID: 121908238}
-  - component: {fileID: 121908230}
   - component: {fileID: 121908227}
   - component: {fileID: 121908232}
+  - component: {fileID: 121908230}
   - component: {fileID: 121908233}
   - component: {fileID: 121908231}
   m_Layer: 10
@@ -7039,7 +7039,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 121908223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b15fae5e112b4074dbbb579d2561fa1b, type: 3}
   m_Name: 
@@ -7103,7 +7103,7 @@ MonoBehaviour:
   monochrome: 1
   intensities: {x: 1, y: 1, z: 1}
   tiling: {x: 64, y: 64, z: 64}
-  monochromeTiling: 128
+  monochromeTiling: 32
   filterMode: 0
   noiseTexture: {fileID: 2800000, guid: 7a632f967e8ad42f5bd275898151ab6a, type: 3}
   noiseShader: {fileID: 4800000, guid: b0249d8c935344451aa4de6db76f0688, type: 3}

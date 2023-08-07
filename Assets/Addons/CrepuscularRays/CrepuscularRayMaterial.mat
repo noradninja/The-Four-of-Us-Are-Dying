@@ -42,7 +42,7 @@ Material:
     - _DeltaCoordY: 0
     - _Density: 0.125
     - _Exposure: 0.1
-    - _FrameValue: 0
+    - _FrameValue: 1
     - _Frequency: 3
     - _LightY: 0
     - _NumSamples: 9
