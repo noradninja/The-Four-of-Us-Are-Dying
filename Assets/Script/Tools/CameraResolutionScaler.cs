@@ -1,11 +1,46 @@
-﻿using UnityEditor;
+﻿using System;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 [ExecuteInEditMode]
-
-// Add this to your main camera//////////////////////////////////////////////////////////////////////////////////////////////
 public class CameraResolutionScaler : MonoBehaviour
 {
+ 
+    // public float downscaleFactor = 2f; // Factor by which to downscale the framebuffer
+    // private int width;
+    // private int height;
+    // private Camera camera;
+    // public RenderTexture downscaleTexture;
+    // private CommandBuffer downscaleCommandBuffer;
+    // private Material blitMaterial;
+    //
+    // private void Awake()
+    // {
+    //     camera = GetComponent<Camera>();
+    //     blitMaterial = new Material(Shader.Find("Blitter"));
+    // }
+    // private void OnPreRender() //before we render anything
+    // {
+    //     width = 512;//Mathf.RoundToInt(camera.pixelWidth / downscaleFactor);
+    //     height = 256; //Mathf.RoundToInt(camera.pixelHeight / downscaleFactor);
+    //     Rect viewport = new Rect(0, 0, width, height);
+    //
+    //     camera.pixelRect = viewport;
+    //     downscaleCommandBuffer = new CommandBuffer();
+    //     camera.AddCommandBuffer(CameraEvent.BeforeForwardOpaque, downscaleCommandBuffer);
+    //    
+    //     downscaleCommandBuffer.Clear();
+    //     downscaleCommandBuffer.SetRenderTarget(downscaleTexture);
+    // }
+    //
+    // private void OnPostRender() //immediately after render but before drawing to framebuffer
+    // {
+    //     downscaleCommandBuffer.Blit(BuiltinRenderTextureType.CameraTarget, downscaleTexture);
+    //     camera.pixelRect = new Rect(0, 0, 960, 544);
+    //     downscaleCommandBuffer.SetRenderTarget(BuiltinRenderTextureType.CameraTarget);
+    //     downscaleCommandBuffer.Blit(downscaleTexture, BuiltinRenderTextureType.CameraTarget);
+    //     camera.RemoveCommandBuffer(CameraEvent.BeforeForwardOpaque, downscaleCommandBuffer); //drop cb
+    // }
     public enum currentResolution
     {
         [Tooltip("960x544")] Full,
@@ -26,20 +61,21 @@ public class CameraResolutionScaler : MonoBehaviour
     public internalResolution InternalResolution;
     public currentResolution screenResolution;
     public FilterMode filterMode = FilterMode.Trilinear;
+    
     private new Camera camera;
-    private int height;
     private Rect originalRect;
-    private float renderDivisor;
+    //private float renderDivisor;
     private RenderTexture renderTex;
     private Rect scaledRect;
     private int width;
-
+    private int height;
+    
+    
     private void Awake()
     {
         camera = GetComponent<Camera>();
+
         if (!Application.isEditor)
-        {
-            //PlayerSettings.graphicsJobMode = GraphicsJobMode.Native;
             switch (screenResolution)
             {
                 //set resolution and 30Hz vsync
@@ -60,14 +96,18 @@ public class CameraResolutionScaler : MonoBehaviour
                     QualitySettings.vSyncCount = 2;
                     break;
             }
-        }
         else //disable vsync in Editor
-            QualitySettings.vSyncCount = 2;
+            QualitySettings.vSyncCount = 1;
     }
 
+    private void OnDisable()
+    {
+        camera.pixelRect = originalRect;
+    }
+    
     private void OnDestroy()
     {
-        camera.rect = originalRect;
+        camera.pixelRect = originalRect;
     }
 
     private void OnPreRender()
@@ -79,53 +119,39 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.Full:
                     width = 960;
                     height = 544;
-                    renderDivisor = 1;
+                    //renderDivisor = 1;
                     break;
                 case internalResolution.Mid:
                     width = 720;
                     height = 408;
-                    renderDivisor = 1.334f;
+                    //renderDivisor = 1.334f;
                     break;
                 case internalResolution.Low:
                     width = 640;
                     height = 368;
-                    renderDivisor = 1.5f;
+                    //renderDivisor = 1.5f;
                     break;
                 case internalResolution.PSP:
-                    width = 480;
-                    height = 272;
-                    renderDivisor = 2.0f;
+                    width = 380;
+                    height = 215;
+                    //renderDivisor = 2.0f;
                     break;
             }
 
-            originalRect = camera.rect;
-            scaledRect.Set(originalRect.x, originalRect.y,
-                originalRect.width / renderDivisor,
-                originalRect.height / renderDivisor);
-            camera.rect = scaledRect; //scale cam rect for RT
+            // rect is 0 to 1
+            // pixelRect is 0 to renderSize
+            originalRect = camera.pixelRect;
+            scaledRect.Set(0, 0, width,height);
+            camera.pixelRect = scaledRect;
         }
     }
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
-        if (!enableInternalResolution) Graphics.Blit(src, dest); //just blit to screen if we arent scaling
-        else //create and blit RT for resolution scaling
-        {
-            renderTex = GetTemporaryTexture(width, height);
-            camera.rect = originalRect;
-            src.filterMode = filterMode;
-            Graphics.Blit(src, renderTex);
-            Graphics.Blit(renderTex, dest);
-            RenderTexture.ReleaseTemporary(renderTex);
-        }
-    }
-
-    private RenderTexture GetTemporaryTexture(int width, int height) //set up our RT
-    {
-        var temporaryTexture = RenderTexture.GetTemporary(480, 272);
-        temporaryTexture.wrapMode = TextureWrapMode.Clamp;
-        temporaryTexture.anisoLevel = 0;
-        temporaryTexture.filterMode = filterMode;
-        return temporaryTexture;
+        // Luckily, looks like using OnRenderImage automatically makes the camera render to a TempBuffer of the size of the camera.pixelRect 
+    
+        camera.pixelRect = originalRect;
+        src.filterMode = filterMode;
+        Graphics.Blit(src, dest); // Blit from the low res to the framebuffer
     }
 }

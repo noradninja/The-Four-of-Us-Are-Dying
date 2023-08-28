@@ -221,7 +221,7 @@ float4 BakeryTexCoords(BakeryVertexInput v)
 {
     float4 texcoord;
     texcoord.xy = TRANSFORM_TEX(v.uv0, _MainTex); // Always source from uv0
-    texcoord.zw = 0;
+    texcoord.zw = TRANSFORM_TEX(((_UVSec == 0) ? v.uv0 : v.uv1), _DetailAlbedoMap);
     return texcoord;
 }
 

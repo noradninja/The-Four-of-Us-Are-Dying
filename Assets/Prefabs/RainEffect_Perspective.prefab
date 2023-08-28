@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4074270257142658}
   - component: {fileID: 198270193400346888}
   - component: {fileID: 199527357663817942}
+  - component: {fileID: 114988248871531500}
   m_Layer: 0
   m_Name: RainEffect_Perspective
   m_TagString: Untagged
@@ -35,12 +36,246 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691588846913814}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0, y: 5, z: 2.198}
+  m_LocalScale: {x: 0.9999997, y: 0.99999994, z: 1.000001}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &114988248871531500
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1691588846913814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a054274092705d47b8cc27f27aab3bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dataContainer:
+    objectsHistory:
+      gameObject: {fileID: 0}
+      undoOperations: []
+      redoOperations: []
+    objectMeshPairs:
+      _Buckets: ffffffffffffffffffffffff
+      _HashCodes: 000000000000000000000000
+      _Next: 000000000000000000000000
+      _Count: 0
+      _Version: 0
+      _FreeList: -1
+      _FreeCount: 0
+      _Keys:
+      - {fileID: 0}
+      - {fileID: 0}
+      - {fileID: 0}
+      _Values:
+      - attachedToMeshFilter: 0
+        mesh: {fileID: 0}
+      - attachedToMeshFilter: 0
+        mesh: {fileID: 0}
+      - attachedToMeshFilter: 0
+        mesh: {fileID: 0}
+    currentLodLevelSettings: []
+    toleranceSpheres: []
+    lodBackup:
+      originalRenderers: []
+      lodParentObject: {fileID: 0}
+    textureArraysSettings:
+      diffuseArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      metallicArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      specularArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      normalArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      heightArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      occlusionArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      emissiveArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      detailMaskArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      detailAlbedoArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+      detailNormalArraySettings:
+        resolution:
+          width: 0
+          height: 0
+        filteringMode: 0
+        compressionType: 0
+        compressionQuality: 0
+        anisotropicFilteringLevel: 0
+        choiceResolutionW: 0
+        choiceResolutionH: 0
+        choiceFilteringMode: 0
+        choiceCompressionQuality: 0
+        choiceCompressionType: 0
+    materialsToRestore: []
+    lastObjMaterialLinks: {fileID: 0}
+    relocateMaterialLinks: 0
+    reInitializeTempMatProps: 0
+    choiceTextureMap: 0
+    choiceDiffuseColorSpace: 0
+    batchFewSavePath: 
+    existingTextureArrays: []
+    existingTextureArraysFoldout: 0
+    existingTextureArraysSize: 0
+    textureArraysPropsFoldout: 0
+    existingArraysProps:
+      resolution:
+        width: 0
+        height: 0
+      filteringMode: 0
+      compressionType: 0
+      compressionQuality: 0
+      anisotropicFilteringLevel: 0
+      choiceResolutionW: 0
+      choiceResolutionH: 0
+      choiceFilteringMode: 0
+      choiceCompressionQuality: 0
+      choiceCompressionType: 0
+    choiceColorSpace: 0
+    preserveBorders: 0
+    preserveUVSeams: 0
+    preserveUVFoldover: 0
+    useEdgeSort: 0
+    recalculateNormals: 0
+    maxIterations: 100
+    aggressiveness: 7
+    regardCurvature: 0
+    considerChildren: 0
+    isPreservationActive: 0
+    sphereDiameter: 0.5
+    oldSphereScale: {x: 0, y: 0, z: 0}
+    reductionStrength: 0
+    reductionPending: 0
+    prevFeasibleTarget: {fileID: 0}
+    runOnThreads: 0
+    triangleCount: 0
+    lastDrawer: {fileID: 0}
+    foldoutAutoLOD: 0
+    foldoutBatchFew: 0
+    foldoutAutoLODMultiple: 0
+    objPositionPrevFrame: {x: 0, y: 0, z: 0}
+    objScalePrevFrame: {x: 0, y: 0, z: 0}
+    considerChildrenBatchFew: 1
+    autoLODSavePath: 
+    foldoutAdditionalOpts: 0
+    generateUV2LODs: 0
+    copyParentStaticFlags: 0
+    copyParentTag: 0
+    copyParentLayer: 0
+    createAsChildren: 0
+    removeLODBackupComponent: 0
+    generateUV2batchfew: 0
+    removeMaterialLinksComponent: 0
+    clearBlendshapesComplete: 0
+    clearBlendshapesNormals: 0
+    clearBlendshapesTangents: 0
+    isPlainSkin: 0
 --- !u!198 &198270193400346888
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -48,7 +283,7 @@ ParticleSystem:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1691588846913814}
   serializedVersion: 5
-  lengthInSec: 5
+  lengthInSec: 0.25
   simulationSpeed: 1
   stopAction: 0
   looping: 1
@@ -56,7 +291,7 @@ ParticleSystem:
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
-  useRigidbodyForVelocity: 1
+  useRigidbodyForVelocity: 0
   startDelay:
     serializedVersion: 2
     minMaxState: 0
@@ -120,7 +355,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.035
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -289,8 +524,8 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.01
-      minScalar: 0.1
+      scalar: 0.0125
+      minScalar: 0.01
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -342,8 +577,8 @@ ParticleSystem:
     startSizeY:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 2
+      scalar: 0.025
+      minScalar: 0.05
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -395,8 +630,8 @@ ParticleSystem:
     startSizeZ:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.1
-      minScalar: 0.1
+      scalar: 0.001
+      minScalar: 0.005
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -605,8 +840,8 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
-    size3D: 1
+    maxNumParticles: 600
+    size3D: 0
     rotation3D: 0
     gravityModifier:
       serializedVersion: 2
@@ -664,7 +899,7 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 5
     enabled: 1
-    type: 5
+    type: 18
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
@@ -672,7 +907,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 20, y: 3, z: 1}
+    m_Scale: {x: 3.349619, y: 2.183382, z: 0}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -814,7 +1049,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1000
+      scalar: 600
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -1429,12 +1664,12 @@ ParticleSystem:
     sprites:
     - sprite: {fileID: 0}
   VelocityModule:
-    enabled: 1
+    enabled: 0
     x:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0
-      minScalar: 0
+      scalar: -1
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1486,8 +1721,8 @@ ParticleSystem:
     y:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0
-      minScalar: 0
+      scalar: -1
+      minScalar: 1
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1539,8 +1774,8 @@ ParticleSystem:
     z:
       serializedVersion: 2
       minMaxState: 3
-      scalar: -15
-      minScalar: -25
+      scalar: -5
+      minScalar: -10
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -3443,12 +3678,12 @@ ParticleSystem:
   CollisionModule:
     enabled: 0
     serializedVersion: 3
-    type: 0
+    type: 1
     collisionMode: 0
     colliderForce: 0
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
-    multiplyColliderForceByCollisionAngle: 1
+    multiplyColliderForceByCollisionAngle: 0
     plane0: {fileID: 0}
     plane1: {fileID: 0}
     plane2: {fileID: 0}
@@ -3511,7 +3746,7 @@ ParticleSystem:
     m_Bounce:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3614,14 +3849,14 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minKillSpeed: 0
-    maxKillSpeed: 10000
+    minKillSpeed: 10000
+    maxKillSpeed: 0
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 4294967295
+      m_Bits: 528385
     maxCollisionShapes: 256
-    quality: 0
+    quality: 2
     voxelSize: 0.5
     collisionMessages: 0
     collidesWithDynamic: 1
@@ -3645,7 +3880,7 @@ ParticleSystem:
     subEmitters:
     - serializedVersion: 2
       emitter: {fileID: 0}
-      type: 0
+      type: 1
       properties: 0
   LightsModule:
     enabled: 0
@@ -3769,7 +4004,7 @@ ParticleSystem:
     lifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 1
+      scalar: 0.05
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -3819,24 +4054,24 @@ ParticleSystem:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-    minVertexDistance: 0.2
-    textureMode: 0
+    minVertexDistance: 0.25
+    textureMode: 2
     ribbonCount: 1
-    worldSpace: 0
+    worldSpace: 1
     dieWithParticles: 1
     sizeAffectsWidth: 1
     sizeAffectsLifetime: 0
-    inheritParticleColor: 1
+    inheritParticleColor: 0
     generateLightingData: 0
     splitSubEmitterRibbons: 0
     colorOverLifetime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 1, g: 1, b: 1, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 0}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
@@ -3894,7 +4129,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     widthOverTrail:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -3902,16 +4137,25 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
+          value: 0
+          inSlope: 11.156689
+          outSlope: 11.156689
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.33333334
+          outWeight: 0.32603854
+        - serializedVersion: 3
+          time: 0.10776551
+          value: 0.6008879
+          inSlope: 2.472656
+          outSlope: 2.472656
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.11355185
         - serializedVersion: 3
           time: 1
-          value: 1
+          value: 0.07080078
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -3947,14 +4191,14 @@ ParticleSystem:
         m_RotationOrder: 4
     colorOverTrail:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 1
       minColor: {r: 1, g: 1, b: 1, a: 1}
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
+        key0: {r: 1, g: 1, b: 1, a: 0}
         key1: {r: 1, g: 1, b: 1, a: 1}
-        key2: {r: 0, g: 0, b: 0, a: 0}
+        key2: {r: 0, g: 0, b: 0, a: 1}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
         key5: {r: 0, g: 0, b: 0, a: 0}
@@ -3970,7 +4214,7 @@ ParticleSystem:
         ctime7: 0
         atime0: 0
         atime1: 65535
-        atime2: 0
+        atime2: 65535
         atime3: 0
         atime4: 0
         atime5: 0
@@ -4585,7 +4829,7 @@ ParticleSystemRenderer:
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
-  m_MotionVectors: 1
+  m_MotionVectors: 2
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
@@ -4614,10 +4858,10 @@ ParticleSystemRenderer:
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
-  m_MaxParticleSize: 0.5
+  m_MaxParticleSize: 1
   m_CameraVelocityScale: 0
   m_VelocityScale: 0
-  m_LengthScale: 2
+  m_LengthScale: 4
   m_SortingFudge: 0
   m_NormalDirection: 1
   m_RenderAlignment: 0

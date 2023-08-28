@@ -7,12 +7,13 @@ Properties {
 	_BumpAmt  ("Distortion", range (0,128)) = 10
 	_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
 	_BumpMap ("Normalmap", 2D) = "bump" {}
+	_AlphaMap ("Alpha Map (r)", 2D) = "white" {}
 }
 
 Category {
 
 	// We must be transparent, so other objects are drawn before this one.
-	Tags { "Queue"="Transparent" "RenderType"="Opaque" }
+	Tags { "Queue"="Transparent"}
 
 
 	SubShader {
@@ -29,6 +30,8 @@ Category {
 		Pass {
 			Name "BASE"
 			Tags { "LightMode" = "Always" }
+			Blend SrcAlpha OneMinusSrcAlpha
+			ZWrite Off
 			
 CGPROGRAM
 #pragma vertex vert
@@ -45,13 +48,14 @@ struct v2f {
 	half4 vertex : SV_POSITION;
 	half4 uvgrab : TEXCOORD0;
 	half2 uvbump : TEXCOORD1;
-	half2 uvmain : TEXCOORD2;
+	half4 alpha : TEXCOORD2;
 	UNITY_FOG_COORDS(3)
 };
 
 half _BumpAmt;
 half4 _BumpMap_ST;
 half4 _TintColor;
+
 
 v2f vert (appdata_t v)
 {
@@ -66,7 +70,7 @@ v2f vert (appdata_t v)
 sampler2D _GrabTexture;
 half4 _GrabTexture_TexelSize;
 sampler2D _BumpMap;
-
+sampler2D _AlphaMap;
 
 half4 frag (v2f i) : SV_Target
 {
@@ -75,18 +79,18 @@ half4 frag (v2f i) : SV_Target
 	#endif
 
 	// calculate perturbed coordinates
-	const half2 bump = UnpackNormal(tex2D( _BumpMap, i.uvbump )).rg; // we could optimize this by just reading the x & y without reconstructing the Z
+	half2 bump = UnpackNormal(tex2D( _BumpMap, i.uvbump )).rg; // we could optimize this by just reading the x & y without reconstructing the Z
 	half2 offset = bump * _BumpAmt * _GrabTexture_TexelSize.xy;
 	#ifdef UNITY_Z_0_FAR_FROM_CLIPSPACE //to handle recent standard asset package on older version of unity (before 5.5)
 		i.uvgrab.xy = offset * UNITY_Z_0_FAR_FROM_CLIPSPACE(i.uvgrab.z) + i.uvgrab.xy;
 	#else
 		i.uvgrab.xy = offset * i.uvgrab.z + i.uvgrab.xy;
 	#endif
-
+	const half alpha = tex2D(_AlphaMap, i.uvbump).r;
 	half4 col = tex2Dproj( _GrabTexture, UNITY_PROJ_COORD(i.uvgrab));
 	half4 tint = _TintColor;
 	col *= tint*1.9h;
-	col.a = tint.a;
+	col.a = tint.a * alpha;
 	UNITY_APPLY_FOG(i.fogCoord, col);
 	return col;
 }

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modifiedAssetPathList:
   - Assets/Bakery/examples/content/sponza/sponza.FBX
-  - Assets/Model/SchoolHouse/White_Shed.fbx
   - Assets/Model/SchoolHouse/Scene_Test.fbx
   - Assets/Model/SchoolHouse/Grass.fbx
+  - Assets/Model/SchoolHouse/White_Shed.fbx
   - Assets/Model/107_Main.fbx
-  modifiedAssetPaddingHash: aaf8cc2e9350ba326af13d170ae4127e8569311e
+  modifiedAssetPaddingHash: aaf8cc2e118b31dc22afe31790138d65582df692

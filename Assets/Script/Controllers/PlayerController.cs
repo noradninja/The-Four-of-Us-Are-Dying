@@ -132,16 +132,16 @@ public class PlayerController : MonoBehaviour
         _walkSpeed = speed;
         flashlightCharge = lightChargeObject.GetComponent<Image>().fillAmount;
         cooldownValue = stimCooldown;
-         if (ssaoScript.GetComponent<FastSSAO>().enabled == false){      
-            ssaoScript.GetComponent<FastSSAO>().enabled = true;
-            bokehScript.GetComponent<Kino.Bokeh>().enabled = true;
-            // SSAOScript.GetComponent<SAI2x>().enabled = true;
-            ssaoScript.GetComponent<FXAA>().enabled = true;
-            ssaoScript.GetComponent<Crepuscular>().enabled = true;
-            ssaoScript.GetComponent<Kino.Fog>().enabled = true;
-            // enabledText.GetComponent<Text>().color = Color.green;
-            // enabledText.GetComponent<Text>().text = ("Enabled");
-         }
+         // if (ssaoScript.GetComponent<FastSSAO>().enabled == false){      
+         //    ssaoScript.GetComponent<FastSSAO>().enabled = true;
+         //    bokehScript.GetComponent<Kino.Bokeh>().enabled = true;
+         //    // SSAOScript.GetComponent<SAI2x>().enabled = true;
+         //    ssaoScript.GetComponent<FXAA>().enabled = true;
+         //    ssaoScript.GetComponent<Crepuscular>().enabled = true;
+         //    ssaoScript.GetComponent<Kino.Fog>().enabled = true;
+         //    // enabledText.GetComponent<Text>().color = Color.green;
+         //    // enabledText.GetComponent<Text>().text = ("Enabled");
+         // }
     }
 
     void Start()
@@ -400,7 +400,7 @@ public class PlayerController : MonoBehaviour
         }
         if (verticalMove != 0 && stamina  != 0f && !isStimulant){
             var oldStamina = stamina;
-            stamina -= 0.75f; //full is 100
+            stamina -= 0.15f; //full is 100
             if (speed > _walkSpeed){ //speed Starts at 5
                 speed -= (speed / (8 * stamina)); //speed loss falls off as you lose stamina and slow down  
             }
@@ -796,10 +796,10 @@ public class PlayerController : MonoBehaviour
         var time = 0.0f;
         //yield return new WaitForSeconds(2f); //delay before charge happens
         while (time < duration){
-            if (stamina > 97){
+            if (stamina > 99){
                 stamina = 100;
             }
-            currentStamina = Mathf.Lerp (currentStamina, 100f, time / (duration * 10f) );
+            currentStamina = Mathf.Lerp (currentStamina, 100f, time / duration * 20f );
             staminaObject.GetComponent<Image>().fillAmount = Mathf.Lerp((currentStamina/100), 1, time / (duration * 10f));
             time += Time.deltaTime;
             stamina = currentStamina;

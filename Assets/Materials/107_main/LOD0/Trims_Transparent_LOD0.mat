@@ -146,7 +146,7 @@ Material:
     - _FlipbookMode: 0
     - _Fresnel: 0.827
     - _Gloss: 1
-    - _GlossMapScale: 0
+    - _GlossMapScale: 1
     - _Glossiness: 0
     - _GlossinessSource: 1
     - _GlossyReflections: 1

@@ -1,0 +1,143 @@
+fileFormatVersion: 2
+guid: c1216b5e63e70a643a88e33a6aeb23ea
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Curved_Handle1
+    100002: Curved_Handle2
+    100004: Doorknob1
+    100006: Ext_Trims
+    100008: //RootNode
+    100010: Roof_Chimney_Porch_Stairs_Rail_Slats
+    100012: Trims_Back
+    100014: Trims_Front
+    100016: Back_Half
+    100018: Front_Half
+    100020: Ivy
+    400000: Curved_Handle1
+    400002: Curved_Handle2
+    400004: Doorknob1
+    400006: Ext_Trims
+    400008: //RootNode
+    400010: Roof_Chimney_Porch_Stairs_Rail_Slats
+    400012: Trims_Back
+    400014: Trims_Front
+    400016: Back_Half
+    400018: Front_Half
+    400020: Ivy
+    2100000: Trims
+    2100002: Trims4
+    2100004: Roof_Porch_Rails1
+    2100006: Back_Exterior
+    2100008: Front_Exterior
+    2100010: Foliage
+    2300000: Curved_Handle1
+    2300002: Curved_Handle2
+    2300004: Doorknob1
+    2300006: Roof_Chimney_Porch_Stairs_Rail_Slats
+    2300008: Trims_Back
+    2300010: Trims_Front
+    2300012: Back_Half
+    2300014: Front_Half
+    2300016: Ivy
+    3300000: Curved_Handle1
+    3300002: Curved_Handle2
+    3300004: Doorknob1
+    3300006: Roof_Chimney_Porch_Stairs_Rail_Slats
+    3300008: Trims_Back
+    3300010: Trims_Front
+    3300012: Back_Half
+    3300014: Front_Half
+    3300016: Ivy
+    4300000: Curved_Handle2
+    4300002: Curved_Handle1
+    4300004: Doorknob1
+    4300006: Trims_Front
+    4300008: Trims_Back
+    4300010: Roof_Chimney_Porch_Stairs_Rail_Slats
+    4300012: Back_Half
+    4300014: Front_Half
+    4300016: Ivy
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

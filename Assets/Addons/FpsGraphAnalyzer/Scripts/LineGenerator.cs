@@ -90,16 +90,16 @@ public class LineGenerator : MonoBehaviour
     {
         if (_canStart)
         {
-            if (tick != 15)
+            if (tick != 16)
                 tick++;
             else 
             {
                 tick = 0;
             }
             if (
-                    (tick == 4) || 
-                    (tick == 8) ||
-                    (tick == 12)
+                    (tick == 5) || 
+                    (tick == 10) ||
+                    (tick == 15)
                 )
             {
                 //Calculate FPS
@@ -157,7 +157,7 @@ public class LineGenerator : MonoBehaviour
                 else  GUI.color = fpsGraphColor;
                 // if (Shader_LOD_Enumerator.tick == 15)
                 // {
-                    GUI.DrawTexture(new Rect(new Vector2(posX, posY), new Vector2(2, lineHeight)), _texture);
+                    GUI.DrawTexture(new Rect(new Vector2(posX, posY), new Vector2(4, lineHeight)), _texture);
                 // }
                 counter++;
             }
@@ -179,6 +179,6 @@ public class LineGenerator : MonoBehaviour
         GUI.DrawTexture(new Rect(new Vector2(_bottomLeft.x, Screen.height - _bottomLeft.y - _maxHeight), new Vector2((float)_amount+2, 1)), _texture);
 
         GUI.color = fpsGraphColor;
-        GUI.DrawTexture(new Rect(new Vector2(_bottomLeft.x,  58), new Vector2((float)_amount+2, 1)), _texture);
+        GUI.DrawTexture(new Rect(new Vector2(_bottomLeft.x,  54), new Vector2((float)_amount+2, 1)), _texture);
     }
 }

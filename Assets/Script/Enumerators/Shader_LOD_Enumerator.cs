@@ -40,21 +40,14 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private void Awake()
     {
         thisRenderer = this.GetComponent<Renderer>();
-        if (thisRenderer.shadowCastingMode == ShadowCastingMode.On)
-        {
-            shadowCaster = true;
-        }
-        else
-        {
-            shadowCaster = false;
-        }
+        shadowCaster = thisRenderer.shadowCastingMode == ShadowCastingMode.On;
     }
 
     private void Start()
     {
         tick = 0;
         //get needed components
-        originalMaterial = thisRenderer.material;
+        originalMaterial = thisRenderer.sharedMaterial;
         albedoTex = originalMaterial.mainTexture;
         MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
 
@@ -93,31 +86,29 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private void TickUpdate()
     {
         if (!enableShaderLOD) return; //check if we enabled this; if not, dump
-        if (distance <= LOD_Distance[1]) //set LODState here based on distance
-        {
-            if (distance <= LOD_Distance[0])
-            {
-                shaderLOD = LODState.Full;
-            }
-            else shaderLOD = LODState.Reduced; //LOD0 if < [0] else LOD1
-        }
-        else shaderLOD = LODState.VertexOnly; //LOD2
+        shaderLOD = distance <= LOD_Distance[1]
+            ? distance <= LOD_Distance[0] ? LODState.Full : LODState.Reduced : LODState.VertexOnly; //LOD2
 
         switch (shaderLOD)
         {
             case LODState.Full:
-                //if (thisRenderer.material != originalMaterial) thisRenderer.material = originalMaterial;
-                thisRenderer.material.EnableKeyword("_NORMALMAP"); //enable normalmap
-                if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
+                //if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
+                if (!thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP")) 
+                    thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.On) 
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
                 break;
             case LODState.Reduced:
-                if (thisRenderer.material != originalMaterial) thisRenderer.material = originalMaterial;
-                thisRenderer.material.DisableKeyword("_NORMALMAP"); //drop normalmap
-                thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+                if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
+                if (thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP"))
+                    thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
                 break;
             case LODState.VertexOnly:
-                thisRenderer.material = replacementMaterial;
-                thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+                thisRenderer.sharedMaterial = replacementMaterial;
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
+                  thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
                 break;
         }
     }

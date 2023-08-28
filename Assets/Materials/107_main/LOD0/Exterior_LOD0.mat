@@ -9,7 +9,7 @@ Material:
   m_Name: Exterior_LOD0
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: EFFECT_BUMP _GLOSSYREFLECTIONS_ON _METALLICGLOSSMAP _METALLICSPECGLOSSMAP
-    _SPECULAR_SETUP
+    _NORMALMAP _SPECULAR_SETUP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -204,7 +204,7 @@ Material:
     - _BaseColorVertexTint: 0
     - _Blend: 0
     - _BumpMode: 0
-    - _BumpScale: 2
+    - _BumpScale: -4
     - _Bumpiness: 5
     - _Cull: 2
     - _Cutoff: 0.5
@@ -235,7 +235,7 @@ Material:
     - _ForwardRenderingOptions: 0
     - _Fresnel: 0.5
     - _Gloss: 0
-    - _GlossMapScale: 0.5
+    - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossinessSource: 1
     - _GlossyReflections: 1
