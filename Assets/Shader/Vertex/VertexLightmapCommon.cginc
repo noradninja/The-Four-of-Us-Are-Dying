@@ -158,7 +158,8 @@ fixed4 frag(v2f v) : SV_Target {
 	#endif
 
 	const half4 diffuse = tex2D(_MainTex, v.uv0.xy);
-		half4 col = (diffuse * lighting);
+	const half4 moar = tex2D( _MOAR, v.uv0.xy);
+		half4 col = half4 ((diffuse.rgb * (lighting.rgb * (1.5h * moar.a))) * moar.g, 1);
 	if(!_AlphaOn)
 		{
 		fixed4 texcol = tex2D( _MainTex, v.uv0.xy);
@@ -166,15 +167,12 @@ fixed4 frag(v2f v) : SV_Target {
 		}
 	else
 {
-	fixed4 texcol = tex2D( _MOAR, v.uv0.xy*8);
-	clip( texcol.a - _Cutoff );
+	fixed4 texcol = tex2D( _MOAR, v.uv0.xy);
+	clip( texcol.b - _Cutoff );
 }
 
-		#if USING_FOG
-        	UNITY_APPLY_FOG(v.fogCoord, col);
-    	#endif
-	
-		
-	
-	return col;
+	#if USING_FOG
+        UNITY_APPLY_FOG(v.fogCoord, col);
+    #endif
+	return col ;
 }

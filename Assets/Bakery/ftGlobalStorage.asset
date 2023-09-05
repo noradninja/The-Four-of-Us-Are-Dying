@@ -17,7 +17,8 @@ MonoBehaviour:
   - Assets/Model/SchoolHouse/Grass.fbx
   - Assets/Model/SchoolHouse/White_Shed.fbx
   - Assets/Model/107_Main.fbx
-  modifiedAssetPaddingHash: aaf8cc2e118b31dc22afe31790138d65582df692
+  - Assets/Model/Iffrig_Mercantile_Bldg.fbx
+  modifiedAssetPaddingHash: aaf8cc2e84c5b7570ae4127ed3416d02793910bbda1252da
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -421,7 +422,7 @@ MonoBehaviour:
     - Plaque
     - polySurface391
     - Pole
-    padding: 740000008000000000010000bf0000000c0000002500000057000000260000002a0000005e000000f70000000001000082000000000100008d0000006800000019000000000100001b0000005e000000
+    padding: 6d0000007800000000010000b30000000b0000002300000051000000230000002700000058000000e7000000000100007a00000000010000840000006200000018000000000100001900000058000000
     unwrapper: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   - meshName:
     - polySurface499
@@ -439,7 +440,7 @@ MonoBehaviour:
     - polySurface487
     - polySurface483
     - polySurface481
-    padding: 1f0000001f0000001f0000001f0000001f0000001f000000290000002a00000029000000290000002a0000001f0000001f0000001f0000001f000000
+    padding: 1d0000001d0000001d0000001d0000001d0000001d00000026000000270000002700000027000000270000001d0000001d0000001d0000001d000000
     unwrapper: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   - meshName:
     - Interior_Beams
@@ -449,7 +450,7 @@ MonoBehaviour:
     - L_Door
     - Back_Roofing
     - No_Parking_Sign
-    padding: 1e000000330000000d00000034000000330000003900000000010000
+    padding: 1c000000300000000c000000310000002f0000003500000000010000
     unwrapper: 01000000010000000100000001000000010000000100000001000000
   - meshName:
     - Exterior
@@ -457,8 +458,27 @@ MonoBehaviour:
     - Plaque
     - Trims_EXT
     - Trims_EXT_Transparent
-    padding: 090000002400000000010000130000005b000000
+    padding: 0800000022000000000100001200000055000000
     unwrapper: 0100000001000000010000000100000001000000
+  - meshName:
+    - Glass_Front_Display
+    - Front_Trims
+    - Back_Trims
+    - Roof_Glass
+    - Roof_Chimney
+    - Glass_Front
+    - Glass_Back
+    - Balcony
+    - Plaque
+    - Ivy
+    - Front_Half
+    - Doorknob1
+    - Curved_Handle2
+    - Curved_Handle1
+    - Back_Half
+    - Awning
+    padding: 1f0000000d0000000c00000047000000080000002a000000270000002900000000010000060000000d0000000001000000010000000100000c00000019000000
+    unwrapper: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
@@ -479,12 +499,12 @@ MonoBehaviour:
   alwaysEnableRTX: 0
   checkerPreviewOn: 0
   rtSceneViewPreviewOn: 0
-  renderSettingsBounces: 3
+  renderSettingsBounces: 5
   renderSettingsGISamples: 16
-  renderSettingsGIBackFaceWeight: 0
-  renderSettingsTileSize: 1024
+  renderSettingsGIBackFaceWeight: 0.015
+  renderSettingsTileSize: 4096
   renderSettingsPriority: 3
-  renderSettingsTexelsPerUnit: 32
+  renderSettingsTexelsPerUnit: 47
   renderSettingsForceRefresh: 1
   renderSettingsForceRebuildGeometry: 1
   renderSettingsPerformRendering: 1
@@ -498,13 +518,13 @@ MonoBehaviour:
   renderSettingsEncodeMode: 0
   renderSettingsOverwriteWarning: 0
   renderSettingsAutoAtlas: 1
-  renderSettingsUnwrapUVs: 0
+  renderSettingsUnwrapUVs: 1
   renderSettingsForceDisableUnwrapUVs: 0
   renderSettingsMaxAutoResolution: 1024
   renderSettingsMinAutoResolution: 16
   renderSettingsUnloadScenes: 0
   renderSettingsAdjustSamples: 1
-  renderSettingsGILODMode: 0
+  renderSettingsGILODMode: 1
   renderSettingsGILODModeEnabled: 0
   renderSettingsCheckOverlaps: 0
   renderSettingsSkipOutOfBoundsUVs: 1
@@ -541,17 +561,17 @@ MonoBehaviour:
   renderSettingsLightProbeMode: 1
   renderSettingsClientMode: 0
   renderSettingsServerAddress: 127.0.0.1
-  renderSettingsUnwrapper: 0
+  renderSettingsUnwrapper: 1
   renderSettingsDenoiserType: 5
   renderSettingsExportTerrainTrees: 0
   renderSettingsShowPerf: 1
   renderSettingsSampleDiv: 1
-  renderSettingsAtlasPacker: 0
+  renderSettingsAtlasPacker: 1
   renderSettingsBatchPoints: 1
   renderSettingsCompressVolumes: 0
   renderSettingsRTPVExport: 1
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  modifiedMeshPaddingArray: 740000008000000000010000bf0000000c0000002500000057000000260000002a0000005e000000f70000000001000082000000000100008d0000006800000019000000000100001b0000005e000000
-  modifiedMeshUnwrapperArray: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  modifiedMeshPaddingArray: 0800000022000000000100001200000055000000
+  modifiedMeshUnwrapperArray: 0100000001000000010000000100000001000000

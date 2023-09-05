@@ -582,7 +582,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.09650695
+    - _influence: 0.09376967
     - _leaves_wiggle_disp: 0.08
     - _leaves_wiggle_speed: 0.25
     - _r_influence: 1

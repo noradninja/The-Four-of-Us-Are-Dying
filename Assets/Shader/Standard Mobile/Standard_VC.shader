@@ -140,32 +140,57 @@ Shader "Vita/Standard Mobile"
         }
         // ------------------------------------------------------------------
         //  Shadow rendering pass
-        Pass {
-            Name "ShadowCaster"
-            Tags { "LightMode" = "ShadowCaster" }
-
-            ZWrite On ZTest LEqual
+        Pass{
+            Tags {"LightMode"="ShadowCaster"}
 
             CGPROGRAM
-            #pragma target 3.0
-
-            // -------------------------------------
-
-
-            #pragma shader_feature _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #pragma shader_feature _PARALLAXMAP
+            #pragma vertex vert
+            #pragma fragment frag
+			#pragma target 3.0
             #pragma multi_compile_shadowcaster
-            #pragma multi_compile_instancing
-            // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
-#pragma multi_compile _ LOD_FADE_CROSSFADE
+			#pragma multi_compile_fog
+			#pragma multi_compile _ LOD_FADE_CROSSFADE
+            #include "UnityCG.cginc"
+			#include "UnityPBSLighting.cginc" // TBD: remove
+            #include "UnityStandardInput_VC.cginc" // TBD: remove
 
-            #pragma vertex vertShadowCaster
-            #pragma fragment fragShadowCaster
+			
+			struct v2f {
+				V2F_SHADOW_CASTER;
+				float2  uv : TEXCOORD0;
+				UNITY_VERTEX_OUTPUT_STEREO
+			};
+			struct appdata {
+				half3 vertex : POSITION;
+				half3 uv : TEXCOORD0;
+				
 
-            #include "UnityStandardShadow.cginc"
+			};
 
+			
+						
+			v2f vert( appdata v )
+			{
+				v2f o;
+				half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
+				UNITY_SETUP_INSTANCE_ID(v);
+				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+				TRANSFER_SHADOW_CASTER(o);
+				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+				return o;
+			}
+            
+			float4 frag( v2f i ) : SV_Target
+			{
+			
+				fixed4 texcol = tex2D( _MetallicGlossMap, i.uv );
+				
+				 #if defined(_ALPHATEST_ON)
+					clip( texcol.b - _Cutoff );
+				#endif
+				
+				SHADOW_CASTER_FRAGMENT(i);
+			}
             ENDCG
         }
         // ------------------------------------------------------------------

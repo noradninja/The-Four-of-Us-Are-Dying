@@ -2,9 +2,6 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-// [ExecuteInEditMode]
-//simple class to disable normal maps when the player is >= a specified distance
-//I set it just beyond the distance of the flashlight, because you won't see them that far away anyway
 public class Shader_LOD_Enumerator : MonoBehaviour
 {
     public enum LODState

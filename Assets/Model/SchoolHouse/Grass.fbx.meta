@@ -141,7 +141,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["polySurface499","polySurface485","polySurface492","polySurface494","polySurface496","polySurface498","polySurface508","polySurface507","polySurface505","polySurface503","polySurface501","polySurface489","polySurface487","polySurface483","polySurface481"],"padding":[31,31,31,31,31,31,41,42,41,41,42,31,31,31,31],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
+    - '#BAKERY{"meshName":["polySurface499","polySurface485","polySurface492","polySurface494","polySurface496","polySurface498","polySurface508","polySurface507","polySurface505","polySurface503","polySurface501","polySurface489","polySurface487","polySurface483","polySurface481"],"padding":[29,29,29,29,29,29,38,39,39,39,39,29,29,29,29],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

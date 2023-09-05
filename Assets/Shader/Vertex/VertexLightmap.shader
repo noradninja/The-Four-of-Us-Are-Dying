@@ -175,7 +175,7 @@
 				else
 				{
 					fixed4 texcol = tex2D( _MOAR, i.uv );
-					clip( texcol.a - _Cutoff );
+					clip( texcol.b - _Cutoff );
 				}
 
 				SHADOW_CASTER_FRAGMENT(i);
