@@ -18,7 +18,7 @@ MonoBehaviour:
   - Assets/Model/SchoolHouse/White_Shed.fbx
   - Assets/Model/107_Main.fbx
   - Assets/Model/Iffrig_Mercantile_Bldg.fbx
-  modifiedAssetPaddingHash: aaf8cc2e84c5b7570ae4127ed3416d02793910bbda1252da
+  modifiedAssetPaddingHash: aaf8cc2e4ef56606975d42bdeb78ebb7a3e4b87a78b73d56
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -422,7 +422,7 @@ MonoBehaviour:
     - Plaque
     - polySurface391
     - Pole
-    padding: 6d0000007800000000010000b30000000b0000002300000051000000230000002700000058000000e7000000000100007a00000000010000840000006200000018000000000100001900000058000000
+    padding: 880000009600000000010000df0000000e0000002c000000660000002c000000310000006e00000000010000000100009900000000010000a50000007a0000001e000000000100001f0000006e000000
     unwrapper: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   - meshName:
     - polySurface499
@@ -440,7 +440,7 @@ MonoBehaviour:
     - polySurface487
     - polySurface483
     - polySurface481
-    padding: 1d0000001d0000001d0000001d0000001d0000001d00000026000000270000002700000027000000270000001d0000001d0000001d0000001d000000
+    padding: 250000002400000024000000250000002500000025000000300000003100000031000000310000003100000024000000240000002400000024000000
     unwrapper: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   - meshName:
     - Interior_Beams
@@ -450,7 +450,7 @@ MonoBehaviour:
     - L_Door
     - Back_Roofing
     - No_Parking_Sign
-    padding: 1c000000300000000c000000310000002f0000003500000000010000
+    padding: 240000003c0000000f0000003d0000003b0000004300000000010000
     unwrapper: 01000000010000000100000001000000010000000100000001000000
   - meshName:
     - Exterior
@@ -458,7 +458,7 @@ MonoBehaviour:
     - Plaque
     - Trims_EXT
     - Trims_EXT_Transparent
-    padding: 0800000022000000000100001200000055000000
+    padding: 0a0000002b00000000010000170000006b000000
     unwrapper: 0100000001000000010000000100000001000000
   - meshName:
     - Glass_Front_Display
@@ -477,7 +477,7 @@ MonoBehaviour:
     - Curved_Handle1
     - Back_Half
     - Awning
-    padding: 1f0000000d0000000c00000047000000080000002a000000270000002900000000010000060000000d0000000001000000010000000100000c00000019000000
+    padding: 27000000100000000f000000590000000a0000003500000031000000340000000001000006000000100000000001000000010000000100000f0000001f000000
     unwrapper: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
@@ -504,7 +504,7 @@ MonoBehaviour:
   renderSettingsGIBackFaceWeight: 0.015
   renderSettingsTileSize: 4096
   renderSettingsPriority: 3
-  renderSettingsTexelsPerUnit: 47
+  renderSettingsTexelsPerUnit: 40
   renderSettingsForceRefresh: 1
   renderSettingsForceRebuildGeometry: 1
   renderSettingsPerformRendering: 1
@@ -525,18 +525,18 @@ MonoBehaviour:
   renderSettingsUnloadScenes: 0
   renderSettingsAdjustSamples: 1
   renderSettingsGILODMode: 1
-  renderSettingsGILODModeEnabled: 0
+  renderSettingsGILODModeEnabled: 1
   renderSettingsCheckOverlaps: 0
   renderSettingsSkipOutOfBoundsUVs: 1
   renderSettingsHackEmissiveBoost: 1
   renderSettingsHackIndirectBoost: 1
   renderSettingsTempPath: 
-  renderSettingsOutPath: BakeryLightmaps
-  renderSettingsUseScenePath: 0
-  renderSettingsHackAOIntensity: 0
-  renderSettingsHackAOSamples: 16
+  renderSettingsOutPath: Scenes/EnviroTest
+  renderSettingsUseScenePath: 1
+  renderSettingsHackAOIntensity: 1
+  renderSettingsHackAOSamples: 8
   renderSettingsHackAORadius: 1
-  renderSettingsShowAOSettings: 0
+  renderSettingsShowAOSettings: 1
   renderSettingsShowTasks: 1
   renderSettingsShowTasks2: 1
   renderSettingsShowPaths: 1
@@ -566,12 +566,12 @@ MonoBehaviour:
   renderSettingsExportTerrainTrees: 0
   renderSettingsShowPerf: 1
   renderSettingsSampleDiv: 1
-  renderSettingsAtlasPacker: 1
+  renderSettingsAtlasPacker: 0
   renderSettingsBatchPoints: 1
   renderSettingsCompressVolumes: 0
   renderSettingsRTPVExport: 1
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  modifiedMeshPaddingArray: 0800000022000000000100001200000055000000
-  modifiedMeshUnwrapperArray: 0100000001000000010000000100000001000000
+  modifiedMeshPaddingArray: 27000000100000000f000000590000000a0000003500000031000000340000000001000006000000100000000001000000010000000100000f0000001f000000
+  modifiedMeshUnwrapperArray: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000

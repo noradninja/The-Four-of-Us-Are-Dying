@@ -23,6 +23,8 @@ ModelImporter:
     100034: Roof_Glass
     100036: Trims_Back
     100038: Trims_Front
+    100040: Porch_Slats
+    100042: Roof_Chimney1
     400000: Awning
     400002: Back_Half
     400004: Back_Trims
@@ -43,12 +45,15 @@ ModelImporter:
     400034: Roof_Glass
     400036: Trims_Back
     400038: Trims_Front
+    400040: Porch_Slats
+    400042: Roof_Chimney1
     2100000: Back_Exterior
     2100002: Front_Exterior
     2100004: Foliage
     2100006: Trims
     2100008: Trims4
     2100010: Roof_Porch_Rails1
+    2100012: Trims2
     2300000: Awning
     2300002: Back_Half
     2300004: Back_Trims
@@ -65,6 +70,8 @@ ModelImporter:
     2300026: Plaque
     2300028: Roof_Chimney
     2300030: Roof_Glass
+    2300032: Porch_Slats
+    2300034: Roof_Chimney1
     3300000: Awning
     3300002: Back_Half
     3300004: Back_Trims
@@ -81,6 +88,8 @@ ModelImporter:
     3300026: Plaque
     3300028: Roof_Chimney
     3300030: Roof_Glass
+    3300032: Porch_Slats
+    3300034: Roof_Chimney1
     4300000: Back_Half
     4300002: Front_Half
     4300004: Ivy
@@ -97,6 +106,8 @@ ModelImporter:
     4300026: Glass_Back
     4300028: Roof_Glass
     4300030: Roof_Chimney
+    4300032: Roof_Chimney1
+    4300034: Porch_Slats
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -126,7 +137,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Glass_Front_Display","Front_Trims","Back_Trims","Roof_Glass","Roof_Chimney","Glass_Front","Glass_Back","Balcony","Plaque","Ivy","Front_Half","Doorknob1","Curved_Handle2","Curved_Handle1","Back_Half","Awning"],"padding":[31,13,12,71,8,42,39,41,256,6,13,256,256,256,12,25],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
+    - '#BAKERY{"meshName":["Glass_Front_Display","Front_Trims","Back_Trims","Roof_Glass","Roof_Chimney","Glass_Front","Glass_Back","Balcony","Plaque","Ivy","Front_Half","Doorknob1","Curved_Handle2","Curved_Handle1","Back_Half","Awning"],"padding":[39,16,15,89,10,53,49,52,256,6,16,256,256,256,15,31],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:
