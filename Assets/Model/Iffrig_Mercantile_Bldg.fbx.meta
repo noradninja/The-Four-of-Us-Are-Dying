@@ -25,6 +25,12 @@ ModelImporter:
     100038: Trims_Front
     100040: Porch_Slats
     100042: Roof_Chimney1
+    100044: Curved_Handle_A
+    100046: Curved_Handle_B
+    100048: Doorknob
+    100050: Front_Trims 1
+    100052: Meter_Glass
+    100054: pasted__Meter_Glass2
     400000: Awning
     400002: Back_Half
     400004: Back_Trims
@@ -47,6 +53,12 @@ ModelImporter:
     400038: Trims_Front
     400040: Porch_Slats
     400042: Roof_Chimney1
+    400044: Curved_Handle_A
+    400046: Curved_Handle_B
+    400048: Doorknob
+    400050: Front_Trims 1
+    400052: Meter_Glass
+    400054: pasted__Meter_Glass2
     2100000: Back_Exterior
     2100002: Front_Exterior
     2100004: Foliage
@@ -54,6 +66,15 @@ ModelImporter:
     2100008: Trims4
     2100010: Roof_Porch_Rails1
     2100012: Trims2
+    2100014: Back_Exterior1
+    2100016: Alpha_Trims_Front
+    2100018: Trims_Front1
+    2100020: Alpha_Front_Exterior
+    2100022: Trims_Back1
+    2100024: Alpha_Roof_Porch_Rails
+    2100026: Front_Exterior1
+    2100028: pasted__Trims_Front1
+    2100030: lambert22
     2300000: Awning
     2300002: Back_Half
     2300004: Back_Trims
@@ -72,6 +93,12 @@ ModelImporter:
     2300030: Roof_Glass
     2300032: Porch_Slats
     2300034: Roof_Chimney1
+    2300036: Curved_Handle_A
+    2300038: Curved_Handle_B
+    2300040: Doorknob
+    2300042: Front_Trims 1
+    2300044: Meter_Glass
+    2300046: pasted__Meter_Glass2
     3300000: Awning
     3300002: Back_Half
     3300004: Back_Trims
@@ -90,6 +117,12 @@ ModelImporter:
     3300030: Roof_Glass
     3300032: Porch_Slats
     3300034: Roof_Chimney1
+    3300036: Curved_Handle_A
+    3300038: Curved_Handle_B
+    3300040: Doorknob
+    3300042: Front_Trims 1
+    3300044: Meter_Glass
+    3300046: pasted__Meter_Glass2
     4300000: Back_Half
     4300002: Front_Half
     4300004: Ivy
@@ -108,6 +141,11 @@ ModelImporter:
     4300030: Roof_Chimney
     4300032: Roof_Chimney1
     4300034: Porch_Slats
+    4300036: Meter_Glass
+    4300038: Curved_Handle_A
+    4300040: Curved_Handle_B
+    4300042: Doorknob
+    4300044: pasted__Meter_Glass2
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
@@ -137,7 +175,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Glass_Front_Display","Front_Trims","Back_Trims","Roof_Glass","Roof_Chimney","Glass_Front","Glass_Back","Balcony","Plaque","Ivy","Front_Half","Doorknob1","Curved_Handle2","Curved_Handle1","Back_Half","Awning"],"padding":[39,16,15,89,10,53,49,52,256,6,16,256,256,256,15,31],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
+    - '#BAKERY{"meshName":["Glass_Front_Display","Front_Trims","Back_Trims","Roof_Glass","Roof_Chimney","Glass_Front","Glass_Back","Balcony","Plaque","Ivy","Front_Half","Doorknob1","Curved_Handle2","Curved_Handle1","Back_Half","Awning","Curved_Handle_B","Curved_Handle_A","Porch_Slats","Doorknob"],"padding":[20,8,8,47,5,28,26,27,212,4,8,256,256,256,8,17,256,256,30,256],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

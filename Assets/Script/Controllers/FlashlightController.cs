@@ -26,7 +26,7 @@ public class FlashlightController : MonoBehaviour {
 	
 	//light
 	public Light flashlight;
-	public Light vertlight;
+	//public Light vertlight;
 	//render
 	public Renderer lightBeam;
 	public Renderer lightHaze;
@@ -101,7 +101,7 @@ public class FlashlightController : MonoBehaviour {
 			{
 				PlayerController.lightMovement = false;
 				//rotate flashlight
-				var position = currentTarget.transform.position;
+				Vector3 position = currentTarget.transform.position;
 				Vector3 lightdir = position - lightRoot.transform.position;
 				Quaternion lightlookRotation = Quaternion.LookRotation(lightdir);
 				Vector3 lightrotation = Quaternion.Lerp(lightRoot.transform.rotation,
@@ -346,8 +346,8 @@ public class FlashlightController : MonoBehaviour {
 			lightHaze.material.color = Color.Lerp(StartColor, endColor, time/(duration/2)); //lerp the colors from dark to light
 			flashlight.intensity = Mathf.Lerp(StartIntensity,endIntensity,time/(duration/2));
 			flashlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/2));
-			vertlight.intensity = Mathf.Lerp(StartIntensity,endIntensity,time/(duration/2));
-			vertlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/2));
+			//vertlight.intensity = Mathf.Lerp(StartIntensity,endIntensity,time/(duration/2));
+			//vertlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/2));
 			var scalar = Mathf.Lerp(StartSize,endSize,time/(duration/2));
 			lightShaft.transform.localScale = new Vector3(scalar, lightShaft.transform.localScale.y ,scalar);
 			time += Time.deltaTime;
@@ -367,8 +367,8 @@ public class FlashlightController : MonoBehaviour {
 													(endColor.r, endColor.g, endColor.b, endColor.a * currentCharge), time/(duration/50)); //lerp the colors from dark to light
 			flashlight.intensity = Mathf.Lerp(StartIntensity ,endIntensity * currentCharge,time/(duration/50));
 			flashlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/50));
-			vertlight.intensity = Mathf.Lerp(StartIntensity,endIntensity * currentCharge,time/(duration/50));
-			vertlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/50));
+			//vertlight.intensity = Mathf.Lerp(StartIntensity,endIntensity * currentCharge,time/(duration/50));
+			//vertlight.spotAngle = Mathf.Lerp(StartAngle,endAngle,time/(duration/50));
 			var scalar = Mathf.Lerp(StartSize,endSize,time/(duration/50));
 			currentCharge = Mathf.Lerp(currentCharge, 0, time / (duration*2));
 			lightShaft.transform.localScale = new Vector3(scalar, lightShaft.transform.localScale.y ,scalar);
