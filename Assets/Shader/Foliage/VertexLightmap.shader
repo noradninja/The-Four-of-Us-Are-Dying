@@ -9,7 +9,7 @@
         _leaves_wiggle_speed ("Leaves Wiggle Speed", float) = 0.01
 		_influence ("Influence", range(0,1)) = 1
 		_Time ("Time", Vector) =(0,0,0,0)
-		[Toggle(ALPHA_ON)] _AlphaOn("Seperate Alpha", Float) = 1
+		[Toggle(ALPHA_ON)] _SeparateAlpha("Seperate Alpha", Float) = 1
 		[Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 1
 		[Toggle(AMBIENT_ON)] _AmbientOn("Ambient Lighting", Float) = 0
 	}
@@ -127,24 +127,82 @@
 
 			uniform sampler2D _MainTex;
             uniform sampler2D _MOAR;
-			uniform fixed _Cutoff;
-            float _AlphaOn;
+			uniform half _Cutoff;
+            float _SeparateAlpha;
 
 			float4 frag( v2f i ) : SV_Target
 			{
-				if (!_AlphaOn)
-				{
-					fixed4 texcol = tex2D( _MainTex, i.uv );
-					clip( texcol.a - _Cutoff );
-				}
-				else
-				{
-					fixed4 texcol = tex2D( _MOAR, i.uv );
-					clip( texcol.a - _Cutoff );
-				}
+			   // Calculate custom alpha
+                	if(!_SeparateAlpha)
+					{
+						half alpha = tex2D( _MainTex, i.uv.xy).a;
+						clip( alpha - _Cutoff );
+                		// Output
+						return alpha;
+					}
+					else
+					{
+						half alpha = tex2D( _MOAR, i.uv.xy*8).b;
+						clip( alpha - _Cutoff );
+						// Output
+						return alpha;
+					}
 
 				SHADOW_CASTER_FRAGMENT(i);
 			}
+            ENDCG
+        }
+		 Pass
+        {
+            // Alpha map enabled Bakery-specific meta pass
+			
+            Name "META_BAKERY"
+
+            Tags {"LightMode"="Meta"}
+            Cull Off
+            CGPROGRAM
+			 
+            #include "UnityStandardMeta.cginc"
+
+            // Include Bakery meta pass
+            #include "Assets/Bakery/BakeryMetaPass.cginc"
+
+            uniform sampler2D _MOAR;
+		    float _SeparateAlpha;
+            
+            float4 frag_customMeta (v2f_bakeryMeta i): SV_Target
+            {
+                UnityMetaInput o;
+                UNITY_INITIALIZE_OUTPUT(UnityMetaInput, o);
+
+                // Output custom alpha to Bakery
+                if (unity_MetaFragmentControl.w)
+                {
+                    // Calculate custom alpha
+                	if(!_SeparateAlpha)
+					{
+						half alpha = tex2D( _MainTex, i.uv.xy).a;
+						clip( alpha - _Cutoff );
+                		// Output
+						return alpha;
+					}
+					else
+					{
+						half alpha = tex2D( _MOAR, i.uv.xy*8).b;
+						clip( alpha - _Cutoff );
+						// Output
+						return alpha;
+					}
+                }
+
+                // Regular Unity meta pass
+                o.Albedo = tex2D(_MainTex, i.uv);
+                return UnityMetaFragment(o);
+            }
+
+            // Must use vert_bakerymt vertex shader
+            #pragma vertex vert_bakerymt
+            #pragma fragment frag_customMeta
             ENDCG
         }
 	}

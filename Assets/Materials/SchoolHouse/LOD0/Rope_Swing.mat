@@ -353,7 +353,7 @@ Material:
     - _Layer3ScrollV: 0
     - _Layer3Toggle: 0
     - _Layer3UV2: 0
-    - _LeavesOn: 1
+    - _LeavesOn: 0
     - _LightFold: 1
     - _LightMode: 1
     - _LightProbes: 0

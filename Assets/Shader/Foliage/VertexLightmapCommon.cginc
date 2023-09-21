@@ -69,13 +69,14 @@ half _leaves_wiggle_disp;
 half _leaves_wiggle_speed;
 half _influence;
 half _LeavesOn;
-half _AlphaOn;
+half _SeparateAlpha;
 
 
 // pos shader input data
 struct appdata {
 	half3 pos : POSITION;
 	half3 normal : NORMAL;
+	half4 color : COLOR0;
 	half3 uv0 : TEXCOORD0;
 	half3 uv1 : TEXCOORD1;
 };
@@ -83,13 +84,12 @@ struct appdata {
 // pos-to-fragment interpolators
 struct v2f {
 	half4 pos : SV_POSITION;
-	half4 color : COLOR0;
 	half2 uv0 : TEXCOORD0;
 	half2 uv1 : TEXCOORD1;
 	half4 screenPosition : TEXCOORD2;
-	
+	half4 color : TEXCOORD3;
 	#if USING_FOG
-            UNITY_FOG_COORDS(3)
+            UNITY_FOG_COORDS(4)
 	#endif
 
 
@@ -124,7 +124,7 @@ if(_LeavesOn)
 		color.rgb += computeOneLight(il, eyePos, eyeNormal);
 	}
 	color.rgb += smoothstep(0.0h, 1.0h, dotProduct) * 0.15h;
-	o.color = saturate(color);
+	saturate(color);
 		
 	// compute texture coordinates
 	o.uv0 = v.uv0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
@@ -135,19 +135,20 @@ if(_LeavesOn)
 	o.pos = UnityObjectToClipPos(v.pos);
 	o.screenPosition = ComputeScreenPos(o.pos);
 	
-	
+	// Decode baked HDR vertex color (RGBM)
+	o.color =  half4 (v.color.rgb, 1);
+	o.color *= 0.5h;
 	UNITY_TRANSFER_FOG(o,o.pos);
-
 	return o;
 
 }
 
 // fragment shader
-fixed4 frag(v2f v) : SV_Target {
-	const half4 posLighting = v.color;
-	UNITY_EXTRACT_FOG(v);
+fixed4 frag(v2f i) : SV_Target {
+	const half4 posLighting = i.color;
+	UNITY_EXTRACT_FOG(i);
 	#if defined(CUSTOM_LIGHTMAPPED)
-	const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
+	const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1.xy);
 
 	#if CUSTOM_LIGHTMAPPED == 1
 	const half4 lighting = (lightmap * 0.25h) + posLighting;
@@ -157,24 +158,23 @@ fixed4 frag(v2f v) : SV_Target {
 	const half4 lighting = posLighting;
 	#endif
 
-	const half4 diffuse = tex2D(_MainTex, v.uv0.xy);
-		half4 col = (diffuse * lighting);
-	if(!_AlphaOn)
-		{
-		fixed4 texcol = tex2D( _MainTex, v.uv0.xy);
-		clip( texcol.a - _Cutoff );
-		}
+	const half4 diffuse = tex2D(_MainTex, i.uv0.xy);
+	half4 col = (diffuse * lighting);
+	// Apply vertex lightmap
+	col.rgb *= i.color;
+	// Calculate custom alpha
+	if(!_SeparateAlpha)
+	{
+		half alpha = diffuse.a;
+		clip( alpha - _Cutoff );
+		col.a = alpha;
+	}
 	else
-{
-	fixed4 texcol = tex2D( _MOAR, v.uv0.xy*8);
-	clip( texcol.a - _Cutoff );
-}
-
-		#if USING_FOG
-        	UNITY_APPLY_FOG(v.fogCoord, col);
-    	#endif
-	
-		
+	{
+		half alpha = tex2D( _MOAR, i.uv0.xy*8).b;
+		clip( alpha - _Cutoff );
+		col.a = alpha;
+	}
 	
 	return col;
 }

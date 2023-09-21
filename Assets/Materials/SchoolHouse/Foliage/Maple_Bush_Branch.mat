@@ -525,6 +525,7 @@ Material:
     - _ScrollU: 0
     - _ScrollV: 0
     - _SelfIllum: 0
+    - _SeparateAlpha: 0
     - _ShadowStrength: 1
     - _ShadowedRim: 1
     - _ShakeBending: 0
@@ -582,7 +583,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.08681843
+    - _influence: 0.21076712
     - _leaves_wiggle_disp: 0.08
     - _leaves_wiggle_speed: 0.25
     - _r_influence: 1
