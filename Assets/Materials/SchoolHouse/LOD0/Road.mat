@@ -136,7 +136,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 488951b5893fd9a4683b815cc3dbeced, type: 3}
+        m_Texture: {fileID: 2800000, guid: ac4c6f8bb6f43f948a25964f69a22147, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -253,7 +253,7 @@ Material:
     - _Bicubic: 0
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 21.11
+    - _BumpScale: 2
     - _BumpShadowHardness: 60.9
     - _BumpShadowHeightScale: 0.5
     - _ColorAmplify: 1

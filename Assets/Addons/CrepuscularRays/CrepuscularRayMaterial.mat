@@ -47,15 +47,15 @@ Material:
     - _LightY: 0
     - _NumSamples: 9
     - _Parameter: 0
-    - _PerpendicularFalloff: 0.464
+    - _PerpendicularFalloff: 0.5
     - _SpotDensity: 1
-    - _Spread: 1.59
+    - _Spread: 1
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _Weight: 2
-    - _fogInfluence: 1.75
+    - _fogInfluence: 1.25
     - _fogSpeed: 1.5
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: -0.9148673, g: -1.313073, b: -0.45709333, a: 0}
+    - _LightPos: {r: 0.8402294, g: 2.2393098, b: 0.6505238, a: 0}
     - _TintColor: {r: 0.09407263, g: 0.10131127, b: 0.13207549, a: 1}
