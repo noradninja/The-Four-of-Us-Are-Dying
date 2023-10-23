@@ -47,7 +47,7 @@
 				return o;
 			}
 			
-			fixed4 frag (v2f i) : SV_Target
+			half4 frag (v2f i) : SV_Target
 			{
 				// sample the texture
 				half4 col = tex2D(_MainTex, i.uv);

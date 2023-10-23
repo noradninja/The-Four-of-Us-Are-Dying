@@ -15,10 +15,10 @@ SubShader {
 CGPROGRAM
 #pragma surface surf Lambert nodynlightmap
 struct Input {
-  float2 uv_MainTex;
-  float2 uv2_LightMap;
+  half2 uv_MainTex;
+  half2 uv2_LightMap;
 };
-sampler2D _MainTex;
+sampler2D_half _MainTex;
 // half4 unity_LightmapST;
 fixed4 _Color;
 void surf (Input IN, inout SurfaceOutput o)

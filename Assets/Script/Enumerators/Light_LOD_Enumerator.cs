@@ -14,8 +14,8 @@ public class Light_LOD_Enumerator : MonoBehaviour {
 	public LODState lightLOD;
 	[SerializeField] private int tick;
 	[SerializeField] private Light thisLight;
-	private Vector3 playerPos;
-	private Vector3 thisPos;
+	private Vector2 playerPos;
+	private Vector2 thisPos;
 	// Use this for initialization
 	void Start ()
 	{
@@ -29,9 +29,9 @@ public class Light_LOD_Enumerator : MonoBehaviour {
 			tick++;
 		else
 		{
-			thisPos = this.transform.position;
-			playerPos = player.transform.position;
-			distance = Vector3.Distance(thisPos, playerPos); //how far are we from the player
+			thisPos = new Vector2(this.transform.position.x, this.transform.position.z);
+			playerPos = new Vector2(player.transform.position.x, player.transform.position.z);
+			distance = Vector2.Distance(thisPos, playerPos); //how far are we from the player
 			tick = 0;
 			TickUpdate();
 		}	

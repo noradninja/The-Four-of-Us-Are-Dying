@@ -29,8 +29,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     public bool shadowCaster;
 
     public LODState shaderLOD;
-    private Vector3 playerPos;
-    private Vector3 thisPos;
+    private Vector2 playerPos;
+    private Vector2 thisPos;
     private Renderer thisRenderer;
     private Vector3 viewPos;
 
@@ -72,9 +72,9 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             tick++;
         else
         {
-            thisPos = this.transform.position;
-            playerPos = player.transform.position;
-            distance = Vector3.Distance(thisPos, playerPos); //how far are we from the player
+            thisPos = new Vector2(this.transform.position.x, this.transform.position.z);
+            playerPos = new Vector2(player.transform.position.x, player.transform.position.z);
+            distance = Vector2.Distance(thisPos, playerPos); //how far are we from the player
             tick = 0;
             TickUpdate();
         }

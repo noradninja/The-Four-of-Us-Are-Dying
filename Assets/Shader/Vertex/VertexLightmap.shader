@@ -121,7 +121,7 @@
 			
 			struct v2f {
 				V2F_SHADOW_CASTER;
-				float2  uv : TEXCOORD0;
+				half2  uv : TEXCOORD0;
 				UNITY_VERTEX_OUTPUT_STEREO
 //				half3 normal : NORMAL;
 			};
@@ -133,7 +133,7 @@
 			};
 
 			
-			uniform float4 _MainTex_ST;
+			uniform half4 _MainTex_ST;
 			half4 _wind_dir;
 			half _wind_size;
 			half _leaves_wiggle_disp;
@@ -160,12 +160,12 @@
 				return o;
 			}
 
-			uniform sampler2D _MainTex;
-            uniform sampler2D _MOAR;
+			uniform sampler2D_half _MainTex;
+            uniform sampler2D_half _MOAR;
 			uniform fixed _Cutoff;
-            float _AlphaOn;
+            half _AlphaOn;
 
-			float4 frag( v2f i ) : SV_Target
+			half4 frag( v2f i ) : SV_Target
 			{
 				if (!_AlphaOn)
 				{

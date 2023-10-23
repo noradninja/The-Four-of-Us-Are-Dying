@@ -19,4 +19,6 @@ MonoBehaviour:
   - Assets/Model/107_Main.fbx
   - Assets/Model/Iffrig_Mercantile_Bldg.fbx
   - Assets/Model/TJunction.fbx
-  modifiedAssetPaddingHash: aaf8cc2edbafd63a975d42bdeb78ebb7a3e4b87ad3b2bed6f1f23a06
+  - Assets/Model/Big_Road.fbx
+  - Assets/Model/Iffrig_Foundation.fbx
+  modifiedAssetPaddingHash: aaf8cc2e2700da6bc19f255441131a2784a190a808991723393fd3d9363fd3d91b0cd168

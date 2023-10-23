@@ -37,17 +37,17 @@
 
 		half _Glossiness;
 		half _Metallic;
-		fixed4 _Color;
+		half4 _Color;
 		half _Distortion;
 		half _Power;
 		half _Scale;
 		half _Clip;
 
 		#include "UnityPBSLighting.cginc"
-		inline fixed4 LightingSSSTranslucent(SurfaceOutputStandard s, half3 viewDir, UnityGI gi)
+		inline half4 LightingSSSTranslucent(SurfaceOutputStandard s, half3 viewDir, UnityGI gi)
 		{
 			// original color 
-			fixed4 c = LightingStandard(s, viewDir, gi);
+			half4 c = LightingStandard(s, viewDir, gi);
 
 			half3 lightDir = gi.light.dir;
 			half3 normal = s.Normal;
@@ -78,8 +78,8 @@
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
-			fixed4 MOAR = tex2D(_MetallicGlossMap, IN.uv_MainTex);
+			half4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			half4 MOAR = tex2D(_MetallicGlossMap, IN.uv_MainTex);
 			o.Albedo = c.rgb;
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic * MOAR.r;

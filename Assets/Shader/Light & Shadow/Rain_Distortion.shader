@@ -4,7 +4,7 @@
     {
         _MaskTexture ("Mask texture", 2D) = "white" {}
         [Normal]_DistortionGuide("Distortion guide", 2D) = "bump" {}
-        _DistortionAmount("Distortion amount", float) = 0
+        _DistortionAmount("Distortion amount", Float) = 0
     }
     SubShader
     {
@@ -28,26 +28,26 @@
  
             struct appdata
             {
-                float4 vertex : POSITION;
-                float2 uv : TEXCOORD0;
-                float4 color : COLOR;
+                half4 vertex : POSITION;
+                half2 uv : TEXCOORD0;
+                half4 color : COLOR;
             };
  
             struct v2f
             {
-                float2 uv : TEXCOORD0;
-                float2 distortionUV : TEXCOORD1;
-                float4 grabPassUV : TEXCOORD2;
-                float4 vertex : SV_POSITION;
-                float4 color : COLOR;
+                half2 uv : TEXCOORD0;
+                half2 distortionUV : TEXCOORD1;
+                half4 grabPassUV : TEXCOORD2;
+                half4 vertex : SV_POSITION;
+                half4 color : COLOR;
             };
  
-            float _DistortionAmount;
-            sampler2D _DistortionGuide;
-            float4 _DistortionGuide_ST;
-            sampler2D _MaskTexture;
-            float4 _MaskTexture_ST;
-            sampler2D _GrabTexture;
+            half _DistortionAmount;
+            sampler2D_half _DistortionGuide;
+            half4 _DistortionGuide_ST;
+            sampler2D_half _MaskTexture;
+            half4 _MaskTexture_ST;
+            sampler2D_half _GrabTexture;
  
             v2f vert (appdata v)
             {
@@ -63,7 +63,7 @@
             fixed4 frag (v2f i) : SV_Target
             {
                 fixed4 mask = tex2D(_MaskTexture, i.uv);
-                float2 distortion = UnpackNormal(tex2D(_DistortionGuide, i.distortionUV)).xy;
+                half2 distortion = UnpackNormal(tex2D(_DistortionGuide, i.distortionUV)).xy;
 				fixed4 col = tex2Dproj(_GrabTexture, i.grabPassUV);
                 distortion *= _DistortionAmount * mask.x * i.color.a;
                 i.grabPassUV.xy += distortion * i.grabPassUV.z;

@@ -34,9 +34,9 @@ TextureImporter:
     filterMode: 1
     aniso: -1
     mipBias: -100
-    wrapU: -1
-    wrapV: -1
-    wrapW: -1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
@@ -83,7 +83,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: PSP2
     maxTextureSize: 256
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 29
     textureCompression: 1
     compressionQuality: 100

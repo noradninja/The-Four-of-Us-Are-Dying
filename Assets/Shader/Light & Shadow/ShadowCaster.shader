@@ -53,7 +53,7 @@ Shader "Vita/Shadow Only"
         struct v2f
         {
             V2F_SHADOW_CASTER; 
-            float2 uv : TEXCOORD1;
+            half2 uv : TEXCOORD1;
         };
 
 
@@ -74,7 +74,7 @@ Shader "Vita/Shadow Only"
         }
 
         half _Clip;
-        float4 frag( v2f i ) : COLOR
+        half4 frag( v2f i ) : COLOR
         {
             fixed4 c = tex2D (_MainTex, i.uv);
             clip(c.a - _Clip);

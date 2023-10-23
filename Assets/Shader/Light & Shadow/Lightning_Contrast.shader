@@ -27,15 +27,15 @@
 
 			struct appdata
 			{
-				float4 vertex : POSITION;
-				float2 uv : TEXCOORD0;
+				half4 vertex : POSITION;
+				half2 uv : TEXCOORD0;
 			};
 
 			struct v2f
 			{
-				float2 uv : TEXCOORD0;
-				float4 vertex : SV_POSITION;
-				float4 projPos : TEXCOORD3;
+				half2 uv : TEXCOORD0;
+				half4 vertex : SV_POSITION;
+				half4 projPos : TEXCOORD3;
 			};
 
 			v2f vert (appdata v)
@@ -48,13 +48,13 @@
 				return o;
 			}
 			
-			fixed4 _TintColor;
-			float _Range;
+			half4 _TintColor;
+			half _Range;
 			UNITY_DECLARE_DEPTH_TEXTURE(_CameraDepthTexture);
-			fixed4 frag (v2f i) : SV_Target
+			half4 frag (v2f i) : SV_Target
 			{
-				float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
-				fixed4 col = _TintColor * ((sceneZ -0.35f)*(pow(_Range, 2)));
+				const half sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
+				half4 col = _TintColor * ((sceneZ -0.35f)*(pow(_Range, 2)));
 				return col;
 			}
 			ENDCG

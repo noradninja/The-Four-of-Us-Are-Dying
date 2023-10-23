@@ -16,7 +16,7 @@
 //-------------------------------------------------------------------------------------
 // counterpart for NormalizePerPixelNormal
 // skips normalization per-vertex and expects normalization to happen per-pixel
-half3 NormalizePerVertexNormal (float3 n) // takes float to avoid overflow
+half3 NormalizePerVertexNormal (half3 n) // takes float to avoid overflow
 {
     #if (SHADER_TARGET < 30) || UNITY_STANDARD_SIMPLE
         return normalize(n);
@@ -25,16 +25,16 @@ half3 NormalizePerVertexNormal (float3 n) // takes float to avoid overflow
     #endif
 }
 
-float3 NormalizePerPixelNormal (float3 n)
+half3 NormalizePerPixelNormal (float3 n)
 {
     #if (SHADER_TARGET < 30) || UNITY_STANDARD_SIMPLE
         return n;
     #else
-        return normalize((float3)n);
+        return normalize((half3)n);
     #endif
 }
 
-float _IntensityVC;
+half _IntensityVC;
 
 
 //-------------------------------------------------------------------------------------
@@ -115,7 +115,7 @@ half3 WorldNormal(half4 tan2world[3])
     }
 #endif
 
-float3 PerPixelWorldNormal(float4 i_tex, float4 tangentToWorld[3])
+half3 PerPixelWorldNormal(half4 i_tex, half4 tangentToWorld[3])
 {
 #ifdef _NORMALMAP
     half3 tangent = tangentToWorld[0].xyz;
@@ -134,9 +134,9 @@ float3 PerPixelWorldNormal(float4 i_tex, float4 tangentToWorld[3])
     #endif
 
     half3 normalTangent = NormalInTangentSpace(i_tex);
-    float3 normalWorld = NormalizePerPixelNormal(tangent * normalTangent.x + binormal * normalTangent.y + normal * normalTangent.z); // @TODO: see if we can squeeze this normalize on SM2.0 as well
+    half3 normalWorld = NormalizePerPixelNormal(tangent * normalTangent.x + binormal * normalTangent.y + normal * normalTangent.z); // @TODO: see if we can squeeze this normalize on SM2.0 as well
 #else
-    float3 normalWorld = normalize(tangentToWorld[2].xyz);
+    half3 normalWorld = normalize(tangentToWorld[2].xyz);
 #endif
     return normalWorld;
 }
@@ -175,10 +175,10 @@ struct FragmentCommonData
     // Note: smoothness & oneMinusReflectivity for optimization purposes, mostly for DX9 SM2.0 level.
     // Most of the math is being done on these (1-x) values, and that saves a few precious ALU slots.
     half oneMinusReflectivity, smoothness;
-    float3 normalWorld;
-    float3 eyeVec;
+    half3 normalWorld;
+    half3 eyeVec;
     half alpha;
-    float3 posWorld;
+    half3 posWorld;
 
 #if UNITY_STANDARD_SIMPLE
     half3 reflUVW;
@@ -191,7 +191,7 @@ struct FragmentCommonData
     #define UNITY_SETUP_BRDF_INPUT SpecularSetup
 #endif
 
-inline FragmentCommonData SpecularSetup (float4 i_tex)
+inline FragmentCommonData SpecularSetup (half4 i_tex)
 {
     half4 specGloss = SpecularGloss(i_tex.xy);
     half3 specColor = specGloss.rgb;
@@ -208,7 +208,7 @@ inline FragmentCommonData SpecularSetup (float4 i_tex)
     return o;
 }
 
-inline FragmentCommonData RoughnessSetup(float4 i_tex)
+inline FragmentCommonData RoughnessSetup(half4 i_tex)
 {
     half2 metallicGloss = MetallicRough(i_tex.xy);
     half metallic = metallicGloss.x;
@@ -226,7 +226,7 @@ inline FragmentCommonData RoughnessSetup(float4 i_tex)
     return o;
 }
 
-inline FragmentCommonData MetallicSetup (float4 i_tex)
+inline FragmentCommonData MetallicSetup (half4 i_tex)
 {
     half2 metallicGloss = MetallicGloss(i_tex.xy);
     half metallic = metallicGloss.x;
@@ -245,7 +245,7 @@ inline FragmentCommonData MetallicSetup (float4 i_tex)
 }
 
 // parallax transformed texcoord is used to sample occlusion
-inline FragmentCommonData FragmentSetup (inout float4 i_tex, float3 i_eyeVec, half3 i_viewDirForParallax, float4 tangentToWorld[3], float3 i_posWorld)
+inline FragmentCommonData FragmentSetup (inout half4 i_tex, half3 i_eyeVec, half3 i_viewDirForParallax, half4 tangentToWorld[3], half3 i_posWorld)
 {
     i_tex = Parallax(i_tex, i_viewDirForParallax);
 
@@ -325,7 +325,7 @@ half4 OutputForward (half4 output, half alphaFromSurface)
     return output;
 }
 
-inline half4 VertexGIForward(VertexInput_VC v, float3 posWorld, half3 normalWorld)
+inline half4 VertexGIForward(VertexInput_VC v, half3 posWorld, half3 normalWorld)
 {
     half4 ambientOrLightmapUV = 0;
     // Static lightmaps
@@ -360,9 +360,9 @@ inline half4 VertexGIForward(VertexInput_VC v, float3 posWorld, half3 normalWorl
 struct VertexOutputForwardBase
 {
     UNITY_POSITION(pos);
-    float4 tex                            : TEXCOORD0;
-    float4 eyeVec                         : TEXCOORD1;    // eyeVec.xyz | fogCoord
-    float4 tangentToWorldAndPackedData[3] : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:viewDirForParallax or worldPos]
+    half4 tex                            : TEXCOORD0;
+    half4 eyeVec                         : TEXCOORD1;    // eyeVec.xyz | fogCoord
+    half4 tangentToWorldAndPackedData[3] : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:viewDirForParallax or worldPos]
     half4 ambientOrLightmapUV             : TEXCOORD5;    // SH or Lightmap UV
 	half4 color : COLOR;
 
@@ -377,7 +377,7 @@ struct VertexOutputForwardBase
 //#endif
         // next ones would not fit into SM2.0 limits, but they are always for SM3.0+
     #if UNITY_REQUIRE_FRAG_WORLDPOS && !UNITY_PACK_WORLDPOS_WITH_TANGENT
-        float3 posWorld                 : TEXCOORD9;
+        half3 posWorld                 : TEXCOORD9;
     #endif
 
     UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -392,7 +392,7 @@ VertexOutputForwardBase vertForwardBase (VertexInput_VC v)
     UNITY_TRANSFER_INSTANCE_ID(v, o);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-    float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
+    half4 posWorld = mul(unity_ObjectToWorld, v.vertex);
     #if UNITY_REQUIRE_FRAG_WORLDPOS
         #if UNITY_PACK_WORLDPOS_WITH_TANGENT
             o.tangentToWorldAndPackedData[0].w = posWorld.x;
@@ -406,11 +406,11 @@ VertexOutputForwardBase vertForwardBase (VertexInput_VC v)
 
     o.tex = TexCoords(v);
     o.eyeVec.xyz = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
-    float3 normalWorld = UnityObjectToWorldNormal(v.normal);
+    half3 normalWorld = UnityObjectToWorldNormal(v.normal);
     #ifdef _TANGENT_TO_WORLD
-        float4 tangentWorld = float4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
+        half4 tangentWorld = half4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
 
-        float3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
+        half3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
         o.tangentToWorldAndPackedData[0].xyz = tangentToWorld[0];
         o.tangentToWorldAndPackedData[1].xyz = tangentToWorld[1];
         o.tangentToWorldAndPackedData[2].xyz = tangentToWorld[2];
@@ -485,10 +485,10 @@ half4 fragForwardBase (VertexOutputForwardBase i) : SV_Target   // backward comp
 struct VertexOutputForwardAdd
 {
     UNITY_POSITION(pos);
-    float4 tex                          : TEXCOORD0;
-    float4 eyeVec                       : TEXCOORD1;    // eyeVec.xyz | fogCoord
-    float4 tangentToWorldAndLightDir[3] : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:lightDir]
-    float3 posWorld                     : TEXCOORD5;
+    half4 tex                          : TEXCOORD0;
+    half4 eyeVec                       : TEXCOORD1;    // eyeVec.xyz | fogCoord
+    half4 tangentToWorldAndLightDir[3] : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:lightDir]
+    half3 posWorld                     : TEXCOORD5;
 	half4  color						: COLOR;
 
 
@@ -517,17 +517,17 @@ VertexOutputForwardAdd vertForwardAdd (VertexInput_VC v)
     UNITY_INITIALIZE_OUTPUT(VertexOutputForwardAdd, o);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-    float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
+    half4 posWorld = mul(unity_ObjectToWorld, v.vertex);
     o.pos = UnityObjectToClipPos(v.vertex);
 
     o.tex = TexCoords(v);
     o.eyeVec.xyz = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
     o.posWorld = posWorld.xyz;
-    float3 normalWorld = UnityObjectToWorldNormal(v.normal);
+    half3 normalWorld = UnityObjectToWorldNormal(v.normal);
     #ifdef _TANGENT_TO_WORLD
-        float4 tangentWorld = float4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
+        half4 tangentWorld = half4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
 
-        float3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
+        half3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
         o.tangentToWorldAndLightDir[0].xyz = tangentToWorld[0];
         o.tangentToWorldAndLightDir[1].xyz = tangentToWorld[1];
         o.tangentToWorldAndLightDir[2].xyz = tangentToWorld[2];
@@ -539,7 +539,7 @@ VertexOutputForwardAdd vertForwardAdd (VertexInput_VC v)
     //We need this for shadow receiving and lighting
     UNITY_TRANSFER_LIGHTING(o, v.uv1);
 
-    float3 lightDir = _WorldSpaceLightPos0.xyz - posWorld.xyz * _WorldSpaceLightPos0.w;
+    half3 lightDir = _WorldSpaceLightPos0.xyz - posWorld.xyz * _WorldSpaceLightPos0.w;
     #ifndef USING_DIRECTIONAL_LIGHT
         lightDir = NormalizePerVertexNormal(lightDir);
     #endif
@@ -591,14 +591,14 @@ half4 fragForwardAdd (VertexOutputForwardAdd i) : SV_Target     // backward comp
 struct VertexOutputDeferred_VC
 {
     UNITY_POSITION(pos);
-    float4 tex                            : TEXCOORD0;
-    float3 eyeVec                         : TEXCOORD1;
-    float4 tangentToWorldAndPackedData[3] : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:viewDirForParallax or worldPos]
+    half4 tex                            : TEXCOORD0;
+    half3 eyeVec                         : TEXCOORD1;
+    half4 tangentToWorldAndPackedData[3] : TEXCOORD2;    // [3x3:tangentToWorld | 1x3:viewDirForParallax or worldPos]
     half4 ambientOrLightmapUV             : TEXCOORD5;    // SH or Lightmap UVs
 	half4 color : COLOR;
 
     #if UNITY_REQUIRE_FRAG_WORLDPOS && !UNITY_PACK_WORLDPOS_WITH_TANGENT
-        float3 posWorld                     : TEXCOORD6;
+        half3 posWorld                     : TEXCOORD6;
     #endif
 
     UNITY_VERTEX_INPUT_INSTANCE_ID
@@ -614,7 +614,7 @@ VertexOutputDeferred_VC vertDeferred (VertexInput_VC v)
     UNITY_TRANSFER_INSTANCE_ID(v, o);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-    float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
+    half4 posWorld = mul(unity_ObjectToWorld, v.vertex);
     #if UNITY_REQUIRE_FRAG_WORLDPOS
         #if UNITY_PACK_WORLDPOS_WITH_TANGENT
             o.tangentToWorldAndPackedData[0].w = posWorld.x;
@@ -628,11 +628,11 @@ VertexOutputDeferred_VC vertDeferred (VertexInput_VC v)
 
     o.tex = TexCoords(v);
     o.eyeVec = NormalizePerVertexNormal(posWorld.xyz - _WorldSpaceCameraPos);
-    float3 normalWorld = UnityObjectToWorldNormal(v.normal);
+    half3 normalWorld = UnityObjectToWorldNormal(v.normal);
     #ifdef _TANGENT_TO_WORLD
-        float4 tangentWorld = float4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
+        half4 tangentWorld = half4(UnityObjectToWorldDir(v.tangent.xyz), v.tangent.w);
 
-        float3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
+        half3x3 tangentToWorld = CreateTangentToWorldPerVertex(normalWorld, tangentWorld.xyz, tangentWorld.w);
         o.tangentToWorldAndPackedData[0].xyz = tangentToWorld[0];
         o.tangentToWorldAndPackedData[1].xyz = tangentToWorld[1];
         o.tangentToWorldAndPackedData[2].xyz = tangentToWorld[2];

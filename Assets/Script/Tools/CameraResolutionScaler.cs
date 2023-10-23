@@ -97,7 +97,7 @@ public class CameraResolutionScaler : MonoBehaviour
                     break;
             }
         else //disable vsync in Editor
-            QualitySettings.vSyncCount = 1;
+            QualitySettings.vSyncCount = 2;
     }
 
     private void OnDisable()

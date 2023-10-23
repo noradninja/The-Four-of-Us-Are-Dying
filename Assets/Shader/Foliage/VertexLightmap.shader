@@ -1,4 +1,4 @@
-﻿Shader "Vita/Lightmapped Vertlit Wind Foliage" {
+﻿Shader "Vita/Vertex_LM_Wind Foliage" {
 	Properties {
 		_MainTex("Base (RGB)", 2D) = "white" { }
 		_MOAR("MOAR (RGBA)", 2D) = "white" { }
@@ -12,6 +12,7 @@
 		[Toggle(ALPHA_ON)] _SeparateAlpha("Seperate Alpha", Float) = 1
 		[Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 1
 		[Toggle(AMBIENT_ON)] _AmbientOn("Ambient Lighting", Float) = 0
+		[Toggle(CUSTOM_LM)] _CustomLM("Lightmap",Float) = 1
 	}
 
 	SubShader {

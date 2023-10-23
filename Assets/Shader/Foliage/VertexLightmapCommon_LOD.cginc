@@ -59,7 +59,7 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 
 // uniforms
 int4 unity_VertexLightParams; // x: light count, y: zero, z: one (y/z needed by d3d9 vs loop instruction)
-sampler2D _MainTex;
+sampler2D_half _MainTex;
 half4 _MainTex_ST;
 half _Cutoff;
 half4 _wind_dir;
@@ -92,7 +92,7 @@ struct v2f {
 
 
 };
-static const float4x4 ditherTable = float4x4
+static const half4x4 ditherTable = half4x4
 			(
 				-4.0, 0.0, -3.0, 1.0,
 				2.0, -2.0, 3.0, -1.0,
@@ -100,13 +100,13 @@ static const float4x4 ditherTable = float4x4
 				3.0, -1.0, 2.0, -2.0
 			);
 
-float InterleavedGradientNoise( float2 iPos, float nullFloat){
+half InterleavedGradientNoise( half2 iPos, half nullhalf){
 	return frac( 52.9829189f * frac ((iPos.x * 0.06711056) + (iPos.y * 0.00583715)));
 }
 
-void ClipLOD (float2 positionCS, float fade) {
+void ClipLOD (half2 positionCS, half fade) {
 	#if defined(LOD_FADE_CROSSFADE)
-		float dither = InterleavedGradientNoise(positionCS.xy, 0); 
+		half dither = InterleavedGradientNoise(positionCS.xy, 0); 
 		clip(fade + (fade < 0.0 ? dither : -dither));
 	#endif
 }
@@ -213,7 +213,7 @@ fixed4 frag(v2f v) : SV_Target {
 		half4 col = (diffuse * lighting);
 
 
-float2 xy = (v.uv0 * float2(4,4)) * 4;
+half2 xy = (v.uv0 * half2(4,4)) * 4;
 		int x = int(fmod(xy.x, 8)); // jave.lin : return : 0, 1, 2, 3, 4, 5, 6, 7
 		//return x / 7.0; // jave.lin :  level  7  Gray scale 
 		int y = int(fmod(xy.y, 8)); // jave.lin : return : 0, 1, 2, 3, 4, 5, 6, 7

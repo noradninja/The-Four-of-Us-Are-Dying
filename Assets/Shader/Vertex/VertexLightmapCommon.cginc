@@ -59,8 +59,8 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal) {
 
 // uniforms
 int4 unity_VertexLightParams; // x: light count, y: zero, z: one (y/z needed by d3d9 vs loop instruction)
-sampler2D _MainTex;
-sampler2D _MOAR;
+sampler2D_half _MainTex;
+sampler2D_half _MOAR;
 half4 _MainTex_ST;
 half _Cutoff;
 half4 _wind_dir;

@@ -24,27 +24,27 @@
 		sampler2D_half _BumpMap;
 
 		struct Input {
-			float2 uv_MainTex;
+			half2 uv_MainTex;
 		};
 
 		half _Glossiness;
 		half _Metallic;
-		fixed4 _Color;
+		half4 _Color;
 		half _Distortion;
 		half _Power;
 		half _Scale;
 
 		#include "UnityPBSLighting.cginc"
-		inline fixed4 LightingSSSTranslucent(SurfaceOutputStandard s, float3 viewDir, UnityGI gi)
+		inline half4 LightingSSSTranslucent(SurfaceOutputStandard s, half3 viewDir, UnityGI gi)
 		{
 			// original color 
-			fixed4 c = LightingStandard(s, viewDir, gi);
+			half4 c = LightingStandard(s, viewDir, gi);
 
-			float3 lightDir = gi.light.dir;
-			float3 normal = s.Normal;
+			half3 lightDir = gi.light.dir;
+			half3 normal = s.Normal;
 
-			float3 H = lightDir + _Distortion * normal;
-			float VdotH = pow(saturate(dot(viewDir, -H)), _Power) * _Scale;
+			half3 H = lightDir + _Distortion * normal;
+			half VdotH = pow(saturate(dot(viewDir, -H)), _Power) * _Scale;
  
 			c.rgb += gi.light.color * VdotH;
 			return c;
@@ -69,7 +69,7 @@
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
 			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
+			half4 c = tex2D (_MainTex, IN.uv_MainTex) * _Color;
 			o.Albedo = c.rgb;
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic;

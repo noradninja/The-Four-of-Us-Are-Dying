@@ -21,17 +21,17 @@ Shader "Lightbeam/Lightbeam Inside" {
 			#pragma fragment frag
 			#include "UnityCG.cginc"
 			
-			sampler2D _MainTex;
-			fixed4 _Color;
-			fixed _Width;
-			fixed _Tweak;
+			sampler2D_half _MainTex;
+			half4 _Color;
+			half _Width;
+			half _Tweak;
 
 			struct v2f 
 			{
-			    float4 pos : SV_POSITION;
-			    float4 uv : TEXCOORD0;
-			    float4 falloffUVs : TEXCOORD1;
-			    float4 screenPos : TEXCOORD2;
+			    half4 pos : SV_POSITION;
+			    half4 uv : TEXCOORD0;
+			    half4 falloffUVs : TEXCOORD1;
+			    half4 screenPos : TEXCOORD2;
 			};
 			
 			v2f vert (appdata_tan v)
@@ -41,15 +41,15 @@ Shader "Lightbeam/Lightbeam Inside" {
 								
 				// Generate the falloff texture UVs
 				TANGENT_SPACE_ROTATION;
-				float3 refVector = mul(rotation, normalize(ObjSpaceViewDir(v.vertex)));
+				half3 refVector = mul(rotation, normalize(ObjSpaceViewDir(v.vertex)));
 
-				fixed z = sqrt((refVector.z + _Tweak) * _Width);
-				fixed x = (refVector.x / z) + 0.5;
-				fixed y = (refVector.y / z) + 0.5;
+				const half z = sqrt((refVector.z + _Tweak) * _Width);
+				const half x = (refVector.x / z) + 0.5;
+				const half y = (refVector.y / z) + 0.5;
 
-				fixed2 uv1 = float2(x, v.texcoord.y);
-				fixed2 uv2 = float2(x, y);
-				o.falloffUVs = fixed4(uv1, uv2);
+				half2 uv1 = half2(x, v.texcoord.y);
+				half2 uv2 = half2(x, y);
+				o.falloffUVs = half4(uv1, uv2);
 				
 				o.screenPos = ComputeScreenPos(o.pos);
 				COMPUTE_EYEDEPTH(o.screenPos.z);
@@ -58,12 +58,12 @@ Shader "Lightbeam/Lightbeam Inside" {
 			}
 			
 			
-			fixed4 frag( v2f In ) : COLOR
+			half4 frag( v2f In ) : COLOR
 			{			
-				fixed falloff1 = tex2D(_MainTex, In.falloffUVs.xy).r;
-				fixed falloff2 = tex2D(_MainTex, In.falloffUVs.zw).g;
+				const half falloff1 = tex2D(_MainTex, In.falloffUVs.xy).r;
+				const half falloff2 = tex2D(_MainTex, In.falloffUVs.zw).g;
 				
-				fixed4 c = _Color;
+				half4 c = _Color;
 				c.a *= falloff1 * falloff2;
 
 				// Fade when near the camera

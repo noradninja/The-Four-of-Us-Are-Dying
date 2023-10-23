@@ -8,7 +8,7 @@
 		#pragma target 3.0
 
 		struct Input {
-			float4 vertColor;
+			half4 vertColor;
 		};
 
 		void vert(inout appdata_full v, out Input o){

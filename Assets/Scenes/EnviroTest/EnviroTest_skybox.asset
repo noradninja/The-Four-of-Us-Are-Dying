@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: EnviroTest_skybox
+  m_Shader: {fileID: 4800000, guid: 8dd49cd8305cbae4f8c358c16965dbba, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _Tex:
+        m_Texture: {fileID: 8900000, guid: 3abd7d0997d6749368e2117f989a026a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _Exposure: 0.5574963
+    - _Hemispherical: 0
+    - _NoTexture: 0
+    m_Colors:
+    - _MatrixForward: {r: -0.45499888, g: 0.8449969, b: 0.28099167, a: 0}
+    - _MatrixRight: {r: 0.35548386, g: -0.11695784, b: 0.9273361, a: 0}
+    - _MatrixUp: {r: 0.81646025, g: 0.52182484, b: -0.24716711, a: 0}
+    - _Tint: {r: 0.21176472, g: 0.227451, b: 0.29411766, a: 1}

@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
   m_Name: LMGroup_Trims_Back
   m_EditorClassIdentifier: 
-  resolution: 1024
+  resolution: 2048
   bitmask: 1
-  id: 12
-  sortingID: 12
+  id: 22
+  sortingID: 7
   isImplicit: 0
   area: 0
   totalVertexCount: 0
@@ -23,17 +23,17 @@ MonoBehaviour:
   sceneName: 
   containsTerrains: 0
   probes: 0
-  mode: 1
+  mode: 0
   renderMode: 3
   renderDirMode: 1
-  atlasPacker: 1
+  atlasPacker: 1000
   computeSSS: 0
   sssSamples: 16
   sssDensity: 10
   sssColor: {r: 1, g: 1, b: 1, a: 1}
   sssScale: 1
   fakeShadowBias: 0
-  transparentSelfShadow: 1
+  transparentSelfShadow: 0
   flipNormal: 0
   parentName: 
   overridePath: 

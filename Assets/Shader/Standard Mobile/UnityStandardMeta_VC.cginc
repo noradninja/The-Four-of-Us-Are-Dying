@@ -13,8 +13,8 @@
 
 struct v2f_meta
 {
-    float4 uv       : TEXCOORD0;
-    float4 pos      : SV_POSITION;
+    half4 uv       : TEXCOORD0;
+    half4 pos      : SV_POSITION;
 };
 
 v2f_meta vert_meta (VertexInput_VC v)
@@ -36,7 +36,7 @@ half3 UnityLightmappingAlbedo (half3 diffuse, half3 specular, half smoothness)
     return res;
 }
 
-float4 frag_meta (v2f_meta i) : SV_Target
+half4 frag_meta (v2f_meta i) : SV_Target
 {
     // we're interested in diffuse & specular colors,
     // and surface roughness to produce final albedo.

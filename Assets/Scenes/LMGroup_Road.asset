@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
   m_Name: LMGroup_Road
   m_EditorClassIdentifier: 
-  resolution: 1024
+  resolution: 2048
   bitmask: 1
-  id: 7
-  sortingID: 7
+  id: 24
+  sortingID: 5
   isImplicit: 0
   area: 0
   totalVertexCount: 0
@@ -23,10 +23,10 @@ MonoBehaviour:
   sceneName: 
   containsTerrains: 0
   probes: 0
-  mode: 1
+  mode: 0
   renderMode: 3
   renderDirMode: 1
-  atlasPacker: 1
+  atlasPacker: 1000
   computeSSS: 0
   sssSamples: 16
   sssDensity: 10

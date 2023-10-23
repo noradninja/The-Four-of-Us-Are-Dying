@@ -70,6 +70,7 @@ half _leaves_wiggle_speed;
 half _influence;
 half _LeavesOn;
 half _SeparateAlpha;
+half _CustomLM;
 
 
 // pos shader input data
@@ -119,13 +120,11 @@ if(_LeavesOn)
 	#if defined(AMBIENT_ON) || !defined(CUSTOM_LIGHTMAPPED)
 		color.rgb = glstate_lightmodel_ambient.rgb;
 	#endif
-
-	for (int il = 0; il < LIGHT_LOOP_LIMIT; ++il) {
-		color.rgb += computeOneLight(il, eyePos, eyeNormal);
-	}
-	color.rgb += smoothstep(0.0h, 1.0h, dotProduct) * 0.15h;
-	saturate(color);
-		
+		for (int il = 0; il < LIGHT_LOOP_LIMIT; ++il) {
+			color.rgb += computeOneLight(il, eyePos, eyeNormal);
+		}
+		color.rgb += smoothstep(0.0h, 1.0h, dotProduct) * 0.15h;
+		saturate(color);
 	// compute texture coordinates
 	o.uv0 = v.uv0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
 
@@ -144,22 +143,29 @@ if(_LeavesOn)
 }
 
 // fragment shader
-fixed4 frag(v2f i) : SV_Target {
+half4 frag(v2f i) : SV_Target {
 	const half4 posLighting = i.color;
 	UNITY_EXTRACT_FOG(i);
-	#if defined(CUSTOM_LIGHTMAPPED)
-	const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1.xy);
+	half4 lighting;
+	half4 diffuse;
+	half4 col;
+	if(_CustomLM == 0)
+	{
+		diffuse = half4(0,0,0,tex2D(_MainTex, i.uv0.xy).a);
+		col = diffuse;
+	}
+	else if (_CustomLM == 1){
+		half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1.xy);
+		lighting = (lightmap * 0.25h) + posLighting;
+		diffuse = tex2D(_MainTex, i.uv0.xy);
+		col = (diffuse * lighting);
+	}
+	
+	
+	
 
-	#if CUSTOM_LIGHTMAPPED == 1
-	const half4 lighting = (lightmap * 0.25h) + posLighting;
-	#endif
-
-	#else
-	const half4 lighting = posLighting;
-	#endif
-
-	const half4 diffuse = tex2D(_MainTex, i.uv0.xy);
-	half4 col = (diffuse * lighting);
+	
+	
 	// Apply vertex lightmap
 	col.rgb *= i.color;
 	// Calculate custom alpha

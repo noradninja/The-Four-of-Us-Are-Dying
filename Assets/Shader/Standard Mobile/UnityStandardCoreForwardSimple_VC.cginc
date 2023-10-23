@@ -20,7 +20,7 @@
 struct VertexOutputBaseSimple
 {
     UNITY_POSITION(pos);
-    float4 tex                          : TEXCOORD0;
+    half4 tex                          : TEXCOORD0;
     half4 eyeVec                        : TEXCOORD1; // w: grazingTerm
 
     half4 ambientOrLightmapUV           : TEXCOORD2; // SH or Lightmap UV
@@ -37,7 +37,7 @@ struct VertexOutputBaseSimple
     #endif
 #endif
 #if UNITY_REQUIRE_FRAG_WORLDPOS
-    float3 posWorld                     : TEXCOORD8;
+    half3 posWorld                     : TEXCOORD8;
 #endif
 
     UNITY_VERTEX_OUTPUT_STEREO
@@ -94,7 +94,7 @@ VertexOutputBaseSimple vertForwardBaseSimple (VertexInput_VC v)
     UNITY_INITIALIZE_OUTPUT(VertexOutputBaseSimple, o);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
-    float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
+    half4 posWorld = mul(unity_ObjectToWorld, v.vertex);
     o.pos = UnityObjectToClipPos(v.vertex);
     o.tex = TexCoords(v);
 
@@ -257,12 +257,12 @@ half4 fragForwardBaseSimple (VertexOutputBaseSimple i) : SV_Target  // backward 
 struct VertexOutputForwardAddSimple_VC
 {
     UNITY_POSITION(pos);
-    float4 tex                          : TEXCOORD0;
-    float3 posWorld                     : TEXCOORD1;
+    half4 tex                          : TEXCOORD0;
+    half3 posWorld                     : TEXCOORD1;
 	half4 color : COLOR;
     #ifndef LIGHTMAP_OFF
         half2 uvLM                      : TEXCOORD2;
-        float2 texcoord1                : TEXCOORD3;
+        half2 texcoord1                : TEXCOORD3;
     #endif 
     
 
@@ -294,7 +294,7 @@ VertexOutputForwardAddSimple_VC vertForwardAddSimple (VertexInput_VC v)
     UNITY_SETUP_INSTANCE_ID(v);
     UNITY_INITIALIZE_OUTPUT(VertexOutputForwardAddSimple_VC, o);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-    float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
+    half4 posWorld = mul(unity_ObjectToWorld, v.vertex);
     o.pos = UnityObjectToClipPos(v.vertex);
     o.tex = TexCoords(v);
     o.posWorld = posWorld.xyz;
@@ -330,7 +330,7 @@ VertexOutputForwardAddSimple_VC vertForwardAddSimple (VertexInput_VC v)
         #endif
     #endif
 
-	o.color = lerp(float4(1, 1, 1, 1), float4(1, 1, 1, 1) * v.color, _IntensityVC);
+	o.color = lerp(half4(1, 1, 1, 1), half4(1, 1, 1, 1) * v.color, _IntensityVC);
     UNITY_TRANSFER_FOG(o,o.pos);
     return o;
 }

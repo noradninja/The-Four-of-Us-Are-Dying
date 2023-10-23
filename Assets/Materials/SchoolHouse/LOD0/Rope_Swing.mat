@@ -8,13 +8,13 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Rope_Swing
   m_Shader: {fileID: 4800000, guid: 162806a154c983a4aa0292c2699caba6, type: 3}
-  m_ShaderKeywords: SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON
+  m_ShaderKeywords: CUSTOM_LM SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON
     SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1
-    SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 _ALPHAPREMULTIPLY_ON _ALPHATEST_ON
-    _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP
+    SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 WIGGLE_ON _ALPHAPREMULTIPLY_ON
+    _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
@@ -118,7 +118,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MOAR:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 84a5d34050827974aa0b7f431d9d0cee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -189,7 +189,8 @@ Material:
     - _ControlScriptFlag: 0
     - _Cull: 0
     - _CullMode: 0
-    - _Cutoff: 0.5
+    - _CustomLM: 1
+    - _Cutoff: 0.588
     - _DetailFade: 1
     - _DetailMask: 1
     - _DetailNormalMapScale: 1
@@ -353,7 +354,7 @@ Material:
     - _Layer3ScrollV: 0
     - _Layer3Toggle: 0
     - _Layer3UV2: 0
-    - _LeavesOn: 0
+    - _LeavesOn: 1
     - _LightFold: 1
     - _LightMode: 1
     - _LightProbes: 0
@@ -405,6 +406,7 @@ Material:
     - _ScanlineWidthVert: 0.5
     - _ScrollU: 0
     - _ScrollV: 0
+    - _SeparateAlpha: 0
     - _Shininess: 0.7
     - _Smoothness0: 1
     - _Smoothness1: 1

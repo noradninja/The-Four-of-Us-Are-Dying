@@ -28,21 +28,21 @@ SubShader {
             #include "UnityCG.cginc"
 
             struct appdata_t {
-                float4 vertex : POSITION;
-                float2 texcoord : TEXCOORD0;
+                half4 vertex : POSITION;
+                half2 texcoord : TEXCOORD0;
                 UNITY_VERTEX_INPUT_INSTANCE_ID
             };
 
             struct v2f {
-                float4 vertex : SV_POSITION;
-                float2 texcoord : TEXCOORD0;
+                half4 vertex : SV_POSITION;
+                half2 texcoord : TEXCOORD0;
                 UNITY_FOG_COORDS(1)
                 UNITY_VERTEX_OUTPUT_STEREO
             };
 
-            sampler2D _MainTex;
-            float4 _MainTex_ST;
-			float _Alpha;
+            sampler2D_half _MainTex;
+            half4 _MainTex_ST;
+			half _Alpha;
 
             v2f vert (appdata_t v)
             {
