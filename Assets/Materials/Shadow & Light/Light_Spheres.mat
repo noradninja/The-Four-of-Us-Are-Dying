@@ -41,7 +41,7 @@ Material:
     - _Fade: 1
     - _FadeDistance: 2
     - _FadeLength: 0.15
-    - _InvFade: 0.69
+    - _InvFade: 2.14
     - _SoftEdge: 3.5
     - _StencilRef: 128
     - _Tweak: 1

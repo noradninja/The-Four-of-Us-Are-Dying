@@ -4,7 +4,7 @@
 	{
 		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
 		[IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
-		[FloatRange] _Range ("Range", Range(0.1,2)) = 1.0
+		[FloatRange] _Range ("Falloff", Range(0.0,1.0)) = 1.0
 	}
 	SubShader
 	{
@@ -50,11 +50,12 @@
 			
 			half4 _TintColor;
 			half _Range;
+			half _Falloff;
 			UNITY_DECLARE_DEPTH_TEXTURE(_CameraDepthTexture);
 			half4 frag (v2f i) : SV_Target
 			{
-				const half sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
-				half4 col = _TintColor * ((sceneZ -0.35f)*(pow(_Range, 2)));
+				const half sceneZ = saturate(LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos))));
+				half4 col = _TintColor * ((sceneZ - 0.35f)*(pow(1-_Range, 2)));
 				return col;
 			}
 			ENDCG

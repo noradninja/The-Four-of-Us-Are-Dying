@@ -21,4 +21,5 @@ MonoBehaviour:
   - Assets/Model/TJunction.fbx
   - Assets/Model/Big_Road.fbx
   - Assets/Model/Iffrig_Foundation.fbx
-  modifiedAssetPaddingHash: aaf8cc2e2700da6bc19f255441131a2784a190a808991723393fd3d9363fd3d91b0cd168
+  - Assets/Model/Props/TJunction.fbx
+  modifiedAssetPaddingHash: aaf8cc2e2700da6bc19f255441131a2784a190a808991723393fd3d9363fd3d91b0cd168363fd3d9

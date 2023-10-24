@@ -28,7 +28,7 @@ public class Contrast_Manager : MonoBehaviour
     // Update is called once per frame
 	public void Update()
     {
-        contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat(Exposure)-0.55f);
+        contrastValue = Mathf.Clamp01(skyboxMaterial.GetFloat(Exposure)-0.25f);
         contrastValue = ExtensionMethods.Math.Remap(contrastValue, 0f, 1.0f, 0f, maxShadowAmount/2);
         tintColor.a = contrastValue;
         contrastMaterial.SetColor(TintColor, tintColor);    
