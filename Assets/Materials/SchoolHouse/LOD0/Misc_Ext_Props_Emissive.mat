@@ -11,8 +11,8 @@ Material:
   m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
     SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON
     SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4
-    _BAKERY_NONE _EMISSION _LIGHTMAPSPECULAR
-  m_LightmapFlags: 2
+    _BAKERY_NONE _EMISSION _LIGHTMAPSPECULAR _VERTEXCOLOR
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -309,7 +309,7 @@ Material:
     - _HeightScale: 0.006
     - _HeightStepsMax: 16
     - _HeightStepsMin: 8
-    - _IntensityVC: 0
+    - _IntensityVC: 1
     - _IntersectFold: 0
     - _IntersectThreshold: 1
     - _IntersectToggle: 0

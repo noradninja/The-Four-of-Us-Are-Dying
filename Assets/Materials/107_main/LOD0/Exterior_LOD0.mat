@@ -204,7 +204,7 @@ Material:
     - _BaseColorVertexTint: 0
     - _Blend: 0
     - _BumpMode: 0
-    - _BumpScale: 1.25
+    - _BumpScale: 1
     - _Bumpiness: 5
     - _Cull: 2
     - _Cutoff: 0.5

@@ -16,6 +16,18 @@ ModelImporter:
     100020: polySurface24
     100022: polySurface25
     100024: polySurface26
+    100026: Parking_Lot_Back
+    100028: Parking_Lot_Back1
+    100030: Parking_Lot_Back2
+    100032: Parking_Lot_Back3
+    100034: Parking_Lot_Back4
+    100036: Parking_Lot_Back5
+    100038: Parking_Lot_Front
+    100040: Parking_Lot_Front1
+    100042: Parking_Lot_Front2
+    100044: Parking_Lot_Front3
+    100046: Parking_Lot_Front4
+    100048: Parking_Lot_Front5
     400000: //RootNode
     400002: polySurface12
     400004: polySurface13
@@ -29,7 +41,21 @@ ModelImporter:
     400020: polySurface24
     400022: polySurface25
     400024: polySurface26
+    400026: Parking_Lot_Back
+    400028: Parking_Lot_Back1
+    400030: Parking_Lot_Back2
+    400032: Parking_Lot_Back3
+    400034: Parking_Lot_Back4
+    400036: Parking_Lot_Back5
+    400038: Parking_Lot_Front
+    400040: Parking_Lot_Front1
+    400042: Parking_Lot_Front2
+    400044: Parking_Lot_Front3
+    400046: Parking_Lot_Front4
+    400048: Parking_Lot_Front5
     2100000: lambert23
+    2100002: Back_Half
+    2100004: Front_Half
     2300000: //RootNode
     2300002: polySurface12
     2300004: polySurface13
@@ -43,6 +69,18 @@ ModelImporter:
     2300020: polySurface24
     2300022: polySurface25
     2300024: polySurface26
+    2300026: Parking_Lot_Back
+    2300028: Parking_Lot_Back1
+    2300030: Parking_Lot_Back2
+    2300032: Parking_Lot_Back3
+    2300034: Parking_Lot_Back4
+    2300036: Parking_Lot_Back5
+    2300038: Parking_Lot_Front
+    2300040: Parking_Lot_Front1
+    2300042: Parking_Lot_Front2
+    2300044: Parking_Lot_Front3
+    2300046: Parking_Lot_Front4
+    2300048: Parking_Lot_Front5
     3300000: //RootNode
     3300002: polySurface12
     3300004: polySurface13
@@ -56,6 +94,18 @@ ModelImporter:
     3300020: polySurface24
     3300022: polySurface25
     3300024: polySurface26
+    3300026: Parking_Lot_Back
+    3300028: Parking_Lot_Back1
+    3300030: Parking_Lot_Back2
+    3300032: Parking_Lot_Back3
+    3300034: Parking_Lot_Back4
+    3300036: Parking_Lot_Back5
+    3300038: Parking_Lot_Front
+    3300040: Parking_Lot_Front1
+    3300042: Parking_Lot_Front2
+    3300044: Parking_Lot_Front3
+    3300046: Parking_Lot_Front4
+    3300048: Parking_Lot_Front5
     4300000: Parking_Lot
     4300002: polySurface24
     4300004: polySurface26
@@ -69,6 +119,18 @@ ModelImporter:
     4300020: polySurface20
     4300022: polySurface22
     4300024: polySurface21
+    4300026: Parking_Lot_Back
+    4300028: Parking_Lot_Back1
+    4300030: Parking_Lot_Back2
+    4300032: Parking_Lot_Back3
+    4300034: Parking_Lot_Back4
+    4300036: Parking_Lot_Back5
+    4300038: Parking_Lot_Front
+    4300040: Parking_Lot_Front1
+    4300042: Parking_Lot_Front2
+    4300044: Parking_Lot_Front3
+    4300046: Parking_Lot_Front4
+    4300048: Parking_Lot_Front5
     6400000: //RootNode
     6400002: polySurface12
     6400004: polySurface13
@@ -82,6 +144,18 @@ ModelImporter:
     6400020: polySurface24
     6400022: polySurface25
     6400024: polySurface26
+    6400026: Parking_Lot_Back
+    6400028: Parking_Lot_Back1
+    6400030: Parking_Lot_Back2
+    6400032: Parking_Lot_Back3
+    6400034: Parking_Lot_Back4
+    6400036: Parking_Lot_Back5
+    6400038: Parking_Lot_Front
+    6400040: Parking_Lot_Front1
+    6400042: Parking_Lot_Front2
+    6400044: Parking_Lot_Front3
+    6400046: Parking_Lot_Front4
+    6400048: Parking_Lot_Front5
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -109,7 +183,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["polySurface26","polySurface25","polySurface24","polySurface22","polySurface21","polySurface20","polySurface18","polySurface17","polySurface16","polySurface14","polySurface13","polySurface12","Parking_Lot_Front4","Parking_Lot_Front3","Parking_Lot_Front2","Parking_Lot_Front1","Parking_Lot_Front","Parking_Lot_Back5","Parking_Lot_Back4","Parking_Lot_Back3","Parking_Lot_Back2","Parking_Lot_Back1","Parking_Lot_Back","Parking_Lot_Front5"],"padding":[3,3,3,3,3,3,3,3,3,3,4,3,4,4,5,5,4,4,4,5,4,5,4,4],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -122,7 +197,7 @@ ModelImporter:
     importCameras: 0
     importLights: 0
     swapUVChannels: 0
-    generateSecondaryUV: 0
+    generateSecondaryUV: 1
     useFileUnits: 1
     optimizeMeshForGPU: 1
     keepQuads: 0

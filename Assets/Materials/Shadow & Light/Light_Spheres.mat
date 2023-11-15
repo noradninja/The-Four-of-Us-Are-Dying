@@ -41,13 +41,13 @@ Material:
     - _Fade: 1
     - _FadeDistance: 2
     - _FadeLength: 0.15
-    - _InvFade: 2.14
+    - _InvFade: 1.18
     - _SoftEdge: 3.5
     - _StencilRef: 128
     - _Tweak: 1
     - _Width: 2.23
     m_Colors:
-    - _Color: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.21568628}
+    - _Color: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.16078432}
     - _DetailAnim: {r: 1, g: 0, b: 0, a: 0}
     - _DustAnim: {r: 0, g: 0, b: 0, a: 0}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}

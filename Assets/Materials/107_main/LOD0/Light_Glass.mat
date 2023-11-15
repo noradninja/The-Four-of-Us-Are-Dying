@@ -153,13 +153,13 @@ Material:
     - _Fresnel: 0.5
     - _Gloss: 0.3
     - _GlossMapScale: 1
-    - _Glossiness: 0.3
+    - _Glossiness: 1
     - _GlossinessSource: 1
     - _GlossyReflections: 1
     - _Height: 0
     - _IntensityVC: 0
     - _Matte: 0.95
-    - _Metallic: 0
+    - _Metallic: 1
     - _MetallicPower: 0
     - _Metalness: 0
     - _Mode: 2

@@ -23,11 +23,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _Exposure: 0.5575759
+    - _Exposure: 0.56
     - _Hemispherical: 0
     - _NoTexture: 0
     m_Colors:
-    - _MatrixForward: {r: 0.5331533, g: 0.8449969, b: -0.041567683, a: 0}
-    - _MatrixRight: {r: 0.10839899, g: -0.11695781, b: -0.9872035, a: 0}
-    - _MatrixUp: {r: -0.8390455, g: 0.5218248, b: -0.15395331, a: 0}
+    - _MatrixForward: {r: 0.2809918, g: -0.45499882, b: 0.84499687, a: 0}
+    - _MatrixRight: {r: 0.927336, g: 0.35548398, b: -0.11695783, a: 0}
+    - _MatrixUp: {r: -0.24716718, g: 0.8164602, b: 0.52182484, a: 0}
     - _Tint: {r: 0.21176472, g: 0.227451, b: 0.29411766, a: 1}

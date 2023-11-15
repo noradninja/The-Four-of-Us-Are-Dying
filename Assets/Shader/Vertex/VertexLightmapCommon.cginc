@@ -2,6 +2,7 @@
 #include "HLSLSupport.cginc"
 #include "UnityShaderVariables.cginc"
 #include "UnityShaderUtilities.cginc"
+#include "UnityLightingCommon.cginc"
 #include "AutoLight.cginc"
 #include "Lighting.cginc"
 #include "UnityShadowLibrary.cginc"
@@ -72,6 +73,7 @@ half _LeavesOn;
 half _AlphaOn;
 
 
+
 // pos shader input data
 struct appdata {
 	half3 pos : POSITION;
@@ -114,60 +116,68 @@ if(_LeavesOn)
 	(v.pos.z += sin(cos(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
 }              
 	// pos lighting
-	half4 color = half4(0, 0, 0, 1);
+	half4 col = UNITY_LIGHTMODEL_AMBIENT; //output base ambient color
 
-	#if defined(AMBIENT_ON) || !defined(CUSTOM_LIGHTMAPPED)
-		color.rgb = glstate_lightmodel_ambient.rgb;
+//lighting cases
+	
+	//no lighting
+	#if !defined(VERTEXLIGHT_ON) && !defined(CUSTOM_LIGHTMAPPED)
+	//passthrough
+	col = col;
 	#endif
-
-	for (int il = 0; il < LIGHT_LOOP_LIMIT; ++il) {
-		color.rgb += computeOneLight(il, eyePos, eyeNormal);
-	}
-	color.rgb += smoothstep(0.0h, 1.0h, dotProduct) * 0.15h;
-	o.color = saturate(color);
-		
-	// compute texture coordinates
-	o.uv0 = v.uv0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
-
-	#if defined(CUSTOM_LIGHTMAPPED)
-		o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
-	#endif
+	
+	//ambient or lightmapped
+	// #if defined(VERTEXLIGHT_ON) || defined(CUSTOM_LIGHTMAPPED)
+	// 	//cycle lights
+	// 	for (int il = 0; il < LIGHT_LOOP_LIMIT; ++il) {
+	// 		col.rgb += computeOneLight(il, eyePos, eyeNormal);
+	// 	}
+	// 	
+	// 	// compute texture coordinates
+	// 	o.uv0 = v.uv0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
+	//
+	// 	//get lightmap UV's if lightmapped
+	// 	#if defined(CUSTOM_LIGHTMAPPED)
+	// 		o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+	// 	#endif
+	// 	col.rgb += smoothstep(0.0h, 1.0h, dotProduct);
+	// #endif
+	
 	o.pos = UnityObjectToClipPos(v.pos);
 	o.screenPosition = ComputeScreenPos(o.pos);
-	
-	
+	o.color = col * 50; // saturate(col);
 	UNITY_TRANSFER_FOG(o,o.pos);
-
 	return o;
 
 }
 
 // fragment shader
-fixed4 frag(v2f v) : SV_Target {
+half4 frag(v2f v) : SV_Target {
+	//get inputs
 	const half4 posLighting = v.color;
-	UNITY_EXTRACT_FOG(v);
-	#if defined(CUSTOM_LIGHTMAPPED)
-	const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
-
-	#if CUSTOM_LIGHTMAPPED == 1
-	const half4 lighting = half4(lightmap.rgb * 0.25h,1) + posLighting;
-	#endif
-
-	#else
-	const half4 lighting = posLighting;
-	#endif
-
 	const half4 diffuse = tex2D(_MainTex, v.uv0.xy);
 	const half4 moar = tex2D( _MOAR, v.uv0.xy);
+	UNITY_EXTRACT_FOG(v);
+	
+	#if defined(CUSTOM_LIGHTMAPPED) //get lightmap and add vertex lighting to it
+		const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
+		const half4 lighting = half4(lightmap.rgb * 0.25h,1) + posLighting;
 		half4 col = half4 ((diffuse.rgb * (lighting.rgb * (1.5h * moar.a))) * moar.g, 1);
+	#else//otherwise just use vertex color
+		const half4 lighting = posLighting;
+		half4 col = lighting;
+	#endif
+
+	
+		
 	if(!_AlphaOn)
 		{
-		fixed4 texcol = tex2D( _MainTex, v.uv0.xy);
+		half4 texcol = tex2D( _MainTex, v.uv0.xy);
 		clip( texcol.a - _Cutoff );
 		}
 	else
 {
-	fixed4 texcol = tex2D( _MOAR, v.uv0.xy);
+	half4 texcol = tex2D( _MOAR, v.uv0.xy);
 	clip( texcol.b - _Cutoff );
 }
 

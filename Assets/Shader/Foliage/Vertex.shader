@@ -11,7 +11,7 @@
 		_Time ("Time", Vector) =(0,0,0,0)
 		[Toggle(ALPHA_ON)] _SeparateAlpha("Seperate Alpha", Float) = 1
 		[Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 1
-		[Toggle(AMBIENT_ON)] _AmbientOn("Ambient Lighting", Float) = 0
+		[Toggle(VERTEXLIGHT_ON)] _VertLightOn("Vertex Lighting", Float) = 0
 		[Toggle(CUSTOM_LM)] _CustomLM("Lightmap",Float) = 1
 	}
 

@@ -428,6 +428,7 @@
     <None Include="Assets\Addons\Shaders\spark.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast.shader" />
     <None Include="Assets\Addons\unity-ui-extensions\Shaders\UIAdditive.shader" />
+    <None Include="Assets\Shader\Standard Mobile Foliage\Standard_VC.shader" />
     <None Include="Assets\Shader\Vertex\VertexLightmap.shader" />
     <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail_Soft.shader" />
     <None Include="Assets\Addons\FXAA\FXAA.shader" />
@@ -437,6 +438,7 @@
     <None Include="Assets\Addons\TrueClouds\Resources\Shaders\Light\CloudsTintTransparent.shader" />
     <None Include="Assets\Shader\Standard Full\UnityStandardCore_VC.cginc" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardUtils.cginc" />
+    <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardUtils_VC.cginc" />
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Debug.cginc" />
     <None Include="Assets\Shader\Standard Full\UnityStandardCoreForwardSimple_VC.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Skybox.shader" />
@@ -455,6 +457,7 @@
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
     <None Include="Assets\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
     <None Include="Assets\Shader\Standard Full\UnityStandardCoreForward_VC.cginc" />
+    <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardInput_VC.cginc" />
     <None Include="Assets\Addons\MeshBaker\Examples\Shaders\TestTextureArrays.shader" />
     <None Include="Assets\Addons\TrueClouds\Resources\Shaders\Blur.shader" />
     <None Include="Assets\Shader\Invisible.shader" />
@@ -499,6 +502,7 @@
     <None Include="Assets\Shader\SF Shaders\PBR_Test.shader" />
     <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
     <None Include="Assets\Addons\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
+    <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\PolyFew\BatchFewShader\BatchFewStandard.shader" />
     <None Include="Assets\Shader\PostProcess\EAAA.shader" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardShadow.cginc" />
@@ -563,6 +567,7 @@
     <None Include="Assets\Addons\TrueClouds\Resources\Shaders\Light\CloudsTint.cginc" />
     <None Include="Assets\Shader\Standard Full\Standard_VC_No_Fog.shader" />
     <None Include="Assets\Shader\Standard Full\UnityStandardUtils_VC.cginc" />
+    <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardCoreForwardSimple_VC.cginc" />
     <None Include="Assets\Addons\Lightbeam\Shaders\Lightbeam_Detail.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast_Clip VertexLit.shader" />
     <None Include="Assets\VitaFTPI\LastBuildDir.txt" />
@@ -621,12 +626,14 @@
     <None Include="Assets\Addons\Ultra Skybox Fog\Textures\Readme.txt" />
     <None Include="Assets\Addons\MeshBaker\Resources\Shaders\AlbedoShader.shader" />
     <None Include="Assets\Shader\inverter.shader" />
+    <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardCore_VC.cginc" />
     <None Include="Assets\Addons\TrueClouds\Resources\Shaders\Light\CloudsTintSubtractive.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\Addons\Shaders\NewUnlitShader.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForwardSimple.cginc" />
     <None Include="Assets\Addons\unity-ui-extensions\Shaders\UI Particle MultiplyDouble.shader" />
     <None Include="Assets\Addons\Shaders\blit.shader" />
+    <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardCoreForward_VC.cginc" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>E:/PSVITA/Projects/The-Four-of-Us-Are-Dying/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Rendering;
-
+[ExecuteInEditMode]
 public class Shader_LOD_Enumerator : MonoBehaviour
 {
     public enum LODState
@@ -93,19 +93,21 @@ public class Shader_LOD_Enumerator : MonoBehaviour
                 if (!thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP")) 
                     thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
                 if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.On) 
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows for everything
                 break;
             case LODState.Reduced:
                 if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
                 if (thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP"))
                     thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off && !isFoliage) 
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows if not foliage
+                if (isFoliage)
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows fo foliage
                 break;
             case LODState.VertexOnly:
                 thisRenderer.sharedMaterial = replacementMaterial;
                 if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
-                  thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+                  thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows for all
                 break;
         }
     }

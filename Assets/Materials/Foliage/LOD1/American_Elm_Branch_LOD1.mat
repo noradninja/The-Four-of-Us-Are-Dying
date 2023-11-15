@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: American_Elm_Branch_LOD1
   m_Shader: {fileID: 4800000, guid: 86c5c47bd9048134fbde2294670b6e80, type: 3}
-  m_ShaderKeywords: GEOM_TYPE_LEAF SHADOWED_RIM WIGGLE_ON _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
+  m_ShaderKeywords: AMBIENT_ON GEOM_TYPE_LEAF SHADOWED_RIM _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
     _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -271,7 +271,7 @@ Material:
     - _AlphaMapType: 999
     - _AlphaOn: 0
     - _AlphaScale: 1
-    - _AmbientOn: 0
+    - _AmbientOn: 1
     - _BaseLight: 0.437
     - _BillboardKwToggle: 0
     - _BillboardShadowFade: 0.5
@@ -462,7 +462,7 @@ Material:
     - _Layer3ScrollV: 0
     - _Layer3Toggle: 0
     - _Layer3UV2: 0
-    - _LeavesOn: 1
+    - _LeavesOn: 0
     - _LightCutoff: 0
     - _LightFold: 1
     - _LightMode: 1
@@ -574,6 +574,7 @@ Material:
     - _TwoSided: 0
     - _UVSec: 0
     - _UseMetallicMap: 0
+    - _VertLightOn: 0
     - _VertexColorMode: 0
     - _WindAmount: 0.5
     - _WindMain: 0.1

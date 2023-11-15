@@ -129,13 +129,13 @@ Material:
     - _BakeryEnabled: 0
     - _BakerySHNonLinear: 0
     - _Bicubic: 0
-    - _BumpScale: 4
+    - _BumpScale: 1
     - _BumpShadowHardness: 50
     - _BumpShadowHeightScale: 0.2
     - _Cull: 2
     - _CullMode: 2
     - _Culling: 2
-    - _Cutoff: 0.2
+    - _Cutoff: 0.33
     - _DAlbedoScale: 1
     - _DDetailsMapRef1: 0
     - _DDetailsMapRef2: 0
