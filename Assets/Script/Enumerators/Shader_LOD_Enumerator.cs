@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.Rendering;
-[ExecuteInEditMode]
+
 public class Shader_LOD_Enumerator : MonoBehaviour
 {
     public enum LODState
@@ -93,21 +93,19 @@ public class Shader_LOD_Enumerator : MonoBehaviour
                 if (!thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP")) 
                     thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
                 if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.On) 
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows for everything
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
                 break;
             case LODState.Reduced:
                 if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
                 if (thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP"))
                     thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off && !isFoliage) 
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows if not foliage
-                if (isFoliage)
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows fo foliage
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
                 break;
             case LODState.VertexOnly:
                 thisRenderer.sharedMaterial = replacementMaterial;
                 if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
-                  thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows for all
+                  thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
                 break;
         }
     }

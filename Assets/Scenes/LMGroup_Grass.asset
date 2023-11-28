@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
   m_Name: LMGroup_Grass
   m_EditorClassIdentifier: 
-  resolution: 2048
+  resolution: 4096
   bitmask: 1
-  id: 11
-  sortingID: 8
+  id: 8
+  sortingID: 10
   isImplicit: 0
   area: 0
   totalVertexCount: 0
@@ -30,7 +30,7 @@ MonoBehaviour:
   computeSSS: 1
   sssSamples: 8
   sssDensity: 1
-  sssColor: {r: 0.6016376, g: 0.6016376, b: 0.754717, a: 1}
+  sssColor: {r: 0.25397182, g: 0.25397182, b: 0.322, a: 1}
   sssScale: 1
   fakeShadowBias: 0
   transparentSelfShadow: 1

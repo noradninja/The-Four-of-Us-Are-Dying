@@ -184,7 +184,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["polySurface26","polySurface25","polySurface24","polySurface22","polySurface21","polySurface20","polySurface18","polySurface17","polySurface16","polySurface14","polySurface13","polySurface12","Parking_Lot_Front4","Parking_Lot_Front3","Parking_Lot_Front2","Parking_Lot_Front1","Parking_Lot_Front","Parking_Lot_Back5","Parking_Lot_Back4","Parking_Lot_Back3","Parking_Lot_Back2","Parking_Lot_Back1","Parking_Lot_Back","Parking_Lot_Front5"],"padding":[3,3,3,3,3,3,3,3,3,3,4,3,4,4,5,5,4,4,4,5,4,5,4,4],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    - '#BAKERY{"meshName":["Parking_Lot_Back5","Parking_Lot_Back4","Parking_Lot_Back3","Parking_Lot_Back2","Parking_Lot_Back1","Parking_Lot_Back","Parking_Lot_Front5","Parking_Lot_Front4","Parking_Lot_Front3","Parking_Lot_Front2","Parking_Lot_Front1","Parking_Lot_Front"],"padding":[3,3,3,3,3,3,3,3,3,4,3,3],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0]}'
     clipAnimations: []
     isReadable: 1
   meshes:

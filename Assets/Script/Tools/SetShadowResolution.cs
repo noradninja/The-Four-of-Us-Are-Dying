@@ -6,7 +6,9 @@ public class SetShadowResolution : MonoBehaviour {
 
 	public int resolution;
 	public Light thisLight;
-	void Start () {
+	void Start ()
+	{
+		thisLight = this.GetComponent<Light>();
         	thisLight.shadowCustomResolution = resolution;
 	}
 }

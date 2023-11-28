@@ -15,7 +15,7 @@ MonoBehaviour:
   - Assets/Bakery/examples/content/sponza/sponza.FBX
   - Assets/Model/Props/TJunction.fbx
   - Assets/Model/Props/Iffrig_Foundation.fbx
-  modifiedAssetPaddingHash: aaf8cc2e393fd3d93bb9bad0
+  modifiedAssetPaddingHash: aaf8cc2e363fd3d93bf7d068
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -400,26 +400,9 @@ MonoBehaviour:
     unwrapper: 
   - meshName:
     - TJunction
-    padding: 02000000
+    padding: 01000000
     unwrapper: 00000000
   - meshName:
-    - polySurface26
-    - polySurface25
-    - polySurface24
-    - polySurface22
-    - polySurface21
-    - polySurface20
-    - polySurface18
-    - polySurface17
-    - polySurface16
-    - polySurface14
-    - polySurface13
-    - polySurface12
-    - Parking_Lot_Front4
-    - Parking_Lot_Front3
-    - Parking_Lot_Front2
-    - Parking_Lot_Front1
-    - Parking_Lot_Front
     - Parking_Lot_Back5
     - Parking_Lot_Back4
     - Parking_Lot_Back3
@@ -427,8 +410,13 @@ MonoBehaviour:
     - Parking_Lot_Back1
     - Parking_Lot_Back
     - Parking_Lot_Front5
-    padding: 030000000300000003000000030000000300000003000000030000000300000003000000030000000400000003000000040000000400000005000000050000000400000004000000040000000500000004000000050000000400000004000000
-    unwrapper: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    - Parking_Lot_Front4
+    - Parking_Lot_Front3
+    - Parking_Lot_Front2
+    - Parking_Lot_Front1
+    - Parking_Lot_Front
+    padding: 030000000300000003000000030000000300000003000000030000000300000003000000040000000300000003000000
+    unwrapper: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
@@ -480,7 +468,9 @@ MonoBehaviour:
   - Assets/Model/Foliage/Maple_Bush_3.fbx
   - Assets/Model/Foliage/Maple_Bush_1.fbx
   - Assets/Model/Props/Iffrig_Foundation.fbx
-  uvOverlapAssetList: 00000000ffffffff010100000101000001010000010100000101000001010000000000000000000001010000000000000000000001010000000000000101000000000000010100000101000000000000000000000101000000000000000000000000000000000000000000000000000001010000000000000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000000000000101000001010000010100000101000001010000010100000101000000000000
+  - Assets/Model/Buildings/Outhouse.fbx
+  - Assets/Model/Buildings/Tool_Shed.fbx
+  uvOverlapAssetList: 00000000ffffffff0101000001010000010100000101000001010000010100000000000000000000010100000000000000000000010100000000000001010000000000000101000001010000000000000000000001010000000000000000000000000000000000000000000000000000010100000000000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000000000001010000010100000101000001010000010100000101000001010000000000000000000001010000
   xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: Emulated (PSVita)
@@ -493,11 +483,11 @@ MonoBehaviour:
   checkerPreviewOn: 0
   rtSceneViewPreviewOn: 0
   renderSettingsBounces: 5
-  renderSettingsGISamples: 8
-  renderSettingsGIBackFaceWeight: 0
+  renderSettingsGISamples: 16
+  renderSettingsGIBackFaceWeight: 0.015
   renderSettingsTileSize: 4096
   renderSettingsPriority: 3
-  renderSettingsTexelsPerUnit: 64
+  renderSettingsTexelsPerUnit: 40
   renderSettingsForceRefresh: 1
   renderSettingsForceRebuildGeometry: 1
   renderSettingsPerformRendering: 1
@@ -506,30 +496,30 @@ MonoBehaviour:
   renderSettingsSettingsMode: 2
   renderSettingsFixSeams: 1
   renderSettingsDenoise: 1
-  renderSettingsDenoise2x: 1
+  renderSettingsDenoise2x: 0
   renderSettingsEncode: 1
   renderSettingsEncodeMode: 0
   renderSettingsOverwriteWarning: 0
   renderSettingsAutoAtlas: 1
   renderSettingsUnwrapUVs: 1
   renderSettingsForceDisableUnwrapUVs: 0
-  renderSettingsMaxAutoResolution: 2048
-  renderSettingsMinAutoResolution: 2048
+  renderSettingsMaxAutoResolution: 1024
+  renderSettingsMinAutoResolution: 16
   renderSettingsUnloadScenes: 0
   renderSettingsAdjustSamples: 1
-  renderSettingsGILODMode: 0
-  renderSettingsGILODModeEnabled: 0
+  renderSettingsGILODMode: 1
+  renderSettingsGILODModeEnabled: 1
   renderSettingsCheckOverlaps: 0
   renderSettingsSkipOutOfBoundsUVs: 1
   renderSettingsHackEmissiveBoost: 1
   renderSettingsHackIndirectBoost: 1
   renderSettingsTempPath: 
   renderSettingsOutPath: Scenes/EnviroTest
-  renderSettingsUseScenePath: 0
-  renderSettingsHackAOIntensity: 0
-  renderSettingsHackAOSamples: 0
-  renderSettingsHackAORadius: 0
-  renderSettingsShowAOSettings: 0
+  renderSettingsUseScenePath: 1
+  renderSettingsHackAOIntensity: 1
+  renderSettingsHackAOSamples: 8
+  renderSettingsHackAORadius: 1
+  renderSettingsShowAOSettings: 1
   renderSettingsShowTasks: 1
   renderSettingsShowTasks2: 1
   renderSettingsShowPaths: 1
@@ -544,27 +534,27 @@ MonoBehaviour:
   renderSettingsShowCheckerSettings: 1
   renderSettingsSamplesWarning: 0
   renderSettingsPrefabWarning: 0
-  renderSettingsSplitByScene: 0
+  renderSettingsSplitByScene: 1
   renderSettingsUVPaddingMax: 0
   renderSettingsPostPacking: 1
   renderSettingsHoleFilling: 1
   renderSettingsBeepOnFinish: 0
   renderSettingsExportTerrainAsHeightmap: 0
-  renderSettingsRTXMode: 0
+  renderSettingsRTXMode: 1
   renderSettingsLightProbeMode: 1
   renderSettingsClientMode: 0
   renderSettingsServerAddress: 127.0.0.1
-  renderSettingsUnwrapper: 0
+  renderSettingsUnwrapper: 1
   renderSettingsDenoiserType: 5
   renderSettingsExportTerrainTrees: 0
   renderSettingsShowPerf: 1
   renderSettingsSampleDiv: 1
-  renderSettingsAtlasPacker: 1
+  renderSettingsAtlasPacker: 0
   renderSettingsBatchPoints: 1
   renderSettingsCompressVolumes: 0
   renderSettingsRTPVExport: 1
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  modifiedMeshPaddingArray: 030000000300000003000000030000000300000003000000030000000300000003000000030000000400000003000000040000000400000005000000050000000400000004000000040000000500000004000000050000000400000004000000
-  modifiedMeshUnwrapperArray: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  modifiedMeshPaddingArray: 030000000300000003000000030000000300000003000000030000000300000003000000040000000300000003000000
+  modifiedMeshUnwrapperArray: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

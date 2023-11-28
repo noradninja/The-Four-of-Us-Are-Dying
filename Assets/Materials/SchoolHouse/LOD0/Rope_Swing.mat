@@ -433,7 +433,7 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.5
+    - _influence: 0.011
     - _leaves_wiggle_disp: 0.0075
     - _leaves_wiggle_speed: 0.1
     - _wind_size: 5

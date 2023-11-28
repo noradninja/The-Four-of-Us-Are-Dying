@@ -11,10 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0b4dd729a12d046982652f834580a2, type: 3}
   m_Name: LMGroup_Road
   m_EditorClassIdentifier: 
-  resolution: 2048
+  resolution: 4096
   bitmask: 1
-  id: 17
-  sortingID: 2
+  id: 14
+  sortingID: 4
   isImplicit: 0
   area: 0
   totalVertexCount: 0
