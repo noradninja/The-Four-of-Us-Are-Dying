@@ -64,7 +64,7 @@ public class CameraResolutionScaler : MonoBehaviour
     
     private new Camera camera;
     private Rect originalRect;
-    //private float renderDivisor;
+    private float renderDivisor;
     private RenderTexture renderTex;
     private Rect scaledRect;
     private int width;
@@ -119,29 +119,29 @@ public class CameraResolutionScaler : MonoBehaviour
                 case internalResolution.Full:
                     width = 960;
                     height = 544;
-                    //renderDivisor = 1;
+                    renderDivisor = 1;
                     break;
                 case internalResolution.Mid:
                     width = 720;
                     height = 408;
-                    //renderDivisor = 1.334f;
+                    renderDivisor = 1.334f;
                     break;
                 case internalResolution.Low:
                     width = 640;
                     height = 368;
-                    //renderDivisor = 1.5f;
+                    renderDivisor = 1.5f;
                     break;
                 case internalResolution.PSP:
-                    width = 380;
-                    height = 215;
-                    //renderDivisor = 2.0f;
+                    width = 480;
+                    height = 272;
+                    renderDivisor = 2.0f;
                     break;
             }
 
             // rect is 0 to 1
             // pixelRect is 0 to renderSize
             originalRect = camera.pixelRect;
-            scaledRect.Set(0, 0, width,height);
+            scaledRect.Set(0, 0, width/renderDivisor,height/renderDivisor);
             camera.pixelRect = scaledRect;
         }
     }

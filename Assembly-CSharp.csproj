@@ -518,6 +518,7 @@
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardCoreForward_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardInput_VC.cginc" />
     <None Include="Assets\Addons\Shaders\tube.shader" />
+    <None Include="Assets\Shader\Foliage\VertexLightmapCommon_LOD.cginc" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardCore.cginc" />
     <None Include="Assets\Addons\Shaders\font.shader" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardCoreForward_VC.cginc" />

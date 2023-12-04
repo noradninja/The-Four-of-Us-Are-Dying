@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Ivy
   m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
-  m_ShaderKeywords: ALPHA_ON WIGGLE_ON
+  m_ShaderKeywords: ALPHA_ON AMBIENT_ON WIGGLE_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -60,9 +60,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlphaOn: 1
-    - _AmbientOn: 0
+    - _AmbientOn: 1
     - _BumpScale: 1
-    - _Cutoff: 0.4
+    - _CustomLM: 0
+    - _Cutoff: 0.33
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -73,17 +74,18 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _SeparateAlpha: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _influence: 0.35
-    - _leaves_wiggle_disp: 0.01125
-    - _leaves_wiggle_speed: 0.1
+    - _influence: 0.124
+    - _leaves_wiggle_disp: 0.0005
+    - _leaves_wiggle_speed: 200
     - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Time: {r: 0, g: 0, b: 0, a: 0}
+    - _Time: {r: 5, g: 5, b: 5, a: 5}
     - _wind_dir: {r: 1.75, g: 0.75, b: 0.5, a: 0}
