@@ -4,6 +4,7 @@ using UnityEngine.Rendering;
 
 public class Shader_LOD_Enumerator : MonoBehaviour
 {
+
     public enum LODState
     {
         Full,
@@ -81,8 +82,16 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     }
 
     private void TickUpdate()
-    {
+    { 
+        if (distance > Camera.main.farClipPlane)
+        {
+            thisRenderer.enabled = false;
+            return;
+        }
         if (!enableShaderLOD) return; //check if we enabled this; if not, dump
+       
+        thisRenderer.enabled = true;
+        
         shaderLOD = distance <= LOD_Distance[1]
             ? distance <= LOD_Distance[0] ? LODState.Full : LODState.Reduced : LODState.VertexOnly; //LOD2
 

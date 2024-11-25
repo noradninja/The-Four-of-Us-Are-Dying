@@ -9,7 +9,7 @@ Material:
   m_Name: American_Elm_Branch_LOD0
   m_Shader: {fileID: 4800000, guid: 162806a154c983a4aa0292c2699caba6, type: 3}
   m_ShaderKeywords: CUSTOM_LM GEOM_TYPE_LEAF SHADOWED_RIM WIGGLE_ON _ALPHAPREMULTIPLY_ON
-    _ALPHATEST_ON _METALLICGLOSSMAP _WINDQUALITY_NONE
+    _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
@@ -586,7 +586,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.09166503
+    - _influence: 0.20872177
     - _leaves_wiggle_disp: 0.17
     - _leaves_wiggle_speed: -0.8
     - _r_influence: 1

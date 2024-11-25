@@ -37,7 +37,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["TJunction"],"padding":[2],"unwrapper":[0]}'
+    - '#BAKERY{"meshName":["TJunction"],"padding":[20],"unwrapper":[0]}'
     clipAnimations: []
     isReadable: 1
   meshes:
