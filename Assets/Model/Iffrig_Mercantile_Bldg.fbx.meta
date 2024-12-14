@@ -175,7 +175,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Glass_Front_Display","Front_Trims","Back_Trims","Roof_Glass","Roof_Chimney","Glass_Front","Glass_Back","Balcony","Plaque","Ivy","Front_Half","Doorknob1","Curved_Handle2","Curved_Handle1","Back_Half","Awning","Curved_Handle_B","Curved_Handle_A","Porch_Slats","Doorknob"],"padding":[39,16,15,89,10,53,49,52,256,8,16,256,256,256,15,31,256,256,57,256],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
+    - '#BAKERY{"meshName":["Glass_Front_Display","Front_Trims","Back_Trims","Roof_Glass","Roof_Chimney","Glass_Front","Glass_Back","Balcony","Plaque","Ivy","Front_Half","Doorknob1","Curved_Handle2","Curved_Handle1","Back_Half","Awning","Curved_Handle_B","Curved_Handle_A","Porch_Slats","Doorknob"],"padding":[34,7,6,79,9,27,21,41,256,5,14,256,256,256,13,25,256,256,25,256],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

@@ -355,5 +355,5 @@ Shader "Vita/Standard Full"
 
 
     //FallBack "VertexLit"
-//     CustomEditor "Standard_VCShaderGUI"
+     //CustomEditor "Standard_VCShaderGUI"
 }

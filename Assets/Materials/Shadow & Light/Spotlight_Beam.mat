@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Spotlight_Beam
   m_Shader: {fileID: 4800000, guid: a0a5cb9d8925b7a4ca83c7a9fa9a5b85, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -41,10 +41,10 @@ Material:
     - _Fade: 1
     - _InvFade: 1.18
     - _SoftEdge: 1.4
-    - _Tweak: -0.03
-    - _Width: 133.89
+    - _Tweak: 0.9
+    - _Width: 10.3
     m_Colors:
-    - _Color: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 0.21960784}
+    - _Color: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 1}
     - _DetailAnim: {r: -1, g: 2, b: -1, a: 0}
     - _DustAnim: {r: 0.3, g: 0.81, b: 0, a: 0}
     - _TintColor: {r: 0.5, g: 0.5, b: 0.5, a: 0.5}

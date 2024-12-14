@@ -54,7 +54,7 @@
 			fixed4 frag (v2f i) : SV_Target
 			{
 				float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
-				fixed4 col = _TintColor * ((sceneZ -0.35f)*(pow(_Range, 2)));
+				fixed4 col = _TintColor * ((sceneZ -0.175f)*(pow(_Range, 2)));
 				return col;
 			}
 			ENDCG

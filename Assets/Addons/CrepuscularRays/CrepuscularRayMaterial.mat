@@ -40,22 +40,22 @@ Material:
     - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.125
+    - _Density: 0.09
     - _Exposure: 0.1
     - _FrameValue: 1
     - _Frequency: 3
     - _LightY: 0
-    - _NumSamples: 9
+    - _NumSamples: 6
     - _Parameter: 0
-    - _PerpendicularFalloff: 0.464
+    - _PerpendicularFalloff: 0.45
     - _SpotDensity: 1
     - _Spread: 1.59
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _Weight: 2
-    - _fogInfluence: 1.75
-    - _fogSpeed: 1.5
+    - _fogInfluence: 1.325
+    - _fogSpeed: 1.25
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: -0.9148673, g: -1.313073, b: -0.45709333, a: 0}
-    - _TintColor: {r: 0.09407263, g: 0.10131127, b: 0.13207549, a: 1}
+    - _LightPos: {r: 22.752926, g: 28.790634, b: 0.03216979, a: 0}
+    - _TintColor: {r: 0, g: 0, b: 0, a: 1}

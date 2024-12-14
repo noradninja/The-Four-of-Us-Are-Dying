@@ -35,7 +35,7 @@ public class FlashlightController : MonoBehaviour {
 	public Color colorEnd;
 	public Color colorTransparent;
 	//float
-	public float lightDuration = 300.0f;
+	public float lightDuration = 600.0f;
 	public float currentCharge = 1.0f;
 	public Quaternion storedLightRotation;
 	

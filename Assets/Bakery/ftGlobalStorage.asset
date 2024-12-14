@@ -19,7 +19,26 @@ MonoBehaviour:
   - Assets/Model/107_Main.fbx
   - Assets/Model/Iffrig_Mercantile_Bldg.fbx
   - Assets/Model/TJunction.fbx
-  modifiedAssetPaddingHash: aaf8cc2edbafd63a975d42bdeb78ebb7a3e4b87ad3b2bed6f1f23a06
+  - Assets/Model/Iffrig_Mercantile_Building/Iffrig_Mercantile_Building_Foundation.fbx
+  - Assets/Model/Big_Road.fbx
+  - Assets/Model/12_National_Street/Woodpile.fbx
+  - Assets/Model/12_National_Street/Sidewalk.fbx
+  - Assets/Model/12_National_Street/Short_Fence.fbx
+  - Assets/Model/12_National_Street/Kerosene_Drum.fbx
+  - Assets/Model/12_National_Street/Clothing_Poles.fbx
+  - Assets/Model/12_National_Street/Utility_Pole.fbx
+  - Assets/Model/12_National_Street/Outhouse.fbx
+  - Assets/Model/12_National_Street/Shed_Interior_Framework.fbx
+  - Assets/Model/12_National_Street/Tool_Shed.fbx
+  - Assets/Model/12_National_Street/12_National_Street_Exterior.fbx
+  - Assets/Model/Foliage/Grass.fbx
+  - Assets/Model/Misc_Outbuildings/White_Shed.fbx
+  - Assets/Model/Foliage/Maple_Bush.fbx
+  - Assets/Model/Foliage/Japanese_Maple.fbx
+  - Assets/Model/Foliage/American_Elm.fbx
+  - Assets/Model/Foliage/Red_Oak.fbx
+  - Assets/Model/221 National/221_National_Street.fbx
+  modifiedAssetPaddingHash: aaf8cc2edbafd63a569967b4377dae958176e6d1357032dbe55031ee8a6fed8c1b3a803304c5d890dd5131ee9d4dfff0eddb894becc12491fe04c8de162e5096bb09ecc07ba8374ff0f7a0c8bd1b734c03a1fb891ef83d669125e5c01829e5c0b8ee35b3e7de6210
   modifiedMeshList: []
   modifiedMeshPaddingList: 
   modifiedAssets:
@@ -441,7 +460,7 @@ MonoBehaviour:
     - polySurface487
     - polySurface483
     - polySurface481
-    padding: 250000002400000024000000250000002500000025000000300000003100000031000000310000003100000024000000240000002400000024000000
+    padding: 180000001800000018000000180000001800000018000000200000002000000020000000200000002000000018000000180000001800000018000000
     unwrapper: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   - meshName:
     - Interior_Beams
@@ -451,7 +470,7 @@ MonoBehaviour:
     - L_Door
     - Back_Roofing
     - No_Parking_Sign
-    padding: 240000003c0000000f0000003d0000003b0000004300000000010000
+    padding: 18000000280000000a00000028000000270000002c00000000010000
     unwrapper: 01000000010000000100000001000000010000000100000001000000
   - meshName:
     - Exterior
@@ -459,8 +478,8 @@ MonoBehaviour:
     - Plaque
     - Trims_EXT
     - Trims_EXT_Transparent
-    padding: 0a0000002b00000000010000170000006b000000
-    unwrapper: 0100000001000000010000000100000001000000
+    padding: 0900000022000000000100000a0000005f000000
+    unwrapper: 0100000000000000010000000100000001000000
   - meshName:
     - Glass_Front_Display
     - Front_Trims
@@ -482,12 +501,138 @@ MonoBehaviour:
     - Curved_Handle_A
     - Porch_Slats
     - Doorknob
-    padding: 27000000100000000f000000590000000a0000003500000031000000340000000001000008000000100000000001000000010000000100000f0000001f00000000010000000100003900000000010000
+    padding: 2200000007000000060000004f000000090000001b000000150000002900000000010000050000000e0000000001000000010000000100000d0000001900000000010000000100001900000000010000
     unwrapper: 0100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
   - meshName:
     - TJunction
-    padding: 14000000
+    padding: 11000000
     unwrapper: 01000000
+  - meshName:
+    - Parking_Lot_Front5
+    - Parking_Lot_Front4
+    - Parking_Lot_Front3
+    - Parking_Lot_Front2
+    - Parking_Lot_Front1
+    - Parking_Lot_Front
+    - Parking_Lot_Back5
+    - Parking_Lot_Back4
+    - Parking_Lot_Back3
+    - Parking_Lot_Back2
+    - Parking_Lot_Back1
+    - Parking_Lot_Back
+    padding: 1a00000018000000160000001d0000001b00000019000000150000001700000018000000170000001900000015000000
+    unwrapper: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - meshName:
+    - BigRoad
+    padding: 0f000000
+    unwrapper: 01000000
+  - meshName:
+    - Woodpile
+    padding: 36000000
+    unwrapper: 01000000
+  - meshName:
+    - Sidewalk
+    padding: 61000000
+    unwrapper: 01000000
+  - meshName:
+    - Short_Fence
+    padding: 44000000
+    unwrapper: 01000000
+  - meshName:
+    - Kerosene_Drum
+    padding: 2e000000
+    unwrapper: 01000000
+  - meshName:
+    - Lines
+    padding: 00010000
+    unwrapper: 01000000
+  - meshName:
+    - Transformer
+    - Pole
+    - Lamp
+    - Lamp_Glass
+    padding: 3e000000280000005100000000010000
+    unwrapper: 01000000010000000100000001000000
+  - meshName:
+    - Lock
+    - Door
+    - Building
+    padding: 00010000320000001b000000
+    unwrapper: 010000000100000001000000
+  - meshName:
+    - Framework
+    padding: 16000000
+    unwrapper: 01000000
+  - meshName:
+    - Window
+    - Door
+    - Building
+    padding: 930000006100000016000000
+    unwrapper: 010000000100000001000000
+  - meshName:
+    - Doorknob
+    - Door
+    - Plaque
+    - Exterior
+    - Deco
+    padding: 0001000028000000000100000c0000000b000000
+    unwrapper: 0100000001000000010000000100000001000000
+  - meshName:
+    - polySurface499
+    - polySurface507
+    - polySurface485
+    - polySurface492
+    - polySurface494
+    - polySurface496
+    - polySurface498
+    - polySurface508
+    - polySurface505
+    - polySurface503
+    - polySurface501
+    - polySurface489
+    - polySurface487
+    - polySurface483
+    - polySurface481
+    padding: 200000002b00000020000000200000002000000020000000200000002a0000002b0000002b0000002b00000020000000200000002000000020000000
+    unwrapper: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  - meshName:
+    - Interior_Beams
+    - Board_Fence
+    - Shed
+    - R_Door
+    - L_Door
+    - Back_Roofing
+    - No_Parking_Sign
+    padding: 20000000360000000d00000036000000350000003b00000000010000
+    unwrapper: 01000000010000000100000001000000010000000100000001000000
+  - meshName:
+    - Tree
+    - Branch
+    padding: 000100003a000000
+    unwrapper: 0100000001000000
+  - meshName:
+    - Tree
+    - Branch
+    padding: 2c00000012000000
+    unwrapper: 0100000001000000
+  - meshName:
+    - Tree
+    - Branch
+    padding: 220000000e000000
+    unwrapper: 0100000001000000
+  - meshName:
+    - Tree
+    - Branch
+    padding: 2700000011000000
+    unwrapper: 0100000001000000
+  - meshName:
+    - Trims
+    - Exterior
+    - Awning
+    - Glass1
+    - Window_Glass
+    padding: 0800000006000000b20000001c0000004f000000
+    unwrapper: 0100000001000000010000000100000001000000
   assetList:
   - Assets/Bakery/examples/content/sponza/bush.FBX
   - Assets/Bakery/examples/content/floor_lamp.FBX
@@ -499,7 +644,18 @@ MonoBehaviour:
   - Assets/Model/SchoolHouse/Scene_Test.fbx
   - Assets/Model/TJunction.fbx
   - Assets/Model/Big_Road.fbx
-  uvOverlapAssetList: 00000000ffffffff0101000001010000010100000101000001010000010100000000000000000000
+  - Assets/Model/Vegitation/Red_Oak.fbx
+  - Assets/Model/Vegitation/Maple_Bush.fbx
+  - Assets/Model/Vegitation/Japanese_Maple.fbx
+  - Assets/Model/Vegitation/American_Elm.fbx
+  - Assets/Model/Foliage/Maple_Bush.fbx
+  - Assets/Model/Foliage/Red_Oak.fbx
+  - Assets/Model/Foliage/Japanese_Maple.fbx
+  - Assets/Model/Foliage/American_Elm.fbx
+  - Assets/Model/221 National/221_National_Street.fbx
+  - Assets/Model/PArallax_Mesh.fbx
+  - Assets/Model/Parallax_Mesh.fbx
+  uvOverlapAssetList: 00000000ffffffff01010000010100000101000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000001010000010100000000000000000000
   xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: Emulated (PSVita)
@@ -585,5 +741,5 @@ MonoBehaviour:
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  modifiedMeshPaddingArray: 0a0000002b00000000010000170000006b000000
+  modifiedMeshPaddingArray: 0800000006000000b20000001c0000004f000000
   modifiedMeshUnwrapperArray: 0100000001000000010000000100000001000000

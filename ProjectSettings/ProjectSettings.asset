@@ -110,7 +110,7 @@ PlayerSettings:
   videoMemoryForVertexBuffers: 0
   psp2PowerMode: 1
   psp2AcquireBGM: 1
-  vulkanEnableSetSRGBWrite: 0
+  vulkanEnableSetSRGBWrite: 1
   vulkanUseSWCommandBuffers: 0
   m_SupportedAspectRatios:
     4:3: 1
@@ -320,7 +320,7 @@ PlayerSettings:
   m_BuildTargetGroupLightmapSettings:
   - m_BuildTarget: PSP2
     m_TextureStreamingEnabled: 1
-    m_TextureStreamingPriority: 0
+    m_TextureStreamingPriority: 96
   playModeTestRunnerEnabled: 0
   runPlayModeTestAsEditModeTest: 0
   actionOnDotNetUnhandledException: 1
@@ -526,7 +526,7 @@ PlayerSettings:
   ps4attribEyeToEyeDistanceSettingVR: 0
   ps4IncludedModules: []
   monoEnv: 
-  psp2Splashimage: {fileID: 2800000, guid: 87f6c6f2da70b934da0e32496749de08, type: 3}
+  psp2Splashimage: {fileID: 2800000, guid: 5dbc8b45c5584b149bddbed51d5c5175, type: 3}
   psp2NPTrophyPackPath: 
   psp2NPSupportGBMorGJP: 0
   psp2NPAgeRating: 12
@@ -558,8 +558,8 @@ PlayerSettings:
   psp2PackagedResourcesPath: 
   psp2SaveDataQuota: 10240
   psp2ParentalLevel: 1
-  psp2ShortTitle: The Four of Us Are Dying
-  psp2ContentID: IV0000-WSCG00004_00-0123456789ABCDEF
+  psp2ShortTitle: The Four of Us Are Dying HR
+  psp2ContentID: IV0000-WSCG00005_00-0123456789ABCDEF
   psp2Category: 0
   psp2MasterVersion: 01.00
   psp2AppVersion: 01.00

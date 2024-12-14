@@ -9,7 +9,7 @@ Shader "Lighting/Lightbeam" {
 		_InvFade ("Soft Particles Factor", Range(0.01,3.0)) = 1.0
 	}
 	SubShader {
-		Tags { "Queue" = "Transparent" "IgnoreProjector" = "True"}
+		Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType"="Transparent"}
 		Pass {
 			Cull Back
 			Blend SrcAlpha OneMinusSrcAlpha

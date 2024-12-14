@@ -50,6 +50,6 @@ public class VitaClockSetter : MonoBehaviour
                 xbarSpeed == XBarClock.Stock ? -1 : (int)xbarSpeed
             );
         }
-        else Debug.Log("This script only works on PSVita/PSTV hardware");
+        else Debug.Log("This script only sets clock speeds PSVita/PSTV hardware");
     }
 }

@@ -5,7 +5,7 @@ TextureImporter:
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
-    mipMapMode: 1
+    mipMapMode: 0
     enableMipMap: 1
     sRGBTexture: 1
     linearTexture: 0
@@ -22,7 +22,7 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   streamingMipmaps: 1
-  streamingMipmapsPriority: 0
+  streamingMipmapsPriority: 96
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -83,7 +83,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: PSP2
     maxTextureSize: 512
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 12
     textureCompression: 1
     compressionQuality: 50

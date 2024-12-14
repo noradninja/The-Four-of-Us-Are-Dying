@@ -31,6 +31,7 @@ ModelImporter:
     100050: Trims_EXT
     100052: Trims_EXT_Transparent
     100054: Window_Glass
+    100056: Trims
     400000: //RootNode
     400002: Exterior
     400004: LIght_Rig
@@ -59,9 +60,12 @@ ModelImporter:
     400050: Trims_EXT
     400052: Trims_EXT_Transparent
     400054: Window_Glass
+    400056: Trims
     2000000: persp2
     2100000: House_Trims
     2100002: House_Exterior1
+    2100004: SF_Ext
+    2100006: SF_Trim
     2300000: Exterior
     2300002: Plaque_w_Alpha
     2300004: Trims_Exterior
@@ -81,6 +85,8 @@ ModelImporter:
     2300032: Trims_EXT
     2300034: Trims_EXT_Transparent
     2300036: Glass
+    2300038: Window_Glass
+    2300040: Trims
     3300000: Exterior
     3300002: Plaque_w_Alpha
     3300004: Trims_Exterior
@@ -100,6 +106,8 @@ ModelImporter:
     3300032: Trims_EXT
     3300034: Trims_EXT_Transparent
     3300036: Glass
+    3300038: Window_Glass
+    3300040: Trims
     4300000: Trims_Exterior
     4300002: Exterior
     4300004: Plaque_w_Alpha
@@ -119,6 +127,8 @@ ModelImporter:
     4300032: polySurface30
     4300034: polySurface32
     4300036: Glass
+    4300038: Window_Glass
+    4300040: Trims
     9500000: //RootNode
     10800000: Light_Rig:Ambient_Light
     10800002: Light_Rig:Bounce_Light
@@ -153,7 +163,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Exterior","Glass","Plaque","Trims_EXT","Trims_EXT_Transparent"],"padding":[10,43,256,23,107],"unwrapper":[1,1,1,1,1]}'
+    - '#BAKERY{"meshName":["Exterior","Glass","Plaque","Trims_EXT","Trims_EXT_Transparent"],"padding":[9,34,256,10,95],"unwrapper":[1,0,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

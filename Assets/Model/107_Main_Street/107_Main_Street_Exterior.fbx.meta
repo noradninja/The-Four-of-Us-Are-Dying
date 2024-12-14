@@ -1,0 +1,297 @@
+fileFormatVersion: 2
+guid: 3c163632946a5ce4bab693cce8bb7207
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Back_Door
+    100004: Bench
+    100006: Box
+    100008: Building_Sign
+    100010: Chimney
+    100012: Columns
+    100014: Conduit
+    100016: Deco_Stars
+    100018: Door
+    100020: Door 1
+    100022: Door 2
+    100024: Door_Mat
+    100026: Elec_Meter
+    100028: Exterior
+    100030: Face
+    100032: Front_Door
+    100034: Front_Gutter_Assy
+    100036: Glass
+    100038: Glass 1
+    100040: House_Exterior
+    100042: Inside_Frame
+    100044: Inside_Frame 1
+    100046: Inside_Frame 2
+    100048: Inside_Knob
+    100050: Inside_Window_Frames
+    100052: Knob_Inside
+    100054: Knob_Inside 1
+    100056: Knob_Outside
+    100058: Knob_Outside 1
+    100060: Outside_Frame
+    100062: Outside_Frame 1
+    100064: Outside_Frame 2
+    100066: Outside_Knob
+    100068: Outside_Window_Frames1
+    100070: Plaque
+    100072: polySurface2
+    100074: Porch
+    100076: Porch_Light
+    100078: Porch_Roof
+    100080: Rear_Gutter_Assy
+    100082: Sign
+    100084: Top_Door
+    100086: Trims
+    100088: Vent_Cap
+    100090: Window_Glass
+    400000: //RootNode
+    400002: Back_Door
+    400004: Bench
+    400006: Box
+    400008: Building_Sign
+    400010: Chimney
+    400012: Columns
+    400014: Conduit
+    400016: Deco_Stars
+    400018: Door
+    400020: Door 1
+    400022: Door 2
+    400024: Door_Mat
+    400026: Elec_Meter
+    400028: Exterior
+    400030: Face
+    400032: Front_Door
+    400034: Front_Gutter_Assy
+    400036: Glass
+    400038: Glass 1
+    400040: House_Exterior
+    400042: Inside_Frame
+    400044: Inside_Frame 1
+    400046: Inside_Frame 2
+    400048: Inside_Knob
+    400050: Inside_Window_Frames
+    400052: Knob_Inside
+    400054: Knob_Inside 1
+    400056: Knob_Outside
+    400058: Knob_Outside 1
+    400060: Outside_Frame
+    400062: Outside_Frame 1
+    400064: Outside_Frame 2
+    400066: Outside_Knob
+    400068: Outside_Window_Frames1
+    400070: Plaque
+    400072: polySurface2
+    400074: Porch
+    400076: Porch_Light
+    400078: Porch_Roof
+    400080: Rear_Gutter_Assy
+    400082: Sign
+    400084: Top_Door
+    400086: Trims
+    400088: Vent_Cap
+    400090: Window_Glass
+    2100000: SF_Ext
+    2100002: SF_Trim
+    2300000: Bench
+    2300002: Box
+    2300004: Building_Sign
+    2300006: Chimney
+    2300008: Columns
+    2300010: Conduit
+    2300012: Deco_Stars
+    2300014: Door
+    2300016: Door 1
+    2300018: Door 2
+    2300020: Door_Mat
+    2300022: Exterior
+    2300024: Face
+    2300026: Front_Gutter_Assy
+    2300028: Glass
+    2300030: Glass 1
+    2300032: Inside_Frame
+    2300034: Inside_Frame 1
+    2300036: Inside_Frame 2
+    2300038: Inside_Knob
+    2300040: Inside_Window_Frames
+    2300042: Knob_Inside
+    2300044: Knob_Inside 1
+    2300046: Knob_Outside
+    2300048: Knob_Outside 1
+    2300050: Outside_Frame
+    2300052: Outside_Frame 1
+    2300054: Outside_Frame 2
+    2300056: Outside_Knob
+    2300058: Outside_Window_Frames1
+    2300060: Plaque
+    2300062: polySurface2
+    2300064: Porch
+    2300066: Porch_Light
+    2300068: Porch_Roof
+    2300070: Rear_Gutter_Assy
+    2300072: Vent_Cap
+    2300074: Window_Glass
+    3300000: Bench
+    3300002: Box
+    3300004: Building_Sign
+    3300006: Chimney
+    3300008: Columns
+    3300010: Conduit
+    3300012: Deco_Stars
+    3300014: Door
+    3300016: Door 1
+    3300018: Door 2
+    3300020: Door_Mat
+    3300022: Exterior
+    3300024: Face
+    3300026: Front_Gutter_Assy
+    3300028: Glass
+    3300030: Glass 1
+    3300032: Inside_Frame
+    3300034: Inside_Frame 1
+    3300036: Inside_Frame 2
+    3300038: Inside_Knob
+    3300040: Inside_Window_Frames
+    3300042: Knob_Inside
+    3300044: Knob_Inside 1
+    3300046: Knob_Outside
+    3300048: Knob_Outside 1
+    3300050: Outside_Frame
+    3300052: Outside_Frame 1
+    3300054: Outside_Frame 2
+    3300056: Outside_Knob
+    3300058: Outside_Window_Frames1
+    3300060: Plaque
+    3300062: polySurface2
+    3300064: Porch
+    3300066: Porch_Light
+    3300068: Porch_Roof
+    3300070: Rear_Gutter_Assy
+    3300072: Vent_Cap
+    3300074: Window_Glass
+    4300000: Exterior
+    4300002: Plaque
+    4300004: Porch_Roof
+    4300006: Porch
+    4300008: Bench
+    4300010: Chimney
+    4300012: Front_Gutter_Assy
+    4300014: Rear_Gutter_Assy
+    4300016: Deco_Stars
+    4300018: polySurface2
+    4300020: Glass
+    4300022: Face
+    4300024: Box
+    4300026: Conduit
+    4300028: Porch_Light
+    4300030: Door_Mat
+    4300032: Columns
+    4300034: Window_Glass
+    4300036: Inside_Window_Frames
+    4300038: Outside_Window_Frames1
+    4300040: Outside_Frame
+    4300042: Door
+    4300044: Outside_Knob
+    4300046: Inside_Knob
+    4300048: Inside_Frame
+    4300050: Door
+    4300052: Glass
+    4300054: Knob_Inside
+    4300056: Inside_Frame
+    4300058: Knob_Outside
+    4300060: Outside_Frame
+    4300062: Outside_Frame
+    4300064: Door
+    4300066: Knob_Outside
+    4300068: Inside_Frame
+    4300070: Knob_Inside
+    4300072: Building_Sign
+    4300074: Vent_Cap
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["polySurface2","Outside_Knob","Outside_Frame","Knob_Outside","Knob_Inside","Inside_Knob","Inside_Frame","Glass","Face","Door","Conduit","Box","Window_Glass","Vent_Cap","Rear_Gutter_Assy","Porch_Roof","Porch_Light","Porch","Plaque","Outside_Window_Frames1","Inside_Window_Frames","Front_Gutter_Assy","Exterior","Door_Mat","Deco_Stars","Columns","Chimney","Building_Sign","Bench"],"padding":[224,256,256,256,256,256,195,241,256,94,256,256,44,193,79,32,256,46,256,39,54,80,11,256,256,64,125,142,96],"unwrapper":[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]}'
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

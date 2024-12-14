@@ -1,0 +1,153 @@
+fileFormatVersion: 2
+guid: 800c9a467401fff4096d33ced9e86231
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Parking_Lot_Back
+    100004: Parking_Lot_Back1
+    100006: Parking_Lot_Back2
+    100008: Parking_Lot_Back3
+    100010: Parking_Lot_Back4
+    100012: Parking_Lot_Back5
+    100014: Parking_Lot_Front
+    100016: Parking_Lot_Front1
+    100018: Parking_Lot_Front2
+    100020: Parking_Lot_Front3
+    100022: Parking_Lot_Front4
+    100024: Parking_Lot_Front5
+    400000: //RootNode
+    400002: Parking_Lot_Back
+    400004: Parking_Lot_Back1
+    400006: Parking_Lot_Back2
+    400008: Parking_Lot_Back3
+    400010: Parking_Lot_Back4
+    400012: Parking_Lot_Back5
+    400014: Parking_Lot_Front
+    400016: Parking_Lot_Front1
+    400018: Parking_Lot_Front2
+    400020: Parking_Lot_Front3
+    400022: Parking_Lot_Front4
+    400024: Parking_Lot_Front5
+    2100000: Back_Half
+    2100002: Front_Half
+    2300000: Parking_Lot_Back
+    2300002: Parking_Lot_Back1
+    2300004: Parking_Lot_Back2
+    2300006: Parking_Lot_Back3
+    2300008: Parking_Lot_Back4
+    2300010: Parking_Lot_Back5
+    2300012: Parking_Lot_Front
+    2300014: Parking_Lot_Front1
+    2300016: Parking_Lot_Front2
+    2300018: Parking_Lot_Front3
+    2300020: Parking_Lot_Front4
+    2300022: Parking_Lot_Front5
+    3300000: Parking_Lot_Back
+    3300002: Parking_Lot_Back1
+    3300004: Parking_Lot_Back2
+    3300006: Parking_Lot_Back3
+    3300008: Parking_Lot_Back4
+    3300010: Parking_Lot_Back5
+    3300012: Parking_Lot_Front
+    3300014: Parking_Lot_Front1
+    3300016: Parking_Lot_Front2
+    3300018: Parking_Lot_Front3
+    3300020: Parking_Lot_Front4
+    3300022: Parking_Lot_Front5
+    4300000: Parking_Lot_Back
+    4300002: Parking_Lot_Back1
+    4300004: Parking_Lot_Back2
+    4300006: Parking_Lot_Back3
+    4300008: Parking_Lot_Back4
+    4300010: Parking_Lot_Back5
+    4300012: Parking_Lot_Front
+    4300014: Parking_Lot_Front1
+    4300016: Parking_Lot_Front2
+    4300018: Parking_Lot_Front3
+    4300020: Parking_Lot_Front4
+    4300022: Parking_Lot_Front5
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Parking_Lot_Front5","Parking_Lot_Front4","Parking_Lot_Front3","Parking_Lot_Front2","Parking_Lot_Front1","Parking_Lot_Front","Parking_Lot_Back5","Parking_Lot_Back4","Parking_Lot_Back3","Parking_Lot_Back2","Parking_Lot_Back1","Parking_Lot_Back"],"padding":[26,24,22,29,27,25,21,23,24,23,25,21],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1]}'
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 0
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

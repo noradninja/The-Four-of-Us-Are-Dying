@@ -1,6 +1,6 @@
 PSP2
 PlayerPath?
-C:/PSVITA/Builds
+C:/PSVITA/Builds/HR_Test
 SceneListBegin?
 Assets/Scenes/Title.unity
 Assets/Scenes/LoadScreen.unity
@@ -35,9 +35,8 @@ c7dd12c15208b0447e101f80038706df UnityEngine.Timeline.dll:UnityEngine.Timeline.A
 cafe34666744094f2aef4f686779b868 Assembly-CSharp.dll:.FXAA
 90a88ac083dc36e170322468bac7e33c Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.UpdateRadialValue
 51c7f2da0e648ac14d16777ffbf26e8e Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ImageEffectBase
-08f229d6d1d3ff2bbb7fe7457b0d62c7 Assembly-CSharp.dll:.Shader_LOD_Enumerator
+705e35aeda61d429ad5ee95b196612a2 Assembly-CSharp.dll:.Shader_LOD_Enumerator
 837aa3445eed47dd2a01ef9e615116e0 Assembly-CSharp.dll:.FPS_Counter
-c422dd62785a6d0afa870fbd111886ce Assembly-CSharp.dll:.DD_DrawGraphic
 d4bb4b82edd6583fb3ed02ce19889d5f Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.BlurOptimized
 4076cc969ce586df3f32a5f3a66a0900 Assembly-CSharp.dll:DigitalRuby.RainMaker.RainScript
 f6637497451c9a030c421de4a1ad5cdb Unity.TextMeshPro.dll:TMPro.TMP_ScrollbarEventHandler
@@ -222,7 +221,6 @@ a3c4f6168fdec1e9debee096e97ab787 Assembly-CSharp.dll:TMPro.Examples.TMP_TextEven
 fee6aaa21a27aabac835a07115603db3 BakeryRuntimeAssembly.dll:.BakeryDirectLight
 11ae61048787b1ba9f63c0feefcb8f5d Assembly-CSharp.dll:Kino.Bokeh
 300bb653897e10689cc134e3921de573 Assembly-CSharp.dll:UnityEngine.UI.Extensions.CUIBezierCurve
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DD_ZoomButton
 96f3ea9f23b6f08e60710ebb4af49174 Unity.TextMeshPro.dll:TMPro.TMP_SpriteAsset
 1655e5cbdafc3f52a798a8128c8c7c12 Assembly-CSharp.dll:TMPro.TMP_TextEventHandler
 9dbbc3ebe830549b7a523be8d05b65dd BakeryRuntimeAssembly.dll:.VolumeTestScene2
@@ -264,6 +262,7 @@ f642afa76101030eabe7eb5452d46c6b Assembly-CSharp.dll:UnityEngine.UI.Extensions.B
 3534e95435c6d14689142c9d05fd8454 Assembly-CSharp.dll:.Overlay_Cycler
 78832952abc6ef02d45dc3d484aaecee Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIPolygon
 3fef1e118c53ab5e962c793a5be01362 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.Example03Scene
+dca0bcfb9eee430c20be2e7495171758 Assembly-CSharp.dll:.Parallax_OffsetController
 a0ef70369ccf5793f9c8c9a7455f9aec Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIWindowBase
 eac0877fbc8522a29213d1399409e516 Assembly-CSharp.dll:UnityEngine.UI.Extensions.VerticalScrollSnap
 bb3f8ae71cc0b231bf331b52aca45ebd Assembly-CSharp.dll:TMPro.Examples.CameraController
@@ -286,7 +285,7 @@ ce2206bd4ec4321174a95c1ad796562c Assembly-CSharp.dll:UnityEngine.UI.Extensions.T
 69b6ebfbbea7d21a7c976ab5c6737570 BakeryRuntimeAssembly.dll:.BakeryLightmapGroup
 48c3ee2bfc1040bd81ff1835b706c61b BakeryRuntimeAssembly.dll:.ftLightmapsStorage
 16680a84075dc001606517fb0d2b4fad BakeryRuntimeAssembly.dll:.ftLocalStorage
-060c01e03335b6480edec3d019d6c0c9 Assembly-CSharp.dll:.FlashlightController
+0f532c819f638d7bcfd42169f20a343c Assembly-CSharp.dll:.FlashlightController
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityStandardAssets.ImageEffects.PostEffectsBase
 e7053bcfba687d0cb4c7b5e2630bcc9b Assembly-CSharp.dll:UnityEngine.UI.Extensions.HoverTooltip
 972e942b5504730c420608e716424f28 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIScrollToSelectionXY
@@ -305,7 +304,6 @@ eaf0bcdb10d442a4029d615f41d09957 Unity.TextMeshPro.dll:TMPro.TextContainer
 dfd3ba4254dd33a57d4730be91479fe4 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIGridRenderer
 bf56614a0a71db97b0728912b80ad9d8 Assembly-CSharp.dll:UnityEngine.UI.UILineRenderer
 2d6b26d1c5abe50f9023de2b0114b59b Assembly-CSharp.dll:.Data_Loaded_Manager
-c422dd62785a6d0afa870fbd111886ce Assembly-CSharp.dll:.DD_Lines
 e5930b3f3763871ca43745d91dd968d4 Assembly-CSharp.dll:.ChatController
 04460ee87270d98c68ec1c718ccab6ee Assembly-CSharp.dll:.SpecularProbeRenderer
 f57560a8cb1a5d297d1471960fafb766 Assembly-CSharp.dll:.Crepuscupular_Setup
@@ -377,7 +375,7 @@ abac76edec8771afc57a23bfc10cd8e5 BakeryRuntimeAssembly.dll:.BakeryPointLight
 93c79d9898c96227c3913847eb39db63 Assembly-CSharp.dll:TMPro.Examples.ShaderPropAnimator
 d315386302caddeaaad4961b9b324239 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.ContrastEnhance
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TMP_TextSelector_A
-465e4ffc6fb8525436b8e1335e7ade53 Assembly-CSharp.dll:.PlayerController
+3b139fd8dad9badb263301b05595353a Assembly-CSharp.dll:.PlayerController
 d914da9b985e4c6d27b0c3af59f4587e Assembly-CSharp.dll:.CloudsGenerator
 754f0663dd705e4b3aef7448726edb66 Assembly-CSharp.dll:.MB_DynamicAddDeleteExample
 64f7cf5e9537067742e880dff3771e89 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.LineRendererOrbit
@@ -454,7 +452,6 @@ f7dde43371003df0435af6f9df05256c Assembly-CSharp.dll:TMPro.Examples.Benchmark04
 a9fe4abcb58ad071b5fb45e3e501de83 Assembly-CSharp.dll:UnityEngine.UI.Extensions.Gradient2
 55e9b06f6f3245f879f160356f857433 Assembly-CSharp.dll:.VitaClockSetter
 eabb14b55dc317646709e1aaab0543fb Assembly-CSharp.dll:TMPro.Examples.Benchmark02
-f416efcadb9ade4c3cf786acb5b7c7d8 Assembly-CSharp.dll:.DD_LineButton
 a01295d0f93382c5505dea34f2b40bdd Assembly-CSharp.dll:UnityEngine.UI.Extensions.Stepper
 b75678dba4c93098229d11c501c64d2b BakeryRuntimeAssembly.dll:.BakeryVolume
 9ecabe4a6b0b699f4890bde3b3e4b3b9 Assembly-CSharp.dll:TMPro.Examples.TMP_UiFrameRateCounter
@@ -485,12 +482,10 @@ a58943d086eced62b7ec272d1f163062 MeshBakerCore.dll:.MB2_UpdateSkinnedMeshBoundsF
 7b8c46b8331961f10e1e0866e617b083 Assembly-CSharp.dll:TrueClouds.ScriptPerformanceMeasure
 9ba0127fca9669a5b475d6c8abb146e2 Assembly-CSharp.dll:.LoadManager_Inputs
 e62373630330f947dbd9646d1f429314 Assembly-CSharp.dll:.MB_ExampleMover
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.Sample
 bd57674768d88af20344e9f680801c2d Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.DepthOfFieldDeprecated
 486cd95c82d8305219c352c06b776e1f BakeryRuntimeAssembly.dll:.BakeryAlwaysRender
 df03e2ffa8b3251f71a6c2235d50c66b Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Fisheye
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DD_DragBar
-4eb5de138e4f216a193682f6b4949553 Assembly-CSharp.dll:.CameraResolutionScaler
+32a4243070c947e94caea541874899f4 Assembly-CSharp.dll:.CameraResolutionScaler
 da7e0a8083a993d96d31327780818449 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIHighlightable
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:TMPro.Examples.TeleType
 58b80cf56079b9b2c86ad9aaede3dca8 Assembly-CSharp.dll:TMPro.Examples.TextMeshProFloatingText
@@ -503,7 +498,6 @@ ee077076942974568baa394344bca4d7 Assembly-CSharp.dll:UnityEngine.UI.Extensions.D
 fa4a798d075405679de1ced08ead0e5e MeshBakerCore.dll:.MB3_AtlasPackerRenderTexture
 dd223b2cbb523615eee8980d99d61ddd Assembly-CSharp.dll:.EnvMapAnimator
 824a746cb21f06e17c6336f16c81bbe1 Assembly-CSharp.dll:UnityEngine.UI.Extensions.ReorderableListDebug
-486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:.DD_LineButtonsContent
 ce1b0eb84f759ba0307038313ee70547 Assembly-CSharp.dll:BrainFailProductions.PolyFewRuntime.PolygonReduction
 81b654f0d1e5b78295a0d1397a4f6eb7 Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIScrollToSelection
 78a5cf7335128a0a58ed0aa6b7c65604 Assembly-CSharp.dll:.LightbeamSettings
@@ -519,7 +513,6 @@ f6093f55e6aa786313ac3420bc9c0fbb Assembly-CSharp.dll:UnityEngine.UI.Extensions.R
 11ea73356f2cdfb5a518ac90b14d2fb0 Assembly-CSharp.dll:.Inventory_Screen_Manager
 63f57f398ba5f65308d125b2d77f7be8 MeshBakerCore.dll:.MB3_DisableHiddenAnimations
 f59ca19b2477a0f8545617e6a1dec4b4 Assembly-CSharp-firstpass.dll:UnityStandardAssets.ImageEffects.Tonemapping
-7616ad9b3dafe4f1ea885978e3d61943 Assembly-CSharp.dll:.DD_DataDiagram
 92990e4f61bfd28327fb740f786cf9ff Assembly-CSharp.dll:.SoftNormalsToVertexColor
 744eec58ec982fb4eba9cbe4c3a6b5a8 Assembly-CSharp.dll:ArchieAndrews.PrefabBrush.PB_SaveObject
 cf5a5b7d603959fe73eafab65c8af02a Assembly-CSharp.dll:UnityEngine.UI.Extensions.Examples.OptionsMenu
@@ -532,4 +525,3 @@ c2be76183103889aa49c71a9d2cf30f7 MeshBakerCore.dll:DigitalOpus.MB.Core.MB_BlendS
 c4ef07ea8691cb21e6d62268442c68d6 Assembly-CSharp.dll:UnityEngine.UI.Extensions.SoftMaskScript
 201eb981a27cf5f96cc9b614cc9a0da8 Assembly-CSharp.dll:UnityEngine.UI.Extensions.DiamondGraph
 486cd95c82d8305219c352c06b776e1f Assembly-CSharp.dll:UnityEngine.UI.Extensions.UIMultiplyEffect
-c422dd62785a6d0afa870fbd111886ce Assembly-CSharp.dll:.DD_CoordinateAxis

@@ -19,4 +19,23 @@ MonoBehaviour:
   - Assets/Model/107_Main.fbx
   - Assets/Model/Iffrig_Mercantile_Bldg.fbx
   - Assets/Model/TJunction.fbx
-  modifiedAssetPaddingHash: aaf8cc2edbafd63a975d42bdeb78ebb7a3e4b87ad3b2bed6f1f23a06
+  - Assets/Model/Iffrig_Mercantile_Building/Iffrig_Mercantile_Building_Foundation.fbx
+  - Assets/Model/Big_Road.fbx
+  - Assets/Model/12_National_Street/Woodpile.fbx
+  - Assets/Model/12_National_Street/Sidewalk.fbx
+  - Assets/Model/12_National_Street/Short_Fence.fbx
+  - Assets/Model/12_National_Street/Kerosene_Drum.fbx
+  - Assets/Model/12_National_Street/Clothing_Poles.fbx
+  - Assets/Model/12_National_Street/Utility_Pole.fbx
+  - Assets/Model/12_National_Street/Outhouse.fbx
+  - Assets/Model/12_National_Street/Shed_Interior_Framework.fbx
+  - Assets/Model/12_National_Street/Tool_Shed.fbx
+  - Assets/Model/12_National_Street/12_National_Street_Exterior.fbx
+  - Assets/Model/Foliage/Grass.fbx
+  - Assets/Model/Misc_Outbuildings/White_Shed.fbx
+  - Assets/Model/Foliage/Maple_Bush.fbx
+  - Assets/Model/Foliage/Japanese_Maple.fbx
+  - Assets/Model/Foliage/American_Elm.fbx
+  - Assets/Model/Foliage/Red_Oak.fbx
+  - Assets/Model/221 National/221_National_Street.fbx
+  modifiedAssetPaddingHash: aaf8cc2edbafd63a569967b4377dae958176e6d1357032dbe55031ee8a6fed8c1b3a803304c5d890dd5131ee9d4dfff0eddb894becc12491fe04c8de162e5096bb09ecc07ba8374ff0f7a0c8bd1b734c03a1fb891ef83d669125e5c01829e5c0b8ee35b3e7de6210

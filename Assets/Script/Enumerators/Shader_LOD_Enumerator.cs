@@ -15,6 +15,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     public float[] LOD_Distance;
     public bool enableShaderLOD = true;
     public bool isFoliage;
+    public bool rendererDisable;
     public Material replacementMaterial;
     public float distance;
 
@@ -47,10 +48,10 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         originalMaterial = thisRenderer.sharedMaterial;
         albedoTex = originalMaterial.mainTexture;
         MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
-
+        
         //assign materials if not assigned already, and textures for later use
         if (isFoliage) //grab the textures we need from the old mat, disable leaf wiggle
-        {
+        {   
             if (replacementMaterial != null) return;
             replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
             replacementMaterial.SetFloat("_LeavesOn", 0);
@@ -85,7 +86,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         if (!enableShaderLOD) return; //check if we enabled this; if not, dump
         shaderLOD = distance <= LOD_Distance[1]
             ? distance <= LOD_Distance[0] ? LODState.Full : LODState.Reduced : LODState.VertexOnly; //LOD2
-
+        
+       
         switch (shaderLOD)
         {
             case LODState.Full:
@@ -96,6 +98,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
                     thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
                 break;
             case LODState.Reduced:
+                if (rendererDisable) thisRenderer.enabled = true; //enable renderer 
                 if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
                 if (thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP"))
                     thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
@@ -106,7 +109,14 @@ public class Shader_LOD_Enumerator : MonoBehaviour
                 thisRenderer.sharedMaterial = replacementMaterial;
                 if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
                   thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+                if (rendererDisable)
+                {
+                    if (distance >= Camera.main.farClipPlane + 1) thisRenderer.enabled = false; //disable renderer 
+                    else thisRenderer.enabled = true;
+                }
                 break;
         }
+
+        
     }
 }

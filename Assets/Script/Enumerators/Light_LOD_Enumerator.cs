@@ -20,6 +20,7 @@ public class Light_LOD_Enumerator : MonoBehaviour {
 	void Start ()
 	{
 		thisLight = this.GetComponent<Light>();
+		thisLight.shadows = LightShadows.None;
 		tick = 0;
 	}
 	

@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
     private Quaternion savedRotation;
     private Vector3 savedPosition;
     private bool isPaused;
+    public bool invertView;
    
     public SkinnedMeshRenderer skinnedRenderer;
     private float walkStart;
@@ -221,7 +222,7 @@ public class PlayerController : MonoBehaviour
         
         if(!PauseManager.isPaused){
             Move();
-            Rotate();
+            StickInput();
            // Flashlight();
             Keys();
             if (verticalMove != 0 || horizontalRotation !=0){
@@ -459,26 +460,21 @@ public class PlayerController : MonoBehaviour
         if (!Input.GetButton("RTRIG") && (!Input.GetButton("LTRIG")) && 
             (!Input.GetButtonDown("Square"))){
             if (camObject.fieldOfView > 35f){
-                camObject.fieldOfView = camObject.fieldOfView - Time.deltaTime * 32;
+                camObject.fieldOfView -= Time.deltaTime * 32;
             }
             if (camObject.fieldOfView < 35f){
-                camObject.fieldOfView = camObject.fieldOfView + Time.deltaTime * 32;
+                camObject.fieldOfView += Time.deltaTime * 32;
             }
             if (UICanvasGroup.alpha > 0.1f && stamina >= 99.0f && !isStimulant && !FlashlightController.isCharging){
                 alphaRoutine = FadeAlpha(UICanvasGroup.alpha, 0.0f, 0.75f, 0.0f);
                 StartCoroutine(alphaRoutine);
             }
-            // if (!isCharging && lightCharge != 100){
-            //     currentCharge = flashlightCharge;
-            // StartCoroutine(rechargeFlashlight (currentCharge,  10f * flashlightCharge));
-            // }
         }
-   
     }
 
 
     ///////////////////////////Joysticks//////////////////////////////////////
-    private void Rotate()
+    private void StickInput()
     {
         horizontalRotation = Input.GetAxis("Left Stick Horizontal") * OptionsManagerInputs.sensitivity; //turn
 
@@ -487,22 +483,25 @@ public class PlayerController : MonoBehaviour
             verticalCamRotation = Input.GetAxis("DS3Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
            
         }
-        else {
+        else { //set up sticks on Vita/PSTV
             horizontalCamRotation = Input.GetAxis("Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
             verticalCamRotation = Input.GetAxis("Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
         }
-        if (lightMovement){
+
+        if (invertView) verticalCamRotation = -verticalCamRotation; //swap vertical look axis if toggle is on
+        
+        if (lightMovement){ //hook up joysticks to objects to rotate them
             transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
             mapIndicator.transform.Rotate(0, horizontalRotation * lookSensitivity, 0);
             Camera.Rotate(verticalCamRotation*lookSensitivity/2,horizontalCamRotation*lookSensitivity/2,0);
             lightRig.transform.Rotate(0,-horizontalCamRotation*(lookSensitivity*2),verticalCamRotation*lookSensitivity);
             Vector3 currentLightRotation = lightRig.transform.localEulerAngles;
-        if (currentLightRotation.y > 180) {
+        if (currentLightRotation.y > 180) { //wrap values to avoid negatives
             currentLightRotation.y -= 360;
         }
         currentLightRotation.x = 0;
-        currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 20, 120); //rain light left/right
-        currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //rain light Up/down
+        currentLightRotation.y = Mathf.Clamp(currentLightRotation.y, 20, 120); //constrain light left/right
+        currentLightRotation.z = Mathf.Clamp(currentLightRotation.z, 142, 200); //constrain light Up/down
         lightRig.transform.localRotation = Quaternion.Euler(currentLightRotation); 
         }
 
@@ -510,10 +509,10 @@ public class PlayerController : MonoBehaviour
         
         Vector3 currentRotation = Camera.localEulerAngles;
        
-        if (currentRotation.x > 180) currentRotation.x -= 360;
-        if (currentRotation.y > 180) currentRotation.y -= 360;
-        currentRotation.x = Mathf.Clamp(currentRotation.x, UpLimit, downLimit); //rain camera Up/down
-        currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //rain camera left/right
+        if (currentRotation.x > 180) currentRotation.x -= 360; //wrap values to avoid negatives
+        if (currentRotation.y > 180) currentRotation.y -= 360; //wrap values to avoid negatives
+        currentRotation.x = Mathf.Clamp(currentRotation.x, UpLimit, downLimit); //constrain camera Up/down
+        currentRotation.y = Mathf.Clamp(currentRotation.y, 83, 97); //constrain camera left/right
         currentRotation.z = 0;
 
         
@@ -521,15 +520,11 @@ public class PlayerController : MonoBehaviour
         //apply the rotations
         Camera.localRotation = Quaternion.Euler(currentRotation);
        
-     
+        //swap to idle animation if the player isn't moving
         if (animator.GetBool(IsRunning) == false && animator.GetBool(IsWalking) == false) {
             if (horizontalRotation == 0 ||verticalMove == 0){
                 animator.SetBool(IsIdle, true);
             }
-            // if (horizontalRotation != 0 || verticalMove != 0){
-            //     animator.SetBool("isWalking", true);
-            //     animator.SetBool("isIdle", false);
-            // };
         } 
     }
 
@@ -539,24 +534,25 @@ public class PlayerController : MonoBehaviour
     {
     
         verticalMove = Input.GetAxis("Left Stick Vertical"); //player walk fwd/bkwd
-
+        //see if we are moving but not moving the light/cam
         if (((verticalMove != 0 && (horizontalCamRotation == 0 && verticalCamRotation == 0))) 
             && ((Camera.localEulerAngles.y >= 90.05f || Camera.localEulerAngles.y <= 89.95f) 
                 || (Camera.localEulerAngles.x <= 9.95f || Camera.localEulerAngles.x >= 10.05f)))
-        {
-            StartCoroutine(LerpCam(0.25f));
+        { 
+            StartCoroutine(LerpCam(0.25f)); //move cam back to default position/rotation over time
 
         }
-        if (verticalMove != 0 || horizontalRotation !=0){
+        //set the crossfading value for normal map to animate the wrinkles in player's clothes
+        if (verticalMove != 0 || horizontalRotation !=0){ 
             walkStart = skinnedRenderer.material.GetFloat(CrossFade);
-              
+            //bounce the crossfade from one map to the other as the player walks  
             if (animator.GetBool(IsWalking) == true){ 
                 lerpRate = 0.55f;
                 isWalking = true;
                 if (walkStart == 0f){
-                    if (walkRoutine != null) StopCoroutine(walkRoutine);
-                    walkRoutine = WalkLerp(0, 1,  lerpRate);
-                    StartCoroutine(walkRoutine);
+                    if (walkRoutine != null) StopCoroutine(walkRoutine); //cancel the routine if it is running
+                    walkRoutine = WalkLerp(0, 1,  lerpRate); //set up a new routine
+                    StartCoroutine(walkRoutine); //initiate crossfade
                 }
             }    
         }

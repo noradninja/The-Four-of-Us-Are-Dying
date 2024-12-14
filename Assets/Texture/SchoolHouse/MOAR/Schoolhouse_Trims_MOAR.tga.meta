@@ -22,7 +22,7 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   streamingMipmaps: 1
-  streamingMipmapsPriority: 0
+  streamingMipmapsPriority: 96
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -36,7 +36,7 @@ TextureImporter:
     mipBias: -100
     wrapU: 0
     wrapV: 0
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 1
   lightmap: 0
   compressionQuality: 50
@@ -83,7 +83,7 @@ TextureImporter:
   - serializedVersion: 2
     buildTarget: PSP2
     maxTextureSize: 512
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: 12
     textureCompression: 1
     compressionQuality: 50

@@ -49,6 +49,7 @@ private  string joystick1 = "joystick 1 button ";
 	public GameObject currentSelection;
 	public GameObject previousSelection;
 	public Animator anim;
+    public GameObject titleAnimator;
 
 	// Use this for initialization
 	void Start () {
@@ -158,7 +159,7 @@ void Update () {
 					setColor();
 					//animateButtons();
 				}
-					
+				//enable main menu	
 				if (Input.GetButtonDown ("Cross") && saverEnabled == false && optionEnabled == false && dialogEnabled == false){
 	
 					switch (selectedSlot)
