@@ -15,6 +15,8 @@ ModelImporter:
     3300002: //RootNode
     4300000: polySurface509
     4300002: BigRoad
+    4300004: BigRoad44
+    4300006: BigRoad30
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -43,7 +45,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["BigRoad"],"padding":[15],"unwrapper":[1]}'
+    - '#BAKERY{"meshName":["BigRoad","BigRoad30"],"padding":[15,21],"unwrapper":[1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

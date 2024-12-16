@@ -20,6 +20,7 @@ public float fadeDelay3;
 public Image fillImage;
 public float fillAmount;
 public float fillDelay;
+public bool isReady;
 
 	// Use this for initialization
 	void Start () {
@@ -90,7 +91,8 @@ public float fillDelay;
 				yield return null;
 			}
 			fadeImage3.color = endValue;
+			isReady = true;
 			//fadeImage3.gameObject.SetActive(false);
-		}
+	}
 
 }

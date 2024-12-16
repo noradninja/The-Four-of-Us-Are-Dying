@@ -9,26 +9,30 @@ public class FadeIn : MonoBehaviour {
 	public RawImage fadeImage;
 	public RawImage Target;
 	public CanvasGroup pausePanel;
+	public GameObject titleAnimator;
 	
 	private bool ignore = true;
 	private string joystick1 = "joystick button ";
 	private int CROSS = 0;
+	private bool isReady;
 
 	// Use this for initialization
 	void Start () {
 		SetScenes.currentScene = "Title";
 		PlayerPrefs.SetInt("hasLoadedFile", 0);
 		PlayerPrefs.Save();
-
+		
 		if (Application.isEditor){
-        //because the DS3 registers the buttons differently in Windows
-            CROSS = 2;
+			//because the DS3 registers the buttons differently in Windows
+			CROSS = 2;
         }
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		if(Input.GetButtonDown("Cross")){
+	void Update ()
+	{
+		isReady = titleAnimator.GetComponent<Title_Animator>().isReady;
+		if(Input.GetButtonDown("Cross") && isReady){
 			// StartCoroutine(fade(new Color(0,0,0,0),new Color (0,0,0,1), duration));
 			// if (PlayerPrefs.HasKey("hasSavedOnce")){
 			// 	BroadcastMessage("Load");

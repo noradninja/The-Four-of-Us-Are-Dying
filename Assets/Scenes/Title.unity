@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 94776155}
   - component: {fileID: 94776154}
   m_Layer: 5
-  m_Name: Canvas (fuHEN Logo)
+  m_Name: Canvas (WSCG Logo)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -479,7 +479,8 @@ AudioSource:
   m_GameObject: {fileID: 131809441}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243957784655918110, guid: f5f04035759375743b4b711551cdc66a,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -761,6 +762,7 @@ MonoBehaviour:
   fadeImage: {fileID: 65476713}
   Target: {fileID: 417573616}
   pausePanel: {fileID: 643161643}
+  titleAnimator: {fileID: 420257347}
 --- !u!114 &417573620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,6 +969,7 @@ MonoBehaviour:
   fillImage: {fileID: 616737824}
   fillAmount: 1
   fillDelay: 5.5
+  isReady: 0
 --- !u!21 &447247604
 Material:
   serializedVersion: 6
@@ -1226,7 +1229,8 @@ AudioSource:
   m_GameObject: {fileID: 612385027}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243680032417738598, guid: f5f04035759375743b4b711551cdc66a,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 51bc2f11dfad27f4ca10a2ae1d973d08, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -1424,7 +1428,7 @@ MonoBehaviour:
   selectedSlot: 1
   selectedSLSlot: 1
   baseColor: {r: 0.23529413, g: 0.23137257, b: 0.23529413, a: 1}
-  hilightColor: {r: 0.36078432, g: 0.3529412, b: 0.36078432, a: 1}
+  hilightColor: {r: 0.32, g: 0, b: 0, a: 1}
   selectedColor: {r: 0.4784314, g: 0.47058827, b: 0.4784314, a: 1}
   slot1: {fileID: 341923802}
   slot2: {fileID: 1797873706}
@@ -1446,11 +1450,17 @@ MonoBehaviour:
   dialogEnabled: 0
   delayTimer: 0
   timer: 0
-  clipList: []
-  audioSource: {fileID: 0}
+  clipList:
+  - {fileID: 8300000, guid: 44395398ec3896847b0d3ec67b3da8a9, type: 3}
+  - {fileID: 8300000, guid: e112202860e1cfc45be6c9dd476d9143, type: 3}
+  - {fileID: 8300000, guid: 739413a5d70161246a87f5356950515f, type: 3}
+  - {fileID: 8300000, guid: d4093051833b01040ac090a104f59fcc, type: 3}
+  - {fileID: 8300000, guid: d4093051833b01040ac090a104f59fcc, type: 3}
+  audioSource: {fileID: 131809442}
   currentSelection: {fileID: 0}
   previousSelection: {fileID: 0}
   anim: {fileID: 0}
+  titleAnimator: {fileID: 420257347}
 --- !u!1 &727265278
 GameObject:
   m_ObjectHideFlags: 0
@@ -1649,10 +1659,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60fd96fcc5e90354e8a84743e83cf8fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cpuSpeed: 0
-  gpuSpeed: 0
-  busSpeed: 0
-  xbarSpeed: 0
+  cpuSpeed: 444
+  gpuSpeed: 222
+  busSpeed: 222
+  xbarSpeed: 166
 --- !u!4 &1183913226
 Transform:
   m_ObjectHideFlags: 0
@@ -2307,7 +2317,7 @@ MonoBehaviour:
   selectedSlot: 1
   previousSlot: 3
   baseColor: {r: 0.23529413, g: 0.23137257, b: 0.23529413, a: 1}
-  hilightColor: {r: 0.36078432, g: 0.3529412, b: 0.36078432, a: 1}
+  hilightColor: {r: 0.32, g: 0, b: 0, a: 1}
   loadedColor: {r: 0.4784314, g: 0.47058827, b: 0.4784314, a: 1}
   savedColor: {r: 0.4784314, g: 0.47058827, b: 0.4784314, a: 1}
   slot1: {fileID: 1049204290}
@@ -2348,7 +2358,7 @@ GameObject:
   - component: {fileID: 1882474353}
   - component: {fileID: 1882474352}
   m_Layer: 5
-  m_Name: Canvas (Logo)
+  m_Name: Canvas (Headphones)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3283,6 +3293,81 @@ Prefab:
     - target: {fileID: 225434496318120928, guid: a3d4c910dd150dc4ba1816870bb7f398,
         type: 2}
       propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114481678169842744, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: hilightColor.r
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 114481678169842744, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: hilightColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114481678169842744, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: hilightColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626512372155156, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626512372155156, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626512372155156, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819499221454702, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819499221454702, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114819499221454702, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064045226930768, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064045226930768, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114064045226930768, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626302587925946, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626302587925946, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114626302587925946, guid: a3d4c910dd150dc4ba1816870bb7f398,
+        type: 2}
+      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

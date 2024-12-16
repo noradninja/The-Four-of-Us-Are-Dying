@@ -9,6 +9,9 @@ ModelImporter:
     2300000: //RootNode
     3300000: //RootNode
     4300000: TJunction
+    4300002: TJunction1
+    4300004: TJunction7
+    4300006: TJunction9
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -37,7 +40,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["TJunction"],"padding":[17],"unwrapper":[1]}'
+    - '#BAKERY{"meshName":["TJunction","TJunction9"],"padding":[17,13],"unwrapper":[1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

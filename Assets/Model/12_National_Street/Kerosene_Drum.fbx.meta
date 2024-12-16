@@ -39,7 +39,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Kerosene_Drum"],"padding":[46],"unwrapper":[1]}'
+    - '#BAKERY{"meshName":["Kerosene_Drum"],"padding":[52],"unwrapper":[1]}'
     clipAnimations: []
     isReadable: 0
   meshes:

@@ -103,6 +103,7 @@ void Update () {
 		if ((PauseManager.isPaused) == true){
 			PlayerController.delayButton = true;
 			if (Input.GetButtonDown ("Circle") && !dialogEnabled && !delayTimer){
+				audioSource.PlayOneShot(clipList[4]);
 				if (optionEnabled){
 					StartCoroutine(FadeScreen(1, 0 , 0.0F));
 					selectedCanvas = mainMenuCanvas;
@@ -128,7 +129,7 @@ void Update () {
 				if (!(timer > delay)) return;
 				//Decrement slot by -1 if you press up
 				if (Input.GetButtonDown ("Up")){
-					//audioSource.PlayOneShot(clipList[2]);
+					audioSource.PlayOneShot(clipList[0]);
 					if (selectedSlot > 1){
 						//set slot to 2 if you are at slot 1 to wrap selection
 						selectedSlot -= 1;
@@ -145,7 +146,7 @@ void Update () {
 					
 				//Increment slot by +1 if you press down
 				if (Input.GetButtonDown ("Down")){
-					//audioSource.PlayOneShot(clipList[3]);
+					audioSource.PlayOneShot(clipList[1]);
 					if (selectedSlot < 3){
 						//set slot to 1 if you are at slot 2 to wrap selection
 						selectedSlot += 1;
@@ -159,26 +160,29 @@ void Update () {
 					setColor();
 					//animateButtons();
 				}
-				//enable main menu	
+				
 				if (Input.GetButtonDown ("Cross") && saverEnabled == false && optionEnabled == false && dialogEnabled == false){
-	
+					
 					switch (selectedSlot)
 					{
 						case 1:
 							selectedCanvas = faderCanvas;
 							timer = 0.0f;
-							StartCoroutine(FadeScreen(0, 1 , 0.25F));
+							audioSource.PlayOneShot(clipList[2]);
+							StartCoroutine(FadeScreen(0, 1 , 3.5F));
 							break;
 						case 2:
 							//animateButtons();
 							selectedCanvas = saverCanvas;
 							timer = 0.0f;
+							audioSource.PlayOneShot(clipList[3]);
 							StartCoroutine(FadeScreen(0, 1 , 0.0F));
 							break;
 						case 3:
 							//animateButtons();
 							selectedCanvas = optionCanvas;
 							timer = 0.0f;
+							audioSource.PlayOneShot(clipList[3]);
 							StartCoroutine(FadeScreen(0, 1 , 0.0F));
 							break;
 					}

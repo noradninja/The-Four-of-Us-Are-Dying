@@ -11,7 +11,7 @@ Material:
   m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1
     SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON
     SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 _ALPHAPREMULTIPLY_ON
-    _ALPHATEST_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP
+    _ALPHATEST_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -152,7 +152,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 72fe0ed36fde3c24f898b1f24f2d257b, type: 3}
-        m_Scale: {x: 6, y: 6}
+        m_Scale: {x: 8, y: 8}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
@@ -272,7 +272,7 @@ Material:
     - _Bicubic: 0
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 3
+    - _BumpScale: 2
     - _BumpShadowHardness: 50
     - _BumpShadowHeightScale: 0.2
     - _ColorAmplify: 1
@@ -332,8 +332,8 @@ Material:
     - _ForceBoxProject: 0
     - _GSAAThreshold: 0
     - _GSAAVariance: 0
-    - _GlossMapScale: 0.8
-    - _Glossiness: 0.3
+    - _GlossMapScale: 1
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5
     - _HeightScale: 0.006

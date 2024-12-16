@@ -39,7 +39,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Short_Fence"],"padding":[68],"unwrapper":[1]}'
+    - '#BAKERY{"meshName":["Short_Fence"],"padding":[76],"unwrapper":[1]}'
     clipAnimations: []
     isReadable: 0
   meshes:
