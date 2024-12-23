@@ -74,7 +74,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Trims","Exterior","Awning","Glass1","Window_Glass"],"padding":[10,7,201,28,89],"unwrapper":[1,1,1,1,1]}'
+    - '#BAKERY{"meshName":["Exterior","Awning","Window_Glass","Trims"],"padding":[7,201,89,10],"unwrapper":[1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:

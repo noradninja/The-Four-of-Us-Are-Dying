@@ -62,7 +62,7 @@ Material:
     - _AlphaOn: 1
     - _AmbientOn: 0
     - _BumpScale: 1
-    - _Cutoff: 0.84
+    - _Cutoff: 0.9
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1

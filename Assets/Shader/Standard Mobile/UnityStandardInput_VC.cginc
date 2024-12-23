@@ -50,6 +50,12 @@ half        _UVSec;
 
 half4       _EmissionColor;
 sampler2D_half   _EmissionMap;
+half4 _wind_dir;
+half _wind_size;
+half _leaves_wiggle_disp;
+half _leaves_wiggle_speed;
+half _influence;
+half _LeavesOn;
 
 //-------------------------------------------------------------------------------------
 // Input functions

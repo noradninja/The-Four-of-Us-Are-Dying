@@ -263,7 +263,7 @@ Material:
     - _Cull: 2
     - _CullMode: 2
     - _Culling: 2
-    - _Cutoff: 0.5
+    - _Cutoff: 1
     - _DAlbedoScale: 1
     - _DDetailsMapRef1: 0
     - _DDetailsMapRef2: 0
@@ -320,7 +320,7 @@ Material:
     - _GSAAVariance: 0
     - _GeoShadowModel: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.125
+    - _Glossiness: 1
     - _GlossyReflections: 1
     - _HeightRefPlane: 0.5
     - _HeightScale: 0.006
@@ -461,6 +461,7 @@ Material:
     - _Layer3ScrollV: 0
     - _Layer3Toggle: 0
     - _Layer3UV2: 0
+    - _LeavesOn: 0
     - _LightFold: 1
     - _LightMode: 1
     - _LightProbes: 0
@@ -556,8 +557,12 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
+    - _influence: 0
+    - _leaves_wiggle_disp: 0
+    - _leaves_wiggle_speed: 0
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
+    - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBack: {r: 1, g: 1, b: 1, a: 1}
@@ -591,4 +596,6 @@ Material:
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Time: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
+    - _wind_dir: {r: 0, g: 0, b: 0, a: 0}

@@ -152,6 +152,7 @@ Material:
     - _GlossyReflections: 1
     - _Height: 0
     - _IntensityVC: 0
+    - _LeavesOn: 0
     - _LightingEnabled: 1
     - _Matte: 0
     - _Metallic: 0
@@ -184,6 +185,10 @@ Material:
     - _WorkflowMode: 0
     - _ZWrite: 1
     - __dirty: 0
+    - _influence: 1
+    - _leaves_wiggle_disp: 0.07
+    - _leaves_wiggle_speed: 0.01
+    - _wind_size: 15
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
@@ -193,3 +198,5 @@ Material:
     - _MainColor: {r: 1, g: 1, b: 1, a: 0}
     - _SoftParticleFadeParams: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Time: {r: 0, g: 0, b: 0, a: 0}
+    - _wind_dir: {r: 0.5, g: 0.05, b: 0.5, a: 0}

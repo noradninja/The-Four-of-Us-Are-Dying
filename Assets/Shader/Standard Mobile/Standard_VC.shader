@@ -38,7 +38,13 @@ Shader "Vita/Standard Mobile"
         _DetailNormalMap("Normal Map", 2D) = "bump" {}
 
         [Enum(UV0,0,UV1,1)] _UVSec ("UV Set for secondary textures", Float) = 0
-
+        _wind_dir ("Wind Direction", Vector) = (0.5,0.05,0.5,0)
+        _wind_size ("Wind Wave Size", range(5,50)) = 15
+        _leaves_wiggle_disp ("Leaves Wiggle Displacement", float) = 0.07
+        _leaves_wiggle_speed ("Leaves Wiggle Speed", float) = 0.01
+        _influence ("Influence", range(0,1)) = 1
+        _Time ("Time", Vector) =(0,0,0,0)
+        [Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 0
 
         // Blending state
         [HideInInspector] _Mode ("__mode", Float) = 0.0

@@ -177,6 +177,7 @@ Material:
     - _IntensityVC: 1
     - _Ior: 1.5
     - _LTCGI: 0
+    - _LeavesOn: 0
     - _LightmapSpecular: 1
     - _LightmapSpecularMaxSmoothness: 1
     - _MappingSpace: 0
@@ -206,8 +207,12 @@ Material:
     - _UVSec: 0
     - _UnityLightingContribution: 1
     - _ZWrite: 1
+    - _influence: 1
+    - _leaves_wiggle_disp: 0.07
+    - _leaves_wiggle_speed: 0.01
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
+    - _wind_size: 15
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
@@ -215,3 +220,5 @@ Material:
     - _SmoothnessRemap: {r: 0, g: 1, b: 0, a: 1}
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Time: {r: 0, g: 0, b: 0, a: 0}
+    - _wind_dir: {r: 0.5, g: 0.05, b: 0.5, a: 0}

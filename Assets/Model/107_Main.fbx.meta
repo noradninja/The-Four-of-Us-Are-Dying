@@ -163,7 +163,7 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties:
-    - '#BAKERY{"meshName":["Exterior","Glass","Plaque","Trims_EXT","Trims_EXT_Transparent"],"padding":[10,34,256,11,107],"unwrapper":[1,0,1,1,1]}'
+    - '#BAKERY{"meshName":["Trims_EXT_Transparent","Exterior","Plaque","Trims_EXT"],"padding":[107,10,256,11],"unwrapper":[1,1,1,1]}'
     clipAnimations: []
     isReadable: 1
   meshes:
