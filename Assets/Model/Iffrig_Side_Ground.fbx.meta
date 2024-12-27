@@ -296,7 +296,7 @@ ModelImporter:
     extraUserProperties:
     - '#BAKERY{"meshName":["polySurface469","polySurface468","polySurface466","polySurface464","polySurface462","polySurface460","polySurface459","polySurface456","polySurface454","polySurface452","polySurface451","polySurface449","polySurface447","polySurface445","polySurface443","polySurface441","polySurface439","polySurface437","polySurface435","polySurface433","polySurface431","polySurface429","polySurface427","polySurface425","polySurface423","polySurface421","polySurface419","polySurface417","polySurface415","polySurface413","polySurface411","polySurface409","polySurface407"],"padding":[47,20,20,20,20,20,36,35,35,31,20,20,20,20,20,20,20,20,20,20,20,20,20,20,19,19,19,19,19,19,19,19,20],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1

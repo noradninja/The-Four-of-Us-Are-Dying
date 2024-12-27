@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Omni_Beam
   m_Shader: {fileID: 4800000, guid: a0a5cb9d8925b7a4ca83c7a9fa9a5b85, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

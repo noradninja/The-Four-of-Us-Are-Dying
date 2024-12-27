@@ -108,7 +108,7 @@ namespace UnityStandardAssets.ImageEffects
 
                 if (softness > Mathf.Epsilon)
                 {
-                    RenderTexture rt2 = RenderTexture.GetTemporary((int) (480 * (1.0f-softness)), (int) (272 * (1.0f-softness)));
+                    RenderTexture rt2 = RenderTexture.GetTemporary((int) (512 * (1.0f-softness)), (int) (256 * (1.0f-softness)));
                     DrawNoiseQuadGrid (source, rt2, noiseMaterial, noiseTexture, 2);
                     noiseMaterial.SetTexture("_NoiseTex", rt2);
                     Graphics.Blit(source, destination, noiseMaterial, 1);

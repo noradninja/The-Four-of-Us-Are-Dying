@@ -47,10 +47,10 @@ public class FastSSAO : MonoBehaviour
         else
             material.DisableKeyword(fastKeyword);
 
-        var blurTex = RenderTexture.GetTemporary(128, 128, 0, source.format);
+        var blurTex = RenderTexture.GetTemporary(256, 128, 0, source.format);
        // var temp1 = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /8f), Mathf.RoundToInt(Screen.height /8f), 0, source.format);
         //var temp1 = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /16f), Mathf.RoundToInt(Screen.height /16f), 0, source.format);
-
+        blurTex.filterMode = FilterMode.Point;
         Graphics.Blit(source, blurTex, material, 0);
         //Graphics.Blit(blurTex, temp1, material, 1);
         // Graphics.Blit(temp, temp1, material, 1);

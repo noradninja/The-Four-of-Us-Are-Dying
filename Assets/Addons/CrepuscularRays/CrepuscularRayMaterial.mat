@@ -53,9 +53,9 @@ Material:
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _Weight: 2
-    - _fogInfluence: 1.325
+    - _fogInfluence: 1.25
     - _fogSpeed: 1.25
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: 0.14345714, g: -0.34943813, b: -0.831287, a: 0}
+    - _LightPos: {r: 0.4218888, g: -0.25905436, b: -0.89691716, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}
