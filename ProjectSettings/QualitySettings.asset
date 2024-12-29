@@ -41,4 +41,6 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 2
     excludedTargetPlatforms:
     - Standalone
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    PSP2: 0
+    Standalone: 0
