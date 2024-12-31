@@ -9,7 +9,7 @@ Material:
   m_Name: Batteries_Fade
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _BAKERY_NONE _EMISSION _LIGHTMAPSPECULAR _METALLICGLOSSMAP
-    _VERTEXCOLOR
+    _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0

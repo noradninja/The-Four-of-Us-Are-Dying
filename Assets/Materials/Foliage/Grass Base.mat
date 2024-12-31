@@ -12,6 +12,7 @@ Material:
     SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON
     SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 WIGGLE_ON
     _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP
+    _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -152,7 +153,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 72fe0ed36fde3c24f898b1f24f2d257b, type: 3}
-        m_Scale: {x: 8, y: 8}
+        m_Scale: {x: 10, y: 10}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
@@ -278,10 +279,10 @@ Material:
     - _ColorAmplify: 1
     - _ControlScriptFlag: 0
     - _CrossFade: 0
-    - _Cull: 2
+    - _Cull: 0
     - _CullMode: 0
     - _Culling: 2
-    - _Cutoff: 0.525
+    - _Cutoff: 0.44
     - _DAlbedoScale: 1
     - _DDetailsMapRef1: 0
     - _DDetailsMapRef2: 0
@@ -566,9 +567,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.09829251
-    - _leaves_wiggle_disp: 0.00075
-    - _leaves_wiggle_speed: 400
+    - _influence: 0.07708162
+    - _leaves_wiggle_disp: 0.0005
+    - _leaves_wiggle_speed: 100
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
     - _wind_size: 5
@@ -606,4 +607,4 @@ Material:
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _Time: {r: 1.3, g: 2.7, b: 2.12, a: 3}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 1.25, g: 0.25, b: 2.5, a: 0}
+    - _wind_dir: {r: 1.25, g: 1.5, b: 2.5, a: 0}
