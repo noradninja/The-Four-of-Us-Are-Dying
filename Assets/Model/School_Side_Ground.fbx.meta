@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba7b32adde7e49a4ab369d7de4f79fc9
+guid: ada4afd024a286e468c78c20eb50e164
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
@@ -249,8 +249,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["polySurface476","polySurface475","polySurface474","polySurface473","polySurface472","polySurface471","polySurface470","polySurface469","polySurface468","polySurface466","polySurface464","polySurface462","polySurface460","polySurface451","polySurface449","polySurface447","polySurface445","polySurface443","polySurface441","polySurface439","polySurface437","polySurface435","polySurface433","polySurface431","polySurface429","polySurface427","polySurface425","polySurface423","polySurface421","polySurface419","polySurface417","polySurface415","polySurface413","polySurface411","polySurface409","polySurface407"],"padding":[20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,20,19,19,19,19,19,19,19,19,20],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
@@ -282,7 +281,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 0
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
