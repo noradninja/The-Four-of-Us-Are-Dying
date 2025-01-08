@@ -94,8 +94,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["Parking_Lot_Front5","Parking_Lot_Front4","Parking_Lot_Back3","Parking_Lot_Front3","Parking_Lot_Front2","Parking_Lot_Back5","Parking_Lot_Back2","Parking_Lot_Back4","Parking_Lot_Back1","Parking_Lot_Front","Parking_Lot_Front1","Parking_Lot_Back"],"padding":[29,27,27,25,32,24,26,26,28,28,30,24],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1]}'
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:

@@ -462,7 +462,7 @@ Material:
     - _ManualControl: 0
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0
+    - _Metallic: 0.85
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0

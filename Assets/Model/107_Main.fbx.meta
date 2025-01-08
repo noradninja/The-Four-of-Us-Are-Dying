@@ -162,10 +162,9 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["Trims_EXT_Transparent","Exterior","Plaque","Trims_EXT"],"padding":[107,10,256,11],"unwrapper":[1,1,1,1]}'
+    extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1

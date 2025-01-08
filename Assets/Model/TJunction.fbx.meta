@@ -12,7 +12,6 @@ ModelImporter:
     4300002: TJunction1
     4300004: TJunction7
     4300006: TJunction9
-    6400000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
@@ -40,15 +39,14 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["TJunction9"],"padding":[13],"unwrapper":[1]}'
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 1
+    addColliders: 0
     importVisibility: 0
     importBlendShapes: 0
     importCameras: 0
@@ -56,7 +54,7 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 1
     useFileUnits: 1
-    optimizeMeshForGPU: 1
+    optimizeMeshForGPU: 0
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0

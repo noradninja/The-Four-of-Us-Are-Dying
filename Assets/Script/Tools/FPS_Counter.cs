@@ -85,10 +85,10 @@ void Start(){
 		            else ramText.color = Color.green;
 		            
 		            //change FPS colors 
-		            if (Mathf.RoundToInt(averageFPS) > 27.00f){
+		            if (Mathf.RoundToInt(averageFPS) > 24.00f){
 			            fpsText.color = Color.green;
 		            }
-		            else if (Mathf.RoundToInt(averageFPS) <= 27.00f) {
+		            else if (Mathf.RoundToInt(averageFPS) <= 24.00f) {
 			            fpsText.color = Color.red;
 		            }
 		            

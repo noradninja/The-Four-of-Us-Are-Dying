@@ -17,9 +17,9 @@ public class LineGenerator : MonoBehaviour
     [Tooltip("Normal value is considered to be 60fps")]
     public Color fpsNormalLineIndicatorColor = Color.red;
 
-    private const float TOP_NORMAL_MARGIN_SCALE = 0.54f;
+    private const float TOP_NORMAL_MARGIN_SCALE = 0.33f;
     private const float TOP_MAX_MARGIN_SCALE = 0.0f;
-    private const float FPS_NORMAL = 30f;
+    private const float FPS_NORMAL = 15f;
     private const int MIN_SIZE = 16;
     private int tick = 0;
     private int _amount = 100;
@@ -153,7 +153,7 @@ public class LineGenerator : MonoBehaviour
                 float posX = counter + _bottomLeft.x;
                 float posY = Screen.height - _bottomLeft.y - lineHeight;
                 if (lineHeight <= 0) GUI.color = Color.black;
-                else if (lineHeight < _fullHeight-2) GUI.color = Color.red;
+                else if (lineHeight < _fullHeight-6) GUI.color = Color.red;
                 else  GUI.color = fpsGraphColor;
                 // if (Shader_LOD_Enumerator.tick == 15)
                 // {

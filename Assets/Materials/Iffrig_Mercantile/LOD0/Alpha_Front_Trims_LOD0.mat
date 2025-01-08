@@ -8,7 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Alpha_Front_Trims_LOD0
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _METALLICGLOSSMAP _VERTEXCOLOR
+  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP
+    _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -57,7 +58,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _BumpScale: 1.5
-    - _Cull: 0
+    - _Cull: 2
     - _Cutoff: 0.33
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -75,12 +76,12 @@ Material:
     - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 1
-    - _influence: 0.2
-    - _leaves_wiggle_disp: 0.1
-    - _leaves_wiggle_speed: 0.1
-    - _wind_size: 5
+    - _influence: 1
+    - _leaves_wiggle_disp: 0.07
+    - _leaves_wiggle_speed: 0.01
+    - _wind_size: 15
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Time: {r: 0, g: 0, b: 0, a: 0}
-    - _wind_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _wind_dir: {r: 0.5, g: 0.05, b: 0.5, a: 0}

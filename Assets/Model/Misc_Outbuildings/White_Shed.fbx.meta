@@ -78,8 +78,7 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["Interior_Beams","Board_Fence","Shed","R_Door","L_Door","Back_Roofing","No_Parking_Sign"],"padding":[36,60,15,61,59,67,256],"unwrapper":[1,1,1,1,1,1,1]}'
+    extraUserProperties: []
     clipAnimations: []
     isReadable: 0
   meshes:

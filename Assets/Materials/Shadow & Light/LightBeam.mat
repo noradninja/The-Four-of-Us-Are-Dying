@@ -41,12 +41,12 @@ Material:
     - _Fade: 1
     - _FadeDistance: 2
     - _FadeLength: 0.15
-    - _InvFade: 1.45
+    - _InvFade: 1.08
     - _SoftEdge: 3.5
-    - _Tweak: 0.51
-    - _Width: 12.5
+    - _Tweak: 1.4
+    - _Width: 3.21
     m_Colors:
-    - _Color: {r: 0.315, g: 0.3058884, b: 0.22909091, a: 0.5019608}
+    - _Color: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 1}
     - _DetailAnim: {r: 1, g: 0, b: 0, a: 0}
     - _DustAnim: {r: 0, g: 0, b: 0, a: 0}
     - _GlowColor: {r: 1, g: 1, b: 1, a: 1}

@@ -253,7 +253,7 @@ Material:
     - _Bicubic: 0
     - _Blend: 0
     - _Bump2Scale: 1
-    - _BumpScale: 22.11
+    - _BumpScale: 2
     - _BumpShadowHardness: 60.9
     - _BumpShadowHeightScale: 0.5
     - _ColorAmplify: 1
@@ -520,7 +520,7 @@ Material:
     - _Smoothness1: 1
     - _Smoothness2: 1
     - _Smoothness3: 1
-    - _SmoothnessTextureChannel: 1
+    - _SmoothnessTextureChannel: 0
     - _SpecOcclusion: 0.5
     - _SpecularHighlights: 1
     - _SpecularMapType: 999

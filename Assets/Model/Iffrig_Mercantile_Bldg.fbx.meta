@@ -174,10 +174,9 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties:
-    - '#BAKERY{"meshName":["Glass_Front","Front_Trims","Roof_Glass","Back_Half","Back_Trims","Glass_Back","Front_Half","Glass_Front_Display","Porch_Slats","Doorknob","Plaque","Curved_Handle_B","Curved_Handle_A","Roof_Chimney"],"padding":[30,8,89,15,7,24,16,39,28,256,256,256,256,10],"unwrapper":[1,1,1,1,1,1,1,1,1,1,1,1,1,1]}'
+    extraUserProperties: []
     clipAnimations: []
-    isReadable: 1
+    isReadable: 0
   meshes:
     lODScreenPercentages: []
     globalScale: 1
