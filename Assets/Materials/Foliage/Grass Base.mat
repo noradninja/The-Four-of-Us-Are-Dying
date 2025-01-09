@@ -565,7 +565,7 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.2125727
+    - _influence: 0.18330817
     - _leaves_wiggle_disp: 0.05
     - _leaves_wiggle_speed: 50
     - _specularAntiAliasingThreshold: 0.25

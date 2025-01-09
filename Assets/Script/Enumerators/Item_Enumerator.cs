@@ -4,6 +4,7 @@ using System.Runtime.Serialization;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Serialization;
 
 public class Item_Enumerator : MonoBehaviour {
 
@@ -28,7 +29,8 @@ public class Item_Enumerator : MonoBehaviour {
 	public Collider player;
 	public Animator animator;
 	public GameObject playerObject;
-	public GameObject HeadObject;
+	public GameObject headObject;
+	public GameObject headLookObject;
 	public Material playerBody;
 	public Collider thisCollider;
 	public GameObject targetObject;
@@ -52,7 +54,8 @@ public class Item_Enumerator : MonoBehaviour {
 	private Vector3 targetPos;
 	private string tempText;
 	private Dictionary<string, string> itemTexts;
-	private Vector3 defaultHeadRotation;
+	private bool isLerping;
+	private float elapsedTime = 0;
 
 	private int GetFirstDigit(int number)
 	{
@@ -66,9 +69,6 @@ public class Item_Enumerator : MonoBehaviour {
 	// Use this for initialization
 	private void Start ()
 	{
-		defaultHeadRotation = new Vector3(HeadObject.transform.localRotation.x,
-											HeadObject.transform.localRotation.y,
-											HeadObject.transform.localRotation.z);
 		if (Application.isEditor){
 			CROSS = 2;
 		}
@@ -114,16 +114,19 @@ public class Item_Enumerator : MonoBehaviour {
     // Update is called once per frame
     void Update (){
 	    if (isActiveObject){
-		    // Determine which direction to rotate towards
-		    Vector3 targetDirection = transform.position - HeadObject.transform.position;
-		    Debug.DrawRay(HeadObject.transform.position, targetDirection, Color.red);
-		    HeadObject.transform.LookAt(transform.position);
+		    POILook(headObject.transform, this.transform, 2.0f);
+		    player.GetComponent<PlayerController>().nearObject = true;
+	    }
+
+	    if (!player.GetComponent<PlayerController>().nearObject)
+	    {
+		    POILook(headObject.transform, headLookObject.transform, 0.125f);
 	    }
 	    
 	    if (Input.GetButtonDown("Cross") && dialogBG.color == dialogOn && isActiveObject){
-		
-			switch (thisItem){
+		    player.GetComponent<PlayerController>().nearObject = false;
 
+			switch (thisItem){
 				case pickupItem.flashlight :
 					FlashlightController.HasFlashlight = true;
 					FlashlightController.FlashlightOff = false;
@@ -166,6 +169,7 @@ public class Item_Enumerator : MonoBehaviour {
     private void OnGUI (){
 		if (isActiveObject){
             SetPosition();
+            
         }
     }
 
@@ -184,24 +188,8 @@ public class Item_Enumerator : MonoBehaviour {
     private void OnTriggerExit (Collider col){
 		if(col == player){
             ClearOsd();
-            Quaternion resetRotation = new Quaternion(0, 0, 0, 0);
-            HeadObject.transform.localRotation = resetRotation;
-            /*//Head Rotation
-            // Determine which direction to rotate towards
-            Vector3 targetDirection = HeadObject.transform.position - transform.position;
-
-            // The step size is equal to speed times frame time.
-            float singleStep = 1.0f * Time.deltaTime;
-
-            // Rotate the forward vector towards the target direction by one step
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, singleStep, 0.0f);
-
-            // Draw a ray pointing at our target in
-            Debug.DrawRay(transform.position, newDirection, Color.red);
-
-            // Calculate a rotation a step closer to the target and applies rotation to this object
-            transform.rotation = Quaternion.LookRotation(newDirection);*/
-		}
+            player.GetComponent<PlayerController>().nearObject = false;
+        }
     }
 
     private void ClearOsd() //restores OSD to default and resets isActiveObject flag
@@ -219,4 +207,20 @@ public class Item_Enumerator : MonoBehaviour {
         screenPosition = mainCamera.WorldToScreenPoint(targetPos); //convert target position to screen space coordinates
         hilightIcon.transform.position = screenPosition; //set the icon position to the converted screen position of the object
 	}
+    
+    private void POILook(Transform objectToRotateTransform ,Transform objectToLookAtTransform, float rate)
+    {
+	    Vector3 targetDirection = objectToLookAtTransform.position - objectToRotateTransform.position;
+		
+	    // The step size is equal in radians to speed * frametime 
+        float singleStep = rate * Time.deltaTime;
+        // Rotate the forward vector towards the target direction by one step
+        Vector3 newDirection = Vector3.RotateTowards(objectToRotateTransform.forward, targetDirection, 
+										singleStep, 0.0f);
+        // Draw a ray pointing at our target in
+        Debug.DrawRay(objectToRotateTransform.position, newDirection, Color.magenta);
+        // Calculate a rotation a step closer to the target and applies rotation to this object
+        objectToRotateTransform.rotation = Quaternion.LookRotation(newDirection);
+    }
+
 }

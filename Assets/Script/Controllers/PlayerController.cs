@@ -76,7 +76,7 @@ public class PlayerController : MonoBehaviour
     private Vector3 savedPosition;
     private bool isPaused;
     public bool invertView;
-   
+    public bool nearObject = false;
     public SkinnedMeshRenderer skinnedRenderer;
     private float walkStart;
 
