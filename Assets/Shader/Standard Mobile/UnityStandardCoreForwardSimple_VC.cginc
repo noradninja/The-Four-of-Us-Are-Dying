@@ -95,13 +95,7 @@ VertexOutputBaseSimple vertForwardBaseSimple (VertexInput_VC v)
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 
     float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
-    if(_LeavesOn)
-    {
-    	//Leaf Movement and Wiggle
-    	( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (posWorld.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-    	(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (posWorld.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-    	(v.vertex.z += sin(cos(_Time.y * v.vertex.z * _leaves_wiggle_speed + (posWorld.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
-    }              
+    
     o.pos = UnityObjectToClipPos(v.vertex);
     o.tex = TexCoords(v);
 
@@ -233,9 +227,9 @@ half4 fragForwardBaseSimpleInternal (VertexOutputBaseSimple i)
     UnityGI gi = FragmentGI (s, occlusion, i.ambientOrLightmapUV, atten, mainLight);
     half3 attenuatedLightColor = gi.light.color * ndotl;
 
-    // half3 c = BRDF3_Indirect(s.diffColor, s.specColor, gi.indirect, PerVertexGrazingTerm(i, s), PerVertexFresnelTerm(i));
-	// c += BRDF3DirectSimple(s.diffColor, s.specColor, s.smoothness, rl) * attenuatedLightColor;
-    half4 c = UNITY_BRDF_PBS (s.diffColor, s.specColor, rl, s.smoothness, s.normalWorld, -s.eyeVec, gi.light, gi.indirect) * (attenuatedLightColor,1);
+     half3 c = BRDF3_Indirect(s.diffColor, s.specColor, gi.indirect, PerVertexGrazingTerm(i, s), PerVertexFresnelTerm(i));
+	 c += BRDF3DirectSimple(s.diffColor, s.specColor, s.smoothness, rl) * attenuatedLightColor;
+    //half4 c = UNITY_BRDF_PBS (s.diffColor, s.specColor, rl, s.smoothness, s.normalWorld, -s.eyeVec, gi.light, gi.indirect) * (attenuatedLightColor,1);
     c.rgb += Emission(i.tex.xy);
 // #if _VERTEXCOLOR
 // 	c *= i.color * _IntensityVC;
@@ -253,7 +247,7 @@ half4 fragForwardBaseSimpleInternal (VertexOutputBaseSimple i)
 // 	s.alpha *= lerp(1, i.color.a, _IntensityVC);
 // #endif
 
-    return OutputForward (c, s.alpha);
+    return OutputForward (half4(c,1), s.alpha);
 }
 
 half4 fragForwardBaseSimple (VertexOutputBaseSimple i) : SV_Target  // backward compatibility (this used to be the fragment entry function)

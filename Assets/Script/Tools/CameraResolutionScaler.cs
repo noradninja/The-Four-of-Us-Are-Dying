@@ -114,13 +114,13 @@ public class CameraResolutionScaler : MonoBehaviour
                     width = 640;
                     height = 368;
                     if (!Application.isEditor) Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
                 case currentResolution.PSP:
                     width = 480;
                     height = 272;
                     if (!Application.isEditor) Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
             }
     }
@@ -148,7 +148,7 @@ public class CameraResolutionScaler : MonoBehaviour
                     renderDivisor = 1.5f;
                     break;
                 case internalResolution.Low:
-                    renderDivisor = 1.75f;
+                    renderDivisor = 1.6f;
                     break;
                 case internalResolution.VeryLow:
                     renderDivisor = 2.0f;

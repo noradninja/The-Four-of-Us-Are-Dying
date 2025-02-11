@@ -179,6 +179,6 @@ public class LineGenerator : MonoBehaviour
         GUI.DrawTexture(new Rect(new Vector2(_bottomLeft.x, Screen.height - _bottomLeft.y - _maxHeight), new Vector2((float)_amount+2, 1)), _texture);
 
         GUI.color = fpsGraphColor;
-        GUI.DrawTexture(new Rect(new Vector2(_bottomLeft.x,  54), new Vector2((float)_amount+2, 1)), _texture);
+        GUI.DrawTexture(new Rect(new Vector2(_bottomLeft.x, Screen.height - _bottomLeft.y), new Vector2((float)_amount+2, 1)), _texture);
     }
 }

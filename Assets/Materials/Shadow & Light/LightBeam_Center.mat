@@ -40,7 +40,7 @@ Material:
     - _DustContrast: 1
     - _Fade: 1
     - _FadeDistance: 2
-    - _InvFade: 3
+    - _InvFade: 0.4
     - _SoftEdge: 0.75
     - _Tweak: 4.63
     - _Width: 1.07

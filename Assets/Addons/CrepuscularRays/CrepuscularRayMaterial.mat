@@ -42,7 +42,7 @@ Material:
     - _DeltaCoordY: 0
     - _Density: 0.09
     - _Exposure: 0.15
-    - _FrameValue: 0
+    - _FrameValue: 1
     - _Frequency: 2
     - _LightY: 0
     - _NumSamples: 8
@@ -57,5 +57,5 @@ Material:
     - _fogSpeed: 0.5
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: 0.078783035, g: -0.38409096, b: -0.80823296, a: 0}
+    - _LightPos: {r: -1.628793, g: -2.4280045, b: -0.3585486, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}
