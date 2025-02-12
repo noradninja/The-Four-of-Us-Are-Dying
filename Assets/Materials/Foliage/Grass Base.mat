@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Grass Base
-  m_Shader: {fileID: 4800000, guid: 627f1b8c4d6e29f41bf991d7bb1a8d19, type: 3}
+  m_Shader: {fileID: 4800000, guid: 25ccd11cd6cc4604baed3937cef4444e, type: 3}
   m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1
     SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON
     SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 WIGGLE_ON
@@ -566,9 +566,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.4761912
-    - _leaves_wiggle_disp: 0.025
-    - _leaves_wiggle_speed: 50
+    - _influence: 0.11328429
+    - _leaves_wiggle_disp: 0.05
+    - _leaves_wiggle_speed: 100
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
     - _wind_size: 5

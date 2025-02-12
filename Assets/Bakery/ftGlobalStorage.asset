@@ -494,7 +494,23 @@ MonoBehaviour:
   - Assets/Model/SchoolHouse/Road.fbx
   - Assets/Model/90_Degree_Turn.fbx
   - Assets/Model/Iffrig_Side_Ground.fbx
-  uvOverlapAssetList: 00000000ffffffff01010000010100000101000001010000010100000101000000000000000000000101000001010000010100000101000001010000010100000101000001010000010100000000000000000000000000000101000000000000
+  - Assets/WireBuilder/Models/Wire_male.fbx
+  - Assets/WireBuilder/Models/Wire_female.fbx
+  - Assets/Model/105 Main/105 Main.fbx
+  - Assets/Model/105 Main/Lg_Elec_Box.fbx
+  - Assets/Addons/SplineMesh/DemoAssets/Mesh/cylinder.dae
+  - Assets/Addons/SplineMesh/DemoAssets/Mesh/Railling.fbx
+  - Assets/Model/Items/Stims.fbx
+  - Assets/Model/Items/Batteries.fbx
+  - Assets/Model/Items/Meds.fbx
+  - Assets/Model/Standard Walk_New.fbx
+  - Assets/Model/Flashlight_Beam.fbx
+  - Assets/Model/Standard Walk.fbx
+  - Assets/Model/107_Main_LOD.fbx
+  - Assets/Model/LightShaft45.fbx
+  - Assets/Model/Flashlight.fbx
+  - Assets/Model/Map_Arrow.fbx
+  uvOverlapAssetList: 00000000ffffffff010100000101000001010000010100000101000001010000000000000000000001010000010100000101000001010000010100000101000001010000010100000101000000000000000000000000000001010000000000000101000001010000010100000000000001010000ffffffff00000000010100000000000000000000010100000000000001010000010100000000000000000000
   xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: Emulated (PSVita)
@@ -580,5 +596,5 @@ MonoBehaviour:
   renderSettingsRTPVSceneView: 0
   renderSettingsRTPVWidth: 640
   renderSettingsRTPVHeight: 360
-  modifiedMeshPaddingArray: 0a00000007000000c90000001c00000059000000
-  modifiedMeshUnwrapperArray: 0100000001000000010000000100000001000000
+  modifiedMeshPaddingArray: 200000002b00000020000000200000002000000020000000200000002a0000002b0000002b0000002b00000020000000200000002000000020000000
+  modifiedMeshUnwrapperArray: 010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000

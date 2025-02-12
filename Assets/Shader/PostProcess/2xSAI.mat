@@ -68,10 +68,13 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _Epsillion: -0.88
     - _Exponent: 0.05
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
+    - _HighThreshold: 0.75
+    - _LowThreshold: 0.325
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -81,11 +84,13 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Threshold: 0.005
+    - _Threshold: 0.15
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
     - _BgColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _InputRes: {r: 320, g: 184, b: 0, a: 0}
+    - _OutputRes: {r: 640, g: 368, b: 0, a: 0}
     - _TextureSize: {r: 380, g: 220, b: 0, a: 0}

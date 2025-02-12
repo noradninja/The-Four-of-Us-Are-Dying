@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Animated_Alpha_Front_Trims_LOD0
-  m_Shader: {fileID: 4800000, guid: 627f1b8c4d6e29f41bf991d7bb1a8d19, type: 3}
+  m_Shader: {fileID: 4800000, guid: 25ccd11cd6cc4604baed3937cef4444e, type: 3}
   m_ShaderKeywords: WIGGLE_ON _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _METALLICGLOSSMAP
-    _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
+    _NORMALMAP _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -76,9 +76,9 @@ Material:
     - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 1
-    - _influence: 0.17206372
-    - _leaves_wiggle_disp: 0.4
-    - _leaves_wiggle_speed: 0.3
+    - _influence: 0.05109476
+    - _leaves_wiggle_disp: 0.8
+    - _leaves_wiggle_speed: 0.6
     - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

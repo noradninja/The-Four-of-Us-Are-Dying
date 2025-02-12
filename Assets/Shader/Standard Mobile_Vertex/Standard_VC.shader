@@ -1,6 +1,6 @@
 // Unity built-in shader source. Copyright (c) 2016 Unity Technologies. MIT license (see license.txt)
 
-Shader "Vita/Standard Mobile"
+Shader "Vita/Standard Mobile Vertex"
 {
     Properties
     {
@@ -226,5 +226,5 @@ Shader "Vita/Standard Mobile"
 
 
     //FallBack "VertexLit"
-    CustomEditor "Standard_VCShaderGUI"
+    //CustomEditor "Standard_VCShaderGUI"
 }

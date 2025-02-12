@@ -1,190 +1,130 @@
-﻿Shader "Custom/CheapUpscalingTriangulation"
+﻿Shader "Vita/EPXUpscaleNonPixelArt"
 {
     Properties
     {
-        _MainTex ("Texture", 2D) = "white" {}
+        _MainTex ("LowRes Texture", 2D) = "white" {}
+        _InputRes ("Input Resolution", Vector) = (400,230,0,0)
+        _OutputRes ("Output Resolution", Vector) = (640,368,0,0)
+        // Threshold for treating two colors as equal (tweak as needed)
+        _Threshold ("Threshold", Range(0,1)) = 0.75
+        _HighThreshold ("Upper Threshold", Float) = 0.25
+        _LowThreshold ("Lower Threshold", Float) = 0.25
     }
-
     SubShader
     {
-        Tags { "RenderType"="Opaque" }
         Pass
         {
             CGPROGRAM
+            // Vertex and fragment entry points:
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
-
+            
             sampler2D _MainTex;
-            float2 _textureSize;
-
+            float2 _InputRes;   // e.g. (400,230)
+            float2 _OutputRes;  // e.g. (640,368)
+            float _Threshold;   // Threshold for approximate equality
+            float _LowThreshold;
+            float _HighThreshold;
+            struct appdata
+            {
+                float4 vertex : POSITION;
+                float2 uv     : TEXCOORD0;
+            };
+            
             struct v2f
             {
-                float4 pos : SV_POSITION;
-                float2 uv : TEXCOORD0;
-                float2 screenCoords : TEXCOORD1;
-                float2 c05 : TEXCOORD2;
-                float2 c06 : TEXCOORD3;
-                float2 c09 : TEXCOORD4;
-                float2 c10 : TEXCOORD5;
+                float2 uv     : TEXCOORD0;
+                float4 vertex : SV_POSITION;
             };
-
-            v2f vert(appdata_full v)
+            
+            v2f vert (appdata v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.vertex);
-                o.uv = v.texcoord;
-                _textureSize = float2(400,230);
-                float2 coords = o.uv * 1.00006103515625;
-                o.screenCoords = coords * _textureSize - float2(0.5, 0.5);
-                o.c05 = (o.screenCoords + float2(0.0, 0.0)) / _textureSize;
-                o.c06 = (o.screenCoords + float2(1.0, 0.0)) / _textureSize;
-                o.c09 = (o.screenCoords + float2(0.0, 1.0)) / _textureSize;
-                o.c10 = (o.screenCoords + float2(1.0, 1.0)) / _textureSize;
-
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv     = v.uv;
                 return o;
             }
+            
+          float4 SampleTex(float2 pixelPos)
+{
+    // Correct sampling at pixel centers
+    float2 uv = (pixelPos + 0.5) / _InputRes;
+    return tex2D(_MainTex, uv);
+}
 
-            float luma(float3 v)
-            {
-                return dot(v, float3(0.299, 0.587, 0.114));
-            }
+float4 SampleTexClamp(float2 pixelPos)
+{
+    pixelPos = clamp(pixelPos, float2(0.0, 0.0), _InputRes - 1.0);
+    return SampleTex(pixelPos);
+}
 
-            float3 blend(float3 a, float3 b, float t)
-            {
-                return lerp(a, b, t);
-            }
-
-            float3 tri(float2 pxCoords)
-            {
-                float3 ws;
-                ws.x = pxCoords.y - pxCoords.x;
-                ws.y = 1.0 - ws.x;
-                ws.z = (pxCoords.y - ws.x) / (ws.y + 0.02);
-                return ws;
-            }
-
-            float3 quad(float2 pxCoords)
-            {
-                return float3(pxCoords.x, pxCoords.x, pxCoords.y);
-            }
-
-            bool hasDiagonal(float a, float b, float c, float d)
-            {
-                return distance(a, d) * 2.0 < distance(b, c);
-            }
-
-            struct Pixel
-            {
-                float3 p0;
-                float3 p1;
-                float3 p2;
-                float3 p3;
-            };
-
-            struct Pattern
-            {
-                Pixel pixels;
-                bool tri;
-                float2 coords;
-            };
-
-            Pattern pattern0(Pixel pixels, float2 pxCoords)
-            {
-                Pattern result;
-                result.pixels = pixels;
-                result.tri = false;
-                result.coords = pxCoords;
-                return result;
-            }
-
-            Pattern pattern1(Pixel pixels, float2 pxCoords)
-            {
-                Pattern result;
-                if (pxCoords.y > pxCoords.x)
-                {
-                    result.pixels.p0 = pixels.p0;
-                    result.pixels.p1 = pixels.p2;
-                    result.pixels.p2 = pixels.p2;
-                    result.pixels.p3 = pixels.p3;
-                    result.coords = float2(pxCoords.x, pxCoords.y);
-                }
-                else
-                {
-                    result.pixels.p0 = pixels.p0;
-                    result.pixels.p1 = pixels.p1;
-                    result.pixels.p2 = pixels.p1;
-                    result.pixels.p3 = pixels.p3;
-                    result.coords = float2(pxCoords.y, pxCoords.x);
-                }
-                result.tri = true;
-                return result;
-            }
-
-            fixed4 frag(v2f i) : SV_Target
-            {
-                float3 t05 = tex2D(_MainTex, i.c05).rgb;
-                float3 t06 = tex2D(_MainTex, i.c06).rgb;
-                float3 t09 = tex2D(_MainTex, i.c09).rgb;
-                float3 t10 = tex2D(_MainTex, i.c10).rgb;
-
-                float l05 = luma(t05);
-                float l06 = luma(t06);
-                float l09 = luma(t09);
-                float l10 = luma(t10);
-
-                // ✅ Corrected Struct Initialization
-                Pixel pixels;
-                pixels.p0 = t05;
-                pixels.p1 = t06;
-                pixels.p2 = t09;
-                pixels.p3 = t10;
-
-                bool d05_10 = hasDiagonal(l05, l06, l09, l10);
-                bool d06_09 = hasDiagonal(l06, l05, l10, l09);
-
-                float2 pxCoords = frac(i.screenCoords);
-
-                if (d06_09)
-                {
-                    Pixel tempPixels;
-                    tempPixels.p0 = pixels.p1;
-                    tempPixels.p1 = pixels.p0;
-                    tempPixels.p2 = pixels.p3;
-                    tempPixels.p3 = pixels.p2;
-                    pixels = tempPixels;
-
-                    pxCoords.x = 1.0 - pxCoords.x;
-                }
-
-                Pattern pattern;
-                if (d05_10 || d06_09)
-                {
-                    pattern = pattern1(pixels, pxCoords);
-                }
-                else
-                {
-                    pattern = pattern0(pixels, pxCoords);
-                }
-
-                float3 weights;
-                if (pattern.tri)
-                {
-                    weights = tri(pattern.coords);
-                }
-                else
-                {
-                    weights = quad(pattern.coords);
-                }
-
-                float3 finalColor = blend(
-                    blend(pattern.pixels.p0, pattern.pixels.p1, weights.x),
-                    blend(pattern.pixels.p2, pattern.pixels.p3, weights.y),
-                    weights.z
-                );
-
-                return float4(finalColor, 1.0);
-            }
+float4 frag(v2f i) : SV_Target
+{
+    /*
+     *        B
+     *      A P C
+     *        D
+     *
+     *  ABCD are the neighbors of our current pixel P
+     *  For each set of diagonal neighbors, smoothly blend the colors for a new set of pixels:
+     *
+     *      P1 P2
+     *      P3 P4
+     *
+     *      which will replace pixel P when we upscale the screen 2x
+     */
+    float2 outCoord = i.uv * _OutputRes;
+    float2 upscaledRes = _InputRes * 2.0;
+    float2 scaleMapping = upscaledRes / _OutputRes;
+    float2 upCoord = outCoord * scaleMapping;
+    
+    float2 srcCoord = upCoord / 2.0;
+    float2 ipos = floor(srcCoord);
+    float2 fpos = frac(srcCoord);
+    
+    //center and neighboring
+    float4 P = SampleTexClamp(ipos);
+    float4 A = SampleTexClamp(ipos + float2(-1, 0)); // Left
+    float4 B = SampleTexClamp(ipos + float2(0, 1));  // Up
+    float4 C = SampleTexClamp(ipos + float2(1, 0));  // Right
+    float4 D = SampleTexClamp(ipos + float2(0, -1)); // Down
+    
+    //color differences
+    float3 diffAB = A.rgb - B.rgb; //top left
+    float3 diffBC = B.rgb - C.rgb; //top right
+    float3 diffCD = C.rgb - D.rgb; //bottom right
+    float3 diffDA = D.rgb - A.rgb; //bottom left
+    
+    //squared distances
+    float thresholdSq = dot(_Threshold, _Threshold);
+    float distAB = dot(diffAB, diffAB);
+    float distBC = dot(diffBC, diffBC);
+    float distCD = dot(diffCD, diffCD);
+    float distDA = dot(diffDA, diffDA);
+    
+    //blending factors
+    float blendAB = 1.0 - smoothstep(0.0, thresholdSq, distAB);
+    float blendBC = 1.0 - smoothstep(0.0, thresholdSq, distBC);
+    float blendCD = 1.0 - smoothstep(0.0, thresholdSq, distCD);
+    float blendDA = 1.0 - smoothstep(0.0, thresholdSq, distDA);
+    
+    //lerp colors
+    
+    float4 P1 = lerp(P, (A + B) * 0.5, blendAB); // Top-left
+    float4 P2 = lerp(P, (B + C) * 0.5, blendBC); // Top-right
+    float4 P3 = lerp(P, (D + A) * 0.5, blendDA);  // Bottom-left
+    float4 P4 = lerp(P, (C + D) * 0.5, blendCD); // Bottom-right
+    
+    // manual bilinear interpolation
+    float2 t = smoothstep(_LowThreshold, _HighThreshold, fpos); //expose min and max ranges for precise edge transition
+    float4 top = lerp(P1, P2, t.x);
+    float4 bottom = lerp(P3, P4, t.x);
+    float4 final = lerp(bottom, top, t.y);
+    //_Threshold = _Threshold * 0.075;
+    //return final;    
+    return lerp(final, P, _Threshold); //bonus, mix with original pixel to preserve sharpness
+}
             ENDCG
         }
     }

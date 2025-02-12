@@ -19,7 +19,7 @@ Shader "Lighting/Crepuscular Rays" {
 		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
 		_FrameValue("Frame remainder", Float) = 0
 		[IntRange] _Frequency ("Frequency", Range(1,15)) = 1
-		_fogInfluence("Fog Influence", Range(0,2)) = 0.5
+		_fogInfluence("Fog Influence", Range(0,5)) = 0.5
 		_fogSpeed("Fog Speed", Float) = 10.0
 		[FloatRange] _Spread ("Spread", Range(1.0, 5.0)) = 1.0
 	}
