@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.PSVita;
+
 
 public class VitaInputManager : MonoBehaviour {
 
@@ -40,7 +42,8 @@ public class VitaInputManager : MonoBehaviour {
 		public delegate void LeftStickEvent(float horizontal, float vertical);
 
 		public delegate void RightStickEvent(float horizontal, float vertical);
-	
+
+		public delegate void RearTouchPadEvent(float [,] touchData, bool tl1, bool tl2, bool tr1, bool tr2);
 	#endregion
 	
 	//events
@@ -102,8 +105,20 @@ public class VitaInputManager : MonoBehaviour {
 
 	#endregion
 	
+	#region RearTouchpadEvents
+		public event RearTouchPadEvent GetSecondaryTouch;
+
+	#endregion
 	
-	// Update is called once per frame
+	private int previousBackTouchCount = 0; // Tracks the previous frame's touch count
+	private int currentBackTouchCount = 0; // Current frame's touch count
+	//bool flags for back pad triggers
+	private bool TR1;
+	private bool TR2;
+	private bool TL1;
+	private bool TL2;
+	
+	// Here, we are just checking conditions and invoking events to pass state along
 	void Update () {
 		
 		#region Cross
@@ -324,7 +339,75 @@ public class VitaInputManager : MonoBehaviour {
 			}
 
 		#endregion
-		
-	}
 
+		#region RearTouches
+
+		if (Application.platform == RuntimePlatform.PSP2) // PSV/PSTV only 
+		{
+		    currentBackTouchCount = PSVitaInput.touchesSecondary.Length;
+
+		    // Trigger only if touch count increases or decreases, but not when it's zero or unchanged
+		    if (currentBackTouchCount != previousBackTouchCount)
+		    {
+		        float[,] dataMatrix = new float[3, 4]; // 3 rows: Finger ID, X, Y
+		        bool foundTL1 = false, foundTL2 = false, foundTR1 = false, foundTR2 = false; // Track active touch presence
+
+		        for (int t = 0; t < currentBackTouchCount && t < 4; t++) // Limit to 4 touches
+		        {
+		            Touch currentTouch = PSVitaInput.GetSecondaryTouch(t);
+
+		            // Store touch data in the matrix
+		            dataMatrix[0, t] = currentTouch.fingerId; // Row 0: Touch ID
+		            dataMatrix[1, t] = currentTouch.position.x; // Row 1: X positions
+		            dataMatrix[2, t] = currentTouch.position.y; // Row 2: Y positions
+
+		            float x = currentTouch.position.x;
+		            float y = currentTouch.position.y;
+
+		            // Check touch positions and update tracking flags
+		            if (x >= 0 && x <= 240 && y >= 136 && y <= 272) // TL1, upper left
+		            {
+		                foundTL1 = true;
+		            }
+
+		            if (x >= 0 && x <= 240 && y >= 0 && y <= 136) // TL2, lower left
+		            {
+		                foundTL2 = true;
+		            }
+
+		            if (x >= 240 && x <= 480 && y >= 136 && y <= 272) // TR1, upper right
+		            {
+		                foundTR1 = true;
+		            }
+
+		            if (x >= 240 && x <= 480 && y >= 0 && y <= 136) // TR2, lower right
+		            {
+		                foundTR2 = true;
+		            }
+		        }
+
+		        // Update boolean states only if there is a change
+		        if (!foundTL1) TL1 = false;
+		        if (!foundTL2) TL2 = false;
+		        if (!foundTR1) TR1 = false;
+		        if (!foundTR2) TR2 = false;
+
+		        // If at least one touch is in the region, set it to true
+		        if (foundTL1) TL1 = true;
+		        if (foundTL2) TL2 = true;
+		        if (foundTR1) TR1 = true;
+		        if (foundTR2) TR2 = true;
+
+		        // Invoke only when needed
+		        if (GetSecondaryTouch != null)
+		        {
+		            GetSecondaryTouch(dataMatrix, TL1, TL2, TR1, TR2); // Push data to subscribers
+		        }
+		    }
+
+		    // Update previous touch count for the next frame
+		    previousBackTouchCount = currentBackTouchCount;
+		}
+		#endregion
+	}
 }

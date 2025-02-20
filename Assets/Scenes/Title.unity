@@ -1663,6 +1663,7 @@ MonoBehaviour:
   gpuSpeed: 222
   busSpeed: 222
   xbarSpeed: 166
+  transferMemToHeap: 1
 --- !u!4 &1183913226
 Transform:
   m_ObjectHideFlags: 0

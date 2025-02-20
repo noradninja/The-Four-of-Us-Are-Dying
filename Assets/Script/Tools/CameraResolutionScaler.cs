@@ -145,10 +145,10 @@ public class CameraResolutionScaler : MonoBehaviour
                     renderDivisor = 1.2f;
                     break;
                 case internalResolution.Mid:
-                    renderDivisor = 1.5f;
+                    renderDivisor = 1.33f;
                     break;
                 case internalResolution.Low:
-                    renderDivisor = 1.6f;
+                    renderDivisor = 1.5f;
                     break;
                 case internalResolution.VeryLow:
                     renderDivisor = 2.0f;

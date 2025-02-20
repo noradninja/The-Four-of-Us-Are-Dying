@@ -5,6 +5,7 @@
         _MainTex ("LowRes Texture", 2D) = "white" {}
         _InputRes ("Input Resolution", Vector) = (400,230,0,0)
         _OutputRes ("Output Resolution", Vector) = (640,368,0,0)
+        _ScaleFactor("Scale Factor", Float) = 1.33
         // Threshold for treating two colors as equal (tweak as needed)
         _Threshold ("Threshold", Range(0,1)) = 0.75
         _HighThreshold ("Upper Threshold", Float) = 0.25
@@ -23,6 +24,7 @@
             sampler2D _MainTex;
             float2 _InputRes;   // e.g. (400,230)
             float2 _OutputRes;  // e.g. (640,368)
+            float _ScaleFactor;
             float _Threshold;   // Threshold for approximate equality
             float _LowThreshold;
             float _HighThreshold;
@@ -75,11 +77,11 @@ float4 frag(v2f i) : SV_Target
      *      which will replace pixel P when we upscale the screen 2x
      */
     float2 outCoord = i.uv * _OutputRes;
-    float2 upscaledRes = _InputRes * 2.0;
-    float2 scaleMapping = upscaledRes / _OutputRes;
+    float2 upscaledRes = _InputRes * _ScaleFactor;
+    float2 scaleMapping = _InputRes * _ScaleFactor / _OutputRes;
     float2 upCoord = outCoord * scaleMapping;
     
-    float2 srcCoord = upCoord / 2.0;
+    float2 srcCoord = upCoord / _ScaleFactor;
     float2 ipos = floor(srcCoord);
     float2 fpos = frac(srcCoord);
     

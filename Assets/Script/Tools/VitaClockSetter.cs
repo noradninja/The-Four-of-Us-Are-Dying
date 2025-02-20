@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class VitaClockSetter : MonoBehaviour
 {
     public enum CPUClock
@@ -35,6 +36,7 @@ public class VitaClockSetter : MonoBehaviour
     public BusClock busSpeed = BusClock.Stock;
     public XBarClock xbarSpeed = XBarClock.Stock;
 
+    public bool transferMemToHeap;
     // Use this in any scene you want to set the clocks for
     void Awake()
     {
@@ -49,6 +51,10 @@ public class VitaClockSetter : MonoBehaviour
                 gpuSpeed == GPUClock.Stock ? -1 : (int)gpuSpeed,
                 xbarSpeed == XBarClock.Stock ? -1 : (int)xbarSpeed
             );
+            if (transferMemToHeap)
+            {
+                UnityEngine.PSVita.PSVitaVideoPlayer.TransferMemToHeap(); //reclaim 26MB PHYSCONT; no FMV
+            }
         }
         else Debug.Log("This script only sets clock speeds PSVita/PSTV hardware");
     }
