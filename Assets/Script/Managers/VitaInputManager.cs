@@ -43,7 +43,10 @@ public class VitaInputManager : MonoBehaviour {
 
 		public delegate void RightStickEvent(float horizontal, float vertical);
 
-		public delegate void RearTouchPadEvent(float [,] touchData, bool tl1, bool tl2, bool tr1, bool tr2);
+		public delegate void RearTouchPadEvent(float [,] touchData, bool tl1, int tl1ID,
+																	bool tl2, int tl2ID,
+																	bool tr1, int tr1ID,
+																	bool tr2, int tr2ID);
 	#endregion
 	
 	//events
@@ -351,7 +354,7 @@ public class VitaInputManager : MonoBehaviour {
 		    {
 		        float[,] dataMatrix = new float[3, 4]; // 3 rows: Finger ID, X, Y
 		        bool foundTL1 = false, foundTL2 = false, foundTR1 = false, foundTR2 = false; // Track active touch presence
-
+		        int TL1ID = 255, TL2ID = 255, TR1ID = 255, TR2ID = 255; //initialize with OOB values
 		        for (int t = 0; t < currentBackTouchCount && t < 4; t++) // Limit to 4 touches
 		        {
 		            Touch currentTouch = PSVitaInput.GetSecondaryTouch(t);
@@ -368,29 +371,52 @@ public class VitaInputManager : MonoBehaviour {
 		            if (x >= 0 && x <= 240 && y >= 136 && y <= 272) // TL1, upper left
 		            {
 		                foundTL1 = true;
+		                TL1ID = currentTouch.fingerId;
 		            }
 
 		            if (x >= 0 && x <= 240 && y >= 0 && y <= 136) // TL2, lower left
 		            {
 		                foundTL2 = true;
+		                TL2ID = currentTouch.fingerId;
 		            }
 
 		            if (x >= 240 && x <= 480 && y >= 136 && y <= 272) // TR1, upper right
 		            {
 		                foundTR1 = true;
+		                TR1ID = currentTouch.fingerId;
 		            }
 
 		            if (x >= 240 && x <= 480 && y >= 0 && y <= 136) // TR2, lower right
 		            {
 		                foundTR2 = true;
+		                TR2ID = currentTouch.fingerId;
 		            }
 		        }
 
-		        // Update boolean states only if there is a change
-		        if (!foundTL1) TL1 = false;
-		        if (!foundTL2) TL2 = false;
-		        if (!foundTR1) TR1 = false;
-		        if (!foundTR2) TR2 = false;
+		        // Update boolean states only if there is a change, reset ID to OOB value
+		        if (!foundTL1)
+		        {
+			        TL1 = false;
+			        TL1ID = 255;
+		        }
+
+		        if (!foundTL2)
+		        {
+			        TL2 = false;
+			        TL2ID = 255;
+		        }
+
+		        if (!foundTR1)
+		        {
+			        TR1 = false;
+			        TR1ID = 255;
+		        }
+
+		        if (!foundTR2)
+		        {
+			        TR2 = false;
+			        TR2ID = 255;
+		        }
 
 		        // If at least one touch is in the region, set it to true
 		        if (foundTL1) TL1 = true;
@@ -401,7 +427,10 @@ public class VitaInputManager : MonoBehaviour {
 		        // Invoke only when needed
 		        if (GetSecondaryTouch != null)
 		        {
-		            GetSecondaryTouch(dataMatrix, TL1, TL2, TR1, TR2); // Push data to subscribers
+		            GetSecondaryTouch(dataMatrix, TL1, TL1ID, 
+												  TL2, TL2ID, 
+												  TR1, TR1ID,
+												  TR2, TR2ID); // Push data to subscribers
 		        }
 		    }
 
