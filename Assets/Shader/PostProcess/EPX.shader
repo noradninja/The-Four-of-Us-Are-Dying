@@ -1,4 +1,4 @@
-﻿Shader "Vita/EPXUpscaleNonPixelArt"
+﻿Shader "Vita/EPX"
 {
     Properties
     {

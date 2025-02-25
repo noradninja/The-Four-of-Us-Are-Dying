@@ -566,12 +566,12 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.1878373
-    - _leaves_wiggle_disp: 0.05
-    - _leaves_wiggle_speed: 2
+    - _influence: 0.10785169
+    - _leaves_wiggle_disp: 0.5
+    - _leaves_wiggle_speed: 1
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
-    - _wind_size: 5
+    - _wind_size: 50
     m_Colors:
     - _Albedo: {r: 1, g: 0, b: 0, a: 1}
     - _Color: {r: 0.8, g: 0.8, b: 0.8, a: 1}
@@ -606,4 +606,4 @@ Material:
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
     - _Time: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 0.5, g: 0, b: 0.5, a: 0}
+    - _wind_dir: {r: 0.05, g: 0, b: 0.05, a: 0}

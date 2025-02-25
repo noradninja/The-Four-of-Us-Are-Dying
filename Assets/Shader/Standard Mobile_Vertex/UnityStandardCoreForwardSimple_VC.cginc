@@ -97,11 +97,11 @@ VertexOutputBaseSimple vertForwardBaseSimple (VertexInput_VC v)
     float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
     if(_LeavesOn)
     {
-    	//Leaf Movement and Wiggle
-    	( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (posWorld.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-    	(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (posWorld.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-    	(v.vertex.z += sin(cos(_Time.y * v.vertex.z * _leaves_wiggle_speed + (posWorld.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
-    }              
+        //Leaf Movement and Wiggle
+        ( (v.vertex.x += sin(_Time.y * v.vertex.x * _leaves_wiggle_speed + (posWorld.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)), //x
+        (v.vertex.y += sin(_Time.y * v.vertex.y * _leaves_wiggle_speed + (posWorld.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)),   //y
+        (v.vertex.z += sin(_Time.y * v.vertex.z * _leaves_wiggle_speed + (posWorld.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
+    }             
     o.pos = UnityObjectToClipPos(v.vertex);
     o.tex = TexCoords(v);
 
@@ -302,9 +302,17 @@ VertexOutputForwardAddSimple_VC vertForwardAddSimple (VertexInput_VC v)
     UNITY_INITIALIZE_OUTPUT(VertexOutputForwardAddSimple_VC, o);
     UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
     float4 posWorld = mul(unity_ObjectToWorld, v.vertex);
+    if(_LeavesOn)
+    {
+        //Leaf Movement and Wiggle
+        ( (v.vertex.x += sin(_Time.y * v.vertex.x * _leaves_wiggle_speed + (posWorld.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)), //x
+        (v.vertex.y += sin(_Time.y * v.vertex.y * _leaves_wiggle_speed + (posWorld.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)),   //y
+        (v.vertex.z += sin(_Time.y * v.vertex.z * _leaves_wiggle_speed + (posWorld.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
+    }             
     o.pos = UnityObjectToClipPos(v.vertex);
     o.tex = TexCoords(v);
     o.posWorld = posWorld.xyz;
+    
     #ifndef LIGHTMAP_OFF
             o.uvLM = TexCoords(v) * unity_LightmapST.xy + unity_LightmapST.zw;
     #endif

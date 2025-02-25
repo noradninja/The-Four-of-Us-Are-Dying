@@ -169,6 +169,7 @@ Shader "Vita/Standard Mobile Vertex"
 			struct appdata {
 				half3 vertex : POSITION;
 				half3 uv : TEXCOORD0;
+				half3 color : COLOR;
 				
 
 			};
@@ -178,9 +179,16 @@ Shader "Vita/Standard Mobile Vertex"
 			v2f vert( appdata v )
 			{
 				v2f o;
-				half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
+				half3 worldPos = mul (unity_ObjectToWorld, v.vertex).xyz;
 				UNITY_SETUP_INSTANCE_ID(v);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+				if(_LeavesOn)
+    {
+        //Leaf Movement and Wiggle
+        ( (v.vertex.x += sin(_Time.y * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)), //x
+        (v.vertex.y += sin(_Time.y * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)),   //y
+        (v.vertex.z += sin(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
+    }             
 				TRANSFER_SHADOW_CASTER(o);
 				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
 				return o;

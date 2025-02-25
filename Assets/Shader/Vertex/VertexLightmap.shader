@@ -127,6 +127,7 @@
 			};
 			struct appdata {
 				half3 vertex : POSITION;
+				half3 color : COLOR0;
 				half3 uv : TEXCOORD0;
 				
 
@@ -145,13 +146,19 @@
 			{
 				v2f o;
 				half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
+				half3 currentPos = v.vertex;
+				half3 previousPos = currentPos;
+				half3 nextPos = currentPos;
 				if(_LeavesOn)
 					{
 						//Leaf Movement and Wiggle
-						( (v.vertex.x += cos(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-						(v.vertex.y += sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-						(v.vertex.z += sin(cos(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence)) ); //z
-					}			
+						( (nextPos.x += sin(_Time.y * currentPos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)), //x
+						(nextPos.y += sin(_Time.y * currentPos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)),   //y
+						(nextPos.z += sin(_Time.y * currentPos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
+					}
+				// Now interpolate using a factor (which might be based on a small time delta)
+				float t = saturate(frac(_Time.y)); // or any other interpolation factor
+				v.vertex = lerp(previousPos, nextPos, t);
 
 				UNITY_SETUP_INSTANCE_ID(v);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);

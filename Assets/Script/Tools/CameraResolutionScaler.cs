@@ -102,25 +102,25 @@ public class CameraResolutionScaler : MonoBehaviour
                     width = 960;
                     height = 544;
                     if (!Application.isEditor) Screen.SetResolution(width,height, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
                 case currentResolution.Mid:
                     width = 720;
                     height = 408;
                     if (!Application.isEditor) Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 2;
+                    QualitySettings.vSyncCount = 1;
                     break;
                 case currentResolution.Low:
                     width = 640;
                     height = 368;
                     if (!Application.isEditor) Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.PSP:
                     width = 480;
                     height = 272;
                     if (!Application.isEditor) Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 2;
                     break;
             }
     }
@@ -208,9 +208,10 @@ public class CameraResolutionScaler : MonoBehaviour
         // Luckily, looks like using OnRenderImage automatically makes the camera render to a TempBuffer of the size of the camera.pixelRect 
         if (enableInternalResolution)
         {
-            camera.pixelRect = originalRect;
             src.filterMode = filterMode;
             Graphics.Blit(src, dest, tonemappingMat, 0);
+            camera.pixelRect = originalRect;
+            Graphics.Blit(dest, dest);
         }
         else Graphics.Blit(src, dest, tonemappingMat, 0);
     }

@@ -59,7 +59,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cull: 2
-    - _Cutoff: 0.501
+    - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -76,12 +76,12 @@ Material:
     - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 1
-    - _influence: 0.075945765
-    - _leaves_wiggle_disp: 0.8
-    - _leaves_wiggle_speed: 0.6
-    - _wind_size: 5
+    - _influence: 0.10785169
+    - _leaves_wiggle_disp: 0.1
+    - _leaves_wiggle_speed: 75
+    - _wind_size: 50
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Time: {r: 0, g: 0, b: 0, a: 0}
-    - _wind_dir: {r: 0.05, g: 0.05, b: 0.05, a: 0}
+    - _wind_dir: {r: 0.0125, g: 0, b: 0.05, a: 0}

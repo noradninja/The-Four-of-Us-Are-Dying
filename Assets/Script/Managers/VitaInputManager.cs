@@ -43,10 +43,10 @@ public class VitaInputManager : MonoBehaviour {
 
 		public delegate void RightStickEvent(float horizontal, float vertical);
 
-		public delegate void RearTouchPadEvent(float [,] touchData, bool tl1, int tl1ID,
-																	bool tl2, int tl2ID,
-																	bool tr1, int tr1ID,
-																	bool tr2, int tr2ID);
+		public delegate void RearTouchPadEvent(float [,] touchData, bool tl1,
+																	bool tl2,
+																	bool tr1,
+																	bool tr2);
 	#endregion
 	
 	//events
@@ -427,10 +427,10 @@ public class VitaInputManager : MonoBehaviour {
 		        // Invoke only when needed
 		        if (GetSecondaryTouch != null)
 		        {
-		            GetSecondaryTouch(dataMatrix, TL1, TL1ID, 
-												  TL2, TL2ID, 
-												  TR1, TR1ID,
-												  TR2, TR2ID); // Push data to subscribers
+		            GetSecondaryTouch(dataMatrix, TL1,  
+												  TL2,  
+												  TR1,
+												  TR2); // Push data to subscribers
 		        }
 		    }
 

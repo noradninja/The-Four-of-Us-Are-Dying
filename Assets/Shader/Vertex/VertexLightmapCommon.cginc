@@ -76,6 +76,7 @@ half _AlphaOn;
 struct appdata {
 	half3 pos : POSITION;
 	half3 normal : NORMAL;
+	half4 color : COLOR0;
 	half3 uv0 : TEXCOORD0;
 	half3 uv1 : TEXCOORD1;
 };
@@ -83,10 +84,10 @@ struct appdata {
 // pos-to-fragment interpolators
 struct v2f {
 	half4 pos : SV_POSITION;
-	half4 color : COLOR0;
 	half2 uv0 : TEXCOORD0;
 	half2 uv1 : TEXCOORD1;
 	half4 screenPosition : TEXCOORD2;
+	half4 color : COLOR;
 	
 	#if USING_FOG
             UNITY_FOG_COORDS(3)
@@ -109,9 +110,9 @@ v2f vert(appdata v) {
 if(_LeavesOn)
 {
 	//Leaf Movement and Wiggle
-	( (v.pos.x += cos(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-	(v.pos.y += sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-	(v.pos.z += sin(cos(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
+	( (v.pos.x += sin(_Time.y * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)), //x
+	(v.pos.y += sin(_Time.y * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)),   //y
+	(v.pos.z += sin(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
 }              
 	// pos lighting
 	half4 color = half4(0, 0, 0, 1);

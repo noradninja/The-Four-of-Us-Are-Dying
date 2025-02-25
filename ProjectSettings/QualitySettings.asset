@@ -20,20 +20,20 @@ QualitySettings:
     shadowmaskMode: 0
     blendWeights: 1
     textureQuality: 0
-    anisotropicTextures: 0
-    antiAliasing: 2
+    anisotropicTextures: 2
+    antiAliasing: 0
     softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
-    vSyncCount: 1
+    vSyncCount: 2
     lodBias: 1
     maximumLODLevel: 0
     streamingMipmapsActive: 1
     streamingMipmapsAddAllCameras: 1
     streamingMipmapsMemoryBudget: 96
     streamingMipmapsRenderersPerFrame: 200
-    streamingMipmapsMaxLevelReduction: 1
+    streamingMipmapsMaxLevelReduction: 2
     streamingMipmapsMaxFileIORequests: 200
     particleRaycastBudget: 512
     asyncUploadTimeSlice: 11
@@ -41,4 +41,6 @@ QualitySettings:
     resolutionScalingFixedDPIFactor: 2
     excludedTargetPlatforms:
     - Standalone
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    PSP2: 0
+    Standalone: 0

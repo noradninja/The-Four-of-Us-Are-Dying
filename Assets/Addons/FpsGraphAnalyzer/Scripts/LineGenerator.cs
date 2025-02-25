@@ -17,16 +17,16 @@ public class LineGenerator : MonoBehaviour
     [Tooltip("Normal value is considered to be 60fps")]
     public Color fpsNormalLineIndicatorColor = Color.red;
 
-    private const float TOP_NORMAL_MARGIN_SCALE = 0.33f;
-    private const float TOP_MAX_MARGIN_SCALE = 0.0f;
-    private const float FPS_NORMAL = 15f;
-    private const int MIN_SIZE = 16;
+    public float TOP_NORMAL_MARGIN_SCALE = 0.8f;
+    public float TOP_MAX_MARGIN_SCALE = 0.0f;
+    public float FPS_NORMAL = 15f;
+    public int MIN_SIZE = 0;
     private int tick = 0;
     private int _amount = 100;
     private float _deltaTime = 0.0f;
     private string _fpsString = "";
-   public float _fullHeight = 0f;
-    private float _maxHeight = 0f;
+    public float _fullHeight = 0f;
+    public float _maxHeight = 0f;
     private bool _canStart = false;
     public Queue<float> _heightsQueue;
     private Vector2 _bottomLeft = new Vector2(0f, 0f);
@@ -61,8 +61,8 @@ public class LineGenerator : MonoBehaviour
         }
 
         _amount = (int)rect.rect.width;
-        _fullHeight = rect.rect.height - (rect.rect.height * TOP_NORMAL_MARGIN_SCALE);
-        _maxHeight = rect.rect.height - (rect.rect.height * TOP_MAX_MARGIN_SCALE);
+        _fullHeight = 24;
+        _maxHeight = 30;
         InitHeightsQueue();
                                   
         //Sets the position of Fps text field

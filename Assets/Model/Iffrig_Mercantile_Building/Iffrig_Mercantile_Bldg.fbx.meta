@@ -32,6 +32,11 @@ ModelImporter:
     100052: Meter_Glass
     100054: pasted__Meter_Glass2
     100056: polySurface1
+    100058: polySurface2
+    100060: transform1
+    100062: transform2
+    100064: transform3
+    100066: Awning1
     400000: Awning
     400002: Back_Half
     400004: Back_Trims
@@ -61,6 +66,11 @@ ModelImporter:
     400052: Meter_Glass
     400054: pasted__Meter_Glass2
     400056: polySurface1
+    400058: polySurface2
+    400060: transform1
+    400062: transform2
+    400064: transform3
+    400066: Awning1
     2100000: Back_Exterior
     2100002: Front_Exterior
     2100004: Foliage
@@ -77,6 +87,7 @@ ModelImporter:
     2100026: Front_Exterior1
     2100028: pasted__Trims_Front1
     2100030: lambert22
+    2100032: ilrOccSampler3
     2300000: Awning
     2300002: Back_Half
     2300004: Back_Trims
@@ -102,6 +113,7 @@ ModelImporter:
     2300044: Meter_Glass
     2300046: pasted__Meter_Glass2
     2300048: polySurface1
+    2300050: Awning1
     3300000: Awning
     3300002: Back_Half
     3300004: Back_Trims
@@ -127,6 +139,7 @@ ModelImporter:
     3300044: Meter_Glass
     3300046: pasted__Meter_Glass2
     3300048: polySurface1
+    3300050: Awning1
     4300000: Back_Half
     4300002: Front_Half
     4300004: Ivy
@@ -151,6 +164,7 @@ ModelImporter:
     4300042: Doorknob
     4300044: pasted__Meter_Glass2
     4300046: polySurface1
+    4300048: Awning1
     9500000: //RootNode
     2186277476908879412: ImportLogs
   externalObjects: {}

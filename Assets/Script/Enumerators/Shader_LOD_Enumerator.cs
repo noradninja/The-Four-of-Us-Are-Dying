@@ -18,7 +18,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     public bool rendererDisable;
     public Material replacementMaterial;
     public float distance;
-
+    public int tickOffset;
+    public int tickInterval;
     [SerializeField] private int tick;
 
     [SerializeField] private Texture albedoTex;
@@ -43,7 +44,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     private void Start()
     {
-        tick = 0;
+        //set tick to the offset, so that each group starts on the first frame of its offset value
+        tick = tickOffset;
         //get needed components
         originalMaterial = thisRenderer.sharedMaterial;
         albedoTex = originalMaterial.mainTexture;
@@ -68,8 +70,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     private void Update()
     {
-        // we only need to do *whatever* FPS/tick times a frame, depending on refresh rate
-        if (tick != 6)
+        // we only need to do *whatever* FPS/tick times a frame
+        if (tick != tickInterval + tickOffset) //add offset here so that it is maintained
             tick++;
         else
         {
