@@ -7,15 +7,17 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Sparse_Distant_Forest_Quad
-  m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
-  m_ShaderKeywords: BAKERY_SHNONLINEAR _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF _SPECULARHIGHLIGHTS_OFF
-    _VERTEXCOLOR
-  m_LightmapFlags: 4
+  m_Shader: {fileID: 211, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: BAKERY_SHNONLINEAR _ALPHATEST_ON _COLOROVERLAY_ON _GLOSSYREFLECTIONS_OFF
+    _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
+  m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: TransparentCutout
+  disabledShaderPasses:
+  - ALWAYS
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -85,7 +87,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 0
-    - _Alpha: 1
+    - _Alpha: 0.521
     - _AlphaOn: 0
     - _AmbientOn: 0
     - _BAKERY_2SIDED: 2
@@ -108,9 +110,9 @@ Material:
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
     - _ColorMask: 15
-    - _ColorMode: 0
+    - _ColorMode: 3
     - _Cull: 2
-    - _Cutoff: 0.25
+    - _Cutoff: 0.33
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
@@ -127,7 +129,7 @@ Material:
     - _IntensityVC: 1
     - _InvFade: 1
     - _LeavesOn: 0
-    - _LightingEnabled: 1
+    - _LightingEnabled: 0
     - _Metallic: 0
     - _Mode: 1
     - _OcclusionStrength: 1
@@ -154,7 +156,7 @@ Material:
     - _wind_size: 5
     m_Colors:
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
-    - _Color: {r: 0.16, g: 0.16, b: 0.16, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
     - _ColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _EmisColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

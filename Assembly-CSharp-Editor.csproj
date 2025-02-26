@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Editor\DecalEditor.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Editor\Helpers\GUIUtils.cs" />
+    <Compile Include="Assets\Addons\Demo\Script\Editor\DemoMenu.cs" />
     <Compile Include="Assets\Addons\Editor\Object2Terrain.cs" />
     <Compile Include="Assets\Addons\Editor\RenderCubemapWizard.cs" />
     <Compile Include="Assets\Addons\Kino\Bokeh\Editor\BokehEditor.cs" />
@@ -266,6 +267,13 @@
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Editor\InternalResources\Inspectors\ShaderForgeMaterialInspector.cs" />
     <Compile Include="Assets\Addons\SplineMesh\Scripts\Editor\SplineEditor.cs" />
     <Compile Include="Assets\Addons\SplineMesh\Scripts\Editor\SplineExtrusionEditor.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Editor\CustomEditor\EditorBase.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Editor\CustomEditor\FeedbackReaderEditor.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Editor\CustomEditor\FeedbackRendererEditor.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Editor\CustomEditor\FileLoaderEditor.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Editor\CustomEditor\PageTableEditor.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Editor\CustomEditor\TileTextureEditor.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Editor\DataProcess\TextureCache.cs" />
     <Compile Include="Assets\PolyFew\BatchFewShader\Editor\BatchFewShaderGUI.cs" />
     <Compile Include="Assets\PolyFew\Scripts\Editor\DecoratorEditor.cs" />
     <Compile Include="Assets\PolyFew\Scripts\Editor\InspectorDrawer.cs" />

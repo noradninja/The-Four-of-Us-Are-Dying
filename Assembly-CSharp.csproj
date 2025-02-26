@@ -75,6 +75,7 @@
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\MeshUtils.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\PolygonUtils.cs" />
     <Compile Include="Assets\Addons\DecalSystem\Plugins\DecalSystem\Helpers\TerrainUtils.cs" />
+    <Compile Include="Assets\Addons\Demo\Script\Runtime\FlyCamera.cs" />
     <Compile Include="Assets\Addons\FastMobileBloom\FastMobileBloom.cs" />
     <Compile Include="Assets\Addons\FastSSAO\FastSSAO.cs" />
     <Compile Include="Assets\Addons\FpsGraphAnalyzer\Demo\Scripts\AmountSlider.cs" />
@@ -117,6 +118,26 @@
     <Compile Include="Assets\Addons\SplineMesh\Scripts\Utils\CameraUtility.cs" />
     <Compile Include="Assets\Addons\SplineMesh\Scripts\Utils\MeshUtility.cs" />
     <Compile Include="Assets\Addons\SplineMesh\Scripts\Utils\UOUtility.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Feedback\FeedbackReader.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Feedback\FeedbackRenderer.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Feedback\FrameStat.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Feedback\IFeedbackReader.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Feedback\IFeedbackRenderer.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Feedback\ReadbackStat.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Feedback\ScaleFactor.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Loader\FileLoader.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Loader\FileLoaderStat.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Loader\FolderType.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Loader\ILoader.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\Loader\LoadRequest.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\PageTable\IPageTable.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\PageTable\PagePayload.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\PageTable\PageTable.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\PageTable\TableNode.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\TiledTexture\ITiledTexture.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\TiledTexture\LruCache.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\TiledTexture\TiledTexture.cs" />
+    <Compile Include="Assets\Addons\VirtualTexture\Script\Runtime\TiledTexture\TileTextureStat.cs" />
     <Compile Include="Assets\Anime4K\ImageFilter.cs" />
     <Compile Include="Assets\LineGraph\Script\LineGraphManager.cs" />
     <Compile Include="Assets\MeshBaker\Examples\BakeTexturesAtRuntime\BakeTexturesAtRuntime.cs" />
@@ -215,6 +236,7 @@
     <Compile Include="Assets\Script\TitleSaveManagerInputs.cs" />
     <Compile Include="Assets\Script\TitleScreenOptionsManager.cs" />
     <Compile Include="Assets\Script\Tools\AutoRotate.cs" />
+    <Compile Include="Assets\Script\Tools\BackTouchTester.cs" />
     <Compile Include="Assets\Script\Tools\CameraFacingBillboard.cs" />
     <Compile Include="Assets\Script\Tools\CameraResolutionScaler.cs" />
     <Compile Include="Assets\Script\Tools\FPS_Counter.cs" />
@@ -473,7 +495,6 @@
     <None Include="Assets\Addons\Kino\Bokeh\Shader\Debug.cginc" />
     <None Include="Assets\Shader\Standard Full\UnityStandardCoreForwardSimple_VC.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Skybox.shader" />
-    <None Include="Assets\Shader\Foliage\VertexLightmap.shader" />
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle AddSmooth.shader" />
     <None Include="Assets\___www.unityassetcollection.com___.txt" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Shaders\UltraSkyboxFog.shader" />
@@ -491,6 +512,7 @@
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardBRDF.cginc" />
     <None Include="Assets\PolyFew\BatchFewShader\BatchFewStandardSpecular.shader" />
     <None Include="Assets\Shader\Standard Full\UnityStandardCoreForward_VC.cginc" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTDebug.cginc" />
     <None Include="Assets\MeshBaker\Examples\Shaders\TestTextureArrays.shader" />
     <None Include="Assets\TrueClouds\Resources\Shaders\Blur.shader" />
     <None Include="Assets\Shader\Vertex\VertexLightmap 1.shader" />
@@ -502,7 +524,7 @@
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Premultiply Blend.shader" />
     <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardUtils_VC.cginc" />
     <None Include="Assets\unity-ui-extensions\Shaders\UISoftAdditive.shader" />
-    <None Include="Assets\Shader\PostProcess\2xSAI.shader" />
+    <None Include="Assets\Shader\PostProcess\EPX.shader" />
     <None Include="Assets\Anime4K\Resources\Common.hlsl" />
     <None Include="Assets\Shader\Light &amp; Shadow\Rain_Distortion.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Readme.txt" />
@@ -517,6 +539,7 @@
     <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardMeta_VC.cginc" />
     <None Include="Assets\Addons\Shaders\sprite.shader" />
     <None Include="Assets\Shader\SSS\SSS_Fast_Clip.shader" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTDebugMipmap.shader" />
     <None Include="Assets\TrueClouds\Resources\Shaders\DepthBlur.shader" />
     <None Include="Assets\Shader\Standard Mobile\UnityStandardCore_VC.cginc" />
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardCoreForward_VC.cginc" />
@@ -533,10 +556,12 @@
     <None Include="Assets\Shader\Vertex\Unlit_Alpha.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\VertexAnimation.shader" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VirtualTexture.cginc" />
     <None Include="Assets\Shader\Standard Mobile Foliage\UnityStandardCore_VC.cginc" />
     <None Include="Assets\Shader\Vertex\VertexLightmapCommon.cginc" />
     <None Include="Assets\TrueClouds\Resources\Shaders\Light\CloudsTintAdditive.shader" />
     <None Include="Assets\Addons\Bloom (Titles)\Shaders\BloomDisplay.shader" />
+    <None Include="Assets\Texture\Defered_PBR.shader" />
     <None Include="Assets\TrueClouds\Resources\Shaders\BlurHQ.shader" />
     <None Include="Assets\Shader\PostProcess\SSGI.shader" />
     <None Include="Assets\Addons\KinoFog\Kino\Fog\Shader\Fog.shader" />
@@ -544,6 +569,8 @@
     <None Include="Assets\Anime4K\Resources\Push.hlsl" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardConfig.cginc" />
     <None Include="Assets\Shader\SF Shaders\PBR_Test.shader" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTUnlit.shader" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTDebug.shader" />
     <None Include="Assets\Addons\KinoFog\Standard Assets\Effects\ImageEffects\Shaders\GlobalFog.shader" />
     <None Include="Assets\MeshBaker\Examples\CharacterCustomization\CreditForModel.txt" />
     <None Include="Assets\Shader\Standard Mobile_Vertex\UnityStandardCoreForward_VC.cginc" />
@@ -554,7 +581,6 @@
     <None Include="Assets\unity-ui-extensions\Shaders\UI Particle Add.shader" />
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardInput.cginc" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCoreForward.cginc" />
-    <None Include="Assets\Shader\Foliage\VertexLightmapCommon.cginc" />
     <None Include="Assets\Shader\PBR\PBRShader.shader" />
     <None Include="Assets\Addons\Shaders\zako.shader" />
     <None Include="Assets\Addons\Shaders\debris.shader" />
@@ -654,12 +680,15 @@
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCommon.cginc" />
     <None Include="Assets\Shader\Light &amp; Shadow\Lightning_Contrast.shader" />
     <None Include="Assets\Shader\Standard Full\UnityStandardInput_VC.cginc" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTFeedback.cginc" />
     <None Include="Assets\RainMaker\Readme.txt" />
     <None Include="Assets\Shader\PBR\UnityMetaPass.cginc" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTShading.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\PixelRotator.shader" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTFeedbackDownScale.shader" />
     <None Include="Assets\Shader\Light &amp; Shadow\Lightbeam.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Example Assets\Shaders\CustomLighting.shader" />
     <None Include="Assets\Shader\Standard Mobile Lerp\UnityStandardUtils_VC.cginc" />
@@ -668,6 +697,7 @@
     <None Include="Assets\Shader\Standard Mobile UV mult\UnityStandardInput_VC.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
     <None Include="Assets\Shader\Light &amp; Shadow\ShadowCaster.shader" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTDrawTexture.shader" />
     <None Include="Assets\MeshBaker\README.txt" />
     <None Include="Assets\Addons\Shaders\explosion.shader" />
     <None Include="Assets\Shader\Standard Mobile_Vertex\Standard_VC_No_Fog.shader" />
@@ -680,6 +710,7 @@
     <None Include="Assets\PolyFew\BatchFewShader\Includes\BatchFewStandardCoreForward.cginc" />
     <None Include="Assets\unity-ui-extensions\Shaders\UIScreen.shader" />
     <None Include="Assets\Shader\SSS\CGIncludes\UnityAnisotropicCore.cginc" />
+    <None Include="Assets\Addons\VirtualTexture\Asset\Shader\VTFeedback.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\Shader\Standard Mobile Lerp\Standard_VC_Lerp.shader" />
     <None Include="Assets\Addons\Ultra Skybox Fog\Textures\Readme.txt" />

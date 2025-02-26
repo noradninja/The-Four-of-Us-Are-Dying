@@ -7,11 +7,11 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Rope
-  m_Shader: {fileID: 4800000, guid: 25ccd11cd6cc4604baed3937cef4444e, type: 3}
-  m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
+  m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
+  m_ShaderKeywords: ALPHA_ON BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
     SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON
     SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4
-    WIGGLE_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _SPECGLOSSMAP
+    WIGGLE_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -137,6 +137,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOAR:
+        m_Texture: {fileID: 2800000, guid: 87f068b516d94bb408dbfc7dcff9945b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 1045d1bfded230247a13dde6ab056637, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -248,6 +252,8 @@ Material:
     - _AlbedoChannel: 0
     - _AlphaClip: 0
     - _AlphaMapType: 999
+    - _AlphaOn: 1
+    - _AmbientOn: 0
     - _BakedSpacular: 1
     - _Bakery: 0
     - _BakeryEnabled: 0
@@ -264,7 +270,7 @@ Material:
     - _Cull: 2
     - _CullMode: 0
     - _Culling: 2
-    - _Cutoff: 0.5
+    - _Cutoff: 0
     - _DAlbedoScale: 1
     - _DDetailsMapRef1: 0
     - _DDetailsMapRef2: 0
@@ -464,7 +470,7 @@ Material:
     - _ManualControl: 0
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0.014
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -546,12 +552,12 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.10785169
-    - _leaves_wiggle_disp: 0.5
-    - _leaves_wiggle_speed: 0.2
+    - _influence: 0.1646749
+    - _leaves_wiggle_disp: 0.05
+    - _leaves_wiggle_speed: 0.5
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
-    - _wind_size: 50
+    - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorBack: {r: 1, g: 1, b: 1, a: 1}
@@ -586,4 +592,4 @@ Material:
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _Time: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 0.1, g: 0.1, b: 0, a: 0}
+    - _wind_dir: {r: 0.25, g: 0.25, b: 0, a: 0}

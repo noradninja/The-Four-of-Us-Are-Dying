@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Japanese_Maple_Branch
-  m_Shader: {fileID: 4800000, guid: 162806a154c983a4aa0292c2699caba6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
   m_ShaderKeywords: GEOM_TYPE_LEAF SHADOWED_RIM WIGGLE_ON _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
-    _WINDQUALITY_NONE
+    _NORMALMAP _WINDQUALITY_NONE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -574,9 +574,9 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.10785169
+    - _influence: 0.1646749
     - _leaves_wiggle_disp: 0.15
-    - _leaves_wiggle_speed: 0.125
+    - _leaves_wiggle_speed: 0.2
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0
@@ -633,4 +633,4 @@ Material:
     - _TranslucencyColor: {r: 0.50978994, g: 0.5329642, b: 0.6037736, a: 0}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
     - _TreeInstanceScale: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: -1, g: 1, b: -1, a: -1}
+    - _wind_dir: {r: -0.5, g: 0.5, b: -0.5, a: -0.5}

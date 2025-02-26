@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Rope_Swing
-  m_Shader: {fileID: 4800000, guid: 25ccd11cd6cc4604baed3937cef4444e, type: 3}
-  m_ShaderKeywords: SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON
+  m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
+  m_ShaderKeywords: ALPHA_ON SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON
     SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1
     SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 WIGGLE_ON _ALPHAPREMULTIPLY_ON
     _ALPHATEST_ON _METALLICGLOSSMAP _NORMALMAP _SPECGLOSSMAP
@@ -126,7 +126,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 71616e1da64657340870d7807ac5888b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 84a5d34050827974aa0b7f431d9d0cee, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal0:
@@ -180,16 +180,16 @@ Material:
     m_Floats:
     - _AlphaClip: 0
     - _AlphaMapType: 999
-    - _AlphaOn: 0
+    - _AlphaOn: 1
     - _AmbientOn: 0
     - _Blend: 0
     - _BumpScale: 1
     - _Clip: 0.5
     - _ColorAmplify: 1
     - _ControlScriptFlag: 0
-    - _Cull: 0
+    - _Cull: 2
     - _CullMode: 0
-    - _Cutoff: 0.331
+    - _Cutoff: 0.429
     - _DetailFade: 1
     - _DetailMask: 1
     - _DetailNormalMapScale: 1

@@ -33,10 +33,8 @@
 			#pragma multi_compile __ POINT SPOT
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
 			#include "VertexLightmapCommon.cginc"
-			#include "UnityCG.cginc"
-			#include "UnityStandardConfig.cginc"
-			#include "UnityPBSLighting.cginc" // TBD: remove
-			#include "UnityStandardUtils.cginc"
+						#include "AutoLight.cginc"
+
 		
 
 			ENDCG
@@ -56,7 +54,7 @@
 			#pragma multi_compile __ POINT SPOT
 			#pragma multi_compile __ AMBIENT_ON
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
-			 #pragma shader_feature BAKERY_VERTEXLM
+			#pragma shader_feature BAKERY_VERTEXLM
             #pragma shader_feature BAKERY_VERTEXLMDIR
             #pragma shader_feature BAKERY_VERTEXLMSH
             #pragma shader_feature BAKERY_VERTEXLMMASK
@@ -71,11 +69,7 @@
             #pragma shader_feature BAKERY_VOLROTATION
 			#define CUSTOM_LIGHTMAPPED 1 
 			#include "VertexLightmapCommon.cginc"
-			#include "UnityCG.cginc"
-			#include "UnityCG.cginc"
-			#include "UnityStandardConfig.cginc"
-			#include "UnityPBSLighting.cginc" // TBD: remove
-			#include "UnityStandardUtils.cginc"
+			#include "AutoLight.cginc"
 	
 	
 			ENDCG
@@ -190,5 +184,5 @@
             ENDCG
         }
 	}
-	Fallback "Vita/Standard Mobile"
+	Fallback "Legacy Shaders/Diffuse"
 }
