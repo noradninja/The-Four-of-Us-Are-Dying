@@ -2,13 +2,14 @@
 	Properties {
 		_MainTex("Base (RGB)", 2D) = "white" { }
 		_MOAR("MOAR (RGBA)", 2D) = "white" { }
+		_Metallic ("Metallic", Range(0,1)) = 0.5
+		_Roughness ("Roughness", Range(0,1)) = 0.5
 		_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
 		_wind_dir ("Wind Direction", Vector) = (0.5,0.05,0.5,0)
         _wind_size ("Wind Wave Size", range(5,50)) = 15
 		_leaves_wiggle_disp ("Leaves Wiggle Displacement", float) = 0.07
         _leaves_wiggle_speed ("Leaves Wiggle Speed", float) = 0.01
 		_influence ("Influence", range(0,1)) = 1
-		_Time ("Time", Vector) =(0,0,0,0)
 		[Toggle(ALPHA_ON)] _AlphaOn("Seperate Alpha", Float) = 1
 		[Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 1
 		[Toggle(AMBIENT_ON)] _AmbientOn("Ambient Lighting", Float) = 0
@@ -101,17 +102,15 @@
             Tags {"LightMode"="ShadowCaster"}
 
             CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
+            #pragma vertex vert_shadow
+            #pragma fragment frag_shadow
 			#pragma target 3.0
             #pragma multi_compile_shadowcaster
 			#pragma multi_compile_fog
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
             #include "UnityCG.cginc"
-			#include "UnityCG.cginc"
-			#include "UnityStandardConfig.cginc"
 			#include "UnityPBSLighting.cginc" // TBD: remove
-			#include "UnityStandardUtils.cginc"
+			#include "UnityShadowLibrary.cginc"
 			
 			struct v2f {
 				V2F_SHADOW_CASTER;
@@ -136,7 +135,7 @@
 			half _influence;
             half _LeavesOn;
 
-			v2f vert( appdata v )
+			v2f vert_shadow( appdata v )
 			{
 				v2f o;
 				half3 worldPos = mul (unity_ObjectToWorld, half4(v.vertex, 1) ).xyz;
@@ -151,7 +150,7 @@
 						(nextPos.z += sin(_Time.y * currentPos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
 					}
 				// Now interpolate using a factor (which might be based on a small time delta)
-				float t = saturate(frac(_Time.y)); // or any other interpolation factor
+				float t = 0.5h; // or any other interpolation factor
 				v.vertex = lerp(previousPos, nextPos, t);
 
 				UNITY_SETUP_INSTANCE_ID(v);
@@ -166,7 +165,7 @@
 			uniform fixed _Cutoff;
             float _AlphaOn;
 
-			float4 frag( v2f i ) : SV_Target
+			float4 frag_shadow( v2f i ) : SV_Target
 			{
 				if (!_AlphaOn)
 				{

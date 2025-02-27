@@ -156,7 +156,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MOAR:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c7e8bcb427c892e4c93f8a8b846dff30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -467,7 +467,7 @@ Material:
     - _LightMode: 1
     - _LightProbes: 0
     - _ManualControl: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -498,7 +498,7 @@ Material:
     - _RimFold: 0
     - _RimSize: 0
     - _RimToggle: 0
-    - _Roughness: 0
+    - _Roughness: 1
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
     - _SO_ParticleMode: 0
@@ -584,9 +584,9 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.1646749
+    - _influence: 0.091066115
     - _leaves_wiggle_disp: 0.15
-    - _leaves_wiggle_speed: 0.2
+    - _leaves_wiggle_speed: 0.5
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0

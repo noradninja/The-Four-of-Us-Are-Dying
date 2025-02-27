@@ -12,7 +12,6 @@ Material:
     SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON
     SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 WIGGLE_ON
     _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP
-    _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -567,9 +566,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.1646749
+    - _influence: 0.091066115
     - _leaves_wiggle_disp: 0.5
-    - _leaves_wiggle_speed: 1
+    - _leaves_wiggle_speed: 2
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
     - _wind_size: 50
