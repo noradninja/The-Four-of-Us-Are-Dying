@@ -83,7 +83,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     - _influence: 0.35
-    - _leaves_wiggle_disp: 0.01125
+    - _leaves_wiggle_disp: 0.02252
     - _leaves_wiggle_speed: 0.5
     - _wind_size: 5
     m_Colors:

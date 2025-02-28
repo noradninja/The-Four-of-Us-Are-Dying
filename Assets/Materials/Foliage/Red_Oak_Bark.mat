@@ -8,9 +8,10 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Red_Oak_Bark
   m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _BAKERY_NONE _FRESNELMODEL_SCHLICK
-    _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALDISTMODEL_BLINNPHONG
-    _NORMALMAP _SMITHGEOSHADOWMODEL_NONE _SPECGLOSSMAP
+  m_ShaderKeywords: ALPHA_ON AMBIENT_ON BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED
+    _BAKERY_NONE _FRESNELMODEL_SCHLICK _GEOSHADOWMODEL_ASHIKHMINSHIRLEY _LIGHTMAPSPECULAR
+    _METALLICGLOSSMAP _NORMALDISTMODEL_BLINNPHONG _NORMALMAP _SMITHGEOSHADOWMODEL_NONE
+    _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -136,6 +137,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOAR:
+        m_Texture: {fileID: 2800000, guid: 6b907d24dded03f46a1df224054d273e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 155ea4ed9ad082f49bec712f9ba707c5, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -247,6 +252,8 @@ Material:
     - _AlbedoChannel: 0
     - _AlphaClip: 0
     - _AlphaMapType: 999
+    - _AlphaOn: 1
+    - _AmbientOn: 1
     - _Anisotropic: 0
     - _BakedSpacular: 1
     - _Bakery: 0
@@ -471,7 +478,7 @@ Material:
     - _ManualControl: 0
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0.5
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -498,7 +505,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
-    - _Roughness: 0.03
+    - _Roughness: 0.25
     - _RoughnessMode: 1
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
