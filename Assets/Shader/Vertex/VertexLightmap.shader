@@ -23,7 +23,8 @@
 		Blend One OneMinusSrcAlpha //because we are going to clip at the end
 
 		// Non-lightmapped
-		Pass {
+		Pass
+		{
 			Tags { "LightMode" = "Vertex" }
 			CGPROGRAM
 			#pragma vertex vert
@@ -34,15 +35,17 @@
 			#pragma multi_compile __ POINT SPOT
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
 			#include "VertexLightmapCommon.cginc"
-						#include "AutoLight.cginc"
+			#include "AutoLight.cginc"
+			#include "Lighting.cginc"
 
 		
 
-			ENDCG
+		ENDCG
 		}
 	
 		// Lightmapped
-		Pass {
+		Pass
+		{
 			Tags { "LightMode" = "VertexLM" }
 		
       
@@ -71,44 +74,45 @@
 			#define CUSTOM_LIGHTMAPPED 1 
 			#include "VertexLightmapCommon.cginc"
 			#include "AutoLight.cginc"
+			#include "Lighting.cginc"
 	
 	
-			ENDCG
+		ENDCG
 		}
-			 // ------------------------------------------------------------------
 	        // Extracts information for lightmapping, GI (emission, albedo, ...)
 	        // This pass it not used during regular rendering.
-	        Pass
-	        {
-	            Name "META"
-	            Tags { "LightMode"="Meta" }
+        Pass
+        {
+            Name "META"
+            Tags { "LightMode"="Meta" }
 
-	            Cull Off
-
-	            CGPROGRAM
-	            #pragma vertex vert_meta
-	            #pragma fragment frag_meta
-
-	            #pragma shader_feature _EMISSION
-	            #pragma shader_feature _METALLICGLOSSMAP
-	            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-	            #pragma shader_feature ___ _DETAIL_MULX2
-	            #pragma shader_feature EDITOR_VISUALIZATION
-
-	            #include "UnityStandardMeta.cginc"
-	            ENDCG
-	        }
-			Pass{
-            Tags {"LightMode"="ShadowCaster"}
+            Cull Off
 
             CGPROGRAM
-            #pragma vertex vert_shadow
-            #pragma fragment frag_shadow
+            #pragma vertex vert_meta
+            #pragma fragment frag_meta
+
+            #pragma shader_feature _EMISSION
+            #pragma shader_feature _METALLICGLOSSMAP
+            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
+            #pragma shader_feature ___ _DETAIL_MULX2
+            #pragma shader_feature EDITOR_VISUALIZATION
+
+            #include "UnityStandardMeta.cginc"
+            ENDCG
+        }
+		Pass
+		{
+	        Tags {"LightMode"="ShadowCaster"}
+
+	        CGPROGRAM
+	        #pragma vertex vert_shadow
+	        #pragma fragment frag_shadow
 			#pragma target 3.0
-            #pragma multi_compile_shadowcaster
+	        #pragma multi_compile_shadowcaster
 			#pragma multi_compile_fog
 			#pragma multi_compile _ LOD_FADE_CROSSFADE
-            #include "UnityCG.cginc"
+	        #include "UnityCG.cginc"
 			#include "UnityPBSLighting.cginc" // TBD: remove
 			#include "UnityShadowLibrary.cginc"
 			
@@ -116,7 +120,7 @@
 				V2F_SHADOW_CASTER;
 				float2  uv : TEXCOORD0;
 				UNITY_VERTEX_OUTPUT_STEREO
-//				half3 normal : NORMAL;
+	//				half3 normal : NORMAL;
 			};
 			struct appdata {
 				half3 vertex : POSITION;
@@ -133,7 +137,7 @@
 			half _leaves_wiggle_disp;
 			half _leaves_wiggle_speed;
 			half _influence;
-            half _LeavesOn;
+	        half _LeavesOn;
 
 			v2f vert_shadow( appdata v )
 			{
@@ -161,9 +165,9 @@
 			}
 
 			uniform sampler2D _MainTex;
-            uniform sampler2D _MOAR;
+	        uniform sampler2D _MOAR;
 			uniform fixed _Cutoff;
-            float _AlphaOn;
+	        float _AlphaOn;
 
 			float4 frag_shadow( v2f i ) : SV_Target
 			{
@@ -180,8 +184,8 @@
 
 				SHADOW_CASTER_FRAGMENT(i);
 			}
-            ENDCG
-        }
+		ENDCG
+		}
 	}
 	Fallback "Legacy Shaders/Diffuse"
 }
