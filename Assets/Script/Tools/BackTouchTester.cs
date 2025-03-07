@@ -18,15 +18,19 @@ public class BackTouchTester : MonoBehaviour
 
 	//action to be performed on back touch event
 	private void OnGetSecondaryTouch(float[,] touchData, 
-                                 bool l1,
                                  bool l2,
-                                 bool r1,
-                                 bool r2) 
+                                 bool l3,
+                                 bool r2,
+                                 bool r3,
+                                 int r2ID,
+                                 int r3ID,
+                                 int l2ID,
+                                 int l3ID) 
     {
         // Get/pack data for touches
         // Row 0: ID, Row 1: X position, Row 2: Y position
         //Column 0-3: touch 0-3
-        /*Vector3[] touches = new Vector3[4]
+        Vector3[] touches = new Vector3[4] //stored as [3] Vector3(x,y,ID)
         {
             new Vector3(touchData[1, 0], touchData[2, 0], touchData[0, 0]),
             new Vector3(touchData[1, 1], touchData[2, 1], touchData[0, 1]),
@@ -35,67 +39,67 @@ public class BackTouchTester : MonoBehaviour
         };
 
         // Variables to store touch locations for each button
-        Vector2 l1Position = Vector2.zero;
         Vector2 l2Position = Vector2.zero;
-        Vector2 r1Position = Vector2.zero;
-        Vector2 r2Position = Vector2.zero;*/
-
-        /*// Find the touch that matches each button's ID
+        Vector2 l3Position = Vector2.zero;
+        Vector2 r2Position = Vector2.zero;
+        Vector2 r3Position = Vector2.zero;
+        // Variables to store ID's
+        // Find the touch that matches each button's ID
         foreach (Vector3 touch in touches)
         {
-            if (touch.z == l1ID)
-                l1Position = new Vector2(touch.x, touch.y);
-            if (touch.z == l2ID)
+            if (Mathf.Approximately(touch.z, l2ID))
                 l2Position = new Vector2(touch.x, touch.y);
-            if (touch.z == r1ID)
-                r1Position = new Vector2(touch.x, touch.y);
-            if (touch.z == r2ID)
+            if (Mathf.Approximately(touch.z, l3ID))
+                l3Position = new Vector2(touch.x, touch.y);
+            if (Mathf.Approximately(touch.z, r2ID))
                 r2Position = new Vector2(touch.x, touch.y);
-        }*/
+            if (Mathf.Approximately(touch.z, r3ID))
+                r3Position = new Vector2(touch.x, touch.y);
+        }
 
         // Display touch information
-        if (l1)
+        if (l2)
         {
             touchTextA.color = Color.green;
-            touchTextA.text = "TL1 pressed";
+            touchTextA.text = "L2 pressed at: " + l2Position.x + ", " + l2Position.y;
         }
         else
         {
             touchTextA.color = Color.gray;
-            touchTextA.text = "TL1 NOT pressed";
+            touchTextA.text = "";
         }
 
-        if (l2)
+        if (l3)
         {
             touchTextB.color = Color.green;
-            touchTextB.text = "TL2 pressed";
+            touchTextB.text = "L3 pressed at: " + l3Position.x + ", " + l3Position.y;
         }
         else
         {
             touchTextB.color = Color.gray;
-            touchTextB.text = "TL2 NOT pressed";
-        }
-
-        if (r1)
-        {
-            touchTextC.color = Color.green;
-            touchTextC.text = "TR1 pressed";
-        }
-        else
-        {
-            touchTextC.color = Color.gray;
-            touchTextC.text = "TR1 NOT pressed";
+            touchTextB.text = "";
         }
 
         if (r2)
         {
+            touchTextC.color = Color.green;
+            touchTextC.text = "R2 pressed at: " + r2Position.x + ", " + r2Position.y;
+        }
+        else
+        {
+            touchTextC.color = Color.gray;
+            touchTextC.text = "";
+        }
+
+        if (r3)
+        {
             touchTextD.color = Color.green;
-            touchTextD.text = "TR2 pressed";
+            touchTextD.text = "R3 pressed at: " + r3Position.x + ", " + r3Position.y;
         }
         else
         {
             touchTextD.color = Color.gray;
-            touchTextD.text = "TR2 NOT pressed";
+            touchTextD.text = "";
         }
     }
 }

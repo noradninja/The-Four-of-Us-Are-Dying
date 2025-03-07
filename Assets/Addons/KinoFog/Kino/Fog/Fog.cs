@@ -57,8 +57,10 @@ namespace Kino
             get { return _fadeToSkybox; }
             set { _fadeToSkybox = value; }
         }
-        public Shader _shader;
 
+        [SerializeField]
+        public Shader _shader;
+        
         public Material _material;
 
         #endregion
@@ -81,7 +83,7 @@ namespace Kino
             if (_material == null)
             {
                 _material = new Material(_shader);
-                _material.hideFlags = HideFlags.DontSave;
+                //_material.hideFlags = HideFlags.DontSave;
             }
 
             _startDistance = Mathf.Max(_startDistance, 0.0f);

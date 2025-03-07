@@ -9,7 +9,7 @@ Material:
   m_Name: Animated_Alpha_Front_Trims_LOD0
   m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
   m_ShaderKeywords: ALPHA_ON WIGGLE_ON _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _METALLICGLOSSMAP
-    _VERTEXCOLOR
+    _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -82,9 +82,9 @@ Material:
     - _SrcBlend: 5
     - _UVSec: 0
     - _ZWrite: 1
-    - _influence: 0.23569332
-    - _leaves_wiggle_disp: 0.1
-    - _leaves_wiggle_speed: 75
+    - _influence: 0.22881812
+    - _leaves_wiggle_disp: 0.15
+    - _leaves_wiggle_speed: 165
     - _wind_size: 50
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

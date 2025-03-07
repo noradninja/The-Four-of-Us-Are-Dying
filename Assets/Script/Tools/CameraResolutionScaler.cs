@@ -5,42 +5,6 @@ using UnityEngine.Rendering;
 [ExecuteInEditMode]
 public class CameraResolutionScaler : MonoBehaviour
 {
- 
-    // public float downscaleFactor = 2f; // Factor by which to downscale the framebuffer
-    // private int width;
-    // private int height;
-    // private Camera camera;
-    // public RenderTexture downscaleTexture;
-    // private CommandBuffer downscaleCommandBuffer;
-    // private Material blitMaterial;
-    //
-    // private void Awake()
-    // {
-    //     camera = GetComponent<Camera>();
-    //     blitMaterial = new Material(Shader.Find("Blitter"));
-    // }
-    // private void OnPreRender() //before we render anything
-    // {
-    //     width = 512;//Mathf.RoundToInt(camera.pixelWidth / downscaleFactor);
-    //     height = 256; //Mathf.RoundToInt(camera.pixelHeight / downscaleFactor);
-    //     Rect viewport = new Rect(0, 0, width, height);
-    //
-    //     camera.pixelRect = viewport;
-    //     downscaleCommandBuffer = new CommandBuffer();
-    //     camera.AddCommandBuffer(CameraEvent.BeforeForwardOpaque, downscaleCommandBuffer);
-    //    
-    //     downscaleCommandBuffer.Clear();
-    //     downscaleCommandBuffer.SetRenderTarget(downscaleTexture);
-    // }
-    //
-    // private void OnPostRender() //immediately after render but before drawing to framebuffer
-    // {
-    //     downscaleCommandBuffer.Blit(BuiltinRenderTextureType.CameraTarget, downscaleTexture);
-    //     camera.pixelRect = new Rect(0, 0, 960, 544);
-    //     downscaleCommandBuffer.SetRenderTarget(BuiltinRenderTextureType.CameraTarget);
-    //     downscaleCommandBuffer.Blit(downscaleTexture, BuiltinRenderTextureType.CameraTarget);
-    //     camera.RemoveCommandBuffer(CameraEvent.BeforeForwardOpaque, downscaleCommandBuffer); //drop cb
-    // }
     public enum currentResolution
     {
         [Tooltip("960x544")] Full,
@@ -102,25 +66,25 @@ public class CameraResolutionScaler : MonoBehaviour
                     width = 960;
                     height = 544;
                     if (!Application.isEditor) Screen.SetResolution(width,height, true);
-                    QualitySettings.vSyncCount = 1;
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.Mid:
                     width = 720;
                     height = 408;
-                    if (!Application.isEditor) Screen.SetResolution(720, 408, true);
-                    QualitySettings.vSyncCount = 1;
+                    if (!Application.isEditor) Screen.SetResolution(width, height, true);
+                    QualitySettings.vSyncCount = 2;
                     break;
                 case currentResolution.Low:
                     width = 640;
                     height = 368;
-                    if (!Application.isEditor) Screen.SetResolution(640, 368, true);
-                    QualitySettings.vSyncCount = 2;
+                    if (!Application.isEditor) Screen.SetResolution(width, height, true);
+                    QualitySettings.vSyncCount = 1;
                     break;
                 case currentResolution.PSP:
                     width = 480;
                     height = 272;
-                    if (!Application.isEditor) Screen.SetResolution(480, 272, true);
-                    QualitySettings.vSyncCount = 2;
+                    if (!Application.isEditor) Screen.SetResolution(width, height, true);
+                    QualitySettings.vSyncCount = 1;
                     break;
             }
     }
@@ -145,10 +109,10 @@ public class CameraResolutionScaler : MonoBehaviour
                     renderDivisor = 1.2f;
                     break;
                 case internalResolution.Mid:
-                    renderDivisor = 1.33f;
+                    renderDivisor = 1.5f;
                     break;
                 case internalResolution.Low:
-                    renderDivisor = 1.5f;
+                    renderDivisor = 1.6f;
                     break;
                 case internalResolution.VeryLow:
                     renderDivisor = 2.0f;

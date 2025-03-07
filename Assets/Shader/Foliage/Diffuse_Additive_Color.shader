@@ -11,22 +11,19 @@ Properties {
 
 SubShader {
     LOD 200
-    Tags { "RenderType" = "Opaque" }
+    Tags { "RenderType" = "AlphaTest" }
 CGPROGRAM
 #pragma surface surf Lambert nodynlightmap
 struct Input {
   float2 uv_MainTex;
-  float2 uv2_LightMap;
 };
 sampler2D _MainTex;
 // half4 unity_LightmapST;
 fixed4 _Color;
 void surf (Input IN, inout SurfaceOutput o)
 {
-  o.Albedo = tex2D (_MainTex, IN.uv_MainTex).rgb;
-  half3 lm = (DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, IN.uv2_LightMap)));
-  o.Emission = lm.rgb + _Color * o.Albedo.rgb;
-  o.Alpha = _Color.a;
+  o.Albedo = tex2D (_MainTex, IN.uv_MainTex);
+  o.Alpha = tex2D (_MainTex, IN.uv_MainTex).a;
 }
 ENDCG
 }

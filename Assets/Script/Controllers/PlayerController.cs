@@ -115,7 +115,7 @@ public class PlayerController : MonoBehaviour
     private IEnumerator stimsRoutine;
     private IEnumerator walkRoutine;
     private IEnumerator alphaRoutine;
-
+    
 
     private void Awake()
     {
@@ -126,6 +126,8 @@ public class PlayerController : MonoBehaviour
            //
         }
 
+        VitaInputManager.Instance.OnLeftStick += LeftJoyEvent; //Sub to left joystick event
+        
         //LODGroUp.CrossFadeAnimationDuration = 0.25f;
         animator.SetBool("isGrab", false);
         
@@ -455,6 +457,11 @@ public class PlayerController : MonoBehaviour
         }   
     }
     #endregion
+
+    private void LeftJoyEvent(float x, float y)
+    {
+        Vector2 leftStick = new Vector2(x, y);
+    }
     private void Keys()
     {
         if (!Input.GetButton("RTRIG") && (!Input.GetButton("LTRIG")) && 

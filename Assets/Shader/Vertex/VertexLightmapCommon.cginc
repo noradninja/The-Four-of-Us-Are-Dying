@@ -189,7 +189,7 @@ fixed4 frag(v2f v) : SV_Target {
     half4 skyData = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, v.worldRefl, (1 - moar.a) * 8);
     half3 skyColor = DecodeHDR(skyData, unity_SpecCube0_HDR);
     half3 diff = lerp(diffuse.rgb, skyColor, moar.r) * shadow;
-    half4 col = half4((diff.rgb * lighting.rgb) + (skyColor * 0.25h) * moar.g, 1);
+    half4 col = half4((diff.rgb * lighting.rgb) + (skyColor * 0.25h) * moar.g, moar.b);
 
     if (!_AlphaOn) {
         fixed4 texcol = tex2D(_MainTex, v.uv0.xy);

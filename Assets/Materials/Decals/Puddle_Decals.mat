@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Puddle_Decals
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED _ALPHABLEND_ON _BAKERY_NONE _LIGHTMAPSPECULAR
-    _METALLICGLOSSMAP _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
+  m_Shader: {fileID: 4800000, guid: c779927e8db48184fa9a6f5aefd2b1dd, type: 3}
+  m_ShaderKeywords: ALPHA_ON BAKERY_NONE DETAILS_MODE_PACKED _ALPHABLEND_ON _BAKERY_NONE
+    _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -53,6 +53,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Height:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MOAR:
+        m_Texture: {fileID: 2800000, guid: 4acbbfec235d94b41aaee3d6d2964496, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -121,7 +125,9 @@ Material:
     - UI_SmoothnessRemap: 0
     - _AOChannel: 1
     - _AlbedoChannel: 0
+    - _AlphaOn: 1
     - _AlphaToMask: 0
+    - _AmbientOn: 0
     - _Anisotropic: 0
     - _BakedSpacular: 0
     - _Bakery: 0
@@ -134,7 +140,7 @@ Material:
     - _Cull: 0
     - _CullMode: 2
     - _Culling: 2
-    - _Cutoff: 0
+    - _Cutoff: 0.139
     - _DAlbedoScale: 1
     - _DDetailsMapRef1: 0
     - _DDetailsMapRef2: 0
@@ -181,7 +187,7 @@ Material:
     - _LightmapSpecularMaxSmoothness: 1
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Metalness: 1
     - _Mode: 2
     - _NormalDistModel: 0
