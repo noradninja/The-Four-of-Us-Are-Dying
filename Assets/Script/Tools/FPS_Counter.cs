@@ -68,18 +68,18 @@ void Start(){
 		            ramText.text = ("RAM: " + RAMFree + "MB Free");
 		            
 		            //change VRAM/RAM colors
-		            if (percentVRAM >= 75){
+		            if (percentVRAM > 75){
 			            vramText.color = Color.red;
 		            }
-		            else if(percentVRAM < 75 && percentVRAM > 50){
+		            else if(percentVRAM <= 75 && percentVRAM > 50){
 			            vramText.color = Color.yellow;
 		            }
 		            else vramText.color = Color.green;
 
-		            if (percentRAM >= 75){
+		            if (percentRAM > 75){
 			            ramText.color = Color.red;
 		            }
-		            else if(percentRAM < 75 && percentRAM > 50){
+		            else if(percentRAM <= 75 && percentRAM > 50){
 			            ramText.color = Color.yellow;
 		            }
 		            else ramText.color = Color.green;

@@ -102,6 +102,7 @@ public class PlayerController : MonoBehaviour
     public GameObject perfOverlay;
     public GameObject fpsOverlay;
     public GameObject controlOverlay;
+    public GameObject upscalerObject;
     public CanvasGroup UICanvasGroup;
     public float currentCharge;
     private static readonly int CrossFade = Shader.PropertyToID("_CrossFade");
@@ -374,13 +375,16 @@ public class PlayerController : MonoBehaviour
     }
     private void DpadLeftKeyDownEvent()
     {
+        //toggle perf overlay
         perfOverlay.SetActive(!perfOverlay.activeSelf);
         fpsOverlay.SetActive(!fpsOverlay.activeSelf);
     }
 
     private void DpadRightKeyDownEvent()
     {
- 
+        //toggle upscaler
+        upscalerObject.GetComponent<EPX>().enabled = !upscalerObject.GetComponent<EPX>()
+            .isActiveAndEnabled;
     }
     #endregion
 

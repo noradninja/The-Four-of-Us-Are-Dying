@@ -7,6 +7,8 @@ Shader "Lighting/Lightbeam" {
 		_Width ("Width", Float) = 8.71
 		_Tweak ("Tweak", Float) = 0.65
 		_InvFade ("Soft Particles Factor", Range(0.01,3.0)) = 1.0
+		_NearFadeThreshold ("Near Fade", Float) = 0.2
+		_FarFadeThreshold ("Far Fade", Float) = 1.0
 	}
 	SubShader {
 		Tags { "Queue" = "Transparent" "IgnoreProjector" = "True" "RenderType"="Transparent"}
@@ -27,7 +29,7 @@ Shader "Lighting/Lightbeam" {
 			fixed4 _Color;
 			fixed _Width;
 			fixed _Tweak;
-
+			fixed _NearFadeThreshold, _FarFadeThreshold;
 			// struct appdata_full  {
             //     float4 vertex : POSITION;
             //     fixed4 color : COLOR;
@@ -91,12 +93,17 @@ Shader "Lighting/Lightbeam" {
 				fixed4 c = _Color;
 				c.a *= falloff1 * falloff2;
 			//soft intersections
-					float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
-					float partZ = i.projPos.z;
-					float fade = saturate (_InvFade * (sceneZ-partZ));
-					c.a *= fade;
-        	// Fade when near the camera
-			c.a *=  saturate(i.screenPos.z * 0.2);
+				float sceneZ = LinearEyeDepth (SAMPLE_DEPTH_TEXTURE_PROJ(_CameraDepthTexture, UNITY_PROJ_COORD(i.projPos)));
+				float partZ = i.projPos.z;
+				float fade = saturate (_InvFade * (sceneZ-partZ));
+				c.a *= fade;
+        	// Compute near fade: fades from 0 to 1 as depth increases from 0 to _NearFadeThreshold
+				float nearFade = smoothstep(0.0, _NearFadeThreshold, i.screenPos.z);
+			// Compute far fade: fades from 1 to 0 as depth increases from _FarFadeThreshold to 1
+				float farFade = smoothstep(_FarFadeThreshold, 1.0, i.screenPos.z);
+
+			// Combine the fade factors
+				c.a *= nearFade * farFade;
 
 			    return c;
 			}

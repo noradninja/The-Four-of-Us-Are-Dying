@@ -4732,16 +4732,13 @@ GameObject:
   - component: {fileID: 121908226}
   - component: {fileID: 121908225}
   - component: {fileID: 121908224}
+  - component: {fileID: 121908234}
+  - component: {fileID: 121908235}
   - component: {fileID: 121908227}
   - component: {fileID: 121908229}
   - component: {fileID: 121908228}
-  - component: {fileID: 121908235}
   - component: {fileID: 121908238}
-  - component: {fileID: 121908234}
-  - component: {fileID: 121908232}
   - component: {fileID: 121908230}
-  - component: {fileID: 121908233}
-  - component: {fileID: 121908231}
   - component: {fileID: 121908236}
   m_Layer: 10
   m_Name: Main Camera
@@ -4891,84 +4888,10 @@ MonoBehaviour:
   intensities: {x: 1, y: 1, z: 1}
   tiling: {x: 64, y: 64, z: 64}
   monochromeTiling: 64
-  filterMode: 1
+  filterMode: 0
   noiseTexture: {fileID: 2800000, guid: 7a632f967e8ad42f5bd275898151ab6a, type: 3}
   noiseShader: {fileID: 4800000, guid: b0249d8c935344451aa4de6db76f0688, type: 3}
   dx11NoiseShader: {fileID: 4800000, guid: 8b30686bb4322ab42ad5eb50a0210b58, type: 3}
---- !u!114 &121908231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e9380717138334e9057ccb6b6a3947, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainCamera: {fileID: 121908223}
-  lightningManager: {fileID: 1742728650}
-  rainParticles: {fileID: 1874573147}
-  splashParticles: {fileID: 633546095}
-  postText: {fileID: 1709055514}
-  currentOverlay: 8
---- !u!114 &121908232
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e1cd1890cdc009848ac7d87a68ef0126, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 2100000, guid: d381d4349e5cfc24c93bb6280e373058, type: 2}
-  Sharpness: 4
-  Threshold: 0.25
---- !u!114 &121908233
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 121908223}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4403d047889f2da40aea475d95c5667b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  channels:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 1
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  useDepthCorrection: 0
-  gamma: 1
-  mode: 0
-  updateTextures: 1
-  colorCorrectionCurvesShader: {fileID: 4800000, guid: 62bcade1028c24ca1a39760ed84b9487,
-    type: 3}
-  simpleColorCorrectionCurvesShader: {fileID: 4800000, guid: 438ddd58d82c84d9eb1fdc56111702e1,
-    type: 3}
 --- !u!114 &121908234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4983,8 +4906,8 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   mainLight: {fileID: 489463876}
   stencilRT: {fileID: 0}
-  blurSize: 3
-  resolutionDivisor: 3
+  blurSize: 4
+  resolutionDivisor: 4
   lightVector: {x: -0.40543038, y: 2.1582067, z: 0.56660616, w: 0}
   cosineAngle: 0
 --- !u!114 &121908235
@@ -22683,11 +22606,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 623549975}
   m_CullTransparentMesh: 1
---- !u!1 &633546095 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1691588846913814, guid: e034434a844564d83a09dc60a7173770,
-    type: 2}
-  m_PrefabInternal: {fileID: 1778673199}
 --- !u!1 &635686608
 GameObject:
   m_ObjectHideFlags: 0
@@ -31468,8 +31386,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 787849888}
   LOD_Distance:
-  - 3.5
   - 5.5
+  - 7
   enableShaderLOD: 1
   isFoliage: 0
   rendererDisable: 1
@@ -33618,6 +33536,7 @@ MonoBehaviour:
   perfOverlay: {fileID: 1482558063}
   fpsOverlay: {fileID: 1564596722}
   controlOverlay: {fileID: 553536171}
+  upscalerObject: {fileID: 121908223}
   UICanvasGroup: {fileID: 1415299053}
   currentCharge: 0
 --- !u!143 &787849890
@@ -43107,7 +43026,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1196789418
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43166,7 +43085,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1196789417}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4b72e03f85f5d084b8e107085c4069a9, type: 3}
   m_Name: 
@@ -59331,11 +59250,6 @@ Transform:
   m_Father: {fileID: 82115786}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1874573147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1691588846913814, guid: e034434a844564d83a09dc60a7173770,
-    type: 2}
-  m_PrefabInternal: {fileID: 2038491049}
 --- !u!198 &1874573149 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 198270193400346888, guid: e034434a844564d83a09dc60a7173770,

@@ -39,10 +39,12 @@ Material:
     - _DetailContrast: 0.35
     - _DustContrast: 0.6119403
     - _Fade: 1
+    - _FarFadeThreshold: 5
     - _InvFade: 1.48
+    - _NearFadeThreshold: 4
     - _SoftEdge: 1.4
-    - _Tweak: 0.2
-    - _Width: 20
+    - _Tweak: 0.12
+    - _Width: 26.08
     m_Colors:
     - _Color: {r: 0.9485294, g: 0.9200543, b: 0.6904736, a: 1}
     - _DetailAnim: {r: -1, g: 2, b: -1, a: 0}
