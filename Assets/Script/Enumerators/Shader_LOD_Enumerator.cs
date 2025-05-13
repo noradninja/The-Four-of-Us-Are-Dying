@@ -1,124 +1,115 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Rendering;
 
 public class Shader_LOD_Enumerator : MonoBehaviour
 {
-    public enum LODState
-    {
-        Full,
-        Reduced,
-        VertexOnly
-    }
-
+    private static readonly int Glossiness = Shader.PropertyToID("_Glossiness");
+    private static readonly int Metallic = Shader.PropertyToID("_Metallic");
+    private static readonly int Roughness = Shader.PropertyToID("_Roughness");
+    private static readonly int AlphaOn = Shader.PropertyToID("_AlphaOn");
+    private static readonly int Mode = Shader.PropertyToID("__mode");
     public GameObject player;
-    public float[] LOD_Distance;
-    public bool enableShaderLOD = true;
-    public bool isFoliage;
-    public bool rendererDisable;
+    public enum LODState { Full, Reduced, VertexOnly }
+
+    [Header("LOD Settings")]
+    public float[] LOD_Distance;       // [0]=full, [1]=reduced
+    public bool   enableShaderLOD = true;
+    public bool   isFoliage;
+    public bool   rendererDisable;
+    public bool isDisabled;
     public Material replacementMaterial;
-    public float distance;
-    public int tickOffset;
-    public int tickInterval;
-    [SerializeField] private int tick;
 
-    [SerializeField] private Texture albedoTex;
-
-    [SerializeField] private Texture MOARTex;
-
-    [SerializeField] private Material originalMaterial;
-
-    public bool shadowCaster;
-
-    public LODState shaderLOD;
-    private Vector2 playerPos;
-    private Vector2 thisPos;
+    // cached per‐instance
     private Renderer thisRenderer;
-    private Vector3 viewPos;
+    private Material originalMaterial;
+    private Texture mainTex;
+    private Texture moarTexture;
+    private bool     shadowCaster;
+
+    private Mesh originalMesh;
+    private Mesh replacementMesh;  // Optional: If you need a replacement mesh
+    private MeshFilter meshFilter;
+
+    [HideInInspector] public LODState shaderLOD;
+
+    // Flag to track if resources are loaded
+    private bool isResourcesLoaded = false;
 
     private void Awake()
     {
-        thisRenderer = this.GetComponent<Renderer>();
+        thisRenderer = GetComponent<Renderer>();
+        meshFilter = GetComponent<MeshFilter>(); // Cache the MeshFilter component
+
         shadowCaster = thisRenderer.shadowCastingMode == ShadowCastingMode.On;
+        originalMaterial = thisRenderer.sharedMaterial;
+
+        // Create replacement material
+        replacementMaterial = new Material(Shader.Find("Vita/Standard Mobile VertexLit"));
+        replacementMaterial.SetFloat(Metallic, originalMaterial.GetFloat(Metallic));
+        replacementMaterial.SetFloat(Roughness, originalMaterial.GetFloat(Glossiness));
+        if (originalMaterial.GetFloat(Mode) == 1 || originalMaterial.GetFloat(AlphaOn) == 1) replacementMaterial.SetFloat(AlphaOn, 1); //preserve alpha
+            else replacementMaterial.SetFloat(AlphaOn, 0); // else disable alpha clip
+        replacementMaterial.SetFloat("_LeavesOn", 0); // Disable movement at distance
+
+        // Get textures for replacement material
+        mainTex = originalMaterial.mainTexture;
+        moarTexture = originalMaterial.GetTexture("_MetallicGlossMap");
+
+        // Apply textures to replacement material
+        replacementMaterial.mainTexture = mainTex;
+        replacementMaterial.SetTexture("_MetallicGlossMap", moarTexture);
     }
 
     private void Start()
     {
-        //set tick to the offset, so that each group starts on the first frame of its offset value
-        tick = tickOffset;
-        //get needed components
-        originalMaterial = thisRenderer.sharedMaterial;
-        albedoTex = originalMaterial.mainTexture;
-        MOARTex = originalMaterial.GetTexture("_MetallicGlossMap");
-        
-        //assign materials if not assigned already, and textures for later use
-        if (isFoliage) //grab the textures we need from the old mat, disable leaf wiggle
-        {   
-            if (replacementMaterial != null) return;
-            replacementMaterial = new Material(Shader.Find("Vita/Lightmapped Vertlit Wind Foliage"));
-            replacementMaterial.SetFloat("_LeavesOn", 0);
-            replacementMaterial.SetTextureScale("_MainTex", new Vector2(2, 2));
-            replacementMaterial.SetTexture("_MOAR", MOARTex);
-        }
-        else
-        {
-            if (replacementMaterial != null) return;
-            replacementMaterial = new Material(Shader.Find("Vita/Vertex_Lightmap"));
-            replacementMaterial.mainTexture = albedoTex;
-        }
+        // Register with the manager
+        LODManager.Instance.Register(this);
     }
 
-    private void Update()
+    // Called by LODManager each tick.
+    public void UpdateLOD(float distSqr, float farClipSqr)
     {
-        // we only need to do *whatever* FPS/tick times a frame
-        if (tick != tickInterval + tickOffset) //add offset here so that it is maintained
-            tick++;
-        else
-        {
-            thisPos = new Vector2(this.transform.position.x, this.transform.position.z);
-            playerPos = new Vector2(player.transform.position.x, player.transform.position.z);
-            distance = Vector2.Distance(thisPos, playerPos); //how far are we from the player in the XZ plane
-            tick = 0;
-            TickUpdate();
-        }
-    }
+        if (!enableShaderLOD) return;
 
-    private void TickUpdate()
-    {
-        if (!enableShaderLOD) return; //check if we enabled this; if not, dump
-        shaderLOD = distance <= LOD_Distance[1]
-            ? distance <= LOD_Distance[0] ? LODState.Full : LODState.Reduced : LODState.VertexOnly; //LOD2
-        
-       
+        // Check if the Renderer is null (destroyed or not assigned)
+        if (thisRenderer == null)
+        {
+            Debug.LogWarning("Renderer is missing or destroyed. Skipping LOD update.");
+            return;
+        }
+
+        float fullSqr = LOD_Distance[0] * LOD_Distance[0];
+        float reducedSqr = LOD_Distance[1] * LOD_Distance[1];
+
+        // Pick state
+        if (distSqr <= fullSqr) shaderLOD = LODState.Full;
+        else if (distSqr <= reducedSqr) shaderLOD = LODState.Reduced;
+        else shaderLOD = LODState.VertexOnly;
+
         switch (shaderLOD)
         {
             case LODState.Full:
-                //if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-                if (!thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP")) 
-                    thisRenderer.sharedMaterial.EnableKeyword("_NORMALMAP"); //enable normalmap
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.On) 
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.On; //enable shadows
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.On)
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.On;
                 break;
+
             case LODState.Reduced:
-                if (rendererDisable) thisRenderer.enabled = true; //enable renderer 
-                if (thisRenderer.sharedMaterial != originalMaterial) thisRenderer.sharedMaterial = originalMaterial;
-                if (thisRenderer.sharedMaterial.IsKeywordEnabled("_NORMALMAP"))
-                    thisRenderer.sharedMaterial.DisableKeyword("_NORMALMAP"); //drop normalmap
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+                thisRenderer.enabled = true;
+                thisRenderer.sharedMaterial = originalMaterial;
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off)
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
                 break;
+
             case LODState.VertexOnly:
                 thisRenderer.sharedMaterial = replacementMaterial;
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off) 
-                  thisRenderer.shadowCastingMode = ShadowCastingMode.Off; //disable shadows
+                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off)
+                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+
                 if (rendererDisable)
-                {
-                    if (distance >= Camera.main.farClipPlane + 3) thisRenderer.enabled = false; //disable renderer 
-                    else thisRenderer.enabled = true;
-                }
+                    thisRenderer.enabled = distSqr < farClipSqr;
+                    isDisabled = !thisRenderer.enabled;
+                    //EnableRenderer(!isDisabled);
                 break;
         }
-
-        
     }
 }

@@ -65,7 +65,7 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
-  alphaIsTransparency: 1
+  alphaIsTransparency: 0
   spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
@@ -100,7 +100,7 @@ TextureImporter:
     buildTarget: PSP2
     maxTextureSize: 512
     resizeAlgorithm: 1
-    textureFormat: 12
+    textureFormat: 10
     textureCompression: 0
     compressionQuality: 100
     crunchedCompression: 0

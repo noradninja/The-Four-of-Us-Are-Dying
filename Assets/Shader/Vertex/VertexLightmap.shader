@@ -1,7 +1,7 @@
-﻿Shader "Vita/Lightmapped Vertlit Wind Foliage" {
+﻿Shader "Vita/Standard Mobile VertexLit" {
 	Properties {
 		_MainTex("Base (RGB)", 2D) = "white" { }
-		_MOAR("MOAR (RGBA)", 2D) = "white" { }
+		_MetallicGlossMap("MOAR (RGBA)", 2D) = "white" { }
 		_Metallic ("Metallic", Range(0,1)) = 0.5
 		_Roughness ("Roughness", Range(0,1)) = 0.5
 		_Cutoff ("Alpha cutoff", Range(0,1)) = 0.5
@@ -16,11 +16,11 @@
 	}
 
 	SubShader {
-	Tags { "Queue"="AlphaTest" "IgnoreProjector"="True" "RenderType"="TransparentCutout" } //I know this is weird but it's a workaround for the Vita
+	Tags { "IgnoreProjector"="True"} //I know this is weird but it's a workaround for the Vita
 		LOD 80
 		ZWrite On
 		Cull Off
-		Blend One OneMinusSrcAlpha //because we are going to clip at the end
+		Blend One Zero //because we are going to clip at the end
 
 		// Non-lightmapped
 		Pass
@@ -47,8 +47,9 @@
 		Pass
 		{
 			Tags { "LightMode" = "VertexLM" }
-		
-      
+			
+			Cull Off
+			
 			CGPROGRAM
 			#pragma vertex vert
 			#pragma fragment frag	
@@ -165,7 +166,7 @@
 			}
 
 			uniform sampler2D _MainTex;
-	        uniform sampler2D _MOAR;
+	        uniform sampler2D _MetallicGlossMap;
 			uniform fixed _Cutoff;
 	        float _AlphaOn;
 
@@ -178,7 +179,7 @@
 				}
 				else
 				{
-					fixed4 texcol = tex2D( _MOAR, i.uv );
+					fixed4 texcol = tex2D( _MetallicGlossMap, i.uv );
 					clip( texcol.b - _Cutoff );
 				}
 

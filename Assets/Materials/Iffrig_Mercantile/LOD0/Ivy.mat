@@ -9,7 +9,7 @@ Material:
   m_Name: Ivy
   m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
   m_ShaderKeywords: ALPHA_ON WIGGLE_ON _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _METALLICGLOSSMAP
-    _VERTEXCOLOR
+    _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -72,11 +72,11 @@ Material:
     - _GlossyReflections: 1
     - _IntensityVC: 1
     - _LeavesOn: 1
-    - _Metallic: 1
+    - _Metallic: 0.5
     - _Mode: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Roughness: 1
+    - _Roughness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5

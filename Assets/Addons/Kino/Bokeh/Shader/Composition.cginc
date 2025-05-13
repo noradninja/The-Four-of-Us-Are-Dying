@@ -35,7 +35,7 @@ half4 frag_Blur2(v2f i) : SV_Target
     half4 duv = _MainTex_TexelSize.xyxy * half4(1, 1, -1, 0);
     half4 acc;
 
-    acc  = tex2D(_MainTex, i.uv - duv.xy);
+    acc  = tex2D(_MainTex, i.uv + duv.xy);
     acc += tex2D(_MainTex, i.uv - duv.wy) * 4;
     acc += tex2D(_MainTex, i.uv - duv.zy);
 
@@ -43,9 +43,9 @@ half4 frag_Blur2(v2f i) : SV_Target
     // acc += tex2D(_MainTex, i.uv         ) * 4;
     // acc += tex2D(_MainTex, i.uv + duv.xw) * 2;
 
-    acc += tex2D(_MainTex, i.uv + duv.zy);
+    /*acc += tex2D(_MainTex, i.uv + duv.zy);
     acc += tex2D(_MainTex, i.uv + duv.wy) * 4;
-    acc += tex2D(_MainTex, i.uv + duv.xy);
+    acc += tex2D(_MainTex, i.uv + duv.xy);*/
 
     return acc / 16;
 }

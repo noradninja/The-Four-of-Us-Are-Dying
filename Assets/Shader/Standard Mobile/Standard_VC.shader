@@ -219,5 +219,5 @@ Shader "Vita/Standard Mobile"
 
 
     //FallBack "VertexLit"
-    CustomEditor "Standard_VCShaderGUI"
+    //CustomEditor "Standard_VCShaderGUI"
 }

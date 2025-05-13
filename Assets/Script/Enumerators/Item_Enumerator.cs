@@ -113,15 +113,7 @@ public class Item_Enumerator : MonoBehaviour {
 
     // Update is called once per frame
     void Update (){
-	    if (isActiveObject){
-		    POILook(headObject.transform, this.transform, 2.0f);
-		    player.GetComponent<PlayerController>().nearObject = true;
-	    }
-
-	    if (!player.GetComponent<PlayerController>().nearObject)
-	    {
-		    POILook(headObject.transform, headLookObject.transform, 0.125f);
-	    }
+	   
 	    
 	    if (Input.GetButtonDown("Cross") && dialogBG.color == dialogOn && isActiveObject){
 		    player.GetComponent<PlayerController>().nearObject = false;
@@ -207,20 +199,4 @@ public class Item_Enumerator : MonoBehaviour {
         screenPosition = mainCamera.WorldToScreenPoint(targetPos); //convert target position to screen space coordinates
         hilightIcon.transform.position = screenPosition; //set the icon position to the converted screen position of the object
 	}
-    
-    private void POILook(Transform objectToRotateTransform ,Transform objectToLookAtTransform, float rate)
-    {
-	    Vector3 targetDirection = objectToLookAtTransform.position - objectToRotateTransform.position;
-		
-	    // The step size is equal in radians to speed * frametime 
-        float singleStep = rate * Time.deltaTime;
-        // Rotate the forward vector towards the target direction by one step
-        Vector3 newDirection = Vector3.RotateTowards(objectToRotateTransform.forward, targetDirection, 
-										singleStep, 0.0f);
-        // Draw a ray pointing at our target in
-        Debug.DrawRay(objectToRotateTransform.position, newDirection, Color.magenta);
-        // Calculate a rotation a step closer to the target and applies rotation to this object
-        objectToRotateTransform.rotation = Quaternion.LookRotation(newDirection);
-    }
-
 }

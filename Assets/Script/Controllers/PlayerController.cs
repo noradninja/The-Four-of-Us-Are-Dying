@@ -5,7 +5,6 @@ using System.Text;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
-using TrueClouds;
 using UnityEngine.Serialization;
 
 //TODO: Extract flashlight handling and stamina handling to their own classes
@@ -383,8 +382,7 @@ public class PlayerController : MonoBehaviour
     private void DpadRightKeyDownEvent()
     {
         //toggle upscaler
-        upscalerObject.GetComponent<EPX>().enabled = !upscalerObject.GetComponent<EPX>()
-            .isActiveAndEnabled;
+       // upscalerObject.GetComponent<EPX>().enabled = !upscalerObject.GetComponent<EPX>().isActiveAndEnabled;
     }
     #endregion
 
@@ -487,16 +485,17 @@ public class PlayerController : MonoBehaviour
     ///////////////////////////Joysticks//////////////////////////////////////
     private void StickInput()
     {
-        horizontalRotation = Input.GetAxis("Left Stick Horizontal") * OptionsManagerInputs.sensitivity; //turn
+        horizontalRotation = Input.GetAxis("Left Stick Horizontal") * OptionsManagerInputs.sensitivity * 0.5f; //turn
 
         if (Application.isEditor){ //this is here because the DS3 uses different input axes for the right stick
-            horizontalCamRotation = Input.GetAxis("DS3Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
-            verticalCamRotation = Input.GetAxis("DS3Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
+            horizontalCamRotation = Input.GetAxis("DS3Right Stick Horizontal") * OptionsManagerInputs.sensitivity *
+                                    0.5f; //flashlight l/r
+            verticalCamRotation = Input.GetAxis("DS3Right Stick Vertical") * OptionsManagerInputs.sensitivity * 0.5f; //flashlight/look u/d
            
         }
         else { //set up sticks on Vita/PSTV
-            horizontalCamRotation = Input.GetAxis("Right Stick Horizontal") * OptionsManagerInputs.sensitivity; //flashlight l/r
-            verticalCamRotation = Input.GetAxis("Right Stick Vertical") * OptionsManagerInputs.sensitivity; //flashlight/look u/d
+            horizontalCamRotation = Input.GetAxis("Right Stick Horizontal") * OptionsManagerInputs.sensitivity * 0.5f; //flashlight l/r
+            verticalCamRotation = Input.GetAxis("Right Stick Vertical") * OptionsManagerInputs.sensitivity * 0.5f; //flashlight/look u/d
         }
 
         if (invertView) verticalCamRotation = -verticalCamRotation; //swap vertical look axis if toggle is on

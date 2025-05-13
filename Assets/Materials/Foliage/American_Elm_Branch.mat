@@ -9,11 +9,11 @@ Material:
   m_Name: American_Elm_Branch
   m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
   m_ShaderKeywords: ALPHA_ON GEOM_TYPE_LEAF SHADOWED_RIM WIGGLE_ON _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
-    _WINDQUALITY_NONE
+    _NORMALMAP _WINDQUALITY_NONE
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2450
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -164,7 +164,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: c7e8bcb427c892e4c93f8a8b846dff30, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MotionPowerWeightMask:
@@ -467,7 +467,7 @@ Material:
     - _LightMode: 1
     - _LightProbes: 0
     - _ManualControl: 0
-    - _Metallic: 1
+    - _Metallic: 0.75
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -498,7 +498,7 @@ Material:
     - _RimFold: 0
     - _RimSize: 0
     - _RimToggle: 0
-    - _Roughness: 1
+    - _Roughness: 0.5
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
     - _SO_ParticleMode: 0
@@ -584,7 +584,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.22711748
+    - _influence: 0.1453223
     - _leaves_wiggle_disp: 0.15
     - _leaves_wiggle_speed: 1
     - _r_influence: 1

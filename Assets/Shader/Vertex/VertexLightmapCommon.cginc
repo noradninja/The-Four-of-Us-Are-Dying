@@ -23,7 +23,7 @@
 // uniforms
 int4 unity_VertexLightParams; // x: light count, y: zero, z: one (needed for d3d9)
 sampler2D _MainTex;
-sampler2D _MOAR;
+sampler2D _MetallicGlossMap;
 half4 _MainTex_ST;
 half _Cutoff;
 half4 _wind_dir;
@@ -70,7 +70,7 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal)
     half NdotH = max(dot(eyeNormal, H), 0.0h);
     half VdotH = max(dot(V, H), 0.0h);
 
-    half r = _Roughness;
+    half r =1 - _Roughness;
     half a2 = r * r; // squared roughness
 
     // GGX Normal Distribution Function (D)
@@ -114,11 +114,12 @@ struct v2f {
     half4 screenPosition : TEXCOORD2;
     half4 color : COLOR;
     half3 worldRefl : TEXCOORD3;
+    half fresnel  : TEXCOORD4;  // New: Fresnel factor
     
     #if USING_FOG
-        UNITY_FOG_COORDS(4)
+        UNITY_FOG_COORDS(5)
     #endif
-    SHADOW_COORDS(5)
+    SHADOW_COORDS(6)
 };
 
 // Main vertex shader: computes vertex lighting and shadow data
@@ -164,7 +165,8 @@ v2f vert(appdata v) {
     float3 worldViewDir = normalize(UnityWorldSpaceViewDir(worldPos));
     float3 worldNormal = UnityObjectToWorldNormal(v.normal);
     o.worldRefl = reflect(-worldViewDir, worldNormal);
-    
+    // Compute fresnel: higher value on grazing (when dot is low)
+    o.fresnel = pow(1.0h - saturate(dot(worldNormal, worldViewDir)), 5.0h);
     UNITY_TRANSFER_FOG(o, o.pos);
     TRANSFER_SHADOW(o);
     return o;
@@ -185,17 +187,16 @@ fixed4 frag(v2f v) : SV_Target {
     // Compute shadow attenuation (this value is used in the shadow receiver pass)
     fixed shadow = SHADOW_ATTENUATION(v);
     const half4 diffuse = tex2D(_MainTex, v.uv0.xy);
-    const half4 moar = tex2D(_MOAR, v.uv0.xy);
+    const half4 moar = tex2D(_MetallicGlossMap, v.uv0.xy);
     half4 skyData = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, v.worldRefl, (1 - moar.a) * 8);
     half3 skyColor = DecodeHDR(skyData, unity_SpecCube0_HDR);
-    half3 diff = lerp(diffuse.rgb, skyColor, moar.r) * shadow;
-    half4 col = half4((diff.rgb * lighting.rgb) + (skyColor * 0.25h) * moar.g, moar.b);
+    half3 diff = diffuse.rgb * shadow;//(diffuse.rgb, skyColor, moar.r) * shadow;
+    half4 col = half4(((diff.rgb * lighting.rgb) + (skyColor * v.fresnel)) * moar.g, moar.b);
 
     if (!_AlphaOn) {
         fixed4 texcol = tex2D(_MainTex, v.uv0.xy);
-        clip(texcol.a - _Cutoff);
     } else {
-        fixed4 texcol = tex2D(_MOAR, v.uv0.xy);
+        fixed4 texcol = tex2D(_MetallicGlossMap, v.uv0.xy);
         clip(texcol.b - _Cutoff);
     }
     #if USING_FOG

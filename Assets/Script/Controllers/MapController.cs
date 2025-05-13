@@ -55,7 +55,7 @@ public class MapController : MonoBehaviour {
 					mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
 					//keep apparent scale and position the same
 					mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-						new Vector3(5.81875f, 5.81875f, 5.81875f), 0.125f);
+						new Vector3(1.275f, 1.275f, 1.275f), 0.125f);
 				}
 			}
 			if (Input.GetKey(KeyCode.RightArrow) || Input.GetButton("Right"))
@@ -65,7 +65,7 @@ public class MapController : MonoBehaviour {
 					mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
 					//keep apparent scale and position the same
 					mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-						new Vector3(2.27f, 2.27f, 2.27f), 0.125f);
+						new Vector3(0.4975f, 0.4975f, 0.4975f), 0.125f);
 				}
 			}
 		}
@@ -92,18 +92,18 @@ public class MapController : MonoBehaviour {
 				{
 					if (!(mapCamera.orthographicSize <= maxZoom)) return;
 					mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, maxZoom, 0.125f);
-					//keep apparent scale and position the same for the polygon map UI
+					//keep apparent scale and position the same
 					mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-						new Vector3(5.81875f, 5.81875f, 5.81875f), 0.125f);
+						new Vector3(1.275f, 1.275f, 1.275f), 0.125f);
 				}
 				//Zoom in
 				else if (touchDelta > 0)
 				{
 					if (!(mapCamera.orthographicSize >= minZoom)) return;
 					mapCamera.orthographicSize = Mathf.Lerp(mapCamera.orthographicSize, minZoom, 0.125f);
-					//keep apparent scale and position the same for the polygon map UI
+					//keep apparent scale and position the same
 					mapContainer.transform.localScale = Vector3.Lerp(mapContainer.transform.localScale,
-						new Vector3(2.27f, 2.27f, 2.27f), 0.125f);
+						new Vector3(0.4975f, 0.4975f, 0.4975f), 0.125f);
 				}
 			}
 		}

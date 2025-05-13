@@ -94,18 +94,17 @@ Shader "Lighting/Crepuscular Rays" {
 		half4 frag(v2f i) : COLOR
 			{
 				// Calculate floattor from pixel to light source in screen space.
-				half spread = _Spread;
 				half4 light = half4(_LightPos.xyz,1);
 				// get our y direction, and swap the direction the coordinates are plotted based on that
 				// so that it looks correct regardless of current camera rotation- we decompose this
 				//because it will not look right if we just add or subtract light.xy to i.uv
-				half2 deltaTexCoord = half2(light.y < 0.0h ? half2((i.uv.x + light.x), (i.uv.y + light.y)) :
-									  half2((i.uv.x - light.x), (i.uv.y - light.y)));
-				/*
-				 * 	half2 deltaTexCoord = half2(light.y < 0.0h ? half2((i.uv.x + light.x) * spread, (i.uv.y + light.y) / spread) :
-									  half2((i.uv.x - light.x) / spread, (i.uv.y - light.y) * spread));
-				 */
+				// step(0, light.y) == 0 if light.y<0, else 1
+				half b = step(0.0h, light.y);
+				// s ==  1 when b==0 (light.y<0), or –1 when b==1 (light.y>=0)
+				half s = 1.0h - 2.0h * b;
 
+				// now branchless!
+				half2 deltaTexCoord = i.uv + s * light.xy;
 				// Divide by number of samples and scale by control factor.
 				deltaTexCoord *= 1.0h / _NumSamples * _Density;
 				
@@ -126,11 +125,13 @@ Shader "Lighting/Crepuscular Rays" {
 					uv -= deltaTexCoord;
 					// Retrieve sample at new location.
 					float sample = tex2D(_MainTex, uv);
-					half randomFactor = rand(uv.yx)*_fogInfluence * _Contrast;
+					half randomFactor = rand(uv)*_fogInfluence * _Contrast;
 					float value = frac(i/rate);
 					float cast = Linear01Depth(tex2D(_CameraDepthTexture, uv)).r;
 					//calc depth value
-					depth = float(value !=0 ? float(cast * 1.5f):float(cast * (1-randomFactor)));
+					half p = sign(value);   // p == 1 if value>0, else 0 when value==0
+					depth   = cast * lerp(1.0h - randomFactor, 1.0h, p);
+										
 					// Apply sample attenuation scale/decay factors.
 					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
 					sample *= 2.5h;
