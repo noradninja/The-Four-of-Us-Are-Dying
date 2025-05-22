@@ -1,19 +1,19 @@
-[20:33:03] INFO: Umbra 3 Optimizer version 3.3.22  (build: aa99894236119ba2e0eac5ca04d0133b3067a375)
-[20:33:03] INFO: T: 2 O: 0.5 H: 0.25 B: 5
-[20:33:03] INFO: Tile grid 104x32x104 (at -32,-52,-60) created for scene: 1746 tiles (0 empties not included) in 0.093 seconds
-[20:33:03] INFO: Using 24 threads to compute 1746 tiles, cache 4096 MB
-[20:33:04] INFO: Tile processing complete, computed 1741 tiles
-[20:33:04] INFO: Strict view volumes: no
-[20:33:04] INFO: Filtered 5/6 inside clusters
-[20:33:04] INFO: Filtered 39/40 global clusters
-[20:33:04] INFO: 4048/4087 cells reachable after global analysis
-[20:33:06] INFO: collapsed leaf tiles 1746 => 53
-[20:33:06] INFO: Generating LOD tiles using 24 threads
-[20:33:10] INFO: Connecting LOD tiles
-[20:33:10] INFO: Compressing lists
-[20:33:10] INFO: Average index range size: 29.35
-[20:33:10] INFO: object list: 2 kB 528 B, cluster list: 84 B
-[20:33:10] INFO: created tome with 105 tiles, 311 targets and 0 gates
-[20:33:10] INFO: Checking cache...
-[20:33:10] INFO: Cache check finished
-[20:33:11] DEBUG: Total allocations 3666934, peak 45820 (size 15 MB 270 kB 138 B)
+[13:08:17] INFO: Umbra 3 Optimizer version 3.3.22  (build: aa99894236119ba2e0eac5ca04d0133b3067a375)
+[13:08:17] INFO: T: 2 O: 0.5 H: 0.25 B: 5
+[13:08:17] INFO: Tile grid 104x32x104 (at -32,-52,-60) created for scene: 1746 tiles (0 empties not included) in 0.125 seconds
+[13:08:17] INFO: Using 24 threads to compute 1746 tiles, cache 4096 MB
+[13:08:18] INFO: Tile processing complete, computed 1589 tiles
+[13:08:18] INFO: Strict view volumes: no
+[13:08:18] INFO: Filtered 5/6 inside clusters
+[13:08:18] INFO: Filtered 39/40 global clusters
+[13:08:18] INFO: 4062/4101 cells reachable after global analysis
+[13:08:20] INFO: collapsed leaf tiles 1746 => 54
+[13:08:20] INFO: Generating LOD tiles using 24 threads
+[13:08:25] INFO: Connecting LOD tiles
+[13:08:25] INFO: Compressing lists
+[13:08:25] INFO: Average index range size: 29.40
+[13:08:25] INFO: object list: 2 kB 584 B, cluster list: 88 B
+[13:08:25] INFO: created tome with 107 tiles, 311 targets and 0 gates
+[13:08:25] INFO: Checking cache...
+[13:08:25] INFO: Cache check finished
+[13:08:26] DEBUG: Total allocations 3691743, peak 45907 (size 15 MB 425 kB 750 B)
