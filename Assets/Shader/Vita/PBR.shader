@@ -1,20 +1,17 @@
-﻿// Upgrade NOTE: replaced tex2D unity_Lightmap with UNITY_SAMPLE_TEX2D
-
-// Upg
-Shader "Vita/Forward/CustomBIRP"
+﻿Shader "Vita/Lit"
 {
     Properties
     {
-        _MainTex           ("Albedo (RGB)",                      2D) = "white" {}
-        _NormalMap         ("Normal Map",                        2D) = "bump"  {}
-        _MOARMap           ("MOAR: M(R) AO(G) A(B) R(A)",        2D) = "white" {}
-        [NoScaleOffset]_ParallaxMap ("Height Map (R)",           2D) = "black" {}
-        _ParallaxStrength  ("Parallax Strength",    Range(0,0.1)) = 0.02
-        _NormalHeight      ("Normal Height",        Range(0.1,2)) = 1.0
-        _Metallic          ("Base Metallic",       Range(0,1))   = 0.0
-        _Roughness         ("Base Roughness",      Range(0,1))   = 0.5
-        _Cutoff            ("Alpha Cutoff",        Range(0,1))   = 0.5
-        _DebugSpecular     ("Enable Specular",               Float) = 1.0
+        _MainTex           ("Albedo (RGB)",              2D) = "white" {}
+        _NormalMap         ("Normal Map",                2D) = "bump"  {}
+        _MOARMap           ("MOAR: M(R) AO(G) A(B) R(A)",2D) = "white" {}
+        [NoScaleOffset]_ParallaxMap ("Height Map (R)",     2D) = "black" {}
+        _ParallaxStrength  ("Parallax Strength", Range(0,0.1)) = 0.02
+        _NormalHeight      ("Normal Height",       Range(0.1,2)) = 1.0
+        _Metallic          ("Base Metallic",      Range(0,1))   = 0.0
+        _Roughness         ("Base Roughness",     Range(0,1))   = 0.5
+        _Cutoff            ("Alpha Cutoff",       Range(0,1))   = 0.5
+        _DebugSpecular     ("Enable Specular",           Float) = 1.0
     }
 
     SubShader
@@ -23,25 +20,62 @@ Shader "Vita/Forward/CustomBIRP"
         LOD 200
 
         //=================================================
-        // 1) ForwardBase: Directional light + shadows only
+        // 0) Shadow Caster Pass (must come first)
+        //=================================================
+        Pass
+        {
+            Name "ShadowCaster"
+            Tags { "LightMode"="ShadowCaster" }
+            ColorMask 0
+            ZWrite On
+            CGPROGRAM
+            #pragma vertex vertShadow
+            #pragma fragment fragShadowCaster
+            #pragma multi_compile_shadowcaster
+            #pragma multi_compile_instancing
+            #include "UnityCG.cginc"
+
+            struct v2f_shadow
+            {
+                V2F_SHADOW_CASTER;
+                UNITY_VERTEX_OUTPUT_STEREO
+            };
+
+            void vertShadow(appdata_full v, out v2f_shadow o)
+            {
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+                TRANSFER_SHADOW_CASTER(o);
+            }
+
+            float fragShadowCaster(v2f_shadow i) : SV_Target
+            {
+                // Writes depth into the shadow map; built-in handles detail.
+                SHADOW_CASTER_FRAGMENT(i);
+            }
+            ENDCG
+        }
+
+        //=================================================
+        // 1) ForwardBase: Directional light + shadows
         //=================================================
         Pass
         {
             Name "FORWARD"
             Tags { "LightMode"="ForwardBase" }
-
+            Blend One Zero
+            ZWrite On
             CGPROGRAM
-            // core includes for transforms, lighting macros, cookie vars, etc.
+            #pragma vertex vert
+            #pragma fragment fragBase
+            #pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap novertexlight
+            #pragma multi_compile_instancing
+
             #include "UnityCG.cginc"
             #include "UnityShaderVariables.cginc"
             #include "LightingCalculations.cginc"
-            #include "AutoLight.cginc"
+            #include "AutoLight.cginc"       // SHADOW_COORDS, TRANSFER_SHADOW, SHADOW_ATTENUATION
             #include "Lighting.cginc"
-
-            #pragma vertex vert
-            #pragma fragment fragBase
-            #pragma multi_compile_fwdbase
-            #pragma multi_compile_instancing
 
             sampler2D _MainTex, _NormalMap, _MOARMap, _ParallaxMap;
             float4   _MainTex_ST, _NormalMap_ST, _MOARMap_ST;
@@ -63,29 +97,29 @@ Shader "Vita/Forward/CustomBIRP"
                 float3 normal    : TEXCOORD1;
                 float4 tangent   : TEXCOORD2;
                 float2 uv        : TEXCOORD3;
-                float3 viewDir   : TEXCOORD4;
-                UNITY_LIGHTING_COORDS(5,6)
-                float2 uv1       : TEXCOORD7;
-                half3 worldRefl : TEXCOORD8;
-                UNITY_VERTEX_INPUT_INSTANCE_ID
+                SHADOW_COORDS(4)
+                float2 uv1       : TEXCOORD5;
+                half3 worldRefl  : TEXCOORD6;
+                UNITY_VERTEX_OUTPUT_STEREO
             };
 
             v2f vert(appdata v)
             {
-                v2f o;
                 UNITY_SETUP_INSTANCE_ID(v);
-
+                v2f o;
                 o.pos      = UnityObjectToClipPos(v.vertex);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 o.normal   = UnityObjectToWorldNormal(v.normal);
                 o.tangent  = v.tangent;
                 o.uv       = TRANSFORM_TEX(v.uv, _MainTex);
-                o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
-                o.viewDir  = _WorldSpaceCameraPos - o.worldPos;
+                o.uv1      = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+
                 float3 worldViewDir = normalize(UnityWorldSpaceViewDir(o.worldPos));
-                float3 worldNormal = UnityObjectToWorldNormal(o.normal);
-                o.worldRefl = reflect(-worldViewDir, worldNormal);
+                o.worldRefl = reflect(-worldViewDir, normalize(o.normal));
+
+                TRANSFER_SHADOW(o);
                 UNITY_TRANSFER_LIGHTING(o, v.vertex);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 return o;
             }
 
@@ -93,82 +127,61 @@ Shader "Vita/Forward/CustomBIRP"
             {
                 UNITY_SETUP_INSTANCE_ID(i);
 
-                // Material unpack
+                // Alpha test
                 half4 MOAR = tex2D(_MOARMap, i.uv * _MOARMap_ST.xy + _MOARMap_ST.zw);
+                clip(MOAR.b - _Cutoff);
+
+                // Unpack maps
                 half4 alb  = tex2D(_MainTex, i.uv * _MainTex_ST.xy + _MainTex_ST.zw);
-                half3 nmap = ExtractNormal(
-                    tex2D(_NormalMap, i.uv * _NormalMap_ST.xy + _NormalMap_ST.zw),
-                    _NormalHeight
-                );
+                half3 nmap = ExtractNormal(tex2D(_NormalMap, i.uv * _NormalMap_ST.xy + _NormalMap_ST.zw), _NormalHeight);
 
-                half  metalness = _Metallic * MOAR.r + 0.001;
-                half  occlusion = MOAR.g;
-                half  alpha     = MOAR.b;
-                half  roughness = ((1-_Roughness * MOAR.a) * 12); //mult by scalar till I like it
-                // Reconstruct world normal
-                half3 binorm = cross(i.normal, i.tangent.xyz)
-                             * (i.tangent.w * unity_WorldTransformParams.w);
-                half3 N = normalize(
-                    nmap.x * i.tangent.xyz +
-                    nmap.y * binorm         +
-                    nmap.z * i.normal
-                );
+                // Build TBN normal
+                half3 binorm = cross(i.normal, i.tangent.xyz) * (i.tangent.w * unity_WorldTransformParams.w);
+                half3 N     = normalize(nmap.x * i.tangent.xyz + nmap.y * binorm + nmap.z * i.normal);
 
-                // View & grazing
-                half3 V = normalize(_WorldSpaceCameraPos - i.worldPos);
-                float f = saturate(1.0 - dot(i.normal, V));
-                float g = 1.0 - (1.0 - f) * (1.0 - f) * 0.13; // quadratic approximation emphasizing grazing
-                half3 grazingAngle = g;
-               // Fresnel-Schlick approximation (grazingAngle already precomputed)
-                float3 F0 = metalness;
-                float3 FR = lerp(F0, 1.0, grazingAngle);
-                // Directional light + shadows
-                UNITY_LIGHT_ATTENUATION(atten, i, i.worldPos);
-                atten += 0.25;
-                half3 Ld = normalize(_WorldSpaceLightPos0.xyz);
-                half  nl = max(0, dot(N, Ld));
+                // Lighting
+                half3 V       = normalize(_WorldSpaceCameraPos - i.worldPos);
+                fixed shadow  = SHADOW_ATTENUATION(i);
+                half3 rtTint  = unity_ShadowColor.rgb;
+                half3 dynLit  = shadow + rtTint * (1 - shadow);
 
-                // BRDF
+                half nl = max(dot(N, normalize(_WorldSpaceLightPos0.xyz)), 0);
                 half3 diff = DisneyDiffuse(nl, alb.rgb, _LightColor0.rgb);
-                //this is commented out because we really only need diffuse 
-                /*half3 spec = GGXSpecular(N, V, Ld, i.worldPos,
-                                  _WorldSpaceLightPos0.xyz,
-                                  _LightColor0.rgb,
-                                  roughness, FR);*/
-                half3 lm = DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1));
-                half4 skyData = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, i.worldRefl, roughness);
-                half3 skyColor = DecodeHDR(skyData, unity_SpecCube0_HDR);
-                // Combine
-                half3 col =  ( ( (diff * lm) * atten + (skyColor * FR) ) * 0.5 ) * occlusion;
 
-                clip(alpha - _Cutoff);
-                return half4(col, alpha);
+                // Reflection
+                float roughVal = (1.0 - _Roughness * MOAR.a) * 16.0;
+                half4 sky    = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, i.worldRefl, roughVal);
+                half3 skyCol = DecodeHDR(sky, unity_SpecCube0_HDR);
+                half f      = saturate(1 - dot(i.normal, V));
+                half3 FR    = lerp(_Metallic * MOAR.r, 1, (1 - (1 - f)*(1 - f)));
+                half3 spec = skyCol * FR * (_Metallic) * dynLit;
+
+                // Baked
+                half3 baked = DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1)).rgb;
+
+                // Final
+                half3 color = diff * dynLit + spec + alb.rgb * UNITY_LIGHTMODEL_AMBIENT.rgb * baked * MOAR.g;
+                return half4(color, alb.a);
             }
             ENDCG
         }
 
-        
+        //=================================================
+        // 2) META pass (for baking, probes, etc.)
+        //=================================================
         Pass
         {
             Name "META"
             Tags { "LightMode"="Meta" }
-
             Cull Off
-
             CGPROGRAM
             #pragma vertex vert_meta
             #pragma fragment frag_meta
-
-            #pragma shader_feature _EMISSION
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #pragma shader_feature ___ _DETAIL_MULX2
-            #pragma shader_feature EDITOR_VISUALIZATION
-
+            #pragma shader_feature _EMISSION _METALLICGLOSSMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _DETAIL_MULX2 EDITOR_VISUALIZATION
             #include "UnityStandardMeta.cginc"
             ENDCG
         }
     }
 
-    FallBack "Diffuse"
+    Fallback "Diffuse"
 }

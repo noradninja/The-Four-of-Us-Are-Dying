@@ -7,7 +7,8 @@ public class POIManager : MonoBehaviour
     public Transform playerTransform;
 
     public List<GameObject> poiList = new List<GameObject>();
-    private GameObject activePOI = null;
+    public GameObject activePOI = null;
+    public GameObject closest;
 
     public static POIManager instance;
 
@@ -36,7 +37,7 @@ public class POIManager : MonoBehaviour
         if (playerTransform == null)
             return;
 
-        GameObject closest = null;
+        closest = null;
         float closestDistanceSqr = activationRange * activationRange;
 
         foreach (GameObject poi in poiList)
@@ -58,7 +59,9 @@ public class POIManager : MonoBehaviour
             if (activePOI != closest)
             {
                 if (activePOI != null)
+                {
                     activePOI.GetComponent<PointOfInterest>().isActiveObject = false;
+                }
 
                 activePOI = closest;
                 activePOI.GetComponent<PointOfInterest>().isActiveObject = true;

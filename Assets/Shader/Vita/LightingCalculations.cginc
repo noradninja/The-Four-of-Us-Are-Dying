@@ -13,9 +13,9 @@ half3 DisneyDiffuse(float nl, float3 color, float3 lightColor)
     // Lambert diffuse term
     float diffuse = max(0.0, nl);
     // Energy-conserving adjustment
-    float3 adjustedDiffuse = diffuse * baseColor + ((baseColor / 3.14159));
+    float3 adjustedDiffuse = diffuse * baseColor / 3.14159;
     // Apply base color
-    return adjustedDiffuse + baseColor;
+    return (adjustedDiffuse * baseColor * lightColor);
 }
 
 // Subsurface scattering with edge glow
@@ -43,29 +43,29 @@ half3 SubsurfaceScatteringDiffuse(float3 normal, float3 viewDir, float3 lightDir
 // GGX
 half3 GGXSpecular(float3 normal, float3 viewDir, float3 lightDir, float3 position, float3 lightPosition, float3 lightColor, float roughness, float3 grazingAngle)
 {
+    // Get dot products needed
     float3 h = normalize(viewDir + lightDir);
-    float nh = max(dot(normal, h), 0.001);
-    float nv = max(dot(normal, viewDir), 0.001);
-    float nl = max(dot(normal, lightDir), 0.001);
-
-    float roughSq = roughness * roughness;
-
-    float shininess = saturate(1.0 - roughness);
-    float nhExp = pow(nh, lerp(0.1, 4.0, shininess)); // tighter falloff
-    float D = nhExp * roughSq;
-
-
-    // Smith G term approximation
-    float G = saturate((2.0 * nh * nv) / dot(viewDir, h));
-
-    // Fresnel-Schlick approximated with precomputed grazing term
+    float nh = max(0.0, dot(normal, h));
+    float nv = max(0.0, dot(normal, viewDir));
+    float nl = max(0.0, dot(normal, lightDir));
+    float roughnessSq = roughness * roughness;
+    // Absolute value of reflection intensity 
+    float a = nh * nh * (roughnessSq - 1.0) + 1.0;
+    // Combine the terms before division
+    float invDenominator = 1.0 / (3.14 * a * a);
+    // Normal distribution
+    float D = roughnessSq * invDenominator;
+   // Shadow sidedness
+    float G1 = (1.0 * nh) * invDenominator;
+    // Shadow distribution
+    float G = min(1.0, min(G1, 2.0 * nl / nh)) + lightColor;
+    // Fresnel-Schlick approximation
     float3 F = grazingAngle;
-
-    // Final specular BRDF
-    float spec = (D * G) / max(.0 * nv * nl, 0.001);
-    return F * spec;
+    // Avoid division by zero by adding a small value
+    float denominator = 4.0 * nv * nl + 0.001;
+    // Multiply instead of dividing
+    return (D * G * F) * rsqrt(denominator);
 }
-
 
 // Anisotropic
 half3 AnisotropicSpecular(float3 viewDir, float3 position, float3 normal, float3 lightPosition, float roughness, float3 grazingAngle)

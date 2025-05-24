@@ -28,7 +28,7 @@ public class PointOfInterest : MonoBehaviour
     {
         if (isActiveObject)
         {
-            POILook(headObject.transform, this.transform, 2.0f);
+            POILook(headObject.transform, transform, 2.0f);
         }
         else
         {
