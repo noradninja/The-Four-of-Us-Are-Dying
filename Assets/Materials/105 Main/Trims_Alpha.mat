@@ -66,7 +66,7 @@ Material:
     m_Floats:
     - _BumpScale: 1
     - _Cull: 2
-    - _Cutoff: 0.432
+    - _Cutoff: 0
     - _DebugSpecular: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -80,8 +80,8 @@ Material:
     - _NormalHeight: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ParallaxStrength: 0.02
-    - _Roughness: 0.5
+    - _ParallaxStrength: 0
+    - _Roughness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 5

@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Rear_Trims_LOD0
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
+  m_Shader: {fileID: 4800000, guid: 61c415499e8b52c4aa2a4bc87ea17ce6, type: 3}
   m_ShaderKeywords: _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -38,12 +38,20 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOARMap:
+        m_Texture: {fileID: 2800000, guid: b1353b5c1a5f8c54abef12c7c3046e62, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 7fbeb46366964a54ebea8273b2f18ac6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
         m_Texture: {fileID: 2800000, guid: b1353b5c1a5f8c54abef12c7c3046e62, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: ff818371cb4682348ae21933b15b5cde, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -58,6 +66,7 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0
+    - _DebugSpecular: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
@@ -65,11 +74,13 @@ Material:
     - _GlossyReflections: 1
     - _IntensityVC: 1
     - _LeavesOn: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Mode: 0
+    - _NormalHeight: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _Roughness: 0.5
+    - _ParallaxStrength: 0.02
+    - _Roughness: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1

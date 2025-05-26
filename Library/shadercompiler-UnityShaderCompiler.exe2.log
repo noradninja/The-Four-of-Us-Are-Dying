@@ -1,0 +1,31 @@
+Base path: C:/Program Files/Unity/Editor/Data
+Cmd: initializeCompiler
+Cmd: compileSnippet
+  api=10 type=0 insize=5621 outsize=1237 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SHADOWMASK LIGHTPROBE_SH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 UNITY_SPECCUBE_BOX_PROJECTION SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: disassembleShader
+  api=10 insize=1237 outsize=11956 ok=1
+Cmd: compileSnippet
+  api=10 type=0 insize=5621 outsize=1557 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 UNITY_SPECCUBE_BOX_PROJECTION SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: disassembleShader
+  api=10 insize=1557 outsize=16734 ok=1
+Cmd: compileSnippet
+  api=10 type=0 insize=5621 outsize=1557 kw=UNITY_PASS_FORWARDBASE DIRECTIONAL SHADOWS_SCREEN LIGHTMAP_ON DIRLIGHTMAP_COMBINED LIGHTMAP_SHADOW_MIXING SHADOWS_SHADOWMASK LIGHTPROBE_SH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_NO_SCREENSPACE_SHADOWS UNITY_PBS_USE_BRDF3 UNITY_SPECCUBE_BOX_PROJECTION SHADER_API_MOBILE UNITY_COLORSPACE_GAMMA UNITY_LIGHTMAP_RGBM_ENCODING ok=1
+Cmd: disassembleShader
+  api=10 insize=1557 outsize=16734 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
