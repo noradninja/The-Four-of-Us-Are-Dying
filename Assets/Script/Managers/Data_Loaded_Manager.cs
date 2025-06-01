@@ -20,6 +20,10 @@ public class Data_Loaded_Manager : MonoBehaviour {
 
 	// Use this for initialization
 	private void Start () {
+		//trigger global LUT texture load
+		Texture2D lut = Resources.Load<Texture2D>("brdf_lut");
+		Shader.SetGlobalTexture("_BRDFLUT", lut);
+		
 		if (PlayerPrefs.GetInt("hasLoadedFile")==1){
 //player
 			player.transform.position = SetScenes.playerPosition;

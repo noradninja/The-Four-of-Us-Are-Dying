@@ -73,7 +73,7 @@ Material:
     - _ZWrite: 1
     - _colorGrading: 1
     - _contrast: 1
-    - _exposure: 1.33
+    - _exposure: 1
     - _toneMapping: 1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

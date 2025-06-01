@@ -7,14 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Trims_Transparent_LOD0
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _ALPHACHANNELENABLED_ON _ALPHACHANNEL_ON _ALPHAPREMULTIPLY_ON
-    _ALPHATEST_ON _METALLICGLOSSMAP _SPECULAR_SETUP
+  m_Shader: {fileID: 4800000, guid: 61c415499e8b52c4aa2a4bc87ea17ce6, type: 3}
+  m_ShaderKeywords: _ALPHACHANNELENABLED_ON _ALPHACHANNEL_ON _ALPHATEST_ON _METALLICGLOSSMAP
+    _SPECULAR_SETUP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2450
+  stringTagMap:
+    RenderType: TransparentCutout
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -63,6 +64,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOARMap:
+        m_Texture: {fileID: 2800000, guid: 0a8dc36261084b94888bd542d4d3a004, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 7f8f179463a6fb149b741a3ca3b256ec, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -79,6 +84,10 @@ Material:
         m_Texture: {fileID: 2800000, guid: 549c7109efdf40548a5b6fa6a592b002, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 549c7109efdf40548a5b6fa6a592b002, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _Normal_Map:
         m_Texture: {fileID: 2800000, guid: 549c7109efdf40548a5b6fa6a592b002, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -88,6 +97,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecCube:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -133,6 +146,7 @@ Material:
     - _CameraNearFadeDistance: 1
     - _Cull: 2
     - _Cutoff: 0.393
+    - _DebugSpecular: 1
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
     - _DistortionEnabled: 0
@@ -154,12 +168,14 @@ Material:
     - _LeavesOn: 0
     - _LightingEnabled: 1
     - _Matte: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _MetallicPower: 0
     - _Metalness: 0
     - _Mode: 1
+    - _NormalHeight: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _ParallaxStrength: 0.02
     - _RimPower: 1
     - _Roughness: 1
     - _RouughnessPower: 0
@@ -178,7 +194,7 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularPower: 0.209
     - _Specularity: 0.9
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _Surface: 0
     - _UVSec: 0
     - _WorkflowMode: 0

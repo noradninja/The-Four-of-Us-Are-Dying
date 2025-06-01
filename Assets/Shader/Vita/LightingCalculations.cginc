@@ -40,31 +40,75 @@ half3 SubsurfaceScatteringDiffuse(float3 normal, float3 viewDir, float3 lightDir
 
 /////////////////////SPECULAR//////////////////////////////////////
 
-// GGX
-half3 GGXSpecular(float3 normal, float3 viewDir, float3 lightDir, float3 position, float3 lightPosition, float3 lightColor, float roughness, float3 grazingAngle)
+static const float PI = 3.14159265;
+
+float DistributionGGX(float NdotH, float roughness)
 {
-    // Get dot products needed
-    float3 h = normalize(viewDir + lightDir);
-    float nh = max(0.0, dot(normal, h));
-    float nv = max(0.0, dot(normal, viewDir));
-    float nl = max(0.0, dot(normal, lightDir));
-    float roughnessSq = roughness * roughness;
-    // Absolute value of reflection intensity 
-    float a = nh * nh * (roughnessSq - 1.0) + 1.0;
-    // Combine the terms before division
-    float invDenominator = 1.0 / (3.14 * a * a);
-    // Normal distribution
-    float D = roughnessSq * invDenominator;
-   // Shadow sidedness
-    float G1 = (1.0 * nh) * invDenominator;
-    // Shadow distribution
-    float G = min(1.0, min(G1, 2.0 * nl / nh)) + lightColor;
-    // Fresnel-Schlick approximation
-    float3 F = grazingAngle;
-    // Avoid division by zero by adding a small value
-    float denominator = 4.0 * nv * nl + 0.001;
-    // Multiply instead of dividing
-    return (D * G * F) * rsqrt(denominator);
+    float a      = roughness * roughness;
+    float a2     = a * a;
+    float NdotH2 = NdotH * NdotH;
+
+    float denom = (NdotH2 * (a2 - 1.0) + 1.0);
+    denom = PI * denom * denom;   // π * ((… )²)
+
+    return a2 / denom;
+}
+
+float GeometrySchlickGGX(float NdotX, float roughness)
+{
+    float a      = roughness * roughness;
+    float k      = (a + 1.0) * (a + 1.0) / 8.0; // Smith’s remapping
+    float denom  = NdotX * (1.0 - k) + k;
+    return NdotX / denom;
+}
+
+float GeometrySmith(float NdotV, float NdotL, float roughness)
+{
+    float ggx2 = GeometrySchlickGGX(NdotV, roughness);
+    float ggx1 = GeometrySchlickGGX(NdotL, roughness);
+    return ggx1 * ggx2;
+}
+
+float3 FresnelSchlick(float cosTheta, float3 F0)
+{
+    return F0 + (1.0 - F0) * pow(1.0 - cosTheta, 5.0);
+}
+
+half3 GGXSpecular_PBR(
+    float3 normal,
+    float3 viewDir,
+    float3 lightDir,
+    float3 albedo,
+    float  metallic,
+    float  roughness,
+    float3 lightColor
+)
+{
+    // 1) Calculate halfway vector H
+    float3 H = normalize(viewDir + lightDir);
+
+    // 2) Dot products
+    float NdotV = saturate(dot(normal, viewDir));
+    float NdotL = saturate(dot(normal, lightDir));
+    float NdotH = saturate(dot(normal, H));
+    float VdotH = saturate(dot(viewDir, H));
+
+    // 3) Distribution term
+    float D = DistributionGGX(NdotH, roughness);
+
+    // 4) Geometry term
+    float G = GeometrySmith(NdotV, NdotL, roughness);
+
+    // 5) Fresnel term
+    float3 F0 = lerp(float3(0.04, 0.04, 0.04), albedo, metallic);
+    float3 F  = FresnelSchlick(VdotH, F0);
+
+    // 6) Combine
+    float numerator   = D * G;
+    float denominator = max(4.0 * NdotV * NdotL, 0.001);
+    float3 specular   = (numerator / denominator) * F * lightColor;
+
+    return specular;
 }
 
 // Anisotropic
