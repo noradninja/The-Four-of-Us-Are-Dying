@@ -14,7 +14,8 @@ Material:
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: TransparentCutout
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -467,7 +468,7 @@ Material:
     - _LightMode: 1
     - _LightProbes: 0
     - _ManualControl: 0
-    - _Metallic: 0.75
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -498,7 +499,7 @@ Material:
     - _RimFold: 0
     - _RimSize: 0
     - _RimToggle: 0
-    - _Roughness: 0.5
+    - _Roughness: 1
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
     - _SO_ParticleMode: 0

@@ -28441,7 +28441,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100024, guid: c1216b5e63e70a643a88e33a6aeb23ea, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2300038, guid: c1216b5e63e70a643a88e33a6aeb23ea, type: 3}
       propertyPath: m_ScaleInLightmap
@@ -38851,7 +38851,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: cb15a8ecc5902c64b9abae794d05c5a2, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb15a8ecc5902c64b9abae794d05c5a2, type: 3}
@@ -53514,6 +53514,10 @@ Prefab:
     - target: {fileID: 2300004, guid: 5e3401a31183efb41af39cfb8b72c3ba, type: 3}
       propertyPath: m_CastShadows
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 5e3401a31183efb41af39cfb8b72c3ba, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e3401a31183efb41af39cfb8b72c3ba, type: 3}
