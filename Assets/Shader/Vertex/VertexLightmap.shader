@@ -84,22 +84,44 @@
 	        // This pass it not used during regular rendering.
         Pass
         {
-            Name "META"
-            Tags { "LightMode"="Meta" }
+            // Alpha map enabled Bakery-specific meta pass
 
+            Name "META_BAKERY"
+
+            Tags {"LightMode"="Meta"}
             Cull Off
-
             CGPROGRAM
-            #pragma vertex vert_meta
-            #pragma fragment frag_meta
-
-            #pragma shader_feature _EMISSION
-            #pragma shader_feature _METALLICGLOSSMAP
-            #pragma shader_feature _ _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
-            #pragma shader_feature ___ _DETAIL_MULX2
-            #pragma shader_feature EDITOR_VISUALIZATION
 
             #include "UnityStandardMeta.cginc"
+
+            // Include Bakery meta pass
+            #include "BakeryMetaPass.cginc"
+
+            sampler2D _MOARMap;
+            float4   _MOARMap_ST;
+
+            float4 frag_customMeta (v2f_bakeryMeta i): SV_Target
+            {
+                UnityMetaInput o;
+                UNITY_INITIALIZE_OUTPUT(UnityMetaInput, o);
+
+                // Output custom alpha to Bakery
+                if (unity_MetaFragmentControl.w)
+                {
+                   // Sample MOAR's alpha (alpha = cutout)
+                    half4 moar = tex2D(_MOARMap, i.uv);
+                    clip(moar.b - _Cutoff);
+                    return moar.b;
+                }
+
+                // Regular Unity meta pass
+                o.Albedo = tex2D(_MainTex, i.uv);
+                return UnityMetaFragment(o);
+            }
+
+            // Must use vert_bakerymt vertex shader
+            #pragma vertex vert_bakerymt
+            #pragma fragment frag_customMeta
             ENDCG
         }
 		Pass
