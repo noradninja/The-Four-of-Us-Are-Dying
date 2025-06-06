@@ -57,5 +57,5 @@ Material:
     - _fogSpeed: 0.375
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: 0.10965964, g: 2.6544821, b: 0.5673379, a: 0}
+    - _LightPos: {r: 1.1758434, g: 2.8697987, b: 0.5118108, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}

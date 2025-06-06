@@ -86,6 +86,7 @@ Material:
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _EmissiveBright: 0
+    - _FadeDistance: 10
     - _GlossMapScale: 1
     - _Glossiness: 1
     - _GlossyReflections: 1
