@@ -28,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 698a76bf5d5d18b40b32394482e2ec5d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 2aef5c515fdaf4444b2f54b5b850f2be, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap2:
@@ -318,6 +318,7 @@ Material:
     - _EnableGSAA: 0
     - _EnableParallax: 0
     - _ExposureOcclusion: 0.2
+    - _FadeDistance: 10
     - _FlipBumpY: 0
     - _FogOffset: 0
     - _FogToggle: 1
@@ -484,7 +485,7 @@ Material:
     - _MoveSpeed: 1
     - _MoveUVToggle: 0
     - _MyCullMode: 2
-    - _NormalHeight: 1
+    - _NormalHeight: 2
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _OptionsFold: 1

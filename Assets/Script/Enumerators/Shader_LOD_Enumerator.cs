@@ -63,7 +63,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private void Start()
     {
         // Register with the manager
-        LODManager.Instance.Register(this);
+        //LODManager.Instance.Register(this);
     }
 
     // Called by LODManager each tick.

@@ -12,8 +12,8 @@
         _Cull        ("Cull Mode", Float) = 2
 
         _MainTex     ("Albedo (RGB)",     2D) = "white" {}
-        _NormalMap   ("Normal Map",       2D) = "bump"  {}
-        _MOARMap     ("MOAR (RGBA)",      2D) = "white" {}
+        _BumpMap   ("Normal Map",       2D) = "bump"  {}
+        _MetallicGlossMap     ("MOAR (RGBA)",      2D) = "white" {}
         _NormalHeight("Normal Height", Range(0.1, 2.0)) = 1.0
         _Metallic    ("Base Metallic", Range(0, 1))   = 0.0
         _Cutoff      ("Alpha Cutoff",   Range(0, 1))   = 0.0
@@ -62,8 +62,8 @@
                 float2 uv     : TEXCOORD0;
             };
 
-            sampler2D _MOARMap;
-            float4   _MOARMap_ST;
+            sampler2D_half _MetallicGlossMap;
+            float4   _MetallicGlossMap_ST;
             fixed    _Cutoff;
             float    _Mode;
 
@@ -73,7 +73,7 @@
                 UNITY_SETUP_INSTANCE_ID(v);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 TRANSFER_SHADOW_CASTER(o);
-                o.uv = TRANSFORM_TEX(v.uv, _MOARMap);
+                o.uv = TRANSFORM_TEX(v.uv, _MetallicGlossMap);
                 return o;
             }
 
@@ -81,7 +81,7 @@
             {
                 if (_Mode == 1)
                 {
-                    fixed4 clipMask = tex2D(_MOARMap, i.uv);
+                    fixed4 clipMask = tex2D(_MetallicGlossMap, i.uv);
                     clip(clipMask.b - _Cutoff);
                 }
                 SHADOW_CASTER_FRAGMENT(i);
@@ -108,18 +108,33 @@
             #pragma fragment frag
             #pragma target 3.0
 
-            #pragma multi_compile_fwdbase nolightmap nodirlightmap nodynlightmap novertexlight
+            #pragma multi_compile_fwdbase nodirlightmap nodynlightmap novertexlight
             #pragma multi_compile_instancing
             #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+            #pragma multi_compile _ LIGHTMAP_ON
 
-              #include "UnityCG.cginc"
+            #pragma shader_feature BAKERY_VERTEXLM
+            #pragma shader_feature BAKERY_VERTEXLMDIR
+            #pragma shader_feature BAKERY_VERTEXLMSH
+            #pragma shader_feature BAKERY_VERTEXLMMASK
+            #pragma shader_feature BAKERY_SH
+            #pragma shader_feature BAKERY_SHNONLINEAR
+            #pragma shader_feature BAKERY_RNM
+            #pragma shader_feature BAKERY_LMSPEC
+            #pragma shader_feature BAKERY_BICUBIC
+            #pragma shader_feature BAKERY_PROBESHNONLINEAR
+            #pragma shader_feature BAKERY_VOLUME
+            #pragma shader_feature BAKERY_COMPRESSED_VOLUME
+            #pragma shader_feature BAKERY_VOLROTATION
+            
+            #include "UnityCG.cginc"
             #include "UnityShaderVariables.cginc"
             #include "LightingCalculations.cginc"   // Updated GGX
             #include "AutoLight.cginc"
             #include "Lighting.cginc"
 
-            sampler2D _MainTex;
-            sampler2D _MOARMap;
+            sampler2D_half _MainTex;
+            sampler2D_half _MetallicGlossMap;
             samplerCUBE _Cube;
             float4   _MainTex_ST;
 
@@ -184,7 +199,7 @@
                 float  metallicVal  = _Metallic;
 
                 o.preDiffuse  = DisneyDiffuse(o.ndotl, albedoColor, _LightColor0.rgb);
-                o.preSpecular = GGXSpecular_PBR(o.worldNormal, Vdir, Ldir, albedoColor, metallicVal, roughnessVal, _LightColor0.rgb * 0.5);
+                o.preSpecular = GGXSpecular_PBR(o.worldNormal, Vdir, Ldir, albedoColor, metallicVal, roughnessVal);
 
                 // Vertex reflection vector
                 float3 refl = reflect(-Vdir, o.worldNormal);
@@ -199,45 +214,64 @@
             {
                 UNITY_SETUP_INSTANCE_ID(i);
 
-                // Sample MOAR and albedo
-                half4 moar = tex2D(_MOARMap, i.uv * _MainTex_ST.xy + _MainTex_ST.zw);
+                // Sample MOAR (Metallic, AO, Alpha, Roughness) and Albedo per-fragment
+                half4 moar = tex2D(_MetallicGlossMap, i.uv * _MainTex_ST.xy + _MainTex_ST.zw);
                 half4 alb  = tex2D(_MainTex, i.uv * _MainTex_ST.xy + _MainTex_ST.zw);
 
                 // Cutout
                 if (_Mode == 1)
                     clip(moar.b - _Cutoff);
 
-                // Texture-based properties
-                float  roughnessVal = saturate(1 - (_Roughness * moar.a));
-                float  metallicVal  = moar.r;
+                // Compute per-pixel roughness and metallic
+                half roughnessVal = saturate(1 - (_Roughness * moar.a));
+                half metallicVal  = moar.r;
 
-                // Baked lightmap
-                half3 baked = DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1)).rgb;
-                // 5) Shadow & attenuation
+                // Baked lightmap (unchanged)
+                #ifdef LIGHTMAP_ON
+                    half3 baked = DecodeLightmap(UNITY_SAMPLE_TEX2D(unity_Lightmap, i.uv1)).rgb;
+                #else
+                    half3 baked = _LightColor0;
+                #endif
+
+                // 5) Shadow & attenuation using per-vertex normal and ndotl
                 UNITY_LIGHT_ATTENUATION(attenuation, i, i.worldPos.xyz);
-                half3 rtTint    = unity_ShadowColor.rgb;
-                half  nl        = saturate(dot(i.worldNormal.xyz, _WorldSpaceLightPos0.xyz));
-               
-                // Final diffuse: use precomputed and modulate
-                half3 diff = i.preDiffuse;
-                diff = ((diff + alb.rgb) + 0.25);
+                half3 rtTint = unity_ShadowColor.rgb;
+                half3 shaded = i.ndotl * attenuation;
+
+                // 6) Diffuse via precomputed per-vertex lighting, modulated by albedo and AO
+                // Precomputed i.preDiffuse assumed for albedoColor = 1, lightColor = _LightColor0
+                half3 diff = i.preDiffuse * alb.rgb;
+                diff = diff + alb.rgb;                 // match File A's diff + alb
 
                 // 7) Indirect mask
-                half indirect   = saturate(1 - (baked.b + baked.r * baked.g));
-                half3 shaded    = nl * attenuation;
-                half3 combined  = max(shaded - indirect, rtTint);
+                half indirect = saturate(1 - (baked.b + baked.r + baked.g));
+                half3 combined = max(shaded - indirect, rtTint);
 
-                // 8) Final diffuse combination
-                half3 finalCol = lerp(combined, diff, indirect);
-                finalCol       = finalCol * diff * moar.g;
-                // Final specular: modulated by specFactor and metallic
-                half3 spec = i.preSpecular * moar.a * roughnessVal * 1.5;
-                half3 rgb = ((finalCol + spec) * baked);
-                // Cube reflection
-                half4 cuberef  = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, i.worldRefl.xyz, roughnessVal * 4.0);
-                half3 skyCol    = DecodeHDR(cuberef, unity_SpecCube0_HDR);
-                rgb        += skyCol * (metallicVal * moar.r);
-                // Alpha
+                // 8) Final diffuse term
+                half3 blendedDiffuse = lerp(combined, diff, indirect);
+                half3 diffuseTerm = blendedDiffuse * moar.g;
+
+                // 9) Specular via precomputed per-vertex specular
+                // i.preSpecular was computed for albedoColor = 1, uses same metallic and roughness as vertex
+                half3 specTerm = i.preSpecular * alb.rgb;
+                specTerm *= moar.g * 0.5h;            // match File A's intensity reduction
+
+                // 10) Combine diffuse + specular
+                half3 lit = diffuseTerm + specTerm;
+
+                // 11) Lightmap contributes only to albedo
+                half3 lmContrib = baked * alb.rgb;
+                half3 rgb = lit + lmContrib;
+
+                // 12) Cubemap reflection using per-vertex fresnel (ndoth)
+                if (metallicVal > 0.0h)
+                {
+                    half4 cuberef = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, i.worldRefl.xyz, roughnessVal * 8.0h);
+                    half3 skyCol  = DecodeHDR(cuberef, unity_SpecCube0_HDR);
+                    rgb += skyCol * (metallicVal * moar.g * i.ndoth * 0.5h);
+                }
+
+                // 13) Alpha
                 half alpha = moar.b;
                 if (_Mode == 3)
                     rgb *= alpha;

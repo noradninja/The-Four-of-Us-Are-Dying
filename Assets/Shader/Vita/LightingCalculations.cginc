@@ -80,8 +80,7 @@ half3 GGXSpecular_PBR(
     float3 lightDir,
     float3 albedo,
     float  metallic,
-    float  roughness,
-    float3 lightColor
+    float  roughness
 )
 {
     // 1) Calculate halfway vector H
@@ -94,10 +93,10 @@ half3 GGXSpecular_PBR(
     float VdotH = saturate(dot(viewDir, H));
 
     // 3) Distribution term
-    float D = DistributionGGX(NdotH, roughness);
+    float D = DistributionGGX(NdotH, roughness * .6);
 
     // 4) Geometry term
-    float G = GeometrySmith(NdotV, NdotL, roughness);
+    float G = GeometrySmith(NdotV, NdotL, roughness * .6);
 
     // 5) Fresnel term
     float3 F0 = lerp(float3(0.04, 0.04, 0.04), albedo, metallic);
@@ -106,7 +105,7 @@ half3 GGXSpecular_PBR(
     // 6) Combine
     float numerator   = D * G;
     float denominator = max(4.0 * NdotV * NdotL, 0.001);
-    float3 specular   = (numerator / denominator) * F * lightColor;
+    float3 specular   = (numerator / denominator) * F;
 
     return specular;
 }
