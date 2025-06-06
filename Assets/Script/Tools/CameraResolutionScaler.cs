@@ -106,7 +106,7 @@ public class CameraResolutionScaler : MonoBehaviour
             switch (InternalResolution) //set up values for RT
             {
                 case internalResolution.High:
-                    renderDivisor = 1.2f;
+                    renderDivisor = 1.25f;
                     break;
                 case internalResolution.Mid:
                     renderDivisor = 1.5f;

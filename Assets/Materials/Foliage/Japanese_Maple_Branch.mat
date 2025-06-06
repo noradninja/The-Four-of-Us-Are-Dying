@@ -11,7 +11,7 @@ Material:
   m_ShaderKeywords: ALPHA_ON GEOM_TYPE_LEAF SHADOWED_RIM WIGGLE_ON _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
     _WINDQUALITY_NONE
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
+  m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2450
   stringTagMap: {}
@@ -574,7 +574,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.092760205
+    - _influence: 0.1128847
     - _leaves_wiggle_disp: 0.15
     - _leaves_wiggle_speed: 1
     - _r_influence: 1

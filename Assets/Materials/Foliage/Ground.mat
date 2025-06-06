@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Ground
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
+  m_Shader: {fileID: 4800000, guid: 61c415499e8b52c4aa2a4bc87ea17ce6, type: 3}
   m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1
     SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON
     SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 _BAKERY_NONE
@@ -15,7 +15,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2000
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -26,7 +26,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 9c8dda3900ae3dd4eb768c62ffcb4f39, type: 3}
+        m_Texture: {fileID: 2800000, guid: 655f17e49caf6f5478bab5b551a3c405, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap2:
@@ -145,9 +145,13 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOARMap:
+        m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 72fe0ed36fde3c24f898b1f24f2d257b, type: 3}
-        m_Scale: {x: 8, y: 8}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
         m_Texture: {fileID: 2800000, guid: 2c5860bdccb0ced41942d2fadf9874d2, type: 3}
@@ -179,6 +183,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _Normal3:
         m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 2800000, guid: 655f17e49caf6f5478bab5b551a3c405, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -280,7 +288,7 @@ Material:
     - _Cull: 2
     - _CullMode: 0
     - _Culling: 2
-    - _Cutoff: 0
+    - _Cutoff: 1
     - _DAlbedoScale: 1
     - _DDetailsMapRef1: 0
     - _DDetailsMapRef2: 0
@@ -325,6 +333,7 @@ Material:
     - _EnableGSAA: 0
     - _EnableParallax: 0
     - _ExposureOcclusion: 0.2
+    - _FadeDistance: 10
     - _FlipBumpY: 0
     - _FogOffset: 0
     - _FogToggle: 1
@@ -491,6 +500,7 @@ Material:
     - _MoveSpeed: 1
     - _MoveUVToggle: 0
     - _MyCullMode: 2
+    - _NormalHeight: 1
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _OptionsFold: 1
@@ -507,7 +517,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
-    - _Roughness: 0
+    - _Roughness: 1
     - _RoughnessMode: 0
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1

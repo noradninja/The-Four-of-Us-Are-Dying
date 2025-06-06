@@ -12,8 +12,8 @@ public class VitaLitShaderGUI : ShaderGUI
     MaterialProperty _Mode;
     MaterialProperty _Cull;
     MaterialProperty _MainTex;
-    MaterialProperty _NormalMap;
-    MaterialProperty _MOARMap;
+    MaterialProperty _BumpMap;
+    MaterialProperty _MetallicGlossMap;
     MaterialProperty _NormalHeight;
     MaterialProperty _Metallic;
     MaterialProperty _Roughness;
@@ -25,8 +25,8 @@ public class VitaLitShaderGUI : ShaderGUI
         _Mode         = FindProperty("_Mode",         props, false);
         _Cull         = FindProperty("_Cull",         props, false);
         _MainTex      = FindProperty("_MainTex",      props, false);
-        _NormalMap    = FindProperty("_NormalMap",    props, false);
-        _MOARMap      = FindProperty("_MOARMap",      props, false);
+        _BumpMap    = FindProperty("_BumpMap",    props, false);
+        _MetallicGlossMap      = FindProperty("_MetallicGlossMap",      props, false);
         _NormalHeight = FindProperty("_NormalHeight", props, false);
         _Metallic     = FindProperty("_Metallic",     props, false);
         _Roughness    = FindProperty("_Roughness",    props, false);
@@ -103,13 +103,13 @@ public class VitaLitShaderGUI : ShaderGUI
 
         materialEditor.TexturePropertySingleLine(
             new GUIContent("Normal Map"),
-            _NormalMap,
+            _BumpMap,
             _NormalHeight
         );
 
         materialEditor.TexturePropertySingleLine(
             new GUIContent("MOAR (RGBA)"),
-            _MOARMap
+            _MetallicGlossMap
         );
 
         materialEditor.ShaderProperty(

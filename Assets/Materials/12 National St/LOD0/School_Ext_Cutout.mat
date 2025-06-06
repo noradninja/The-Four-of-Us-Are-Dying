@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: School_Ext_Cutout
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _ALPHAPREMULTIPLY_ON
-    _ALPHATEST_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP
+  m_Shader: {fileID: 4800000, guid: 61c415499e8b52c4aa2a4bc87ea17ce6, type: 3}
+  m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _ALPHATEST_ON _BAKERY_NONE
+    _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -133,6 +133,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOARMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: d23fe383ec19a444ba654ecee9790a5b, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -158,6 +162,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -454,7 +462,7 @@ Material:
     - _ManualControl: 0
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0.5
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -463,6 +471,7 @@ Material:
     - _MoveSpeed: 1
     - _MoveUVToggle: 0
     - _MyCullMode: 2
+    - _NormalHeight: 1
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _OptionsFold: 1
@@ -479,6 +488,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
+    - _Roughness: 1
     - _RoughnessMode: 0
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
@@ -515,7 +525,7 @@ Material:
     - _SpecularHighlights: 1
     - _SpecularMapType: 999
     - _SpecularRoughnessMod: 1
-    - _SrcBlend: 5
+    - _SrcBlend: 1
     - _SrcBlendAddPass: 1
     - _StencilRef: 1
     - _Surface: 1

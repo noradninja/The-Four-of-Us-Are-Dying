@@ -173,6 +173,7 @@ Material:
     - _EnableGSAA: 0
     - _EnableParallax: 0
     - _ExposureOcclusion: 0.2
+    - _FadeDistance: 10
     - _FlipBumpY: 0
     - _ForceBoxProject: 0
     - _FresnelModel: 0
@@ -194,11 +195,11 @@ Material:
     - _LightmapSpecularMaxSmoothness: 1
     - _MappingSpace: 0
     - _MetalChannel: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Metalness: 1
     - _Mode: 1
     - _NormalDistModel: 0
-    - _NormalHeight: 1
+    - _NormalHeight: 2
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02

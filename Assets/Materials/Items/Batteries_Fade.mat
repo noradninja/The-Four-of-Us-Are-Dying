@@ -7,14 +7,15 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Batteries_Fade
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
+  m_Shader: {fileID: 4800000, guid: 61c415499e8b52c4aa2a4bc87ea17ce6, type: 3}
   m_ShaderKeywords: _ALPHABLEND_ON _BAKERY_NONE _EMISSION _LIGHTMAPSPECULAR _METALLICGLOSSMAP
     _NORMALMAP _VERTEXCOLOR
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 3000
-  stringTagMap: {}
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -99,11 +100,13 @@ Material:
     - _LeavesOn: 0
     - _LightmapSpecular: 1
     - _LightmapSpecularMaxSmoothness: 1
-    - _Metallic: 0.5
+    - _Metallic: 1
     - _Mode: 2
+    - _NormalHeight: 1
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Roughness: 1
     - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
