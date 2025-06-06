@@ -81,6 +81,7 @@ Material:
     - _DebugSpecular: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _FadeDistance: 20
     - _GlossMapScale: 0.85
     - _Glossiness: 1
     - _GlossyReflections: 1

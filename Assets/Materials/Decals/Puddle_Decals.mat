@@ -8,9 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Puddle_Decals
   m_Shader: {fileID: 4800000, guid: 61c415499e8b52c4aa2a4bc87ea17ce6, type: 3}
-  m_ShaderKeywords: ALPHA_ON BAKERY_NONE DETAILS_MODE_PACKED _ALPHAPREMULTIPLY_ON
-    _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP _SPECULARHIGHLIGHTS_OFF
-    _VERTEXCOLOR
+  m_ShaderKeywords: ALPHA_ON BAKERY_NONE DETAILS_MODE_PACKED _ALPHABLEND_ON _BAKERY_NONE
+    _LIGHTMAPSPECULAR _METALLICGLOSSMAP _NORMALMAP _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -208,7 +207,7 @@ Material:
     - _MetalChannel: 0
     - _Metallic: 1
     - _Metalness: 1
-    - _Mode: 3
+    - _Mode: 2
     - _NormalDistModel: 0
     - _NormalHeight: 1
     - _NormalMapShadows: 0
@@ -227,7 +226,7 @@ Material:
     - _SpecularPower: 1
     - _SpecularRange: 0
     - _SpecularRoughnessMod: 1
-    - _SrcBlend: 1
+    - _SrcBlend: 5
     - _StencilRef: 1
     - _UVSec: 0
     - _UnityLightingContribution: 1

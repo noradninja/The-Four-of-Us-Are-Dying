@@ -137,6 +137,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _MOARMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: 10146ec45d3d2374aa7920300e5691bd, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -170,6 +174,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -308,6 +316,7 @@ Material:
     - _EnableGSAA: 0
     - _EnableParallax: 0
     - _ExposureOcclusion: 0.2
+    - _FadeDistance: 10
     - _FlipBumpY: 0
     - _FogOffset: 0
     - _FogToggle: 1

@@ -500,7 +500,7 @@ Material:
     - _MoveSpeed: 1
     - _MoveUVToggle: 0
     - _MyCullMode: 2
-    - _NormalHeight: 1
+    - _NormalHeight: 1.28
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _OptionsFold: 1
