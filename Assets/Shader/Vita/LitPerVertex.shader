@@ -18,7 +18,7 @@
         _Metallic    ("Base Metallic", Range(0, 1))   = 0.0
         _Cutoff      ("Alpha Cutoff",   Range(0, 1))   = 0.0
         _Roughness   ("Base Roughness",Range(0, 1))   = 0.5
-        _Cube        ("Reflection Cubemap", Cube)     = "_Skybox" {}
+        _FadeDistance    ("Fade Distance",    Float)         = 20.0
     }
 
     SubShader
@@ -113,23 +113,9 @@
             #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
             #pragma multi_compile _ LIGHTMAP_ON
 
-            #pragma shader_feature BAKERY_VERTEXLM
-            #pragma shader_feature BAKERY_VERTEXLMDIR
-            #pragma shader_feature BAKERY_VERTEXLMSH
-            #pragma shader_feature BAKERY_VERTEXLMMASK
-            #pragma shader_feature BAKERY_SH
-            #pragma shader_feature BAKERY_SHNONLINEAR
-            #pragma shader_feature BAKERY_RNM
-            #pragma shader_feature BAKERY_LMSPEC
-            #pragma shader_feature BAKERY_BICUBIC
-            #pragma shader_feature BAKERY_PROBESHNONLINEAR
-            #pragma shader_feature BAKERY_VOLUME
-            #pragma shader_feature BAKERY_COMPRESSED_VOLUME
-            #pragma shader_feature BAKERY_VOLROTATION
-            
             #include "UnityCG.cginc"
             #include "UnityShaderVariables.cginc"
-            #include "LightingCalculations.cginc"   // Updated GGX
+            #include "LightingCalculations.cginc"
             #include "AutoLight.cginc"
             #include "Lighting.cginc"
 
@@ -142,6 +128,7 @@
             float  _Mode;
             float  _Roughness;
             float  _Metallic;
+            float _FadeDistance;
 
             struct appdata
             {
@@ -158,13 +145,10 @@
                 float2 uv           : TEXCOORD0;
                 float2 uv1          : TEXCOORD1;
                 float3 worldPos     : TEXCOORD2;
-                float3 worldNormal       : TEXCOORD3;
+                float3 worldNormal  : TEXCOORD3;
                 float  ndotl        : TEXCOORD4;
                 float  ndoth        : TEXCOORD5;
-                float3 preDiffuse   : TEXCOORD6;
-                float3 preSpecular  : TEXCOORD7;
-                float4 worldRefl    : TEXCOORD8;
-                UNITY_SHADOW_COORDS(9)
+                UNITY_SHADOW_COORDS(6)
                 UNITY_VERTEX_OUTPUT_STEREO
             };
 
@@ -175,35 +159,21 @@
 
                 // World positions & normals
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
-                o.worldNormal   = normalize(UnityObjectToWorldNormal(v.normal));
+                o.worldNormal = normalize(UnityObjectToWorldNormal(v.normal));
 
                 // Clip space
                 o.pos = UnityObjectToClipPos(v.vertex);
 
-                // UVs
+                // UVs (MainTex)
                 o.uv  = TRANSFORM_TEX(v.uv, _MainTex);
                 o.uv1 = v.uv1 * unity_LightmapST.xy + unity_LightmapST.zw;
 
-                // Light and view
-                float3 Ldir = normalize(_WorldSpaceLightPos0.xyz);
-                float3 Vdir = normalize(_WorldSpaceCameraPos - o.worldPos);
-
                 // Dot products
+                float3 Ldir = normalize(_WorldSpaceLightPos0.xyz);
                 o.ndotl = saturate(dot(o.worldNormal, Ldir));
+                float3 Vdir = normalize(_WorldSpaceCameraPos - o.worldPos);
                 float3 H = normalize(Vdir + Ldir);
                 o.ndoth = saturate(dot(o.worldNormal, H));
-
-                // Precompute lighting with placeholder values
-                float3 albedoColor = float3(1,1,1);
-                float  roughnessVal = saturate(1 - (_Roughness * 0.5));
-                float  metallicVal  = _Metallic;
-
-                o.preDiffuse  = DisneyDiffuse(o.ndotl, albedoColor, _LightColor0.rgb);
-                o.preSpecular = GGXSpecular_PBR(o.worldNormal, Vdir, Ldir, albedoColor, metallicVal, roughnessVal);
-
-                // Vertex reflection vector
-                float3 refl = reflect(-Vdir, o.worldNormal);
-                o.worldRefl = float4(refl, 0.0);
 
                 UNITY_TRANSFER_SHADOW(o, o.uv1);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
@@ -214,11 +184,9 @@
             {
                 UNITY_SETUP_INSTANCE_ID(i);
 
-                // Sample MOAR (Metallic, AO, Alpha, Roughness) and Albedo per-fragment
-                half4 moar = tex2D(_MetallicGlossMap, i.uv * _MainTex_ST.xy + _MainTex_ST.zw);
-                half4 alb  = tex2D(_MainTex, i.uv * _MainTex_ST.xy + _MainTex_ST.zw);
-
-                // Cutout
+                // Sample MOAR and Albedo
+                half4 moar = tex2D(_MetallicGlossMap, i.uv);
+                half4 alb  = tex2D(_MainTex, i.uv);
                 if (_Mode == 1)
                     clip(moar.b - _Cutoff);
 
@@ -233,45 +201,56 @@
                     half3 baked = _LightColor0;
                 #endif
 
-                // 5) Shadow & attenuation using per-vertex normal and ndotl
-                UNITY_LIGHT_ATTENUATION(attenuation, i, i.worldPos.xyz);
+                // Shadow & attenuation using per-vertex normal and ndotl
+                 UNITY_LIGHT_ATTENUATION(attenuation, i, i.worldPos.xyz);
+                float dist = length(_WorldSpaceCameraPos - i.worldPos.xyz);
+                float fade = saturate(dist / _FadeDistance);
+                attenuation = lerp(attenuation, 1.0h, fade);
                 half3 rtTint = unity_ShadowColor.rgb;
-                half3 shaded = i.ndotl * attenuation;
+                half  nl     = saturate(dot(i.worldNormal.xyz, _WorldSpaceLightPos0.xyz));
+                half3 shaded = nl * attenuation;
 
-                // 6) Diffuse via precomputed per-vertex lighting, modulated by albedo and AO
-                // Precomputed i.preDiffuse assumed for albedoColor = 1, lightColor = _LightColor0
-                half3 diff = i.preDiffuse * alb.rgb;
-                diff = diff + alb.rgb;                 // match File A's diff + alb
+                // 4) Diffuse
+                half3 diff = DisneyDiffuse(nl, alb.rgb, _LightColor0.rgb);
+                diff = diff + alb.rgb;                
+                half3 indirect = 1 - baked.b - baked.r - baked.g;
+                half3 combined = max(shaded - saturate(indirect), rtTint);
+                half3 intermediate = lerp(combined, diff, saturate(indirect));
+                half3 diffuseTerm = intermediate * moar.g;
 
-                // 7) Indirect mask
-                half indirect = saturate(1 - (baked.b + baked.r + baked.g));
-                half3 combined = max(shaded - indirect, rtTint);
+                // Specular
+                half3 Ldir = normalize(_WorldSpaceLightPos0.xyz);
+                half3 Vdir = normalize(_WorldSpaceCameraPos - i.worldPos);
+                half3 H = normalize(Vdir + Ldir);
+                half NdotV = saturate(dot(i.worldNormal, Vdir));
+                half NdotL = i.ndotl;
+                half NdotH = saturate(dot(i.worldNormal, H));
 
-                // 8) Final diffuse term
-                half3 blendedDiffuse = lerp(combined, diff, indirect);
-                half3 diffuseTerm = blendedDiffuse * moar.g;
+                half D = DistributionGGX(NdotH, roughnessVal);
+                half G = GeometrySmith(NdotV, NdotL, roughnessVal);
+                half denom = max(NdotV * NdotL, 0.00025h);
+                half mult = mad(G, D, 0.0h) / denom;
 
-                // 9) Specular via precomputed per-vertex specular
-                // i.preSpecular was computed for albedoColor = 1, uses same metallic and roughness as vertex
-                half3 specTerm = i.preSpecular * alb.rgb;
-                specTerm *= moar.g * 0.5h;            // match File A's intensity reduction
+                half3 F0  = lerp(half3(0.04h, 0.04h, 0.04h), alb.rgb, metallicVal);
+                half3 F   = FresnelSchlick(saturate(dot(Vdir, H)), F0);
+                half3 specColor = F * mult * _LightColor0.rgb;
+                specColor *= moar.g * 0.5h;
 
-                // 10) Combine diffuse + specular
-                half3 lit = diffuseTerm + specTerm;
+                half3 lit = diffuseTerm + specColor;
 
-                // 11) Lightmap contributes only to albedo
+                // Add baked lightmap on albedo (multiply)
                 half3 lmContrib = baked * alb.rgb;
-                half3 rgb = lit + lmContrib;
+                half3 rgb = lit * lmContrib;
 
-                // 12) Cubemap reflection using per-vertex fresnel (ndoth)
+                // Cubemap reflection
                 if (metallicVal > 0.0h)
                 {
-                    half4 cuberef = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, i.worldRefl.xyz, roughnessVal * 8.0h);
-                    half3 skyCol  = DecodeHDR(cuberef, unity_SpecCube0_HDR);
-                    rgb += skyCol * (metallicVal * moar.g * i.ndoth * 0.5h);
+                    half4 cuberef = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, i.worldNormal, roughnessVal * 12.0h);
+                    half3 skyCol   = DecodeHDR(cuberef, unity_SpecCube0_HDR);
+                    rgb += skyCol * (metallicVal * moar.g * baked);
                 }
 
-                // 13) Alpha
+                // Alpha
                 half alpha = moar.b;
                 if (_Mode == 3)
                     rgb *= alpha;

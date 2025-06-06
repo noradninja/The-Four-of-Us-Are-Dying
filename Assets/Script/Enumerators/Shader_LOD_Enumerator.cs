@@ -7,7 +7,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private static readonly int Metallic = Shader.PropertyToID("_Metallic");
     private static readonly int Roughness = Shader.PropertyToID("_Roughness");
     private static readonly int AlphaOn = Shader.PropertyToID("_AlphaOn");
-    private static readonly int Mode = Shader.PropertyToID("__mode");
+    private static readonly int Mode = Shader.PropertyToID("_Mode");
     public GameObject player;
     public enum LODState { Full, Reduced, VertexOnly }
 
@@ -44,12 +44,12 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         originalMaterial = thisRenderer.sharedMaterial;
 
         // Create replacement material
-        replacementMaterial = new Material(Shader.Find("Vita/Standard Mobile VertexLit"));
+        replacementMaterial = new Material(Shader.Find("Vita/Lit (per-vertex)"));
         replacementMaterial.SetFloat(Metallic, originalMaterial.GetFloat(Metallic));
-        replacementMaterial.SetFloat(Roughness, originalMaterial.GetFloat(Glossiness));
-        if (originalMaterial.GetFloat(Mode) == 1 || originalMaterial.GetFloat(AlphaOn) == 1) replacementMaterial.SetFloat(AlphaOn, 1); //preserve alpha
-            else replacementMaterial.SetFloat(AlphaOn, 0); // else disable alpha clip
-        replacementMaterial.SetFloat("_LeavesOn", 0); // Disable movement at distance
+        replacementMaterial.SetFloat(Roughness, originalMaterial.GetFloat(Roughness));
+        if (originalMaterial.GetFloat(Mode) == 1)
+            replacementMaterial.SetFloat(Mode, 1);
+        //replacementMaterial.SetFloat("_LeavesOn", 0); // Disable movement at distance
 
         // Get textures for replacement material
         mainTex = originalMaterial.mainTexture;
@@ -63,7 +63,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private void Start()
     {
         // Register with the manager
-        //LODManager.Instance.Register(this);
+        LODManager.Instance.Register(this);
     }
 
     // Called by LODManager each tick.

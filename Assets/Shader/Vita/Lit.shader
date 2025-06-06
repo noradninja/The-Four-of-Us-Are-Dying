@@ -21,7 +21,7 @@
         _Metallic        ("Base Metallic",    Range(0, 1))   = 0.0
         _Roughness       ("Base Roughness",   Range(0, 1))   = 0.5
         _Cutoff          ("Alpha Cutoff",     Range(0, 1))   = 0.0
-        _FadeDistance    ("Fade Distance",    Float)         = 10.0
+        _FadeDistance    ("Fade Distance",    Float)         = 20.0
     }
 
     SubShader
@@ -113,9 +113,7 @@
             #pragma multi_compile_instancing
             #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
             #pragma multi_compile _ LIGHTMAP_ON
-
-            #include "UnityCG.cginc"
-            #include "UnityShaderVariables.cginc"
+            
             #include "LightingCalculations.cginc"
             #include "AutoLight.cginc"
             #include "Lighting.cginc"
@@ -208,12 +206,12 @@
                 attenuation = lerp(attenuation, 1.0h, fade);
                 half3 rtTint = unity_ShadowColor.rgb;
                 half  nl     = saturate(dot(i.worldNormal.xyz, _WorldSpaceLightPos0.xyz));
-                half3 shaded = nl * attenuation;
+                half3 shaded = nl * attenuation + baked;
 
                 // 4) Diffuse
                 half3 diff = DisneyDiffuse(nl, alb.rgb, _LightColor0.rgb);
                 diff = diff + alb.rgb;                
-                half3 indirect = 1 - baked.b - baked.r * baked.g;
+                half3 indirect = 1 - baked.b - baked.r - baked.g;
                 half3 combined = max(shaded - saturate(indirect), rtTint);
                 half3 intermediate = lerp(combined, diff, saturate(indirect));
                 half3 diffuseTerm = intermediate * moar.g;
@@ -275,21 +273,20 @@
             #pragma fragment frag_add
             #pragma target 3.0
 
-            #pragma multi_compile_fwdadd_fullshadows
-            #pragma multi_compile_instancing
-            #pragma multi_compile _ SPOT
-
-            #include "UnityCG.cginc"
-            #include "UnityShaderVariables.cginc"
             #include "LightingCalculations.cginc"
             #include "AutoLight.cginc"
             #include "Lighting.cginc"
+            #include "UnityShadowLibrary.cginc"
 
+            #pragma multi_compile_fwdadd_fullshadows
+            #pragma multi_compile _ _ALPHATEST_ON _ALPHABLEND_ON _ALPHAPREMULTIPLY_ON
+            #pragma multi_compile_instancing
+            #pragma skip_variants POINT POINT_COOKIE
+            
             sampler2D_half _MainTex;
             sampler2D_half _BumpMap;
             sampler2D_half _MetallicGlossMap;
-            // No explicit _LightTexture0 or _Cube declarations to avoid conflicts
-
+       
             float4 _MainTex_ST;
             float  _Cutoff;
             float  _Mode;
@@ -312,38 +309,58 @@
                 float4 pos         : SV_POSITION;
                 float3 worldPos    : TEXCOORD0;
                 float3 worldNormal : TEXCOORD1;
-                float2 uv          : TEXCOORD3;
-                float2 uv1         : TEXCOORD4;
+                float2 uv          : TEXCOORD2;
+                float3 t2w0        : TEXCOORD3;   // world tangent
+                float3 t2w1        : TEXCOORD4;   // world bitangent
+                float3 t2w2        : TEXCOORD5;   // world normal
                 UNITY_SHADOW_COORDS(6)
                 UNITY_VERTEX_OUTPUT_STEREO
             };
-
-            v2f_add vert_add(appdata_add v)
+            
+            v2f_add vert_add (appdata_add v)
             {
                 UNITY_SETUP_INSTANCE_ID(v);
                 v2f_add o;
 
                 float3 worldP = mul(unity_ObjectToWorld, v.vertex).xyz;
-                o.pos       = UnityObjectToClipPos(v.vertex);
-                o.worldPos  = worldP;
+                o.pos      = UnityObjectToClipPos(v.vertex);
+                o.worldPos = worldP;
 
+                // World-space normal & tangent
                 float3 N = UnityObjectToWorldNormal(v.normal);
-                o.worldNormal  = N;
-                o.uv  = TRANSFORM_TEX(v.uv, _MainTex);
-                o.uv1 = v.uv1 * unity_LightmapST.xy + unity_LightmapST.zw;
+                float3 T = UnityObjectToWorldDir(v.tangent.xyz);
+                float3 B = cross(N, T) * v.tangent.w;   // handedness in v.tangent.w
 
-                UNITY_TRANSFER_SHADOW(o, o.uv1);
+                o.worldNormal = N;
+                o.t2w0 = T;
+                o.t2w1 = B;
+                o.t2w2 = N;
+
+                o.uv  = TRANSFORM_TEX(v.uv, _MainTex);
+          
+                UNITY_TRANSFER_SHADOW(o, o.pos);
                 UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 return o;
             }
-
-            half4 frag_add(v2f_add i) : SV_Target
+            half4 frag_add (v2f_add i) : SV_Target
             {
                 UNITY_SETUP_INSTANCE_ID(i);
 
-                // Sample normal map
-                i.worldNormal = UnpackScaleNormal(tex2D(_BumpMap, i.uv), _NormalHeight);
-	            half3 worldN = normalize(i.worldNormal);
+                // Sample & unpack the normal map (tangent space)
+                half3 nTS = UnpackScaleNormal(tex2D(_BumpMap, i.uv), _NormalHeight);
+                // Bring it to world space
+                half3 nWS = normalize(
+                      i.t2w0 * nTS.x +
+                      i.t2w1 * nTS.y +
+                      i.t2w2 * nTS.z);
+                // From here on use nWS instead of i.worldNormal
+                // Compute attenuation (Unity drives spot & cookie)
+                UNITY_LIGHT_ATTENUATION(lightAtt, i, i.worldPos);
+                lightAtt *= 0.5h;
+                // Compute vectors
+                half3 Ldir = normalize(_WorldSpaceLightPos0.xyz);
+                half3 Vdir = normalize(_WorldSpaceCameraPos - i.worldPos);
+                half  ndotl = saturate(dot(nWS, Ldir));
                 // Sample MOAR and albedo
                 half4 moar = tex2D(_MetallicGlossMap, i.uv);
                 half4 alb  = tex2D(_MainTex, i.uv);
@@ -352,22 +369,13 @@
 
                 half roughnessVal = saturate(1 - (_Roughness * moar.a));
                 half metallicVal  = moar.r;
-
-                // Compute attenuation (Unity drives spot & cookie)
-                UNITY_LIGHT_ATTENUATION(lightAtt, i, i.worldPos);
-                lightAtt *= 0.5h;
-                // Compute lighting: diffuse + specular
-                half3 Ldir = normalize(_WorldSpaceLightPos0.xyz);
-                half3 Vdir = normalize(_WorldSpaceCameraPos - i.worldPos);
-                half  ndotl = saturate(dot(worldN, Ldir));
-
                 half3 diffColor = DisneyDiffuse(ndotl, alb.rgb, _LightColor0.rgb);
                 diffColor = diffColor + alb.rgb;
                 half3 diffuseTerm = diffColor * moar.g * lightAtt;
 
                 half3 H     = normalize(Vdir + Ldir);
-                half  NdotH = saturate(dot(worldN, H));
-                half  NdotV = saturate(dot(worldN, Vdir));
+                half  NdotH = saturate(dot(nWS, H));
+                half  NdotV = saturate(dot(nWS, Vdir));
                 half  D     = DistributionGGX(NdotH, roughnessVal);
                 half  G     = GeometrySmith(NdotV, ndotl, roughnessVal);
                 half  denom = mad(NdotV, ndotl, 0.00025h);
@@ -387,29 +395,14 @@
         //===============================
         Pass
         {
-            Name "META_BAKERY"
+            Name "META"
             Tags { "LightMode" = "Meta" }
             Cull Off
 
             CGPROGRAM
+            #pragma vertex vert_meta
+            #pragma fragment frag_meta
             #include "UnityStandardMeta.cginc"
-            #include "BakeryMetaPass.cginc"
-
-            float4 frag_customMeta(v2f_bakeryMeta i) : SV_Target
-            {
-                UnityMetaInput o;
-                UNITY_INITIALIZE_OUTPUT(UnityMetaInput, o);
-                if (unity_MetaFragmentControl.w)
-                {
-                    half4 moar = tex2D(_MetallicGlossMap, i.uv);
-                    clip(moar.b - _Cutoff);
-                    return moar.b;
-                }
-                o.Albedo = tex2D(_MainTex, i.uv);
-                return UnityMetaFragment(o);
-            }
-            #pragma vertex vert_bakerymt
-            #pragma fragment frag_customMeta
             ENDCG
         }
     }
