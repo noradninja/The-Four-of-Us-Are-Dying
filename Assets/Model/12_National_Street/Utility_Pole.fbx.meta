@@ -56,7 +56,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Transformer","Pole","Lamp"],"padding":[122,63,158],"unwrapper":[1,1,1]}'
     clipAnimations: []
     isReadable: 0
   meshes:

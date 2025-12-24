@@ -37,27 +37,27 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     private void Awake()
     {
-        thisRenderer = GetComponent<Renderer>();
-        meshFilter = GetComponent<MeshFilter>(); // Cache the MeshFilter component
-
-        shadowCaster = thisRenderer.shadowCastingMode == ShadowCastingMode.On;
-        originalMaterial = thisRenderer.sharedMaterial;
-
-        // Create replacement material
-        replacementMaterial = new Material(Shader.Find("Vita/Standard Mobile VertexLit"));
-        replacementMaterial.SetFloat(Metallic, originalMaterial.GetFloat(Metallic));
-        replacementMaterial.SetFloat(Roughness, originalMaterial.GetFloat(Glossiness));
-        if (originalMaterial.GetFloat(Mode) == 1 || originalMaterial.GetFloat(AlphaOn) == 1) replacementMaterial.SetFloat(AlphaOn, 1); //preserve alpha
-            else replacementMaterial.SetFloat(AlphaOn, 0); // else disable alpha clip
-        replacementMaterial.SetFloat("_LeavesOn", 0); // Disable movement at distance
-
-        // Get textures for replacement material
-        mainTex = originalMaterial.mainTexture;
-        moarTexture = originalMaterial.GetTexture("_MetallicGlossMap");
-
-        // Apply textures to replacement material
-        replacementMaterial.mainTexture = mainTex;
-        replacementMaterial.SetTexture("_MetallicGlossMap", moarTexture);
+        // thisRenderer = GetComponent<Renderer>();
+        // meshFilter = GetComponent<MeshFilter>(); // Cache the MeshFilter component
+        //
+        // shadowCaster = thisRenderer.shadowCastingMode == ShadowCastingMode.On;
+        // originalMaterial = thisRenderer.sharedMaterial;
+        //
+        // // Create replacement material
+        // replacementMaterial = new Material(Shader.Find("Vita/Standard Mobile VertexLit"));
+        // replacementMaterial.SetFloat(Metallic, originalMaterial.GetFloat(Metallic));
+        // replacementMaterial.SetFloat(Roughness, originalMaterial.GetFloat(Glossiness));
+        // if (originalMaterial.GetFloat(Mode) == 1 || originalMaterial.GetFloat(AlphaOn) == 1) replacementMaterial.SetFloat(AlphaOn, 1); //preserve alpha
+        //     else replacementMaterial.SetFloat(AlphaOn, 0); // else disable alpha clip
+        // replacementMaterial.SetFloat("_LeavesOn", 0); // Disable movement at distance
+        //
+        // // Get textures for replacement material
+        // mainTex = originalMaterial.mainTexture;
+        // moarTexture = originalMaterial.GetTexture("_MetallicGlossMap");
+        //
+        // // Apply textures to replacement material
+        // replacementMaterial.mainTexture = mainTex;
+        // replacementMaterial.SetTexture("_MetallicGlossMap", moarTexture);
     }
 
     private void Start()

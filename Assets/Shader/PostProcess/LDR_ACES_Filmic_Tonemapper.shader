@@ -73,28 +73,18 @@
 			{
 				// sample the texture, in this case the src color buffer
 				half4 col = tex2D(_MainTex, i.uv);
-				half3 outputColor;
-				half3 WorkingColor = mul(_exposure, col);
-				if (_colorGrading)//color graded
-				{
-					WorkingColor = WorkingColor + _gradingColor * 0.066f;
-				}
-				else //no color grading
-				{
-					WorkingColor = WorkingColor;
-				}
 
-				if (_toneMapping)
-				{
-					WorkingColor = aces_approx(WorkingColor); //tonemap
-				}
-				else
-				{
-					WorkingColor = WorkingColor;
-				}
-				outputColor = WorkingColor;
-				
-				return half4(outputColor,1);
+				half3 WorkingColor = mul(_exposure, col);
+
+				// Color grading (additive, masked)
+				WorkingColor += _gradingColor * 0.066f * _colorGrading;
+
+				// Tone mapping (interpolated)
+				half3 toneMapped = aces_approx(WorkingColor);
+				WorkingColor = lerp(WorkingColor, toneMapped, _toneMapping);
+
+				return half4(WorkingColor, 1);
+
 			}
 			
 			ENDCG

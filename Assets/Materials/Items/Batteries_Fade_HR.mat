@@ -7,13 +7,13 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Batteries_Fade_HR
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: _ALPHABLEND_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP
+  m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
+  m_ShaderKeywords: ALPHA_ON _ALPHABLEND_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP
     _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses:
   - ALWAYS
@@ -81,6 +81,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _AlphaOn: 1
+    - _AmbientOn: 0
     - _Bakery: 0
     - _BumpScale: 1
     - _BumpShadowHardness: 50
@@ -100,11 +102,12 @@ Material:
     - _LeavesOn: 0
     - _LightmapSpecular: 1
     - _LightmapSpecularMaxSmoothness: 1
-    - _Metallic: 0.5
+    - _Metallic: 1
     - _Mode: 2
     - _NormalMapShadows: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Roughness: 0.6
     - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 0

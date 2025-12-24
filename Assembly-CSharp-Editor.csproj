@@ -265,8 +265,10 @@
     <Compile Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Editor\InternalResources\Inspectors\ShaderForgeMaterialInspector.cs" />
     <Compile Include="Assets\RainMaker\Editor\RainMakerEditor.cs" />
     <Compile Include="Assets\Script\Editor\FOV_Render.cs" />
+    <Compile Include="Assets\Script\Editor\PSVitaTextureOptimizer.cs" />
     <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI.cs" />
     <Compile Include="Assets\Shader\Editor\Standard_VCShaderGUI_Lerp.cs" />
+    <Compile Include="Assets\Shader\Vita\Lit\Editor\LUT_Generator.cs" />
     <Compile Include="Assets\unity-ui-extensions\Editor\AccordionElementEditor.cs" />
     <Compile Include="Assets\unity-ui-extensions\Editor\BezierLineRendererEditor.cs" />
     <Compile Include="Assets\unity-ui-extensions\Editor\BoxSliderEditor.cs" />
@@ -465,16 +467,16 @@
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Editor\InternalResources\GPU Rendering\SFN_Desaturate\SFN_Desaturate_REQONLY.shader" />
     <None Include="Assets\Addons\Shader Forge\Assets\ShaderForge\Editor\InternalResources\Shader Presets\PresetSky.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>D:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/PSVITA/Projects/TFoUAD/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/PSP2Player/Tools/UnityEngine.AIModule.dll</HintPath>
@@ -717,7 +719,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
-      <HintPath>C:/PSVITA/Projects/TFoUAD/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+      <HintPath>D:/PSVITA/Projects/TFoUAD/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>

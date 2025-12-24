@@ -432,7 +432,7 @@ public class PlayerController : MonoBehaviour
         walkStart = skinnedRenderer.material.GetFloat(CrossFade);
         lerpRate = 0.55f;
         walkRoutine = WalkLerp(walkStart, 1,  lerpRate);
-        StartCoroutine(walkRoutine);
+        //StartCoroutine(walkRoutine);
         animator.SetBool(IsRunning, false);
         lightRig.transform.parent = lightRoot.transform;
         lightRig.transform.localRotation = savedRotation;
@@ -562,7 +562,7 @@ public class PlayerController : MonoBehaviour
                 if (walkStart == 0f){
                     if (walkRoutine != null) StopCoroutine(walkRoutine); //cancel the routine if it is running
                     walkRoutine = WalkLerp(0, 1,  lerpRate); //set up a new routine
-                    StartCoroutine(walkRoutine); //initiate crossfade
+                    //StartCoroutine(walkRoutine); //initiate crossfade
                 }
             }    
         }
@@ -581,14 +581,14 @@ public class PlayerController : MonoBehaviour
         if (animator.GetBool(IsRunning) == false ) {
             animator.SetBool(IsWalking, verticalMove != 0 || horizontalRotation !=0);
             animator.SetBool(IsIdle, false);
-            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
+//            walkStart = skinnedRenderer.material.GetFloat(CrossFade);
               
             if (animator.GetBool(IsWalking) == true){ 
                 lerpRate = 0.55f;
                 if (walkStart == 0f){
                     if (walkRoutine != null) StopCoroutine(walkRoutine);
                     walkRoutine = WalkLerp(0, 1,  lerpRate);
-                    StartCoroutine(walkRoutine);
+                    //StartCoroutine(walkRoutine);
                 }
             }    
 
@@ -612,7 +612,7 @@ public class PlayerController : MonoBehaviour
                 lerpRate = 0.275f;
                 walkStart = skinnedRenderer.material.GetFloat(CrossFade);
                 walkRoutine = WalkLerp(walkStart, 1, lerpRate);
-                StartCoroutine(walkRoutine);
+                //StartCoroutine(walkRoutine);
             }
         }
         if (stamina <= 30f){ 
@@ -624,7 +624,7 @@ public class PlayerController : MonoBehaviour
                 walkStart = skinnedRenderer.material.GetFloat(CrossFade);
                 lerpRate = 0.55f;
                 walkRoutine = WalkLerp(walkStart, 1,  lerpRate);
-                StartCoroutine(walkRoutine);
+                //StartCoroutine(walkRoutine);
                 
             }
         }

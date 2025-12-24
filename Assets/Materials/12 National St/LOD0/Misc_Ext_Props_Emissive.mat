@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Misc_Ext_Props_Emissive
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
+  m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
+  m_ShaderKeywords: ALPHA_ON BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
     SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON
     SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4
     _BAKERY_NONE _EMISSION _LIGHTMAPSPECULAR
@@ -236,6 +236,8 @@ Material:
     - _AlbedoChannel: 0
     - _AlphaClip: 0
     - _AlphaMapType: 999
+    - _AlphaOn: 1
+    - _AmbientOn: 0
     - _BakedSpacular: 1
     - _Bakery: 0
     - _BakeryEnabled: 0
@@ -477,6 +479,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
+    - _Roughness: 0.5
     - _RoughnessMode: 0
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1

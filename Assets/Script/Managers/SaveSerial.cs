@@ -32,10 +32,13 @@ void Start() {
 	SetScenes.sceneToLoad = "LoadScreen";
 	levelToSave = this.GetComponent<SceneLoadTrigger>().currentScene; 
 //ignore this if we are in the editor
-
+	if (!Application.isEditor)
+	{
 //create directory on the Vita for our save files if it doesn't exist
-	if(!Directory.Exists(dataPath)){
-		Directory.CreateDirectory(dataPath);
+		if (!Directory.Exists(dataPath))
+		{
+			Directory.CreateDirectory(dataPath);
+		}
 	}
 }
 

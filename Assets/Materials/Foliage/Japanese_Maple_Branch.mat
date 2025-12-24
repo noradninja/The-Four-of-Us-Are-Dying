@@ -8,11 +8,11 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Japanese_Maple_Branch
   m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
-  m_ShaderKeywords: ALPHA_ON GEOM_TYPE_LEAF SHADOWED_RIM WIGGLE_ON _ALPHATEST_ON _GLOSSYREFLECTIONS_OFF
-    _WINDQUALITY_NONE
+  m_ShaderKeywords: ALPHA_ON AMBIENT_ON GEOM_TYPE_LEAF SHADOWED_RIM _ALPHATEST_ON
+    _GLOSSYREFLECTIONS_OFF _WINDQUALITY_NONE
   m_LightmapFlags: 4
-  m_EnableInstancingVariants: 1
-  m_DoubleSidedGI: 0
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 1
   m_CustomRenderQueue: 2450
   stringTagMap: {}
   disabledShaderPasses: []
@@ -263,7 +263,7 @@ Material:
     - _AlphaMapType: 999
     - _AlphaOn: 1
     - _AlphaScale: 1
-    - _AmbientOn: 0
+    - _AmbientOn: 1
     - _BaseLight: 0.424
     - _BillboardKwToggle: 0
     - _BillboardShadowFade: 0.5
@@ -453,13 +453,13 @@ Material:
     - _Layer3ScrollV: 0
     - _Layer3Toggle: 0
     - _Layer3UV2: 0
-    - _LeavesOn: 1
+    - _LeavesOn: 0
     - _LightCutoff: 0
     - _LightFold: 1
     - _LightMode: 1
     - _LightProbes: 0
     - _ManualControl: 0
-    - _Metallic: 0.75
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -490,7 +490,7 @@ Material:
     - _RimFold: 0
     - _RimSize: 0
     - _RimToggle: 0
-    - _Roughness: 0.5
+    - _Roughness: 1
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1
     - _SO_ParticleMode: 0
@@ -574,7 +574,7 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.26692206
+    - _influence: 0.5073416
     - _leaves_wiggle_disp: 0.15
     - _leaves_wiggle_speed: 1
     - _r_influence: 1

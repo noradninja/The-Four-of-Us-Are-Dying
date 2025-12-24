@@ -84,6 +84,7 @@
     <None Include="Assets\Bakery\ftRGBM2Half.shader" />
     <None Include="Assets\Bakery\ftBlack.shader" />
     <None Include="Assets\Bakery\ftUVNormalMap.shader" />
+    <None Include="Assets\Bakery\BakeryMetaPass.cginc" />
     <None Include="Assets\Bakery\examples\shaders\Baked_Alpha_meta.shader" />
     <None Include="Assets\Bakery\ftFarSphere.shader" />
     <None Include="Assets\Bakery\ftCubemap2StripExport.shader" />
@@ -99,7 +100,7 @@
     <None Include="Assets\Bakery\examples\shaders\Baked_Normal_Maps_meta.shader" />
     <None Include="Assets\Bakery\BakeryRuntimeAssembly.asmdef" />
     <None Include="Assets\Bakery\ftFarSphereRenderBase.cginc" />
-    <None Include="Assets\Bakery\BakeryMetaPass.cginc" />
+    <None Include="Assets\Bakery\shader\BakeryMetaPass.cginc" />
     <None Include="Assets\Bakery\examples\shaders\Baked_Normal_Maps_terrain_meta.shader" />
     <None Include="Assets\Bakery\shader\BakeryStandardSpecular.shader" />
     <None Include="Assets\Bakery\ftUnlitTerrain.shader" />
@@ -333,7 +334,7 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="JetBrains.Rider.Unity.Editor.Plugin.Repacked">
-      <HintPath>C:/PSVITA/Projects/TFoUAD/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
+      <HintPath>D:/PSVITA/Projects/TFoUAD/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.Advertisements">
       <HintPath>C:/Users/Noradninja/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.8/Editor/UnityEditor.Advertisements.dll</HintPath>

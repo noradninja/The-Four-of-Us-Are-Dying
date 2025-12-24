@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Outhouse
-  m_Shader: {fileID: 4800000, guid: d912d8cd56eac024eb05e1078ac500ca, type: 3}
-  m_ShaderKeywords: BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _BAKERY_NONE _LIGHTMAPSPECULAR
-    _METALLICGLOSSMAP _SPECGLOSSMAP
+  m_Shader: {fileID: 4800000, guid: 6563d6e0d0fa0f346b650b80b621be90, type: 3}
+  m_ShaderKeywords: ALPHA_ON BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED _BAKERY_NONE
+    _LIGHTMAPSPECULAR _METALLICGLOSSMAP _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -24,7 +24,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: ac45b59cd34c5214187cbd3d6cfa6ea6, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap2:
@@ -246,6 +246,8 @@ Material:
     - _AlbedoChannel: 0
     - _AlphaClip: 0
     - _AlphaMapType: 999
+    - _AlphaOn: 1
+    - _AmbientOn: 0
     - _BakedSpacular: 1
     - _Bakery: 0
     - _BakeryEnabled: 0
@@ -488,7 +490,7 @@ Material:
     - _ReflectTexFlag: 0
     - _RimFold: 0
     - _RimToggle: 0
-    - _Roughness: 0
+    - _Roughness: 1
     - _RoughnessMode: 0
     - _SO_BendToggle: 0
     - _SO_PBRToggle: 1

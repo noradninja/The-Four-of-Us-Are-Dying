@@ -43,7 +43,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Lines","Clothing_Poles"],"padding":[144,75],"unwrapper":[1,1]}'
     clipAnimations: []
     isReadable: 0
   meshes:

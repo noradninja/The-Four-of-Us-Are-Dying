@@ -173,8 +173,8 @@ public class Item_Enumerator : MonoBehaviour {
 	    iconImage.color = iconVisible;
 	    OSDText.color = colorOn;
 	    dialogBG.color = dialogOn;
-	    itemTexts.TryGetValue(thisItem.ToString(), out tempText);
-	    OSDText.text = ("Press X to pick up " +  tempText + ".");
+//	    itemTexts.TryGetValue(thisItem.ToString(), out tempText);
+//	    OSDText.text = ("Press X to pick up " +  tempText + ".");
     }
 
     private void OnTriggerExit (Collider col){

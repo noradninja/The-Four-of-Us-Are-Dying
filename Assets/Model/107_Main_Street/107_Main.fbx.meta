@@ -32,47 +32,7 @@ ModelImporter:
     100052: Trims_EXT_Transparent
     100054: Window_Glass
     100056: Trims
-    100058: Back_Door
-    100060: Bench
-    100062: Box
-    100064: Building_Sign
-    100066: Chimney
-    100068: Columns
-    100070: Conduit
-    100072: Deco_Stars
-    100074: Door
-    100076: Door 1
-    100078: Door 2
-    100080: Door_Mat
-    100082: Elec_Meter
-    100084: Face
-    100086: Fixture
-    100088: Fixture_Glass
-    100090: Front_Door
-    100092: Front_Gutter_Assy
-    100094: Glass 1
-    100096: House_Exterior
-    100098: Inside_Frame
-    100100: Inside_Frame 1
-    100102: Inside_Frame 2
-    100104: Inside_Knob
-    100106: Inside_Window_Frames
-    100108: Knob_Inside
-    100110: Knob_Inside 1
-    100112: Knob_Outside
-    100114: Knob_Outside 1
-    100116: Outside_Frame
-    100118: Outside_Frame 1
-    100120: Outside_Frame 2
-    100122: Outside_Knob
-    100124: Outside_Window_Frames1
-    100126: polySurface2
-    100128: Porch_Light
-    100130: Rear_Gutter_Assy
-    100132: Sign
-    100134: Top_Door
-    100136: Vent_Cap
-    100138: Porch_Lamp_Glass
+    100058: Porch_Lamp_Glass
     400000: //RootNode
     400002: Exterior
     400004: LIght_Rig
@@ -102,47 +62,7 @@ ModelImporter:
     400052: Trims_EXT_Transparent
     400054: Window_Glass
     400056: Trims
-    400058: Back_Door
-    400060: Bench
-    400062: Box
-    400064: Building_Sign
-    400066: Chimney
-    400068: Columns
-    400070: Conduit
-    400072: Deco_Stars
-    400074: Door
-    400076: Door 1
-    400078: Door 2
-    400080: Door_Mat
-    400082: Elec_Meter
-    400084: Face
-    400086: Fixture
-    400088: Fixture_Glass
-    400090: Front_Door
-    400092: Front_Gutter_Assy
-    400094: Glass 1
-    400096: House_Exterior
-    400098: Inside_Frame
-    400100: Inside_Frame 1
-    400102: Inside_Frame 2
-    400104: Inside_Knob
-    400106: Inside_Window_Frames
-    400108: Knob_Inside
-    400110: Knob_Inside 1
-    400112: Knob_Outside
-    400114: Knob_Outside 1
-    400116: Outside_Frame
-    400118: Outside_Frame 1
-    400120: Outside_Frame 2
-    400122: Outside_Knob
-    400124: Outside_Window_Frames1
-    400126: polySurface2
-    400128: Porch_Light
-    400130: Rear_Gutter_Assy
-    400132: Sign
-    400134: Top_Door
-    400136: Vent_Cap
-    400138: Porch_Lamp_Glass
+    400058: Porch_Lamp_Glass
     2000000: persp2
     2100000: House_Trims
     2100002: House_Exterior1
@@ -169,40 +89,7 @@ ModelImporter:
     2300036: Glass
     2300038: Window_Glass
     2300040: Trims
-    2300042: Bench
-    2300044: Box
-    2300046: Building_Sign
-    2300048: Chimney
-    2300050: Columns
-    2300052: Conduit
-    2300054: Deco_Stars
-    2300056: Door
-    2300058: Door 1
-    2300060: Door 2
-    2300062: Door_Mat
-    2300064: Face
-    2300066: Fixture
-    2300068: Fixture_Glass
-    2300070: Front_Gutter_Assy
-    2300072: Glass 1
-    2300074: Inside_Frame
-    2300076: Inside_Frame 1
-    2300078: Inside_Frame 2
-    2300080: Inside_Knob
-    2300082: Inside_Window_Frames
-    2300084: Knob_Inside
-    2300086: Knob_Inside 1
-    2300088: Knob_Outside
-    2300090: Knob_Outside 1
-    2300092: Outside_Frame
-    2300094: Outside_Frame 1
-    2300096: Outside_Frame 2
-    2300098: Outside_Knob
-    2300100: Outside_Window_Frames1
-    2300102: polySurface2
-    2300104: Rear_Gutter_Assy
-    2300106: Vent_Cap
-    2300108: Porch_Lamp_Glass
+    2300042: Porch_Lamp_Glass
     3300000: Exterior
     3300002: Plaque_w_Alpha
     3300004: Trims_Exterior
@@ -224,40 +111,7 @@ ModelImporter:
     3300036: Glass
     3300038: Window_Glass
     3300040: Trims
-    3300042: Bench
-    3300044: Box
-    3300046: Building_Sign
-    3300048: Chimney
-    3300050: Columns
-    3300052: Conduit
-    3300054: Deco_Stars
-    3300056: Door
-    3300058: Door 1
-    3300060: Door 2
-    3300062: Door_Mat
-    3300064: Face
-    3300066: Fixture
-    3300068: Fixture_Glass
-    3300070: Front_Gutter_Assy
-    3300072: Glass 1
-    3300074: Inside_Frame
-    3300076: Inside_Frame 1
-    3300078: Inside_Frame 2
-    3300080: Inside_Knob
-    3300082: Inside_Window_Frames
-    3300084: Knob_Inside
-    3300086: Knob_Inside 1
-    3300088: Knob_Outside
-    3300090: Knob_Outside 1
-    3300092: Outside_Frame
-    3300094: Outside_Frame 1
-    3300096: Outside_Frame 2
-    3300098: Outside_Knob
-    3300100: Outside_Window_Frames1
-    3300102: polySurface2
-    3300104: Rear_Gutter_Assy
-    3300106: Vent_Cap
-    3300108: Porch_Lamp_Glass
+    3300042: Porch_Lamp_Glass
     4300000: Trims_Exterior
     4300002: Exterior
     4300004: Plaque_w_Alpha
@@ -279,40 +133,7 @@ ModelImporter:
     4300036: Glass
     4300038: Window_Glass
     4300040: Trims
-    4300042: Bench
-    4300044: Chimney
-    4300046: Front_Gutter_Assy
-    4300048: Rear_Gutter_Assy
-    4300050: Deco_Stars
-    4300052: polySurface2
-    4300054: Face
-    4300056: Box
-    4300058: Conduit
-    4300060: Fixture
-    4300062: Fixture_Glass
-    4300064: Door_Mat
-    4300066: Columns
-    4300068: Inside_Window_Frames
-    4300070: Outside_Window_Frames1
-    4300072: Outside_Frame
-    4300074: Door
-    4300076: Outside_Knob
-    4300078: Inside_Knob
-    4300080: Inside_Frame
-    4300082: Door
-    4300084: Glass
-    4300086: Knob_Inside
-    4300088: Inside_Frame
-    4300090: Knob_Outside
-    4300092: Outside_Frame
-    4300094: Outside_Frame
-    4300096: Door
-    4300098: Knob_Outside
-    4300100: Inside_Frame
-    4300102: Knob_Inside
-    4300104: Building_Sign
-    4300106: Vent_Cap
-    4300108: Porch_Lamp_Glass
+    4300042: Porch_Lamp_Glass
     9500000: //RootNode
     10800000: Light_Rig:Ambient_Light
     10800002: Light_Rig:Bounce_Light
@@ -346,13 +167,14 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Window_Glass","Trims_EXT","Trims_EXT_Transparent","Exterior","Plaque"],"padding":[21,8,22,6,253],"unwrapper":[1,1,1,1,1]}'
     clipAnimations: []
-    isReadable: 0
+    isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 2
+    meshCompression: 0
     addColliders: 0
     importVisibility: 1
     importBlendShapes: 0
@@ -378,7 +200,7 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 0
     normalCalculationMode: 4
-  importAnimation: 0
+  importAnimation: 1
   copyAvatar: 0
   humanDescription:
     serializedVersion: 2
