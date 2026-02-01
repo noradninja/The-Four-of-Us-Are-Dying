@@ -33,18 +33,23 @@ public class Crepuscular : MonoBehaviour
     [Header("Debug")]
     public DebugMode debugMode = DebugMode.Off;
 
-    static readonly int BlurTexID = Shader.PropertyToID("_BlurTex");
-    static readonly int LightPosID = Shader.PropertyToID("_LightPos");
-    static readonly int ParamID = Shader.PropertyToID("_Parameter");
+    static readonly int BlurTexID   = Shader.PropertyToID("_BlurTex");
+    static readonly int LightPosID  = Shader.PropertyToID("_LightPos");
+    static readonly int ParamID     = Shader.PropertyToID("_Parameter");
+    static readonly int NoiseTimeID = Shader.PropertyToID("_NoiseTime");   // ✅ NEW
 
-    const string KW_S4 = "CREP_SAMPLES_4";
-    const string KW_S8 = "CREP_SAMPLES_8";
+    const string KW_S4  = "CREP_SAMPLES_4";
+    const string KW_S8  = "CREP_SAMPLES_8";
     const string KW_S16 = "CREP_SAMPLES_16";
 
     const string KW_DEBUG_DENSITY = "CREP_DEBUG_DENSITY";
     const string KW_DEBUG_HEATMAP = "CREP_DEBUG_HEATMAP";
 
     Camera _cam;
+
+    // ✅ NEW: bounded time to avoid long-session precision issues on Vita
+    float _noiseTime;
+    const float NOISE_TIME_WRAP = 256f;
 
     void Awake()
     {
@@ -85,6 +90,11 @@ public class Crepuscular : MonoBehaviour
         }
 
         SetSampleKeyword();
+
+        // ✅ NEW: push stable time to shader (prevents “gets jumpy over time” on Vita)
+        _noiseTime += Time.unscaledDeltaTime;
+        if (_noiseTime > NOISE_TIME_WRAP) _noiseTime -= NOISE_TIME_WRAP;
+        material.SetFloat(NoiseTimeID, _noiseTime);
 
         // IMPORTANT: keep your sizing logic as-is (fixed 1024 base)
         int w = Mathf.Max(8, 1024 / resolutionDivisor);

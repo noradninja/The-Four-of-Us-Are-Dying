@@ -8,7 +8,7 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: CrepuscularRayMaterial
   m_Shader: {fileID: 4800000, guid: 0e5226225e9bfc64f993b82e21d94654, type: 3}
-  m_ShaderKeywords: CREP_SAMPLES_8
+  m_ShaderKeywords: CREP_SAMPLES_4
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -45,34 +45,35 @@ Material:
     - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.042
-    - _Exposure: 0.25
+    - _Density: 0.075
+    - _Exposure: 1
     - _FrameValue: 1
     - _Frequency: 3
     - _LightY: 0
     - _NoiseContrast: 1.5
     - _NoiseDepthInfluence: 1
-    - _NoiseDepthInvert: 0.858
-    - _NoiseDepthPower: 1.5
+    - _NoiseDepthInvert: 1
+    - _NoiseDepthPower: 1.25
     - _NoiseFlowSpeed: 0.025
     - _NoiseFlowTurnSpeed: 0.025
     - _NoiseFlowWobble: 0.025
-    - _NoiseScale: 3.06
+    - _NoiseScale: 4
     - _NoiseStrength: 1
+    - _NoiseTime: 225.31194
     - _NumSamples: 8
     - _Parameter: 0
-    - _PerpendicularFalloff: 0.5
+    - _PerpendicularFalloff: 0.05
     - _SpotDensity: 1
     - _Spread: 1.59
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _ViewNoiseScale: 0.25
-    - _ViewSpaceMix: 0.75
+    - _ViewSpaceMix: 0.95
     - _Weight: 2
     - _fogInfluence: 3
     - _fogSpeed: 0.375
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: -0.1912685, g: -0.5649488, b: -0.6996707, a: 0}
-    - _NoiseScroll: {r: 1, g: 0.4, b: 0, a: 0}
+    - _LightPos: {r: -0.3168885, g: 2.2457461, b: 0.5737028, a: 0}
+    - _NoiseScroll: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}

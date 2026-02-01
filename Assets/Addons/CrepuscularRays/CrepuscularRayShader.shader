@@ -55,6 +55,9 @@
         _NoiseDepthInfluence("Noise Depth Influence", Range(0, 1)) = 1.0
         _NoiseDepthPower("Noise Depth Power", Range(0.25, 8)) = 2.0
         _NoiseDepthInvert("Noise Depth Invert (0/1)", Range(0, 1)) = 0
+
+        // ✅ NEW: stable time from C#
+        _NoiseTime("Noise Time", Float) = 0
     }
 
     CGINCLUDE
@@ -109,6 +112,9 @@
 
     half _DebugMode;
 
+    // ✅ NEW: stable time
+    float _NoiseTime;
+
     struct appdata
     {
         float4 pos : POSITION;
@@ -150,8 +156,8 @@
 
         half2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
 
-        // Convection-like flow
-        half t = _Time.y;
+        // ✅ use stable time from C#
+        half t = (half)_NoiseTime;
 
         half2 baseDir = (half2)_NoiseScroll.xy;
         half baseLen = max(1e-3h, length(baseDir));
@@ -187,7 +193,6 @@
         return n * w;
     }
 
-    // -------- Accumulation (Pass 0) --------
     v2f vert(appdata v)
     {
         v2f o;
@@ -211,7 +216,6 @@
         half densityMul = 1.0h + noise * _NoiseStrength;
         densityMul = clamp(densityMul, 0.25h, 2.0h);
 
-        // Debug: density views
         if (_DebugMode > 2.5h) // 3 or 4
         {
             half v = saturate((densityMul - 0.25h) * (1.0h / 1.75h));
@@ -225,7 +229,7 @@
                 );
                 return half4(c, 1);
             }
-            else // 3 = grayscale
+            else
             {
                 return half4(v, v, v, 1);
             }
@@ -234,7 +238,7 @@
         half2 deltaTexCoord = (i.uv + s * light.xy) * ((_Density * densityMul) * invSamples);
 
         half2 uv = i.uv;
-        half3 color = tex2D(_MainTex, uv);
+        half3 color = 1;
 
         half illuminationDecay = 1.0h;
 
@@ -242,6 +246,7 @@
         sampleScale *= densityMul;
 
         half depth = depth01;
+        color *= illuminationDecay * depth * sampleScale;
 
         UNITY_UNROLL
         for (int k = 0; k < NUM_SAMPLES; k++)
@@ -254,21 +259,19 @@
             half sample = tex2D(_MainTex, uv);
 
             sample *= illuminationDecay * depth * sampleScale;
-            color += sample;
+            color *= sample;
 
             illuminationDecay *= _Decay;
         }
 
         half4 fog = max(half4(color * _Exposure, 1), 0.15h);
 
-        // Debug: raw accumulation view
         if (_DebugMode > 0.5h && _DebugMode < 1.5h) // 1
             return fog;
 
         return fog;
     }
 
-    // -------- Kawase Blur (Pass 1 & 2) --------
     v2f_kawase vertKawase(appdata_img v)
     {
         v2f_kawase o;
@@ -298,7 +301,6 @@
         return (c1 + c2 + c3 + c4) * 0.25h;
     }
 
-    // -------- Composite (Pass 3) --------
     v2f vertFinal(appdata i)
     {
         v2f o = (v2f)0;
@@ -310,7 +312,6 @@
 
     half4 fragFinal(v2f i) : SV_Target
     {
-        // Debug: show blurred fog buffer only
         if (_DebugMode > 1.5h && _DebugMode < 2.5h) // 2
         {
             return tex2D(_BlurTex, i.uv);
