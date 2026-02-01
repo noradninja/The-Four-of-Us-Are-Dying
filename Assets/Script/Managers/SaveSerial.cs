@@ -34,7 +34,8 @@ void Start() {
 //ignore this if we are in the editor
 
 //create directory on the Vita for our save files if it doesn't exist
-	if(!Directory.Exists(dataPath)){
+	if(!Directory.Exists(dataPath) && Application.platform == RuntimePlatform.PSP2) 
+	{
 		Directory.CreateDirectory(dataPath);
 	}
 }

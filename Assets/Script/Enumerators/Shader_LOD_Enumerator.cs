@@ -3,113 +3,184 @@ using UnityEngine.Rendering;
 
 public class Shader_LOD_Enumerator : MonoBehaviour
 {
-    private static readonly int Glossiness = Shader.PropertyToID("_Glossiness");
-    private static readonly int Metallic = Shader.PropertyToID("_Metallic");
-    private static readonly int Roughness = Shader.PropertyToID("_Roughness");
-    private static readonly int AlphaOn = Shader.PropertyToID("_AlphaOn");
-    private static readonly int Mode = Shader.PropertyToID("__mode");
+    public enum LODState
+    {
+        Full,
+        Reduced,
+        VertexOnly,
+        Disabled
+    }
+
+    [Header("References")]
     public GameObject player;
-    public enum LODState { Full, Reduced, VertexOnly }
+    public bool enableShaderLOD = true;
+    public bool isFoliage;
 
-    [Header("LOD Settings")]
-    public float[] LOD_Distance;       // [0]=full, [1]=reduced
-    public bool   enableShaderLOD = true;
-    public bool   isFoliage;
-    public bool   rendererDisable;
-    public bool isDisabled;
-    public Material replacementMaterial;
+    public LODState shaderLOD;
 
-    // cached per‐instance
+    private Material replacementMaterial;       // Shared cached (VertexOnly)
+    private Material originalMaterial;          // Shared original
+    private Material reducedOriginalMaterial;   // Shared cached clone (Reduced)
+    private Texture originalTexture;
+    private Texture originalSecondTexture;
     private Renderer thisRenderer;
-    private Material originalMaterial;
-    private Texture mainTex;
-    private Texture moarTexture;
-    private bool     shadowCaster;
+    private bool shadowCaster;
 
-    private Mesh originalMesh;
-    private Mesh replacementMesh;  // Optional: If you need a replacement mesh
-    private MeshFilter meshFilter;
+    // Cached per-object thresholds (SQUARED) after size adjustment
+    private float tFullSqr;
+    private float tReducedSqr;
+    private float tVertexOnlySqr;
 
-    [HideInInspector] public LODState shaderLOD;
-
-    // Flag to track if resources are loaded
-    private bool isResourcesLoaded = false;
-
-    private void Awake()
+    void Start()
     {
         thisRenderer = GetComponent<Renderer>();
-        meshFilter = GetComponent<MeshFilter>(); // Cache the MeshFilter component
+        if (thisRenderer == null) return;
 
-        shadowCaster = thisRenderer.shadowCastingMode == ShadowCastingMode.On;
+        // IMPORTANT: sharedMaterial does NOT create a per-object instance
         originalMaterial = thisRenderer.sharedMaterial;
 
-        // Create replacement material
-        replacementMaterial = new Material(Shader.Find("Vita/Standard Mobile VertexLit"));
-        replacementMaterial.SetFloat(Metallic, originalMaterial.GetFloat(Metallic));
-        replacementMaterial.SetFloat(Roughness, originalMaterial.GetFloat(Glossiness));
-        if (originalMaterial.GetFloat(Mode) == 1 || originalMaterial.GetFloat(AlphaOn) == 1) replacementMaterial.SetFloat(AlphaOn, 1); //preserve alpha
-            else replacementMaterial.SetFloat(AlphaOn, 0); // else disable alpha clip
-        replacementMaterial.SetFloat("_LeavesOn", 0); // Disable movement at distance
+        originalTexture = originalMaterial != null ? originalMaterial.mainTexture : null;
+        originalSecondTexture = originalMaterial != null ? originalMaterial.GetTexture("_MetallicGlossMap") : null;
 
-        // Get textures for replacement material
-        mainTex = originalMaterial.mainTexture;
-        moarTexture = originalMaterial.GetTexture("_MetallicGlossMap");
+        shadowCaster = thisRenderer.shadowCastingMode == ShadowCastingMode.On;
 
-        // Apply textures to replacement material
-        replacementMaterial.mainTexture = mainTex;
-        replacementMaterial.SetTexture("_MetallicGlossMap", moarTexture);
+        if (player == null) player = GameObject.FindGameObjectWithTag("Player");
+
+        if (LODManager.Instance != null)
+        {
+            // Reduced variant of original (normalmap OFF) - shared cached
+            reducedOriginalMaterial = LODManager.Instance.GetOrCreateReducedOriginalMaterial(originalMaterial);
+
+            // Grab original tiling/offset for _MainTex, and bake into replacement material cache key
+            Vector2 tiling = Vector2.one;
+            Vector2 offset = Vector2.zero;
+            float cutoff = 0.5f;
+
+            if (originalMaterial != null)
+            {
+                tiling = originalMaterial.GetTextureScale("_MainTex");
+                offset = originalMaterial.GetTextureOffset("_MainTex");
+
+                if (originalMaterial.HasProperty("_Cutoff"))
+                    cutoff = originalMaterial.GetFloat("_Cutoff");
+            }
+
+            // VertexOnly replacement material - shared cached
+            // Rules:
+            //  - leavesOn = isFoliage
+            //  - alphaOn = ON
+            //  - ambientOn = NEVER ON for VertexOnly
+            replacementMaterial = LODManager.Instance.GetOrCreateReplacementMaterial(
+                originalTexture,
+                originalSecondTexture,
+                tiling,
+                offset,
+                cutoff,
+                true,       // alphaOn
+                isFoliage,  // leavesOn
+                false       // ambientOn (forced off)
+            );
+        }
+
+        CacheSizeAdjustedThresholds();
+
+        if (LODManager.Instance != null)
+            LODManager.Instance.Register(this);
     }
 
-    private void Start()
+    // PUBLIC: called by manager button
+    public void RebuildThresholdCache()
     {
-        // Register with the manager
-        LODManager.Instance.Register(this);
+        if (thisRenderer == null)
+            thisRenderer = GetComponent<Renderer>();
+
+        if (thisRenderer == null) return;
+
+        CacheSizeAdjustedThresholds();
     }
 
-    // Called by LODManager each tick.
-    public void UpdateLOD(float distSqr, float farClipSqr)
+    private void CacheSizeAdjustedThresholds()
+    {
+        // Fallback defaults if manager missing
+        float baseFull = 4f;
+        float baseReduced = 5f;
+        float baseVertex = 7f;
+
+        if (LODManager.Instance != null)
+        {
+            baseFull = LODManager.Instance.fullDistance;
+            baseReduced = LODManager.Instance.reducedDistance;
+            baseVertex = LODManager.Instance.vertexOnlyDistance;
+        }
+
+        // Largest horizontal bound (world-space AABB)
+        Bounds b = thisRenderer.bounds;
+        float halfHorizontal = 0.5f * Mathf.Max(b.size.x, b.size.z);
+
+        float full = baseFull + halfHorizontal;
+        float reduced = baseReduced + halfHorizontal;
+        float vertex = baseVertex + halfHorizontal;
+
+        tFullSqr = full * full;
+        tReducedSqr = reduced * reduced;
+        tVertexOnlySqr = vertex * vertex;
+    }
+
+    // Called from LODManager
+    public void UpdateLOD(float currentDistSqr, float farClipSqr)
     {
         if (!enableShaderLOD) return;
 
-        // Check if the Renderer is null (destroyed or not assigned)
-        if (thisRenderer == null)
+        LODState newState;
+
+        if (currentDistSqr <= tFullSqr)
+            newState = LODState.Full;
+        else if (currentDistSqr <= tReducedSqr)
+            newState = LODState.Reduced;
+        else if (currentDistSqr <= tVertexOnlySqr)
+            newState = LODState.VertexOnly;
+        else
+            newState = LODState.Disabled;
+
+        if (newState != shaderLOD)
         {
-            Debug.LogWarning("Renderer is missing or destroyed. Skipping LOD update.");
-            return;
+            shaderLOD = newState;
+            ApplySettings();
         }
+    }
 
-        float fullSqr = LOD_Distance[0] * LOD_Distance[0];
-        float reducedSqr = LOD_Distance[1] * LOD_Distance[1];
-
-        // Pick state
-        if (distSqr <= fullSqr) shaderLOD = LODState.Full;
-        else if (distSqr <= reducedSqr) shaderLOD = LODState.Reduced;
-        else shaderLOD = LODState.VertexOnly;
-
+    private void ApplySettings()
+    {
         switch (shaderLOD)
         {
             case LODState.Full:
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.On)
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.On;
+                thisRenderer.enabled = true;
+                thisRenderer.sharedMaterial = originalMaterial;
+                if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.On;
                 break;
 
             case LODState.Reduced:
                 thisRenderer.enabled = true;
-                thisRenderer.sharedMaterial = originalMaterial;
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off)
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+                thisRenderer.sharedMaterial = (reducedOriginalMaterial != null) ? reducedOriginalMaterial : originalMaterial;
+                if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
                 break;
 
             case LODState.VertexOnly:
+                thisRenderer.enabled = true;
                 thisRenderer.sharedMaterial = replacementMaterial;
-                if (shadowCaster && thisRenderer.shadowCastingMode != ShadowCastingMode.Off)
-                    thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+                if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+                break;
 
-                if (rendererDisable)
-                    thisRenderer.enabled = distSqr < farClipSqr;
-                    isDisabled = !thisRenderer.enabled;
-                    //EnableRenderer(!isDisabled);
+            case LODState.Disabled:
+                thisRenderer.enabled = false;
+                if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
                 break;
         }
+    }
+
+    private void OnDestroy()
+    {
+        if (LODManager.Instance != null)
+            LODManager.Instance.Unregister(this);
     }
 }

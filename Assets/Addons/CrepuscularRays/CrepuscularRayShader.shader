@@ -1,284 +1,377 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+﻿Shader "Lighting/Crepuscular Rays"
+{
+    Properties
+    {
+        _MainTex("Base (RGB)", 2D) = "white" {}
+        _BlurTex("BlurTex (RGB)", 2D) = "white" {}
 
+        _NumSamples("Number of Samples", Range(0, 1024)) = 128
 
-Shader "Lighting/Crepuscular Rays" {
-	
-	Properties{
-		_MainTex("Base (RGB)", 2D) = "white" {}
-		_BlurTex("BlurTex (RGB)", 2D) = "white" {}
-		_NumSamples("Number of Samples", Range(0, 1024)) = 128
-		_Density("Density", Range(0, 1)) = 1.0
-		_Weight("Weight", Range(0, 2)) = 1.0
-		_Decay("Decay", Range(0, 1)) = 1.0
-		_Exposure("Exposure", Range(0, 1)) = 1.0
-		_Parameter("Kernel Offset", Range(0, 4)) = 1.0
-		_Contrast("Contrast", Range(1, 5)) = 1.0
-		_PerpendicularFalloff("Perpendicular Falloff Rate", Range(0.01, 1)) = 1.0
-		_CosAngle("Angle", Float) = 1
-		[IntRange] _StencilRef ("Stencil Ref", Range(0,255)) = 0
-		_TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
-		_FrameValue("Frame remainder", Float) = 0
-		[IntRange] _Frequency ("Frequency", Range(1,15)) = 1
-		_fogInfluence("Fog Influence", Range(0,5)) = 0.5
-		_fogSpeed("Fog Speed", Float) = 10.0
-		[FloatRange] _Spread ("Spread", Range(1.0, 5.0)) = 1.0
-	}
-		CGINCLUDE
-		#include "UnityCG.cginc"
-		#pragma target 2.0
+        _Density("Density", Range(0, 1)) = 1.0
+        _Weight("Weight", Range(0, 2)) = 1.0
+        _Decay("Decay", Range(0, 1)) = 1.0
+        _Exposure("Exposure", Range(0, 1)) = 1.0
+        _Parameter("Kernel Offset", Range(0, 4)) = 1.0
 
-		uniform sampler2D_half _MainTex;
-		uniform sampler2D_half _BlurTex;
-		uniform sampler2D _CameraDepthTexture;
-		half3 _LightPos;
-		half _NumSamples;
-		half _Density;
-		half _Weight;
-		half _Decay;
-		half _Exposure;
-		half _Contrast;
-		uniform half4 _Parameter;
-		uniform half4 _MainTex_TexelSize;
-		half4 _MainTex_ST;
-		half _LightY;
-		half _CosAngle;
-		half4 _TintColor;
-		half _PerpendicularFalloff;
-		int _Frequency;
-		float _fogInfluence;
-		half _fogSpeed;
-		half _Spread;
-		
+        _Contrast("Contrast", Range(1, 5)) = 1.0
+        _PerpendicularFalloff("Perpendicular Falloff Rate", Range(0.01, 1)) = 1.0
+        _CosAngle("Angle", Float) = 1
 
-		
-		struct appdata
-		{
-			float4 pos : POSITION;
-			float2 uv : TEXCOORD0;
-		};
+        [IntRange] _StencilRef("Stencil Ref", Range(0,255)) = 0
+        _TintColor("Tint Color", Color) = (.5, .5, .5, .5)
 
-		struct v2f 
-		{
-			float4 pos : SV_POSITION;
-			float2 uv  : TEXCOORD0;
-		};
+        _FrameValue("Frame remainder", Float) = 0
+        [IntRange] _Frequency("Frequency", Range(1,15)) = 1
 
-		struct v2f_withBlurCoordsSGX 
-		{
-			float4 pos : SV_POSITION;
-			half2 uv : TEXCOORD0;
-			half4 offs[3] : TEXCOORD1;
-		};
+        _fogInfluence("Fog Influence", Range(0,5)) = 0.5
+        _fogSpeed("Fog Speed", Float) = 10.0
+        [FloatRange] _Spread("Spread", Range(1.0, 5.0)) = 1.0
 
-		static const half curve[7] = { 0.0205, 0.0855, 0.232, 0.324, 0.232, 0.0855, 0.0205 };  // gauss'ish blur weights
+        // ===== DEBUG MODE (NEW) =====
+        // 0 Off
+        // 1 Raw Accumulation (pass 0)
+        // 2 After Blur (show blurred fog buffer in pass 3)
+        // 3 Density Grayscale (pass 0)
+        // 4 Density Heatmap (pass 0)
+        [IntRange] _DebugMode("Debug Mode", Range(0,4)) = 0
 
-		half rand(half2 co)
-				{
-				    const half a = 2.9898f;
-				    const half b = 78.233f;
-				    const half c = 28.5453f;
-				    const half dt = dot(co.xy ,half2(a,b));
-				    const half sn = cos(abs(dt/3.14f));
-				    return cos(frac(sin(sn) * c)* ((_Time.w * _fogSpeed) * _fogInfluence));
-				}	
-////////////// accumulator for rays  /////////////////
-		v2f vert( appdata v )
-			{
-				v2f o;
-				o.pos = UnityObjectToClipPos (v.pos);
-				o.uv = v.uv;
-				return o;
-			}
-			
-			
-		half4 frag(v2f i) : COLOR
-			{
-				// Calculate floattor from pixel to light source in screen space.
-				half4 light = half4(_LightPos.xyz,1);
-				// get our y direction, and swap the direction the coordinates are plotted based on that
-				// so that it looks correct regardless of current camera rotation- we decompose this
-				//because it will not look right if we just add or subtract light.xy to i.uv
-				// step(0, light.y) == 0 if light.y<0, else 1
-				half b = step(0.0h, light.y);
-				// s ==  1 when b==0 (light.y<0), or –1 when b==1 (light.y>=0)
-				half s = 1.0h - 2.0h * b;
+        // ===== BIG SOFT NOISE =====
+        _NoiseTex("Noise (R)", 2D) = "gray" {}
+        _NoiseScale("Noise Scale", Range(0.05, 4.0)) = 0.35
+        _NoiseStrength("Noise Strength", Range(0, 2)) = 0.5
+        _NoiseScroll("Noise Scroll Base Dir (XY)", Vector) = (1.0, 0.4, 0, 0)
+        _NoiseContrast("Noise Contrast", Range(0.25, 4)) = 1.0
 
-				// now branchless!
-				half2 deltaTexCoord = i.uv + s * light.xy;
-				// Divide by number of samples and scale by control factor.
-				deltaTexCoord *= 1.0h / _NumSamples * _Density;
-				
-				// Store initial sample.
-				half2 uv = i.uv;
-				half3 color = tex2D(_MainTex, uv);
-				
-				// Set up illumination decay factor.
-				half illuminationDecay = 1.0h;
-				
-				// Evaluate summation from Equation 3 NUM_SAMPLES iterations.
-				float depth;
-				half rate = _Frequency;
-				
-				for (int i = 1; i < _NumSamples + 1; i++)
-				{
-					// Step sample location along ray.
-					uv -= deltaTexCoord;
-					// Retrieve sample at new location.
-					float sample = tex2D(_MainTex, uv);
-					half randomFactor = rand(uv)*_fogInfluence * _Contrast;
-					float value = frac(i/rate);
-					float cast = Linear01Depth(tex2D(_CameraDepthTexture, uv)).r;
-					//calc depth value
-					half p = sign(value);   // p == 1 if value>0, else 0 when value==0
-					depth   = cast * lerp(1.0h - randomFactor, 1.0h, p);
-										
-					// Apply sample attenuation scale/decay factors.
-					sample *= illuminationDecay * (_Weight/ _NumSamples*4) * depth;
-					sample *= 2.5h;
-					
-					// Accumulate combined color.
-					color += sample;
-					// Update exponential decay factor.
-					illuminationDecay *= _Decay;
-				}
-				// Output final color with a further scale control factor.
-				return (max(half4(color * _Exposure, 1), 0.15h));
-			}
-/////////////// SGX Horizontal Blur /////////////////////////////		
-		v2f_withBlurCoordsSGX vertBlurHorizontalSGX (appdata_img v)
-			{
-				v2f_withBlurCoordsSGX o;
-				o.pos = UnityObjectToClipPos(v.vertex);
-				
-				o.uv = UnityStereoScreenSpaceUVAdjust(v.texcoord.xy, _MainTex_ST);
+        // ===== VIEW-SPACE STABILIZATION =====
+        _ViewNoiseScale("View Noise Scale", Range(0.001, 0.25)) = 0.05
+        _ViewSpaceMix("View Space Mix", Range(0, 1)) = 0.55
 
-				const half offsetMagnitude = _MainTex_TexelSize.x * _Parameter.x;
-				o.offs[0] = UnityStereoScreenSpaceUVAdjust(v.texcoord.xyxy + offsetMagnitude * half4(-3.0h, 0.0h, 3.0h, 0.0h), _MainTex_ST);
-				o.offs[1] = UnityStereoScreenSpaceUVAdjust(v.texcoord.xyxy + offsetMagnitude * half4(-2.0h, 0.0h, 2.0h, 0.0h), _MainTex_ST);
-				o.offs[2] = UnityStereoScreenSpaceUVAdjust(v.texcoord.xyxy + offsetMagnitude * half4(-1.0h, 0.0h, 1.0h, 0.0h), _MainTex_ST);
+        // ===== CONVECTION FLOW =====
+        _NoiseFlowSpeed("Noise Flow Speed", Range(0, 1)) = 0.08
+        _NoiseFlowTurnSpeed("Noise Flow Turn Speed", Range(0, 1)) = 0.05
+        _NoiseFlowWobble("Noise Flow Wobble", Range(0, 1)) = 0.12
 
-				return o; 
-			}
-/////////////// SGX Vertical Blur /////////////////////////////		
-		v2f_withBlurCoordsSGX vertBlurVerticalSGX (appdata_img v)
-			{
-				v2f_withBlurCoordsSGX o;
-				o.pos = UnityObjectToClipPos(v.vertex);
-				
-				o.uv = half4(UnityStereoScreenSpaceUVAdjust(v.texcoord.xy, _MainTex_ST),1,1);
+        // Depth influence
+        _NoiseDepthInfluence("Noise Depth Influence", Range(0, 1)) = 1.0
+        _NoiseDepthPower("Noise Depth Power", Range(0.25, 8)) = 2.0
+        _NoiseDepthInvert("Noise Depth Invert (0/1)", Range(0, 1)) = 0
+    }
 
-				const half offsetMagnitude = _MainTex_TexelSize.y * _Parameter.x;
-				o.offs[0] = UnityStereoScreenSpaceUVAdjust(v.texcoord.xyxy + offsetMagnitude * half4(0.0h, -3.0h, 0.0h, 3.0h), _MainTex_ST);
-				o.offs[1] = UnityStereoScreenSpaceUVAdjust(v.texcoord.xyxy + offsetMagnitude * half4(0.0h, -2.0h, 0.0h, 2.0h), _MainTex_ST);
-				o.offs[2] = UnityStereoScreenSpaceUVAdjust(v.texcoord.xyxy + offsetMagnitude * half4(0.0h, -1.0h, 0.0h, 1.0h), _MainTex_ST);
+    CGINCLUDE
+    #include "UnityCG.cginc"
+    #pragma target 2.0
 
-				return o; 
-			}
-///////////// SGX Frag  //////////////////////////////////////
-		half4 fragBlurSGX ( v2f_withBlurCoordsSGX i ) : SV_Target
-			{
-				half2 uv = i.uv.xy;
-				
-				half4 color = tex2D(_MainTex, i.uv) * curve[3];
-				
-				for( int l = 0; l < 3; l++ )  
-				{   
-					const half4 tapA = tex2D(_MainTex, i.offs[l].xy);
-					const half4 tapB = tex2D(_MainTex, i.offs[l].zw); 
-					color += (tapA + tapB) * curve[l];
-				}
-				return color;
-			}
-/////////////// Composition /////////////////////////////
-		v2f vertFinal(appdata i)
-			{
-				v2f o = (v2f)0;
-				UNITY_INITIALIZE_OUTPUT(v2f, o);
-				o.pos = UnityObjectToClipPos(i.pos);
-				o.uv = (i.uv);
-				return o;
-			}
-			
-		half4 fragFinal(v2f i) : SV_Target
-			{
-				half4 light = half4(_LightPos.xyz,1);
-				_CosAngle = 1- abs(cos(light.z));
-				const fixed4 col = tex2D(_MainTex, i.uv);
-				fixed4 sample = tex2D(_BlurTex, i.uv);
-				const fixed contrast = _Contrast;
-				//sample = sample.r + sample.g + sample.b;
-				//sample *= 2.0h;
-				const fixed4 finalSample = (((col) + (sample * 0.4h)) - 0.5h) * contrast + 0.445h; //final sampled color
-				const fixed4 finalColor = (col + (col * 0.04h) - 0.01h); //final modulated base color
-				//add our ray greyscale samples at - 25% brightness to the main image
-				fixed4 blitColor = lerp(finalSample, finalColor, (1 - _CosAngle - _PerpendicularFalloff));//lerp (finalColor + 0.25, finalColor + 0.035h, normalizedLightY);
-				return blitColor;
-			}
+    #pragma multi_compile __ CREP_SAMPLES_4 CREP_SAMPLES_8 CREP_SAMPLES_16
 
-		//
-		v2f vertStencil(appdata v)
-		{
-				v2f o;
-				o.pos = UnityObjectToClipPos (v.pos);
-				o.uv = v.uv;
-				return o;
-		}
-		half4 fragStencil (v2f i) : SV_Target
-		{
-			fixed4 col = _TintColor;
-			return col;
-		}
-		
-		ENDCG
-	////// Passes /////////////////////////////////////////////////////
-	SubShader {
-		ZTest Always
-		Cull Off
-		//0- calculate low resolution rays
-		
-		Pass { 
-				CGPROGRAM
-				#pragma vertex vert
-				#pragma fragment frag
-				#pragma fragmentoption ARB_precision_hint_fastest
-				ENDCG
-			}
-			//2- vertical blur
-		Pass {
-				CGPROGRAM 
-				#pragma vertex vertBlurVerticalSGX
-				#pragma fragment fragBlurSGX
-				#pragma fragmentoption ARB_precision_hint_fastest
-				ENDCG
-			}	
-			
-		//3- horizontal Blur
-		Pass {		
-				CGPROGRAM	
-				#pragma vertex vertBlurHorizontalSGX
-				#pragma fragment fragBlurSGX
-				#pragma fragmentoption ARB_precision_hint_fastest
-				ENDCG
-			}
-		Pass //4- composition 
-		{
-        	CGPROGRAM
-			#pragma vertex vertFinal
-			#pragma fragment fragFinal
-			#pragma fragmentoption ARB_precision_hint_fastest
-			ENDCG
-		}
-		Pass { 
-		Stencil{
-			Ref [_StencilRef]
-			Comp Equal
-			Pass Keep
-		}
-				CGPROGRAM
-				#pragma vertex vertStencil
-				#pragma fragment fragStencil
-				#pragma fragmentoption ARB_precision_hint_fastest
-				ENDCG
-			}
-	}
+    #if defined(CREP_SAMPLES_4)
+        #define NUM_SAMPLES 4
+    #elif defined(CREP_SAMPLES_8)
+        #define NUM_SAMPLES 8
+    #elif defined(CREP_SAMPLES_16)
+        #define NUM_SAMPLES 16
+    #else
+        #define NUM_SAMPLES 8
+    #endif
+
+    uniform sampler2D_half _MainTex;
+    uniform sampler2D_half _BlurTex;
+    uniform sampler2D _CameraDepthTexture;
+
+    uniform sampler2D_half _NoiseTex;
+    half _NoiseScale;
+    half _NoiseStrength;
+    half4 _NoiseScroll;
+    half _NoiseContrast;
+
+    half _ViewNoiseScale;
+    half _ViewSpaceMix;
+
+    half _NoiseFlowSpeed;
+    half _NoiseFlowTurnSpeed;
+    half _NoiseFlowWobble;
+
+    half _NoiseDepthInfluence;
+    half _NoiseDepthPower;
+    half _NoiseDepthInvert;
+
+    half3 _LightPos;
+    half _Density;
+    half _Weight;
+    half _Decay;
+    half _Exposure;
+    half _Contrast;
+    uniform half4 _Parameter;
+    uniform half4 _MainTex_TexelSize;
+    half4 _MainTex_ST;
+    half _CosAngle;
+    half4 _TintColor;
+    half _PerpendicularFalloff;
+
+    half _DebugMode;
+
+    struct appdata
+    {
+        float4 pos : POSITION;
+        float2 uv  : TEXCOORD0;
+    };
+
+    struct v2f
+    {
+        float4 pos : SV_POSITION;
+        float2 uv  : TEXCOORD0;
+    };
+
+    struct v2f_kawase
+    {
+        float4 pos : SV_POSITION;
+        half2  uv  : TEXCOORD0;
+        half2  uv1 : TEXCOORD1;
+        half2  uv2 : TEXCOORD2;
+        half2  uv3 : TEXCOORD3;
+        half2  uv4 : TEXCOORD4;
+    };
+
+    inline float3 ReconstructViewPos(float2 uv, float depth01)
+    {
+        float4 clip = float4(uv * 2.0f - 1.0f, depth01 * 2.0f - 1.0f, 1.0f);
+        float4 view = mul(unity_CameraInvProjection, clip);
+        view.xyz /= max(view.w, 1e-6f);
+        return view.xyz;
+    }
+
+    inline half SampleStabilizedNoise(half2 uv, half depth01)
+    {
+        half2 nuv_screen = uv * _NoiseScale;
+
+        float3 viewPos = ReconstructViewPos(uv, depth01);
+        half vz = (half)max(0.001f, abs(viewPos.z));
+        half2 nuv_view = (half2)(viewPos.xy) * (_ViewNoiseScale);
+        nuv_view *= (1.0h / (1.0h + vz * 0.05h));
+
+        half2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
+
+        // Convection-like flow
+        half t = _Time.y;
+
+        half2 baseDir = (half2)_NoiseScroll.xy;
+        half baseLen = max(1e-3h, length(baseDir));
+        baseDir *= (1.0h / baseLen);
+
+        half ang = t * _NoiseFlowTurnSpeed;
+        half sa = sin(ang);
+        half ca = cos(ang);
+
+        half2 dir;
+        dir.x = baseDir.x * ca - baseDir.y * sa;
+        dir.y = baseDir.x * sa + baseDir.y * ca;
+
+        half speed = _NoiseFlowSpeed * (0.85h + 0.15h * sin(t * 0.37h));
+
+        half meander = _NoiseFlowWobble * sin(t * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h);
+        half2 side = half2(-dir.y, dir.x);
+
+        nuv += dir * (speed * t) + side * meander;
+
+        half n = tex2D(_NoiseTex, nuv).r;
+        n = n * 2.0h - 1.0h;
+
+        n *= _NoiseContrast;
+        n = clamp(n, -1.0h, 1.0h);
+
+        half d = saturate(depth01);
+        if (_NoiseDepthInvert > 0.5h) d = 1.0h - d;
+
+        half depthW = pow(d, _NoiseDepthPower);
+        half w = lerp(1.0h, depthW, _NoiseDepthInfluence);
+
+        return n * w;
+    }
+
+    // -------- Accumulation (Pass 0) --------
+    v2f vert(appdata v)
+    {
+        v2f o;
+        o.pos = UnityObjectToClipPos(v.pos);
+        o.uv  = v.uv;
+        return o;
+    }
+
+    half4 frag(v2f i) : COLOR
+    {
+        half4 light = half4(_LightPos.xyz, 1);
+
+        half b = step(0.0h, light.y);
+        half s = 1.0h - 2.0h * b;
+
+        half invSamples = (1.0h / (half)NUM_SAMPLES);
+
+        half depth01 = Linear01Depth(tex2D(_CameraDepthTexture, i.uv)).r;
+        half noise = SampleStabilizedNoise(i.uv, depth01);
+
+        half densityMul = 1.0h + noise * _NoiseStrength;
+        densityMul = clamp(densityMul, 0.25h, 2.0h);
+
+        // Debug: density views
+        if (_DebugMode > 2.5h) // 3 or 4
+        {
+            half v = saturate((densityMul - 0.25h) * (1.0h / 1.75h));
+
+            if (_DebugMode > 3.5h) // 4 = heatmap
+            {
+                half3 c = half3(
+                    saturate(v * 3.0h - 1.0h),
+                    saturate(1.0h - abs(v * 2.0h - 1.0h)),
+                    saturate(1.0h - v * 3.0h)
+                );
+                return half4(c, 1);
+            }
+            else // 3 = grayscale
+            {
+                return half4(v, v, v, 1);
+            }
+        }
+
+        half2 deltaTexCoord = (i.uv + s * light.xy) * ((_Density * densityMul) * invSamples);
+
+        half2 uv = i.uv;
+        half3 color = tex2D(_MainTex, uv);
+
+        half illuminationDecay = 1.0h;
+
+        half sampleScale = (_Weight * 4.0h * invSamples) * 2.5h;
+        sampleScale *= densityMul;
+
+        half depth = depth01;
+
+        UNITY_UNROLL
+        for (int k = 0; k < NUM_SAMPLES; k++)
+        {
+            uv -= deltaTexCoord;
+
+            if (uv.x <= 0.0h || uv.x >= 1.0h || uv.y <= 0.0h || uv.y >= 1.0h)
+                break;
+
+            half sample = tex2D(_MainTex, uv);
+
+            sample *= illuminationDecay * depth * sampleScale;
+            color += sample;
+
+            illuminationDecay *= _Decay;
+        }
+
+        half4 fog = max(half4(color * _Exposure, 1), 0.15h);
+
+        // Debug: raw accumulation view
+        if (_DebugMode > 0.5h && _DebugMode < 1.5h) // 1
+            return fog;
+
+        return fog;
+    }
+
+    // -------- Kawase Blur (Pass 1 & 2) --------
+    v2f_kawase vertKawase(appdata_img v)
+    {
+        v2f_kawase o;
+        o.pos = UnityObjectToClipPos(v.vertex);
+
+        half2 uv = UnityStereoScreenSpaceUVAdjust(v.texcoord.xy, _MainTex_ST);
+        o.uv = uv;
+
+        half r = _Parameter.x;
+        half2 d = (r + 0.5h) * _MainTex_TexelSize.xy;
+
+        o.uv1 = uv + half2( d.x,  d.y);
+        o.uv2 = uv + half2(-d.x,  d.y);
+        o.uv3 = uv + half2( d.x, -d.y);
+        o.uv4 = uv + half2(-d.x, -d.y);
+
+        return o;
+    }
+
+    half4 fragKawase(v2f_kawase i) : SV_Target
+    {
+        half4 c1 = tex2D(_MainTex, i.uv1);
+        half4 c2 = tex2D(_MainTex, i.uv2);
+        half4 c3 = tex2D(_MainTex, i.uv3);
+        half4 c4 = tex2D(_MainTex, i.uv4);
+
+        return (c1 + c2 + c3 + c4) * 0.25h;
+    }
+
+    // -------- Composite (Pass 3) --------
+    v2f vertFinal(appdata i)
+    {
+        v2f o = (v2f)0;
+        UNITY_INITIALIZE_OUTPUT(v2f, o);
+        o.pos = UnityObjectToClipPos(i.pos);
+        o.uv  = i.uv;
+        return o;
+    }
+
+    half4 fragFinal(v2f i) : SV_Target
+    {
+        // Debug: show blurred fog buffer only
+        if (_DebugMode > 1.5h && _DebugMode < 2.5h) // 2
+        {
+            return tex2D(_BlurTex, i.uv);
+        }
+
+        half4 light = half4(_LightPos.xyz, 1);
+        _CosAngle = 1 - abs(cos(light.z));
+
+        fixed4 col = tex2D(_MainTex, i.uv);
+        fixed4 sample = tex2D(_BlurTex, i.uv);
+
+        fixed contrast = _Contrast;
+
+        fixed4 finalSample = (((col) + (sample * 0.4h)) - 0.5h) * contrast + 0.445h;
+        fixed4 finalColor  = (col + (col * 0.04h) - 0.01h);
+
+        fixed4 blitColor = lerp(finalSample, finalColor, (1 - _CosAngle - _PerpendicularFalloff));
+        return blitColor;
+    }
+
+    ENDCG
+
+    SubShader
+    {
+        ZTest Always
+        Cull Off
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            #pragma fragmentoption ARB_precision_hint_fastest
+            ENDCG
+        }
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vertKawase
+            #pragma fragment fragKawase
+            #pragma fragmentoption ARB_precision_hint_fastest
+            ENDCG
+        }
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vertKawase
+            #pragma fragment fragKawase
+            #pragma fragmentoption ARB_precision_hint_fastest
+            ENDCG
+        }
+
+        Pass
+        {
+            CGPROGRAM
+            #pragma vertex vertFinal
+            #pragma fragment fragFinal
+            #pragma fragmentoption ARB_precision_hint_fastest
+            ENDCG
+        }
+    }
 }

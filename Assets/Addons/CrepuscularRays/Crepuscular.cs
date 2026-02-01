@@ -1,88 +1,164 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [RequireComponent(typeof(Camera))]
 [AddComponentMenu("Effects/Crepuscular Rays", -1)]
 public class Crepuscular : MonoBehaviour
 {
+    public Material material;
+    public GameObject mainLight;
 
-	public Material material;
-	public GameObject mainLight;
-	public RenderTexture stencilRT;
-	static readonly int blurTexString = Shader.PropertyToID("_BlurTex");
-	static readonly int cosAngle = Shader.PropertyToID("_CosAngle");
-	static readonly int frameValue = Shader.PropertyToID("_FrameValue");
-	[Range(0, 20)]
-	public float blurSize = 3;
-	[Range(1, 16)]
-	public int resolutionDivisor = 1;
+    [Range(1, 16)] public int resolutionDivisor = 1;
+    [Range(0, 20)] public float blurSize = 3;
 
-	public static readonly int LightPos = Shader.PropertyToID("_LightPos");
-	public Vector4 lightVector;
-	private static readonly int Parameter = Shader.PropertyToID("_Parameter");
-	public float cosineAngle;
+    public enum SampleQuality { S4 = 4, S8 = 8, S16 = 16 }
+    public SampleQuality samples = SampleQuality.S8;
 
-	private int tick;
-	// Start is called before the first frame update
-	void Start()
+    public enum DebugMode
     {
-      
+        Off,
+
+        // show intermediate buffers
+        RawAccumulation,   // output pass 0 (before blur)
+        AfterBlur,         // output after blur passes
+
+        // fog-only outputs (no scene composite)
+        FogOnlyRaw,
+        FogOnlyBlurred,
+
+        // density debug (requires shader keywords below)
+        DensityGrayscale,
+        DensityHeatmap
     }
 
-	void Update()
-	{
-		var getAngle = material.GetFloat(cosAngle);
-		cosineAngle = getAngle;
-		if (tick != 3)
-		{
-			material.SetFloat(frameValue, 1f);
-			tick++;
-		//print("Wait frame " + tick);
-		}
-		else
+    [Header("Debug")]
+    public DebugMode debugMode = DebugMode.Off;
 
-		{
-			//print("Depth tick");
-			material.SetFloat(frameValue, 0f);
-			tick = 0;
-			
-		}
-	}
-	
-	//[ImageEffectOpaque]
-	private void OnRenderImage(RenderTexture source, RenderTexture destination)
-	{
-		var blurTex = RenderTexture.GetTemporary(256/resolutionDivisor, 256/resolutionDivisor, 0, source.format);
+    static readonly int BlurTexID = Shader.PropertyToID("_BlurTex");
+    static readonly int LightPosID = Shader.PropertyToID("_LightPos");
+    static readonly int ParamID = Shader.PropertyToID("_Parameter");
 
-		source.filterMode = FilterMode.Point;
-		lightVector =GetComponent<Camera>().WorldToViewportPoint(transform.position - mainLight.transform.forward);
-		material.SetVector(LightPos, lightVector);
-		Graphics.Blit(source, blurTex, material, 0);
-		material.SetTexture(blurTexString, blurTex);
+    const string KW_S4 = "CREP_SAMPLES_4";
+    const string KW_S8 = "CREP_SAMPLES_8";
+    const string KW_S16 = "CREP_SAMPLES_16";
 
-		float widthMod = 1.0f / resolutionDivisor;
-	if (blurSize > 0){
-		for(int i = 0; i < 1; i++) {
-                float iterationOffs = (i*1.0f);
-                material.SetVector (Parameter, new Vector4 (blurSize * widthMod + iterationOffs, -blurSize * widthMod - iterationOffs, 0.0f, 0.0f));
+    const string KW_DEBUG_DENSITY = "CREP_DEBUG_DENSITY";
+    const string KW_DEBUG_HEATMAP = "CREP_DEBUG_HEATMAP";
 
-                // vertical blur
-                RenderTexture rt2 = RenderTexture.GetTemporary(256/resolutionDivisor, 256/resolutionDivisor, 0, source.format);
-                rt2.filterMode = FilterMode.Bilinear;
-                Graphics.Blit (blurTex, rt2, material, 1);
-                RenderTexture.ReleaseTemporary (blurTex);
-                blurTex = rt2;
+    Camera _cam;
 
-                // horizontal blur
-                rt2 = RenderTexture.GetTemporary(256/resolutionDivisor, 256/resolutionDivisor, 0, source.format);
-                rt2.filterMode = FilterMode.Bilinear;
-                Graphics.Blit (blurTex, rt2, material, 2);
-                RenderTexture.ReleaseTemporary (blurTex);
-                blurTex = rt2;
-		}
-	}
-		RenderTexture.ReleaseTemporary(blurTex);
-		Graphics.Blit(source, destination, material, 3);
-	}
+    void Awake()
+    {
+        _cam = GetComponent<Camera>();
+        // You need depth texture for _CameraDepthTexture
+        _cam.depthTextureMode |= DepthTextureMode.Depth;
+    }
+
+    void SetSampleKeyword()
+    {
+        material.DisableKeyword(KW_S4);
+        material.DisableKeyword(KW_S8);
+        material.DisableKeyword(KW_S16);
+
+        switch ((int)samples)
+        {
+            case 4:  material.EnableKeyword(KW_S4);  break;
+            case 8:  material.EnableKeyword(KW_S8);  break;
+            case 16: material.EnableKeyword(KW_S16); break;
+        }
+    }
+
+    void SetDebugKeywords(bool densityGray, bool densityHeatmap)
+    {
+        material.DisableKeyword(KW_DEBUG_DENSITY);
+        material.DisableKeyword(KW_DEBUG_HEATMAP);
+
+        if (densityGray) material.EnableKeyword(KW_DEBUG_DENSITY);
+        if (densityHeatmap) material.EnableKeyword(KW_DEBUG_HEATMAP);
+    }
+
+    void OnRenderImage(RenderTexture source, RenderTexture destination)
+    {
+        if (material == null || mainLight == null)
+        {
+            Graphics.Blit(source, destination);
+            return;
+        }
+
+        SetSampleKeyword();
+
+        // IMPORTANT: keep your sizing logic as-is (fixed 1024 base)
+        int w = Mathf.Max(8, 1024 / resolutionDivisor);
+        int h = Mathf.Max(8, 1024 / resolutionDivisor);
+
+        RenderTexture rtA = RenderTexture.GetTemporary(w, h, 0, source.format);
+        RenderTexture rtB = RenderTexture.GetTemporary(w, h, 0, source.format);
+
+        rtA.filterMode = FilterMode.Bilinear;
+        rtB.filterMode = FilterMode.Bilinear;
+
+        // Light in viewport space (keeping your original logic)
+        Vector4 lightVector = _cam.WorldToViewportPoint(transform.position - mainLight.transform.forward);
+        material.SetVector(LightPosID, lightVector);
+
+        // ---- Density debug modes ----
+        if (debugMode == DebugMode.DensityGrayscale || debugMode == DebugMode.DensityHeatmap)
+        {
+            bool heat = (debugMode == DebugMode.DensityHeatmap);
+            SetDebugKeywords(densityGray: !heat, densityHeatmap: heat);
+
+            // Pass 0 will return density visualization if keyword enabled
+            Graphics.Blit(source, rtA, material, 0);
+            Graphics.Blit(rtA, destination);
+
+            SetDebugKeywords(false, false);
+            RenderTexture.ReleaseTemporary(rtA);
+            RenderTexture.ReleaseTemporary(rtB);
+            return;
+        }
+
+        // Ensure debug keywords are off for normal path
+        SetDebugKeywords(false, false);
+
+        // Pass 0: accumulation into rtA
+        Graphics.Blit(source, rtA, material, 0);
+
+        if (debugMode == DebugMode.RawAccumulation || debugMode == DebugMode.FogOnlyRaw)
+        {
+            Graphics.Blit(rtA, destination);
+            RenderTexture.ReleaseTemporary(rtA);
+            RenderTexture.ReleaseTemporary(rtB);
+            return;
+        }
+
+        // Blur passes only if blurSize > 0
+        if (blurSize > 0.001f)
+        {
+            float widthMod = 1.0f / Mathf.Max(1, resolutionDivisor);
+
+            // Pass 1: blur A
+            material.SetVector(ParamID, new Vector4(blurSize * widthMod, 0, 0, 0));
+            Graphics.Blit(rtA, rtB, material, 1);
+
+            // Pass 2: blur B
+            material.SetVector(ParamID, new Vector4(blurSize * widthMod, 0, 0, 0));
+            Graphics.Blit(rtB, rtA, material, 2);
+        }
+
+        if (debugMode == DebugMode.AfterBlur || debugMode == DebugMode.FogOnlyBlurred)
+        {
+            Graphics.Blit(rtA, destination);
+            RenderTexture.ReleaseTemporary(rtA);
+            RenderTexture.ReleaseTemporary(rtB);
+            return;
+        }
+
+        // Provide blurred result to composite
+        material.SetTexture(BlurTexID, rtA);
+
+        // Pass 3: composite to destination
+        Graphics.Blit(source, destination, material, 3);
+
+        RenderTexture.ReleaseTemporary(rtA);
+        RenderTexture.ReleaseTemporary(rtB);
+    }
 }
