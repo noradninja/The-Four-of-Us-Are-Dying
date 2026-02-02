@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.45
   m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
   m_Sun: {fileID: 489463878}
-  m_IndirectSpecularColor: {r: 0.06187112, g: 0.06695664, b: 0.101497926, a: 0.45}
+  m_IndirectSpecularColor: {r: 0.058241017, g: 0.063058555, b: 0.09595161, a: 0.45}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3645,7 +3645,7 @@ MonoBehaviour:
   resolutionDivisor: 8
   blurSize: 8
   samples: 4
-  debugMode: 0
+  debugMode: 1
 --- !u!114 &121908235
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51285,7 +51285,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _SkyExposure: 0.57609564
+    - _SkyExposure: 0.55
     m_Colors:
     - _FogColor: {r: 0, g: 0, b: 0, a: 1}
     - _SkyTint: {r: 0.17135999, g: 0.1840533, b: 0.23799999, a: 1}

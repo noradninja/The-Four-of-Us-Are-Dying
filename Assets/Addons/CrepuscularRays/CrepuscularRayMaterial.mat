@@ -12,7 +12,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 3000
+  m_CustomRenderQueue: -1
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -45,35 +45,35 @@ Material:
     - _Decay: 1
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
-    - _Density: 0.075
-    - _Exposure: 1
+    - _Density: 0.061
+    - _Exposure: 0.295
     - _FrameValue: 1
     - _Frequency: 3
     - _LightY: 0
-    - _NoiseContrast: 1.5
+    - _NoiseContrast: 0.25
     - _NoiseDepthInfluence: 1
-    - _NoiseDepthInvert: 1
-    - _NoiseDepthPower: 1.25
-    - _NoiseFlowSpeed: 0.025
-    - _NoiseFlowTurnSpeed: 0.025
-    - _NoiseFlowWobble: 0.025
+    - _NoiseDepthInvert: 0
+    - _NoiseDepthPower: 3
+    - _NoiseFlowSpeed: 0.0125
+    - _NoiseFlowTurnSpeed: 0.0125
+    - _NoiseFlowWobble: 0.0125
     - _NoiseScale: 4
-    - _NoiseStrength: 1
-    - _NoiseTime: 225.31194
+    - _NoiseStrength: 2
+    - _NoiseTime: 67.84833
     - _NumSamples: 8
     - _Parameter: 0
-    - _PerpendicularFalloff: 0.05
+    - _PerpendicularFalloff: 1
     - _SpotDensity: 1
     - _Spread: 1.59
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _ViewNoiseScale: 0.25
-    - _ViewSpaceMix: 0.95
+    - _ViewSpaceMix: 0.75
     - _Weight: 2
-    - _fogInfluence: 3
+    - _fogInfluence: 0
     - _fogSpeed: 0.375
     - _influence: 1
     m_Colors:
-    - _LightPos: {r: -0.3168885, g: 2.2457461, b: 0.5737028, a: 0}
+    - _LightPos: {r: -0.11587293, g: 2.371097, b: 0.59111565, a: 0}
     - _NoiseScroll: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}

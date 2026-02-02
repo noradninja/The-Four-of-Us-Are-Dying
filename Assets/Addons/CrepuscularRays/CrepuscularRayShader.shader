@@ -112,7 +112,7 @@
 
     half _DebugMode;
 
-    // ✅ NEW: stable time
+    // NEW: stable time
     float _NoiseTime;
 
     struct appdata
@@ -156,8 +156,8 @@
 
         half2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
 
-        // ✅ use stable time from C#
-        half t = (half)_NoiseTime;
+        // use stable time from C#
+        float t = (float)_NoiseTime;
 
         half2 baseDir = (half2)_NoiseScroll.xy;
         half baseLen = max(1e-3h, length(baseDir));
@@ -203,7 +203,7 @@
 
     half4 frag(v2f i) : COLOR
     {
-        half4 light = half4(_LightPos.xyz, 1);
+        float4 light = float4(_LightPos.xyz, 1);
 
         half b = step(0.0h, light.y);
         half s = 1.0h - 2.0h * b;
@@ -235,7 +235,7 @@
             }
         }
 
-        half2 deltaTexCoord = (i.uv + s * light.xy) * ((_Density * densityMul) * invSamples);
+        half2 deltaTexCoord = (i.uv + s * light.xy) * ((_Density) * invSamples);
 
         half2 uv = i.uv;
         half3 color = 1;
@@ -246,7 +246,7 @@
         sampleScale *= densityMul;
 
         half depth = depth01;
-        color *= illuminationDecay * depth * sampleScale;
+        color *= illuminationDecay * depth;
 
         UNITY_UNROLL
         for (int k = 0; k < NUM_SAMPLES; k++)
@@ -257,9 +257,9 @@
                 break;
 
             half sample = tex2D(_MainTex, uv);
-
+            sampleScale *= densityMul;
             sample *= illuminationDecay * depth * sampleScale;
-            color *= sample;
+            color += sample/8;
 
             illuminationDecay *= _Decay;
         }
