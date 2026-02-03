@@ -1,4 +1,6 @@
-﻿Shader "Lighting/Crepuscular Rays"
+﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
+
+Shader "Lighting/Crepuscular Rays"
 {
     Properties
     {
@@ -27,18 +29,13 @@
         _fogSpeed("Fog Speed", Float) = 10.0
         [FloatRange] _Spread("Spread", Range(1.0, 5.0)) = 1.0
 
-        // ===== DEBUG MODE (NEW) =====
-        // 0 Off
-        // 1 Raw Accumulation (pass 0)
-        // 2 After Blur (show blurred fog buffer in pass 3)
-        // 3 Density Grayscale (pass 0)
-        // 4 Density Heatmap (pass 0)
+        // ===== DEBUG MODE =====
         [IntRange] _DebugMode("Debug Mode", Range(0,4)) = 0
 
         // ===== BIG SOFT NOISE =====
         _NoiseTex("Noise (R)", 2D) = "gray" {}
         _NoiseScale("Noise Scale", Range(0.05, 4.0)) = 0.35
-        _NoiseStrength("Noise Strength", Range(0, 2)) = 0.5
+        _NoiseStrength("Noise Strength", Range(0, 4)) = 0.5
         _NoiseScroll("Noise Scroll Base Dir (XY)", Vector) = (1.0, 0.4, 0, 0)
         _NoiseContrast("Noise Contrast", Range(0.25, 4)) = 1.0
 
@@ -56,7 +53,7 @@
         _NoiseDepthPower("Noise Depth Power", Range(0.25, 8)) = 2.0
         _NoiseDepthInvert("Noise Depth Invert (0/1)", Range(0, 1)) = 0
 
-        // ✅ NEW: stable time from C#
+        // stable time from C#
         _NoiseTime("Noise Time", Float) = 0
     }
 
@@ -112,7 +109,7 @@
 
     half _DebugMode;
 
-    // NEW: stable time
+    // stable time
     float _NoiseTime;
 
     struct appdata
@@ -156,14 +153,14 @@
 
         half2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
 
-        // use stable time from C#
         float t = (float)_NoiseTime;
 
         half2 baseDir = (half2)_NoiseScroll.xy;
         half baseLen = max(1e-3h, length(baseDir));
         baseDir *= (1.0h / baseLen);
 
-        half ang = t * _NoiseFlowTurnSpeed;
+        // rotate base dir over time (bounded)
+        half ang = (half)(t * (float)_NoiseFlowTurnSpeed);
         half sa = sin(ang);
         half ca = cos(ang);
 
@@ -171,12 +168,19 @@
         dir.x = baseDir.x * ca - baseDir.y * sa;
         dir.y = baseDir.x * sa + baseDir.y * ca;
 
-        half speed = _NoiseFlowSpeed * (0.85h + 0.15h * sin(t * 0.37h));
+        // --- FIXED: no time-growing speed ---
+        // constant drift (linear in t)
+        half baseSpeed = _NoiseFlowSpeed;
+        half2 drift = dir * (baseSpeed * (half)t);
 
-        half meander = _NoiseFlowWobble * sin(t * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h);
+        // small bounded wiggle (does NOT multiply t)
+        drift += dir * (baseSpeed * 0.15h * sin((half)t * 0.37h));
+
+        // sideways wobble stays bounded
+        half meander = _NoiseFlowWobble * sin((half)t * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h);
         half2 side = half2(-dir.y, dir.x);
 
-        nuv += dir * (speed * t) + side * meander;
+        nuv += drift + side * meander;
 
         half n = tex2D(_NoiseTex, nuv).r;
         n = n * 2.0h - 1.0h;
@@ -216,6 +220,7 @@
         half densityMul = 1.0h + noise * _NoiseStrength;
         densityMul = clamp(densityMul, 0.25h, 2.0h);
 
+        // Debug density visualizers
         if (_DebugMode > 2.5h) // 3 or 4
         {
             half v = saturate((densityMul - 0.25h) * (1.0h / 1.75h));
@@ -235,18 +240,20 @@
             }
         }
 
-        half2 deltaTexCoord = (i.uv + s * light.xy) * ((_Density) * invSamples);
+        half2 deltaTexCoord = (i.uv + s * light.xy) * (_Density * invSamples);
 
         half2 uv = i.uv;
+        
         half3 color = 1;
 
         half illuminationDecay = 1.0h;
 
+        // Apply densityMul ONCE (not every iteration)
         half sampleScale = (_Weight * 4.0h * invSamples) * 2.5h;
         sampleScale *= densityMul;
 
+        // Use the already-sampled depth01 as a constant mask (cheap & stable)
         half depth = depth01;
-        color *= illuminationDecay * depth;
 
         UNITY_UNROLL
         for (int k = 0; k < NUM_SAMPLES; k++)
@@ -257,16 +264,17 @@
                 break;
 
             half sample = tex2D(_MainTex, uv);
-            sampleScale *= densityMul;
             sample *= illuminationDecay * depth * sampleScale;
-            color += sample/8;
+
+            // keep your overall intensity similar (you had /8)
+            color += sample;
 
             illuminationDecay *= _Decay;
         }
 
         half4 fog = max(half4(color * _Exposure, 1), 0.15h);
 
-        if (_DebugMode > 0.5h && _DebugMode < 1.5h) // 1
+        if (_DebugMode > 0.5h && _DebugMode < 1.5h) // 1: raw accumulation
             return fog;
 
         return fog;
@@ -297,7 +305,6 @@
         half4 c2 = tex2D(_MainTex, i.uv2);
         half4 c3 = tex2D(_MainTex, i.uv3);
         half4 c4 = tex2D(_MainTex, i.uv4);
-
         return (c1 + c2 + c3 + c4) * 0.25h;
     }
 
@@ -312,10 +319,8 @@
 
     half4 fragFinal(v2f i) : SV_Target
     {
-        if (_DebugMode > 1.5h && _DebugMode < 2.5h) // 2
-        {
+        if (_DebugMode > 1.5h && _DebugMode < 2.5h) // 2: after blur
             return tex2D(_BlurTex, i.uv);
-        }
 
         half4 light = half4(_LightPos.xyz, 1);
         _CosAngle = 1 - abs(cos(light.z));
