@@ -47,14 +47,13 @@ public class Crepuscular : MonoBehaviour
 
     Camera _cam;
 
-    // ✅ NEW: bounded time to avoid long-session precision issues on Vita
+    // bounded time to avoid long-session precision issues on Vita
     float _noiseTime;
     const float NOISE_TIME_WRAP = 256f;
 
     void Awake()
     {
         _cam = GetComponent<Camera>();
-        // You need depth texture for _CameraDepthTexture
         _cam.depthTextureMode |= DepthTextureMode.Depth;
     }
 
@@ -91,12 +90,10 @@ public class Crepuscular : MonoBehaviour
 
         SetSampleKeyword();
 
-        // ✅ NEW: push stable time to shader (prevents “gets jumpy over time” on Vita)
         _noiseTime += Time.unscaledDeltaTime;
         if (_noiseTime > NOISE_TIME_WRAP) _noiseTime -= NOISE_TIME_WRAP;
         material.SetFloat(NoiseTimeID, _noiseTime);
 
-        // IMPORTANT: keep your sizing logic as-is (fixed 1024 base)
         int w = Mathf.Max(8, 1024 / resolutionDivisor);
         int h = Mathf.Max(8, 1024 / resolutionDivisor);
 
@@ -106,7 +103,7 @@ public class Crepuscular : MonoBehaviour
         rtA.filterMode = FilterMode.Bilinear;
         rtB.filterMode = FilterMode.Bilinear;
 
-        // Light in viewport space (keeping your original logic)
+        // Light in viewport space
         Vector4 lightVector = _cam.WorldToViewportPoint(transform.position - mainLight.transform.forward);
         material.SetVector(LightPosID, lightVector);
 
@@ -116,7 +113,6 @@ public class Crepuscular : MonoBehaviour
             bool heat = (debugMode == DebugMode.DensityHeatmap);
             SetDebugKeywords(densityGray: !heat, densityHeatmap: heat);
 
-            // Pass 0 will return density visualization if keyword enabled
             Graphics.Blit(source, rtA, material, 0);
             Graphics.Blit(rtA, destination);
 
@@ -140,18 +136,19 @@ public class Crepuscular : MonoBehaviour
             return;
         }
 
-        // Blur passes only if blurSize > 0
+        // ---- SINGLE-PASS KAWASE BLUR ----
+        // If blur is enabled, blur rtA -> rtB once, then swap so rtA holds blurred result.
         if (blurSize > 0.001f)
         {
             float widthMod = 1.0f / Mathf.Max(1, resolutionDivisor);
 
-            // Pass 1: blur A
             material.SetVector(ParamID, new Vector4(blurSize * widthMod, 0, 0, 0));
             Graphics.Blit(rtA, rtB, material, 1);
 
-            // Pass 2: blur B
-            material.SetVector(ParamID, new Vector4(blurSize * widthMod, 0, 0, 0));
-            Graphics.Blit(rtB, rtA, material, 2);
+            // swap references: rtA becomes blurred
+            var tmp = rtA;
+            rtA = rtB;
+            rtB = tmp;
         }
 
         if (debugMode == DebugMode.AfterBlur || debugMode == DebugMode.FogOnlyBlurred)

@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Unity.Jobs;
 using Unity.Collections;
@@ -9,7 +8,8 @@ public class LODManager : MonoBehaviour
     public static LODManager Instance { get; private set; }
 
     [Header("Global LOD Settings")]
-    public Shader refShader;
+    public Shader refShader;           // VertexOnly shader
+    public Shader blackShader;         // BlackOnly shader (solid black)
     public int batchSize = 50;
     public int farClipOffset;
     [HideInInspector] public int unloadEveryXCycles = 5;
@@ -19,6 +19,22 @@ public class LODManager : MonoBehaviour
     public float reducedDistance = 5f;
     public float vertexOnlyDistance = 7f;
 
+    [Tooltip("After VertexOnly: still render, but output solid black (very cheap).")]
+    public float blackOnlyDistance = 9f;
+
+    [Tooltip("Beyond this: disable renderer entirely.")]
+    public float disableDistance = 12f;
+
+    [Header("Bounds Distance Offset Mode")]
+    [Tooltip(
+        "FarEdge = add half horizontal size (switch later for big objects). NearEdge = subtract half horizontal size (switch sooner for big objects).")]
+    public bool farEdgeForBounds = true;
+
+    [Tooltip("Maximum horizontal size offset (meters) that bounds can contribute to LOD thresholds.")]
+    public float maxBoundsOffset = 2.0f;
+
+    
+    
     private readonly List<Shader_LOD_Enumerator> enumerators = new List<Shader_LOD_Enumerator>();
     private Transform playerTransform;
     private Camera mainCam;
@@ -33,7 +49,6 @@ public class LODManager : MonoBehaviour
     private int currentBatchIndex = 0;
     private int cycleCount = 0;
 
-    // Track what we actually scheduled so Apply uses the same range
     private int scheduledStartIndex = 0;
     private int scheduledCount = 0;
 
@@ -83,8 +98,13 @@ public class LODManager : MonoBehaviour
     private readonly Dictionary<int, Material> _reducedOriginalCache =
         new Dictionary<int, Material>(256);
 
+    // ===== Shared black material cache (BlackOnly) =====
+    private readonly Dictionary<int, Material> _blackCache =
+        new Dictionary<int, Material>(256);
+
     private static void SetToggleKeyword(Material mat, string keyword, bool enabled)
     {
+        if (mat == null) return;
         if (enabled) mat.EnableKeyword(keyword);
         else mat.DisableKeyword(keyword);
     }
@@ -121,10 +141,15 @@ public class LODManager : MonoBehaviour
         if (mainTex != null) mat.mainTexture = mainTex;
         if (moarTex != null) mat.SetTexture("_MetallicGlossMap", moarTex);
 
+        // Keep both textures aligned
         mat.SetTextureScale("_MainTex", mainTexTiling);
         mat.SetTextureOffset("_MainTex", mainTexOffset);
-        mat.SetTextureScale("_MetallicGlossMap", mainTexTiling);
-        mat.SetTextureOffset("_MetallicGlossMap", mainTexOffset);
+
+        if (mat.HasProperty("_MetallicGlossMap"))
+        {
+            mat.SetTextureScale("_MetallicGlossMap", mainTexTiling);
+            mat.SetTextureOffset("_MetallicGlossMap", mainTexOffset);
+        }
 
         if (mat.HasProperty("_Cutoff"))
             mat.SetFloat("_Cutoff", Mathf.Clamp01(cutoff));
@@ -133,9 +158,9 @@ public class LODManager : MonoBehaviour
         SetToggleKeyword(mat, "WIGGLE_ON", leavesOn);
         SetToggleKeyword(mat, "AMBIENT_ON", ambientOn);
 
-        mat.SetFloat("_AlphaOn", alphaOn ? 1f : 0f);
-        mat.SetFloat("_LeavesOn", leavesOn ? 1f : 0f);
-        mat.SetFloat("_AmbientOn", ambientOn ? 1f : 0f);
+        if (mat.HasProperty("_AlphaOn")) mat.SetFloat("_AlphaOn", alphaOn ? 1f : 0f);
+        if (mat.HasProperty("_LeavesOn")) mat.SetFloat("_LeavesOn", leavesOn ? 1f : 0f);
+        if (mat.HasProperty("_AmbientOn")) mat.SetFloat("_AmbientOn", ambientOn ? 1f : 0f);
 
         _replacementCache[key] = mat;
         return mat;
@@ -159,10 +184,65 @@ public class LODManager : MonoBehaviour
         return mat;
     }
 
+    /// <summary>
+    /// Returns a shared-cached "BlackOnly" material that preserves cutout if your blackShader supports _MainTex/_Cutoff.
+    /// If blackShader is null, falls back to a cheap built-in unlit color (still black).
+    /// Cache key uses (blackShader, mainTex, cutoff, alphaOn) so cutout materials can still clip.
+    /// </summary>
+    public Material GetOrCreateBlackMaterial(Texture mainTex, Vector2 tiling, Vector2 offset, float cutoff, bool alphaOn)
+    {
+        // Cache key: combine shader + texture + cutoff + alpha flag
+        int shaderId = blackShader != null ? blackShader.GetInstanceID() : 0;
+        int texId = mainTex != null ? mainTex.GetInstanceID() : 0;
+        int cutoffKey = Mathf.RoundToInt(Mathf.Clamp01(cutoff) * 1000f);
+        int flags = alphaOn ? 1 : 0;
+
+        // Simple int key combine (good enough for this cache size)
+        int key = shaderId ^ (texId * 486187739) ^ (cutoffKey * 83492791) ^ (flags * 97531) ^
+                  (Mathf.RoundToInt(tiling.x * 1000f) * 131) ^
+                  (Mathf.RoundToInt(tiling.y * 1000f) * 137) ^
+                  (Mathf.RoundToInt(offset.x * 1000f) * 139) ^
+                  (Mathf.RoundToInt(offset.y * 1000f) * 149);
+
+        Material mat;
+        if (_blackCache.TryGetValue(key, out mat) && mat != null)
+            return mat;
+
+        Shader s = blackShader != null ? blackShader : Shader.Find("Unlit/Color");
+        if (s == null) return null;
+
+        mat = new Material(s);
+        mat.name = "LOD_SHARED_BLACK_" + key;
+
+        // If the black shader supports cutout, feed it the same texture/cutoff
+        if (mainTex != null && mat.HasProperty("_MainTex"))
+        {
+            mat.SetTexture("_MainTex", mainTex);
+            mat.SetTextureScale("_MainTex", tiling);
+            mat.SetTextureOffset("_MainTex", offset);
+        }
+
+        if (mat.HasProperty("_Cutoff"))
+            mat.SetFloat("_Cutoff", Mathf.Clamp01(cutoff));
+
+        // If your black shader uses the same toggles, set them
+        SetToggleKeyword(mat, "ALPHA_ON", alphaOn);
+        if (mat.HasProperty("_AlphaOn")) mat.SetFloat("_AlphaOn", alphaOn ? 1f : 0f);
+
+        // If Unlit/Color fallback: ensure black
+        if (mat.HasProperty("_Color"))
+            mat.SetColor("_Color", Color.black);
+
+        _blackCache[key] = mat;
+        return mat;
+    }
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
+            // IMPORTANT: clean up any NativeArrays this duplicate may have created
+            DisposeNativeArrays();
             Destroy(gameObject);
             return;
         }
@@ -170,7 +250,7 @@ public class LODManager : MonoBehaviour
         Instance = this;
         mainCam = Camera.main;
     }
-
+    
     private void Start()
     {
         if (enumerators.Count > 0 && enumerators[0] != null && enumerators[0].player != null)
@@ -194,7 +274,6 @@ public class LODManager : MonoBehaviour
             ApplyLODResultsScheduledRange();
             isJobScheduled = false;
 
-            // Advance batch AFTER applying the batch we scheduled
             currentBatchIndex++;
 
             if (currentBatchIndex * batchSize >= enumerators.Count)
@@ -210,16 +289,13 @@ public class LODManager : MonoBehaviour
             }
         }
 
-        // Ensure arrays exist and match current enumerator count
         EnsureNativeArraysMatch();
 
         if (enumerators.Count == 0) return;
 
-        // Compute batch for THIS frame
         int startIndex = currentBatchIndex * batchSize;
         if (startIndex >= enumerators.Count)
         {
-            // Safety: reset if something changed and we landed out of range
             currentBatchIndex = 0;
             startIndex = 0;
         }
@@ -228,7 +304,6 @@ public class LODManager : MonoBehaviour
         int count = endIndex - startIndex;
         if (count <= 0) return;
 
-        // Fill positions for this batch only
         for (int i = startIndex; i < endIndex; i++)
         {
             var e = enumerators[i];
@@ -241,11 +316,9 @@ public class LODManager : MonoBehaviour
 
         Vector2 playerPos2D = new Vector2(playerTransform.position.x, playerTransform.position.z);
 
-        // Slice only the batch that is valid right now
         NativeSlice<Vector2> batchPositions = enumeratorPositions.Slice(startIndex, count);
         NativeSlice<float> batchDistSqrArray = distSqrArray.Slice(startIndex, count);
 
-        // Record what we scheduled (critical!)
         scheduledStartIndex = startIndex;
         scheduledCount = count;
 
@@ -262,14 +335,12 @@ public class LODManager : MonoBehaviour
 
     private void ApplyLODResultsScheduledRange()
     {
-        // Clamp to actual array length in case something changed
         int maxLen = distSqrArray.IsCreated ? distSqrArray.Length : 0;
         if (maxLen == 0) return;
 
         int start = Mathf.Clamp(scheduledStartIndex, 0, maxLen);
         int end = Mathf.Clamp(scheduledStartIndex + scheduledCount, 0, maxLen);
 
-        // Also clamp against enumerator list size
         int enumMax = enumerators.Count;
         if (enumMax == 0) return;
         end = Mathf.Min(end, enumMax);
@@ -278,9 +349,7 @@ public class LODManager : MonoBehaviour
         {
             var e = enumerators[i];
             if (e != null)
-            {
                 e.UpdateLOD(distSqrArray[i], farClipSqr);
-            }
         }
     }
 
@@ -297,7 +366,6 @@ public class LODManager : MonoBehaviour
 
     private void ResizeNativeArrays(int newCount)
     {
-        // Never resize while a job is running
         if (isJobScheduled)
         {
             lodJobHandle.Complete();
@@ -312,7 +380,6 @@ public class LODManager : MonoBehaviour
         enumeratorPositions = new NativeArray<Vector2>(newCount, Allocator.Persistent);
         distSqrArray = new NativeArray<float>(newCount, Allocator.Persistent);
 
-        // Reset batch state so indices don't point at old ranges
         currentBatchIndex = 0;
         scheduledStartIndex = 0;
         scheduledCount = 0;
@@ -324,7 +391,6 @@ public class LODManager : MonoBehaviour
 
         if (!enumerators.Contains(e))
         {
-            // Ensure no jobs running while we mutate lists/arrays
             if (isJobScheduled)
             {
                 lodJobHandle.Complete();
@@ -389,7 +455,6 @@ public class LODManager : MonoBehaviour
 
     private void OnDisable()
     {
-        // Important for playmode reloads / domain reload edge cases
         DisposeNativeArrays();
     }
 
@@ -404,8 +469,18 @@ public class LODManager : MonoBehaviour
         foreach (var kv in _reducedOriginalCache)
             if (kv.Value != null) Destroy(kv.Value);
         _reducedOriginalCache.Clear();
+
+        foreach (var kv in _blackCache)
+            if (kv.Value != null) Destroy(kv.Value);
+        _blackCache.Clear();
     }
 
+    private void OnApplicationQuit()
+    {
+        DisposeNativeArrays();
+        if (Instance == this) Instance = null;
+    }
+    
     private void DisposeNativeArrays()
     {
         if (isJobScheduled)
@@ -416,6 +491,9 @@ public class LODManager : MonoBehaviour
 
         if (enumeratorPositions.IsCreated) enumeratorPositions.Dispose();
         if (distSqrArray.IsCreated) distSqrArray.Dispose();
+
+        enumeratorPositions = default(NativeArray<Vector2>);
+        distSqrArray = default(NativeArray<float>);
 
         scheduledStartIndex = 0;
         scheduledCount = 0;

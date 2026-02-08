@@ -64,6 +64,7 @@ Material:
     - _AmbientOn: 0
     - _BumpScale: 2
     - _Cull: 2
+    - _CullMode: 2
     - _Cutoff: 0.887
     - _DetailNormalMapScale: 1
     - _DstBlend: 0

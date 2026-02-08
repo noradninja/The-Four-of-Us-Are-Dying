@@ -132,19 +132,46 @@ v2f vert(appdata v) {
     const half3 eyeNormal = normalize(mul((half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
     const half dotProduct = 1 - saturate(dot(v.normal, eyeNormal));
 
-    half3 currentPos = v.pos;
-    half3 previousPos = currentPos;
-    half3 nextPos = currentPos;
-    if (_LeavesOn) {
-        ( (nextPos.x += sin(_Time.y * currentPos.x * _leaves_wiggle_speed + (worldPos.x / _wind_size))
-                         * _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)),
-          (nextPos.y += sin(_Time.y * currentPos.y * _leaves_wiggle_speed + (worldPos.y / _wind_size))
-                         * _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)),
-          (nextPos.z += sin(_Time.y * currentPos.z * _leaves_wiggle_speed + (worldPos.z / _wind_size))
-                         * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color)) );
+    // --- Wind / leaf motion (wave-like, no "scaling") ---
+    half3 nextPos = v.pos;
+
+    if (_LeavesOn)
+    {
+        // Normalize wind dir just for phase direction
+        half3 wdir = _wind_dir.xyz;
+        half wlen = max(1e-3h, length(wdir));
+        wdir *= (1.0h / wlen);
+
+        // Time is uniform for all verts
+        half t = (half)_Time.y * _leaves_wiggle_speed;
+
+        // Use WORLD position to build phase, but make it HIGH FREQUENCY so it ripples
+        // (Multiply phase scale to get vertex-to-vertex variation)
+        half phase = dot(worldPos, wdir) * (1.0h / max(1e-3h, _wind_size));
+
+        // Add some LOCAL position into phase to break rigid motion even if object is small
+        // (This is phase-only; does NOT scale amplitude.)
+        phase += (v.pos.x + v.pos.z) * 0.35h;
+
+        // Two waves for richer ripple (still very cheap)
+        half w0 = sin(t + phase * 6.0h);
+        half w1 = sin(t * 1.7h + phase * 11.0h);
+
+        half wave = w0 * 0.70h + w1 * 0.30h; // bounded [-1..1]
+
+        // Vertex color weight (use RGB avg like before)
+        half vtxW = (v.color.r + v.color.g + v.color.b) * (1.0h / 3.0h);
+
+        // Amplitude (constant, not position-amplified)
+        half amp = _leaves_wiggle_disp * _influence * vtxW;
+
+        // Ripple direction: along the vertex normal (best “surface ripple” look)
+        half3 nObj = normalize(v.normal);
+        nextPos += nObj * (wave * amp);
     }
-    float t = 0.5h;
-    v.pos = lerp(previousPos, nextPos, t);
+
+    v.pos = nextPos;
+    worldPos = mul(unity_ObjectToWorld, half4(v.pos, 1.0h)).xyz;
 
     half4 lightColor = half4(0,0,0,1);
     #if defined(AMBIENT_ON) || !defined(CUSTOM_LIGHTMAPPED)
@@ -178,11 +205,12 @@ fixed4 frag(v2f v) : SV_Target {
     UNITY_EXTRACT_FOG(v);
     #if defined(CUSTOM_LIGHTMAPPED)
         const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
+        half3 lm = DecodeLightmap(lightmap);
         #if CUSTOM_LIGHTMAPPED == 1
-            const half4 lighting = half4(lightmap.rgb * 0.25h, 1) + posLighting;
+            const half4 lighting = half4(lm * 0.5h, 1) + posLighting;
         #endif
     #else
-        const half4 lighting = posLighting;
+        const half4 lighting = 0.5h * posLighting ;
     #endif
     // Compute shadow attenuation (this value is used in the shadow receiver pass)
     fixed shadow = SHADOW_ATTENUATION(v);

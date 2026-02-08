@@ -131,7 +131,7 @@ Material:
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2
     - _CameraNearFadeDistance: 1
-    - _Cull: 2
+    - _Cull: 1
     - _Cutoff: 0.393
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5

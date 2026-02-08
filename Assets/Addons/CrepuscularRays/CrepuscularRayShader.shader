@@ -142,57 +142,57 @@ Shader "Lighting/Crepuscular Rays"
         return view.xyz;
     }
 
-    inline half SampleStabilizedNoise(half2 uv, half depth01)
+    inline float SampleStabilizedNoise(float2 uv, half depth01)
     {
-        half2 nuv_screen = uv * _NoiseScale;
+        float2 nuv_screen = uv * _NoiseScale;
 
         float3 viewPos = ReconstructViewPos(uv, depth01);
-        half vz = (half)max(0.001f, abs(viewPos.z));
-        half2 nuv_view = (half2)(viewPos.xy) * (_ViewNoiseScale);
+        float vz = max(0.001f, abs(viewPos.z));
+        float2 nuv_view = (viewPos.xy) * (_ViewNoiseScale);
         nuv_view *= (1.0h / (1.0h + vz * 0.05h));
 
-        half2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
+        float2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
 
-        float t = (float)_NoiseTime;
+        float t = _Time.y;
 
-        half2 baseDir = (half2)_NoiseScroll.xy;
-        half baseLen = max(1e-3h, length(baseDir));
+        float2 baseDir = _NoiseScroll.xy;
+        float baseLen = max(1e-3h, length(baseDir));
         baseDir *= (1.0h / baseLen);
 
         // rotate base dir over time (bounded)
-        half ang = (half)(t * (float)_NoiseFlowTurnSpeed);
-        half sa = sin(ang);
-        half ca = cos(ang);
+        float ang = t * _NoiseFlowTurnSpeed;
+        float sa = sin(ang);
+        float ca = cos(ang);
 
-        half2 dir;
+        float2 dir;
         dir.x = baseDir.x * ca - baseDir.y * sa;
         dir.y = baseDir.x * sa + baseDir.y * ca;
 
         // --- FIXED: no time-growing speed ---
         // constant drift (linear in t)
-        half baseSpeed = _NoiseFlowSpeed;
-        half2 drift = dir * (baseSpeed * (half)t);
+        float baseSpeed = _NoiseFlowSpeed;
+        float2 drift = dir * (baseSpeed * t);
 
         // small bounded wiggle (does NOT multiply t)
-        drift += dir * (baseSpeed * 0.15h * sin((half)t * 0.37h));
+        drift += dir * (baseSpeed * 0.15h * sin(t * 0.37h));
 
         // sideways wobble stays bounded
-        half meander = _NoiseFlowWobble * sin((half)t * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h);
-        half2 side = half2(-dir.y, dir.x);
+        float meander = _NoiseFlowWobble * sin(t * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h);
+        float2 side = float2(-dir.y, dir.x);
 
         nuv += drift + side * meander;
 
-        half n = tex2D(_NoiseTex, nuv).r;
+        float n = tex2D(_NoiseTex, nuv).r;
         n = n * 2.0h - 1.0h;
 
         n *= _NoiseContrast;
         n = clamp(n, -1.0h, 1.0h);
 
-        half d = saturate(depth01);
+        float d = saturate(depth01);
         if (_NoiseDepthInvert > 0.5h) d = 1.0h - d;
 
-        half depthW = pow(d, _NoiseDepthPower);
-        half w = lerp(1.0h, depthW, _NoiseDepthInfluence);
+        float depthW = pow(d, _NoiseDepthPower);
+        float w = lerp(1.0h, depthW, _NoiseDepthInfluence);
 
         return n * w;
     }
@@ -247,8 +247,7 @@ Shader "Lighting/Crepuscular Rays"
         half3 color = 1;
 
         half illuminationDecay = 1.0h;
-
-        // Apply densityMul ONCE (not every iteration)
+        
         half sampleScale = (_Weight * 4.0h * invSamples) * 2.5h;
         sampleScale *= densityMul;
 
