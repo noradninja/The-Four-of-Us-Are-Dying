@@ -133,44 +133,15 @@ v2f vert(appdata v) {
     const half dotProduct = 1 - saturate(dot(v.normal, eyeNormal));
 
     // --- Wind / leaf motion (wave-like, no "scaling") ---
-    half3 nextPos = v.pos;
-
-    if (_LeavesOn)
+ 
+    if(_LeavesOn)
     {
-        // Normalize wind dir just for phase direction
-        half3 wdir = _wind_dir.xyz;
-        half wlen = max(1e-3h, length(wdir));
-        wdir *= (1.0h / wlen);
+        //Leaf Movement and Wiggle
+        ( (v.pos.x += v.color * sin(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
+        (v.pos.y += v.color * sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
+        (v.pos.z += v.color * sin(cos(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
+    }              
 
-        // Time is uniform for all verts
-        half t = (half)_Time.y * _leaves_wiggle_speed;
-
-        // Use WORLD position to build phase, but make it HIGH FREQUENCY so it ripples
-        // (Multiply phase scale to get vertex-to-vertex variation)
-        half phase = dot(worldPos, wdir) * (1.0h / max(1e-3h, _wind_size));
-
-        // Add some LOCAL position into phase to break rigid motion even if object is small
-        // (This is phase-only; does NOT scale amplitude.)
-        phase += (v.pos.x + v.pos.z) * 0.35h;
-
-        // Two waves for richer ripple (still very cheap)
-        half w0 = sin(t + phase * 6.0h);
-        half w1 = sin(t * 1.7h + phase * 11.0h);
-
-        half wave = w0 * 0.70h + w1 * 0.30h; // bounded [-1..1]
-
-        // Vertex color weight (use RGB avg like before)
-        half vtxW = (v.color.r + v.color.g + v.color.b) * (1.0h / 3.0h);
-
-        // Amplitude (constant, not position-amplified)
-        half amp = _leaves_wiggle_disp * _influence * vtxW;
-
-        // Ripple direction: along the vertex normal (best “surface ripple” look)
-        half3 nObj = normalize(v.normal);
-        nextPos += nObj * (wave * amp);
-    }
-
-    v.pos = nextPos;
     worldPos = mul(unity_ObjectToWorld, half4(v.pos, 1.0h)).xyz;
 
     half4 lightColor = half4(0,0,0,1);
@@ -223,6 +194,7 @@ fixed4 frag(v2f v) : SV_Target {
 
     if (!_AlphaOn) {
         fixed4 texcol = tex2D(_MainTex, v.uv0.xy);
+        clip(texcol.a - _Cutoff);
     } else {
         fixed4 texcol = tex2D(_MetallicGlossMap, v.uv0.xy);
         clip(texcol.b - _Cutoff);

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿// Shader_LOD_Enumerator.cs
+using UnityEngine;
 using UnityEngine.Rendering;
 
 public class Shader_LOD_Enumerator : MonoBehaviour
@@ -8,7 +9,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         Full,
         Reduced,
         VertexOnly,
-        BlackOnly,   // NEW
+        BlackOnly,
         Disabled
     }
 
@@ -19,25 +20,51 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     public LODState shaderLOD;
 
-    private Material replacementMaterial;       // Shared cached (VertexOnly)
-    private Material blackOnlyMaterial;         // Shared cached (BlackOnly)
-    private Material originalMaterial;          // Shared original
-    private Material reducedOriginalMaterial;   // Shared cached clone (Reduced)
+    private Material replacementMaterial;
+    private Material blackOnlyMaterial;
+    private Material originalMaterial;
+    private Material reducedOriginalMaterial;
     private Texture originalTexture;
     private Texture originalSecondTexture;
     private Renderer thisRenderer;
     private bool shadowCaster;
 
-    // Cached per-object thresholds (SQUARED) after size adjustment
     private float tFullSqr;
     private float tReducedSqr;
     private float tVertexOnlySqr;
-    private float tBlackOnlySqr;     // NEW
-    private float tDisableSqr;       // NEW
+    private float tBlackOnlySqr;
+    private float tDisableSqr;
+
+    // Midpoint between VertexOnly and BlackOnly (squared), used by FPS culling (no sqrt at runtime)
+    private float tFPSCullMinSqr;
+
+    private Mesh _cachedMesh;
+    private MeshFilter _mf;
+    private SkinnedMeshRenderer _smr;
+
+    // ---- FPS adaptive culling ----
+    private bool _forcedDisabledByFPS = false;
+    private float _lastDistSqr = 0f;
+
+    public Renderer CachedRenderer { get { return thisRenderer; } }
+    public Mesh CachedMesh { get { return _cachedMesh; } }
+    public LODState CurrentState { get { return shaderLOD; } }
+    public bool WasShadowCaster { get { return shadowCaster; } }
+
+    public bool IsForcedDisabledByFPS { get { return _forcedDisabledByFPS; } }
+    public float LastDistSqr { get { return _lastDistSqr; } }
+
+    public float VertexOnlyThresholdSqr { get { return tVertexOnlySqr; } }
+    public float BlackOnlyThresholdSqr { get { return tBlackOnlySqr; } }
+    public float FPSCullMinThresholdSqr { get { return tFPSCullMinSqr; } }
 
     void Start()
     {
         thisRenderer = GetComponent<Renderer>();
+        _mf = GetComponent<MeshFilter>();
+        _smr = thisRenderer as SkinnedMeshRenderer;
+        _cachedMesh = _mf != null ? _mf.sharedMesh : (_smr != null ? _smr.sharedMesh : null);
+
         if (thisRenderer == null) return;
 
         originalMaterial = thisRenderer.sharedMaterial;
@@ -69,25 +96,23 @@ public class Shader_LOD_Enumerator : MonoBehaviour
                     cutoff = originalMaterial.GetFloat("_Cutoff");
             }
 
-            // VertexOnly: alpha always on, ambient forced off
             replacementMaterial = LODManager.Instance.GetOrCreateReplacementMaterial(
                 originalTexture,
                 originalSecondTexture,
                 tiling,
                 offset,
                 cutoff,
-                true,       // alphaOn
-                isFoliage,  // leavesOn
-                false       // ambientOn forced OFF
+                true,
+                isFoliage,
+                false
             );
 
-            // BlackOnly: keep cutout if blackShader supports _MainTex/_Cutoff
             blackOnlyMaterial = LODManager.Instance.GetOrCreateBlackMaterial(
                 originalTexture,
                 tiling,
                 offset,
                 cutoff,
-                true // alphaOn (we want cutout preserved if possible)
+                true
             );
         }
 
@@ -109,7 +134,6 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     private void CacheSizeAdjustedThresholds()
     {
-        // Fallback defaults if manager missing
         float baseFull = 1.5f;
         float baseReduced = 2.5f;
         float baseVertex = 4.5f;
@@ -129,21 +153,17 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             useFarEdge = LODManager.Instance.farEdgeForBounds;
         }
 
-        // Largest horizontal bound (world-space AABB)
         Bounds b = thisRenderer.bounds;
         float halfHorizontal = 0.5f * Mathf.Max(b.size.x, b.size.z);
 
-        // Apply cap from manager
         float cap = 2.0f;
         if (LODManager.Instance != null)
             cap = LODManager.Instance.maxBoundsOffset;
 
         halfHorizontal = Mathf.Min(halfHorizontal, cap);
 
-        // Determine sign (far vs near edge)
         float sign = useFarEdge ? 1f : -1f;
 
-// Prevent zero / negative thresholds
         const float MinMeters = 0.01f;
 
         float full = Mathf.Max(MinMeters, baseFull + sign * halfHorizontal);
@@ -158,12 +178,55 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         tBlackOnlySqr = black * black;
         tDisableSqr = disable * disable;
 
+        // point between VertexOnly and BlackOnly, cached as squared distance
+        float mid = 0.5f * (vertex + black);
+        tFPSCullMinSqr = mid * mid;
     }
 
+    public void ForceDisableByFPS()
+    {
+        if (_forcedDisabledByFPS) return;
+        _forcedDisabledByFPS = true;
+
+        if (thisRenderer != null)
+        {
+            thisRenderer.enabled = false;
+            if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+        }
+    }
+
+    public void ReleaseFPSDisable()
+    {
+        if (!_forcedDisabledByFPS) return;
+        _forcedDisabledByFPS = false;
+
+        ApplySettings();
+    }
 
     public void UpdateLOD(float currentDistSqr, float farClipSqr)
     {
         if (!enableShaderLOD) return;
+
+        _lastDistSqr = currentDistSqr;
+
+        // Keep forced-FPS-disabled objects off until player is close enough again.
+        if (_forcedDisabledByFPS)
+        {
+            if (currentDistSqr <= tBlackOnlySqr)
+            {
+                _forcedDisabledByFPS = false;
+                // fall through to normal LOD below
+            }
+            else
+            {
+                if (thisRenderer != null)
+                {
+                    thisRenderer.enabled = false;
+                    if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+                }
+                return;
+            }
+        }
 
         LODState newState;
 
@@ -225,8 +288,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         if (LODManager.Instance != null)
             LODManager.Instance.Unregister(this);
     }
-    
-    #if UNITY_EDITOR
+
+#if UNITY_EDITOR
     [Header("Debug Gizmos")]
     public bool drawLodGizmos = false;
     [Range(24, 128)] public int gizmoSegments = 48;
@@ -238,7 +301,6 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         Renderer r = thisRenderer != null ? thisRenderer : GetComponent<Renderer>();
         if (r == null) return;
 
-        // Recompute thresholds in editor so the gizmos reflect current manager settings
         float baseFull = 1.5f;
         float baseReduced = 2.5f;
         float baseVertex = 4.5f;
@@ -267,22 +329,20 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         float sign = useFarEdge ? 1f : -1f;
         const float MinMeters = 0.01f;
 
-        float full    = Mathf.Max(MinMeters, baseFull    + sign * halfHorizontal);
+        float full = Mathf.Max(MinMeters, baseFull + sign * halfHorizontal);
         float reduced = Mathf.Max(MinMeters, baseReduced + sign * halfHorizontal);
-        float vertex  = Mathf.Max(MinMeters, baseVertex  + sign * halfHorizontal);
-        float black   = Mathf.Max(MinMeters, baseBlack   + sign * halfHorizontal);
+        float vertex = Mathf.Max(MinMeters, baseVertex + sign * halfHorizontal);
+        float black = Mathf.Max(MinMeters, baseBlack + sign * halfHorizontal);
         float disable = Mathf.Max(MinMeters, baseDisable + sign * halfHorizontal);
 
         Vector3 center = r.bounds.center;
 
-        // Draw rings in XZ plane (cheaper + clearer than spheres)
-        Gizmos.color = new Color(0.2f, 1f, 0.2f, 1f);   DrawRingXZ(center, full, gizmoSegments);    // green
-        Gizmos.color = new Color(1f, 0.85f, 0.2f, 1f);  DrawRingXZ(center, reduced, gizmoSegments); // yellow
-        Gizmos.color = new Color(0.2f, 0.7f, 1f, 1f);   DrawRingXZ(center, vertex, gizmoSegments);  // blue
-        Gizmos.color = new Color(0.8f, 0.2f, 1f, 1f);   DrawRingXZ(center, black, gizmoSegments);   // purple
-        Gizmos.color = new Color(1f, 0.2f, 0.2f, 1f);   DrawRingXZ(center, disable, gizmoSegments); // red
+        Gizmos.color = new Color(0.2f, 1f, 0.2f, 1f); DrawRingXZ(center, full, gizmoSegments);
+        Gizmos.color = new Color(1f, 0.85f, 0.2f, 1f); DrawRingXZ(center, reduced, gizmoSegments);
+        Gizmos.color = new Color(0.2f, 0.7f, 1f, 1f); DrawRingXZ(center, vertex, gizmoSegments);
+        Gizmos.color = new Color(0.8f, 0.2f, 1f, 1f); DrawRingXZ(center, black, gizmoSegments);
+        Gizmos.color = new Color(1f, 0.2f, 0.2f, 1f); DrawRingXZ(center, disable, gizmoSegments);
 
-        // Small hint line showing the capped offset amount
         Gizmos.color = Color.white;
         Gizmos.DrawLine(center, center + new Vector3(halfHorizontal, 0f, 0f));
     }
@@ -303,6 +363,5 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             prev = next;
         }
     }
-    #endif
-
+#endif
 }

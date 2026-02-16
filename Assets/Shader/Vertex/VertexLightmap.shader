@@ -175,45 +175,14 @@
 				half3 worldPos = mul(unity_ObjectToWorld, half4(v.vertex, 1)).xyz;
 
 				 // --- Wind / leaf motion (wave-like, no "scaling") ---
-    half3 nextPos = v.vertex;
-
-    if (_LeavesOn)
+  if(_LeavesOn)
     {
-        // Normalize wind dir just for phase direction
-        half3 wdir = _wind_dir.xyz;
-        half wlen = max(1e-3h, length(wdir));
-        wdir *= (1.0h / wlen);
-
-        // Time is uniform for all verts
-        half t = (half)_Time.y * _leaves_wiggle_speed;
-
-        // Use WORLD position to build phase, but make it HIGH FREQUENCY so it ripples
-        // (Multiply phase scale to get vertex-to-vertex variation)
-        half phase = dot(worldPos, wdir) * (1.0h / max(1e-3h, _wind_size));
-
-        // Add some LOCAL position into phase to break rigid motion even if object is small
-        // (This is phase-only; does NOT scale amplitude.)
-        phase += (v.vertex.x + v.vertex.z) * 0.35h;
-
-        // Two waves for richer ripple (still very cheap)
-        half w0 = sin(t + phase * 6.0h);
-        half w1 = sin(t * 1.7h + phase * 11.0h);
-
-        half wave = w0 * 0.70h + w1 * 0.30h; // bounded [-1..1]
-
-        // Vertex color weight (use RGB avg like before)
-        half vtxW = (v.color.r + v.color.g + v.color.b) * (1.0h / 3.0h);
-
-        // Amplitude (constant, not position-amplified)
-        half amp = _leaves_wiggle_disp * _influence * vtxW;
-
-        // Ripple direction: along the vertex normal (best “surface ripple” look)
-        half3 nObj = normalize(v.normal);
-        nextPos += nObj * (wave * amp);
-    }
-
-    v.vertex = nextPos;
-
+    	//Leaf Movement and Wiggle
+    	( (v.vertex.x += v.color * sin(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
+    	(v.vertex.y += v.color * sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
+    	(v.vertex.z += v.color * sin(cos(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
+    }              
+				
 				UNITY_SETUP_INSTANCE_ID(v);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 				TRANSFER_SHADOW_CASTER(o);

@@ -15,7 +15,7 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 2450
   stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
@@ -126,7 +126,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
-        m_Texture: {fileID: 2800000, guid: 84a5d34050827974aa0b7f431d9d0cee, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3e588d6767cd4364a8fefe26556ad811, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal0:
@@ -189,7 +189,7 @@ Material:
     - _ControlScriptFlag: 0
     - _Cull: 2
     - _CullMode: 0
-    - _Cutoff: 0.429
+    - _Cutoff: 0.693
     - _DetailFade: 1
     - _DetailMask: 1
     - _DetailNormalMapScale: 1
@@ -358,7 +358,7 @@ Material:
     - _LightMode: 1
     - _LightProbes: 0
     - _ManualControl: 0
-    - _Metallic: 0
+    - _Metallic: 1
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -433,9 +433,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.18133636
+    - _influence: 0.13531286
     - _leaves_wiggle_disp: 0.01
-    - _leaves_wiggle_speed: 0.5
+    - _leaves_wiggle_speed: 0.25
     - _wind_size: 5
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

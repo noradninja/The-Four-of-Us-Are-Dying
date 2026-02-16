@@ -417,7 +417,7 @@ public class PlayerController : MonoBehaviour
             speed = _walkSpeed;
         }
 
-        if (camObject.fieldOfView > 50) camObject.fieldOfView = 50; //limit fov change  
+        if (camObject.fieldOfView > 60) camObject.fieldOfView = 60; //limit fov change  
     }
 
     private void RTrigUpEvent()
@@ -468,10 +468,10 @@ public class PlayerController : MonoBehaviour
     {
         if (!Input.GetButton("RTRIG") && (!Input.GetButton("LTRIG")) && 
             (!Input.GetButtonDown("Square"))){
-            if (camObject.fieldOfView > 35f){
+            if (camObject.fieldOfView > 45f){
                 camObject.fieldOfView -= Time.deltaTime * 32;
             }
-            if (camObject.fieldOfView < 35f){
+            if (camObject.fieldOfView < 45f){
                 camObject.fieldOfView += Time.deltaTime * 32;
             }
             if (UICanvasGroup.alpha > 0.1f && stamina >= 99.0f && !isStimulant && !FlashlightController.isCharging){

@@ -202,8 +202,8 @@ namespace Kino
                 return;
             }
 
-            var width = 64;
-            var height = 64;
+            var width = 128;
+            var height = 128;
             var format = RenderTextureFormat.ARGBHalf;
 
             SetUpShaderParameters(source);
@@ -220,21 +220,21 @@ namespace Kino
             #endif
 
             // Pass #1 - Downsampling, prefiltering and CoC calculation
-            var rt1 = RenderTexture.GetTemporary(128, 128, 0, format);
+            var rt1 = RenderTexture.GetTemporary(width, height, 0, format);
             source.filterMode = FilterMode.Bilinear;
             Graphics.Blit(source, rt1, _material, 0);
 
             // Pass #2 - Bokeh simulation
-            var rt2 = RenderTexture.GetTemporary(128, 128, 0, format);
+            var rt2 = RenderTexture.GetTemporary(width, height, 0, format);
             rt1.filterMode = FilterMode.Bilinear;
             Graphics.Blit(rt1, rt2, _material, 1 + (int)_kernelSize);
 
             // Pass #3 - Additional blur
-            //rt2.filterMode = FilterMode.Bilinear;
-            //Graphics.Blit(rt2, rt1, _material, 5);
+            rt2.filterMode = FilterMode.Bilinear;
+            Graphics.Blit(rt2, rt1, _material, 5);
 
             // Pass #4 - Upsampling and composition
-            _material.SetTexture(BlurTex, rt2);
+            _material.SetTexture(BlurTex, rt1);
             Graphics.Blit(source, destination, _material, 6);
 
             RenderTexture.ReleaseTemporary(rt1);

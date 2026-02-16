@@ -56,19 +56,7 @@
 			    half e = 0.14f;
 			    return clamp((inputColor*(a*inputColor+b))/(inputColor*(c*inputColor+d)+e), 0.0h, 1.0h);
 			}
-			const half3x3 preToneMapXform =
-			{
-			     0.575961650,  0.344143820,  0.079952030,
-			     0.070806820,  0.827392350,  0.101774690,
-			     0.028035252,  0.131523770,  0.840242300
-			};
-			const half3x3 postToneMapXform =
-			{
-			     1.666954300, -0.601741150, -0.065202855,
-			    -0.106835220,  1.237778600, -0.130948950,
-			    -0.004142626, -0.087411870,  1.091555000
-			};
-
+			
 			fixed4 frag (v2f i) : SV_Target
 			{
 				// sample the texture, in this case the src color buffer
@@ -101,37 +89,3 @@
 		}
 	}
 }
-
-/*
-// This multiplier corresponds to "ExposureCompensation=1" and disabled auto exposure
-const float ExposureMultiplier = 1.4;
-
-const float3x3 preToneMapXform =
-{
-     0.575961650,  0.344143820,  0.079952030,
-     0.070806820,  0.827392350,  0.101774690,
-     0.028035252,  0.131523770,  0.840242300
-};
-const float3x3 exposedPreToneMapXform = ExposureMultiplier * preToneMapXform;
-const float3x3 postToneMapXform =
-{
-     1.666954300, -0.601741150, -0.065202855,
-    -0.106835220,  1.237778600, -0.130948950,
-    -0.004142626, -0.087411870,  1.091555000
-};
-
-// Transform color spaces, perform blue correction and pre desaturation
-float3 WorkingColor = mul(exposedPreToneMapXform, LinearColor);
-
-// Apply tonemapping curve
-// Narkowicz 2016, "ACES Filmic Tone Mapping Curve"
-// https://knarkowicz.wordpress.com/2016/01/06/aces-filmic-tone-mapping-curve/
-const float a = 2.51;
-const float b = 0.03;
-const float c = 2.43;
-const float d = 0.59;
-const float e = 0.14;
-WorkingColor = saturate((WorkingColor * (a * WorkingColor + b)) / (WorkingColor * (c * WorkingColor + d) + e));
-
-// Transform color spaces, apply blue correction and post desaturation
-return mul( postToneMapXform, WorkingColor );*/

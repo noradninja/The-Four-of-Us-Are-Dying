@@ -161,9 +161,14 @@ public class Crepuscular : MonoBehaviour
 
         // Provide blurred result to composite
         material.SetTexture(BlurTexID, rtA);
+        var global = Shader.GetGlobalTexture("_GlobalGrabTextureAfterAll") as Texture;
+
+        // If for any reason it isn't ready yet, fall back to the camera source
+        if (global == null)
+            global = source;
 
         // Pass 3: composite to destination
-        Graphics.Blit(source, destination, material, 3);
+        Graphics.Blit(global, destination, material, 3);
 
         RenderTexture.ReleaseTemporary(rtA);
         RenderTexture.ReleaseTemporary(rtB);

@@ -58,9 +58,9 @@ half4 frag_Composition(v2f i) : SV_Target
 #if defined(UNITY_COLORSPACE_GAMMA)
     cs.rgb = GammaToLinearSpace(cs.rgb);
 #endif
-    half3 rgb = cs * cb.a + cb.rgb;
+    half3 rgb = cs * 2 * cb.a + (cb.rgb * 2);
 #if defined(UNITY_COLORSPACE_GAMMA)
-    rgb = LinearToGammaSpace(rgb);
+    rgb = LinearToGammaSpace(rgb) * 2;
 #endif
 
     return half4(rgb, cs.a);

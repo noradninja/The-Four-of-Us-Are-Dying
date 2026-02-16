@@ -50,8 +50,15 @@ public class FastSSAO : MonoBehaviour
         var blurTex = RenderTexture.GetTemporary(256, 128, 0, source.format);
        // var temp1 = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /8f), Mathf.RoundToInt(Screen.height /8f), 0, source.format);
         //var temp1 = RenderTexture.GetTemporary(Mathf.RoundToInt(Screen.width /16f), Mathf.RoundToInt(Screen.height /16f), 0, source.format);
-        blurTex.filterMode = FilterMode.Point;
-        Graphics.Blit(source, blurTex, material, 0);
+        blurTex.filterMode = FilterMode.Bilinear;
+        var global = Shader.GetGlobalTexture("_GlobalGrabTexture") as Texture;
+
+        // If for any reason it isn't ready yet, fall back to the camera source
+        if (global == null)
+            global = source;
+
+        // pass 0 writes into rt1, sampling from 'global' instead of 'source'
+        Graphics.Blit(global, blurTex, material, 0);
         //Graphics.Blit(blurTex, temp1, material, 1);
         // Graphics.Blit(temp, temp1, material, 1);
         // RenderTexture.ReleaseTemporary(temp);

@@ -50,7 +50,7 @@ public class PointOfInterest : MonoBehaviour
     {
 #if UNITY_EDITOR
         Gizmos.color = Color.gray;
-        Gizmos.DrawIcon(transform.position, "POIIcon.png", true);
+        Gizmos.DrawIcon(transform.position, "Light_Flare.tga", true);
 #endif
     }
 }

@@ -511,7 +511,33 @@ MonoBehaviour:
   - Assets/Model/Flashlight.fbx
   - Assets/Model/Map_Arrow.fbx
   - Assets/Model/Scientist Male 1.obj
-  uvOverlapAssetList: 00000000ffffffff010100000101000001010000010100000101000001010000000000000000000001010000010100000101000001010000010100000101000001010000010100000101000000000000000000000000000000000000000000000101000001010000010100000000000001010000ffffffff0000000001010000000000000000000001010000000000000101000001010000000000000000000001010000
+  - Assets/MantisLODEditor/Demo/Models/banana.obj
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Tomato.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/JuicePack.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Coffee Beans.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/egg.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/GarlicCloves.fbx
+  - Assets/PolyFew/demo/TestModels/Meat.obj
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Mushrooms.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Cherries.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Lemons.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Onion.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Potato.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/BeerBottle.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Butter.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/SodaCan.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/EnergyDrink.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Skinned_Chicken.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Meat.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Chips.fbx
+  - Assets/PolyFew/demo/TestModels/Barbarian/Models/Barbarian.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Flour.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/CerealBox.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Cheese.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Banana.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Carrots.fbx
+  - Assets/PolyFew/demo/TestModels/Food Pack Mixed/Meshes/Capsicums.fbx
+  uvOverlapAssetList: 00000000ffffffff010100000101000001010000010100000101000001010000000000000000000001010000010100000101000001010000010100000101000001010000010100000101000000000000000000000000000000000000000000000101000001010000010100000000000001010000ffffffff00000000010100000000000000000000010100000000000001010000010100000000000000000000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000001010000010100000101000000000000010100000101000001010000010100000101000001010000
   xatlasWarningShown: 1
   foundCompatibleSetup: 1
   gpuName: Emulated (PSVita)

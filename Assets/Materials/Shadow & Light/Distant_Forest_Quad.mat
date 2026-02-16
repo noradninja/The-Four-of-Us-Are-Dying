@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Distant_Forest_Quad
-  m_Shader: {fileID: 4800000, guid: 3de0c55c935678b478e4e1fa67ff779f, type: 3}
+  m_Shader: {fileID: 50, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: BAKERY_SHNONLINEAR _ALPHATEST_ON _COLOROVERLAY_ON _GLOSSYREFLECTIONS_OFF
     _SPECULARHIGHLIGHTS_OFF _VERTEXCOLOR
   m_LightmapFlags: 0
@@ -114,6 +114,7 @@ Material:
     - _ColorMask: 15
     - _ColorMode: 3
     - _Cull: 2
+    - _CullMode: 2
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DistortionBlend: 0.5
@@ -137,6 +138,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _Rotation: 0
+    - _Roughness: 0.5
     - _Shininess: 0.1
     - _SmoothnessTextureChannel: 0
     - _SoftParticlesEnabled: 0

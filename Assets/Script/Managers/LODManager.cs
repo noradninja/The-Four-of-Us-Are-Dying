@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿// LODManager.cs
+using System.Collections.Generic;
 using UnityEngine;
 using Unity.Jobs;
 using Unity.Collections;
@@ -6,6 +7,11 @@ using Unity.Collections;
 public class LODManager : MonoBehaviour
 {
     public static LODManager Instance { get; private set; }
+
+    public IList<Shader_LOD_Enumerator> Enumerators
+    {
+        get { return enumerators; }
+    }
 
     [Header("Global LOD Settings")]
     public Shader refShader;           // VertexOnly shader
@@ -26,16 +32,32 @@ public class LODManager : MonoBehaviour
     public float disableDistance = 12f;
 
     [Header("Bounds Distance Offset Mode")]
-    [Tooltip(
-        "FarEdge = add half horizontal size (switch later for big objects). NearEdge = subtract half horizontal size (switch sooner for big objects).")]
+    [Tooltip("FarEdge = add half horizontal size. NearEdge = subtract half horizontal size.")]
     public bool farEdgeForBounds = true;
 
     [Tooltip("Maximum horizontal size offset (meters) that bounds can contribute to LOD thresholds.")]
     public float maxBoundsOffset = 2.0f;
 
-    
-    
+    [Header("Adaptive FPS Culling")]
+    public bool enableAdaptiveFPSCulling = true;
+
+    [Tooltip("If FPS drops below this, start disabling the furthest renderers.")]
+    public float targetFPS = 30f;
+
+    [Tooltip("FPS must rise above (targetFPS + hysteresis) before we start restoring.")]
+    public float fpsHysteresis = 2f;
+
+    [Tooltip("How often (seconds) we may cull/restore to avoid thrashing.")]
+    public float fpsCullInterval = 0.25f;
+
+    [Tooltip("Max renderers to disable per interval step.")]
+    public int maxCullPerStep = 1;
+
+    [Tooltip("Max renderers to restore per interval step.")]
+    public int maxRestorePerStep = 1;
+
     private readonly List<Shader_LOD_Enumerator> enumerators = new List<Shader_LOD_Enumerator>();
+
     private Transform playerTransform;
     private Camera mainCam;
     private float farClipSqr;
@@ -51,6 +73,10 @@ public class LODManager : MonoBehaviour
 
     private int scheduledStartIndex = 0;
     private int scheduledCount = 0;
+
+    // Adaptive FPS tracking
+    private readonly List<Shader_LOD_Enumerator> _fpsDisabled = new List<Shader_LOD_Enumerator>(256);
+    private float _nextFPSCullTime = 0f;
 
     // ===== Shared replacement material cache (VertexOnly) =====
     private readonly Dictionary<ReplacementKey, Material> _replacementCache =
@@ -141,7 +167,6 @@ public class LODManager : MonoBehaviour
         if (mainTex != null) mat.mainTexture = mainTex;
         if (moarTex != null) mat.SetTexture("_MetallicGlossMap", moarTex);
 
-        // Keep both textures aligned
         mat.SetTextureScale("_MainTex", mainTexTiling);
         mat.SetTextureOffset("_MainTex", mainTexOffset);
 
@@ -158,7 +183,7 @@ public class LODManager : MonoBehaviour
         SetToggleKeyword(mat, "WIGGLE_ON", leavesOn);
         SetToggleKeyword(mat, "AMBIENT_ON", ambientOn);
 
-        if (mat.HasProperty("_AlphaOn")) mat.SetFloat("_AlphaOn", alphaOn ? 1f : 0f);
+        if (mat.HasProperty("_AlphaOn")) mat.SetFloat("_AlphaOn", 0f);
         if (mat.HasProperty("_LeavesOn")) mat.SetFloat("_LeavesOn", leavesOn ? 1f : 0f);
         if (mat.HasProperty("_AmbientOn")) mat.SetFloat("_AmbientOn", ambientOn ? 1f : 0f);
 
@@ -184,20 +209,13 @@ public class LODManager : MonoBehaviour
         return mat;
     }
 
-    /// <summary>
-    /// Returns a shared-cached "BlackOnly" material that preserves cutout if your blackShader supports _MainTex/_Cutoff.
-    /// If blackShader is null, falls back to a cheap built-in unlit color (still black).
-    /// Cache key uses (blackShader, mainTex, cutoff, alphaOn) so cutout materials can still clip.
-    /// </summary>
     public Material GetOrCreateBlackMaterial(Texture mainTex, Vector2 tiling, Vector2 offset, float cutoff, bool alphaOn)
     {
-        // Cache key: combine shader + texture + cutoff + alpha flag
         int shaderId = blackShader != null ? blackShader.GetInstanceID() : 0;
         int texId = mainTex != null ? mainTex.GetInstanceID() : 0;
         int cutoffKey = Mathf.RoundToInt(Mathf.Clamp01(cutoff) * 1000f);
         int flags = alphaOn ? 1 : 0;
 
-        // Simple int key combine (good enough for this cache size)
         int key = shaderId ^ (texId * 486187739) ^ (cutoffKey * 83492791) ^ (flags * 97531) ^
                   (Mathf.RoundToInt(tiling.x * 1000f) * 131) ^
                   (Mathf.RoundToInt(tiling.y * 1000f) * 137) ^
@@ -214,7 +232,6 @@ public class LODManager : MonoBehaviour
         mat = new Material(s);
         mat.name = "LOD_SHARED_BLACK_" + key;
 
-        // If the black shader supports cutout, feed it the same texture/cutoff
         if (mainTex != null && mat.HasProperty("_MainTex"))
         {
             mat.SetTexture("_MainTex", mainTex);
@@ -225,11 +242,9 @@ public class LODManager : MonoBehaviour
         if (mat.HasProperty("_Cutoff"))
             mat.SetFloat("_Cutoff", Mathf.Clamp01(cutoff));
 
-        // If your black shader uses the same toggles, set them
         SetToggleKeyword(mat, "ALPHA_ON", alphaOn);
         if (mat.HasProperty("_AlphaOn")) mat.SetFloat("_AlphaOn", alphaOn ? 1f : 0f);
 
-        // If Unlit/Color fallback: ensure black
         if (mat.HasProperty("_Color"))
             mat.SetColor("_Color", Color.black);
 
@@ -241,7 +256,6 @@ public class LODManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            // IMPORTANT: clean up any NativeArrays this duplicate may have created
             DisposeNativeArrays();
             Destroy(gameObject);
             return;
@@ -250,7 +264,7 @@ public class LODManager : MonoBehaviour
         Instance = this;
         mainCam = Camera.main;
     }
-    
+
     private void Start()
     {
         if (enumerators.Count > 0 && enumerators[0] != null && enumerators[0].player != null)
@@ -272,6 +286,10 @@ public class LODManager : MonoBehaviour
         {
             lodJobHandle.Complete();
             ApplyLODResultsScheduledRange();
+
+            // FPS adaptive culling after LOD updates
+            TryAdaptiveFPSCulling();
+
             isJobScheduled = false;
 
             currentBatchIndex++;
@@ -331,6 +349,118 @@ public class LODManager : MonoBehaviour
 
         lodJobHandle = lodJob.Schedule(count, 1);
         isJobScheduled = true;
+    }
+
+    private void TryAdaptiveFPSCulling()
+    {
+        if (!enableAdaptiveFPSCulling) return;
+        if (playerTransform == null) return;
+        if (Time.unscaledTime < _nextFPSCullTime) return;
+
+        float fps = FPS_Counter.averageFPS;
+        if (fps <= 0.01f) return;
+
+        _nextFPSCullTime = Time.unscaledTime + Mathf.Max(0.05f, fpsCullInterval);
+
+        // If FPS is low, disable furthest eligible VISIBLE renderers first,
+        // but only if past the midpoint between VertexOnly and BlackOnly.
+        if (fps < targetFPS)
+        {
+            for (int step = 0; step < maxCullPerStep; step++)
+            {
+                Shader_LOD_Enumerator furthest = null;
+                float furthestDistSqr = -1f;
+
+                for (int i = 0; i < enumerators.Count; i++)
+                {
+                    Shader_LOD_Enumerator e = enumerators[i];
+                    if (e == null) continue;
+                    if (e.IsForcedDisabledByFPS) continue;
+
+                    Renderer r = e.CachedRenderer;
+                    
+                    if (r == null) continue;
+                    if (!r.enabled) continue;
+
+                    Vector3 p = e.transform.position;
+                    float dx = p.x - playerTransform.position.x;
+                    float dz = p.z - playerTransform.position.z;
+                    float distSqr = dx * dx + dz * dz;
+
+                    // Only consider for disabling once past the threshold (no sqrt; cached per enumerator)
+                    if (distSqr < e.FPSCullMinThresholdSqr)
+                        continue;
+
+                    if (distSqr > furthestDistSqr)
+                    {
+                        furthestDistSqr = distSqr;
+                        furthest = e;
+                    }
+                }
+
+                if (furthest == null)
+                    break;
+
+                furthest.ForceDisableByFPS();
+                _fpsDisabled.Add(furthest);
+            }
+
+            return;
+        }
+
+        // Restore when safely above target
+        if (fps >= (targetFPS + fpsHysteresis))
+        {
+            for (int step = 0; step < maxRestorePerStep; step++)
+            {
+                Shader_LOD_Enumerator nearest = null;
+                float nearestDistSqr = float.MaxValue;
+                int nearestIndex = -1;
+
+                for (int i = 0; i < _fpsDisabled.Count; i++)
+                {
+                    Shader_LOD_Enumerator e = _fpsDisabled[i];
+                    if (e == null)
+                    {
+                        nearestIndex = i;
+                        nearest = null;
+                        break;
+                    }
+
+                    if (!e.IsForcedDisabledByFPS)
+                        continue;
+
+                    Vector3 p = e.transform.position;
+                    float dx = p.x - playerTransform.position.x;
+                    float dz = p.z - playerTransform.position.z;
+                    float distSqr = dx * dx + dz * dz;
+
+                    // Only restore when it would be within renderable range again
+                    if (distSqr > e.BlackOnlyThresholdSqr)
+                        continue;
+
+                    if (distSqr < nearestDistSqr)
+                    {
+                        nearestDistSqr = distSqr;
+                        nearest = e;
+                        nearestIndex = i;
+                    }
+                }
+
+                if (nearestIndex >= 0 && nearest == null)
+                {
+                    _fpsDisabled.RemoveAt(nearestIndex);
+                    step--;
+                    continue;
+                }
+
+                if (nearest == null)
+                    break;
+
+                nearest.ReleaseFPSDisable();
+                _fpsDisabled.RemoveAt(nearestIndex);
+            }
+        }
     }
 
     private void ApplyLODResultsScheduledRange()
@@ -418,6 +548,7 @@ public class LODManager : MonoBehaviour
             }
 
             enumerators.Remove(e);
+            _fpsDisabled.Remove(e);
             ResizeNativeArrays(enumerators.Count);
         }
     }
@@ -433,6 +564,8 @@ public class LODManager : MonoBehaviour
         if (rescanScene)
         {
             enumerators.Clear();
+            _fpsDisabled.Clear();
+
             var found = GameObject.FindObjectsOfType<Shader_LOD_Enumerator>();
             for (int i = 0; i < found.Length; i++)
             {
@@ -473,6 +606,8 @@ public class LODManager : MonoBehaviour
         foreach (var kv in _blackCache)
             if (kv.Value != null) Destroy(kv.Value);
         _blackCache.Clear();
+
+        _fpsDisabled.Clear();
     }
 
     private void OnApplicationQuit()
@@ -480,7 +615,7 @@ public class LODManager : MonoBehaviour
         DisposeNativeArrays();
         if (Instance == this) Instance = null;
     }
-    
+
     private void DisposeNativeArrays()
     {
         if (isJobScheduled)
