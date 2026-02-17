@@ -179,7 +179,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         tDisableSqr = disable * disable;
 
         // point between VertexOnly and BlackOnly, cached as squared distance
-        float mid = 0.5f * (vertex + black);
+        float mid = 0.25f * (vertex + black);
         tFPSCullMinSqr = mid * mid;
     }
 

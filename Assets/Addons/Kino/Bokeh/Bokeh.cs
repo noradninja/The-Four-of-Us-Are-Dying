@@ -218,7 +218,11 @@ namespace Kino
             }
 
             #endif
+            var global = Shader.GetGlobalTexture("_GlobalGrabTextureAfterAll") as Texture;
 
+            // If for any reason it isn't ready yet, fall back to the camera source
+            if (global == null)
+                global = source;
             // Pass #1 - Downsampling, prefiltering and CoC calculation
             var rt1 = RenderTexture.GetTemporary(width, height, 0, format);
             source.filterMode = FilterMode.Bilinear;
@@ -235,7 +239,7 @@ namespace Kino
 
             // Pass #4 - Upsampling and composition
             _material.SetTexture(BlurTex, rt1);
-            Graphics.Blit(source, destination, _material, 6);
+            Graphics.Blit(global, destination, _material, 6);
 
             RenderTexture.ReleaseTemporary(rt1);
             RenderTexture.ReleaseTemporary(rt2);

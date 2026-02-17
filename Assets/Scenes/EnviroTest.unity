@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.45
   m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
   m_Sun: {fileID: 489463878}
-  m_IndirectSpecularColor: {r: 0.082255386, g: 0.08885423, b: 0.13264498, a: 0.45}
+  m_IndirectSpecularColor: {r: 0.058787577, g: 0.06374135, b: 0.096942626, a: 0.45}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3705,7 +3705,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enableInternalResolution: 0
-  InternalResolution: 0
+  InternalResolution: 3
   screenResolution: 3
   tonemappingMat: {fileID: 2100000, guid: c1f52f19aafdeda47ac5f6071e22e69a, type: 2}
   filterMode: 0
@@ -3763,7 +3763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalTextureNameA: _GlobalGrabTexture
   copyEventA: 11
-  resolutionA: 1
+  resolutionA: 0
   globalTextureNameB: _GlobalGrabTextureAfterAll
   copyEventB: 18
   resolutionB: 0
@@ -51806,7 +51806,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _SkyExposure: 0.72223705
+    - _SkyExposure: 0.55
     m_Colors:
     - _FogColor: {r: 0, g: 0, b: 0, a: 1}
     - _SkyTint: {r: 0.17135999, g: 0.1840533, b: 0.23799999, a: 1}

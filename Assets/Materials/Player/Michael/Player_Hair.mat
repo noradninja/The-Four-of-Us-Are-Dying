@@ -80,7 +80,7 @@ Material:
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
-    - _influence: 0.13531286
+    - _influence: 0.48288772
     - _leaves_wiggle_disp: 0.05
     - _leaves_wiggle_speed: 0.01
     - _wind_size: 5

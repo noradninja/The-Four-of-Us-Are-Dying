@@ -157,7 +157,7 @@ namespace Kino
 
             // Draw screen quad.
             RenderTexture.active = destination;
-
+            
             _material.SetTexture("_MainTex", source);
             _material.SetPass(0);
 
