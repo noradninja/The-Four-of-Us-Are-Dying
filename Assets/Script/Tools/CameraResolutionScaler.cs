@@ -168,7 +168,7 @@ public class CameraResolutionScaler : MonoBehaviour
         else
             tonemappingMat.SetFloat("_toneMapping", 0);
         tonemappingMat.SetFloat("_exposure", exposure);
-
+        
         src.filterMode = filterMode;
 //        dest.filterMode = filterMode;
         // Luckily, looks like using OnRenderImage automatically makes the camera render to a TempBuffer of the size of the camera.pixelRect 

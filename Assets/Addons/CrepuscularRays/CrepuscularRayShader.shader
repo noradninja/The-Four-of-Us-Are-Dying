@@ -55,6 +55,7 @@ Shader "Lighting/Crepuscular Rays"
 
         // stable time from C#
         _NoiseTime("Noise Time", Float) = 0
+        _influence("Influence", Float) = 1
     }
 
     CGINCLUDE
@@ -93,6 +94,7 @@ Shader "Lighting/Crepuscular Rays"
     half _NoiseDepthInfluence;
     half _NoiseDepthPower;
     half _NoiseDepthInvert;
+    half _influence;
 
     half3 _LightPos;
     half _Density;
@@ -141,25 +143,40 @@ Shader "Lighting/Crepuscular Rays"
         view.xyz /= max(view.w, 1e-6f);
         return view.xyz;
     }
-
+    
+    inline float3 ViewToWorldPos(float3 viewPos)
+    {
+        // unity_CameraToWorld transforms from view to world
+        float4 wp = mul(unity_CameraToWorld, float4(viewPos, 1.0));
+        return wp.xyz;
+    }
+    
     inline float SampleStabilizedNoise(float2 uv, half depth01)
     {
         float2 nuv_screen = uv * _NoiseScale;
 
         float3 viewPos = ReconstructViewPos(uv, depth01);
+        float3 worldPos = ViewToWorldPos(viewPos);
+
+        // WORLD-ANCHORED UVs (does not move with camera)
+        // Pick plane: XZ usually feels like "fog in the world"
+        float2 nuv_world = worldPos.xz * _ViewNoiseScale;   // reuse your scale knob
+
+        // Optional: distance-based attenuation to reduce shimmer far away
         float vz = max(0.001f, abs(viewPos.z));
-        float2 nuv_view = (viewPos.xy) * (_ViewNoiseScale);
-        nuv_view *= (1.0h / (1.0h + vz * 0.05h));
+        nuv_world *= (1.0 / (1.0 + vz * 0.05));
 
-        float2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
+        // Mix screen vs world (rename _ViewSpaceMix if you want, but keep prop)
+        float2 nuv = lerp(nuv_screen, nuv_world, _ViewSpaceMix);
 
-        float t = _Time.y;
+        // IMPORTANT: use your stable time, not _Time.y (otherwise it can jitter with frame pacing)
+        float t = _Time.y;   // <- you already expose this
 
+        // --- convection flow (same as yours, just using t) ---
         float2 baseDir = _NoiseScroll.xy;
-        float baseLen = max(1e-3h, length(baseDir));
-        baseDir *= (1.0h / baseLen);
+        float baseLen = max(1e-3, length(baseDir));
+        baseDir *= (1.0 / baseLen);
 
-        // rotate base dir over time (bounded)
         float ang = t * _NoiseFlowTurnSpeed;
         float sa = sin(ang);
         float ca = cos(ang);
@@ -168,34 +185,30 @@ Shader "Lighting/Crepuscular Rays"
         dir.x = baseDir.x * ca - baseDir.y * sa;
         dir.y = baseDir.x * sa + baseDir.y * ca;
 
-        // --- FIXED: no time-growing speed ---
-        // constant drift (linear in t)
-        float baseSpeed = _NoiseFlowSpeed;
+        float baseSpeed = _NoiseFlowSpeed * _influence;
         float2 drift = dir * (baseSpeed * t);
+        drift += dir * (baseSpeed * 0.15 * sin(t * 0.37));
 
-        // small bounded wiggle (does NOT multiply t)
-        drift += dir * (baseSpeed * 0.15h * sin(t * 0.37h));
-
-        // sideways wobble stays bounded
-        float meander = _NoiseFlowWobble * sin(t * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h);
+        float meander = _NoiseFlowWobble * sin(t * 0.23 + nuv.x * 1.7 + nuv.y * 1.3);
         float2 side = float2(-dir.y, dir.x);
 
         nuv += drift + side * meander;
 
         float n = tex2D(_NoiseTex, nuv).r;
-        n = n * 2.0h - 1.0h;
+        n = n * 2.0 - 1.0;
 
         n *= _NoiseContrast;
-        n = clamp(n, -1.0h, 1.0h);
+        n = clamp(n, -1.0, 1.0);
 
         float d = saturate(depth01);
         if (_NoiseDepthInvert > 0.5h) d = 1.0h - d;
 
         float depthW = pow(d, _NoiseDepthPower);
-        float w = lerp(1.0h, depthW, _NoiseDepthInfluence);
+        float w = lerp(1.0, depthW, _NoiseDepthInfluence);
 
         return n * w;
     }
+
 
     v2f vert(appdata v)
     {

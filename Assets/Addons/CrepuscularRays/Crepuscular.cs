@@ -49,6 +49,7 @@ public class Crepuscular : MonoBehaviour
 
     // bounded time to avoid long-session precision issues on Vita
     float _noiseTime;
+    float noiseSpeed;
     const float NOISE_TIME_WRAP = 256f;
 
     void Awake()
@@ -106,7 +107,6 @@ public class Crepuscular : MonoBehaviour
         // Light in viewport space
         Vector4 lightVector = _cam.WorldToViewportPoint(transform.position - mainLight.transform.forward);
         material.SetVector(LightPosID, lightVector);
-
         // ---- Density debug modes ----
         if (debugMode == DebugMode.DensityGrayscale || debugMode == DebugMode.DensityHeatmap)
         {

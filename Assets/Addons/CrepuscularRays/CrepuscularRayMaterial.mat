@@ -50,16 +50,16 @@ Material:
     - _FrameValue: 1
     - _Frequency: 3
     - _LightY: 0
-    - _NoiseContrast: 0.25
-    - _NoiseDepthInfluence: 0.613
-    - _NoiseDepthInvert: 0
+    - _NoiseContrast: 0.5
+    - _NoiseDepthInfluence: 0.4
+    - _NoiseDepthInvert: 1
     - _NoiseDepthPower: 4
-    - _NoiseFlowSpeed: 0.00375
-    - _NoiseFlowTurnSpeed: 0.12
+    - _NoiseFlowSpeed: 0.025
+    - _NoiseFlowTurnSpeed: 0.25
     - _NoiseFlowWobble: 0.072
     - _NoiseScale: 4
-    - _NoiseStrength: 1.91
-    - _NoiseTime: 53.18191
+    - _NoiseStrength: 4
+    - _NoiseTime: 103.98164
     - _NumSamples: 8
     - _Parameter: 0
     - _PerpendicularFalloff: 0.5
@@ -68,12 +68,12 @@ Material:
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _ViewNoiseScale: 0.25
-    - _ViewSpaceMix: 0.6
+    - _ViewSpaceMix: 0.75
     - _Weight: 2
     - _fogInfluence: 0
     - _fogSpeed: 0.375
-    - _influence: 1
+    - _influence: 0.45210198
     m_Colors:
-    - _LightPos: {r: -0.026193261, g: -0.31063467, b: -0.6996701, a: 0}
+    - _LightPos: {r: 0.17650148, g: 1.8315287, b: 0.6401266, a: 0}
     - _NoiseScroll: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}

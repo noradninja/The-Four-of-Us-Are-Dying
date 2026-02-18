@@ -72,7 +72,7 @@ AudioMixerSnapshotController:
   m_FloatValues:
     9f55b280866232342bc82b284fdc499f: 256
     98761a024cbb5054ca0c1705d6dcb7ab: 0.74
-    07ccf845ba77e9f4f983c2de83f150dd: 12.050084
+    07ccf845ba77e9f4f983c2de83f150dd: 14.112627
     fbcd5155b5a3cc44caa06d8baaf5f5ae: 6.7
     3e8fe6857b1183a4bad22954e5b1fdef: 11.852727
     740d279526267f940a3cb90d8b7226f8: 0.437
@@ -81,7 +81,7 @@ AudioMixerSnapshotController:
     ca425778b9ef7714290bfeb9a1a8c39b: 45
     5e3e336bcafd53c49a41c9a0219d64de: 8.455504
     90ac7dbb4d31e494c9e284894efc6cc3: 0.712
-    58879b2d4f139d2499b16bd6e086647c: 10.329208
+    58879b2d4f139d2499b16bd6e086647c: 12
     c2e5d17ffb0c2184a92cf9d73d3abb9b: 4.648096
   m_TransitionOverrides: {}
 --- !u!243 &243008093038933314
@@ -149,7 +149,7 @@ AudioMixerGroupController:
   m_Effects:
   - {fileID: 244628970154348904}
   m_UserColorIndex: 0
-  m_Mute: 1
+  m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
 --- !u!243 &243999937092757370

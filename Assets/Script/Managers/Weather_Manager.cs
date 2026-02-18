@@ -40,7 +40,7 @@ public class Weather_Manager : MonoBehaviour
     public float fogLerp;
     
     // Current smoothed _influence value
-    private float currentInfluence = 0.1f;
+    public static float currentInfluence = 0.1f;
     // Controls how fast currentInfluence catches up to the target value.
     public float smoothingSpeed = 5f;
 
@@ -117,7 +117,7 @@ public class Weather_Manager : MonoBehaviour
 
             // Update the rain particle system's emission rate.
             var emission = rainParticleSystem.emission;
-            emission.rateOverTime = 200 + (1000 * clip2Loudness);
+            emission.rateOverTime = 200 + (500 * clip2Loudness);
 
             // Update the rain particle system's random direction amount.
             var shapeModule = rainParticleSystem.shape;

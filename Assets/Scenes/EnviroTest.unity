@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.45
   m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
   m_Sun: {fileID: 489463878}
-  m_IndirectSpecularColor: {r: 0.058787577, g: 0.06374135, b: 0.096942626, a: 0.45}
+  m_IndirectSpecularColor: {r: 0.09085215, g: 0.098216526, b: 0.14596203, a: 0.45}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3709,8 +3709,8 @@ MonoBehaviour:
   screenResolution: 3
   tonemappingMat: {fileID: 2100000, guid: c1f52f19aafdeda47ac5f6071e22e69a, type: 2}
   filterMode: 0
-  enableTonemapping: 1
-  enableColorGrading: 1
+  enableTonemapping: 0
+  enableColorGrading: 0
   GradingFilter: 6
   userR: 0.25
   userG: 0.8
@@ -3763,7 +3763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   globalTextureNameA: _GlobalGrabTexture
   copyEventA: 11
-  resolutionA: 0
+  resolutionA: 1
   globalTextureNameB: _GlobalGrabTextureAfterAll
   copyEventB: 18
   resolutionB: 0
@@ -6499,7 +6499,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243325210533812924, guid: f5f04035759375743b4b711551cdc66a,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: e284951b23d30374d9743b9ac07e31e2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 951f83204dfdb3e41853027ebf051c08, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -47349,7 +47349,7 @@ MonoBehaviour:
   rainParticleSystem: {fileID: 1874573149}
   sampleDataLength: 512
   scaleFactor: 5.75
-  windScaleFactor: 5
+  windScaleFactor: 7.5
   skyBox: {fileID: 2100000, guid: a4d8809d9d08cc24d9f0208c935d75eb, type: 2}
   crepuscularMat: {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   treeMats:
@@ -47358,6 +47358,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: fc52d12a3045eae4e9a38e5361bfba44, type: 2}
   - {fileID: 2100000, guid: 3a2f049c13d2bf145ae43688591d261c, type: 2}
   - {fileID: 2100000, guid: d60cb07e50126a641bf83e2517dd22e1, type: 2}
+  - {fileID: 2100000, guid: 8a2580812d58b14448587d735b3d15d4, type: 2}
   bushMats:
   - {fileID: 2100000, guid: c9dda93fa6382fa4782d5c9e2a862af1, type: 2}
   - {fileID: 2100000, guid: 595d767c73cd8bb4fa0f54696b937497, type: 2}
@@ -47369,7 +47370,7 @@ MonoBehaviour:
   clip2Loudness: 0.13426526
   enviroReflectivity: 0.55487686
   fogLerp: 0
-  smoothingSpeed: 2.5
+  smoothingSpeed: 0.25
 --- !u!4 &1742728653
 Transform:
   m_ObjectHideFlags: 0
@@ -51806,7 +51807,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _SkyExposure: 0.55
+    - _SkyExposure: 0.77850854
     m_Colors:
     - _FogColor: {r: 0, g: 0, b: 0, a: 1}
     - _SkyTint: {r: 0.17135999, g: 0.1840533, b: 0.23799999, a: 1}
