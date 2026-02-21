@@ -32,7 +32,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _NoiseTex:
         m_Texture: {fileID: 2800000, guid: 03d876a51d797c64597cd42a50f79b2f, type: 3}
-        m_Scale: {x: 1, y: 1}
+        m_Scale: {x: 2, y: 2}
         m_Offset: {x: 0, y: 0}
     - _spotRT:
         m_Texture: {fileID: 0}
@@ -46,34 +46,35 @@ Material:
     - _DeltaCoordX: 0
     - _DeltaCoordY: 0
     - _Density: 0.08
-    - _Exposure: 0.05
+    - _Exposure: 0.04
     - _FrameValue: 1
     - _Frequency: 3
     - _LightY: 0
-    - _NoiseContrast: 0.5
+    - _NoiseContrast: 1
     - _NoiseDepthInfluence: 0.4
     - _NoiseDepthInvert: 1
     - _NoiseDepthPower: 4
-    - _NoiseFlowSpeed: 0.025
+    - _NoiseFlowSpeed: 0.0015
     - _NoiseFlowTurnSpeed: 0.25
-    - _NoiseFlowWobble: 0.072
+    - _NoiseFlowWobble: 0.25
     - _NoiseScale: 4
     - _NoiseStrength: 4
-    - _NoiseTime: 103.98164
+    - _NoiseTime: 207.34523
     - _NumSamples: 8
     - _Parameter: 0
     - _PerpendicularFalloff: 0.5
+    - _PostWobbleStrength: 0.01
     - _SpotDensity: 1
     - _Spread: 1.59
     - _StencilRef: 0
     - _ThresholdParams: 0.25
     - _ViewNoiseScale: 0.25
-    - _ViewSpaceMix: 0.75
+    - _ViewSpaceMix: 0.5
     - _Weight: 2
     - _fogInfluence: 0
     - _fogSpeed: 0.375
-    - _influence: 0.45210198
+    - _influence: 0.19560374
     m_Colors:
-    - _LightPos: {r: 0.17650148, g: 1.8315287, b: 0.6401266, a: 0}
+    - _LightPos: {r: 0.5177156, g: 1.7377601, b: 0.6976142, a: 0}
     - _NoiseScroll: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}

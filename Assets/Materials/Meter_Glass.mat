@@ -8,7 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Meter_Glass
   m_Shader: {fileID: 4800000, guid: cd30fd882817b423386ed23f34536ca9, type: 3}
-  m_ShaderKeywords: _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP _NORMALMAP _VERTEXCOLOR
+  m_ShaderKeywords: USE_LIGHTMAP _ALPHAPREMULTIPLY_ON _METALLICGLOSSMAP _NORMALMAP
+    _VERTEXCOLOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -78,6 +79,7 @@ Material:
     - _Glossiness: 1
     - _GlossyReflections: 1
     - _IntensityVC: 1
+    - _LightmapInfluence: 0.5
     - _Metallic: 0
     - _Mode: 3
     - _OcclusionStrength: 1
@@ -86,6 +88,7 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _UseLghtmap: 1
     - _ZWrite: 0
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
