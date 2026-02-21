@@ -55,7 +55,12 @@ Shader "Lighting/Crepuscular Rays"
 
         // stable time from C#
         _NoiseTime("Noise Time", Float) = 0
-        _influence("Influence", Float) = 1
+
+        // Influence (your range is 0.25..0.40)
+        _influence("Influence", Float) = 0.25
+
+        // ADDED: post-accumulation wobble strength (applies in final pass)
+        _PostWobbleStrength("Post Wobble Strength", Range(0, 0.05)) = 0.01
     }
 
     CGINCLUDE
@@ -94,7 +99,9 @@ Shader "Lighting/Crepuscular Rays"
     half _NoiseDepthInfluence;
     half _NoiseDepthPower;
     half _NoiseDepthInvert;
-    half _influence;
+
+    half _influence;            // your 0.25..0.40
+    half _PostWobbleStrength;   // ADDED
 
     half3 _LightPos;
     half _Density;
@@ -111,7 +118,7 @@ Shader "Lighting/Crepuscular Rays"
 
     half _DebugMode;
 
-    // stable time
+    // stable time (left as-is; not used for flow time per your request)
     float _NoiseTime;
 
     struct appdata
@@ -143,14 +150,24 @@ Shader "Lighting/Crepuscular Rays"
         view.xyz /= max(view.w, 1e-6f);
         return view.xyz;
     }
-    
+
     inline float3 ViewToWorldPos(float3 viewPos)
     {
-        // unity_CameraToWorld transforms from view to world
         float4 wp = mul(unity_CameraToWorld, float4(viewPos, 1.0));
         return wp.xyz;
     }
-    
+
+    // ADDED/CHANGED: monotonic mapping for influence in [0.25..0.40].
+    // This controls BOTH drift speed and rotation rate, consistently.
+    // The floor prevents the motion from "locking" at the low end.
+    inline float GetInfluenceFlowMul()
+    {
+        float u = saturate((_influence - 0.1) * (1.0 / 0.4)); // 0.25..0.40 -> 0..1
+        const float minMul = 0.15;
+        const float maxMul = 1.0; // raise to 1.25 if you want 0.40 faster than current
+        return lerp(minMul, maxMul, u);
+    }
+
     inline float SampleStabilizedNoise(float2 uv, half depth01)
     {
         float2 nuv_screen = uv * _NoiseScale;
@@ -158,26 +175,24 @@ Shader "Lighting/Crepuscular Rays"
         float3 viewPos = ReconstructViewPos(uv, depth01);
         float3 worldPos = ViewToWorldPos(viewPos);
 
-        // WORLD-ANCHORED UVs (does not move with camera)
-        // Pick plane: XZ usually feels like "fog in the world"
-        float2 nuv_world = worldPos.xz * _ViewNoiseScale;   // reuse your scale knob
+        // World anchored UVs (XZ plane)
+        float2 nuv_world = worldPos.xz * _ViewNoiseScale;
 
-        // Optional: distance-based attenuation to reduce shimmer far away
         float vz = max(0.001f, abs(viewPos.z));
         nuv_world *= (1.0 / (1.0 + vz * 0.05));
 
-        // Mix screen vs world (rename _ViewSpaceMix if you want, but keep prop)
         float2 nuv = lerp(nuv_screen, nuv_world, _ViewSpaceMix);
 
-        // IMPORTANT: use your stable time, not _Time.y (otherwise it can jitter with frame pacing)
-        float t = _Time.y;   // <- you already expose this
+        // CHANGED: keep _Time.y, and apply influence to motion rate consistently
+        float t = _Time.y;
+        float flowMul = GetInfluenceFlowMul();
 
-        // --- convection flow (same as yours, just using t) ---
         float2 baseDir = _NoiseScroll.xy;
         float baseLen = max(1e-3, length(baseDir));
         baseDir *= (1.0 / baseLen);
 
-        float ang = t * _NoiseFlowTurnSpeed;
+        // CHANGED: rotation rate scales with influence
+        float ang = t * (_NoiseFlowTurnSpeed * flowMul);
         float sa = sin(ang);
         float ca = cos(ang);
 
@@ -185,11 +200,17 @@ Shader "Lighting/Crepuscular Rays"
         dir.x = baseDir.x * ca - baseDir.y * sa;
         dir.y = baseDir.x * sa + baseDir.y * ca;
 
-        float baseSpeed = _NoiseFlowSpeed * _influence;
-        float2 drift = dir * (baseSpeed * t);
-        drift += dir * (baseSpeed * 0.15 * sin(t * 0.37));
+        // CHANGED: drift speed scales with influence
+        float baseSpeed = _NoiseFlowSpeed * flowMul;
 
-        float meander = _NoiseFlowWobble * sin(t * 0.23 + nuv.x * 1.7 + nuv.y * 1.3);
+        // Linear drift through the field
+        float2 drift = dir * (baseSpeed * t);
+
+        // Bounded along-dir wiggle; phase speeds up with influence
+        drift += dir * (baseSpeed * 0.15 * sin(t * (0.37 * flowMul)));
+
+        // Sideways wobble; phase speeds up with influence (amplitude stays authored)
+        float meander = _NoiseFlowWobble * sin(t * (0.23 * flowMul) + nuv.x * 1.7 + nuv.y * 1.3);
         float2 side = float2(-dir.y, dir.x);
 
         nuv += drift + side * meander;
@@ -209,6 +230,20 @@ Shader "Lighting/Crepuscular Rays"
         return n * w;
     }
 
+    // ADDED: post-accumulation UV warp computed from stabilized noise domain.
+    // This is applied in fragFinal so it distorts the accumulated ray/shadow pattern.
+    inline float2 SampleStabilizedWarp(float2 uv, half depth01)
+    {
+        float n0 = SampleStabilizedNoise(uv, depth01);
+        float n1 = SampleStabilizedNoise(uv + float2(0.173, 0.127), depth01);
+
+        float2 v = float2(n0, n1);
+
+        // Keep warp "alive" at low influence using the same monotonic mapping.
+        float flowMul = GetInfluenceFlowMul();
+
+        return v * (_PostWobbleStrength * flowMul);
+    }
 
     v2f vert(appdata v)
     {
@@ -233,7 +268,6 @@ Shader "Lighting/Crepuscular Rays"
         half densityMul = 1.0h + noise * _NoiseStrength;
         densityMul = clamp(densityMul, 0.25h, 2.0h);
 
-        // Debug density visualizers
         if (_DebugMode > 2.5h) // 3 or 4
         {
             half v = saturate((densityMul - 0.25h) * (1.0h / 1.75h));
@@ -256,15 +290,13 @@ Shader "Lighting/Crepuscular Rays"
         half2 deltaTexCoord = (i.uv + s * light.xy) * (_Density * invSamples);
 
         half2 uv = i.uv;
-        
-        half3 color = 1;
 
+        half3 color = 1;
         half illuminationDecay = 1.0h;
-        
+
         half sampleScale = (_Weight * 4.0h * invSamples) * 2.5h;
         sampleScale *= densityMul;
 
-        // Use the already-sampled depth01 as a constant mask (cheap & stable)
         half depth = depth01;
 
         UNITY_UNROLL
@@ -277,8 +309,6 @@ Shader "Lighting/Crepuscular Rays"
 
             half sample = tex2D(_MainTex, uv);
             sample *= illuminationDecay * depth * sampleScale;
-
-            // keep your overall intensity similar (you had /8)
             color += sample;
 
             illuminationDecay *= _Decay;
@@ -331,14 +361,20 @@ Shader "Lighting/Crepuscular Rays"
 
     half4 fragFinal(v2f i) : SV_Target
     {
+        // ADDED: post-accumulation wobble applied after accumulation + blur.
+        // Warps UVs when sampling both _MainTex and _BlurTex, affecting ray shadows.
+        half depth01 = Linear01Depth(tex2D(_CameraDepthTexture, i.uv)).r;
+        float2 warp = SampleStabilizedWarp(i.uv, depth01);
+        float2 uvW = i.uv + warp;
+
         if (_DebugMode > 1.5h && _DebugMode < 2.5h) // 2: after blur
-            return tex2D(_BlurTex, i.uv);
+            return tex2D(_BlurTex, uvW);
 
         half4 light = half4(_LightPos.xyz, 1);
         _CosAngle = 1 - abs(cos(light.z));
 
-        fixed4 col = tex2D(_MainTex, i.uv);
-        fixed4 sample = tex2D(_BlurTex, i.uv);
+        fixed4 col = tex2D(_MainTex, uvW);
+        fixed4 sample = tex2D(_BlurTex, uvW);
 
         fixed contrast = _Contrast;
 

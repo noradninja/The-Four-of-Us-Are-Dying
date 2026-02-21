@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.45
   m_CustomReflection: {fileID: 8900000, guid: 8ff66e2890e9bbb4290accfdbb4b5361, type: 3}
   m_Sun: {fileID: 489463878}
-  m_IndirectSpecularColor: {r: 0.09085215, g: 0.098216526, b: 0.14596203, a: 0.45}
+  m_IndirectSpecularColor: {r: 0.058241017, g: 0.063058555, b: 0.09595161, a: 0.45}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3818,7 +3818,7 @@ MonoBehaviour:
   contrastMaterial: {fileID: 2100000, guid: 06d01fb1c58e2364a9d74dd07bb97203, type: 2}
   skyboxMaterial: {fileID: 2100000, guid: a4d8809d9d08cc24d9f0208c935d75eb, type: 2}
   contrastValue: 0
-  maxShadowAmount: 0.5
+  maxShadowAmount: 0.8
   tintColor: {r: 0, g: 0, b: 0, a: 1}
 --- !u!1001 &126963333
 Prefab:
@@ -6499,7 +6499,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243325210533812924, guid: f5f04035759375743b4b711551cdc66a,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 951f83204dfdb3e41853027ebf051c08, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e284951b23d30374d9743b9ac07e31e2, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.7
   m_Pitch: 1
@@ -21613,7 +21613,7 @@ MonoBehaviour:
   - {fileID: 2028338019}
   - {fileID: 2032282202}
   - {fileID: 2033472764}
-  - {fileID: 2041040010}
+  - {fileID: 0}
   - {fileID: 2082512697}
   - {fileID: 2083535047}
   - {fileID: 2109377174}
@@ -21977,7 +21977,7 @@ MonoBehaviour:
   - {fileID: 2028338037}
   - {fileID: 2032282204}
   - {fileID: 2033472767}
-  - {fileID: 795453561}
+  - {fileID: 0}
   - {fileID: 2082512700}
   - {fileID: 2083535050}
   - {fileID: 2109377177}
@@ -22934,7 +22934,7 @@ MonoBehaviour:
     - {fileID: 2028338037}
     - {fileID: 2032282204}
     - {fileID: 2033472767}
-    - {fileID: 795453561}
+    - {fileID: 0}
     - {fileID: 2082512700}
     - {fileID: 2083535050}
     - {fileID: 2109377177}
@@ -28353,11 +28353,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1ff47b7d98beec4f9ad70fd3631e627, type: 3}
   m_IsPrefabAsset: 0
---- !u!23 &795453561 stripped
-MeshRenderer:
-  m_CorrespondingSourceObject: {fileID: 2300032, guid: a1ff47b7d98beec4f9ad70fd3631e627,
-    type: 3}
-  m_PrefabInternal: {fileID: 795453560}
 --- !u!1 &795453562 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: a1ff47b7d98beec4f9ad70fd3631e627,
@@ -47370,7 +47365,7 @@ MonoBehaviour:
   clip2Loudness: 0.13426526
   enviroReflectivity: 0.55487686
   fogLerp: 0
-  smoothingSpeed: 0.25
+  smoothingSpeed: 0.001
 --- !u!4 &1742728653
 Transform:
   m_ObjectHideFlags: 0
@@ -51807,7 +51802,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _SkyExposure: 0.77850854
+    - _SkyExposure: 0.55
     m_Colors:
     - _FogColor: {r: 0, g: 0, b: 0, a: 1}
     - _SkyTint: {r: 0.17135999, g: 0.1840533, b: 0.23799999, a: 1}
@@ -52996,28 +52991,6 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e034434a844564d83a09dc60a7173770, type: 2}
   m_IsPrefabAsset: 0
---- !u!1 &2041040010 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100050, guid: a1ff47b7d98beec4f9ad70fd3631e627,
-    type: 3}
-  m_PrefabInternal: {fileID: 795453560}
---- !u!114 &2041040014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2041040010}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49c3e5c001583ea48888c15ba5cdd97c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 787849888}
-  enableShaderLOD: 1
-  isFoliage: 0
-  shaderLOD: 0
-  drawLodGizmos: 0
-  gizmoSegments: 48
 --- !u!1 &2041895340
 GameObject:
   m_ObjectHideFlags: 0
