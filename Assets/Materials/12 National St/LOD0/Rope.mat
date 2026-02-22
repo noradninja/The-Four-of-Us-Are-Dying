@@ -11,7 +11,7 @@ Material:
   m_ShaderKeywords: ALPHA_ON BAKED_SPECULAR BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
     SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON
     SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4
-    WIGGLE_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _SPECGLOSSMAP
+    _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP _SPECGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -461,7 +461,7 @@ Material:
     - _Layer3ScrollV: 0
     - _Layer3Toggle: 0
     - _Layer3UV2: 0
-    - _LeavesOn: 1
+    - _LeavesOn: 0
     - _LightFold: 1
     - _LightMode: 1
     - _LightProbes: 0
@@ -552,9 +552,9 @@ Material:
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
-    - _influence: 0.19560374
-    - _leaves_wiggle_disp: 0.1
-    - _leaves_wiggle_speed: 0.1
+    - _influence: 0.4255747
+    - _leaves_wiggle_disp: 0.01
+    - _leaves_wiggle_speed: 0.25
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15
     - _wind_size: 5
@@ -592,4 +592,4 @@ Material:
     - _Specular: {r: 1, g: 1, b: 1, a: 1}
     - _Time: {r: 0, g: 0, b: 0, a: 0}
     - _TintColor: {r: 1, g: 1, b: 1, a: 1}
-    - _wind_dir: {r: 0.25, g: 0.25, b: 0.25, a: 0}
+    - _wind_dir: {r: 0, g: 0, b: 2, a: 0}

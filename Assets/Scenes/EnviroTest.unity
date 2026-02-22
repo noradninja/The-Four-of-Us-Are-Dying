@@ -3596,8 +3596,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1.3333334
-    height: 1.7647059
+    width: 1
+    height: 1
   near clip plane: 0.1
   far clip plane: 6.5
   field of view: 45
@@ -3723,7 +3723,7 @@ MonoBehaviour:
   mainLight: {fileID: 489463876}
   resolutionDivisor: 8
   blurSize: 8
-  samples: 8
+  samples: 4
   debugMode: 0
 --- !u!114 &121908235
 MonoBehaviour:

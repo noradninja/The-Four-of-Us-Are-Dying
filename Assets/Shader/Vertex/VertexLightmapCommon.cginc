@@ -131,15 +131,16 @@ v2f vert(appdata v) {
     const half3 eyePos = mul(UNITY_MATRIX_MV, half4(v.pos, 1.0h)).xyz;
     const half3 eyeNormal = normalize(mul((half3x3)UNITY_MATRIX_IT_MV, v.normal).xyz);
     const half dotProduct = 1 - saturate(dot(v.normal, eyeNormal));
-
+    half moveColor = v.color.r + v.color.g + v.color.b;
     // --- Wind / leaf motion (wave-like, no "scaling") ---
  
     if(_LeavesOn)
     {
+        _leaves_wiggle_speed *= _influence;
         //Leaf Movement and Wiggle
-        ( (v.pos.x += v.color * sin(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * _influence), //x
-        (v.pos.y += v.color * sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * _influence),   //y
-        (v.pos.z += v.color * sin(cos(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * _influence) )); //z
+        ( (v.pos.x += moveColor * sin(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x), //x
+        (v.pos.y += moveColor * sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y),   //y
+        (v.pos.z += moveColor * sin(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z) ); //z
     }              
 
     worldPos = mul(unity_ObjectToWorld, half4(v.pos, 1.0h)).xyz;
