@@ -90,11 +90,11 @@ public class Weather_Manager : MonoBehaviour
             
             // Apply scaling factors
             clipLoudness = clipLoudness * scaleFactor + 0.55f;
-            clip2Loudness *= windScaleFactor;
+            clip2Loudness *= windScaleFactor + 0.1f;
 
             // Map clip2Loudness to a target _influence value.
             // This example remaps clip2Loudness from a range [0, 0.25] to [0.05, 0.2].
-            float targetInfluence = ExtensionMethods.Math.Remap(clip2Loudness, 0f, 0.25f, 0.05f, 0.2f);
+            float targetInfluence = ExtensionMethods.Math.Remap(clip2Loudness, 0.01f, 1.0f, 0.125f, 0.75f);
 
             // Smoothly interpolate currentInfluence toward the targetInfluence.
             currentInfluence = Mathf.Lerp(currentInfluence, targetInfluence, Time.deltaTime * smoothingSpeed);
