@@ -14,6 +14,10 @@ public class GlobalGrabOnce : MonoBehaviour
     public CameraEvent copyEventB = CameraEvent.BeforeImageEffects;
     public GrabResolution resolutionB = GrabResolution.Full;
 
+    [Header("Optional Processing for Global Texture B")]
+    public bool processB = true;
+    public Material processBMaterial; // ToneMapping/ColorGrading material (expects _MainTex)
+
     public FilterMode filterMode = FilterMode.Bilinear;
 
     public enum GrabResolution
@@ -31,8 +35,12 @@ public class GlobalGrabOnce : MonoBehaviour
     RenderTexture _rtA;
     RenderTexture _rtB;
 
+    // Temp for processing B (screen -> temp -> processed -> B)
+    RenderTexture _rtBTemp;
+
     int _wA, _hA;
     int _wB, _hB;
+    int _wBTemp, _hBTemp;
 
     void OnEnable()
     {
@@ -84,6 +92,29 @@ public class GlobalGrabOnce : MonoBehaviour
             "GlobalGrabOnceRT_B"
         );
 
+        // Only allocate temp if we are actually processing B
+        if (processB && processBMaterial != null)
+        {
+            CreateOrResizeSingle(
+                resolutionB,
+                ref _rtBTemp,
+                ref _wBTemp,
+                ref _hBTemp,
+                "_Unused_GlobalGrabOnceTempB",
+                "GlobalGrabOnceRT_B_Temp"
+            );
+        }
+        else
+        {
+            if (_rtBTemp != null)
+            {
+                _rtBTemp.Release();
+                DestroyImmediate(_rtBTemp);
+                _rtBTemp = null;
+                _wBTemp = _hBTemp = 0;
+            }
+        }
+
         // If command buffers already exist, rebuild to bind new RTs
         if (_cbA != null || _cbB != null)
             BuildCommandBuffers();
@@ -122,9 +153,14 @@ public class GlobalGrabOnce : MonoBehaviour
         rt.autoGenerateMips = false;
         rt.Create();
 
-        Shader.SetGlobalTexture(globalName, rt);
-        Shader.SetGlobalVector(globalName + "_TexelSize",
-            new Vector4(1f / w, 1f / h, w, h));
+        // Only publish globals for the actual A/B textures (skip temps)
+        if (!string.IsNullOrEmpty(globalName) && globalName[0] == '_'
+            && (globalName == globalTextureNameA || globalName == globalTextureNameB))
+        {
+            Shader.SetGlobalTexture(globalName, rt);
+            Shader.SetGlobalVector(globalName + "_TexelSize",
+                new Vector4(1f / w, 1f / h, w, h));
+        }
     }
 
     void BuildCommandBuffers()
@@ -137,24 +173,44 @@ public class GlobalGrabOnce : MonoBehaviour
         {
             _cam.RemoveCommandBuffer(copyEventA, _cbA);
             _cbA.Release();
+            _cbA = null;
         }
 
         if (_cbB != null)
         {
             _cam.RemoveCommandBuffer(copyEventB, _cbB);
             _cbB.Release();
+            _cbB = null;
         }
 
-        // A
+        // A: simple copy
         _cbA = new CommandBuffer();
         _cbA.name = "GlobalGrabOnce Copy A";
         _cbA.Blit(BuiltinRenderTextureType.CurrentActive, _rtA);
         _cam.AddCommandBuffer(copyEventA, _cbA);
 
-        // B
+        // B: copy or copy+process
         _cbB = new CommandBuffer();
-        _cbB.name = "GlobalGrabOnce Copy B";
-        _cbB.Blit(BuiltinRenderTextureType.CurrentActive, _rtB);
+        _cbB.name = (processB && processBMaterial != null) ? "GlobalGrabOnce Copy+Process B" : "GlobalGrabOnce Copy B";
+
+        if (processB && processBMaterial != null)
+        {
+            // If temp isn't available for some reason, fall back to copy
+            if (_rtBTemp != null)
+            {
+                _cbB.Blit(BuiltinRenderTextureType.CurrentActive, _rtBTemp);
+                _cbB.Blit(_rtBTemp, _rtB, processBMaterial);
+            }
+            else
+            {
+                _cbB.Blit(BuiltinRenderTextureType.CurrentActive, _rtB);
+            }
+        }
+        else
+        {
+            _cbB.Blit(BuiltinRenderTextureType.CurrentActive, _rtB);
+        }
+
         _cam.AddCommandBuffer(copyEventB, _cbB);
 
         // Refresh globals
@@ -200,6 +256,13 @@ public class GlobalGrabOnce : MonoBehaviour
             _rtB.Release();
             DestroyImmediate(_rtB);
             _rtB = null;
+        }
+
+        if (_rtBTemp != null)
+        {
+            _rtBTemp.Release();
+            DestroyImmediate(_rtBTemp);
+            _rtBTemp = null;
         }
     }
 }

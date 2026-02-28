@@ -136,7 +136,8 @@ v2f vert(appdata v) {
  
     if(_LeavesOn)
     {
-        _leaves_wiggle_speed *= _influence;
+        _leaves_wiggle_speed *= (_influence * 2);
+        _leaves_wiggle_disp *= (_influence * 2);
         //Leaf Movement and Wiggle
         ( (v.pos.x += moveColor * sin(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x), //x
         (v.pos.y += moveColor * sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y),   //y

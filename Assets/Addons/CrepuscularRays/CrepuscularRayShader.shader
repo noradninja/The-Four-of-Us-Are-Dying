@@ -161,39 +161,45 @@ Shader "Lighting/Crepuscular Rays"
         float2 nuv_screen = uv * _NoiseScale;
 
         float3 viewPos = ReconstructViewPos(uv, depth01);
-        float vz = max(0.001f, abs(viewPos.z));
-        float2 nuv_view = (viewPos.xy) * (_ViewNoiseScale);
-        nuv_view *= (1.0h / (1.0h + vz * 0.05h));
+        float3 worldPos = ViewToWorldPos(viewPos);
 
-        float2 nuv = lerp(nuv_screen, nuv_view, _ViewSpaceMix);
+        // World anchored UVs (XZ plane)
+        float2 nuv_world = worldPos.xz * _ViewNoiseScale;
+
+        float vz = max(0.001f, abs(viewPos.z));
+        nuv_world *= (1.0 / (1.0 + vz * 0.05));
+
+        float2 nuv = lerp(nuv_screen, nuv_world, _ViewSpaceMix);
 
         float flowMul = GetInfluenceFlowMul();
-        float t = _Time.y/100;
+        flowMul *= 2.5h;
+        float t = _Time.y/16;
+        pow(t,t);
 
         float2 baseDir = _NoiseScroll.xy;
         float baseLen = max(1e-3h, length(baseDir));
         baseDir *= (1.0h / baseLen);
 
         // rotate base dir over time (bounded)
-        float ang = t * _NoiseFlowTurnSpeed * flowMul * 20;
+        float ang = t * _NoiseFlowTurnSpeed * flowMul;
         float sa = sin(ang);
         float ca = cos(ang);
 
         float2 dir;
         dir.x = baseDir.x * ca - baseDir.y * sa;
         dir.y = baseDir.x * sa + baseDir.y * ca;
-
+        
         // --- FIXED: no time-growing speed ---
         // constant drift (linear in t)
-        float baseSpeed = _NoiseFlowSpeed * flowMul * 50;
-        float2 drift = dir * (baseSpeed * t) ;
+        float baseSpeed = (_NoiseFlowSpeed + flowMul * t);
+        float2 drift = dir * (baseSpeed);
 
         // small bounded wiggle (does NOT multiply t)
-        drift += dir * (baseSpeed * flowMul * sin(t  * 100 * 0.37h));
+        drift += dir * (baseSpeed);
 
         // sideways wobble stays bounded
-        float meander = _NoiseFlowWobble * flowMul * sin(t * 10 * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h) ;
-        float2 side = float2(-dir.y, dir.x);
+        float meander = _NoiseFlowWobble  * sin((t* 6) * flowMul * 10 * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h) ;
+        float2 side = float2(dir.y, dir.x);
 
         nuv += drift + side * meander;
 
@@ -202,6 +208,7 @@ Shader "Lighting/Crepuscular Rays"
 
         n *= _NoiseContrast;
         n = clamp(n, -1.0h, 1.0h);
+        
 
         float d = saturate(depth01);
         if (_NoiseDepthInvert > 0.5h) d = 1.0h - d;

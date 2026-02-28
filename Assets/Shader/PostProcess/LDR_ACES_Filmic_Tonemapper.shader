@@ -49,7 +49,7 @@
 			half3 aces_approx(half3 inputColor)
 			{
 			    inputColor *= 1.0625f;
-			    half a = 2.51f;
+			    half a = 5.0f;
 			    half b = 0.03f;
 			    half c = 2.43f;
 			    half d = 0.59f;

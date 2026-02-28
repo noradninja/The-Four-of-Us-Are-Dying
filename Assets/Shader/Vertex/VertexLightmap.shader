@@ -177,7 +177,8 @@
 				 // --- Wind / leaf motion (wave-like, no "scaling") ---
   if(_LeavesOn)
     {
-        _leaves_wiggle_speed *= _influence;
+          _leaves_wiggle_speed *= (_influence * 4);
+        _leaves_wiggle_disp *= (_influence * 4);
         //Leaf Movement and Wiggle
         ( (v.vertex.x += v.color * sin(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x), //x
         (v.vertex.y += v.color * sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y),   //y
