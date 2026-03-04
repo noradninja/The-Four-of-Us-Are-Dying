@@ -143,7 +143,8 @@ public class LODManager : MonoBehaviour
         float cutoff,
         bool alphaOn,
         bool leavesOn,
-        bool ambientOn)
+        bool ambientOn,
+        bool vertexConstrain)
     {
         if (refShader == null) return null;
 
@@ -182,11 +183,12 @@ public class LODManager : MonoBehaviour
         SetToggleKeyword(mat, "ALPHA_ON", alphaOn);
         SetToggleKeyword(mat, "WIGGLE_ON", leavesOn);
         SetToggleKeyword(mat, "AMBIENT_ON", ambientOn);
+        SetToggleKeyword(mat, "VERTEX_CONSTRAINTS", vertexConstrain);
 
-        if (mat.HasProperty("_AlphaOn")) mat.SetFloat("_AlphaOn", 0f);
-        if (mat.HasProperty("_LeavesOn")) mat.SetFloat("_LeavesOn", leavesOn ? 1f : 0f);
-        if (mat.HasProperty("_AmbientOn")) mat.SetFloat("_AmbientOn", ambientOn ? 1f : 0f);
-
+        if (mat.HasProperty("_AlphaOn")) mat.SetFloat("_AlphaOn", alphaOn ? 1f : 0f);
+        if (mat.HasProperty("_LeavesOn")) mat.SetFloat("_LeavesOn", 0f);
+        if (mat.HasProperty("_AmbientOn")) mat.SetFloat("_AmbientOn", 0f);
+        if (mat.HasProperty("_VertConstraint")) mat.SetFloat("_VertConstraint", vertexConstrain ? 1f : 0f);
         _replacementCache[key] = mat;
         return mat;
     }

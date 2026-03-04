@@ -17,6 +17,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     public GameObject player;
     public bool enableShaderLOD = true;
     public bool isFoliage;
+    public bool vertexConstraints = true;
 
     public LODState shaderLOD;
 
@@ -104,7 +105,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
                 cutoff,
                 true,
                 isFoliage,
-                false
+                false,
+                vertexConstraints
             );
 
             blackOnlyMaterial = LODManager.Instance.GetOrCreateBlackMaterial(

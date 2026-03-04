@@ -79,8 +79,9 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
+    - _VertConstraint: 1
     - _ZWrite: 1
-    - _influence: 0.18089552
+    - _influence: 0.07580187
     - _leaves_wiggle_disp: 0.05
     - _leaves_wiggle_speed: 0.01
     - _wind_size: 5

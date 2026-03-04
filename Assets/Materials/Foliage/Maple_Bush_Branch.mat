@@ -466,7 +466,7 @@ Material:
     - _LightMode: 1
     - _LightProbes: 0
     - _ManualControl: 0
-    - _Metallic: 0.75
+    - _Metallic: 0.824
     - _Metallic0: 0
     - _Metallic1: 0
     - _Metallic2: 0
@@ -572,6 +572,7 @@ Material:
     - _TwoSided: 0
     - _UVSec: 0
     - _UseMetallicMap: 0
+    - _VertConstraint: 0
     - _VertexColorMode: 0
     - _WindAmount: 0.5
     - _WindMain: 0.1
@@ -583,9 +584,9 @@ Material:
     - __dirty: 1
     - _b_influence: 0.1
     - _branches_disp: 0
-    - _influence: 0.18089552
-    - _leaves_wiggle_disp: 0.001
-    - _leaves_wiggle_speed: 100
+    - _influence: 0.07580187
+    - _leaves_wiggle_disp: 0.01
+    - _leaves_wiggle_speed: 64
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0

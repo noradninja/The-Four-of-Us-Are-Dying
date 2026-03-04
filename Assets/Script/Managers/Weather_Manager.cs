@@ -4,56 +4,105 @@ using DigitalOpus.MB.Core;
 
 public class Weather_Manager : MonoBehaviour
 {
-    // Audio sources for processing sample data
-    public AudioSource audioSource;   // thunder (keep your existing method)
-    public AudioSource audioSourceB;  // wind (RMS)
+    public AudioSource audioSource; // thunder
+    public AudioSource audioSourceB; // wind
 
-    // Particle system for rain effects
     public ParticleSystem rainParticleSystem;
 
-    // Audio processing properties
+    [Range(512, 8192)]
     public int sampleDataLength = 512;
-    public float scaleFactor = 1;
-    public float windScaleFactor = 1;
 
-    // Materials for skybox, crepuscular light, trees, and bushes
+    public float scaleFactor = 1f; // thunder sensitivity (flash strength)
+    public float windScaleFactor = 1f; // wind gain
+
     public Material skyBox;
     public Material crepuscularMat;
-    public Material[] treeMats;
-    public Material[] bushMats;
 
-    // Variables to store computed audio loudness
-    public float clipLoudness = 0;   // thunder (your current method)
-    public float clip2Loudness = 0;  // wind (RMS-based)
+    public float clipLoudness = 0f; // thunder envelope-ish
+    public float clip2Loudness = 0f; // wind output (mapped)
 
-    // Arrays to hold sample data from the audio clips
-    private float[] clipSampleData;
-    private float[] clip2SampleData;
-
-    // Environmental reflection and skybox exposure values
     public float enviroReflectivity;
     private static readonly int Exposure = Shader.PropertyToID("_Exposure");
 
-    // Smoothing value for fog (if needed)
-    public float fogLerp;
-
-    // Current smoothed _influence value
     public static float currentInfluence = 0.1f;
-    // Controls how fast currentInfluence catches up to the target value.
-    public float smoothingSpeed = 5f;
 
-    [Header("Wind RMS (audioSourceB only)")]
-    [Tooltip("If your wind RMS rarely exceeds ~0.10-0.20, set this to the gust peak so normalized reaches 1.")]
+    [Range(0.001f, 1.0f)] public float smoothingSpeed = 5f; // smoothing for influence (tree/bush + global)
+
+    // =========================
+    // WIND RESPONSE SETTINGS
+    // =========================
+    [Header("Wind RMS Response (audioSourceB)")]
+    [Tooltip("Expected gust peak RMS of wind clip. Used to normalize RMS into 0..1.")]
     public float windExpectedMaxRMS = 0.15f;
 
-    [Tooltip("Perceptual curve for wind intensity. <1 boosts low wind, >1 suppresses low wind.")]
+    [Tooltip("Perceptual curve. <1 boosts low wind, >1 suppresses low wind.")]
     public float windResponsePow = 0.6f;
+
+    [Header("Wind Output Mapping")]
+    [Tooltip("Baseline wind output when RMS is 0. Example: 0.1 keeps some motion.")]
+    [Range(0f, 1f)]
+    public float windBaseline = 0.1f;
+
+    [Tooltip("Range above baseline. If baseline=0.1 and range=0.9, output spans 0.1..1.0")] [Range(0f, 1f)]
+    public float windRange = 0.9f;
+
+    [Header("Influence Remap (from wind output)")]
+    public float influenceInMin = 0.01f;
+
+    public float influenceInMax = 1.0f;
+    public float influenceOutMin = 0.1f;
+    public float influenceOutMax = 0.75f;
+
+    // =========================
+    // NEW: RMS smoothing (kills jitter at the source)
+    // =========================
+    [Header("Wind RMS Smoothing (Attack/Release)")] [Tooltip("Seconds to rise toward gusts. Smaller = snappier.")]
+    public float windRmsAttack = 0.08f;
+
+    [Tooltip("Seconds to fall back to calm. Larger = smoother decay.")]
+    public float windRmsRelease = 0.35f;
+
+    [Tooltip("Optional: clamps the final smoothed RMS (safety). 0 disables.")]
+    public float windRmsClamp = 0f;
+
+    private float windRmsSmoothed = 0f;
+
+    // Debug values for editor tool (updated every frame)
+    [NonSerialized] public float debugWindRms = 0f; // raw RMS
+    [NonSerialized] public float debugWindRmsSmoothed = 0f; // smoothed RMS
+    [NonSerialized] public float debugWind01 = 0f; // normalized 0..1 (after pow)
+    [NonSerialized] public float debugWindOut = 0f; // windOut (clip2Loudness)
+    [NonSerialized] public float debugInfluenceTarget = 0f; // target influence
+
+    // Sample buffers
+    private float[] thunderSamples;
+    private float[] windSamples;
 
     void Start()
     {
-        clipSampleData = new float[sampleDataLength];
-        clip2SampleData = new float[sampleDataLength];
-        currentInfluence = 0.1f;
+        AllocateBuffers();
+        currentInfluence = Mathf.Clamp01(currentInfluence);
+    }
+
+    private void OnValidate()
+    {
+        if (Application.isPlaying)
+            EnsureBuffers();
+    }
+
+    private void AllocateBuffers()
+    {
+        var n = Mathf.Max(512, sampleDataLength);
+        thunderSamples = new float[n];
+        windSamples = new float[n];
+    }
+
+    private void EnsureBuffers()
+    {
+        var n = Mathf.Max(512, sampleDataLength);
+        if (thunderSamples == null || thunderSamples.Length != n ||
+            windSamples == null || windSamples.Length != n)
+            AllocateBuffers();
     }
 
     void Update()
@@ -61,71 +110,61 @@ public class Weather_Manager : MonoBehaviour
         if (PauseManager.isPaused || Inventory_Screen_Manager.inventoryOn) return;
         if (!audioSource || !audioSource.clip || !audioSourceB || !audioSourceB.clip) return;
 
-        // Reset loudness values for this frame
-        clipLoudness = 0f;
-        clip2Loudness = 0f;
+        EnsureBuffers();
 
-        // Get the sample data from both audio sources
-        audioSource.clip.GetData(clipSampleData, audioSource.timeSamples);
-        audioSourceB.clip.GetData(clip2SampleData, audioSourceB.timeSamples);
+        var dt = Time.deltaTime;
+
+        // Pull sample windows ending at the playhead (stable)
+        ReadWindowEndingAtPlayhead(audioSource, thunderSamples);
+        ReadWindowEndingAtPlayhead(audioSourceB, windSamples);
 
         // =========================
         // THUNDER (unchanged logic)
         // =========================
-        foreach (var sample in clipSampleData)
+        clipLoudness = 0f;
+        for (var i = 0; i < thunderSamples.Length; i++)
         {
-            if (Math.Abs(sample) > 0.1f)
-                clipLoudness += Math.Abs(sample);
+            var a = Mathf.Abs(thunderSamples[i]);
+            if (a > 0.1f) clipLoudness += a;
         }
-        clipLoudness /= sampleDataLength;
+
+        clipLoudness /= thunderSamples.Length;
         clipLoudness = clipLoudness * scaleFactor + 0.35f;
 
-        // ==========================================
-        // WIND (RMS logic ONLY for audioSourceB)
-        // ==========================================
-        float sumSq = 0f;
-        for (int i = 0; i < clip2SampleData.Length; i++)
-        {
-            float s = clip2SampleData[i];
-            sumSq += s * s;
-        }
+        // =========================
+        // WIND: RMS -> attack/release smooth -> shared mapping
+        // =========================
+        var windRms = ComputeRms(windSamples);
+        debugWindRms = windRms;
 
-        float windRms = Mathf.Sqrt(sumSq / clip2SampleData.Length);
+        // Attack/release smoothing on RMS to remove jitter BEFORE mapping
+        windRmsSmoothed = AttackRelease(windRmsSmoothed, windRms, windRmsAttack, windRmsRelease, dt);
+        if (windRmsClamp > 0f) windRmsSmoothed = Mathf.Min(windRmsSmoothed, windRmsClamp);
 
-        // Apply gain
-        windRms *= windScaleFactor;
+        debugWindRmsSmoothed = windRmsSmoothed;
 
-        // Normalize RMS into 0..1 against expected peak
-        float wind01 = windRms / Mathf.Max(1e-6f, windExpectedMaxRMS);
-        wind01 = Mathf.Clamp01(wind01);
+        float wind01, windOut, influenceTarget;
+        EvaluateWindFromRms(windRmsSmoothed, out wind01, out windOut, out influenceTarget);
 
-        // Perceptual curve
-        wind01 = Mathf.Pow(wind01, Mathf.Max(0.01f, windResponsePow));
+        debugWind01 = wind01;
+        debugWindOut = windOut;
+        debugInfluenceTarget = influenceTarget;
 
-        // Keep your old "never zero" behavior (baseline of 0.1)
-        clip2Loudness = 0.1f + 0.9f * wind01; // 0 -> 0.1, 1 -> 1.0
+        clip2Loudness = windOut;
 
-        // Map clip2Loudness to target influence (keep your range)
-        float targetInfluence = ExtensionMethods.Math.Remap(clip2Loudness, 0.01f, 1.0f, 0.0f, 1.0f);
-
-        // Smoothly interpolate currentInfluence toward the targetInfluence.
-        currentInfluence = Mathf.Lerp(currentInfluence, targetInfluence, Time.deltaTime * smoothingSpeed);
-
-        // Update the _influence value for each tree material.
-        foreach (var material in treeMats)
-            if (material) material.SetFloat("_influence", currentInfluence);
-
-        // Update the _influence value for each bush material.
-        foreach (var material in bushMats)
-            if (material) material.SetFloat("_influence", currentInfluence);
-
-        // Optional: also feed globally for shaders that read globals
+        // Smooth influence (shader/foliage value)
+        // Using exp smoothing so it's stable across framerates.
+        var k = 1f - Mathf.Exp(-dt * Mathf.Max(0.01f, smoothingSpeed));
+        currentInfluence = currentInfluence + (influenceTarget - currentInfluence) * k;
+        if (crepuscularMat) crepuscularMat.SetFloat("_influence", currentInfluence);
+        // Push influence to global
         Shader.SetGlobalFloat("_influence", currentInfluence);
 
-        // ==========================================
-        // Lightning / reflections (unchanged behavior)
-        // ==========================================
+        // =========================
+        // Lightning/reflection (unchanged idea)
+        // =========================
         enviroReflectivity = clipLoudness;
+
         RenderSettings.reflectionIntensity =
             ExtensionMethods.Math.Remap(enviroReflectivity, 0.35f, 0.8f, 0.25f, 1.0f);
 
@@ -135,15 +174,79 @@ public class Weather_Manager : MonoBehaviour
                 ExtensionMethods.Math.Remap(enviroReflectivity, 0.35f, 0.8f, 0.25f, 0.85f));
         }
 
-        // Rain uses wind intensity (now RMS-based)
+        // =========================
+        // Rain from windOut (mapped wind intensity)
+        // =========================
         if (rainParticleSystem)
         {
             var emission = rainParticleSystem.emission;
-            emission.rateOverTime = 200 + (1000 * targetInfluence);
+            emission.rateOverTime = 200 + 500 * clip2Loudness;
 
-            var shapeModule = rainParticleSystem.shape;
-            shapeModule.randomDirectionAmount =
+            var shape = rainParticleSystem.shape;
+            shape.randomDirectionAmount =
                 ExtensionMethods.Math.Remap(clip2Loudness, 0f, 1.75f, 0.05f, 0.65f);
         }
+    }
+
+    // =========================================================
+    // SINGLE SOURCE OF TRUTH: Editor + runtime both call this.
+    // =========================================================
+    public void EvaluateWindFromRms(float windRms, out float wind01, out float windOut, out float influence)
+    {
+        // Gain
+        var rms = windRms * Mathf.Max(0.0001f, windScaleFactor);
+
+        // Normalize RMS -> 0..1
+        var expected = Mathf.Max(1e-6f, windExpectedMaxRMS);
+        wind01 = Mathf.Clamp01(rms / expected);
+
+        // Perceptual curve
+        wind01 = Mathf.Pow(wind01, Mathf.Max(0.01f, windResponsePow));
+
+        // Baseline mapping (keeps motion when calm)
+        var baseVal = Mathf.Clamp01(windBaseline);
+        var rangeVal = Mathf.Clamp01(windRange);
+        windOut = Mathf.Clamp01(baseVal + rangeVal * wind01);
+
+        // Influence remap
+        var t = (windOut - influenceInMin) / Mathf.Max(1e-6f, influenceInMax - influenceInMin);
+        influence = Mathf.Lerp(influenceOutMin, influenceOutMax, t);
+    }
+
+    // =========================================================
+    // Helpers
+    // =========================================================
+    private void ReadWindowEndingAtPlayhead(AudioSource src, float[] buffer)
+    {
+        var N = buffer.Length;
+        var clipSamples = src.clip.samples;
+        if (clipSamples <= 0) return;
+
+        var end = src.timeSamples;
+        var start = end - N;
+
+        start %= clipSamples;
+        if (start < 0) start += clipSamples;
+
+        src.clip.GetData(buffer, start);
+    }
+
+    private static float ComputeRms(float[] x)
+    {
+        var sumSq = 0.0;
+        for (var i = 0; i < x.Length; i++)
+        {
+            double s = x[i];
+            sumSq += s * s;
+        }
+
+        return Mathf.Sqrt((float)(sumSq / x.Length));
+    }
+
+    private static float AttackRelease(float current, float target, float attack, float release, float dt)
+    {
+        var tc = target > current ? Mathf.Max(attack, 1e-5f) : Mathf.Max(release, 1e-5f);
+        var k = 1f - Mathf.Exp(-dt / tc);
+        return current + (target - current) * k;
     }
 }

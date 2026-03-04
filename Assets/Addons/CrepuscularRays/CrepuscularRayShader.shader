@@ -181,7 +181,7 @@ Shader "Lighting/Crepuscular Rays"
         baseDir *= (1.0h / baseLen);
 
         // rotate base dir over time (bounded)
-        float ang = t * _NoiseFlowTurnSpeed * flowMul;
+        float ang = t * _NoiseFlowTurnSpeed + flowMul;
         float sa = sin(ang);
         float ca = cos(ang);
 

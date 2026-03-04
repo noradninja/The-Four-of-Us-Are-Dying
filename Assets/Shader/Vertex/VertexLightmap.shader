@@ -11,11 +11,11 @@
 		_wind_size("Wind Wave Size", range(5,50)) = 15
 		_leaves_wiggle_disp("Leaves Wiggle Displacement", float) = 0.07
 		_leaves_wiggle_speed("Leaves Wiggle Speed", float) = 0.01
-		_influence("Influence", range(0,1)) = 1
 
 		[Toggle(ALPHA_ON)] _AlphaOn("Seperate Alpha", Float) = 1
 		[Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 1
 		[Toggle(AMBIENT_ON)] _AmbientOn("Ambient Lighting", Float) = 0
+		[Toggle(VERTEX_CONSTRAINTS)] _VertConstraint("Vertex Color Constraints", Float) = 1
 
 		// ✅ NEW: per-material cull control (Off/Front/Back)
 		[Enum(Off,0,Front,1,Back,2)] _CullMode("Cull Mode (VertexLM)", Float) = 2
@@ -167,6 +167,7 @@
 			half _leaves_wiggle_speed;
 			half _influence;
 			half _LeavesOn;
+			half _VertConstraint;
 
 			v2f vert_shadow(appdata v)
 			{
@@ -174,16 +175,25 @@
 
 				half3 worldPos = mul(unity_ObjectToWorld, half4(v.vertex, 1)).xyz;
 
-				 // --- Wind / leaf motion (wave-like, no "scaling") ---
-  if(_LeavesOn)
-    {
-          _leaves_wiggle_speed *= (_influence * 4);
-        _leaves_wiggle_disp *= (_influence * 4);
-        //Leaf Movement and Wiggle
-        ( (v.vertex.x += v.color * sin(_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x), //x
-        (v.vertex.y += v.color * sin(_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y),   //y
-        (v.vertex.z += v.color * sin(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z) ); //z
-    }             
+				// --- Wind / leaf motion (wave-like, no "scaling") ---
+				half moveColor = v.color.r + v.color.g + v.color.b;
+				if (_LeavesOn)
+				{
+					_leaves_wiggle_speed *= (_influence);
+					_leaves_wiggle_disp *= (_influence);
+					if (!_VertConstraint) moveColor = 1; //disable vertex color movement constraints
+
+					//Leaf Movement and Wiggle
+					((v.vertex.x += moveColor * sin(
+								_Time.z * v.vertex.x * _leaves_wiggle_speed + (worldPos.x / _wind_size)) *
+							_leaves_wiggle_disp * _wind_dir.x), //x
+						(v.vertex.y += moveColor * sin(
+								_Time.w * v.vertex.y * _leaves_wiggle_speed + (worldPos.y / _wind_size)) *
+							_leaves_wiggle_disp * _wind_dir.y), //y
+						(v.vertex.z += moveColor * sin(
+								_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z / _wind_size)) *
+							_leaves_wiggle_disp * _wind_dir.z)); //z
+				}              
 				
 				UNITY_SETUP_INSTANCE_ID(v);
 				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
