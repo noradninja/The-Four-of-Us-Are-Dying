@@ -59,7 +59,7 @@ Material:
     - _NoiseFlowWobble: 0.25
     - _NoiseScale: 4
     - _NoiseStrength: 4
-    - _NoiseTime: 134.46968
+    - _NoiseTime: 25.735813
     - _NumSamples: 8
     - _Parameter: 0
     - _PerpendicularFalloff: 0.5
@@ -73,8 +73,8 @@ Material:
     - _Weight: 2
     - _fogInfluence: 0
     - _fogSpeed: 0.375
-    - _influence: 0.07982575
+    - _influence: 0.095415175
     m_Colors:
-    - _LightPos: {r: 0.86944515, g: -0.19357759, b: -0.785192, a: 0}
+    - _LightPos: {r: 0.11599335, g: 1.8669915, b: 0.6204604, a: 0}
     - _NoiseScroll: {r: 0.1, g: 0.1, b: 0, a: 0}
     - _TintColor: {r: 0, g: 0, b: 0, a: 1}

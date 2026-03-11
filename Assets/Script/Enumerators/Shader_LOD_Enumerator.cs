@@ -1,5 +1,4 @@
 ﻿// Shader_LOD_Enumerator.cs
-
 using UnityEngine;
 using UnityEngine.Rendering;
 
@@ -14,93 +13,51 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         Disabled
     }
 
-    [Header("References")] public GameObject player;
-
+    [Header("References")]
+    public GameObject player;
     public bool enableShaderLOD = true;
     public bool isFoliage;
     public bool vertexConstraints = true;
 
     public LODState shaderLOD;
 
-    private Mesh _cachedMesh;
-
-    // ---- Dead World gating (Unity 2018-safe) ----
-    private bool _deadWorldBlocked = false; // set by LODManager
-    private bool _desiredEnabled = true; // what LOD (and not-deadworld, not-fps) wants
-
-    // ---- FPS adaptive culling ----
-    private bool _forcedDisabledByFPS = false;
-    private float _lastDistSqr = 0f;
-    private MeshFilter _mf;
-    private SkinnedMeshRenderer _smr;
+    private Material replacementMaterial;
     private Material blackOnlyMaterial;
     private Material originalMaterial;
-    private Texture originalSecondTexture;
-    private Texture originalTexture;
     private Material reducedOriginalMaterial;
-
-    private Material replacementMaterial;
+    private Texture originalTexture;
+    private Texture originalSecondTexture;
+    private Renderer thisRenderer;
     private bool shadowCaster;
+
+    private float tFullSqr;
+    private float tReducedSqr;
+    private float tVertexOnlySqr;
     private float tBlackOnlySqr;
     private float tDisableSqr;
 
     // Midpoint between VertexOnly and BlackOnly (squared), used by FPS culling (no sqrt at runtime)
     private float tFPSCullMinSqr;
 
-    private float tFullSqr;
-    private Renderer thisRenderer;
-    private float tReducedSqr;
-    private float tVertexOnlySqr;
+    private Mesh _cachedMesh;
+    private MeshFilter _mf;
+    private SkinnedMeshRenderer _smr;
 
-    public Renderer CachedRenderer
-    {
-        get { return thisRenderer; }
-    }
+    // ---- FPS adaptive culling ----
+    private bool _forcedDisabledByFPS = false;
+    private float _lastDistSqr = 0f;
 
-    public Mesh CachedMesh
-    {
-        get { return _cachedMesh; }
-    }
+    public Renderer CachedRenderer { get { return thisRenderer; } }
+    public Mesh CachedMesh { get { return _cachedMesh; } }
+    public LODState CurrentState { get { return shaderLOD; } }
+    public bool WasShadowCaster { get { return shadowCaster; } }
 
-    public LODState CurrentState
-    {
-        get { return shaderLOD; }
-    }
+    public bool IsForcedDisabledByFPS { get { return _forcedDisabledByFPS; } }
+    public float LastDistSqr { get { return _lastDistSqr; } }
 
-    public bool WasShadowCaster
-    {
-        get { return shadowCaster; }
-    }
-
-    public bool IsForcedDisabledByFPS
-    {
-        get { return _forcedDisabledByFPS; }
-    }
-
-    public float LastDistSqr
-    {
-        get { return _lastDistSqr; }
-    }
-
-    public float VertexOnlyThresholdSqr
-    {
-        get { return tVertexOnlySqr; }
-    }
-
-    public float BlackOnlyThresholdSqr
-    {
-        get { return tBlackOnlySqr; }
-    }
-
-    public float FPSCullMinThresholdSqr
-    {
-        get { return tFPSCullMinSqr; }
-    }
-
-    public bool IsDeadWorldBlocked
-    {
-        get { return _deadWorldBlocked; }
-    }
+    public float VertexOnlyThresholdSqr { get { return tVertexOnlySqr; } }
+    public float BlackOnlyThresholdSqr { get { return tBlackOnlySqr; } }
+    public float FPSCullMinThresholdSqr { get { return tFPSCullMinSqr; } }
 
     void Start()
     {
@@ -165,40 +122,6 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
         if (LODManager.Instance != null)
             LODManager.Instance.Register(this);
-
-        // Ensure initial renderer state respects gates
-        ApplySettings();
-    }
-
-    private void OnDestroy()
-    {
-        if (LODManager.Instance != null)
-            LODManager.Instance.Unregister(this);
-    }
-
-    public void SetDeadWorldBlocked(bool blocked)
-    {
-        _deadWorldBlocked = blocked;
-        ApplyRendererEnableGate();
-    }
-
-    private void ApplyRendererEnableGate()
-    {
-        if (thisRenderer == null) return;
-
-        if (_forcedDisabledByFPS)
-        {
-            thisRenderer.enabled = false;
-            if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
-            return;
-        }
-
-        // Final output enable = LOD-desired AND not gated
-        thisRenderer.enabled = _desiredEnabled && !_deadWorldBlocked;
-
-        // If gated off, ensure we aren't casting shadows either
-        if (!thisRenderer.enabled && shadowCaster)
-            thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
     }
 
     public void RebuildThresholdCache()
@@ -267,7 +190,11 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         if (_forcedDisabledByFPS) return;
         _forcedDisabledByFPS = true;
 
-        ApplyRendererEnableGate();
+        if (thisRenderer != null)
+        {
+            thisRenderer.enabled = false;
+            if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+        }
     }
 
     public void ReleaseFPSDisable()
@@ -294,7 +221,11 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             }
             else
             {
-                ApplyRendererEnableGate();
+                if (thisRenderer != null)
+                {
+                    thisRenderer.enabled = false;
+                    if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
+                }
                 return;
             }
         }
@@ -317,56 +248,52 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             shaderLOD = newState;
             ApplySettings();
         }
-        else
-        {
-            // Even if state didn't change, ensure gate is respected (e.g. deadWorldControl toggled)
-            ApplyRendererEnableGate();
-        }
     }
 
     private void ApplySettings()
     {
-        if (thisRenderer == null) return;
-
         switch (shaderLOD)
         {
             case LODState.Full:
-                _desiredEnabled = true;
+                thisRenderer.enabled = true;
                 thisRenderer.sharedMaterial = originalMaterial;
                 if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.On;
                 break;
 
             case LODState.Reduced:
-                _desiredEnabled = true;
-                thisRenderer.sharedMaterial =
-                    reducedOriginalMaterial != null ? reducedOriginalMaterial : originalMaterial;
+                thisRenderer.enabled = true;
+                thisRenderer.sharedMaterial = (reducedOriginalMaterial != null) ? reducedOriginalMaterial : originalMaterial;
                 if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
                 break;
 
             case LODState.VertexOnly:
-                _desiredEnabled = true;
+                thisRenderer.enabled = true;
                 thisRenderer.sharedMaterial = replacementMaterial;
                 if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
                 break;
 
             case LODState.BlackOnly:
-                _desiredEnabled = true;
+                thisRenderer.enabled = true;
                 thisRenderer.sharedMaterial = (blackOnlyMaterial != null) ? blackOnlyMaterial : replacementMaterial;
                 if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
                 break;
 
             case LODState.Disabled:
-                _desiredEnabled = false;
+                thisRenderer.enabled = false;
                 if (shadowCaster) thisRenderer.shadowCastingMode = ShadowCastingMode.Off;
                 break;
         }
+    }
 
-        ApplyRendererEnableGate();
+    private void OnDestroy()
+    {
+        if (LODManager.Instance != null)
+            LODManager.Instance.Unregister(this);
     }
 
 #if UNITY_EDITOR
-    [Header("Debug Gizmos")] public bool drawLodGizmos = false;
-
+    [Header("Debug Gizmos")]
+    public bool drawLodGizmos = false;
     [Range(24, 128)] public int gizmoSegments = 48;
 
     private void OnDrawGizmosSelected()
@@ -412,16 +339,11 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
         Vector3 center = r.bounds.center;
 
-        Gizmos.color = new Color(0.2f, 1f, 0.2f, 1f);
-        DrawRingXZ(center, full, gizmoSegments);
-        Gizmos.color = new Color(1f, 0.85f, 0.2f, 1f);
-        DrawRingXZ(center, reduced, gizmoSegments);
-        Gizmos.color = new Color(0.2f, 0.7f, 1f, 1f);
-        DrawRingXZ(center, vertex, gizmoSegments);
-        Gizmos.color = new Color(0.8f, 0.2f, 1f, 1f);
-        DrawRingXZ(center, black, gizmoSegments);
-        Gizmos.color = new Color(1f, 0.2f, 0.2f, 1f);
-        DrawRingXZ(center, disable, gizmoSegments);
+        Gizmos.color = new Color(0.2f, 1f, 0.2f, 1f); DrawRingXZ(center, full, gizmoSegments);
+        Gizmos.color = new Color(1f, 0.85f, 0.2f, 1f); DrawRingXZ(center, reduced, gizmoSegments);
+        Gizmos.color = new Color(0.2f, 0.7f, 1f, 1f); DrawRingXZ(center, vertex, gizmoSegments);
+        Gizmos.color = new Color(0.8f, 0.2f, 1f, 1f); DrawRingXZ(center, black, gizmoSegments);
+        Gizmos.color = new Color(1f, 0.2f, 0.2f, 1f); DrawRingXZ(center, disable, gizmoSegments);
 
         Gizmos.color = Color.white;
         Gizmos.DrawLine(center, center + new Vector3(halfHorizontal, 0f, 0f));
