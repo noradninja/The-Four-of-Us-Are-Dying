@@ -1,4 +1,5 @@
-﻿// LODManager.cs
+﻿/* LODManager.cs */
+
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.Jobs;
@@ -6,22 +7,23 @@ using Unity.Collections;
 
 public class LODManager : MonoBehaviour
 {
-    public static LODManager Instance { get; private set; }
-
-    public IList<Shader_LOD_Enumerator> Enumerators
+    public enum DeadWorldControlMode
     {
-        get { return enumerators; }
+        Alive,
+        Dead,
+        Transition
     }
 
-    [Header("Global LOD Settings")]
-    public Shader refShader;           // VertexOnly shader
-    public Shader blackShader;         // BlackOnly shader (solid black)
+    [Header("Global LOD Settings")] public Shader refShader;
+
+    public Shader blackShader;
     public int batchSize = 50;
     public int farClipOffset;
     [HideInInspector] public int unloadEveryXCycles = 5;
 
     [Header("Global LOD Thresholds (meters)")]
     public float fullDistance = 4f;
+
     public float reducedDistance = 5f;
     public float vertexOnlyDistance = 7f;
 
@@ -38,10 +40,14 @@ public class LODManager : MonoBehaviour
     [Tooltip("Maximum horizontal size offset (meters) that bounds can contribute to LOD thresholds.")]
     public float maxBoundsOffset = 2.0f;
 
-    [Header("Adaptive FPS Culling")]
-    public bool enableAdaptiveFPSCulling = true;
+    [Header("Dead World Control")] public DeadWorldControlMode deadWorldControl = DeadWorldControlMode.Alive;
 
-    [Tooltip("If FPS drops below this, start disabling the furthest renderers.")]
+    [Tooltip("Layer used by the mirrored/dead-world duplicate geometry.")]
+    public int deadWorldLayer = 0;
+
+    [Header("Adaptive FPS Culling")] public bool enableAdaptiveFPSCulling = true;
+
+    [Tooltip("If FPS drops below this, we start disabling the furthest renderers.")]
     public float targetFPS = 30f;
 
     [Tooltip("FPS must rise above (targetFPS + hysteresis) before we start restoring.")]
@@ -50,87 +56,239 @@ public class LODManager : MonoBehaviour
     [Tooltip("How often (seconds) we may cull/restore to avoid thrashing.")]
     public float fpsCullInterval = 0.25f;
 
-    [Tooltip("Max renderers to disable per interval step.")]
+    [Tooltip("Max renderers to disable per FPS interval step.")]
     public int maxCullPerStep = 1;
 
-    [Tooltip("Max renderers to restore per interval step.")]
+    [Tooltip("Max renderers to restore per FPS interval step.")]
     public int maxRestorePerStep = 1;
 
-    private readonly List<Shader_LOD_Enumerator> enumerators = new List<Shader_LOD_Enumerator>();
+    [Header("Predictive Render Budget")] public bool enablePredictiveBudgeting = true;
 
-    private Transform playerTransform;
-    private Camera mainCam;
-    private float farClipSqr;
+    public float predictiveSoftCostBudget = 180f;
+    public float predictiveHardCostBudget = 220f;
+    public float predictiveCostCullInterval = 0.25f;
 
-    private NativeArray<Vector2> enumeratorPositions;
-    private NativeArray<float> distSqrArray;
+    [Tooltip("Cost must fall below (soft budget - hysteresis) before predictive restore begins.")]
+    public float predictiveCostHysteresis = 10f;
 
-    private JobHandle lodJobHandle;
-    private bool isJobScheduled = false;
+    [Tooltip("Max renderers to disable per predictive step when over soft budget.")]
+    public int maxPredictiveCullPerStep = 1;
 
-    private int currentBatchIndex = 0;
-    private int cycleCount = 0;
+    [Tooltip("Max renderers to disable per predictive step when over hard budget.")]
+    public int maxPredictiveHardCullPerStep = 2;
 
-    private int scheduledStartIndex = 0;
-    private int scheduledCount = 0;
+    [Tooltip("Max renderers to restore per predictive step when safely below budget.")]
+    public int maxPredictiveRestorePerStep = 1;
 
-    // Adaptive FPS tracking
+    [Header("Flashlight Cost Estimation")] public Light flashlightLight;
+
+    [Header("Runtime Debug")] [SerializeField]
+    private float _estimatedRenderCost = 0f;
+
+    [SerializeField] private float _smoothedEstimatedRenderCost = 0f;
+    [SerializeField] private int _estimatedVisibleDrawCalls = 0;
+
+    private readonly Dictionary<int, Material> _blackCache =
+        new Dictionary<int, Material>(256);
+
     private readonly List<Shader_LOD_Enumerator> _fpsDisabled = new List<Shader_LOD_Enumerator>(256);
-    private float _nextFPSCullTime = 0f;
+    private readonly List<Shader_LOD_Enumerator> _predictiveDisabled = new List<Shader_LOD_Enumerator>(256);
 
-    // ===== Shared replacement material cache (VertexOnly) =====
-    private readonly Dictionary<ReplacementKey, Material> _replacementCache =
-        new Dictionary<ReplacementKey, Material>(256);
-
-    private struct ReplacementKey
-    {
-        public int shaderId;
-        public int mainTexId;
-        public int moarTexId;
-
-        public int tilingX1000_X;
-        public int tilingX1000_Y;
-        public int offsetX1000_X;
-        public int offsetX1000_Y;
-
-        public int cutoffX1000;
-        public int flags;
-
-        public ReplacementKey(
-            Shader shader,
-            Texture mainTex,
-            Texture moarTex,
-            Vector2 tiling,
-            Vector2 offset,
-            float cutoff,
-            int flags)
-        {
-            shaderId = shader != null ? shader.GetInstanceID() : 0;
-            mainTexId = mainTex != null ? mainTex.GetInstanceID() : 0;
-            moarTexId = moarTex != null ? moarTex.GetInstanceID() : 0;
-
-            tilingX1000_X = Mathf.RoundToInt(tiling.x * 1000f);
-            tilingX1000_Y = Mathf.RoundToInt(tiling.y * 1000f);
-            offsetX1000_X = Mathf.RoundToInt(offset.x * 1000f);
-            offsetX1000_Y = Mathf.RoundToInt(offset.y * 1000f);
-
-            cutoffX1000 = Mathf.RoundToInt(Mathf.Clamp01(cutoff) * 1000f);
-
-            this.flags = flags;
-        }
-    }
-
-    // ===== Original material reduced-variant cache =====
     private readonly Dictionary<int, Material> _reducedOriginalCache =
         new Dictionary<int, Material>(256);
 
-    // ===== Shared black material cache (BlackOnly) =====
-    private readonly Dictionary<int, Material> _blackCache =
-        new Dictionary<int, Material>(256);
+    private readonly Dictionary<ReplacementKey, Material> _replacementCache =
+        new Dictionary<ReplacementKey, Material>(256);
+
+    private readonly List<Shader_LOD_Enumerator> enumerators = new List<Shader_LOD_Enumerator>();
+
+    private Plane[] _frustumPlanes = new Plane[6];
+
+    private DeadWorldControlMode _lastDeadWorldControl;
+
+    private float _nextFPSCullTime = 0f;
+    private float _nextPredictiveCostTime = 0f;
+
+    private int currentBatchIndex = 0;
+    private int cycleCount = 0;
+    private NativeArray<float> distSqrArray;
+
+    private NativeArray<Vector2> enumeratorPositions;
+    private float farClipSqr;
+    private bool isJobScheduled = false;
+
+    private JobHandle lodJobHandle;
+    private Camera mainCam;
+
+    private Transform playerTransform;
+    private int scheduledCount = 0;
+
+    private int scheduledStartIndex = 0;
+    public static LODManager Instance { get; private set; }
+
+    public IList<Shader_LOD_Enumerator> Enumerators
+    {
+        get { return enumerators; }
+    }
+
+    public float EstimatedRenderCost
+    {
+        get { return _estimatedRenderCost; }
+    }
+
+    public float SmoothedEstimatedRenderCost
+    {
+        get { return _smoothedEstimatedRenderCost; }
+    }
+
+    public int EstimatedVisibleDrawCalls
+    {
+        get { return _estimatedVisibleDrawCalls; }
+    }
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            DisposeNativeArrays();
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
+        mainCam = Camera.main;
+        _lastDeadWorldControl = deadWorldControl;
+    }
+
+    private void Start()
+    {
+        if (enumerators.Count > 0 && enumerators[0] != null && enumerators[0].player != null)
+            playerTransform = enumerators[0].player.transform;
+
+        if (mainCam != null)
+        {
+            var far = mainCam.farClipPlane + farClipOffset;
+            farClipSqr = far * far;
+        }
+
+        ApplyDeadWorldControlGate();
+    }
+
+    private void Update()
+    {
+        if (playerTransform == null || mainCam == null) return;
+
+        if (_lastDeadWorldControl != deadWorldControl)
+        {
+            _lastDeadWorldControl = deadWorldControl;
+            ApplyDeadWorldControlGate();
+        }
+
+        if (isJobScheduled)
+        {
+            lodJobHandle.Complete();
+
+            ApplyLODResultsScheduledRange();
+            UpdatePredictiveRenderEstimate();
+            TryPredictiveCostCulling();
+            TryAdaptiveFPSCulling();
+            ApplyDeadWorldControlGate();
+
+            isJobScheduled = false;
+
+            currentBatchIndex++;
+
+            if (currentBatchIndex * batchSize >= enumerators.Count)
+            {
+                currentBatchIndex = 0;
+                cycleCount++;
+
+                if (cycleCount >= unloadEveryXCycles) cycleCount = 0;
+            }
+        }
+
+        EnsureNativeArraysMatch();
+
+        if (enumerators.Count == 0) return;
+
+        var startIndex = currentBatchIndex * batchSize;
+        if (startIndex >= enumerators.Count)
+        {
+            currentBatchIndex = 0;
+            startIndex = 0;
+        }
+
+        var endIndex = Mathf.Min(startIndex + batchSize, enumerators.Count);
+        var count = endIndex - startIndex;
+        if (count <= 0) return;
+
+        for (var i = startIndex; i < endIndex; i++)
+        {
+            var e = enumerators[i];
+            if (e != null)
+            {
+                var p = e.transform.position;
+                enumeratorPositions[i] = new Vector2(p.x, p.z);
+            }
+        }
+
+        var playerPos2D = new Vector2(playerTransform.position.x, playerTransform.position.z);
+
+        var batchPositions = enumeratorPositions.Slice(startIndex, count);
+        var batchDistSqrArray = distSqrArray.Slice(startIndex, count);
+
+        scheduledStartIndex = startIndex;
+        scheduledCount = count;
+
+        var lodJob = new LODJob
+        {
+            playerPos = playerPos2D,
+            positions = batchPositions,
+            distSqrArray = batchDistSqrArray
+        };
+
+        lodJobHandle = lodJob.Schedule(count, 1);
+        isJobScheduled = true;
+    }
+
+    private void OnDisable()
+    {
+        DisposeNativeArrays();
+    }
+
+    private void OnDestroy()
+    {
+        DisposeNativeArrays();
+
+        foreach (var kv in _replacementCache)
+            if (kv.Value != null)
+                Destroy(kv.Value);
+        _replacementCache.Clear();
+
+        foreach (var kv in _reducedOriginalCache)
+            if (kv.Value != null)
+                Destroy(kv.Value);
+        _reducedOriginalCache.Clear();
+
+        foreach (var kv in _blackCache)
+            if (kv.Value != null)
+                Destroy(kv.Value);
+        _blackCache.Clear();
+
+        _fpsDisabled.Clear();
+        _predictiveDisabled.Clear();
+    }
+
+    private void OnApplicationQuit()
+    {
+        DisposeNativeArrays();
+        if (Instance == this) Instance = null;
+    }
 
     private static void SetToggleKeyword(Material mat, string keyword, bool enabled)
     {
         if (mat == null) return;
+
         if (enabled) mat.EnableKeyword(keyword);
         else mat.DisableKeyword(keyword);
     }
@@ -153,7 +311,15 @@ public class LODManager : MonoBehaviour
         if (leavesOn) flags |= 1 << 1;
         if (ambientOn) flags |= 1 << 2;
 
-        var key = new ReplacementKey(refShader, mainTex, moarTex, mainTexTiling, mainTexOffset, cutoff, flags);
+        var key = new ReplacementKey(
+            refShader,
+            mainTex,
+            moarTex,
+            mainTexTiling,
+            mainTexOffset,
+            cutoff,
+            flags
+        );
 
         Material mat;
         if (_replacementCache.TryGetValue(key, out mat) && mat != null)
@@ -189,6 +355,7 @@ public class LODManager : MonoBehaviour
         if (mat.HasProperty("_LeavesOn")) mat.SetFloat("_LeavesOn", 0f);
         if (mat.HasProperty("_AmbientOn")) mat.SetFloat("_AmbientOn", 0f);
         if (mat.HasProperty("_VertConstraint")) mat.SetFloat("_VertConstraint", vertexConstrain ? 1f : 0f);
+
         _replacementCache[key] = mat;
         return mat;
     }
@@ -211,7 +378,8 @@ public class LODManager : MonoBehaviour
         return mat;
     }
 
-    public Material GetOrCreateBlackMaterial(Texture mainTex, Vector2 tiling, Vector2 offset, float cutoff, bool alphaOn)
+    public Material GetOrCreateBlackMaterial(Texture mainTex, Vector2 tiling, Vector2 offset, float cutoff,
+        bool alphaOn)
     {
         int shaderId = blackShader != null ? blackShader.GetInstanceID() : 0;
         int texId = mainTex != null ? mainTex.GetInstanceID() : 0;
@@ -254,103 +422,249 @@ public class LODManager : MonoBehaviour
         return mat;
     }
 
-    private void Awake()
+    private void ApplyDeadWorldControlGate()
     {
-        if (Instance != null && Instance != this)
+        bool allowCommon;
+        bool allowNormal;
+
+        switch (deadWorldControl)
         {
-            DisposeNativeArrays();
-            Destroy(gameObject);
+            case DeadWorldControlMode.Dead:
+                allowCommon = true;
+                allowNormal = false;
+                break;
+
+            case DeadWorldControlMode.Alive:
+                allowCommon = false;
+                allowNormal = true;
+                break;
+
+            default:
+                allowCommon = true;
+                allowNormal = true;
+                break;
+        }
+
+        for (var i = 0; i < enumerators.Count; i++)
+        {
+            var e = enumerators[i];
+            if (e == null) continue;
+
+            var isCommon = e.gameObject.layer == deadWorldLayer;
+            var allowed = isCommon ? allowCommon : allowNormal;
+            e.SetDeadWorldBlocked(!allowed);
+        }
+    }
+
+    private bool IsDeadWorldBlocked(Shader_LOD_Enumerator e)
+    {
+        return e == null || e.IsDeadWorldBlocked;
+    }
+
+    private bool IsEnumeratorPredictivelyEligible(Shader_LOD_Enumerator e)
+    {
+        if (e == null) return false;
+        if (!e.IsRenderEligible) return false;
+        if (e.IsForcedDisabledByFPS) return false;
+        if (IsDeadWorldBlocked(e)) return false;
+        if (e.IsPredictiveBlocked) return false;
+
+        var r = e.CachedRenderer;
+        if (r == null) return false;
+        if (!r.enabled) return false;
+
+        if (!GeometryUtility.TestPlanesAABB(_frustumPlanes, r.bounds))
+            return false;
+
+        return true;
+    }
+
+    public void SetDeadWorldControl(DeadWorldControlMode mode)
+    {
+        deadWorldControl = mode;
+        _lastDeadWorldControl = mode;
+        ApplyDeadWorldControlGate();
+    }
+
+    private void UpdatePredictiveRenderEstimate()
+    {
+        if (!enablePredictiveBudgeting)
+        {
+            _estimatedRenderCost = 0f;
+            _estimatedVisibleDrawCalls = 0;
+            _smoothedEstimatedRenderCost = 0f;
             return;
         }
 
-        Instance = this;
-        mainCam = Camera.main;
-    }
+        if (Time.unscaledTime < _nextPredictiveCostTime)
+            return;
 
-    private void Start()
-    {
-        if (enumerators.Count > 0 && enumerators[0] != null && enumerators[0].player != null)
-            playerTransform = enumerators[0].player.transform;
+        _nextPredictiveCostTime = Time.unscaledTime + Mathf.Max(0.05f, predictiveCostCullInterval);
 
-        if (mainCam != null)
+        if (mainCam == null)
         {
-            float far = mainCam.farClipPlane + farClipOffset;
-            farClipSqr = far * far;
-        }
-    }
-
-    private void Update()
-    {
-        if (playerTransform == null || mainCam == null) return;
-
-        // 1) RECOVER RESULTS
-        if (isJobScheduled)
-        {
-            lodJobHandle.Complete();
-            ApplyLODResultsScheduledRange();
-
-            // FPS adaptive culling after LOD updates
-            TryAdaptiveFPSCulling();
-
-            isJobScheduled = false;
-
-            currentBatchIndex++;
-
-            if (currentBatchIndex * batchSize >= enumerators.Count)
-            {
-                currentBatchIndex = 0;
-                cycleCount++;
-
-                if (cycleCount >= unloadEveryXCycles)
-                {
-                    cycleCount = 0;
-                    //Resources.UnloadUnusedAssets();
-                }
-            }
+            _estimatedRenderCost = 0f;
+            _estimatedVisibleDrawCalls = 0;
+            return;
         }
 
-        EnsureNativeArraysMatch();
+        _frustumPlanes = GeometryUtility.CalculateFrustumPlanes(mainCam);
 
-        if (enumerators.Count == 0) return;
+        var totalCost = 0f;
+        var totalDrawCalls = 0;
 
-        int startIndex = currentBatchIndex * batchSize;
-        if (startIndex >= enumerators.Count)
+        var lightPos = Vector3.zero;
+        var lightForward = Vector3.forward;
+        var lightRange = 0f;
+        var outerCos = -1f;
+
+        if (flashlightLight != null)
         {
-            currentBatchIndex = 0;
-            startIndex = 0;
+            lightPos = flashlightLight.transform.position;
+            lightForward = flashlightLight.transform.forward;
+            lightRange = flashlightLight.range;
+            outerCos = Mathf.Cos(flashlightLight.spotAngle * 0.5f * Mathf.Deg2Rad);
         }
 
-        int endIndex = Mathf.Min(startIndex + batchSize, enumerators.Count);
-        int count = endIndex - startIndex;
-        if (count <= 0) return;
-
-        for (int i = startIndex; i < endIndex; i++)
+        for (var i = 0; i < enumerators.Count; i++)
         {
             var e = enumerators[i];
-            if (e != null)
-            {
-                Vector3 p = e.transform.position;
-                enumeratorPositions[i] = new Vector2(p.x, p.z);
-            }
+            if (e == null) continue;
+            if (!e.IsRenderEligible) continue;
+
+            var r = e.CachedRenderer;
+            if (r == null) continue;
+
+            if (!GeometryUtility.TestPlanesAABB(_frustumPlanes, r.bounds))
+                continue;
+
+            totalDrawCalls += e.BaseDrawCallCount;
+            totalCost += e.GetEstimatedRenderCost(lightPos, lightForward, lightRange, outerCos);
         }
 
-        Vector2 playerPos2D = new Vector2(playerTransform.position.x, playerTransform.position.z);
+        _estimatedVisibleDrawCalls = totalDrawCalls;
+        _estimatedRenderCost = totalCost;
+        _smoothedEstimatedRenderCost = Mathf.Lerp(_smoothedEstimatedRenderCost, totalCost, 0.25f);
+    }
 
-        NativeSlice<Vector2> batchPositions = enumeratorPositions.Slice(startIndex, count);
-        NativeSlice<float> batchDistSqrArray = distSqrArray.Slice(startIndex, count);
+    private void TryPredictiveCostCulling()
+    {
+        if (!enablePredictiveBudgeting) return;
+        if (mainCam == null || playerTransform == null) return;
 
-        scheduledStartIndex = startIndex;
-        scheduledCount = count;
+        var cost = _smoothedEstimatedRenderCost;
 
-        LODJob lodJob = new LODJob
+        var cullCount = 0;
+        var restoreCount = 0;
+
+        if (cost > predictiveHardCostBudget)
+            cullCount = maxPredictiveHardCullPerStep;
+        else if (cost > predictiveSoftCostBudget)
+            cullCount = maxPredictiveCullPerStep;
+        else if (cost < predictiveSoftCostBudget - predictiveCostHysteresis)
+            restoreCount = maxPredictiveRestorePerStep;
+
+        if (cullCount > 0)
         {
-            playerPos = playerPos2D,
-            positions = batchPositions,
-            distSqrArray = batchDistSqrArray
-        };
+            for (var step = 0; step < cullCount; step++)
+            {
+                Shader_LOD_Enumerator furthest = null;
+                var furthestDistSqr = -1f;
 
-        lodJobHandle = lodJob.Schedule(count, 1);
-        isJobScheduled = true;
+                for (var i = 0; i < enumerators.Count; i++)
+                {
+                    var e = enumerators[i];
+                    if (!IsEnumeratorPredictivelyEligible(e))
+                        continue;
+
+                    var p = e.transform.position;
+                    var dx = p.x - playerTransform.position.x;
+                    var dz = p.z - playerTransform.position.z;
+                    var distSqr = dx * dx + dz * dz;
+
+                    if (distSqr < e.FPSCullMinThresholdSqr)
+                        continue;
+
+                    if (distSqr > furthestDistSqr)
+                    {
+                        furthestDistSqr = distSqr;
+                        furthest = e;
+                    }
+                }
+
+                if (furthest == null)
+                    break;
+
+                furthest.SetPredictiveBlocked(true);
+
+                if (!_predictiveDisabled.Contains(furthest))
+                    _predictiveDisabled.Add(furthest);
+            }
+
+            return;
+        }
+
+        if (restoreCount > 0)
+        {
+            for (var step = 0; step < restoreCount; step++)
+            {
+                Shader_LOD_Enumerator nearest = null;
+                var nearestDistSqr = float.MaxValue;
+                var nearestIndex = -1;
+
+                for (var i = 0; i < _predictiveDisabled.Count; i++)
+                {
+                    var e = _predictiveDisabled[i];
+                    if (e == null)
+                    {
+                        nearestIndex = i;
+                        nearest = null;
+                        break;
+                    }
+
+                    if (e.IsForcedDisabledByFPS)
+                        continue;
+
+                    if (IsDeadWorldBlocked(e))
+                        continue;
+
+                    var r = e.CachedRenderer;
+                    if (r == null)
+                        continue;
+
+                    if (!GeometryUtility.TestPlanesAABB(_frustumPlanes, r.bounds))
+                        continue;
+
+                    var p = e.transform.position;
+                    var dx = p.x - playerTransform.position.x;
+                    var dz = p.z - playerTransform.position.z;
+                    var distSqr = dx * dx + dz * dz;
+
+                    if (distSqr > e.BlackOnlyThresholdSqr)
+                        continue;
+
+                    if (distSqr < nearestDistSqr)
+                    {
+                        nearestDistSqr = distSqr;
+                        nearest = e;
+                        nearestIndex = i;
+                    }
+                }
+
+                if (nearestIndex >= 0 && nearest == null)
+                {
+                    _predictiveDisabled.RemoveAt(nearestIndex);
+                    step--;
+                    continue;
+                }
+
+                if (nearest == null)
+                    break;
+
+                nearest.SetPredictiveBlocked(false);
+                _predictiveDisabled.RemoveAt(nearestIndex);
+            }
+        }
     }
 
     private void TryAdaptiveFPSCulling()
@@ -364,8 +678,6 @@ public class LODManager : MonoBehaviour
 
         _nextFPSCullTime = Time.unscaledTime + Mathf.Max(0.05f, fpsCullInterval);
 
-        // If FPS is low, disable furthest eligible VISIBLE renderers first,
-        // but only if past the midpoint between VertexOnly and BlackOnly.
         if (fps < targetFPS)
         {
             for (int step = 0; step < maxCullPerStep; step++)
@@ -378,9 +690,9 @@ public class LODManager : MonoBehaviour
                     Shader_LOD_Enumerator e = enumerators[i];
                     if (e == null) continue;
                     if (e.IsForcedDisabledByFPS) continue;
+                    if (IsDeadWorldBlocked(e)) continue;
 
                     Renderer r = e.CachedRenderer;
-                    
                     if (r == null) continue;
                     if (!r.enabled) continue;
 
@@ -389,7 +701,6 @@ public class LODManager : MonoBehaviour
                     float dz = p.z - playerTransform.position.z;
                     float distSqr = dx * dx + dz * dz;
 
-                    // Only consider for disabling once past the threshold (no sqrt; cached per enumerator)
                     if (distSqr < e.FPSCullMinThresholdSqr)
                         continue;
 
@@ -404,13 +715,14 @@ public class LODManager : MonoBehaviour
                     break;
 
                 furthest.ForceDisableByFPS();
-                _fpsDisabled.Add(furthest);
+
+                if (!_fpsDisabled.Contains(furthest))
+                    _fpsDisabled.Add(furthest);
             }
 
             return;
         }
 
-        // Restore when safely above target
         if (fps >= (targetFPS + fpsHysteresis))
         {
             for (int step = 0; step < maxRestorePerStep; step++)
@@ -432,12 +744,14 @@ public class LODManager : MonoBehaviour
                     if (!e.IsForcedDisabledByFPS)
                         continue;
 
+                    if (IsDeadWorldBlocked(e))
+                        continue;
+
                     Vector3 p = e.transform.position;
                     float dx = p.x - playerTransform.position.x;
                     float dz = p.z - playerTransform.position.z;
                     float distSqr = dx * dx + dz * dz;
 
-                    // Only restore when it would be within renderable range again
                     if (distSqr > e.BlackOnlyThresholdSqr)
                         continue;
 
@@ -534,6 +848,31 @@ public class LODManager : MonoBehaviour
 
             if (playerTransform == null && e.player != null)
                 playerTransform = e.player.transform;
+
+            bool allowCommon;
+            bool allowNormal;
+
+            switch (deadWorldControl)
+            {
+                case DeadWorldControlMode.Dead:
+                    allowCommon = true;
+                    allowNormal = false;
+                    break;
+
+                case DeadWorldControlMode.Alive:
+                    allowCommon = false;
+                    allowNormal = true;
+                    break;
+
+                default:
+                    allowCommon = true;
+                    allowNormal = true;
+                    break;
+            }
+
+            var isCommon = e.gameObject.layer == deadWorldLayer;
+            var allowed = isCommon ? allowCommon : allowNormal;
+            e.SetDeadWorldBlocked(!allowed);
         }
     }
 
@@ -551,6 +890,7 @@ public class LODManager : MonoBehaviour
 
             enumerators.Remove(e);
             _fpsDisabled.Remove(e);
+            _predictiveDisabled.Remove(e);
             ResizeNativeArrays(enumerators.Count);
         }
     }
@@ -567,8 +907,9 @@ public class LODManager : MonoBehaviour
         {
             enumerators.Clear();
             _fpsDisabled.Clear();
+            _predictiveDisabled.Clear();
 
-            var found = GameObject.FindObjectsOfType<Shader_LOD_Enumerator>();
+            var found = FindObjectsOfType<Shader_LOD_Enumerator>();
             for (int i = 0; i < found.Length; i++)
             {
                 if (found[i] != null && !enumerators.Contains(found[i]))
@@ -586,36 +927,8 @@ public class LODManager : MonoBehaviour
 
         if (playerTransform == null && enumerators.Count > 0 && enumerators[0] != null && enumerators[0].player != null)
             playerTransform = enumerators[0].player.transform;
-    }
 
-    private void OnDisable()
-    {
-        DisposeNativeArrays();
-    }
-
-    private void OnDestroy()
-    {
-        DisposeNativeArrays();
-
-        foreach (var kv in _replacementCache)
-            if (kv.Value != null) Destroy(kv.Value);
-        _replacementCache.Clear();
-
-        foreach (var kv in _reducedOriginalCache)
-            if (kv.Value != null) Destroy(kv.Value);
-        _reducedOriginalCache.Clear();
-
-        foreach (var kv in _blackCache)
-            if (kv.Value != null) Destroy(kv.Value);
-        _blackCache.Clear();
-
-        _fpsDisabled.Clear();
-    }
-
-    private void OnApplicationQuit()
-    {
-        DisposeNativeArrays();
-        if (Instance == this) Instance = null;
+        ApplyDeadWorldControlGate();
     }
 
     private void DisposeNativeArrays()
@@ -635,6 +948,43 @@ public class LODManager : MonoBehaviour
         scheduledStartIndex = 0;
         scheduledCount = 0;
         currentBatchIndex = 0;
+    }
+
+    private struct ReplacementKey
+    {
+        public int shaderId;
+        public int mainTexId;
+        public int moarTexId;
+
+        public int tilingX1000_X;
+        public int tilingX1000_Y;
+        public int offsetX1000_X;
+        public int offsetX1000_Y;
+
+        public int cutoffX1000;
+        public int flags;
+
+        public ReplacementKey(
+            Shader shader,
+            Texture mainTex,
+            Texture moarTex,
+            Vector2 tiling,
+            Vector2 offset,
+            float cutoff,
+            int flags)
+        {
+            shaderId = shader != null ? shader.GetInstanceID() : 0;
+            mainTexId = mainTex != null ? mainTex.GetInstanceID() : 0;
+            moarTexId = moarTex != null ? moarTex.GetInstanceID() : 0;
+
+            tilingX1000_X = Mathf.RoundToInt(tiling.x * 1000f);
+            tilingX1000_Y = Mathf.RoundToInt(tiling.y * 1000f);
+            offsetX1000_X = Mathf.RoundToInt(offset.x * 1000f);
+            offsetX1000_Y = Mathf.RoundToInt(offset.y * 1000f);
+
+            cutoffX1000 = Mathf.RoundToInt(Mathf.Clamp01(cutoff) * 1000f);
+            this.flags = flags;
+        }
     }
 
     struct LODJob : IJobParallelFor

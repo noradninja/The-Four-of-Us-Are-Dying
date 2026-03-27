@@ -15,9 +15,9 @@
 #define USING_FOG (defined(FOG_LINEAR) || defined(FOG_EXP) || defined(FOG_EXP2))
 // ES2.0 can not do loops with non-constant-expression iteration counts :(
 #if defined(SHADER_API_GLES)
-    #define LIGHT_LOOP_LIMIT 8.0h
+#define LIGHT_LOOP_LIMIT 8.0h
 #else
-    #define LIGHT_LOOP_LIMIT unity_VertexLightParams.x
+#define LIGHT_LOOP_LIMIT unity_VertexLightParams.x
 #endif
 
 // uniforms
@@ -42,21 +42,21 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal)
     half3 dirToLight = unity_LightPosition[idx].xyz;
     half att = 1.5h;
     #if defined(POINT) || defined(SPOT)
-        dirToLight -= eyePosition * unity_LightPosition[idx].w;
-        // distance attenuation
-        half distSqr = dot(dirToLight, dirToLight);
-        att /= (1.0h + unity_LightAtten[idx].z * distSqr);
-        if (unity_LightPosition[idx].w != 0.0h &&
-            distSqr > unity_LightAtten[idx].w)
-            att = 0.0h; // light is out of range
-        dirToLight *= rsqrt(distSqr);
-        
-        #if defined(SPOT)
-            // spot angle attenuation
-            half rho = max(dot(dirToLight, unity_SpotDirection[idx].xyz), 0.0h);
-            half spotAtt = (rho - unity_LightAtten[idx].x) * unity_LightAtten[idx].y;
-            att *= saturate(spotAtt);
-        #endif
+    dirToLight -= eyePosition * unity_LightPosition[idx].w;
+    // distance attenuation
+    half distSqr = dot(dirToLight, dirToLight);
+    att /= (1.0h + unity_LightAtten[idx].z * distSqr);
+    if (unity_LightPosition[idx].w != 0.0h &&
+        distSqr > unity_LightAtten[idx].w)
+        att = 0.0h; // light is out of range
+    dirToLight *= rsqrt(distSqr);
+
+    #if defined(SPOT)
+    // spot angle attenuation
+    half rho = max(dot(dirToLight, unity_SpotDirection[idx].xyz), 0.0h);
+    half spotAtt = (rho - unity_LightAtten[idx].x) * unity_LightAtten[idx].y;
+    att *= saturate(spotAtt);
+    #endif
     #endif
 
     // Diffuse contribution: scale by (1 - metal)
@@ -64,14 +64,14 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal)
     const half3 diffuse = (1.0h - _Metallic) * att * NdotL * unity_LightColor[idx].rgb;
 
     // --- GGX Specular Contribution ---
-    half3 V = normalize(-eyePosition);       // view vector in eye-space
-    half3 H = normalize(V + dirToLight);       // half vector between view and light
+    half3 V = normalize(-eyePosition); // view vector in eye-space
+    half3 H = normalize(V + dirToLight); // half vector between view and light
 
     half NdotV = max(dot(eyeNormal, V), 0.0h);
     half NdotH = max(dot(eyeNormal, H), 0.0h);
     half VdotH = max(dot(V, H), 0.0h);
 
-    half r =1 - _Roughness;
+    half r = 1 - _Roughness;
     half a2 = r * r; // squared roughness
 
     // GGX Normal Distribution Function (D)
@@ -99,7 +99,8 @@ half3 computeOneLight(int idx, half3 eyePosition, half3 eyeNormal)
 }
 
 // Vertex input structure
-struct appdata {
+struct appdata
+{
     half3 pos : POSITION;
     half3 normal : NORMAL;
     half4 color : COLOR0;
@@ -108,23 +109,25 @@ struct appdata {
 };
 
 // Vertex-to-fragment interpolators
-struct v2f {
+struct v2f
+{
     half4 pos : SV_POSITION;
     half2 uv0 : TEXCOORD0;
     half2 uv1 : TEXCOORD1;
     half4 screenPosition : TEXCOORD2;
     half4 color : COLOR;
     half3 worldRefl : TEXCOORD3;
-    half fresnel  : TEXCOORD4;  // New: Fresnel factor
-    
+    half fresnel : TEXCOORD4; // New: Fresnel factor
+
     #if USING_FOG
-        UNITY_FOG_COORDS(5)
+    UNITY_FOG_COORDS (5)
     #endif
     SHADOW_COORDS(6)
 };
 
 // Main vertex shader: computes vertex lighting and shadow data
-v2f vert(appdata v) {
+v2f vert(appdata v)
+{
     v2f o;
     UNITY_INITIALIZE_OUTPUT(v2f, o);
 
@@ -134,33 +137,36 @@ v2f vert(appdata v) {
     const half dotProduct = 1 - saturate(dot(v.normal, eyeNormal));
     half moveColor = v.color.r + v.color.g + v.color.b;
     // --- Wind / leaf motion (wave-like, no "scaling") ---
- 
-    if(_LeavesOn)
+
+    if (_LeavesOn)
     {
         _leaves_wiggle_speed *= (_influence);
         _leaves_wiggle_disp *= (_influence);
         if (!_VertConstraint) moveColor = 1; //disable vertex color movement constraints
-        
+
         //Leaf Movement and Wiggle
-        ( (v.pos.x += moveColor * sin(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x), //x
-        (v.pos.y += moveColor * sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y),   //y
-        (v.pos.z += moveColor * sin(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z) ); //z
-    }              
+        ((v.pos.x += moveColor * sin(_Time.z * v.pos.x * _leaves_wiggle_speed + (worldPos.x / _wind_size)) *
+                _leaves_wiggle_disp * _wind_dir.x), //x
+            (v.pos.y += moveColor * sin(_Time.w * v.pos.y * _leaves_wiggle_speed + (worldPos.y / _wind_size)) *
+                _leaves_wiggle_disp * _wind_dir.y), //y
+            (v.pos.z += moveColor * sin(_Time.y * v.pos.z * _leaves_wiggle_speed + (worldPos.z / _wind_size)) *
+                _leaves_wiggle_disp * _wind_dir.z)); //z
+    }
 
     worldPos = mul(unity_ObjectToWorld, half4(v.pos, 1.0h)).xyz;
 
-    half4 lightColor = half4(0,0,0,1);
+    half4 lightColor = half4(0, 0, 0, 1);
     #if defined(AMBIENT_ON) || !defined(CUSTOM_LIGHTMAPPED)
-        lightColor.rgb = glstate_lightmodel_ambient.rgb;
+    lightColor.rgb = glstate_lightmodel_ambient.rgb;
     #endif
     for (int il = 0; il < LIGHT_LOOP_LIMIT; ++il)
         lightColor.rgb += computeOneLight(il, eyePos, eyeNormal);
     lightColor.rgb += smoothstep(0.0h, 1.0h, dotProduct) * 0.15h;
     o.color = saturate(lightColor);
-        
+
     o.uv0 = v.uv0.xy * _MainTex_ST.xy + _MainTex_ST.zw;
     #if defined(CUSTOM_LIGHTMAPPED)
-        o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
+    o.uv1 = v.uv1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
     #endif
     o.pos = UnityObjectToClipPos(v.pos);
     o.screenPosition = ComputeScreenPos(o.pos);
@@ -176,17 +182,18 @@ v2f vert(appdata v) {
 }
 
 // Main fragment shader
-fixed4 frag(v2f v) : SV_Target {
+fixed4 frag(v2f v) : SV_Target
+{
     const half4 posLighting = v.color;
     UNITY_EXTRACT_FOG(v);
     #if defined(CUSTOM_LIGHTMAPPED)
-        const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
-        half3 lm = DecodeLightmap(lightmap);
-        #if CUSTOM_LIGHTMAPPED == 1
-            const half4 lighting = half4(lm * 0.5h, 1) + posLighting;
-        #endif
+    const half4 lightmap = UNITY_SAMPLE_TEX2D(unity_Lightmap, v.uv1.xy);
+    half3 lm = DecodeLightmap(lightmap);
+    #if CUSTOM_LIGHTMAPPED == 1
+    const half4 lighting = half4(lm * 0.5h, 1) + posLighting;
+    #endif
     #else
-        const half4 lighting = 0.5h * posLighting ;
+    const half4 lighting = 0.5h * posLighting;
     #endif
     // Compute shadow attenuation (this value is used in the shadow receiver pass)
     fixed shadow = SHADOW_ATTENUATION(v);
@@ -194,18 +201,21 @@ fixed4 frag(v2f v) : SV_Target {
     const half4 moar = tex2D(_MetallicGlossMap, v.uv0.xy);
     half4 skyData = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, v.worldRefl, (1 - moar.a) * 8);
     half3 skyColor = DecodeHDR(skyData, unity_SpecCube0_HDR);
-    half3 diff = diffuse.rgb * shadow;//(diffuse.rgb, skyColor, moar.r) * shadow;
+    half3 diff = diffuse.rgb * shadow; //(diffuse.rgb, skyColor, moar.r) * shadow;
     half4 col = half4(((diff.rgb * lighting.rgb) + (skyColor * v.fresnel)) * moar.g, moar.b);
 
-    if (!_AlphaOn) {
+    if (!_AlphaOn)
+    {
         fixed4 texcol = tex2D(_MainTex, v.uv0.xy);
         clip(texcol.a - _Cutoff);
-    } else {
+    }
+    else
+    {
         fixed4 texcol = tex2D(_MetallicGlossMap, v.uv0.xy);
         clip(texcol.b - _Cutoff);
     }
     #if USING_FOG
-        UNITY_APPLY_FOG(v.fogCoord, col);
+    UNITY_APPLY_FOG(v.fogCoord, col);
     #endif
     return col;
 }

@@ -2,14 +2,14 @@
 // Upgrade NOTE: commented out 'sampler2D unity_Lightmap', a built-in variable
 // Upgrade NOTE: replaced tex2D unity_Lightmap with UNITY_SAMPLE_TEX2D
 
-Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
+Shader "FX/Glass/Stained BumpDistort/NoGrabPass_Lightmapped"
 {
     Properties
     {
-        _BumpAmt   ("Distortion", Range(0,128)) = 10
+        _BumpAmt ("Distortion", Range(0,128)) = 10
         _TintColor ("Tint Color", Color) = (.5, .5, .5, .5)
-        _BumpMap   ("Normalmap", 2D) = "bump" {}
-        _AlphaMap  ("Alpha Map (r)", 2D) = "white" {}
+        _BumpMap ("Normalmap", 2D) = "bump" {}
+        _AlphaMap ("Alpha Map (r)", 2D) = "white" {}
         [Toggle(USE_LIGHTMAP)] _UseLghtmap("Lightmapped", Float) = 0
 
         // ADDED: controls how strongly baked lighting affects the glass
@@ -18,7 +18,10 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
 
     SubShader
     {
-        Tags { "Queue"="Transparent" "RenderType"="Transparent" }
+        Tags
+        {
+            "Queue"="Transparent" "RenderType"="Transparent"
+        }
         Blend SrcAlpha OneMinusSrcAlpha
         ZWrite Off
         Cull Off
@@ -26,7 +29,10 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
         Pass
         {
             Name "BASE"
-            Tags { "LightMode"="Always" }
+            Tags
+            {
+                "LightMode"="Always"
+            }
 
             CGPROGRAM
             #pragma vertex vert
@@ -41,22 +47,22 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
 
             struct appdata_t
             {
-                float4 vertex   : POSITION;
+                float4 vertex : POSITION;
                 float2 texcoord : TEXCOORD0;
 
                 // ADDED: lightmap UV channel (Unity lightmaps are typically UV2 in DCC, TEXCOORD1 in shader)
-                float2 uv2      : TEXCOORD1;
+                float2 uv2 : TEXCOORD1;
             };
 
             struct v2f
             {
                 float4 vertex : SV_POSITION;
-                float4 uvgrab : TEXCOORD0;   // screen pos (proj)
+                float4 uvgrab : TEXCOORD0; // screen pos (proj)
                 float2 uvbump : TEXCOORD1;
 
                 // ADDED: pass lightmap UVs to fragment
                 #if defined(USE_LIGHTMAP)
-                    float2 uvLM : TEXCOORD2;
+                float2 uvLM : TEXCOORD2;
                 #endif
 
                 UNITY_FOG_COORDS(3)
@@ -68,7 +74,7 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
 
             // Set from C# once per frame
             sampler2D _GlobalGrabTexture;
-            float4    _GlobalGrabTexture_TexelSize;
+            float4 _GlobalGrabTexture_TexelSize;
 
             sampler2D _BumpMap;
             sampler2D _AlphaMap;
@@ -76,11 +82,11 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
             // ADDED: lightmap inputs
             half _LightmapInfluence;
             #if defined(USE_LIGHTMAP)
-                // sampler2D unity_Lightmap;
-                // float4 unity_LightmapST;
+            // sampler2D unity_Lightmap;
+            // float4 unity_LightmapST;
             #endif
 
-            v2f vert (appdata_t v)
+            v2f vert(appdata_t v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
@@ -89,10 +95,10 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
 
                 // ADDED: transform lightmap UV with unity_LightmapST
                 #if defined(USE_LIGHTMAP)
-                    o.uvLM = v.uv2 * unity_LightmapST.xy + unity_LightmapST.zw;
+                o.uvLM = v.uv2 * unity_LightmapST.xy + unity_LightmapST.zw;
                 #endif
 
-                UNITY_TRANSFER_FOG(o,o.vertex);
+                UNITY_TRANSFER_FOG(o, o.vertex);
                 return o;
             }
 
@@ -104,10 +110,10 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
                 return DecodeLightmap(lm);
             }
 
-            half4 frag (v2f i) : SV_Target
+            half4 frag(v2f i) : SV_Target
             {
                 #if UNITY_SINGLE_PASS_STEREO
-                    i.uvgrab.xy = TransformStereoScreenSpaceTex(i.uvgrab.xy, i.uvgrab.w);
+                i.uvgrab.xy = TransformStereoScreenSpaceTex(i.uvgrab.xy, i.uvgrab.w);
                 #endif
 
                 // Normal map XY only (no need to reconstruct Z)
@@ -117,9 +123,9 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
 
                 // Perspective-ish scaling
                 #ifdef UNITY_Z_0_FAR_FROM_CLIPSPACE
-                    i.uvgrab.xy = offset * UNITY_Z_0_FAR_FROM_CLIPSPACE(i.uvgrab.z) + i.uvgrab.xy;
+                i.uvgrab.xy = offset * UNITY_Z_0_FAR_FROM_CLIPSPACE(i.uvgrab.z) + i.uvgrab.xy;
                 #else
-                    i.uvgrab.xy = offset * i.uvgrab.z + i.uvgrab.xy;
+                i.uvgrab.xy = offset * i.uvgrab.z + i.uvgrab.xy;
                 #endif
 
                 const half alpha = tex2D(_AlphaMap, i.uvbump).r;
@@ -133,12 +139,12 @@ Shader "FX/Glass/Stained BumpDistort/Perspective_NoGrabPass_Lightmapped"
 
                 // ADDED: multiply by baked lightmap lighting (optional per keyword)
                 #if defined(USE_LIGHTMAP)
-                    half3 lm = SampleLightmapRGB(i.uvLM);
+                half3 lm = SampleLightmapRGB(i.uvLM);
 
-                    // Influence lets you blend between unlit glass (0) and fully lightmapped (1)
-                    half3 lmMul = lerp(half3(1,1,1), lm, _LightmapInfluence);
+                // Influence lets you blend between unlit glass (0) and fully lightmapped (1)
+                half3 lmMul = lerp(half3(1, 1, 1), lm, _LightmapInfluence);
 
-                    col.rgb *= lmMul;
+                col.rgb *= lmMul;
                 #endif
 
                 UNITY_APPLY_FOG(i.fogCoord, col);

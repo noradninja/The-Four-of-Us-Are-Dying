@@ -65,13 +65,13 @@ Shader "Lighting/Crepuscular Rays"
     #pragma multi_compile __ CREP_SAMPLES_4 CREP_SAMPLES_8 CREP_SAMPLES_16
 
     #if defined(CREP_SAMPLES_4)
-        #define NUM_SAMPLES 4
+    #define NUM_SAMPLES 4
     #elif defined(CREP_SAMPLES_8)
-        #define NUM_SAMPLES 8
+    #define NUM_SAMPLES 8
     #elif defined(CREP_SAMPLES_16)
-        #define NUM_SAMPLES 16
+    #define NUM_SAMPLES 16
     #else
-        #define NUM_SAMPLES 8
+    #define NUM_SAMPLES 8
     #endif
 
     uniform sampler2D_half _MainTex;
@@ -112,28 +112,28 @@ Shader "Lighting/Crepuscular Rays"
 
     // stable time
     float _NoiseTime;
-    float _influence;    
+    float _influence;
 
     struct appdata
     {
         float4 pos : POSITION;
-        float2 uv  : TEXCOORD0;
+        float2 uv : TEXCOORD0;
     };
 
     struct v2f
     {
         float4 pos : SV_POSITION;
-        float2 uv  : TEXCOORD0;
+        float2 uv : TEXCOORD0;
     };
 
     struct v2f_kawase
     {
         float4 pos : SV_POSITION;
-        half2  uv  : TEXCOORD0;
-        half2  uv1 : TEXCOORD1;
-        half2  uv2 : TEXCOORD2;
-        half2  uv3 : TEXCOORD3;
-        half2  uv4 : TEXCOORD4;
+        half2 uv : TEXCOORD0;
+        half2 uv1 : TEXCOORD1;
+        half2 uv2 : TEXCOORD2;
+        half2 uv3 : TEXCOORD3;
+        half2 uv4 : TEXCOORD4;
     };
 
     inline float3 ReconstructViewPos(float2 uv, float depth01)
@@ -143,14 +143,14 @@ Shader "Lighting/Crepuscular Rays"
         view.xyz /= max(view.w, 1e-6f);
         return view.xyz;
     }
-    
-        inline float3 ViewToWorldPos(float3 viewPos)
+
+    inline float3 ViewToWorldPos(float3 viewPos)
     {
         float4 wp = mul(unity_CameraToWorld, float4(viewPos, 1.0));
         return wp.xyz;
     }
-    
-        inline float GetInfluenceFlowMul()
+
+    inline float GetInfluenceFlowMul()
     {
         float u = saturate(_influence); // 0.25..0.40 -> 0..1
         return u;
@@ -173,22 +173,22 @@ Shader "Lighting/Crepuscular Rays"
 
         float flowMul = GetInfluenceFlowMul();
         flowMul *= 2.5h;
-        float t = _Time.y/16;
-        pow(t,t);
+        float t = _Time.y / 16;
+        pow(t, t);
 
         float2 baseDir = _NoiseScroll.xy;
         float baseLen = max(1e-3h, length(baseDir));
         baseDir *= (1.0h / baseLen);
 
         // rotate base dir over time (bounded)
-        float ang = t * _NoiseFlowTurnSpeed + flowMul;
+        float ang = t * _NoiseFlowTurnSpeed * flowMul;
         float sa = sin(ang);
         float ca = cos(ang);
 
         float2 dir;
         dir.x = baseDir.x * ca - baseDir.y * sa;
         dir.y = baseDir.x * sa + baseDir.y * ca;
-        
+
         // --- FIXED: no time-growing speed ---
         // constant drift (linear in t)
         float baseSpeed = (_NoiseFlowSpeed + flowMul * t);
@@ -198,7 +198,7 @@ Shader "Lighting/Crepuscular Rays"
         drift += dir * (baseSpeed);
 
         // sideways wobble stays bounded
-        float meander = _NoiseFlowWobble  * sin((t* 6) * flowMul * 10 * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h) ;
+        float meander = _NoiseFlowWobble * sin((t * 6) * flowMul * 10 * 0.23h + nuv.x * 1.7h + nuv.y * 1.3h);
         float2 side = float2(dir.y, dir.x);
 
         nuv += drift + side * meander;
@@ -208,7 +208,7 @@ Shader "Lighting/Crepuscular Rays"
 
         n *= _NoiseContrast;
         n = clamp(n, -1.0h, 1.0h);
-        
+
 
         float d = saturate(depth01);
         if (_NoiseDepthInvert > 0.5h) d = 1.0h - d;
@@ -223,7 +223,7 @@ Shader "Lighting/Crepuscular Rays"
     {
         v2f o;
         o.pos = UnityObjectToClipPos(v.pos);
-        o.uv  = v.uv;
+        o.uv = v.uv;
         return o;
     }
 
@@ -265,11 +265,11 @@ Shader "Lighting/Crepuscular Rays"
         half2 deltaTexCoord = (i.uv + s * light.xy) * (_Density * invSamples);
 
         half2 uv = i.uv;
-        
+
         half3 color = 1;
 
         half illuminationDecay = 1.0h;
-        
+
         half sampleScale = (_Weight * 4.0h * invSamples) * 2.5h;
         sampleScale *= densityMul;
 
@@ -312,9 +312,9 @@ Shader "Lighting/Crepuscular Rays"
         half r = _Parameter.x;
         half2 d = (r + 0.5h) * _MainTex_TexelSize.xy;
 
-        o.uv1 = uv + half2( d.x,  d.y);
-        o.uv2 = uv + half2(-d.x,  d.y);
-        o.uv3 = uv + half2( d.x, -d.y);
+        o.uv1 = uv + half2(d.x, d.y);
+        o.uv2 = uv + half2(-d.x, d.y);
+        o.uv3 = uv + half2(d.x, -d.y);
         o.uv4 = uv + half2(-d.x, -d.y);
 
         return o;
@@ -334,7 +334,7 @@ Shader "Lighting/Crepuscular Rays"
         v2f o = (v2f)0;
         UNITY_INITIALIZE_OUTPUT(v2f, o);
         o.pos = UnityObjectToClipPos(i.pos);
-        o.uv  = i.uv;
+        o.uv = i.uv;
         return o;
     }
 
@@ -352,12 +352,11 @@ Shader "Lighting/Crepuscular Rays"
         fixed contrast = _Contrast;
 
         fixed4 finalSample = (((col) + (sample * 0.4h)) - 0.5h) * contrast + 0.445h;
-        fixed4 finalColor  = (col + (col * 0.04h) - 0.01h);
+        fixed4 finalColor = (col + (col * 0.04h) - 0.01h);
 
         fixed4 blitColor = lerp(finalSample, finalColor, (1 - _CosAngle - _PerpendicularFalloff));
         return blitColor;
     }
-
     ENDCG
 
     SubShader
