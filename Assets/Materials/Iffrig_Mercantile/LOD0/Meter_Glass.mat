@@ -79,7 +79,7 @@ Material:
     - _Glossiness: 1
     - _GlossyReflections: 1
     - _IntensityVC: 1
-    - _LightmapInfluence: 0.5
+    - _LightmapInfluence: 1
     - _Metallic: 0
     - _Mode: 3
     - _OcclusionStrength: 1

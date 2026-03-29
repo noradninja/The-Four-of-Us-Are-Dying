@@ -3,48 +3,47 @@ using UnityEngine;
 
 public class POIManager : MonoBehaviour
 {
+    public static POIManager instance;
+
     public float activationRange = 10.0f;
     public Transform playerTransform;
 
-    public List<GameObject> poiList = new List<GameObject>();
-    private GameObject activePOI = null;
+    public List<PointOfInterest> poiList = new List<PointOfInterest>();
 
-    public static POIManager instance;
+    [HideInInspector] public PointOfInterest activePOI;
 
     void Awake()
     {
         if (instance == null)
+        {
             instance = this;
+        }
         else
+        {
             Destroy(gameObject);
+        }
     }
 
-    public void RegisterPOI(GameObject poi)
-    {
-        if (!poiList.Contains(poi))
-            poiList.Add(poi);
-    }
-
-    public void UnregisterPOI(GameObject poi)
-    {
-        if (poiList.Contains(poi))
-            poiList.Remove(poi);
-    }
-
-    void Update()
+    private void Update()
     {
         if (playerTransform == null)
             return;
 
-        GameObject closest = null;
-        float closestDistanceSqr = activationRange * activationRange;
+        PointOfInterest closest = null;
+        var closestDistanceSqr = activationRange * activationRange;
+        var playerPosition = playerTransform.position;
 
-        foreach (GameObject poi in poiList)
+        for (var i = poiList.Count - 1; i >= 0; i--)
         {
-            if (poi == null)
-                continue;
+            var poi = poiList[i];
 
-            float distSqr = (poi.transform.position - playerTransform.position).sqrMagnitude;
+            if (poi == null || !poi.isActiveAndEnabled)
+            {
+                poiList.RemoveAt(i);
+                continue;
+            }
+
+            var distSqr = (poi.transform.position - playerPosition).sqrMagnitude;
 
             if (distSqr < closestDistanceSqr)
             {
@@ -53,28 +52,41 @@ public class POIManager : MonoBehaviour
             }
         }
 
-        if (closest != null)
+        activePOI = closest;
+    }
+
+    public void RegisterPOI(PointOfInterest poi)
+    {
+        if (poi == null)
+            return;
+
+        if (!poiList.Contains(poi))
         {
-            if (activePOI != closest)
-            {
-                if (activePOI != null)
-                    activePOI.GetComponent<PointOfInterest>().isActiveObject = false;
-
-                activePOI = closest;
-                activePOI.GetComponent<PointOfInterest>().isActiveObject = true;
-            }
-
-            // Optional: notify systems if needed (e.g., set PlayerStateController.InProximity = true)
+            poiList.Add(poi);
         }
-        else
+    }
+
+    public void UnregisterPOI(PointOfInterest poi)
+    {
+        if (poi == null)
+            return;
+
+        if (poiList.Contains(poi))
         {
-            if (activePOI != null)
-            {
-                activePOI.GetComponent<PointOfInterest>().isActiveObject = false;
-                activePOI = null;
-            }
-
-            // Optional: notify systems if needed (e.g., PlayerStateController.Instance.SetInProximity(false))
+            poiList.Remove(poi);
         }
+
+        if (activePOI == poi)
+        {
+            activePOI = null;
+        }
+    }
+
+    public Transform GetCurrentLookTarget()
+    {
+        if (activePOI != null)
+            return activePOI.transform;
+
+        return null;
     }
 }

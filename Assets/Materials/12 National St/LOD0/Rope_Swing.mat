@@ -429,7 +429,7 @@ Material:
     - _TranslucentThickness: 1
     - _TranslucentToggle: 0
     - _UVSec: 0
-    - _VertConstraint: 1
+    - _VertConstraint: 0
     - _VertexColorMode: 0
     - _WorkflowMode: 1
     - _WrapAmount: 0

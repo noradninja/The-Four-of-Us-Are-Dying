@@ -564,7 +564,7 @@ Material:
     - _TwoSided: 0
     - _UVSec: 0
     - _UseMetallicMap: 0
-    - _VertConstraint: 1
+    - _VertConstraint: 0
     - _VertexColorMode: 0
     - _WindMain: 0.1
     - _WindQuality: 0
@@ -577,7 +577,7 @@ Material:
     - _branches_disp: 0
     - _influence: 1
     - _leaves_wiggle_disp: 0.01
-    - _leaves_wiggle_speed: 128
+    - _leaves_wiggle_speed: 64
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0

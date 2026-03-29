@@ -585,8 +585,8 @@ Material:
     - _b_influence: 0.1
     - _branches_disp: 0
     - _influence: 0.07580187
-    - _leaves_wiggle_disp: 0.01
-    - _leaves_wiggle_speed: 64
+    - _leaves_wiggle_disp: 0.005
+    - _leaves_wiggle_speed: 400
     - _r_influence: 1
     - _tree_sway: 0.2
     - _tree_sway_disp: 0

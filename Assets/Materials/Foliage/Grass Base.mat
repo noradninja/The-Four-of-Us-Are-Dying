@@ -8,16 +8,16 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: Grass Base
   m_Shader: {fileID: 4800000, guid: 25ccd11cd6cc4604baed3937cef4444e, type: 3}
-  m_ShaderKeywords: BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4 SO_SF_BLEND_BIT1
-    SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON SO_SF_SPECULAR_ON
-    SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4 WIGGLE_ON
-    _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _BAKERY_NONE _LIGHTMAPSPECULAR _METALLICGLOSSMAP
+  m_ShaderKeywords: ALPHA_ON BAKERY_NONE DETAILS_MODE_PACKED SO_SF_ALPHA_MAP_BIT4
+    SO_SF_BLEND_BIT1 SO_SF_FOG_ON SO_SF_LAYER0_ON SO_SF_LIGHTING_BIT1 SO_SF_REFLECT_PROBE_ON
+    SO_SF_SPECULAR_ON SO_SF_SURFACE_MAPA_BIT1 SO_SF_SURFACE_MAPB_BIT4 SO_SF_SURFACE_MAPG_BIT4
+    VERTEX_CONSTRAINTS WIGGLE_ON _ALPHAPREMULTIPLY_ON _ALPHATEST_ON _BAKERY_NONE _LIGHTMAPSPECULAR
+    _METALLICGLOSSMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: 2450
-  stringTagMap:
-    RenderType: TransparentCutout
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -262,7 +262,7 @@ Material:
     - _AlbedoChannel: 0
     - _AlphaClip: 0
     - _AlphaMapType: 999
-    - _AlphaOn: 0
+    - _AlphaOn: 1
     - _AlphaToMask: 0
     - _AmbientOn: 0
     - _BakedSpacular: 0
@@ -562,12 +562,13 @@ Material:
     - _TranslucentThickness: 1
     - _TranslucentToggle: 0
     - _UVSec: 0
+    - _VertConstraint: 1
     - _VertexColorMode: 0
     - _WorkflowMode: 1
     - _WrapAmount: 0
     - _ZWrite: 1
     - _influence: 0.07580187
-    - _leaves_wiggle_disp: 0.02
+    - _leaves_wiggle_disp: 0.01
     - _leaves_wiggle_speed: 50
     - _specularAntiAliasingThreshold: 0.25
     - _specularAntiAliasingVariance: 0.15

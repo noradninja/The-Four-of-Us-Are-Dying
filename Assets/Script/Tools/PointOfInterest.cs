@@ -1,49 +1,34 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PointOfInterest : MonoBehaviour
 {
-    public bool isActiveObject;
-    public GameObject player;
-    public GameObject headObject;
-    public GameObject headLookObject;
-
     void Start()
     {
         if (POIManager.instance != null)
         {
-            POIManager.instance.RegisterPOI(this.gameObject);
+            POIManager.instance.RegisterPOI(this);
         }
+    }
+
+    private void OnEnable()
+    {
+        if (POIManager.instance != null) POIManager.instance.RegisterPOI(this);
     }
 
     void OnDisable()
     {
         if (POIManager.instance != null)
         {
-            POIManager.instance.UnregisterPOI(this.gameObject);
+            POIManager.instance.UnregisterPOI(this);
         }
     }
 
-    void Update()
+    private void OnDestroy()
     {
-        if (isActiveObject)
+        if (POIManager.instance != null)
         {
-            POILook(headObject.transform, this.transform, 2.0f);
+            POIManager.instance.UnregisterPOI(this);
         }
-        else
-        {
-            POILook(headObject.transform, headLookObject.transform, 0.25f);
-        }
-    }
-
-    private void POILook(Transform objectToRotateTransform, Transform objectToLookAtTransform, float rate)
-    {
-        Vector3 targetDirection = objectToLookAtTransform.position - objectToRotateTransform.position;
-        float singleStep = rate * Time.deltaTime;
-        Vector3 newDirection =
-            Vector3.RotateTowards(objectToRotateTransform.forward, targetDirection, singleStep, 0.0f);
-        Debug.DrawRay(objectToRotateTransform.position, newDirection, Color.magenta);
-        objectToRotateTransform.rotation = Quaternion.LookRotation(newDirection);
     }
 
     void OnDrawGizmos()

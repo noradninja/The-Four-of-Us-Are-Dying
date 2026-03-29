@@ -42,7 +42,6 @@ Shader "Vita/Standard Mobile Vertex Deform"
         _wind_size ("Wind Wave Size", range(5,50)) = 15
         _leaves_wiggle_disp ("Leaves Wiggle Displacement", float) = 0.07
         _leaves_wiggle_speed ("Leaves Wiggle Speed", float) = 0.01
-        _influence ("Influence", range(0,1)) = 1
         _Time ("Time", Vector) =(0,0,0,0)
         [Toggle(WIGGLE_ON)] _LeavesOn("Leaf Movment", Float) = 0
 
@@ -51,30 +50,36 @@ Shader "Vita/Standard Mobile Vertex Deform"
         [HideInInspector] _SrcBlend ("__src", Float) = 1.0
         [HideInInspector] _DstBlend ("__dst", Float) = 0.0
         [HideInInspector] _ZWrite ("__zw", Float) = 1.0
-        
+
         _IntensityVC("Vertex Color Intensity", Range(0.0, 1.0)) = 1.0
     }
 
     CGINCLUDE
-        #define UNITY_SETUP_BRDF_INPUT MetallicSetup
-        #define UNITY_NO_FULL_STANDARD_SHADER
-        //#define DYNAMICLIGHTMAP_ON
-        //#define SHADOWS_NATIVE
-        //#define SHADOWS_SCREEN
+    #define UNITY_SETUP_BRDF_INPUT MetallicSetup
+    #define UNITY_NO_FULL_STANDARD_SHADER
+    //#define DYNAMICLIGHTMAP_ON
+    //#define SHADOWS_NATIVE
+    //#define SHADOWS_SCREEN
     ENDCG
 
     SubShader
     {
-        Tags { "RenderType"="Opaque"}
+        Tags
+        {
+            "RenderType"="Opaque"
+        }
         LOD 300
-        
+
 
         // ------------------------------------------------------------------
         //  Base forward pass (directional light, emission, lightmaps, ...)
         Pass
         {
             Name "FORWARD"
-            Tags { "LightMode" = "ForwardBase" }
+            Tags
+            {
+                "LightMode" = "ForwardBase"
+            }
 
             Blend [_SrcBlend] [_DstBlend]
             ZWrite [_ZWrite]
@@ -93,18 +98,17 @@ Shader "Vita/Standard Mobile Vertex Deform"
             #pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
             #pragma shader_feature _ _GLOSSYREFLECTIONS_OFF
             #pragma shader_feature _PARALLAXMAP
-			#pragma shader_feature _VERTEXCOLOR_OFF _VERTEXCOLOR _VERTEXCOLOR_LERP
+            #pragma shader_feature _VERTEXCOLOR_OFF _VERTEXCOLOR _VERTEXCOLOR_LERP
 
             #pragma multi_compile_fwdbase
             #pragma multi_compile_fog
             #pragma multi_compile_instancing
             // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
-#pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile _ LOD_FADE_CROSSFADE
 
             #pragma vertex vertBase
             #pragma fragment fragBase
             #include "UnityStandardCoreForward_VC.cginc"
-
             ENDCG
         }
         // ------------------------------------------------------------------
@@ -112,9 +116,15 @@ Shader "Vita/Standard Mobile Vertex Deform"
         Pass
         {
             Name "FORWARD_DELTA"
-            Tags { "LightMode" = "ForwardAdd" }
+            Tags
+            {
+                "LightMode" = "ForwardAdd"
+            }
             Blend [_SrcBlend] One
-            Fog { Color (0,0,0,0) } // in additive pass fog should be black
+            Fog
+            {
+                Color (0,0,0,0)
+            } // in additive pass fog should be black
             ZWrite Off
             ZTest LEqual
 
@@ -131,89 +141,97 @@ Shader "Vita/Standard Mobile Vertex Deform"
             #pragma shader_feature _ _SPECULARHIGHLIGHTS_OFF
             #pragma shader_feature ___ _DETAIL_MULX2
             #pragma shader_feature _PARALLAXMAP
-#pragma shader_feature _VERTEXCOLOR
+            #pragma shader_feature _VERTEXCOLOR
 
             #pragma multi_compile_fwdadd_fullshadows
             #pragma multi_compile_fog
             // Uncomment the following line to enable dithering LOD crossfade. Note: there are more in the file to uncomment for other passes.
-#pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile _ LOD_FADE_CROSSFADE
 
             #pragma vertex vertAdd
             #pragma fragment fragAdd
             #include "UnityStandardCoreForward_VC.cginc"
-
             ENDCG
         }
         // ------------------------------------------------------------------
         //  Shadow rendering pass
-        Pass{
-            Tags {"LightMode"="ShadowCaster"}
+        Pass
+        {
+            Tags
+            {
+                "LightMode"="ShadowCaster"
+            }
 
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-			#pragma target 3.0
+            #pragma target 3.0
             #pragma multi_compile_shadowcaster
-			#pragma multi_compile_fog
-			#pragma multi_compile _ LOD_FADE_CROSSFADE
+            #pragma multi_compile_fog
+            #pragma multi_compile _ LOD_FADE_CROSSFADE
             #include "UnityCG.cginc"
-			#include "UnityPBSLighting.cginc" // TBD: remove
+            #include "UnityPBSLighting.cginc" // TBD: remove
             #include "UnityStandardInput_VC.cginc" // TBD: remove
 
-			
-			struct v2f {
-				V2F_SHADOW_CASTER;
-				float2  uv : TEXCOORD0;
-				UNITY_VERTEX_OUTPUT_STEREO
-			};
-			struct appdata {
-				half3 vertex : POSITION;
-				half3 uv : TEXCOORD0;
-				half3 color : COLOR;
-				
 
-			};
+            struct v2f
+            {
+                V2F_SHADOW_CASTER;
+                float2 uv : TEXCOORD0;
+                UNITY_VERTEX_OUTPUT_STEREO
+            };
 
-			
-						
-			v2f vert( appdata v )
-			{
-				v2f o;
-				half3 worldPos = mul (unity_ObjectToWorld, v.vertex).xyz;
-				UNITY_SETUP_INSTANCE_ID(v);
-				UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-				if(_LeavesOn)
-    {
-        //Leaf Movement and Wiggle
-        ( (v.vertex.x += sin(_Time.y * v.vertex.x * _leaves_wiggle_speed + (worldPos.x/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)), //x
-        (v.vertex.y += sin(_Time.y * v.vertex.y * _leaves_wiggle_speed + (worldPos.y/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)),   //y
-        (v.vertex.z += sin(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z/_wind_size) ) * _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
-    }             
-				TRANSFER_SHADOW_CASTER(o);
-				o.uv = TRANSFORM_TEX(v.uv, _MainTex);
-				return o;
-			}
-            
-			float4 frag( v2f i ) : SV_Target
-			{
-			
-				fixed4 texcol = tex2D( _MetallicGlossMap, i.uv );
-				
-		
-					clip(texcol.b - _Cutoff );
-						
-				SHADOW_CASTER_FRAGMENT(i);
-			}
+            struct appdata
+            {
+                half3 vertex : POSITION;
+                half3 uv : TEXCOORD0;
+                half3 color : COLOR;
+            };
+
+
+            v2f vert(appdata v)
+            {
+                v2f o;
+                half3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
+                UNITY_SETUP_INSTANCE_ID(v);
+                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
+                if (_LeavesOn)
+                {
+                    //Leaf Movement and Wiggle
+                    ((v.vertex.x += sin(_Time.y * v.vertex.x * _leaves_wiggle_speed + (worldPos.x / _wind_size)) *
+                            _leaves_wiggle_disp * _wind_dir.x * (_influence * v.color)), //x
+                        (v.vertex.y += sin(_Time.y * v.vertex.y * _leaves_wiggle_speed + (worldPos.y / _wind_size)) *
+                            _leaves_wiggle_disp * _wind_dir.y * (_influence * v.color)), //y
+                        (v.vertex.z += sin(_Time.y * v.vertex.z * _leaves_wiggle_speed + (worldPos.z / _wind_size)) *
+                            _leaves_wiggle_disp * _wind_dir.z * (_influence * v.color))); //z
+                }
+                TRANSFER_SHADOW_CASTER(o);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                return o;
+            }
+
+            float4 frag(v2f i) : SV_Target
+            {
+                fixed4 texcol = tex2D(_MetallicGlossMap, i.uv);
+
+
+                clip(texcol.b - _Cutoff);
+
+                SHADOW_CASTER_FRAGMENT(i);
+            }
             ENDCG
         }
-       
+
         // ------------------------------------------------------------------
         // Extracts information for lightmapping, GI (emission, albedo, ...)
         // This pass it not used during regular rendering.
         Pass
         {
             Name "META"
-            Tags { "LightMode"="Meta" }
+            Tags
+            {
+                "LightMode"="Meta"
+            }
 
             Cull Off
 

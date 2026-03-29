@@ -60,7 +60,7 @@ Material:
     - _BumpScale: 1
     - _Clip: 0.5
     - _CullMode: 0
-    - _Cutoff: 0.079
+    - _Cutoff: 0.075
     - _DetailNormalMapScale: 1
     - _Distortion: 1
     - _DstBlend: 0
@@ -68,7 +68,7 @@ Material:
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _LeavesOn: 0
-    - _Metallic: 1
+    - _Metallic: 0.8
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02

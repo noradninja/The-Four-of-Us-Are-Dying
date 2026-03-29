@@ -13,6 +13,17 @@ public class CameraResolutionScaler : MonoBehaviour
         [Tooltip("480x272")] PSP
     }
 
+    public enum gradingFilter
+    {
+        Warm,
+        Cool,
+        Sepia,
+        Emerald,
+        Underwater,
+        Hell,
+        User
+    }
+
     public enum internalResolution
     {
         [Tooltip("960x544")] High,
@@ -20,17 +31,7 @@ public class CameraResolutionScaler : MonoBehaviour
         [Tooltip("640x363")] Low,
         [Tooltip("480x272")] VeryLow
     }
-     public enum gradingFilter
-        {
-            Warm,
-            Cool,
-            Sepia,
-            Emerald,
-            Underwater,
-            Hell,
-            User
-        }
-     
+
     public bool enableInternalResolution = true;
     public internalResolution InternalResolution;
     public currentResolution screenResolution;
@@ -43,57 +44,56 @@ public class CameraResolutionScaler : MonoBehaviour
     [Range(0, 1)] public float userG = 1.0f;
     [Range(0, 1)] public float userB = 1.0f;
 
-    [Range(0, 2)]
-    public float exposure = 1.0f;
-    
+    [Range(0, 2)] public float exposure = 1.0f;
+
     private new Camera camera;
+    private Color filterColor;
+    private int height;
     private Rect originalRect;
     private float renderDivisor;
     private RenderTexture renderTex;
     private Rect scaledRect;
     private int width;
-    private int height;
-    private Color filterColor;
-   
+
     private void Awake()
     {
         camera = GetComponent<Camera>();
         originalRect = camera.pixelRect;
-            switch (screenResolution)
-            {
-                //set resolution and 30Hz vsync
-                case currentResolution.Full:
-                    width = 960;
-                    height = 544;
-                    if (!Application.isEditor) Screen.SetResolution(width,height, true);
-                    QualitySettings.vSyncCount = 2;
-                    break;
-                case currentResolution.Mid:
-                    width = 720;
-                    height = 408;
-                    if (!Application.isEditor) Screen.SetResolution(width, height, true);
-                    QualitySettings.vSyncCount = 2;
-                    break;
-                case currentResolution.Low:
-                    width = 640;
-                    height = 368;
-                    if (!Application.isEditor) Screen.SetResolution(width, height, true);
-                    QualitySettings.vSyncCount = 1;
-                    break;
-                case currentResolution.PSP:
-                    width = 480;
-                    height = 272;
-                    if (!Application.isEditor) Screen.SetResolution(width, height, true);
-                    QualitySettings.vSyncCount = 1;
-                    break;
-            }
+        switch (screenResolution)
+        {
+            //set resolution and 30Hz vsync
+            case currentResolution.Full:
+                width = 960;
+                height = 544;
+                if (!Application.isEditor) Screen.SetResolution(width, height, true);
+                QualitySettings.vSyncCount = 1;
+                break;
+            case currentResolution.Mid:
+                width = 720;
+                height = 408;
+                if (!Application.isEditor) Screen.SetResolution(width, height, true);
+                QualitySettings.vSyncCount = 1;
+                break;
+            case currentResolution.Low:
+                width = 640;
+                height = 368;
+                if (!Application.isEditor) Screen.SetResolution(width, height, true);
+                QualitySettings.vSyncCount = 1;
+                break;
+            case currentResolution.PSP:
+                width = 480;
+                height = 272;
+                if (!Application.isEditor) Screen.SetResolution(width, height, true);
+                QualitySettings.vSyncCount = 1;
+                break;
+        }
     }
 
     private void OnDisable()
     {
         camera.pixelRect = originalRect;
     }
-    
+
     private void OnDestroy()
     {
         camera.pixelRect = originalRect;
@@ -122,7 +122,7 @@ public class CameraResolutionScaler : MonoBehaviour
             // rect is 0 to 1
             // pixelRect is 0 to renderSize
             originalRect = camera.pixelRect;
-            scaledRect.Set(0, 0, width/renderDivisor, height/renderDivisor);
+            scaledRect.Set(0, 0, width / renderDivisor, height / renderDivisor);
             camera.pixelRect = scaledRect;
         }
     }
@@ -168,7 +168,7 @@ public class CameraResolutionScaler : MonoBehaviour
         else
             tonemappingMat.SetFloat("_toneMapping", 0);
         tonemappingMat.SetFloat("_exposure", exposure);
-        
+
         src.filterMode = filterMode;
 //        dest.filterMode = filterMode;
         // Luckily, looks like using OnRenderImage automatically makes the camera render to a TempBuffer of the size of the camera.pixelRect 

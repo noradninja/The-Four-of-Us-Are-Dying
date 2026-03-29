@@ -191,7 +191,7 @@ Shader "Lighting/Crepuscular Rays"
 
         // --- FIXED: no time-growing speed ---
         // constant drift (linear in t)
-        float baseSpeed = (_NoiseFlowSpeed + flowMul * t);
+        float baseSpeed = (_NoiseFlowSpeed * flowMul * t);
         float2 drift = dir * (baseSpeed);
 
         // small bounded wiggle (does NOT multiply t)
