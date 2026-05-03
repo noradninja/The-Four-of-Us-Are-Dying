@@ -82,11 +82,11 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   - serializedVersion: 2
     buildTarget: PSP2
-    maxTextureSize: 32
+    maxTextureSize: 128
     resizeAlgorithm: 1
-    textureFormat: 12
+    textureFormat: 29
     textureCompression: 3
-    compressionQuality: 100
+    compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 1

@@ -1,4 +1,5 @@
 ﻿// FPS_Counter.cs
+
 using System;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,25 +10,24 @@ using UnityEngine.PSVita;
 
 public class FPS_Counter : MonoBehaviour
 {
+    public static float averageFPS;
     public Text fpsText;
     public int frameRange = 60;
     public float updateInterval = 0.5f;
 
     public int maxFPS;
     public int minFPS;
-
-    float accum = 0.0f;
-    int frames = 0;
-    float timeleft;
-
-    int[] fpsBuffer;
-    int fpsBufferIndex;
-
-    public static float averageFPS;
     public float msFrame;
 
     public Text vramText;
     public Text ramText;
+
+    private float accum = 0.0f;
+
+    private int[] fpsBuffer;
+    private int fpsBufferIndex;
+    private int frames = 0;
+    private float timeleft;
 
     void Start()
     {
@@ -76,12 +76,12 @@ public class FPS_Counter : MonoBehaviour
             vramText.text = ("VRAM: " + VRAMFree + "MB Free");
             ramText.text = ("RAM: " + RAMFree + "MB Free");
 
-            if (percentVRAM > 75) vramText.color = Color.red;
-            else if (percentVRAM > 50) vramText.color = Color.yellow;
+            if (percentVRAM > 90) vramText.color = Color.red;
+            else if (percentVRAM > 25) vramText.color = Color.yellow;
             else vramText.color = Color.green;
 
-            if (percentRAM > 75) ramText.color = Color.red;
-            else if (percentRAM > 50) ramText.color = Color.yellow;
+            if (percentRAM > 90) ramText.color = Color.red;
+            else if (percentRAM > 25) ramText.color = Color.yellow;
             else ramText.color = Color.green;
 
             if (Mathf.RoundToInt(averageFPS) > 24) fpsText.color = Color.green;

@@ -88,6 +88,10 @@ public class LODManager : MonoBehaviour
     [SerializeField] private float _smoothedEstimatedRenderCost = 0f;
     [SerializeField] private int _estimatedVisibleDrawCalls = 0;
 
+    [Header("Texture LOD Unload")] public bool enableTextureLODUnload = true;
+    public float textureUnloadInterval = 10f;
+    public float textureUnloadMinFPS = 30f;
+
     private readonly Dictionary<int, Material> _blackCache =
         new Dictionary<int, Material>(256);
 
@@ -108,6 +112,9 @@ public class LODManager : MonoBehaviour
 
     private float _nextFPSCullTime = 0f;
     private float _nextPredictiveCostTime = 0f;
+
+    private float _nextTextureUnloadTime;
+    private bool _textureUnloadInProgress;
 
     private int currentBatchIndex = 0;
     private int cycleCount = 0;
@@ -249,6 +256,8 @@ public class LODManager : MonoBehaviour
 
         lodJobHandle = lodJob.Schedule(count, 1);
         isJobScheduled = true;
+
+        TryUnloadUnusedTextureLODAssets();
     }
 
     private void OnDisable()
@@ -829,6 +838,39 @@ public class LODManager : MonoBehaviour
         currentBatchIndex = 0;
         scheduledStartIndex = 0;
         scheduledCount = 0;
+    }
+
+    private void TryUnloadUnusedTextureLODAssets()
+    {
+        if (!enableTextureLODUnload)
+            return;
+
+        if (_textureUnloadInProgress)
+            return;
+
+        if (Time.unscaledTime < _nextTextureUnloadTime)
+            return;
+
+        if (FPS_Counter.averageFPS > 0.01f && FPS_Counter.averageFPS < textureUnloadMinFPS)
+            return;
+
+        _nextTextureUnloadTime = Time.unscaledTime + Mathf.Max(1f, textureUnloadInterval);
+
+        StartCoroutine(UnloadUnusedTextureLODAssetsRoutine());
+    }
+
+    private System.Collections.IEnumerator UnloadUnusedTextureLODAssetsRoutine()
+    {
+        _textureUnloadInProgress = true;
+
+        yield return null;
+
+        var op = Resources.UnloadUnusedAssets();
+
+        while (!op.isDone)
+            yield return null;
+        print("Textures unloaded!");
+        _textureUnloadInProgress = false;
     }
 
     public void Register(Shader_LOD_Enumerator e)

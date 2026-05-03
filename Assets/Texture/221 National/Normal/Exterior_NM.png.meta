@@ -84,7 +84,7 @@ TextureImporter:
     buildTarget: PSP2
     maxTextureSize: 512
     resizeAlgorithm: 1
-    textureFormat: 27
+    textureFormat: 29
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0

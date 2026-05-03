@@ -126,7 +126,7 @@ Material:
     - _AmbientOcclusionPower: 1
     - _Blend: 0
     - _BlendOp: 0
-    - _BumpScale: 1
+    - _BumpScale: 2
     - _Bumpiness: 5
     - _CameraFadingEnabled: 0
     - _CameraFarFadeDistance: 2

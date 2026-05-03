@@ -128,7 +128,7 @@ Material:
     - _AlphaClip: 0
     - _AmbientOcclusionPower: 1
     - _Blend: 0
-    - _BumpScale: 0
+    - _BumpScale: 2
     - _Bumpiness: 0
     - _Cull: 2
     - _Cutoff: 0.5
