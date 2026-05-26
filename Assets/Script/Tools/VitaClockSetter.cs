@@ -28,7 +28,7 @@ public class VitaClockSetter : MonoBehaviour
 
     public enum XBarClock
     {
-        High = 166,
+        High = 222,
         Stock = 111
     }
 

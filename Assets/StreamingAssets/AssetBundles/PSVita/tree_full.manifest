@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 1504240259
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 365b08dde893752c45493a2cf5d94d8f
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Tmp/Texture/RedOakBark_Full.tga
+- Assets/Tmp/Texture/MapleBark_Full.png
+- Assets/Tmp/Texture/AmericanElmBark_Full.png
+- Assets/Tmp/Texture/MountainMapleBark_Full.png
+Dependencies: []

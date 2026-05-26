@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 935715143
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: eb465077214e14c1e818cb9a06eaa4a9
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Texture/107_Trims_Full.png
+- Assets/Resources/Texture/107_Exterior_Full.tga
+Dependencies: []

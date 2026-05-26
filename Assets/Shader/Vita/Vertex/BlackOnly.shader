@@ -48,9 +48,8 @@
             #include "UnityCG.cginc"
             #define USING_FOG (defined(FOG_LINEAR) || defined(FOG_EXP) || defined(FOG_EXP2))
 
-            sampler2D _MainTex;
             sampler2D _MetallicGlossMap;
-            float4 _MainTex_ST;
+            float4 _MetallicGlossMap_ST;
 
             half _Cutoff;
             float _AlphaOn;
@@ -82,7 +81,7 @@
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                o.uv = TRANSFORM_TEX(v.uv, _MetallicGlossMap);
                 UNITY_TRANSFER_FOG(o, o.pos);
                 return o;
             }
@@ -91,12 +90,6 @@
             {
                 UNITY_EXTRACT_FOG(v);
                 // Cutout behavior matches your ShadowCaster pass:
-                if (_AlphaOn < 0.5f)
-                {
-                    fixed4 texcol = tex2D(_MainTex, v.uv);
-                    clip(texcol.a - _Cutoff);
-                }
-                else
                 {
                     fixed4 texcol = tex2D(_MetallicGlossMap, v.uv);
                     clip(texcol.b - _Cutoff);

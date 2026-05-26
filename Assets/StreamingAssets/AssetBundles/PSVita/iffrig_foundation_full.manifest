@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1710922873
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 754e2f4d7fa51832a0f93ada7836ab26
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Texture/Iffrig_Foundation_Front_Full.png
+- Assets/Resources/Texture/Iffrig_Foundation_Rear_Full.png
+Dependencies: []

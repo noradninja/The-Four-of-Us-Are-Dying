@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2019538561
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 6f73e5af8e513397410a4c0f18d20334
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Texture/105_Ext_Low.tga
+- Assets/Resources/Texture/105_Trims_Low.tga
+Dependencies: []

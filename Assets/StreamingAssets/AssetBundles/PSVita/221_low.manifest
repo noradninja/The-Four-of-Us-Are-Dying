@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 1453951449
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 0e27d0183dc9a8ea9e1e7f5acdbed065
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Texture/221_Trims_Low.png
+- Assets/Resources/Texture/221_Exterior_Low.png
+Dependencies: []

@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 3118182254
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: tool_shed_outhouse_meshes
+      Dependencies: {}

@@ -1,0 +1,35 @@
+ManifestFileVersion: 0
+CRC: 2271975917
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: fd25a19ab0bb696bbab5647feaf146a5
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 9b4f1593cdf7a1ab33da9444111cb398
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/schoolhouse/Exterior.asset
+- Assets/Generated/VitaMeshStreaming/schoolhouse/Plaque.asset
+- Assets/Generated/VitaMeshStreaming/schoolhouse/Doorknob.asset
+- Assets/Generated/VitaMeshStreaming/schoolhouse/Door.asset
+- Assets/Model/12_National_Street/12_National_Street_Exterior.fbx
+- Assets/Generated/VitaMeshStreaming/schoolhouse/Deco.asset
+Dependencies: []

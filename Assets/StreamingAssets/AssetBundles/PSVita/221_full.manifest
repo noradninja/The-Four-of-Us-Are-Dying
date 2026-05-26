@@ -1,0 +1,17 @@
+ManifestFileVersion: 0
+CRC: 2191212317
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 3ae305b405299916fec63f2916907b68
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Texture/221_Exterior_Full.png
+- Assets/Resources/Texture/221_Trims_Full.png
+Dependencies: []

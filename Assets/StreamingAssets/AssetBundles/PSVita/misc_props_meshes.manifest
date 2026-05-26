@@ -1,0 +1,45 @@
+ManifestFileVersion: 0
+CRC: 1747478061
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c685bc1ce80a07f4addac003bdba6cab
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 813466e6bd79712f10f61108eadcec0d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/misc_props/Short_Fence.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Kerosene_Drum.asset
+- Assets/Model/12_National_Street/Clothing_Poles.fbx
+- Assets/Generated/VitaMeshStreaming/misc_props/Sidewalk.asset
+- Assets/Model/12_National_Street/Short_Fence.fbx
+- Assets/Model/12_National_Street/Sidewalk.fbx
+- Assets/Generated/VitaMeshStreaming/misc_props/Lines.asset
+- Assets/Model/12_National_Street/Kerosene_Drum.fbx
+- Assets/Generated/VitaMeshStreaming/misc_props/Clothing_Poles.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Pole.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Framework.asset
+- Assets/Model/12_National_Street/Shed_Interior_Framework.fbx
+- Assets/Model/12_National_Street/Rope_Swing.fbx
+- Assets/Generated/VitaMeshStreaming/misc_props/Woodpile.asset
+- Assets/Model/12_National_Street/Utility_Pole.fbx
+- Assets/Model/12_National_Street/Woodpile.fbx
+- Assets/Generated/VitaMeshStreaming/misc_props/Transformer.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Lamp.asset
+Dependencies: []

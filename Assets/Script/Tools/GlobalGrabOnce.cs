@@ -4,28 +4,32 @@ using UnityEngine.Rendering;
 [RequireComponent(typeof(Camera))]
 public class GlobalGrabOnce : MonoBehaviour
 {
+    public enum GrabResolution
+    {
+        Full, // 1
+        Half, // 2
+        Quarter // 4
+    }
+
     [Header("Global Texture A (e.g. AfterForwardOpaque)")]
     public string globalTextureNameA = "_GlobalGrabTexture";
+
     public CameraEvent copyEventA = CameraEvent.AfterForwardOpaque;
     public GrabResolution resolutionA = GrabResolution.Full;
 
     [Header("Global Texture B (e.g. After Everything)")]
     public string globalTextureNameB = "_GlobalGrabTextureAfterAll";
+
     public CameraEvent copyEventB = CameraEvent.BeforeImageEffects;
     public GrabResolution resolutionB = GrabResolution.Full;
 
     [Header("Optional Processing for Global Texture B")]
     public bool processB = true;
+
     public Material processBMaterial; // ToneMapping/ColorGrading material (expects _MainTex)
 
-    public FilterMode filterMode = FilterMode.Bilinear;
-
-    public enum GrabResolution
-    {
-        Full,   // 1
-        Half,   // 2
-        Quarter // 4
-    }
+    public FilterMode filterMode = FilterMode.Point;
+    public RenderTexture _rtB;
 
     Camera _cam;
 
@@ -33,7 +37,6 @@ public class GlobalGrabOnce : MonoBehaviour
     CommandBuffer _cbB;
 
     RenderTexture _rtA;
-    RenderTexture _rtB;
 
     // Temp for processing B (screen -> temp -> processed -> B)
     RenderTexture _rtBTemp;
@@ -41,6 +44,11 @@ public class GlobalGrabOnce : MonoBehaviour
     int _wA, _hA;
     int _wB, _hB;
     int _wBTemp, _hBTemp;
+
+    private void Update()
+    {
+        CreateOrResizeRTs();
+    }
 
     void OnEnable()
     {
@@ -52,11 +60,6 @@ public class GlobalGrabOnce : MonoBehaviour
     void OnDisable()
     {
         Cleanup();
-    }
-
-    void Update()
-    {
-        CreateOrResizeRTs();
     }
 
     int GetDivisor(GrabResolution res)
@@ -130,8 +133,8 @@ public class GlobalGrabOnce : MonoBehaviour
     )
     {
         int div = GetDivisor(resolution);
-        int w = Mathf.Max(1, _cam.pixelWidth / div);
-        int h = Mathf.Max(1, _cam.pixelHeight / div);
+        var w = Mathf.Max(1, 960 / div);
+        var h = Mathf.Max(1, 544 / div);
 
         if (rt != null && w == wCache && h == hCache)
             return;
@@ -155,7 +158,7 @@ public class GlobalGrabOnce : MonoBehaviour
 
         // Only publish globals for the actual A/B textures (skip temps)
         if (!string.IsNullOrEmpty(globalName) && globalName[0] == '_'
-            && (globalName == globalTextureNameA || globalName == globalTextureNameB))
+                                              && (globalName == globalTextureNameA || globalName == globalTextureNameB))
         {
             Shader.SetGlobalTexture(globalName, rt);
             Shader.SetGlobalVector(globalName + "_TexelSize",

@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 1024204
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 70fe6a1fe0ef0a862f40ba9ba0f333f7
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 813466e6bd79712f10f61108eadcec0d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Front2.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Back4.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Front5.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Front1.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Back.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Back5.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Front3.asset
+- Assets/Model/Iffrig_Mercantile_Building/Iffrig_Mercantile_Building_Foundation.fbx
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Front.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Back1.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Back2.asset
+- Assets/Generated/VitaMeshStreaming/iffrig_foundation/Parking_Lot_Back3.asset
+Dependencies: []

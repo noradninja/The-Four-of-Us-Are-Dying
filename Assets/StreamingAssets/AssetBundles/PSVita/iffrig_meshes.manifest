@@ -1,0 +1,49 @@
+ManifestFileVersion: 0
+CRC: 1906194097
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 8203b66bf25271a11f3805b46e45c9a2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 1ab4086e1ad5a9c66adafda5c08182f8
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/iffrig/Roof_Chimney.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Front_Trims.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Roof_Glass.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Ivy.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Balcony.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Curved_Handle_B.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Glass_Front_Display.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Glass_Front.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Back_Trims.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Doorknob.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Back_Half.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Front_Half.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Plaque.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Awning1.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Glass_Back.asset
+- Assets/Generated/VitaMeshStreaming/iffrig/Curved_Handle_A.asset
+- Assets/Model/Iffrig_Mercantile_Building/Iffrig_Mercantile_Bldg.fbx
+- Assets/Generated/VitaMeshStreaming/iffrig/Porch_Slats.asset
+Dependencies: []

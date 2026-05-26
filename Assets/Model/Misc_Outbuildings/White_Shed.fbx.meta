@@ -78,7 +78,8 @@ ModelImporter:
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    extraUserProperties: []
+    extraUserProperties:
+    - '#BAKERY{"meshName":["Interior_Beams","Board_Fence","Shed","R_Door","L_Door","Back_Roofing","No_Parking_Sign"],"padding":[32,54,13,54,53,59,256],"unwrapper":[1,1,1,1,1,1,1]}'
     clipAnimations: []
     isReadable: 0
   meshes:
@@ -132,5 +133,5 @@ ModelImporter:
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
-  assetBundleName: 
+  assetBundleName: tool_shed_outhouse_meshes
   assetBundleVariant: 

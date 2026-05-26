@@ -82,6 +82,18 @@ public class LODManager : MonoBehaviour
 
     [Header("Flashlight Cost Estimation")] public Light flashlightLight;
 
+    [Header("Texture LOD Visibility Gate")]
+    public bool gateHighTextureLODByVisibility = true;
+
+    public float highTextureVisibilityBoundsPadding = 0f;
+    public float highTextureVisibilityGraceSeconds = 0f;
+
+    [Header("Texture LOD Debug Colors")] public bool enableTextureLODDebugColors = false;
+
+    public Color textureDebugLowColor = Color.red;
+    public Color textureDebugMediumColor = Color.green;
+    public Color textureDebugHighColor = Color.blue;
+
     [Header("Runtime Debug")] [SerializeField]
     private float _estimatedRenderCost = 0f;
 
@@ -300,6 +312,34 @@ public class LODManager : MonoBehaviour
 
         if (enabled) mat.EnableKeyword(keyword);
         else mat.DisableKeyword(keyword);
+    }
+
+    /*
+        Texture LOD visibility gate.
+
+        We use the camera frustum to decide whether high resolution texture requests
+        are allowed to start. If the camera or renderer cannot be found, we block
+        high texture requests instead of allowing them by default.
+    */
+    public bool IsRendererVisibleForHighTextureLOD(Renderer r)
+    {
+        if (!gateHighTextureLODByVisibility)
+            return true;
+
+        if (mainCam == null)
+            mainCam = Camera.main;
+
+        if (mainCam == null || r == null)
+            return false;
+
+        _frustumPlanes = GeometryUtility.CalculateFrustumPlanes(mainCam);
+
+        var b = r.bounds;
+
+        if (highTextureVisibilityBoundsPadding > 0f)
+            b.Expand(highTextureVisibilityBoundsPadding);
+
+        return GeometryUtility.TestPlanesAABB(_frustumPlanes, b);
     }
 
     public Material GetOrCreateReplacementMaterial(

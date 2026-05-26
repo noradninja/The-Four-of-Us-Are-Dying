@@ -14,6 +14,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         Disabled
     }
 
+    private static readonly int _ColorPropertyId = Shader.PropertyToID("_Color");
+
     [Header("References")] public GameObject player;
 
     public bool enableShaderLOD = true;
@@ -27,11 +29,58 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     public string textureLODProperty = "_MainTex";
     public Texture mediumMainTex;
 
+    [Header("Texture AssetBundle LOD")] public bool useTextureBundleGroup = true;
+
+    [Tooltip("Bundle group used to build paths like schoolhouse_low:Wall_Low and schoolhouse_full:Wall_Full.")]
+    public string textureBundleGroup = "textures";
+
+    [Tooltip(
+        "If true, low/high texture paths are rebuilt from mediumMainTex and textureBundleGroup during initialization.")]
+    public bool autoBuildTextureLODPaths = true;
+
+    public string lowTextureBundleSuffix = "_low";
+    public string highTextureBundleSuffix = "_full";
+
     public string lowMainTexResourcesPath;
     public string highMainTexResourcesPath;
-    private string _activeHighTextureLODPath;
 
+    [Header("Mesh AssetBundle Streaming")] public bool useMeshStreaming = false;
+
+    [Tooltip("Bundle group used to build paths like schoolhouse_meshes:Wall_01.")]
+    public string meshBundleGroup = "textures";
+
+    public string meshBundleSuffix = "_meshes";
+
+    [Tooltip("Mesh asset name inside the bundle. Usually captured from MeshFilter.sharedMesh.name by the editor tool.")]
+    public string meshAssetName;
+
+    [Tooltip("When true, the mesh key is rebuilt from meshBundleGroup and meshAssetName.")]
+    public bool autoBuildMeshStreamingKey = true;
+
+    public string meshStreamingKey;
+
+    [Tooltip("Extra distance beyond disable distance before we release the streamed mesh.")]
+    public float meshUnloadExtraMeters = 8f;
+
+    [Tooltip("Optional placeholder assigned after the real mesh is released.")]
+    public Mesh unloadedPlaceholderMesh;
+
+    [Header("Mesh Streaming Debug")] [SerializeField]
+    private bool _meshStreamingHasMeshRequest;
+
+    [SerializeField] private bool _meshStreamingMeshApplied;
+    [SerializeField] private bool _meshStreamingUsingPlaceholder;
+    [SerializeField] private string _meshStreamingDebugStatus;
+
+    [SerializeField] private Vector3 _cachedMeshLocalBoundsCenter;
+    [SerializeField] private Vector3 _cachedMeshLocalBoundsSize;
+    [SerializeField] private Vector3 _cachedMeshWorldBoundsCenter;
+    [SerializeField] private Vector3 _cachedMeshWorldBoundsSize;
+
+    private string _activeHighTextureLODPath;
     private string _activeLowTextureLODPath;
+    private string _activeMeshStreamingKey;
+    private Mesh _authoringMesh;
 
     private int _baseDrawCallCount = 1;
     private Mesh _cachedMesh;
@@ -45,15 +94,19 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private bool _hasReceivedLODUpdate;
     private bool _isProbablyLightmapStatic = false;
     private float _lastDistSqr = 0f;
+    private float _lastHighTextureVisibleTime = -9999f;
+    private bool _meshStreamingWaitingLogged;
     private MeshFilter _mf;
 
     private bool _missingTextureManagerWarned;
     private bool _predictiveBlocked = false;
     private SkinnedMeshRenderer _smr;
 
+    private MeshFilter _streamedMeshFilter;
+    private SkinnedMeshRenderer _streamedSkinnedMeshRenderer;
+
     private MaterialPropertyBlock _textureLODPropertyBlock;
     private bool _usingHighTextureLOD;
-
     private bool _usingLowTextureLOD;
 
     private Material blackOnlyMaterial;
@@ -138,6 +191,16 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         get { return _isProbablyLightmapStatic; }
     }
 
+    public Vector3 CachedMeshWorldBoundsCenter
+    {
+        get { return _cachedMeshWorldBoundsCenter; }
+    }
+
+    public Vector3 CachedMeshWorldBoundsSize
+    {
+        get { return _cachedMeshWorldBoundsSize; }
+    }
+
     public bool IsRenderEligible
     {
         get
@@ -159,6 +222,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         _mf = GetComponent<MeshFilter>();
         _smr = thisRenderer as SkinnedMeshRenderer;
         _cachedMesh = _mf != null ? _mf.sharedMesh : (_smr != null ? _smr.sharedMesh : null);
+
+        InitializeMeshStreaming();
 
         if (thisRenderer == null) return;
 
@@ -234,11 +299,13 @@ public class Shader_LOD_Enumerator : MonoBehaviour
     private void Update()
     {
         UpdateTextureLODFromManager();
+        UpdateMeshStreamingFromManager();
     }
 
     private void OnDestroy()
     {
         ReleaseAllTextureLODInterest();
+        ReleaseMeshStreamingInterest();
 
         if (LODManager.Instance != null)
             LODManager.Instance.Unregister(this);
@@ -250,7 +317,11 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         ApplyRendererEnableGate();
 
         if (blocked)
+        {
             ReleaseAllTextureLODInterest();
+            ApplyMeshStreamingPlaceholder();
+            ReleaseMeshStreamingInterest();
+        }
     }
 
     public void SetPredictiveBlocked(bool blocked)
@@ -259,7 +330,11 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         ApplyRendererEnableGate();
 
         if (blocked)
+        {
             ReleaseAllTextureLODInterest();
+            ApplyMeshStreamingPlaceholder();
+            ReleaseMeshStreamingInterest();
+        }
     }
 
     private void ApplyRendererEnableGate()
@@ -431,6 +506,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         _forcedDisabledByFPS = true;
 
         ReleaseAllTextureLODInterest();
+        ApplyMeshStreamingPlaceholder();
+        ReleaseMeshStreamingInterest();
         ApplyRendererEnableGate();
     }
 
@@ -583,11 +660,23 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             if (CachedRenderer.sharedMaterial.HasProperty(textureLODProperty))
                 mediumMainTex = CachedRenderer.sharedMaterial.GetTexture(textureLODProperty);
 
-        if (string.IsNullOrEmpty(lowMainTexResourcesPath) && mediumMainTex != null)
-            lowMainTexResourcesPath = BuildTextureResourcesPath(mediumMainTex, "_Low");
+        /*
+            We rebuild texture LOD paths from the medium texture and the texture bundle
+            group so artists only need to set the group once per renderer/building.
+        */
+        if (autoBuildTextureLODPaths)
+        {
+            lowMainTexResourcesPath = BuildTextureLODPath(mediumMainTex, "_Low");
+            highMainTexResourcesPath = BuildTextureLODPath(mediumMainTex, "_Full");
+        }
+        else
+        {
+            if (string.IsNullOrEmpty(lowMainTexResourcesPath) && mediumMainTex != null)
+                lowMainTexResourcesPath = BuildTextureLODPath(mediumMainTex, "_Low");
 
-        if (string.IsNullOrEmpty(highMainTexResourcesPath) && mediumMainTex != null)
-            highMainTexResourcesPath = BuildTextureResourcesPath(mediumMainTex, "_Full");
+            if (string.IsNullOrEmpty(highMainTexResourcesPath) && mediumMainTex != null)
+                highMainTexResourcesPath = BuildTextureLODPath(mediumMainTex, "_Full");
+        }
 
         if (_textureLODPropertyBlock == null)
             _textureLODPropertyBlock = new MaterialPropertyBlock();
@@ -606,12 +695,54 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         ApplyMediumTextureLOD();
     }
 
-    private string BuildTextureResourcesPath(Texture tex, string suffix)
+    /*
+        Texture LOD path builder.
+
+        In AssetBundle mode, we generate explicit bundle keys:
+            schoolhouse_low:Wall_Low
+            schoolhouse_full:Wall_Full
+
+        In Resources mode, we keep the old path format:
+            Texture/Wall_Low
+            Texture/Wall_Full
+    */
+    private string BuildTextureLODPath(Texture tex, string textureSuffix)
     {
         if (tex == null)
             return string.Empty;
 
-        return "Texture/" + tex.name + suffix;
+        var baseTextureName = StripTextureLODSuffix(tex.name);
+        var assetName = baseTextureName + textureSuffix;
+
+        if (useTextureBundleGroup && !string.IsNullOrEmpty(textureBundleGroup))
+        {
+            var bundleSuffix = textureSuffix == "_Full" ? highTextureBundleSuffix : lowTextureBundleSuffix;
+            var bundleName = textureBundleGroup + bundleSuffix;
+
+            return bundleName + ":" + assetName;
+        }
+
+        return "Texture/" + assetName;
+    }
+
+    /*
+        Texture LOD base-name cleanup.
+
+        We strip these suffixes so a medium texture accidentally named Wall_Full
+        does not generate Wall_Full_Full.
+    */
+    private string StripTextureLODSuffix(string textureName)
+    {
+        if (string.IsNullOrEmpty(textureName))
+            return string.Empty;
+
+        if (textureName.EndsWith("_Full"))
+            return textureName.Substring(0, textureName.Length - "_Full".Length);
+
+        if (textureName.EndsWith("_Low"))
+            return textureName.Substring(0, textureName.Length - "_Low".Length);
+
+        return textureName;
     }
 
     private TextureStreamingManager GetTextureManager()
@@ -639,6 +770,13 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         return 1.5f;
     }
 
+    /*
+        High texture request gate.
+
+        We still use distance as the first test, but high resolution textures also
+        need to pass the conservative visibility test when that feature is enabled
+        in the LOD manager.
+    */
     private bool ShouldRequestHighTextureLOD()
     {
         if (!_hasReceivedLODUpdate)
@@ -648,7 +786,39 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         var preloadDistance = fullDistance + GetHighTexturePreloadExtraMeters();
         var preloadSqr = preloadDistance * preloadDistance;
 
-        return _lastDistSqr <= preloadSqr;
+        if (_lastDistSqr > preloadSqr)
+            return false;
+
+        return IsHighTextureVisibleOrRecentlyVisible();
+    }
+
+    /*
+        High texture visibility grace.
+
+        We allow a short grace window after visibility is lost so objects near the
+        edge of the camera do not rapidly request and release their high texture.
+    */
+    private bool IsHighTextureVisibleOrRecentlyVisible()
+    {
+        if (LODManager.Instance == null)
+            return false;
+
+        if (!LODManager.Instance.gateHighTextureLODByVisibility)
+            return true;
+
+        var r = CachedRenderer != null ? CachedRenderer : thisRenderer;
+
+        var visible = LODManager.Instance.IsRendererVisibleForHighTextureLOD(r);
+
+        if (visible)
+        {
+            _lastHighTextureVisibleTime = Time.unscaledTime;
+            return true;
+        }
+
+        var grace = Mathf.Max(0f, LODManager.Instance.highTextureVisibilityGraceSeconds);
+
+        return Time.unscaledTime - _lastHighTextureVisibleTime <= grace;
     }
 
     private void ReleaseHighTextureLODInterestIfOutsidePreloadWindow()
@@ -809,11 +979,15 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             return;
 
         if (!_hasReceivedLODUpdate)
+        {
+            ApplyTextureLODDebugColor();
             return;
+        }
 
         if (shaderLOD == LODState.Full)
         {
             ApplyHighTextureLOD();
+            ApplyTextureLODDebugColor();
             return;
         }
 
@@ -821,6 +995,7 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         {
             RequestHighTextureLOD();
             ReleaseHighTextureLODInterestIfOutsidePreloadWindow();
+            ApplyTextureLODDebugColor();
             return;
         }
 
@@ -829,10 +1004,75 @@ public class Shader_LOD_Enumerator : MonoBehaviour
             RequestHighTextureLOD();
             ReleaseHighTextureLODInterestIfOutsidePreloadWindow();
             ApplyLowTextureLOD();
+            ApplyTextureLODDebugColor();
             return;
         }
 
-        if (shaderLOD == LODState.BlackOnly) ApplyLowTextureLOD();
+        if (shaderLOD == LODState.BlackOnly)
+            ApplyLowTextureLOD();
+
+        ApplyTextureLODDebugColor();
+    }
+
+    /*
+        Texture LOD debug color selection.
+
+        We color the renderer only by the texture that is actually active.
+        Pending requests are intentionally ignored so the visualization always
+        reflects what is currently bound to the material.
+    */
+    private Color GetTextureLODDebugColor()
+    {
+        if (LODManager.Instance == null)
+            return Color.white;
+
+        /*
+            High resolution texture currently active.
+        */
+        if (_usingHighTextureLOD)
+            return LODManager.Instance.textureDebugHighColor;
+
+        /*
+            Low resolution texture currently active.
+        */
+        if (_usingLowTextureLOD)
+            return LODManager.Instance.textureDebugLowColor;
+
+        /*
+            If neither high nor low is active, the medium/original texture is active.
+        */
+        return LODManager.Instance.textureDebugMediumColor;
+    }
+
+    /*
+        Texture LOD debug color application.
+
+        We use the existing MaterialPropertyBlock path so debug coloring remains
+        per-renderer and does not instantiate new materials.
+    */
+    private void ApplyTextureLODDebugColor()
+    {
+        if (CachedRenderer == null)
+            return;
+
+        if (_textureLODPropertyBlock == null)
+            _textureLODPropertyBlock = new MaterialPropertyBlock();
+
+        CachedRenderer.GetPropertyBlock(_textureLODPropertyBlock);
+
+        if (LODManager.Instance != null && LODManager.Instance.enableTextureLODDebugColors)
+        {
+            _textureLODPropertyBlock.SetColor(_ColorPropertyId, GetTextureLODDebugColor());
+        }
+        else
+        {
+            var mat = CachedRenderer.sharedMaterial;
+
+            if (mat != null && mat.HasProperty(_ColorPropertyId))
+                _textureLODPropertyBlock.SetColor(_ColorPropertyId, mat.GetColor(_ColorPropertyId));
+        }
+
+        CachedRenderer.SetPropertyBlock(_textureLODPropertyBlock);
     }
 
     private void ApplyLoadedTexture(Texture tex)
@@ -848,7 +1088,427 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
         CachedRenderer.GetPropertyBlock(_textureLODPropertyBlock);
         _textureLODPropertyBlock.SetTexture(textureLODProperty, tex);
+
+        if (LODManager.Instance != null && LODManager.Instance.enableTextureLODDebugColors)
+        {
+            _textureLODPropertyBlock.SetColor(_ColorPropertyId, GetTextureLODDebugColor());
+        }
+        else
+        {
+            var mat = CachedRenderer.sharedMaterial;
+
+            if (mat != null && mat.HasProperty(_ColorPropertyId))
+                _textureLODPropertyBlock.SetColor(_ColorPropertyId, mat.GetColor(_ColorPropertyId));
+        }
+
         CachedRenderer.SetPropertyBlock(_textureLODPropertyBlock);
+    }
+
+    /*
+        Mesh streaming initialization.
+
+        We cache the current renderer/mesh components, but we do not blindly capture
+        the current scene mesh as the streaming asset name. In stripped/runtime scenes,
+        the current mesh may already be a placeholder, so meshAssetName must come from
+        the editor setup/build-strip metadata.
+    */
+    private void InitializeMeshStreaming()
+    {
+        if (!useMeshStreaming)
+            return;
+
+        _streamedMeshFilter = GetComponent<MeshFilter>();
+        _streamedSkinnedMeshRenderer = GetComponent<SkinnedMeshRenderer>();
+
+        if (_streamedMeshFilter != null)
+            _authoringMesh = _streamedMeshFilter.sharedMesh;
+        else if (_streamedSkinnedMeshRenderer != null)
+            _authoringMesh = _streamedSkinnedMeshRenderer.sharedMesh;
+
+        /*
+            We only auto-fill meshAssetName if it is empty and the current mesh is not
+            the configured unloaded placeholder. This keeps a stripped scene from
+            accidentally trying to stream the placeholder mesh from the bundle.
+        */
+        if (string.IsNullOrEmpty(meshAssetName) && _authoringMesh != null)
+        {
+            var currentIsPlaceholder =
+                unloadedPlaceholderMesh != null && _authoringMesh == unloadedPlaceholderMesh;
+
+            if (!currentIsPlaceholder)
+                meshAssetName = _authoringMesh.name;
+        }
+
+        if (autoBuildMeshStreamingKey)
+            meshStreamingKey = BuildMeshStreamingKey();
+
+        CacheMeshStreamingBounds();
+
+        _meshStreamingMeshApplied = !IsUsingMeshStreamingPlaceholder();
+        _meshStreamingUsingPlaceholder = IsUsingMeshStreamingPlaceholder();
+
+        if (string.IsNullOrEmpty(meshStreamingKey))
+        {
+            _meshStreamingDebugStatus =
+                "Mesh streaming enabled, but no key could be built. Capture meshAssetName before replacing the scene mesh.";
+
+            Debug.LogWarning(
+                _meshStreamingDebugStatus,
+                this
+            );
+        }
+        else
+        {
+            _meshStreamingDebugStatus = "Initialized mesh key: " + meshStreamingKey;
+        }
+    }
+
+    /*
+        Mesh streaming key builder.
+
+        We generate explicit AssetBundle keys:
+            schoolhouse_meshes:Wall_01
+
+        The asset name must come from meshAssetName, not from the currently assigned
+        MeshFilter mesh, because the current mesh may be a placeholder at runtime.
+    */
+    private string BuildMeshStreamingKey()
+    {
+        if (string.IsNullOrEmpty(meshBundleGroup))
+            return string.Empty;
+
+        if (string.IsNullOrEmpty(meshAssetName))
+            return string.Empty;
+
+        var bundleName = meshBundleGroup + meshBundleSuffix;
+
+        return bundleName + ":" + meshAssetName;
+    }
+
+    /*
+        Mesh streaming bounds cache.
+
+        We store both local mesh bounds and current renderer world bounds so the later
+        build-strip path can keep making distance/visibility choices after the scene
+        mesh has been replaced by a placeholder.
+    */
+    private void CacheMeshStreamingBounds()
+    {
+        var mesh = GetCurrentStreamingMesh();
+
+        if (mesh != null)
+        {
+            _cachedMeshLocalBoundsCenter = mesh.bounds.center;
+            _cachedMeshLocalBoundsSize = mesh.bounds.size;
+        }
+
+        var r = CachedRenderer != null ? CachedRenderer : thisRenderer;
+
+        if (r != null)
+        {
+            _cachedMeshWorldBoundsCenter = r.bounds.center;
+            _cachedMeshWorldBoundsSize = r.bounds.size;
+        }
+    }
+
+    /*
+        Current mesh helper.
+
+        This supports both MeshFilter and SkinnedMeshRenderer.
+    */
+    private Mesh GetCurrentStreamingMesh()
+    {
+        if (_streamedMeshFilter != null)
+            return _streamedMeshFilter.sharedMesh;
+
+        if (_streamedSkinnedMeshRenderer != null)
+            return _streamedSkinnedMeshRenderer.sharedMesh;
+
+        return null;
+    }
+
+    /*
+        Mesh assignment helper.
+
+        We assign sharedMesh so we do not instantiate per-object mesh copies.
+    */
+    private void SetCurrentStreamingMesh(Mesh mesh)
+    {
+        if (_streamedMeshFilter != null)
+        {
+            _streamedMeshFilter.sharedMesh = mesh;
+            _cachedMesh = mesh;
+            return;
+        }
+
+        if (_streamedSkinnedMeshRenderer != null)
+        {
+            _streamedSkinnedMeshRenderer.sharedMesh = mesh;
+            _cachedMesh = mesh;
+        }
+    }
+
+    /*
+        Placeholder check.
+
+        This lets debug state tell us whether the real mesh is currently absent.
+    */
+    private bool IsUsingMeshStreamingPlaceholder()
+    {
+        var current = GetCurrentStreamingMesh();
+
+        if (current == null)
+            return true;
+
+        if (unloadedPlaceholderMesh != null && current == unloadedPlaceholderMesh)
+            return true;
+
+        return false;
+    }
+
+    /*
+        Mesh relevance gate.
+
+        We keep mesh loading more conservative than texture loading. Meshes are loaded
+        when the object is within the normal disable distance. Meshes are released only
+        after the object is farther than disable distance plus an extra buffer.
+    */
+    private bool ShouldRequestMeshStreamingMesh()
+    {
+        if (!useMeshStreaming)
+            return false;
+
+        if (!_hasReceivedLODUpdate)
+            return false;
+
+        if (string.IsNullOrEmpty(meshStreamingKey))
+            return false;
+
+        if (_deadWorldBlocked)
+            return false;
+
+        if (_predictiveBlocked)
+            return false;
+
+        if (_forcedDisabledByFPS)
+            return false;
+
+        return _lastDistSqr <= tDisableSqr;
+    }
+
+    /*
+        Mesh unload gate.
+
+        We unload only after a wider distance than normal renderer disable so we avoid
+        mesh churn around the visual LOD thresholds.
+    */
+    private bool ShouldReleaseMeshStreamingMesh()
+    {
+        if (!useMeshStreaming)
+            return false;
+
+        if (!_hasReceivedLODUpdate)
+            return false;
+
+        var disableDistance = Mathf.Sqrt(tDisableSqr);
+        var unloadDistance = disableDistance + Mathf.Max(0f, meshUnloadExtraMeters);
+        var unloadSqr = unloadDistance * unloadDistance;
+
+        if (_lastDistSqr <= unloadSqr)
+            return false;
+
+        return true;
+    }
+
+    /*
+        Mesh streaming update.
+
+        We request and apply loaded meshes when the object is relevant. When the object
+        is safely far away, we swap to a placeholder and release the mesh interest.
+    */
+    private void UpdateMeshStreamingFromManager()
+    {
+        if (!useMeshStreaming)
+            return;
+
+        /*
+            We rebuild the key from the stored meshAssetName every update. This keeps
+            the runtime path stable even if the scene mesh is currently a placeholder.
+        */
+        if (autoBuildMeshStreamingKey)
+            meshStreamingKey = BuildMeshStreamingKey();
+
+        if (string.IsNullOrEmpty(meshStreamingKey))
+            return;
+
+        if (ShouldRequestMeshStreamingMesh())
+        {
+            RequestMeshStreamingMesh();
+            ApplyLoadedStreamingMesh();
+            return;
+        }
+
+        if (ShouldReleaseMeshStreamingMesh())
+        {
+            ApplyMeshStreamingPlaceholder();
+            ReleaseMeshStreamingInterest();
+        }
+    }
+
+    /*
+        Mesh request.
+
+        We hold exactly one interest for the current mesh key. If the key changes, we
+        release the old interest before requesting the new one.
+    */
+    private void RequestMeshStreamingMesh()
+    {
+        if (!useMeshStreaming)
+            return;
+
+        if (string.IsNullOrEmpty(meshStreamingKey))
+            return;
+
+        var manager = VitaMeshStreamingManager.Instance;
+
+        if (manager == null)
+        {
+            _meshStreamingDebugStatus =
+                "Mesh streaming requested, but no VitaMeshStreamingManager exists in the scene.";
+
+            Debug.LogWarning(
+                _meshStreamingDebugStatus,
+                this
+            );
+
+            return;
+        }
+
+        if (_meshStreamingHasMeshRequest && _activeMeshStreamingKey == meshStreamingKey)
+            return;
+
+        if (_meshStreamingHasMeshRequest && !string.IsNullOrEmpty(_activeMeshStreamingKey))
+            manager.ReleaseMesh(_activeMeshStreamingKey);
+
+        _activeMeshStreamingKey = meshStreamingKey;
+        _meshStreamingHasMeshRequest = true;
+
+        manager.RequestMesh(_activeMeshStreamingKey);
+        _meshStreamingDebugStatus = manager.GetMeshDebugStatus(_activeMeshStreamingKey);
+    }
+
+    /*
+        Mesh apply.
+
+        If the requested mesh is loaded, we assign it to the MeshFilter or
+        SkinnedMeshRenderer and let the normal LOD renderer gates decide visibility.
+    */
+    private void ApplyLoadedStreamingMesh()
+    {
+        if (!useMeshStreaming)
+            return;
+
+        if (string.IsNullOrEmpty(_activeMeshStreamingKey))
+            return;
+
+        var manager = VitaMeshStreamingManager.Instance;
+
+        if (manager == null)
+            return;
+
+        var loadedMesh = manager.GetLoadedMesh(_activeMeshStreamingKey);
+
+        if (loadedMesh == null)
+        {
+            _meshStreamingDebugStatus = manager.GetMeshDebugStatus(_activeMeshStreamingKey);
+
+            if (!_meshStreamingWaitingLogged)
+            {
+                _meshStreamingWaitingLogged = true;
+
+                Debug.Log(
+                    "Waiting for streamed mesh: " +
+                    _activeMeshStreamingKey +
+                    "\n" +
+                    _meshStreamingDebugStatus,
+                    this
+                );
+            }
+
+            return;
+        }
+
+        _meshStreamingWaitingLogged = false;
+        _meshStreamingDebugStatus = "Loaded mesh: " + _activeMeshStreamingKey;
+
+        var current = GetCurrentStreamingMesh();
+
+        if (current == loadedMesh)
+        {
+            _meshStreamingMeshApplied = true;
+            _meshStreamingUsingPlaceholder = false;
+            return;
+        }
+
+        SetCurrentStreamingMesh(loadedMesh);
+
+        _meshStreamingMeshApplied = true;
+        _meshStreamingUsingPlaceholder = false;
+
+        CacheMeshStreamingBounds();
+
+        /*
+            Once the real mesh is applied, we make sure the normal renderer gate is
+            reapplied so a previously placeholder/null mesh can become visible again.
+        */
+        ApplyRendererEnableGate();
+    }
+
+    /*
+        Mesh placeholder application.
+
+        We remove the renderer's reference to the streamed mesh before releasing the
+        manager reference. This makes the mesh eligible for Unity's unused asset pass.
+    */
+    private void ApplyMeshStreamingPlaceholder()
+    {
+        if (!useMeshStreaming)
+            return;
+
+        var current = GetCurrentStreamingMesh();
+
+        if (unloadedPlaceholderMesh != null)
+        {
+            if (current != unloadedPlaceholderMesh)
+                SetCurrentStreamingMesh(unloadedPlaceholderMesh);
+        }
+        else
+        {
+            if (current != null)
+                SetCurrentStreamingMesh(null);
+        }
+
+        _meshStreamingMeshApplied = false;
+        _meshStreamingUsingPlaceholder = true;
+    }
+
+    /*
+        Mesh release.
+
+        We release our manager interest so the mesh can be unloaded after the grace
+        period once no other objects are using it.
+    */
+    private void ReleaseMeshStreamingInterest()
+    {
+        if (_meshStreamingHasMeshRequest &&
+            VitaMeshStreamingManager.Instance != null &&
+            !string.IsNullOrEmpty(_activeMeshStreamingKey))
+            VitaMeshStreamingManager.Instance.ReleaseMesh(_activeMeshStreamingKey);
+
+        _meshStreamingHasMeshRequest = false;
+        _activeMeshStreamingKey = null;
+        _meshStreamingWaitingLogged = false;
+        _meshStreamingDebugStatus = "Released mesh streaming interest.";
     }
 
 #if UNITY_EDITOR

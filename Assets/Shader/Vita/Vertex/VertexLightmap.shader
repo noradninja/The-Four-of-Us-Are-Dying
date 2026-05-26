@@ -2,6 +2,7 @@
 {
     Properties
     {
+        _Color("Color", Color) = (1,1,1,1)
         _MainTex("Base (RGB)", 2D) = "white" { }
         _MetallicGlossMap("MOAR (RGBA)", 2D) = "white" { }
         _Metallic("Metallic", Range(0,1)) = 0.5
@@ -183,6 +184,7 @@
             half _influence;
             half _LeavesOn;
             half _VertConstraint;
+            half4 _Color;
 
             v2f vert_shadow(appdata v)
             {

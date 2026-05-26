@@ -1,0 +1,39 @@
+ManifestFileVersion: 0
+CRC: 3383458449
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 7b2b46d995e6fa84202b8ea1ce77e217
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 81b484c8d991a308061c2a9a46c29bd8
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/107/Plaque.asset
+- Assets/Generated/VitaMeshStreaming/107/Trims_EXT_Transparent.asset
+- Assets/Generated/VitaMeshStreaming/107/Trims_EXT.asset
+- Assets/Model/107_Main_Street/107_Main.fbx
+- Assets/Generated/VitaMeshStreaming/107/Exterior.asset
+- Assets/Generated/VitaMeshStreaming/107/Window_Glass.asset
+Dependencies: []

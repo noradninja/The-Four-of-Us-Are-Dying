@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 2074433742
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d184281eb3f5b5c194f62743727faee2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 813466e6bd79712f10f61108eadcec0d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Model/221 National/221_National_Street.fbx
+- Assets/Generated/VitaMeshStreaming/221/Trims.asset
+- Assets/Generated/VitaMeshStreaming/221/Awning.asset
+- Assets/Generated/VitaMeshStreaming/221/Window_Glass.asset
+- Assets/Generated/VitaMeshStreaming/221/Exterior.asset
+Dependencies: []

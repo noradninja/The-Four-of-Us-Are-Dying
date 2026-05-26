@@ -1,0 +1,18 @@
+ManifestFileVersion: 0
+CRC: 1017399220
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 5304910e42f53e15c5f1063eee9ce72a
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: f19fbf085e00d23fbc8d6cf7b345590b
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+Assets:
+- Assets/Resources/Texture/School_WhiteShed_Full.tga
+- Assets/Resources/Texture/School_Toolshed_Full.png
+- Assets/Resources/Texture/School_Outhouse_Full.png
+Dependencies: []

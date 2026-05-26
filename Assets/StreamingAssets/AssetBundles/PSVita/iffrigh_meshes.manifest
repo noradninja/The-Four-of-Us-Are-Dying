@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 2395327140
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2a53e4a39751c431dc854bc05520fd8b
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 786a41dc5890ec3b8e0ecc81175dab35
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/iffrigh/Porch_Slats.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Front_Half.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Front_Trims.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Roof_Glass.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Curved_Handle_B.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Roof_Chimney.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Doorknob.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Glass_Back.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Curved_Handle_A.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Glass_Front_Display.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Back_Half.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Awning1.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Balcony.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Glass_Front.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Back_Trims.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Plaque.asset
+- Assets/Generated/VitaMeshStreaming/iffrigh/Ivy.asset
+Dependencies: []

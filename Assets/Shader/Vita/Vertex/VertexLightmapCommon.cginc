@@ -22,6 +22,7 @@
 
 // uniforms
 int4 unity_VertexLightParams; // x: light count, y: zero, z: one (needed for d3d9)
+half4 _Color;
 sampler2D _MainTex;
 sampler2D _MetallicGlossMap;
 half4 _MainTex_ST;
@@ -202,7 +203,7 @@ fixed4 frag(v2f v) : SV_Target
     half4 skyData = UNITY_SAMPLE_TEXCUBE_LOD(unity_SpecCube0, v.worldRefl, (1 - moar.a) * 8);
     half3 skyColor = DecodeHDR(skyData, unity_SpecCube0_HDR);
     half3 diff = diffuse.rgb * shadow; //(diffuse.rgb, skyColor, moar.r) * shadow;
-    half4 col = half4(((diff.rgb * lighting.rgb) + (skyColor * v.fresnel)) * moar.g, moar.b);
+    half4 col = half4(((diff.rgb * lighting.rgb) + (skyColor * v.fresnel)) * moar.g, moar.b) * _Color;
 
     if (!_AlphaOn)
     {

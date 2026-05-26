@@ -1,0 +1,44 @@
+ManifestFileVersion: 0
+CRC: 339898524
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 65f78bc3dc3f8c0349e9bf1817ffa292
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 813466e6bd79712f10f61108eadcec0d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/L_Door.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/R_Door.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Door.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/BuildingOH.asset
+- Assets/Model/Misc_Outbuildings/Outhouse.fbx
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/No_Parking_Sign.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Interior_Beams.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Building.asset
+- Assets/Model/Misc_Outbuildings/White_Shed.fbx
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/LockOH.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Window.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/DoorOH.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Board_Fence.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Shed.asset
+- Assets/Model/Misc_Outbuildings/Tool_Shed.fbx
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Back_Roofing.asset
+- Assets/Generated/VitaMeshStreaming/tool_shed_outhouse/Lock.asset
+Dependencies: []

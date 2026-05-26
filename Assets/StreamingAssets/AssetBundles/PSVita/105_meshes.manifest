@@ -1,0 +1,33 @@
+ManifestFileVersion: 0
+CRC: 3507369953
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 622f7a0dbbc4c9b8c77e27a4f8e15c51
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 813466e6bd79712f10f61108eadcec0d
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/105/Exterior1.asset
+- Assets/Generated/VitaMeshStreaming/105/Trims_Transparent.asset
+- Assets/Model/105 Main/105 Main.fbx
+- Assets/Generated/VitaMeshStreaming/105/Trims5.asset
+- Assets/Generated/VitaMeshStreaming/105/Glass.asset
+- Assets/Model/105 Main/Lg_Elec_Box.fbx
+Dependencies: []

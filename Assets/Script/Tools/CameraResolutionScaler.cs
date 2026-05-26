@@ -36,9 +36,11 @@ public class CameraResolutionScaler : MonoBehaviour
     public internalResolution InternalResolution;
     public currentResolution screenResolution;
     public Material tonemappingMat;
-    public FilterMode filterMode = FilterMode.Trilinear;
+    public Material upscaleMat;
+    public FilterMode filterMode = FilterMode.Point;
     public bool enableTonemapping;
     public bool enableColorGrading;
+    public bool enableUpscaling;
     public gradingFilter GradingFilter;
     [Range(0, 1)] public float userR = 1.0f;
     [Range(0, 1)] public float userG = 1.0f;
@@ -129,55 +131,95 @@ public class CameraResolutionScaler : MonoBehaviour
 
     private void OnRenderImage(RenderTexture src, RenderTexture dest)
     {
-        if (enableColorGrading) //handle color grading filters
+        src.filterMode = filterMode;
+        dest.filterMode = filterMode;
+
+        /* Configure color grading. */
+        if (enableColorGrading)
         {
             tonemappingMat.SetFloat("_colorGrading", 1);
-            //spin filters, colors directly lifted from Photoshop CS6 Photo Filter tool
+
             switch (GradingFilter)
             {
                 case gradingFilter.Warm:
-                    filterColor = new Color(0.66f, 0.54f, 0, 1f);
+                    filterColor = new Color(0.66f, 0.54f, 0.0f, 1.0f);
                     break;
+
                 case gradingFilter.Cool:
-                    filterColor = new Color(0, 0.71f, 1, 1f);
+                    filterColor = new Color(0.0f, 0.71f, 1.0f, 1.0f);
                     break;
+
                 case gradingFilter.Sepia:
-                    filterColor = new Color(0.67f, 0.48f, 0.2f, 1f);
+                    filterColor = new Color(0.67f, 0.48f, 0.2f, 1.0f);
                     break;
+
                 case gradingFilter.Underwater:
-                    filterColor = new Color(0, 0.76f, 0.69f, 1f);
+                    filterColor = new Color(0.0f, 0.76f, 0.69f, 1.0f);
                     break;
+
                 case gradingFilter.Emerald:
-                    filterColor = new Color(0.10f, 0.55f, 0.10f, 1f);
+                    filterColor = new Color(0.10f, 0.55f, 0.10f, 1.0f);
                     break;
+
                 case gradingFilter.Hell:
-                    filterColor = new Color(0.92f, 0.10f, 0.10f, 1f);
+                    filterColor = new Color(0.92f, 0.10f, 0.10f, 1.0f);
                     break;
+
                 case gradingFilter.User:
-                    filterColor = new Color(userR, userG, userB, 1f);
+                    filterColor = new Color(userR, userG, userB, 1.0f);
                     break;
             }
 
             tonemappingMat.SetColor("_gradingColor", filterColor);
         }
-        else tonemappingMat.SetFloat("_colorGrading", 0);
-
-        //handle tonemapping
-        if (enableTonemapping)
-            tonemappingMat.SetFloat("_toneMapping", 1);
         else
-            tonemappingMat.SetFloat("_toneMapping", 0);
+        {
+            tonemappingMat.SetFloat("_colorGrading", 0);
+        }
+
+        /* Configure tonemapping. */
+        tonemappingMat.SetFloat("_toneMapping", enableTonemapping ? 1.0f : 0.0f);
         tonemappingMat.SetFloat("_exposure", exposure);
 
-        src.filterMode = filterMode;
-//        dest.filterMode = filterMode;
-        // Luckily, looks like using OnRenderImage automatically makes the camera render to a TempBuffer of the size of the camera.pixelRect 
+        /*
+            We first render the tonemapped/color-graded image into a temporary
+            render texture. This becomes the input to the optional Scale2x pass.
+        */
+        var temp = RenderTexture.GetTemporary(
+            src.width,
+            src.height,
+            0,
+            src.format
+        );
+
+        temp.filterMode = filterMode;
+
+        /* Pass 1: Tonemapping and color grading. */
+        Graphics.Blit(src, temp, tonemappingMat, 0);
+
+        /*
+            Restore the camera rect before the final presentation to the screen.
+            This ensures the final image is displayed at the full target resolution.
+        */
         if (enableInternalResolution)
         {
-            Graphics.Blit(src, dest, tonemappingMat, 0);
             camera.pixelRect = originalRect;
-            Graphics.Blit(dest, dest);
         }
-        else Graphics.Blit(src, dest, tonemappingMat, 0);
+
+        /*
+            Pass 2: Optional Scale2x upscale.
+            The upscale shader should sample with point filtering and perform
+            the Scale2x logic in the fragment shader.
+        */
+        if (enableUpscaling && upscaleMat != null)
+        {
+            Graphics.Blit(temp, dest, upscaleMat, 0);
+        }
+        else
+        {
+            Graphics.Blit(temp, dest);
+        }
+
+        RenderTexture.ReleaseTemporary(temp);
     }
 }
