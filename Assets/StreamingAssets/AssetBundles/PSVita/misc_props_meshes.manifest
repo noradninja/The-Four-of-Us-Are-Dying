@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1747478061
+CRC: 1962434503
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: c685bc1ce80a07f4addac003bdba6cab
+    Hash: 4b76cd56b9af32d176b0ee8e376339b1
   TypeTreeHash:
     serializedVersion: 2
     Hash: 813466e6bd79712f10f61108eadcec0d
@@ -25,21 +25,32 @@ ClassTypes:
   Script: {instanceID: 0}
 Assets:
 - Assets/Generated/VitaMeshStreaming/misc_props/Short_Fence.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Window.asset
 - Assets/Generated/VitaMeshStreaming/misc_props/Kerosene_Drum.asset
 - Assets/Model/12_National_Street/Clothing_Poles.fbx
 - Assets/Generated/VitaMeshStreaming/misc_props/Sidewalk.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Back_Roofing.asset
 - Assets/Model/12_National_Street/Short_Fence.fbx
 - Assets/Model/12_National_Street/Sidewalk.fbx
 - Assets/Generated/VitaMeshStreaming/misc_props/Lines.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Board_Fence.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Interior_Beams.asset
 - Assets/Model/12_National_Street/Kerosene_Drum.fbx
 - Assets/Generated/VitaMeshStreaming/misc_props/Clothing_Poles.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Lock.asset
 - Assets/Generated/VitaMeshStreaming/misc_props/Pole.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Door.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Shed.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/Building.asset
 - Assets/Generated/VitaMeshStreaming/misc_props/Framework.asset
 - Assets/Model/12_National_Street/Shed_Interior_Framework.fbx
 - Assets/Model/12_National_Street/Rope_Swing.fbx
+- Assets/Generated/VitaMeshStreaming/misc_props/No_Parking_Sign.asset
 - Assets/Generated/VitaMeshStreaming/misc_props/Woodpile.asset
 - Assets/Model/12_National_Street/Utility_Pole.fbx
 - Assets/Model/12_National_Street/Woodpile.fbx
+- Assets/Generated/VitaMeshStreaming/misc_props/R_Door.asset
 - Assets/Generated/VitaMeshStreaming/misc_props/Transformer.asset
+- Assets/Generated/VitaMeshStreaming/misc_props/L_Door.asset
 - Assets/Generated/VitaMeshStreaming/misc_props/Lamp.asset
 Dependencies: []

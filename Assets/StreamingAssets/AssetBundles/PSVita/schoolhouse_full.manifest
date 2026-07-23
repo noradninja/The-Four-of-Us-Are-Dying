@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1048901353
+CRC: 1620575911
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 4b16d99aba1c80ae3e4e0e55aa2f77fa
+    Hash: c42a3d7d35090993ce21aeef23efaf15
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -12,6 +12,6 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Resources/Texture/School_Exterior_Full.png
-- Assets/Resources/Texture/School_Deco_Full.png
+- Assets/Tmp/Texture/School_Exterior_Full.png
+- Assets/Tmp/Texture/School_Deco_Full.png
 Dependencies: []

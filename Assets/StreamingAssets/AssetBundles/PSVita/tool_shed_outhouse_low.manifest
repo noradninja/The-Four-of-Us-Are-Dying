@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2856883374
+CRC: 545324505
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 6ac8b581340af8257baaa75f9b070dbd
+    Hash: a23c43f1768e8fe00221ce09cb916404
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -12,7 +12,7 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Resources/Texture/School_Outhouse_Low.png
-- Assets/Resources/Texture/School_Toolshed_Low.png
-- Assets/Resources/Texture/School_WhiteShed_Low.tga
+- Assets/Tmp/Texture/School_Outhouse_Low.png
+- Assets/Tmp/Texture/School_Toolshed_Low.png
+- Assets/Tmp/Texture/School_WhiteShed_Low.tga
 Dependencies: []

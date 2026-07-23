@@ -32,6 +32,7 @@ ModelImporter:
     100052: Trims_EXT_Transparent
     100054: Window_Glass
     100056: Trims
+    100058: Porch_Lamp_Glass
     400000: //RootNode
     400002: Exterior
     400004: LIght_Rig
@@ -61,6 +62,7 @@ ModelImporter:
     400052: Trims_EXT_Transparent
     400054: Window_Glass
     400056: Trims
+    400058: Porch_Lamp_Glass
     2000000: persp2
     2100000: House_Trims
     2100002: House_Exterior1
@@ -87,6 +89,7 @@ ModelImporter:
     2300036: Glass
     2300038: Window_Glass
     2300040: Trims
+    2300042: Porch_Lamp_Glass
     3300000: Exterior
     3300002: Plaque_w_Alpha
     3300004: Trims_Exterior
@@ -108,6 +111,7 @@ ModelImporter:
     3300036: Glass
     3300038: Window_Glass
     3300040: Trims
+    3300042: Porch_Lamp_Glass
     4300000: Trims_Exterior
     4300002: Exterior
     4300004: Plaque_w_Alpha
@@ -129,6 +133,7 @@ ModelImporter:
     4300036: Glass
     4300038: Window_Glass
     4300040: Trims
+    4300042: Porch_Lamp_Glass
     9500000: //RootNode
     10800000: Light_Rig:Ambient_Light
     10800002: Light_Rig:Bounce_Light

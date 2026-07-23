@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 476269088
+CRC: 2930472553
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 7dc6e6759ce3c1e193bc090e56ed13d2
+    Hash: f198d9edb0c5fee4b11bbc29f6ba4d40
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -12,7 +12,7 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Resources/Texture/Gas_Exterior_Low.png
-- Assets/Resources/Texture/Gas_Trims_Low.png
-- Assets/Resources/Texture/Gas_Island_Props_Low.png
+- Assets/Tmp/Texture/Gas_Exterior_Low.png
+- Assets/Tmp/Texture/Gas_Trims_Low.png
+- Assets/Tmp/Texture/Gas_Island_Props_Low.png
 Dependencies: []

@@ -67,7 +67,7 @@ public class VitaTextureStreamingLODController : MonoBehaviour
 
     private void OnEnable()
     {
-        RegisterWithManager();
+        //RegisterWithManager();
 
         if (cachedTextures.Count == 0)
             CacheTextures();
@@ -82,7 +82,7 @@ public class VitaTextureStreamingLODController : MonoBehaviour
         */
 
         ClearHardMipRequests();
-        UnregisterFromManager();
+        //UnregisterFromManager();
     }
 
     /*
@@ -126,10 +126,10 @@ public class VitaTextureStreamingLODController : MonoBehaviour
                 CacheRendererLightmapTextures(r);
         }
 
-        if (debugLogging || GetManagerDebugLogging())
-            Debug.Log(
-                "[VitaTextureStreamingLODController] Cached " + cachedTextures.Count + " textures for " +
-                gameObject.name, this);
+        // if (debugLogging || GetManagerDebugLogging())
+        //     Debug.Log(
+        //         "[VitaTextureStreamingLODController] Cached " + cachedTextures.Count + " textures for " +
+        //         gameObject.name, this);
     }
 
     /*
@@ -140,49 +140,49 @@ public class VitaTextureStreamingLODController : MonoBehaviour
         only uses hard mip requests for important objects and clears requests for everything else.
     */
 
-    public void ApplyForLODState(VitaTextureStreamingLODState state)
-    {
-        if (!IsSystemEnabled())
-            return;
-
-        if (hasAppliedState && state == lastAppliedState)
-        {
-            RefreshDebugTintFromManager();
-            return;
-        }
-
-        hasAppliedState = true;
-        lastAppliedState = state;
-
-        if (cachedTextures.Count == 0)
-            CacheTextures();
-
-        var shouldUseHardRequest = ShouldUseHardMipRequest(state);
-        var requestedMip = GetRequestedMipForState(state);
-
-        if (shouldUseHardRequest && requestedMip >= 0)
-        {
-            ApplyHardMipRequest(requestedMip);
-            lastUsedHardMipRequest = true;
-            lastRequestedMip = requestedMip;
-        }
-        else
-        {
-            ClearHardMipRequests();
-            lastUsedHardMipRequest = false;
-            lastRequestedMip = -1;
-        }
-
-        ApplyDebugTint(state, lastUsedHardMipRequest ? lastRequestedMip : -1);
-
-        if (debugLogging || GetManagerDebugLogging())
-            Debug.Log(
-                "[VitaTextureStreamingLODController] " + gameObject.name +
-                " state=" + state +
-                " hardMip=" + (lastUsedHardMipRequest ? lastRequestedMip.ToString() : "cleared"),
-                this
-            );
-    }
+    // public void ApplyForLODState(VitaTextureStreamingLODState state)
+    // {
+    //     if (!IsSystemEnabled())
+    //         return;
+    //
+    //     if (hasAppliedState && state == lastAppliedState)
+    //     {
+    //         RefreshDebugTintFromManager();
+    //         return;
+    //     }
+    //
+    //     hasAppliedState = true;
+    //     lastAppliedState = state;
+    //
+    //     if (cachedTextures.Count == 0)
+    //         CacheTextures();
+    //
+    //     //var shouldUseHardRequest = ShouldUseHardMipRequest(state);
+    //     var requestedMip = GetRequestedMipForState(state);
+    //
+    //     if (shouldUseHardRequest && requestedMip >= 0)
+    //     {
+    //         ApplyHardMipRequest(requestedMip);
+    //         lastUsedHardMipRequest = true;
+    //         lastRequestedMip = requestedMip;
+    //     }
+    //     else
+    //     {
+    //         ClearHardMipRequests();
+    //         lastUsedHardMipRequest = false;
+    //         lastRequestedMip = -1;
+    //     }
+    //
+    //     //ApplyDebugTint(state, lastUsedHardMipRequest ? lastRequestedMip : -1);
+    //
+    //     if (debugLogging || GetManagerDebugLogging())
+    //         Debug.Log(
+    //             "[VitaTextureStreamingLODController] " + gameObject.name +
+    //             " state=" + state +
+    //             " hardMip=" + (lastUsedHardMipRequest ? lastRequestedMip.ToString() : "cleared"),
+    //             this
+    //         );
+    // }
 
     /*
         Refresh debug tint from manager.
@@ -197,7 +197,7 @@ public class VitaTextureStreamingLODController : MonoBehaviour
         if (!hasAppliedState)
             return;
 
-        ApplyDebugTint(lastAppliedState, lastUsedHardMipRequest ? lastRequestedMip : -1);
+        //ApplyDebugTint(lastAppliedState, lastUsedHardMipRequest ? lastRequestedMip : -1);
     }
 
     /*
@@ -249,33 +249,33 @@ public class VitaTextureStreamingLODController : MonoBehaviour
         mip request intent without creating material instances.
     */
 
-    private void ApplyDebugTint(VitaTextureStreamingLODState state, int requestedMip)
-    {
-        var manager = VitaTextureStreamingLODManager.Instance;
-
-        if (manager == null || !manager.enableMipDebugTint)
-        {
-            ClearDebugTint();
-            return;
-        }
-
-        if (_debugPropertyBlock == null)
-            _debugPropertyBlock = new MaterialPropertyBlock();
-
-        var tint = GetDebugTintColor(manager, state, requestedMip);
-
-        for (var i = 0; i < cachedRenderers.Count; i++)
-        {
-            var r = cachedRenderers[i];
-
-            if (r == null)
-                continue;
-
-            r.GetPropertyBlock(_debugPropertyBlock);
-            _debugPropertyBlock.SetColor(ColorPropertyID, tint);
-            r.SetPropertyBlock(_debugPropertyBlock);
-        }
-    }
+    // private void ApplyDebugTint(VitaTextureStreamingLODState state, int requestedMip)
+    // {
+    //     var manager = VitaTextureStreamingLODManager.Instance;
+    //
+    //     if (manager == null || !manager.enableMipDebugTint)
+    //     {
+    //         ClearDebugTint();
+    //         return;
+    //     }
+    //
+    //     if (_debugPropertyBlock == null)
+    //         _debugPropertyBlock = new MaterialPropertyBlock();
+    //
+    //     var tint = GetDebugTintColor(manager, state, requestedMip);
+    //
+    //     for (var i = 0; i < cachedRenderers.Count; i++)
+    //     {
+    //         var r = cachedRenderers[i];
+    //
+    //         if (r == null)
+    //             continue;
+    //
+    //         r.GetPropertyBlock(_debugPropertyBlock);
+    //         _debugPropertyBlock.SetColor(ColorPropertyID, tint);
+    //         r.SetPropertyBlock(_debugPropertyBlock);
+    //     }
+    // }
 
     /*
         Clear debug tint.
@@ -284,33 +284,33 @@ public class VitaTextureStreamingLODController : MonoBehaviour
         tinting is disabled.
     */
 
-    public void ClearDebugTint()
-    {
-        if (cachedRenderers.Count == 0)
-            return;
-
-        if (_debugPropertyBlock == null)
-            _debugPropertyBlock = new MaterialPropertyBlock();
-
-        for (var i = 0; i < cachedRenderers.Count; i++)
-        {
-            var r = cachedRenderers[i];
-
-            if (r == null)
-                continue;
-
-            r.GetPropertyBlock(_debugPropertyBlock);
-
-            var mat = r.sharedMaterial;
-
-            if (mat != null && mat.HasProperty(ColorPropertyID))
-                _debugPropertyBlock.SetColor(ColorPropertyID, mat.GetColor(ColorPropertyID));
-            else
-                _debugPropertyBlock.SetColor(ColorPropertyID, Color.white);
-
-            r.SetPropertyBlock(_debugPropertyBlock);
-        }
-    }
+    // public void ClearDebugTint()
+    // {
+    //     if (cachedRenderers.Count == 0)
+    //         return;
+    //
+    //     if (_debugPropertyBlock == null)
+    //         _debugPropertyBlock = new MaterialPropertyBlock();
+    //
+    //     for (var i = 0; i < cachedRenderers.Count; i++)
+    //     {
+    //         var r = cachedRenderers[i];
+    //
+    //         if (r == null)
+    //             continue;
+    //
+    //         r.GetPropertyBlock(_debugPropertyBlock);
+    //
+    //         var mat = r.sharedMaterial;
+    //
+    //         if (mat != null && mat.HasProperty(ColorPropertyID))
+    //             _debugPropertyBlock.SetColor(ColorPropertyID, mat.GetColor(ColorPropertyID));
+    //         else
+    //             _debugPropertyBlock.SetColor(ColorPropertyID, Color.white);
+    //
+    //         r.SetPropertyBlock(_debugPropertyBlock);
+    //     }
+    // }
 
     /*
         Get debug tint color.
@@ -318,26 +318,26 @@ public class VitaTextureStreamingLODController : MonoBehaviour
         This maps requested mip intent to a manager-owned color palette.
     */
 
-    private Color GetDebugTintColor(
-        VitaTextureStreamingLODManager manager,
-        VitaTextureStreamingLODState state,
-        int requestedMip)
-    {
-        if (state == VitaTextureStreamingLODState.Disabled ||
-            state == VitaTextureStreamingLODState.BlackOnly)
-            return manager.disabledMipColor;
-
-        if (requestedMip == 0)
-            return manager.mip0Color;
-
-        if (requestedMip == 1)
-            return manager.mip1Color;
-
-        if (requestedMip == 2)
-            return manager.mip2Color;
-
-        return manager.autoMipColor;
-    }
+    // private Color GetDebugTintColor(
+    //     VitaTextureStreamingLODManager manager,
+    //     VitaTextureStreamingLODState state,
+    //     int requestedMip)
+    // {
+    //     if (state == VitaTextureStreamingLODState.Disabled ||
+    //         state == VitaTextureStreamingLODState.BlackOnly)
+    //         return manager.disabledMipColor;
+    //
+    //     if (requestedMip == 0)
+    //         return manager.mip0Color;
+    //
+    //     if (requestedMip == 1)
+    //         return manager.mip1Color;
+    //
+    //     if (requestedMip == 2)
+    //         return manager.mip2Color;
+    //
+    //     return manager.autoMipColor;
+    // }
 
     /*
         Cache material textures.
@@ -416,88 +416,88 @@ public class VitaTextureStreamingLODController : MonoBehaviour
 
     private bool IsSystemEnabled()
     {
-        var manager = VitaTextureStreamingLODManager.Instance;
+        // var manager = VitaTextureStreamingLODManager.Instance;
+        //
+        // if (manager == null)
+        //     return true;
 
-        if (manager == null)
-            return true;
-
-        return manager.enableLODTextureStreaming;
+        return true;
     }
 
     private bool ShouldIncludeLightmaps()
     {
-        var manager = VitaTextureStreamingLODManager.Instance;
+        // var manager = VitaTextureStreamingLODManager.Instance;
+        //
+        // if (manager == null)
+        //     return includeLightmaps;
 
-        if (manager == null)
-            return includeLightmaps;
-
-        return includeLightmaps && manager.includeLightmaps;
+        return true;
     }
 
-    private bool ShouldUseHardMipRequest(VitaTextureStreamingLODState state)
-    {
-        if (!importantObject)
-            return false;
+    // private bool ShouldUseHardMipRequest(VitaTextureStreamingLODState state)
+    // {
+    //     if (!importantObject)
+    //         return false;
+    //
+    //     if (!allowHardMipRequests)
+    //         return false;
+    //
+    //     if (state == VitaTextureStreamingLODState.BlackOnly || state == VitaTextureStreamingLODState.Disabled)
+    //         return false;
+    //
+    //     var manager = VitaTextureStreamingLODManager.Instance;
+    //
+    //     if (overrideManagerPolicy || manager == null)
+    //         return true;
+    //
+    //     return manager.importantObjectsUseHardMipRequests;
+    // }
 
-        if (!allowHardMipRequests)
-            return false;
+    // private int GetRequestedMipForState(VitaTextureStreamingLODState state)
+    // {
+    //     var manager = VitaTextureStreamingLODManager.Instance;
+    //
+    //     if (!overrideManagerPolicy && manager != null)
+    //         return manager.GetRequestedMip(state);
+    //
+    //     switch (state)
+    //     {
+    //         case VitaTextureStreamingLODState.Full:
+    //             return Mathf.Max(0, fullRequestedMip);
+    //
+    //         case VitaTextureStreamingLODState.Reduced:
+    //             return Mathf.Max(0, reducedRequestedMip);
+    //
+    //         case VitaTextureStreamingLODState.VertexOnly:
+    //             return Mathf.Max(0, vertexOnlyRequestedMip);
+    //     }
+    //
+    //     return -1;
+    // }
 
-        if (state == VitaTextureStreamingLODState.BlackOnly || state == VitaTextureStreamingLODState.Disabled)
-            return false;
+    // private bool GetManagerDebugLogging()
+    // {
+    //     var manager = VitaTextureStreamingLODManager.Instance;
+    //
+    //     if (manager == null)
+    //         return false;
+    //
+    //     return manager.debugLogging;
+    // }
 
-        var manager = VitaTextureStreamingLODManager.Instance;
+    // private void RegisterWithManager()
+    // {
+    //     var manager = VitaTextureStreamingLODManager.Instance;
+    //
+    //     if (manager != null)
+    //         manager.RegisterController(this);
+    // }
 
-        if (overrideManagerPolicy || manager == null)
-            return true;
-
-        return manager.importantObjectsUseHardMipRequests;
-    }
-
-    private int GetRequestedMipForState(VitaTextureStreamingLODState state)
-    {
-        var manager = VitaTextureStreamingLODManager.Instance;
-
-        if (!overrideManagerPolicy && manager != null)
-            return manager.GetRequestedMip(state);
-
-        switch (state)
-        {
-            case VitaTextureStreamingLODState.Full:
-                return Mathf.Max(0, fullRequestedMip);
-
-            case VitaTextureStreamingLODState.Reduced:
-                return Mathf.Max(0, reducedRequestedMip);
-
-            case VitaTextureStreamingLODState.VertexOnly:
-                return Mathf.Max(0, vertexOnlyRequestedMip);
-        }
-
-        return -1;
-    }
-
-    private bool GetManagerDebugLogging()
-    {
-        var manager = VitaTextureStreamingLODManager.Instance;
-
-        if (manager == null)
-            return false;
-
-        return manager.debugLogging;
-    }
-
-    private void RegisterWithManager()
-    {
-        var manager = VitaTextureStreamingLODManager.Instance;
-
-        if (manager != null)
-            manager.RegisterController(this);
-    }
-
-    private void UnregisterFromManager()
-    {
-        var manager = VitaTextureStreamingLODManager.Instance;
-
-        if (manager != null)
-            manager.UnregisterController(this);
-    }
+    // private void UnregisterFromManager()
+    // {
+    //     var manager = VitaTextureStreamingLODManager.Instance;
+    //
+    //     if (manager != null)
+    //         manager.UnregisterController(this);
+    // }
 }

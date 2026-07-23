@@ -745,9 +745,9 @@ public class Shader_LOD_Enumerator : MonoBehaviour
         return textureName;
     }
 
-    private TextureStreamingManager GetTextureManager()
+    private VitaTextureStreamingManager GetTextureManager()
     {
-        var manager = TextureStreamingManager.Instance;
+        var manager = VitaTextureStreamingManager.Instance;
 
         if (manager == null && !_missingTextureManagerWarned)
         {
@@ -764,8 +764,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     private float GetHighTexturePreloadExtraMeters()
     {
-        if (TextureStreamingManager.Instance != null)
-            return Mathf.Max(0f, TextureStreamingManager.Instance.highTexturePreloadExtraMeters);
+        if (VitaTextureStreamingManager.Instance != null)
+            return Mathf.Max(0f, VitaTextureStreamingManager.Instance.highTexturePreloadExtraMeters);
 
         return 1.5f;
     }
@@ -897,8 +897,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
         Texture lowTex = null;
 
-        if (TextureStreamingManager.Instance != null && !string.IsNullOrEmpty(_activeLowTextureLODPath))
-            lowTex = TextureStreamingManager.Instance.GetLoadedTexture(_activeLowTextureLODPath);
+        if (VitaTextureStreamingManager.Instance != null && !string.IsNullOrEmpty(_activeLowTextureLODPath))
+            lowTex = VitaTextureStreamingManager.Instance.GetLoadedTexture(_activeLowTextureLODPath);
 
         if (lowTex != null)
         {
@@ -924,8 +924,8 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
         Texture highTex = null;
 
-        if (TextureStreamingManager.Instance != null && !string.IsNullOrEmpty(_activeHighTextureLODPath))
-            highTex = TextureStreamingManager.Instance.GetLoadedTexture(_activeHighTextureLODPath);
+        if (VitaTextureStreamingManager.Instance != null && !string.IsNullOrEmpty(_activeHighTextureLODPath))
+            highTex = VitaTextureStreamingManager.Instance.GetLoadedTexture(_activeHighTextureLODPath);
 
         if (highTex != null)
         {
@@ -944,9 +944,9 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     private void ReleaseLowTextureLODInterest()
     {
-        if (_hasLowTextureLODRequest && TextureStreamingManager.Instance != null &&
+        if (_hasLowTextureLODRequest && VitaTextureStreamingManager.Instance != null &&
             !string.IsNullOrEmpty(_activeLowTextureLODPath))
-            TextureStreamingManager.Instance.ReleaseTexture(_activeLowTextureLODPath);
+            VitaTextureStreamingManager.Instance.ReleaseTexture(_activeLowTextureLODPath);
 
         _hasLowTextureLODRequest = false;
         _activeLowTextureLODPath = null;
@@ -955,9 +955,9 @@ public class Shader_LOD_Enumerator : MonoBehaviour
 
     private void ReleaseHighTextureLODInterest()
     {
-        if (_hasHighTextureLODRequest && TextureStreamingManager.Instance != null &&
+        if (_hasHighTextureLODRequest && VitaTextureStreamingManager.Instance != null &&
             !string.IsNullOrEmpty(_activeHighTextureLODPath))
-            TextureStreamingManager.Instance.ReleaseTexture(_activeHighTextureLODPath);
+            VitaTextureStreamingManager.Instance.ReleaseTexture(_activeHighTextureLODPath);
 
         _hasHighTextureLODRequest = false;
         _activeHighTextureLODPath = null;

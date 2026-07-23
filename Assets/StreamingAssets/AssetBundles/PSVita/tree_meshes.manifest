@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 4023843281
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: c95c2dd0ca16f64660147a0d51d81b44
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 786a41dc5890ec3b8e0ecc81175dab35
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/Tree/Branch.asset
+- Assets/Generated/VitaMeshStreaming/Tree/Tree.asset
+- Assets/Generated/VitaMeshStreaming/Tree/Leaves_1.asset
+- Assets/Generated/VitaMeshStreaming/Tree/Leaves_2.asset
+Dependencies: []

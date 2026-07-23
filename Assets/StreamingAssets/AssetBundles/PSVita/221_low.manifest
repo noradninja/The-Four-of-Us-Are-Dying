@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1453951449
+CRC: 826649139
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 0e27d0183dc9a8ea9e1e7f5acdbed065
+    Hash: cd53d7feae57ccdae2ae7b2f979220d2
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -12,6 +12,6 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Resources/Texture/221_Trims_Low.png
-- Assets/Resources/Texture/221_Exterior_Low.png
+- Assets/Tmp/Texture/221_Trims_Low.png
+- Assets/Tmp/Texture/221_Exterior_Low.png
 Dependencies: []

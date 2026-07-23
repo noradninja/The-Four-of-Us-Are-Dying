@@ -1,7 +1,109 @@
 ManifestFileVersion: 0
-CRC: 3118182254
+CRC: 2688503781
 AssetBundleManifest:
   AssetBundleInfos:
     Info_0:
+      Name: iffrig_full
+      Dependencies: {}
+    Info_1:
+      Name: 221_full
+      Dependencies: {}
+    Info_2:
+      Name: misc_props_full
+      Dependencies: {}
+    Info_3:
+      Name: gas_full
+      Dependencies: {}
+    Info_4:
+      Name: 221_low
+      Dependencies: {}
+    Info_5:
+      Name: schoolhouse_low
+      Dependencies: {}
+    Info_6:
+      Name: tool_shed_outhouse_full
+      Dependencies: {}
+    Info_7:
+      Name: iffrig_foundation_low
+      Dependencies: {}
+    Info_8:
+      Name: tree_low
+      Dependencies: {}
+    Info_9:
+      Name: iffrig_foundation_full
+      Dependencies: {}
+    Info_10:
+      Name: 107_low
+      Dependencies: {}
+    Info_11:
+      Name: tree_full
+      Dependencies: {}
+    Info_12:
+      Name: iffrig_low
+      Dependencies: {}
+    Info_13:
+      Name: gas_low
+      Dependencies: {}
+    Info_14:
+      Name: misc_props_low
+      Dependencies: {}
+    Info_15:
+      Name: gas_lot_full
+      Dependencies: {}
+    Info_16:
+      Name: gas_lot_low
+      Dependencies: {}
+    Info_17:
+      Name: 107_full
+      Dependencies: {}
+    Info_18:
+      Name: 105_low
+      Dependencies: {}
+    Info_19:
+      Name: tool_shed_outhouse_low
+      Dependencies: {}
+    Info_20:
+      Name: 105_full
+      Dependencies: {}
+    Info_21:
+      Name: schoolhouse_full
+      Dependencies: {}
+    Info_22:
+      Name: misc_props_meshes
+      Dependencies: {}
+    Info_23:
+      Name: 105_meshes
+      Dependencies: {}
+    Info_24:
+      Name: schoolhouse_meshes
+      Dependencies: {}
+    Info_25:
+      Name: iffrig_foundation_meshes
+      Dependencies: {}
+    Info_26:
+      Name: 107_meshes
+      Dependencies: {}
+    Info_27:
+      Name: iffrig_meshes
+      Dependencies: {}
+    Info_28:
       Name: tool_shed_outhouse_meshes
+      Dependencies: {}
+    Info_29:
+      Name: gas_meshes
+      Dependencies: {}
+    Info_30:
+      Name: 221_meshes
+      Dependencies: {}
+    Info_31:
+      Name: iffrigh_meshes
+      Dependencies: {}
+    Info_32:
+      Name: tree_meshes
+      Dependencies: {}
+    Info_33:
+      Name: roads_meshes
+      Dependencies: {}
+    Info_34:
+      Name: foliage_meshes
       Dependencies: {}

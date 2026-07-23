@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 2135370443
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 54b910c9584f15d5f102a8dad5d2bcd3
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 786a41dc5890ec3b8e0ecc81175dab35
+HashAppended: 0
+ClassTypes:
+- Class: 43
+  Script: {instanceID: 0}
+Assets:
+- Assets/Generated/VitaMeshStreaming/Roads/polySurface399.asset
+- Assets/Generated/VitaMeshStreaming/Roads/BigRoad30.asset
+- Assets/Generated/VitaMeshStreaming/Roads/extrudedSurface4.asset
+- Assets/Generated/VitaMeshStreaming/Roads/TJunction9.asset
+Dependencies: []

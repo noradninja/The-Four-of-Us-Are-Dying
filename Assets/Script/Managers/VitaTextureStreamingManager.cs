@@ -1,11 +1,11 @@
-﻿/* TextureStreamingManager.cs */
+﻿/* VitaTextureStreamingManager.cs */
 
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 
-public class TextureStreamingManager : MonoBehaviour
+public class VitaTextureStreamingManager : MonoBehaviour
 {
     [Header("AssetBundle Settings")] public bool useAssetBundles = true;
 
@@ -74,7 +74,7 @@ public class TextureStreamingManager : MonoBehaviour
     private float _nextUnloadTime;
     private bool _unloadInProgress;
 
-    public static TextureStreamingManager Instance { get; private set; }
+    public static VitaTextureStreamingManager Instance { get; private set; }
 
     private void Awake()
     {

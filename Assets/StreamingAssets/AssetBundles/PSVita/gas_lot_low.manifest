@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 647905649
+CRC: 3452361171
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: f577ca632de9c2ce9db262dd7cf15a6a
+    Hash: 56e893a4ee4a1a9d75a859e5acb78daa
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -12,5 +12,5 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Resources/Texture/Gas_Lot_Low.png
+- Assets/Tmp/Texture/Gas_Lot_Low.png
 Dependencies: []

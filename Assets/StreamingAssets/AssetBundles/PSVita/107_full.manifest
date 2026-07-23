@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 3070977397
+CRC: 1350766714
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: eb465077214e14c1e818cb9a06eaa4a9
+    Hash: 98ffd9c70d05898fce82db857fd32a46
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -12,6 +12,6 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Resources/Texture/107_Trims_Full.png
-- Assets/Resources/Texture/107_Exterior_Full.tga
+- Assets/Tmp/Texture/107_Trims_Full.png
+- Assets/Tmp/Texture/107_Exterior_Full.tga
 Dependencies: []

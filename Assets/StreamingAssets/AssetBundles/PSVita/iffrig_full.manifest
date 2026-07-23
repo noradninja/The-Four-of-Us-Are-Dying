@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 1097003584
+CRC: 4085845582
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 778d6dbbad4e19425378367d89cf134b
+    Hash: 701f99bc361e7c7b46f7dc8f9684ddd8
   TypeTreeHash:
     serializedVersion: 2
     Hash: f19fbf085e00d23fbc8d6cf7b345590b
@@ -12,9 +12,9 @@ ClassTypes:
 - Class: 28
   Script: {instanceID: 0}
 Assets:
-- Assets/Resources/Texture/Iffrig_Roof_Porch_Rails_Full.png
-- Assets/Resources/Texture/Iffrig_Back_Full.png
-- Assets/Resources/Texture/Iffrig_Front_Full.png
-- Assets/Resources/Texture/Iffrig_Trim_Front_Full.png
-- Assets/Resources/Texture/Iffrig_Trim_Rear_Full.png
+- Assets/Tmp/Texture/Iffrig_Roof_Porch_Rails_Full.png
+- Assets/Tmp/Texture/Iffrig_Back_Full.png
+- Assets/Tmp/Texture/Iffrig_Front_Full.png
+- Assets/Tmp/Texture/Iffrig_Trim_Front_Full.png
+- Assets/Tmp/Texture/Iffrig_Trim_Rear_Full.png
 Dependencies: []
